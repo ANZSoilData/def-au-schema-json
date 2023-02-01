@@ -1,5 +1,7 @@
 {
     "@context": {
-        "ansis": "https://anzsoil.org/def/au/domain/"
+        "ansis": "https://anzsoil.org/def/au/domain/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sp": "http://anzsoil.org/def/au/asls/soil-profile/"
     }
 }

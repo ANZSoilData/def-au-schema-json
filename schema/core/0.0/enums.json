@@ -2,5 +2,37 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/enums.json",
     "type": "object",
-    "title": "ANSIS Soil Domain Enumerations"
+    "title": "ANSIS Soil Domain Enumerations",
+    "definitions": {
+        "soilWaterDrainage": {
+            "title": "Soil Water Drainage",
+            "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
+            "oneOf": [
+                {
+                    "const": "sp:soil-water-drainage-1",
+                    "description": "very poorly drained"
+                },
+                {
+                    "const": "sp:soil-water-drainage-2",
+                    "description": "poorly drained"
+                },
+                {
+                    "const": "sp:soil-water-drainage-3",
+                    "description": "imperfectly drained"
+                },
+                {
+                    "const": "sp:soil-water-drainage-4",
+                    "description": "moderately well drained"
+                },
+                {
+                    "const": "sp:soil-water-drainage-5",
+                    "description": "well drained"
+                },
+                {
+                    "const": "sp:soil-water-drainage-6",
+                    "description": "rapidly drained"
+                }
+            ]
+        }
+    }
 }

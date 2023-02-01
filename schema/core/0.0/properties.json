@@ -3,30 +3,32 @@
     "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/properties.json",
     "title": "ANSIS Soil Domain Property Schema",
     "description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
-    "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl. Linked Data properties as per ",
+    "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl. Linked Data properties as per https://www.w3.org/TR/json-ld.",
     "definitions": {
-        "@id": {
-            "title": "JSON-LD Identifier",
-            "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
-            "$comment": "After: https://www.w3.org/TR/json-ld/#node-identifiers",
-            "type": "string",
-            "format": "uri"
+        "hasGeometry": {
+            "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+            "title": "Has Geometry",
+            "description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
+            "$ref": "#/definitions/wktLiteral"
         },
-        "@type": {
-            "title": "JSON-LD Type",
-            "description": "A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model.",
+        "wktLiteral": {
+            "@id": "http://www.opengis.net/ont/geosparql#wktLiteral",
+            "title": "WKT Literal",
+            "description": "A Well-known Text serialization of a geometry object.",
+            "$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA 2020 (EPSG:7844)?",
+            "type": "string",
             "examples": [
-                "ansis:SoilSite"
-            ],
-            "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
-            "type": "string"
+                "SRID=7844;POINT(-42 24)",
+                "SRID=7844;LINESTRING(-42 24, -42 42)",
+                "SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
+            ]
         },
-        "@context": {
-            "title": "JSON-LD Context",
-            "description": "A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI.",
-            "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
+        "drainage": {
+            "@id": "https://anzsoil.org/def/au/domain/drainage",
+            "title": "Drainage",
+            "description": "Drainage of site or profile.",
             "type": "string",
-            "format": "uri"
+            "$ref": "enums.json#/definitions/soilWaterDrainage"
         }
     }
 }

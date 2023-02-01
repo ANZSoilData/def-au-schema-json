@@ -1,6 +1,130 @@
-﻿{
+{
     "$schema": "https://json-schema.org/draft-07/schema",
     "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/entities.json",
+    "title": "ANSIS Soil Domain Entity Schema",
+    "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in the ANSIS Domain Ontology.",
+    "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
     "type": "object",
-    "title": "ANSIS Soil Domain Entity Schema"
+    "oneOf": [
+        {
+            "$ref": "#/definitions/SoilSite"
+        },
+        {
+            "$ref": "#/definitions/SoilProfile"
+        }
+    ],
+    "definitions": {
+        "SoilSite": {
+            "@id": "https://anzsoil.org/def/au/domain/SoilSite",
+            "title": "ANSIS Soil Site",
+            "description": "A site where samples, observations, and treatments of soil are carried out.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "properties-base.json#/definitions/$schema"
+                },
+                "@context": {
+                    "$ref": "properties-base.json#/definitions/@context"
+                },
+                "@id": {
+                    "$ref": "properties-base.json#/definitions/@id"
+                },
+                "@type": {
+                    "$ref": "properties-base.json#/definitions/@type",
+                    "const": "ansis:SoilSite"
+                },
+                "hasGeometry": {
+                    "$ref": "properties.json#/definitions/hasGeometry"
+                },
+                "drainage": {
+                    "$ref": "properties.json#/definitions/drainage"
+                },
+                "hasProfile": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/SoilProfile_Link"
+                        },
+                        {
+                            "$ref": "#/definitions/SoilProfile"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilSite_Link": {
+            "title": "ANSIS Soil Site Link",
+            "description": "A simple object supporting a link (e.g. a hyperlink) to a soil site.",
+            "required": [
+                "@id",
+                "@type"
+            ],
+            "properties": {
+                "@id": {
+                    "$ref": "properties-base.json#/definitions/@id"
+                },
+                "@type": {
+                    "$ref": "properties-base.json#/definitions/@type",
+                    "const": "ansis:SoilSite"
+                },
+                "label": {
+                    "$ref": "properties-base.json#/definitions/label"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilProfile": {
+            "@id": "https://anzsoil.org/def/au/domain/SoilProfile",
+            "title": "ANSIS Soil Profile",
+            "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "properties-base.json#/definitions/$schema"
+                },
+                "@context": {
+                    "$ref": "properties-base.json#/definitions/@context"
+                },
+                "@id": {
+                    "$ref": "properties-base.json#/definitions/@id"
+                },
+                "@type": {
+                    "$ref": "properties-base.json#/definitions/@type",
+                    "const": "ansis:SoilProfile"
+                },
+                "hasGeometry": {
+                    "$ref": "properties.json#/definitions/hasGeometry"
+                },
+                "drainage": {
+                    "$ref": "properties.json#/definitions/drainage"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilProfile_Link": {
+            "title": "ANSIS Soil Profile Link",
+            "description": "A simple object supporting a link (e.g. a hyperlink) to a soil profile.",
+            "required": [
+                "@id",
+                "@type"
+            ],
+            "properties": {
+                "@id": {
+                    "$ref": "properties-base.json#/definitions/@id"
+                },
+                "@type": {
+                    "$ref": "properties-base.json#/definitions/@type",
+                    "const": "ansis:SoilProfile"
+                },
+                "label": {
+                    "$ref": "properties-base.json#/definitions/label"
+                }
+            },
+            "additionalProperties": false
+        }
+    }
 }
