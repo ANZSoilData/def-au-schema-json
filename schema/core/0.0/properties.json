@@ -1,6 +1,32 @@
 {
     "$schema": "https://json-schema.org/draft-07/schema",
     "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/properties.json",
-    "type": "object",
-    "title": "ANSIS Soil Domain Property Schema"
+    "title": "ANSIS Soil Domain Property Schema",
+    "description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
+    "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl. Linked Data properties as per ",
+    "definitions": {
+        "@id": {
+            "title": "JSON-LD Identifier",
+            "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
+            "$comment": "After: https://www.w3.org/TR/json-ld/#node-identifiers",
+            "type": "string",
+            "format": "uri"
+        },
+        "@type": {
+            "title": "JSON-LD Type",
+            "description": "A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model.",
+            "examples": [
+                "ansis:SoilSite"
+            ],
+            "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
+            "type": "string"
+        },
+        "@context": {
+            "title": "JSON-LD Context",
+            "description": "A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI.",
+            "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
+            "type": "string",
+            "format": "uri"
+        }
+    }
 }
