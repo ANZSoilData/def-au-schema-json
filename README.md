@@ -47,9 +47,9 @@ We urge contributors to be familiar with the [domain ontology][def-au-domain],
 ## Navigating this repository
 
 This repository is broken into four folders:
-1. The `schema` folder holds the collections of ANSIS schema.
-2. The `data` folder holds example JSON documents (e.g. an example SoilSite).
-3. The `docs` folder holds documentation of the schema.
-4. The `figs` folder holds images used by documents elsewhere in the repository.
+1. The [`schema`](schema/) folder holds the collections of ANSIS schema.
+2. The [`data`](data/) folder holds example JSON documents (e.g. an example SoilSite).
+3. The [`docs`](docs/) folder holds documentation of the schema.
+4. The [`figs`](figs/) folder holds images used by documents elsewhere in the repository.
 
 [def-au-domain]: https://github.com/ANZSoilData/def-au-domain
