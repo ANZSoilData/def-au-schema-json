@@ -14,8 +14,8 @@ By contributing, you agree that we may redistribute your work under [this projec
 
 ## How to Contribute
 
-The preferred way to contribute is to file an issue. This allows us to assign the item to someone
-and to respond to it in a threaded discussion.
+The preferred way to contribute is to file an Issue (bugs) or create a Discussion. This allows us to
+assign the problem to someone and to respond with a threaded discussion.
 
 > You must have a [GitHub][github] account, or be willing to [create one][github-join].
 
