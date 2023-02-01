@@ -1,0 +1,7 @@
+{
+    "$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/features.json",
+    "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json",
+    "@id": "https://example.ansis.net/id/soilsite/042",
+    "@type": "ansis:SoilSite",
+    "some": "property"
+}
