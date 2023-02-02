@@ -193,12 +193,14 @@
             "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
             "definitions": {
                 "hasGeometry": {
+                    "$anchor": "hasGeometry",
                     "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
                     "title": "Has Geometry",
                     "description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
                     "$ref": "#/definitions/Properties/definitions/wktLiteral"
                 },
                 "wktLiteral": {
+                    "$anchor": "wktLiteral",
                     "@id": "http://www.opengis.net/ont/geosparql#wktLiteral",
                     "title": "WKT Literal",
                     "description": "A Well-known Text serialization of a geometry object.",
@@ -211,6 +213,7 @@
                     ]
                 },
                 "drainage": {
+                    "$anchor": "drainage",
                     "@id": "https://anzsoil.org/def/au/domain/drainage",
                     "title": "Drainage",
                     "description": "Drainage of site or profile.",
