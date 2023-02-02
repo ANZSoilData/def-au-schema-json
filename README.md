@@ -30,12 +30,16 @@ The principles guiding the design of the schema are documented [here](./docs/des
 
 ## Contributing
 
-Guidance on contributing to this work is [here](CONTRIBUTING.md). When contributing, please note the
-relationship between the JSON schema and the domain ontology:
+Please raise any issues in MS Teams the ANSIS *1.3.2 Data Standards Project* team chat.
+
+Non-ANSIS project members can contact [Peter Wilson](mailto:peter.wilson@csiro.au).
+
+When providing feed back or raising issues, please note the relationship between the JSON schema
+and the domain ontology:
 1. Contributions concerning the definitions of entities, properties and enumerations (vocabularies)
-relate to the domain ontology and should be made in the [`def-au-domain`][def-au-domain] repository.
+relate to the domain ontology and should be made in the context of the domain ontology.
 2. Contributions concerning the use of JSON Schema and using documents generated to conform to these
-scheme should be made here.
+scheme should be made in this context.
 
 We urge contributors to be familiar with the [domain ontology][def-au-domain],
 [JSON Schema](https://json-schema.org/) and the
