@@ -7,10 +7,10 @@
     "type": "object",
     "oneOf": [
         {
-            "$ref": "#/definitions/Entities/definitions/SoilSite"
+            "$ref": "#SoilSite"
         },
         {
-            "$ref": "#/definitions/Entities/definitions/SoilProfile"
+            "$ref": "#SoilProfile"
         }
     ],
     "definitions": {
@@ -19,6 +19,7 @@
             "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in the ANSIS Domain Ontology.",
             "definitions": {
                 "SoilSite": {
+                    "$anchor": "SoilSite",
                     "@id": "https://anzsoil.org/def/au/domain/SoilSite",
                     "title": "ANSIS Soil Site",
                     "description": "A site where samples, observations, and treatments of soil are carried out.",
@@ -27,16 +28,16 @@
                     ],
                     "properties": {
                         "$schema": {
-                            "$ref": "#/definitions/Base/definitions/$schema"
+                            "$ref": "#$schema"
                         },
                         "@context": {
-                            "$ref": "#/definitions/Base/definitions/@context"
+                            "$ref": "#@context"
                         },
                         "@id": {
-                            "$ref": "#/definitions/Base/definitions/@id"
+                            "$ref": "#@id"
                         },
                         "@type": {
-                            "$ref": "#/definitions/Base/definitions/@type",
+                            "$ref": "#@type",
                             "const": "ansis:SoilSite"
                         },
                         "hasGeometry": {
@@ -48,10 +49,10 @@
                         "hasProfile": {
                             "oneOf": [
                                 {
-                                    "$ref": "#/definitions/Entities/definitions/SoilProfile_Link"
+                                    "$ref": "#SoilProfile_Link"
                                 },
                                 {
-                                    "$ref": "#/definitions/Entities/definitions/SoilProfile"
+                                    "$ref": "#SoilProfile"
                                 }
                             ]
                         }
@@ -59,6 +60,7 @@
                     "additionalProperties": false
                 },
                 "SoilSite_Link": {
+                    "$anchor": "SoilSite_Link",
                     "title": "ANSIS Soil Site Link",
                     "description": "A simple object supporting a link (e.g. a hyperlink) to a soil site.",
                     "required": [
@@ -80,6 +82,7 @@
                     "additionalProperties": false
                 },
                 "SoilProfile": {
+                    "$anchor": "SoilProfile",
                     "@id": "https://anzsoil.org/def/au/domain/SoilProfile",
                     "title": "ANSIS Soil Profile",
                     "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
@@ -110,6 +113,7 @@
                     "additionalProperties": false
                 },
                 "SoilProfile_Link": {
+                    "$anchor": "SoilProfile_Link",
                     "title": "ANSIS Soil Profile Link",
                     "description": "A simple object supporting a link (e.g. a hyperlink) to a soil profile.",
                     "required": [
@@ -138,11 +142,13 @@
             "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
             "definitions": {
                 "$schema": {
+                    "$anchor": "$schema",
                     "title": "JSON $schema",
                     "$comment": "The JSON schema for the object. For use when \"additionalProperties\": false and therefore a property names $schema reference is a Bad Thing.",
                     "type": "string"
                 },
                 "@id": {
+                    "$anchor": "@id",
                     "title": "JSON-LD Identifier",
                     "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
                     "$comment": "After: https://www.w3.org/TR/json-ld/#node-identifiers",
@@ -150,6 +156,7 @@
                     "format": "uri"
                 },
                 "@type": {
+                    "$anchor": "@type",
                     "title": "JSON-LD Type",
                     "description": "A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model.",
                     "examples": [
@@ -163,6 +170,7 @@
                     ]
                 },
                 "@context": {
+                    "$anchor": "@context",
                     "title": "JSON-LD Context",
                     "description": "A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI.",
                     "$comment": "After: https://www.w3.org/TR/json-ld/#the-context",
@@ -171,6 +179,7 @@
                     "const": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json"
                 },
                 "label": {
+                    "$anchor": "label",
                     "@id": "http://www.w3.org/2000/01/rdf-schema#label",
                     "title": "RDF Schema Label",
                     "description": "A human-readable name for the object.",
@@ -206,7 +215,7 @@
                     "title": "Drainage",
                     "description": "Drainage of site or profile.",
                     "type": "string",
-                    "$ref": "#/definitions/Enums/definitions/soilWaterDrainage"
+                    "$ref": "#soilWaterDrainage"
                 }
             }
         },
@@ -215,6 +224,7 @@
             "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
             "definitions": {
                 "soilWaterDrainage": {
+                    "$anchor": "soilWaterDrainage",
                     "title": "Soil Water Drainage",
                     "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
                     "oneOf": [
