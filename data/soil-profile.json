@@ -1,0 +1,8 @@
+{
+    "$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/domain.json",
+    "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json",
+    "@id": "https://anzsoildata.github.io/def-au-schema-json/data/soil-profile.json",
+    "@type": "ansis:SoilProfile",
+    "drainage": "sp:soil-water-drainage-4",
+    "hasGeometry": "SRID=7844;POINT(-42 24)"
+}
