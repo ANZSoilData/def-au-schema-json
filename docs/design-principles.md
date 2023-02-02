@@ -10,31 +10,33 @@ odd, check here first for submitting an issue - the may be an explanation.
 
 ## Core practices
 
-### Version
- [draft-07] - highest supported by Visual Studio Code, would prefer to use the latest
+### JSON Schema Version
+[draft-07] - highest supported by Visual Studio Code, would prefer to use the latest
 [2020-12].
 
 ### Schema documents
-The `core` schema collection is made up of three schema documents. The naming and content are
-broadly aligned with the ANSIS ontology RDF files (the ANSIS ontology `domain.ttl` file is split
-here into `entities.json` and `properties.json`):
-- `entities.json`: class definitions with references to properties.json and enums.json.
-- `properties.json`: property definitions.
-- `enums.json`: vocabulary definitions.
+The `core` schema is made up of two schema documents. The naming and content are aligned with the
+ANSIS ontology RDF files (the ANSIS ontology `domain.ttl` and supporting vocabularies are combined
+into `domain.json`):
+- `domain.json`: entity and property definitions with enumeration objects linking to ANSIS
+vocabularies.
 - `context.json`: {experimental} JSON-LD context document (see Linked Data Alignment below).
 
-Application schema should only need a `entities.json` file. The subset of properties needed by an
-application can be references to properties.json in `core`. The same applies for enumerations.
-properties and enumerations are references as they may be used by multiple objects.
+Application schema should only need a `application.json` schema file linking to the subset of the
+entities and properties needed by the application use case.
+
+*The JSON Schema must be treated as* views *entirely derived from, or linking to, the ANSIS domain*
+*ontology and vocabularies. Any changes to the structure and definitions of entities, properties*
+*and vocabularies must first be dealt with in the domain ontology.*
 
 ###  Schema locations
-During development, schema can be directly accessed through https://anzsoildata.github.io/def-au-schema-json/,
+During development, schema can be directly accessed through https://anzsoildata.github.io/def-au-schema-json/schema,
 e.g.:
-- https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/entities.json
+- https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/domain.json
 
 ANZSoilData [GitHub Pages](https://pages.github.com/) will also used for schema `$id`s. Upon release
 the domain/path will switch to https://anzsoil.org/def/au/schema/json/, e.g.:
-- https://anzsoil.org/def/au/schema/json/core/1.0/entities
+- https://anzsoil.org/def/au/schema/json/core/1.0/domain
 
 ## Linked Data Alignment
 [JSON-LD] keywords will be used to help align the JSON schema and instance documents with the ANSIS
