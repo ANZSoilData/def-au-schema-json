@@ -3,8 +3,15 @@
     "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json",
     "@id": "https://anzsoildata.github.io/def-au-schema-json/data/soil-site.json",
     "@type": "ansis:SoilSite",
-    "drainage": "sp:soil-water-drainage-4",
-    "hasGeometry": "SRID=7844;POINT(-42 24)",
+    "drainage": {
+        "@value": "sp:soil-water-drainage-1"
+    },
+    "hasGeometry": {
+        "@value": "SRID=7844;LINESTRING(-42 24, -42 42)",
+        "usedProcedure": {
+            "@id": "https://anzsoil.org/def/au/pretend/procedure/differential-gps"
+        }
+    },
     "hasProfile":{
         "@id": "https://anzsoildata.github.io/def-au-schema-json/data/soil-profile.json",
         "@type": "ansis:SoilProfile",

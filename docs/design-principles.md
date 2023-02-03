@@ -38,6 +38,20 @@ ANZSoilData [GitHub Pages](https://pages.github.com/) will also used for schema 
 the domain/path will switch to https://anzsoil.org/def/au/schema/json/, e.g.:
 - https://anzsoil.org/def/au/schema/json/core/1.0/domain
 
+### Handling ANSIS observable properties
+ANSIS makes extensive use of `observable properties` to capture metadata about the observation that
+was made to determine an environmental property's value. Values are captured as a
+[`sosa:Observation`](https://www.w3.org/TR/vocab-ssn/#SOSAObservation) and means that environmental
+property values should always be a JSON object with the required SOSA properties. To fit into the
+encoding pattern established for this schema some tweaks are required
+1. The `sosa:observedProperty` is the json key.
+1. `sosa:hasResult` will be presented as `@value` (for consistency with our use of JSON-LD keys).
+1. The required/optional SOSA properties will be set on a property-by-property basis. Quantitative
+lab results will have stricter metadata requirements than qualitative field observations.
+
+Core schema observable properties should therefore not be considered sosa:Observations, but can be
+directly mapped on to them.
+
 ## Linked Data Alignment
 [JSON-LD] keywords will be used to help align the JSON schema and instance documents with the ANSIS
 domain ontology. As part of a schema definition they provide a non-standard keyword that links a
