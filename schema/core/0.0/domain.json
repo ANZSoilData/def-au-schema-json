@@ -7,18 +7,214 @@
     "type": "object",
     "oneOf": [
         {
+            "$ref": "#LandSurveySite"
+        },
+        {
             "$ref": "#SoilSite"
         },
         {
+            "$ref": "#Sample"
+        },
+        {
             "$ref": "#SoilProfile"
+        },
+        {
+            "$ref": "#SoilBody"
+        },
+        {
+            "$ref": "#SoilLayer"
+        },
+        {
+            "$ref": "#SoilHorizon"
+        },
+        {
+            "$ref": "#SoilSurface"
+        },
+        {
+            "$ref": "#Activity"
+        },
+        {
+            "$ref": "#Person"
+        },
+        {
+            "$ref": "#Project"
         }
     ],
     "definitions": {
+        "Base": {
+            "$id": "/base",
+            "title": "ANSIS JSON Base Schema",
+            "description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
+            "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
+            "definitions": {
+                "$schema": {
+                    "$anchor": "$schema",
+                    "title": "JSON $schema",
+                    "$comment": "The JSON schema for the object. For use when \"additionalProperties\": false and therefore a property names $schema reference is a Bad Thing.",
+                    "type": "string"
+                },
+                "@id": {
+                    "$anchor": "@id",
+                    "title": "JSON-LD Identifier",
+                    "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
+                    "$comment": "After: https://www.w3.org/TR/json-ld/#node-identifiers",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "@type": {
+                    "$anchor": "@type",
+                    "title": "JSON-LD Type",
+                    "description": "A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model.",
+                    "examples": [
+                        "ansis:SoilSite",
+                        "ansis:SoilProfile"
+                    ],
+                    "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
+                    "type": "string",
+                    "$ref": "#enum_entitytypes"
+                },
+                "@context": {
+                    "$anchor": "@context",
+                    "title": "JSON-LD Context",
+                    "description": "A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI.",
+                    "$comment": "After: https://www.w3.org/TR/json-ld/#the-context",
+                    "type": "string",
+                    "format": "uri",
+                    "const": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json"
+                },
+                "label": {
+                    "$anchor": "label",
+                    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "title": "RDF Schema Label",
+                    "description": "A human-readable name for the object.",
+                    "type": "string"
+                },
+                "Entity_Link": {
+                    "$anchor": "Entity_Link",
+                    "title": "ANSIS Entity Link",
+                    "description": "A simple object supporting a link (e.g. a hyperlink) to another entity.",
+                    "required": [
+                        "@id"
+                    ],
+                    "properties": {
+                        "@id": {
+                            "$ref": "#@id"
+                        },
+                        "@type": {
+                            "$ref": "#@type"
+                        },
+                        "label": {
+                            "$ref": "#label"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            }
+        },
+        "Objects": {
+            "$id": "/objects",
+            "title": "ANSIS JSON Objects",
+            "description": "Reusable objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
+            "definitions": {
+                "QuantityValue": {
+                    "$anchor": "QuantityValue",
+                    "@id": "http://qudt.org/schema/qudt/QuantityValue",
+                    "title": "QUDT QuantityValue",
+                    "description": "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit.",
+                    "type": "object",
+                    "required": [
+                        "@value",
+                        "unit"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "number"
+                        },
+                        "unit": {
+                            "$ref": "#unit"
+                        }
+                    }
+                },
+                "QuantityValue_Observable": {
+                    "$anchor": "QuantityValue_Observable",
+                    "title": "QUDT QuantityValue - Observable",
+                    "description": "As per #QuantityValue with additional observation property keys.",
+                    "type": "object",
+                    "required": [
+                        "@value",
+                        "unit"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "number"
+                        },
+                        "unit": {
+                            "$ref": "#unit"
+                        },
+                        "usedProcedure": {
+                            "$ref": "#usedProcedure"
+                        },
+                        "madeBySensor": {
+                            "$ref": "#madeBySensor"
+                        },
+                        "phenomenonTime": {
+                            "$ref": "#phenomenonTime"
+                        },
+                        "resultTime": {
+                            "$ref": "#resultTime"
+                        }
+                    }
+                },
+                "ConceptValue": {
+                    "$anchor": "ConceptValue",
+                    "title": "Concept Value",
+                    "description": "A compact URI referencing an entry in an ANSIS vocabulary.",
+                    "type": "object",
+                    "required": [
+                        "@value"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ConceptValue_Observable": {
+                    "$anchor": "ConceptValue_Observable",
+                    "title": "Concept Value - Value",
+                    "description": "A compact URI referencing an entry in an ANSIS vocabulary with additional observation property keys.",
+                    "type": "object",
+                    "required": [
+                        "@value"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "string"
+                        },
+                        "usedProcedure": {
+                            "$ref": "#usedProcedure"
+                        },
+                        "madeBySensor": {
+                            "$ref": "#madeBySensor"
+                        },
+                        "phenomenonTime": {
+                            "$ref": "#phenomenonTime"
+                        },
+                        "resultTime": {
+                            "$ref": "#resultTime"
+                        }
+                    }
+                }
+            }
+        },
         "Entities": {
             "$id": "/entities",
             "title": "ANSIS Soil Domain Entity Schema",
-            "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in the ANSIS Domain Ontology.",
+            "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
             "definitions": {
+                "LandSurveySite": {
+                    "$anchor": "LandSurveySite"
+                },
                 "SoilSite": {
                     "$anchor": "SoilSite",
                     "@id": "https://anzsoil.org/def/au/domain/SoilSite",
@@ -42,15 +238,18 @@
                             "const": "ansis:SoilSite"
                         },
                         "hasGeometry": {
-                            "$ref": "#hasGeometry"
+                            "type": "array",
+                            "items": {
+                                "$ref": "#hasGeometry"
+                            }
                         },
                         "drainage": {
                             "$ref": "#drainage"
                         },
-                        "hasProfile": {
+                        "relatedProfile": {
                             "oneOf": [
                                 {
-                                    "$ref": "#SoilProfile_Link"
+                                    "$ref": "#Entity_Link"
                                 },
                                 {
                                     "$ref": "#SoilProfile"
@@ -60,27 +259,8 @@
                     },
                     "additionalProperties": false
                 },
-                "SoilSite_Link": {
-                    "$anchor": "SoilSite_Link",
-                    "title": "ANSIS Soil Site Link",
-                    "description": "A simple object supporting a link (e.g. a hyperlink) to a soil site.",
-                    "required": [
-                        "@id",
-                        "@type"
-                    ],
-                    "properties": {
-                        "@id": {
-                            "$ref": "#@id"
-                        },
-                        "@type": {
-                            "$ref": "#@type",
-                            "const": "ansis:SoilSite"
-                        },
-                        "label": {
-                            "$ref": "#label"
-                        }
-                    },
-                    "additionalProperties": false
+                "Sample": {
+                    "$anchor": "Sample"
                 },
                 "SoilProfile": {
                     "$anchor": "SoilProfile",
@@ -113,77 +293,219 @@
                     },
                     "additionalProperties": false
                 },
-                "SoilProfile_Link": {
-                    "$anchor": "SoilProfile_Link",
-                    "title": "ANSIS Soil Profile Link",
-                    "description": "A simple object supporting a link (e.g. a hyperlink) to a soil profile.",
+                "SoilBody": {
+                    "$anchor": "SoilBody",
+                    "@id": "https://anzsoil.org/def/au/domain/SoilBody",
+                    "title": "ANSIS Soil Body",
+                    "description": "Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.",
                     "required": [
-                        "@id",
                         "@type"
                     ],
                     "properties": {
+                        "$schema": {
+                            "$ref": "#$schema"
+                        },
+                        "@context": {
+                            "$ref": "#@context"
+                        },
                         "@id": {
                             "$ref": "#@id"
                         },
                         "@type": {
                             "$ref": "#@type",
-                            "const": "ansis:SoilProfile"
+                            "const": "ansis:SoilBody"
                         },
-                        "label": {
-                            "$ref": "#label"
+                        "hasGeometry": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#hasGeometry"
+                            }
+                        },
+                        "classification": {
+                            "$ref": "#classification"
                         }
                     },
                     "additionalProperties": false
-                }
-            }
-        },
-        "BaseProperties": {
-            "$id": "/base-properties",
-            "title": "ANSIS JSON Base Property Schema",
-            "description": "Base properties used to identify and type entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
-            "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
-            "definitions": {
-                "$schema": {
-                    "$anchor": "$schema",
-                    "title": "JSON $schema",
-                    "$comment": "The JSON schema for the object. For use when \"additionalProperties\": false and therefore a property names $schema reference is a Bad Thing.",
-                    "type": "string"
+
                 },
-                "@id": {
-                    "$anchor": "@id",
-                    "title": "JSON-LD Identifier",
-                    "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
-                    "$comment": "After: https://www.w3.org/TR/json-ld/#node-identifiers",
-                    "type": "string",
-                    "format": "uri"
-                },
-                "@type": {
-                    "$anchor": "@type",
-                    "title": "JSON-LD Type",
-                    "description": "A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model.",
-                    "examples": [
-                        "ansis:SoilSite",
-                        "ansis:SoilProfile"
+                "SoilClassification": {
+                    "$anchor": "SoilClassification",
+                    "@id": "https://anzsoil.org/def/au/domain/SoilClassification",
+                    "title": "ANSIS Soil Classification",
+                    "description": "",
+                    "required": [
+                        "@type"
                     ],
-                    "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
-                    "type": "string",
-                    "$ref": "#EntityTypes"
+                    "properties": {
+                        "@type": {
+                            "$ref": "#@type",
+                            "const": "ansis:SoilClassification"
+                        },
+                        "classificationFamilyA1texture": {
+                            "$ref": "#classification-family-A1texture"
+                        },
+                        "classificationFamilyA1thickness": {
+                            "$ref": "#classification-family-A1thickness"
+                        },
+                        "classificationFamilyBtexture": {
+                            "$ref": "#classification-family-Btexture"
+                        },
+                        "classificationFamilyDepth": {
+                            "$ref": "#classification-family-depth"
+                        },
+                        "classificationFamilyGravel": {
+                            "$ref": "#classification-family-gravel"
+                        },
+                        "classificationGreatGroup": {
+                            "$ref": "#classification-greatgroup"
+                        },
+                        "classificationOrder": {
+                            "$ref": "#classification-order"
+                        },
+                        "classificationSubGroup": {
+                            "$ref": "#classification-subgroup"
+                        },
+                        "classificationSubOrder": {
+                            "$ref": "#classification-suborder"
+                        }
+                    },
+                    "additionalProperties": false
+
                 },
-                "@context": {
-                    "$anchor": "@context",
-                    "title": "JSON-LD Context",
-                    "description": "A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI.",
-                    "$comment": "After: https://www.w3.org/TR/json-ld/#the-context",
-                    "type": "string",
-                    "format": "uri",
-                    "const": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json"
+                "SoilLayer": {
+                    "$anchor": "SoilLayer"
                 },
-                "label": {
-                    "$anchor": "label",
-                    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "title": "RDF Schema Label",
-                    "description": "A human-readable name for the object.",
-                    "type": "string"
+                "SoilHorizon": {
+                    "$anchor": "SoilHorizon"
+                },
+                "SoilHorizon_Designation": {
+                    "$anchor": "HorizonDesignation",
+                    "@id": "https://anzsoil.org/def/au/domain/HorizonDesignation",
+                    "title": "ANSIS Soil Horizon Designation",
+                    "description": "Soil horizon designation. ",
+                    "required": [
+                        "@type",
+                        "designationMaster"
+                    ],
+                    "properties": {
+                        "@type": {
+                            "$ref": "#@type",
+                            "const": "ansis:HorizonDesignation"
+                        },
+                        "designationPrefix": {
+                            "$ref": "#designation-prefix"
+                        },
+                        "designationSubdivision": {
+                            "$ref": "#designation-subdivision"
+                        },
+                        "designationSuffix": {
+                            "$ref": "#designation-suffix"
+                        },
+                        "designationMaster": {
+                            "$ref": "#designation-master"
+                        }
+                    },
+                    "additionalProperties": false
+
+                },
+                "SoilStrength": {
+                    "$anchor": "SoilStrength"
+                },
+                "SoilStructure": {
+                    "$anchor": "SoilStructure"
+                },
+                "SiteType": {
+                    "$anchor": "SiteType"
+                },
+                "SoilSampleType": {
+                    "$anchor": "SoilSampleType"
+                },
+                "SoilSurface": {
+                    "$anchor": "SoilSurface"
+                },
+                "CoarseFragments": {
+                    "$anchor": "CoarseFragments"
+                },
+                "Cracks": {
+                    "$anchor": "Cracks"
+                },
+                "Cutans": {
+                    "$anchor": "Cutans"
+                },
+                "Erosion": {
+                    "$anchor": "Erosion"
+                },
+                "Inundation": {
+                    "$anchor": "Inundation"
+                },
+                "LandCover": {
+                    "$anchor": "LandCover"
+                },
+                "LandManagement": {
+                    "$anchor": "LandManagement"
+                },
+                "LandSurface": {
+                    "$anchor": "LandSurface"
+                },
+                "LandUse": {
+                    "$anchor": "LandUse"
+                },
+                "Landform": {
+                    "$anchor": "Landform"
+                },
+                "LandformElement": {
+                    "$anchor": "LandformElement"
+                },
+                "LandformPattern": {
+                    "$anchor": "LandformPattern"
+                },
+                "Microrelief": {
+                    "$anchor": "Microrelief"
+                },
+                "Microrelief_biotic": {
+                    "$anchor": "Microrelief_biotic"
+                },
+                "Microrelief_gilgai": {
+                    "$anchor": "Microrelief_gilgai"
+                },
+                "Microrelief_hummocky": {
+                    "$anchor": "Microrelief_hummocky"
+                },
+                "Microrelief_other": {
+                    "$anchor": "Microrelief_other"
+                },
+                "Mottles": {
+                    "$anchor": "Mottles"
+                },
+                "Outcrop": {
+                    "$anchor": "Outcrop"
+                },
+                "Pans": {
+                    "$anchor": "Pans"
+                },
+                "Pores": {
+                    "$anchor": "Pores"
+                },
+                "Roots": {
+                    "$anchor": "Roots"
+                },
+                "Segregations": {
+                    "$anchor": "Segregations"
+                },
+                "StreamChannel": {
+                    "$anchor": "StreamChannel"
+                },
+                "Substrate": {
+                    "$anchor": "Substrate"
+                },
+                "Activity": {
+                    "$anchor": "Activity"
+                },
+                "Person": {
+                    "$anchor": "Person"
+                },
+                "Project": {
+                    "$anchor": "Project"
                 }
             }
         },
@@ -193,6 +515,1396 @@
             "description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
             "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
             "definitions": {
+                "abundance": {
+                    "$anchor": "abundance",
+                    "@id": "https://anzsoil.org/def/au/domain/abundance",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "abundance",
+                    "description": "abundance of items",
+                    "$comment": "Requires conditional logical to support different vocabularies for different types.",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "agent": {
+                    "$anchor": "agent",
+                    "@id": "https://anzsoil.org/def/au/domain/agent",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "agent",
+                    "description": "agent of geomorphological or biotic activity",
+                    "$comment": "Requires conditional logical to support different vocabularies for different types.",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "aggradation": {
+                    "$anchor": "aggradation",
+                    "@id": "https://anzsoil.org/def/au/domain/aggradation",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "aggradation",
+                    "description": "aggradation presence",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "alteration": {
+                    "$anchor": "alteration",
+                    "@id": "https://anzsoil.org/def/au/domain/alteration",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "alteration",
+                    "description": "type of alteration",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "analyte": {
+                    "$anchor": "analyte",
+                    "@id": "https://anzsoil.org/def/au/domain/analyte",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "analyte",
+                    "description": "chemical species measured",
+                    "$comment": "Large vocabulary, external link.",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "aspect": {
+                    "$anchor": "aspect",
+                    "@id": "https://anzsoil.org/def/au/domain/aspect",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "aspect",
+                    "description": "direction or azimuth that a terrain surface faces",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "carbon": {
+                    "$anchor": "carbon",
+                    "@id": "https://anzsoil.org/def/au/domain/carbon",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "carbon",
+                    "description": "soil carbon",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "carbonateEffervescence": {
+                    "$anchor": "carbonate-effervescence",
+                    "@id": "https://anzsoil.org/def/au/domain/carbonate-effervescence",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "effervescence of carbonate",
+                    "description": "effervescence of carbonate in fine earth",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "cementation": {
+                    "$anchor": "cementation",
+                    "@id": "https://anzsoil.org/def/au/domain/cementation",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "cementation",
+                    "description": "degree of cementation",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "chemistry": {
+                    "$anchor": "chemistry",
+                    "@id": "https://anzsoil.org/def/au/domain/chemistry",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "soil chemical property",
+                    "description": "",
+                    "$comment": "Abstract property - parent of other chemical properties",
+                    "type": "null"
+                },
+                "classification": {
+                    "$anchor": "classification",
+                    "@id": "https://anzsoil.org/def/au/domain/classification",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has classification",
+                    "description": "classification of the soil body or profile",
+                    "$comment": "",
+                    "$ref": "#SoilClassification"
+                },
+                "classificationFamilyA1texture": {
+                    "$anchor": "classification-family-A1texture",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-family-A1texture",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - A1 horizon texture",
+                    "description": "family criteria - A1 horizon textur",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationFamilyA1thickness": {
+                    "$anchor": "classification-family-A1thickness",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-family-A1thickness",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - A1 horizon thickness",
+                    "description": "family criteria - A1 horizon thickness",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationFamilyBtexture": {
+                    "$anchor": "classification-family-Btexture",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-family-Btexture",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - B horizon texture",
+                    "description": "family criteria - B horizon texture",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationFamilyDepth": {
+                    "$anchor": "classification-family-depth",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-family-depth",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - Soil depth",
+                    "description": "family criteria - Soil depth",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationFamilyGravel": {
+                    "$anchor": "classification-family-gravel",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-family-gravel",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - Gravel of the surface and A1 horizon",
+                    "description": "family criteria - Gravel of the surface and A1 horizon",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationGreatGroup": {
+                    "$anchor": "classification-greatgroup",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-greatgroup",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - Great group",
+                    "description": "soil classification - Great group",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationOrder": {
+                    "$anchor": "classification-order",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-order",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - Order",
+                    "description": "soil classification - Order",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationSubGroup": {
+                    "$anchor": "classification-subgroup",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-subgroup",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - Subgroup",
+                    "description": "soil classification - Subgroup",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "classificationSubOrder": {
+                    "$anchor": "classification-suborder",
+                    "@id": "https://anzsoil.org/def/au/domain/classification-suborder",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "classification - Sub-order",
+                    "description": "soil classification - Sub-order",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "component": {
+                    "$anchor": "component",
+                    "@id": "https://anzsoil.org/def/au/domain/component",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "component",
+                    "description": "type of component element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "compoundPedality": {
+                    "$anchor": "compoundPedality",
+                    "@id": "https://anzsoil.org/def/au/domain/compoundPedality",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "compound pedality",
+                    "description": "",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "conditionWhenDry": {
+                    "$anchor": "condition-when-dry",
+                    "@id": "https://anzsoil.org/def/au/domain/condition-when-dry",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "condition when dry",
+                    "description": "surface condition when dry",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "confidence": {
+                    "$anchor": "confidence",
+                    "@id": "https://anzsoil.org/def/au/domain/confidence",
+                    "title": "confidence",
+                    "description": "confidence in assessment",
+                    "$comment": "",
+                    "type": "string",
+                    "$ref": "#ConceptValue"
+                },
+                "continuity": {
+                    "$anchor": "continuity",
+                    "@id": "https://anzsoil.org/def/au/domain/continuity",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "continuity",
+                    "description": "continuity of linear or planar elements",
+                    "$comment": "Definition implies domain beyond pans - use conditional logic for enum $refs.",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "contrast": {
+                    "$anchor": "contrast",
+                    "@id": "https://anzsoil.org/def/au/domain/contrast",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "contrast",
+                    "description": "degree of colour contrast",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "degree": {
+                    "$anchor": "degree",
+                    "@id": "https://anzsoil.org/def/au/domain/degree",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "degree or intensity",
+                    "description": "degree or severity or intensity of phenomenon",
+                    "$comment": "use conditional logic for enum $refs",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "density": {
+                    "$anchor": "density",
+                    "@id": "https://anzsoil.org/def/au/domain/density",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "density",
+                    "description": "mass per unit volume of a substance",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "depth": {
+                    "$anchor": "depth",
+                    "@id": "https://anzsoil.org/def/au/domain/depth",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "depth",
+                    "description": "depth from local surface of entity",
+                    "$comment": "",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#QuantityValue_Observable"
+                        }
+                    ]
+                },
+                "depthFreeWater": {
+                    "$anchor": "depth-free-water",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-free-water",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "depth",
+                    "description": "Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface.",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "depthGully": {
+                    "$anchor": "depth-gully",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-gully",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "gully depth",
+                    "description": "depth from local surface to the base of the gully",
+                    "$comment": "",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#QuantityValue_Observable"
+                        }
+                    ]
+                },
+                "depthLower": {
+                    "$anchor": "depth-lower",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-lower",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "lower depth",
+                    "description": "depth from local surface to the base of the element",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "depthRHorizon": {
+                    "$anchor": "depth-r-horizon",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-r-horizon",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "depth to R-Horizon",
+                    "description": "depth from local surface to the top of the R-Horizon",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "depthReason": {
+                    "$anchor": "depth-reason",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-reason",
+                    "title": "reason for profile depth",
+                    "description": "reason for the specific depth of this profile e.g. length of auger | depth of interest | rock | too wet … ",
+                    "$comment": "",
+                    "type": "string"
+                },
+                "depthUpper": {
+                    "$anchor": "depth-upper",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-upper",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "upper depth",
+                    "description": "depth from local surface to the top of the element",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "depthWidthRatio": {
+                    "$anchor": "depth-width-ratio",
+                    "@id": "https://anzsoil.org/def/au/domain/depth-width-ratio",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "depth width ratio",
+                    "description": "depth to width ratio of entity; ratio of depth to width of the element",
+                    "$comment": "qudt:QuantityValue in RDF - - simplified here as ratios are dimensionless",
+                    "type": "object",
+                    "required": [
+                        "@value"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "number"
+                        },
+                        "usedProcedure": {
+                            "$ref": "#usedProcedure"
+                        }
+                    }
+                },
+                "designSite": {
+                    "$anchor": "design-site",
+                    "@id": "https://anzsoil.org/def/au/domain/design-site",
+                    "title": "site design",
+                    "description": "overall design of sampling at the site e.g. ASLS|grid|transect",
+                    "$comment": "",
+                    "type": "string"
+                },
+                "designSurvey": {
+                    "$anchor": "design-survey",
+                    "@id": "https://anzsoil.org/def/au/domain/design-survey",
+                    "title": "survey design",
+                    "description": "overall design of soil or landscape survey e.g. free|grid|stratified|miscellaneous",
+                    "$comment": "",
+                    "type": "string"
+                },
+                "designation": {
+                    "$anchor": "designation",
+                    "@id": "https://anzsoil.org/def/au/domain/designation",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "horizon designation",
+                    "description": "designation of soil horizon with the sequence composing the Profile or Soil Body",
+                    "$comment": "",
+                    "type": "object",
+                    "required": [
+                        "@value"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "$ref": "#HorizonDesignation"
+                        }
+                    }
+                },
+                "designationMaster": {
+                    "$anchor": "designation-master",
+                    "@id": "https://anzsoil.org/def/au/domain/designation-master",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "designation master",
+                    "description": "soil horizon designation master",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "designationPrefix": {
+                    "$anchor": "designation-prefix",
+                    "@id": "https://anzsoil.org/def/au/domain/designation-prefix",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "designation prefix",
+                    "description": "soil horizon designation prefix",
+                    "$comment": "",
+                    "type": "integer"
+                },
+                "designationSubdivision": {
+                    "$anchor": "designation-subdivision",
+                    "@id": "https://anzsoil.org/def/au/domain/designation-subdivision",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "designation subdivision",
+                    "description": "soil horizon designation subdivision",
+                    "$comment": "",
+                    "type": "integer"
+                },
+                "designationSuffix": {
+                    "$anchor": "designation-suffix",
+                    "@id": "https://anzsoil.org/def/au/domain/designation-suffix",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "designation subdivision",
+                    "description": "soil horizon designation subdivision",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+
+                "development": {
+                    "$anchor": "development",
+                    "@id": "https://anzsoil.org/def/au/domain/development",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "development",
+                    "description": "degree of development of element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "diameter": {
+                    "$anchor": "diameter",
+                    "@id": "https://anzsoil.org/def/au/domain/diameter",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "diameter",
+                    "description": "thickness or width of round object",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "directionality": {
+                    "$anchor": "directionality",
+                    "@id": "https://anzsoil.org/def/au/domain/directionality",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "directionality",
+                    "description": "network directionality",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "distance": {
+                    "$anchor": "distance",
+                    "@id": "https://anzsoil.org/def/au/domain/distance",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "distance",
+                    "description": "spatial separation of objects",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "distinctness": {
+                    "$anchor": "distinctness",
+                    "@id": "https://anzsoil.org/def/au/domain/distinctness",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "distinctness",
+                    "description": "distinctness of boundary - in the context of a soil horizon, this refers to the distinctness of the lower boundary",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "distribution": {
+                    "$anchor": "distribution",
+                    "@id": "https://anzsoil.org/def/au/domain/distribution",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "distribution",
+                    "description": "spatial arrangement of items",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "disturbance": {
+                    "$anchor": "disturbance",
+                    "@id": "https://anzsoil.org/def/au/domain/disturbance",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "disturbance",
+                    "description": "disturbance of site",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "drainage": {
+                    "$anchor": "drainage",
+                    "@id": "https://anzsoil.org/def/au/domain/drainage",
+                    "title": "drainage",
+                    "description": "Drainage of site or profile.",
+                    "$comment": "example of a property bound to an enumeration",
+                    "type": "object",
+                    "required": [
+                        "@value"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "string",
+                            "$ref": "#enum_soilwaterdrainage"
+                        },
+                        "usedProcedure": {
+                            "$ref": "#usedProcedure"
+                        }
+                    }
+                },
+                "duration": {
+                    "$anchor": "duration",
+                    "@id": "https://anzsoil.org/def/au/domain/duration",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "duration",
+                    "description": "temporal extent of event or phenomenon",
+                    "$comment": "",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#QuantityValue_Observable"
+                        }
+                    ]
+                },
+                "elevation": {
+                    "$anchor": "elevation",
+                    "@id": "https://anzsoil.org/def/au/domain/elevation",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "elevation",
+                    "description": "elevation of element above a datum (usually MSL)",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "fabric": {
+                    "$anchor": "fabric",
+                    "@id": "https://anzsoil.org/def/au/domain/fabric",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "fabric",
+                    "description": "fabric of soil element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "frequency": {
+                    "$anchor": "frequency",
+                    "@id": "https://anzsoil.org/def/au/domain/frequency",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "frequency",
+                    "description": "temporal frequency of event or phenomenon",
+                    "$comment": "",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#QuantityValue_Observable"
+                        }
+                    ]
+                },
+                "genesis": {
+                    "$anchor": "genesis",
+                    "@id": "https://anzsoil.org/def/au/domain/genesis",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "genesis",
+                    "description": "formation process for material",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "geomorphologyMode": {
+                    "$anchor": "geomorphologyMode",
+                    "@id": "https://anzsoil.org/def/au/domain/geomorphologyMode",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "geomorphology mode",
+                    "description": "mode of geomorphological activity",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "geomorphologyStatus": {
+                    "$anchor": "geomorphologyStatus",
+                    "@id": "https://anzsoil.org/def/au/domain/geomorphologyStatus",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "geomorphology status",
+                    "description": "status of geomorphological activity",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "grade": {
+                    "$anchor": "grade",
+                    "@id": "https://anzsoil.org/def/au/domain/grade",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "grade",
+                    "description": "grade or degree of development of structure",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "grainSize": {
+                    "$anchor": "grain-size",
+                    "@id": "https://anzsoil.org/def/au/domain/grain-size",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "grain size",
+                    "description": "size of the most common particles of a material",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "hasCoarseFragments": {
+                    "$anchor": "hasCoarseFragments",
+                    "@id": "https://anzsoil.org/def/au/domain/hasCoarseFragments",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has coarse fragments",
+                    "description": "link to description of coarse fragments",
+                    "$comment": "",
+                    "$ref": "#CoarseFragments"
+                },
+                "hasCracks": {
+                    "$anchor": "hasCracks",
+                    "@id": "https://anzsoil.org/def/au/domain/hasCracks",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has cracks",
+                    "description": "link to description of cracks",
+                    "$comment": "",
+                    "$ref": "#Cracks"
+                },
+                "hasCutans": {
+                    "$anchor": "hasCutans",
+                    "@id": "https://anzsoil.org/def/au/domain/hasCutans",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has cutans",
+                    "description": "link to description of cutans",
+                    "$comment": "",
+                    "$ref": "#Cutans"
+                },
+                "hasErosion": {
+                    "$anchor": "hasErosion",
+                    "@id": "https://anzsoil.org/def/au/domain/hasErosion",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has erosion",
+                    "description": "link to description of erosion",
+                    "$comment": "",
+                    "$ref": "#Erosion"
+                },
+                "hasInundation": {
+                    "$anchor": "hasInundation",
+                    "@id": "https://anzsoil.org/def/au/domain/hasInundation",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has inundation",
+                    "description": "link to description of inundation",
+                    "$comment": "",
+                    "$ref": "#Inundation"
+                },
+                "hasLandCover": {
+                    "$anchor": "hasLandCover",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandCover",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has land cover",
+                    "description": "link to description of land cover",
+                    "$comment": "",
+                    "$ref": "#LandCover"
+                },
+                "hasLandManagement": {
+                    "$anchor": "hasLandManagement",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandManagement",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has land management",
+                    "description": "link to description of land management",
+                    "$comment": "",
+                    "$ref": "#LandManagement"
+                },
+                "hasLandSurface": {
+                    "$anchor": "hasLandSurface",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandSurface",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has land surface",
+                    "description": "link to description of land surface",
+                    "$comment": "",
+                    "$ref": "#LandSurface"
+                },
+                "hasLandUse": {
+                    "$anchor": "hasLandUse",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandUse",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has land use",
+                    "description": "link to description of land use",
+                    "$comment": "",
+                    "$ref": "#LandUse"
+                },
+                "hasLandform": {
+                    "$anchor": "hasLandform",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandform",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has landform",
+                    "description": "link to description of landform",
+                    "$comment": "",
+                    "$ref": "#Landform"
+                },
+                "hasLandformElement": {
+                    "$anchor": "hasLandformElement",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandformElement",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has landform element",
+                    "description": "link to description of landform element",
+                    "$comment": "",
+                    "$ref": "#LandformElement"
+                },
+                "hasLandformPattern": {
+                    "$anchor": "hasLandformPattern",
+                    "@id": "https://anzsoil.org/def/au/domain/hasLandformPattern",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has landform pattern",
+                    "description": "link to description of landform pattern",
+                    "$comment": "",
+                    "$ref": "#LandformPattern"
+                },
+                "hasMicrorelief": {
+                    "$anchor": "hasMicrorelief",
+                    "@id": "https://anzsoil.org/def/au/domain/hasMicrorelief",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has microrelief",
+                    "description": "link to description of microrelief at the site",
+                    "$comment": "",
+                    "$ref": "#Microrelief"
+                },
+                "hasMicrorelief_biotic": {
+                    "$anchor": "hasMicrorelief-biotic",
+                    "@id": "https://anzsoil.org/def/au/domain/hasMicrorelief-biotic",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has microrelief - biotic",
+                    "description": "link to description of biotic microrelief at the site",
+                    "$comment": "",
+                    "$ref": "#Microrelief_biotic"
+                },
+                "hasMicrorelief_gilgai": {
+                    "$anchor": "hasMicrorelief-gilgai",
+                    "@id": "https://anzsoil.org/def/au/domain/hasMicrorelief-gilgai",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has microrelief - gilgai",
+                    "description": "link to description of gilgai microrelief at the site",
+                    "$comment": "",
+                    "$ref": "#Microrelief_gilgai"
+                },
+                "hasMicrorelief_hummocky": {
+                    "$anchor": "hasMicrorelief-hummocky",
+                    "@id": "https://anzsoil.org/def/au/domain/hasMicrorelief-hummocky",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has microrelief - hummocky",
+                    "description": "link to description of hummocky microrelief at the site",
+                    "$comment": "",
+                    "$ref": "#Microrelief_hummocky"
+                },
+                "hasMicrorelief_other": {
+                    "$anchor": "hasMicrorelief-other",
+                    "@id": "https://anzsoil.org/def/au/domain/hasMicrorelief-other",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has microrelief - other",
+                    "description": "link to description of other microrelief at the site",
+                    "$comment": "",
+                    "$ref": "#Microrelief_other"
+                },
+                "hasMottles": {
+                    "$anchor": "hasMottles",
+                    "@id": "https://anzsoil.org/def/au/domain/hasMottles",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has mottles",
+                    "description": "link to description of mottles and other colour patterns",
+                    "$comment": "",
+                    "$ref": "#Mottles"
+                },
+                "hasOutcrop": {
+                    "$anchor": "hasOutcrop",
+                    "@id": "https://anzsoil.org/def/au/domain/hasOutcrop",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has outcrop",
+                    "description": "link to description of rock outcrop at this entity",
+                    "$comment": "",
+                    "$ref": "#Outcrop"
+                },
+                "hasPans": {
+                    "$anchor": "hasPans",
+                    "@id": "https://anzsoil.org/def/au/domain/hasPans",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has pans",
+                    "description": "link to description of pans",
+                    "$comment": "",
+                    "$ref": "#Pans"
+                },
+                "hasPores": {
+                    "$anchor": "hasPores",
+                    "@id": "https://anzsoil.org/def/au/domain/hasPores",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has macropores",
+                    "description": "link to description of macropores",
+                    "$comment": "",
+                    "$ref": "#Pores"
+                },
+                "hasRoots": {
+                    "$anchor": "hasRoots",
+                    "@id": "https://anzsoil.org/def/au/domain/hasRoots",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has roots",
+                    "description": "link to description of roots",
+                    "$comment": "",
+                    "$ref": "#Roots"
+                },
+                "hasSegregations": {
+                    "$anchor": "hasSegregations",
+                    "@id": "https://anzsoil.org/def/au/domain/hasSegregations",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has segregations",
+                    "description": "link to description of segregations",
+                    "$comment": "",
+                    "$ref": "#Segregations"
+                },
+                "hasStreamChannel": {
+                    "$anchor": "hasStreamChannel",
+                    "@id": "https://anzsoil.org/def/au/domain/hasStreamChannel",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has stream channel",
+                    "description": "link to description of stream channel occurrence",
+                    "$comment": "",
+                    "$ref": "#StreamChannel"
+                },
+                "hasSubstrate": {
+                    "$anchor": "hasSubstrate",
+                    "@id": "https://anzsoil.org/def/au/domain/hasSubstrate",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "has substrate",
+                    "description": "link to description of substrate",
+                    "$comment": "",
+                    "$ref": "#Substrate"
+                },
+                "height": {
+                    "$anchor": "height",
+                    "@id": "https://anzsoil.org/def/au/domain/height",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "height",
+                    "description": "vertical extent of element",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "heightDrainage": {
+                    "$anchor": "height-drainage",
+                    "@id": "https://anzsoil.org/def/au/domain/height-drainage",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "drainage height",
+                    "description": "vertical extent of drainage",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "integration": {
+                    "$anchor": "temintegrationlate",
+                    "@id": "https://anzsoil.org/def/au/domain/integration",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "integration",
+                    "description": "integration of stream channel network",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "length": {
+                    "$anchor": "length",
+                    "@id": "https://anzsoil.org/def/au/domain/length",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "length",
+                    "description": "linear extent - larger dimension",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "lithology": {
+                    "$anchor": "lithology",
+                    "@id": "https://anzsoil.org/def/au/domain/lithology",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "lithology",
+                    "description": "lithological type of material",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "locationInElement": {
+                    "$anchor": "location-in-element",
+                    "@id": "https://anzsoil.org/def/au/domain/location-in-element",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "location in landform element",
+                    "description": "location within landform element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "locationInToposequence": {
+                    "$anchor": "location-in-toposequence",
+                    "@id": "https://anzsoil.org/def/au/domain/location-in-toposequence",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "location in toposequence",
+                    "description": "location within a toposequence",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "magneticAttributes": {
+                    "$anchor": "magnetic-attributes",
+                    "@id": "https://anzsoil.org/def/au/domain/magnetic-attributes",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "magnetic attributes",
+                    "description": "magnetic attributes",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "mapSheet": {
+                    "$anchor": "mapSheet",
+                    "@id": "https://anzsoil.org/def/au/domain/mapSheet",
+                    "title": "mapSheet",
+                    "description": "map-sheet on which this location is found",
+                    "$comment": "",
+                    "type": "string"
+                },
+                "material": {
+                    "$anchor": "material",
+                    "@id": "https://anzsoil.org/def/au/domain/material",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "material",
+                    "description": "material or composition of entity or element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "methodElevation": {
+                    "$anchor": "method-elevation",
+                    "@id": "https://anzsoil.org/def/au/domain/method-elevation",
+                    "title": "elevation method",
+                    "description": "means of evaluation of elevation",
+                    "$comment": "[ISSUE - discuss switching this to a vocab for usedProcedure]",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "methodSlope": {
+                    "$anchor": "method-slope",
+                    "@id": "https://anzsoil.org/def/au/domain/method-slope",
+                    "title": "slope method",
+                    "description": "means of evaluation of slope",
+                    "$comment": "[ISSUE - discuss switching this to a vocab for usedProcedure]",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "migrationRate": {
+                    "$anchor": "migration-rate",
+                    "@id": "https://anzsoil.org/def/au/domain/migration-rate",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "migration rate",
+                    "description": "migration-rate",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "moistureStatus": {
+                    "$anchor": "moisture-status",
+                    "@id": "https://anzsoil.org/def/au/domain/moisture-status",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "moisture status",
+                    "description": "moisture state of material while property evaluation is carried out",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "morphologicalType": {
+                    "$anchor": "morphological-type",
+                    "@id": "https://anzsoil.org/def/au/domain/morphological-type",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "morphological type",
+                    "description": "morphological type of landform element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "pH": {
+                    "$anchor": "pH",
+                    "@id": "https://anzsoil.org/def/au/domain/pH",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "pH",
+                    "description": "alkalinity of materia",
+                    "$comment": "",
+                    "type": "object",
+                    "required": [
+                        "@value"
+                    ],
+                    "properties": {
+                        "@value": {
+                            "type": "number"
+                        },
+                        "usedProcedure": {
+                            "$ref": "#usedProcedure"
+                        }
+                    }
+                },
+                "pattern": {
+                    "$anchor": "pattern",
+                    "@id": "https://anzsoil.org/def/au/domain/pattern",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "pattern",
+                    "description": "spatial pattern of channels or other linear element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "permeability": {
+                    "$anchor": "permeability",
+                    "@id": "https://anzsoil.org/def/au/domain/permeability",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "permeability",
+                    "description": "rate of flow of liquid through the material",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "physical": {
+                    "$anchor": "physical",
+                    "@id": "https://anzsoil.org/def/au/domain/physical",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "soil physical property",
+                    "description": "",
+                    "$comment": "[ISSUE] Is this used?",
+                    "type": "null"
+                },
+                "plasticity": {
+                    "$anchor": "plasticity",
+                    "@id": "https://anzsoil.org/def/au/domain/plasticity",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "plasticity",
+                    "description": "capability of being formed or molded",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "porosity": {
+                    "$anchor": "porosity",
+                    "@id": "https://anzsoil.org/def/au/domain/porosity",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "porosity",
+                    "description": "proportion of void space in material",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "proportions": {
+                    "$anchor": "proportions",
+                    "@id": "https://anzsoil.org/def/au/domain/proportions",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "proportions",
+                    "description": "proportion of void space in material",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
+                "purpose": {
+                    "$anchor": "purpose",
+                    "@id": "https://anzsoil.org/def/au/domain/purpose",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "purpose",
+                    "description": "purpose of or reason for activity",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "relatedActivity": {
+                    "$anchor": "relatedActivity",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedActivity",
+                    "title": "related activity",
+                    "description": "link to an activity related to this context",
+                    "$comment": "",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:Activity"
+                        },
+                        {
+                            "$ref": "#Activity"
+                        }
+                    ]
+                },
+                "relatedHorizon": {
+                    "$anchor": "relatedHorizon",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedHorizon",
+                    "title": "related soil horizon",
+                    "description": "related soil horizon within a soil body or sample, or associated with a contact",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SoilHorizon"
+                        },
+                        {
+                            "$ref": "#SoilHorizon"
+                        }
+                    ]
+                },
+                "relatedLandSurveySite": {
+                    "$anchor": "relatedLandSurveySite",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedLandsurveySite",
+                    "title": "related land survey site",
+                    "description": "link to a land survey site related to this context",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:LandsurveySite"
+                        },
+                        {
+                            "$ref": "#LandSurveySite"
+                        }
+                    ]
+                },
+                "relatedLayer": {
+                    "$anchor": "relatedLayer",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedLayer",
+                    "title": "related soil layer",
+                    "description": "related soil layer within a soil body or profile",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SoilLayer"
+                        },
+                        {
+                            "$ref": "#SoilLayer"
+                        }
+                    ]
+                },
+                "relatedProfile": {
+                    "$anchor": "relatedProfile",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedProfile",
+                    "title": "Related Profile",
+                    "description": "Link to a soil profile related to this context.",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SoilProfile"
+                        },
+                        {
+                            "$ref": "#SoilProfile"
+                        }
+                    ]
+                },
+                "relatedProject": {
+                    "$anchor": "relatedProject",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedProject",
+                    "title": "related project",
+                    "description": "link to project that supported this activity",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "proj:Project"
+                        },
+                        {
+                            "$ref": "#Project"
+                        }
+                    ]
+                },
+                "relatedSample": {
+                    "$anchor": "relatedSample",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedSample",
+                    "title": "related sample",
+                    "description": "link to a sample related to this context",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "sosa:Sample"
+                        },
+                        {
+                            "$ref": "#Sample"
+                        }
+                    ]
+                },
+                "relatedSite": {
+                    "$anchor": "relatedSite",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedSite",
+                    "title": "related site",
+                    "description": "link to a soil site related to this context",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SoilSite"
+                        },
+                        {
+                            "$ref": "#SoilSite"
+                        }
+                    ]
+                },
+                "relatedSoilBody": {
+                    "$anchor": "relatedSoilBody",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedSoilBody",
+                    "title": "related soil body",
+                    "description": "link to a soil body related to this context",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SoilBody"
+                        },
+                        {
+                            "$ref": "#SoilBody"
+                        }
+                    ]
+                },
+                "relatedSoilSurface": {
+                    "$anchor": "relatedSoilSurface",
+                    "@id": "https://anzsoil.org/def/au/domain/relatedSoilSurface",
+                    "title": "related soil surface",
+                    "description": "soil surface of this entity",
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SoilSurface"
+                        },
+                        {
+                            "$ref": "#SoilSurface"
+                        }
+                    ]
+                },
+
+                "relativeInclination": {
+                    "$anchor": "relative-inclination",
+                    "@id": "https://anzsoil.org/def/au/domain/relative-inclination",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "relative inclination",
+                    "description": "relative slope or inclination",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "relief": {
+                    "$anchor": "relief",
+                    "@id": "https://anzsoil.org/def/au/domain/relief",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "relief",
+                    "description": "amount of vertical variation of the landform",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "runoff": {
+                    "$anchor": "runoff",
+                    "@id": "https://anzsoil.org/def/au/domain/runoff",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "runoff",
+                    "description": "degree of surface water runoff",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "shape": {
+                    "$anchor": "shape",
+                    "@id": "https://anzsoil.org/def/au/domain/shape",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "shape",
+                    "description": "geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "size": {
+                    "$anchor": "size",
+                    "@id": "https://anzsoil.org/def/au/domain/size",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "size",
+                    "description": "geometric scale and extent of element",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "slope": {
+                    "$anchor": "slope",
+                    "@id": "https://anzsoil.org/def/au/domain/slope",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "slope",
+                    "description": "divergence of surface from horizontal",
+                    "$comment": "",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#QuantityValue_Observable"
+                        }
+                    ]
+                },
+                "spacing": {
+                    "$anchor": "spacing",
+                    "@id": "https://anzsoil.org/def/au/domain/spacing",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "spacing",
+                    "description": "lateral separation of elements - in the context of substrate this refers to the spacing of discontinuities",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "state": {
+                    "$anchor": "state",
+                    "@id": "https://anzsoil.org/def/au/domain/state",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "state",
+                    "description": "erosion status",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "stickiness": {
+                    "$anchor": "stickiness",
+                    "@id": "https://anzsoil.org/def/au/domain/stickiness",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "stickiness",
+                    "description": "adhesiveness or viscosity",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "strength": {
+                    "$anchor": "strength",
+                    "@id": "https://anzsoil.org/def/au/domain/strength",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "strength",
+                    "description": "strength of material",
+                    "$comment": "",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#SoilStrength"
+                        }
+                    ]
+                },
+                "structure": {
+                    "$anchor": "structure",
+                    "@id": "https://anzsoil.org/def/au/domain/structure",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "structure",
+                    "description": "internal arrangement of elements of the material or entity",
+                    "$comment": "",
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#SoilStructure"
+                        }
+                    ]
+                },
+                "texture": {
+                    "$anchor": "texture",
+                    "@id": "https://anzsoil.org/def/au/domain/texture",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "texture",
+                    "description": "material texture, in terms of particle size distribution and component materials",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "ansisType": {
+                    "$anchor": "ansisType",
+                    "@id": "https://anzsoil.org/def/au/domain/type",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "type",
+                    "description": "type of ansis soil entity",
+                    "$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "underlyingMaterial": {
+                    "$anchor": "underlyingMaterial",
+                    "@id": "https://anzsoil.org/def/au/domain/tempunderlyingMateriallate",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "underlying material",
+                    "description": "lithology of material underlying the landform",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "value": {
+                    "$anchor": "value",
+                    "@id": "https://anzsoil.org/def/au/domain/value",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "value",
+                    "description": "literal value",
+                    "$comment": "[ISSUE] use @value instead?",
+                    "type": "null"
+                },
+                "velocity": {
+                    "$anchor": "velocity",
+                    "@id": "https://anzsoil.org/def/au/domain/velocity",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "velocity",
+                    "description": "velocity of entity",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "visitor": {
+                    "$anchor": "visitor",
+                    "@id": "https://anzsoil.org/def/au/domain/visitor",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "visitor",
+                    "description": "site visitor, for the purpose of sampling or observation",
+                    "$comment": "",
+                    "$ref": "#Person"
+                },
+                "waterRepellence": {
+                    "$anchor": "waterRepellence",
+                    "@id": "https://anzsoil.org/def/au/domain/waterRepellence",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "water repellence",
+                    "description": "water repellence of material",
+                    "$comment": "",
+                    "$ref": "#ConceptValue_Observable"
+                },
+                "width": {
+                    "$anchor": "width",
+                    "@id": "https://anzsoil.org/def/au/domain/width",
+                    "@type": "sosa:ObservableProperty",
+                    "title": "width",
+                    "description": "linear extent - smaller dimension",
+                    "$comment": "",
+                    "$ref": "#QuantityValue_Observable"
+                },
                 "madeBySensor": {
                     "$anchor": "madeBySensor",
                     "@id": "http://www.w3.org/ns/sosa/madeBySensor",
@@ -252,57 +1964,6 @@
                         }
                     }
                 },
-                "observedProperty": {
-                    "$anchor": "observedProperty",
-                    "@id": "_:for-testing",
-                    "required": [
-                        "@value"
-                    ],
-                    "properties": {
-                        "@value":{},
-                        "unit": {
-                            "$ref": "#unit"
-                        },
-                        "madeBySensor": {
-                            "$ref": "#madeBySensor"
-                        },
-                        "usedProcedure": {
-                            "$ref": "#usedProcedure"
-                        },
-                        "phenomenonTime": {
-                            "$ref": "#phenomenonTime"
-                        },
-                        "resultTime": {
-                            "$ref": "#resultTime"
-                        }
-                    }
-                },
-                "measuredProperty": {
-                    "$anchor": "measuredProperty",
-                    "@id": "_:for-testing",
-                    "required": [
-                        "@value",
-                        "usedProcedure"
-                    ],
-                    "properties": {
-                        "@value":{},
-                        "unit": {
-                            "$ref": "#unit"
-                        },
-                        "madeBySensor": {
-                            "$ref": "#madeBySensor"
-                        },
-                        "usedProcedure": {
-                            "$ref": "#usedProcedure"
-                        },
-                        "phenomenonTime": {
-                            "$ref": "#phenomenonTime"
-                        },
-                        "resultTime": {
-                            "$ref": "#resultTime"
-                        }
-                    }
-                },
                 "hasGeometry": {
                     "$anchor": "hasGeometry",
                     "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -339,25 +2000,6 @@
                         "SRID=7844;LINESTRING(-42 24, -42 42)",
                         "SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
                     ]
-                },
-                "drainage": {
-                    "$anchor": "drainage",
-                    "@id": "https://anzsoil.org/def/au/domain/drainage",
-                    "title": "Drainage",
-                    "description": "Drainage of site or profile.",
-                    "type": "object",
-                    "required": [
-                        "@value"
-                    ],
-                    "properties": {
-                        "@value": {
-                            "type": "string",
-                            "$ref": "#SoilWaterDrainage"
-                        },
-                        "usedProcedure": {
-                            "$ref": "#usedProcedure"
-                        }
-                    }
                 }
             }
         },
@@ -367,22 +2009,58 @@
             "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
             "definitions": {
                 "EntityTypes": {
-                    "$anchor": "EntityTypes",
+                    "$anchor": "enum_entitytypes",
                     "title": "ANSIS Entity Types",
                     "$comment": "Experimental - an enumeration to help JSON Schema aware clients display type names/labels as pop-ups, etc.",
                     "oneOf": [
                         {
+                            "const": "ansis:LandsurveySite",
+                            "description": "LandSurveySite"
+                        },
+                        {
                             "const": "ansis:SoilSite",
-                            "description": "Soil Site"
+                            "description": "SoilSite"
+                        },
+                        {
+                            "const": "ansis:Sample",
+                            "description": "Sample"
                         },
                         {
                             "const": "ansis:SoilProfile",
-                            "description": "Soil Profile"
+                            "description": "SoilProfile"
+                        },
+                        {
+                            "const": "ansis:SoilBody",
+                            "description": "SoilBody"
+                        },
+                        {
+                            "const": "ansis:SoilLayer",
+                            "description": "SoilLayer"
+                        },
+                        {
+                            "const": "ansis:SoilHorizon",
+                            "description": "SoilHorizon"
+                        },
+                        {
+                            "const": "ansis:SoilSurface",
+                            "description": "SoilSurface"
+                        },
+                        {
+                            "const": "prov:Activity",
+                            "description": "Activity"
+                        },
+                        {
+                            "const": "prov:Person",
+                            "description": "Person"
+                        },
+                        {
+                            "const": "prov:Project",
+                            "description": "Project"
                         }
                     ]
                 },
                 "SoilWaterDrainage": {
-                    "$anchor": "SoilWaterDrainage",
+                    "$anchor": "enum_soilwaterdrainage",
                     "title": "Soil Water Drainage",
                     "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
                     "oneOf": [
