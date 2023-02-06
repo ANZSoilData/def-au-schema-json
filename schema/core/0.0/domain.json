@@ -7,9 +7,6 @@
     "type": "object",
     "oneOf": [
         {
-            "$ref": "#LandSurveySite"
-        },
-        {
             "$ref": "#SoilSite"
         },
         {
@@ -133,7 +130,8 @@
                         "unit": {
                             "$ref": "#unit"
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 },
                 "QuantityValue_Observable": {
                     "$anchor": "QuantityValue_Observable",
@@ -163,7 +161,8 @@
                         "resultTime": {
                             "$ref": "#resultTime"
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 },
                 "ConceptValue": {
                     "$anchor": "ConceptValue",
@@ -177,7 +176,8 @@
                         "@value": {
                             "type": "string"
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 },
                 "ConceptValue_Observable": {
                     "$anchor": "ConceptValue_Observable",
@@ -203,7 +203,8 @@
                         "resultTime": {
                             "$ref": "#resultTime"
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 }
             }
         },
@@ -243,8 +244,65 @@
                                 "$ref": "#hasGeometry"
                             }
                         },
+                        "isSampleOf": {
+                            "$ref": "#sosa:isSampleOf"
+                        },
+                        "depthFreeWater": {
+                            "$ref": "#depth-free-water"
+                        },
+                        "designSite": {
+                            "$ref": "#design-site"
+                        },
+                        "designSurvey": {
+                            "$ref": "#design-survey"
+                        },
+                        "disturbance": {
+                            "$ref": "#disturbance"
+                        },
                         "drainage": {
                             "$ref": "#drainage"
+                        },
+                        "hasErosion": {
+                            "$ref": "#hasErosion"
+                        },
+                        "hasLandCover": {
+                            "$ref": "#hasLandCover"
+                        },
+                        "hasLandManagement": {
+                            "$ref": "#hasLandManagement"
+                        },
+                        "hasLandSurface": {
+                            "$ref": "#hasLandSurface"
+                        },
+                        "hasLandUse": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#hasLandUse"
+                            }
+                        },
+                        "hasLandform": {
+                            "$ref": "#hasLandform"
+                        },
+                        "hasMicrorelief": {
+                            "$ref": "#hasMicrorelief"
+                        },
+                        "hasOutcrop": {
+                            "$ref": "#hasOutcrop"
+                        },
+                        "heightDrainage": {
+                            "$ref": "#height-drainage"
+                        },
+                        "#locationInElement": {
+                            "$ref": "#location-in-element"
+                        },
+                        "locationInToposequence": {
+                            "$ref": "#location-in-toposequence"
+                        },
+                        "purpose": {
+                            "$ref": "#purpose"
+                        },
+                        "relatedLandSurveySite": {
+                            "$ref": "#relatedLandSurveySite"
                         },
                         "relatedProfile": {
                             "oneOf": [
@@ -255,6 +313,18 @@
                                     "$ref": "#SoilProfile"
                                 }
                             ]
+                        },
+                        "relatedSite": {
+                            "$ref": "#relatedSite"
+                        },
+                        "relatedSoilBody": {
+                            "$ref": "#relatedSoilBody"
+                        },
+                        "relatedSoilSurface": {
+                            "$ref": "#relatedSoilSurface"
+                        },
+                        "type": {
+                            "$ref": "#ansisType"
                         }
                     },
                     "additionalProperties": false
@@ -326,7 +396,6 @@
                         }
                     },
                     "additionalProperties": false
-
                 },
                 "SoilClassification": {
                     "$anchor": "SoilClassification",
@@ -370,7 +439,6 @@
                         }
                     },
                     "additionalProperties": false
-
                 },
                 "SoilLayer": {
                     "$anchor": "SoilLayer"
@@ -406,7 +474,6 @@
                         }
                     },
                     "additionalProperties": false
-
                 },
                 "SoilStrength": {
                     "$anchor": "SoilStrength"
@@ -431,6 +498,36 @@
                 },
                 "Cutans": {
                     "$anchor": "Cutans"
+                },
+                "SoilSiteDesign": {
+                    "$anchor": "SoilSite-design"
+                },
+                "SurveyDesign": {
+                    "$anchor": "Survey-design"
+                },
+                "ProfilePurpose": {
+                    "$anchor": "Profile-purpose"
+                },
+                "SitePurpose": {
+                    "$anchor": "Site-purpose"
+                },
+                "SoilPlasticity": {
+                    "$anchor": "SoilPlasticity"
+                },
+                "Actuation": {
+                    "$anchor": "Actuation"
+                },
+                "Observation": {
+                    "$anchor": "Observation"
+                },
+                "Sampling": {
+                    "$anchor": "Sampling"
+                },
+                "SiteVisit": {
+                    "$anchor": "SiteVisit"
+                },
+                "Treatment": {
+                    "$anchor": "Treatment"
                 },
                 "Erosion": {
                     "$anchor": "Erosion"
@@ -618,7 +715,7 @@
                     "@id": "https://anzsoil.org/def/au/domain/classification-family-A1texture",
                     "@type": "sosa:ObservableProperty",
                     "title": "classification - A1 horizon texture",
-                    "description": "family criteria - A1 horizon textur",
+                    "description": "family criteria - A1 horizon texture",
                     "$comment": "",
                     "$ref": "#ConceptValue_Observable"
                 },
@@ -870,7 +967,7 @@
                     "title": "site design",
                     "description": "overall design of sampling at the site e.g. ASLS|grid|transect",
                     "$comment": "",
-                    "type": "string"
+                    "$ref": "#SoilSite-design"
                 },
                 "designSurvey": {
                     "$anchor": "design-survey",
@@ -878,7 +975,7 @@
                     "title": "survey design",
                     "description": "overall design of soil or landscape survey e.g. free|grid|stratified|miscellaneous",
                     "$comment": "",
-                    "type": "string"
+                    "$ref": "#Survey-design"
                 },
                 "designation": {
                     "$anchor": "designation",
@@ -933,7 +1030,6 @@
                     "$comment": "",
                     "$ref": "#ConceptValue_Observable"
                 },
-
                 "development": {
                     "$anchor": "development",
                     "@id": "https://anzsoil.org/def/au/domain/development",
@@ -1523,7 +1619,7 @@
                     "title": "plasticity",
                     "description": "capability of being formed or molded",
                     "$comment": "",
-                    "$ref": "#ConceptValue_Observable"
+                    "$ref": "#SoilPlasticity"
                 },
                 "porosity": {
                     "$anchor": "porosity",
@@ -1550,21 +1646,63 @@
                     "title": "purpose",
                     "description": "purpose of or reason for activity",
                     "$comment": "",
-                    "$ref": "#ConceptValue_Observable"
+                    "oneOf": [
+                        {
+                            "$ref": "#Profile-purpose"
+                        },
+                        {
+                            "$ref": "#Site-purpose"
+                        }
+                    ]
                 },
                 "relatedActivity": {
                     "$anchor": "relatedActivity",
                     "@id": "https://anzsoil.org/def/au/domain/relatedActivity",
                     "title": "related activity",
                     "description": "link to an activity related to this context",
-                    "$comment": "",
+                    "$comment": "[ISSUE] ontology has contradictory range/rangeIncludes statements",
                     "oneOf": [
                         {
                             "$ref": "#Entity_Link",
-                            "const": "ansis:Activity"
+                            "const": "prov:Activity"
                         },
                         {
                             "$ref": "#Activity"
+                        },
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "sosa:Actuation"
+                        },
+                        {
+                            "$ref": "#Actuation"
+                        },
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "sosa:Observation"
+                        },
+                        {
+                            "$ref": "#Observation"
+                        },
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "sosa:Sampling"
+                        },
+                        {
+                            "$ref": "#Sampling"
+                        },
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:SiteVisit"
+                        },
+                        {
+                            "$ref": "#SiteVisit"
+                        },
+                        {
+                            "$ref": "#Entity_Link",
+                            "const": "ansis:Treatment"
+                        },
+                        {
+                            "$ref": "#Treatment"
                         }
                     ]
                 },
@@ -1712,7 +1850,6 @@
                         }
                     ]
                 },
-
                 "relativeInclination": {
                     "$anchor": "relative-inclination",
                     "@id": "https://anzsoil.org/def/au/domain/relative-inclination",
@@ -1849,7 +1986,17 @@
                     "title": "type",
                     "description": "type of ansis soil entity",
                     "$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
-                    "$ref": "#ConceptValue_Observable"
+                    "oneOf": [
+                        {
+                            "$ref": "#ConceptValue_Observable"
+                        },
+                        {
+                            "$ref": "#SiteType"
+                        },
+                        {
+                            "$ref": "#SoilSampleType"
+                        }
+                    ]
                 },
                 "underlyingMaterial": {
                     "$anchor": "underlyingMaterial",
@@ -1904,6 +2051,19 @@
                     "description": "linear extent - smaller dimension",
                     "$comment": "",
                     "$ref": "#QuantityValue_Observable"
+                },
+                "isSampleOf": {
+                    "$anchor": "sosa:isSampleOf",
+                    "@id": "http://www.w3.org/ns/sosa/isSampleOf",
+                    "title": "is sample of",
+                    "description": "template",
+                    "$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
+                    "type": "object",
+                    "properties": {
+                        "@id": {
+                            "$ref": "#@id"
+                        }
+                    }
                 },
                 "madeBySensor": {
                     "$anchor": "madeBySensor",
@@ -1974,7 +2134,7 @@
                         "@value"
                     ],
                     "properties": {
-                        "@value":{
+                        "@value": {
                             "$ref": "#wktLiteral"
                         },
                         "madeBySensor": {
