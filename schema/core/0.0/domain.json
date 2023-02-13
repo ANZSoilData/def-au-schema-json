@@ -39,7 +39,6 @@
     ],
     "definitions": {
         "Base": {
-            "$id": "/base",
             "title": "ANSIS JSON Base Schema",
             "description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
             "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
@@ -109,7 +108,6 @@
             }
         },
         "Objects": {
-            "$id": "/objects",
             "title": "ANSIS JSON Objects",
             "description": "Reusable objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
             "definitions": {
@@ -209,7 +207,6 @@
             }
         },
         "Entities": {
-            "$id": "/entities",
             "title": "ANSIS Soil Domain Entity Schema",
             "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
             "definitions": {
@@ -607,7 +604,6 @@
             }
         },
         "Properties": {
-            "$id": "/properties",
             "title": "ANSIS Soil Domain Property Schema",
             "description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
             "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
@@ -2164,7 +2160,6 @@
             }
         },
         "Enumerations": {
-            "$id": "/enumerations",
             "title": "ANSIS Soil Domain Enumerations",
             "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
             "definitions": {
