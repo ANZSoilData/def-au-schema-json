@@ -1,0 +1,39 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "./objects.json",
+	"title": "ANSIS JSON Objects",
+	"description": "Reusable objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
+	"definitions": {
+		"ObservableProperty": {
+			"$anchor": "ObservableProperty",
+			"title": "Observable Property",
+			"description": "SOSA properties for an observable property value.",
+			"type": "object",
+			"properties": {
+				"usedProcedure": {
+					"$ref": "./sosa.json#usedProcedure"
+				},
+				"madeBySensor": {
+					"$ref": "./sosa.json#madeBySensor"
+				},
+				"phenomenonTime": {
+					"$ref": "./sosa.json#phenomenonTime"
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				}
+			}
+		},
+		"ConceptValue": {
+			"$anchor": "ConceptValue",
+			"title": "Concept Value",
+			"description": "A compact URI referencing an entry in an ANSIS vocabulary.",
+			"type": "object",
+			"properties": {
+				"@value": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

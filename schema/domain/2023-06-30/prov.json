@@ -1,0 +1,95 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "./prov.json",
+    "title": "PROV Entity Schema",
+    "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
+    "type": "object",
+    "oneOf": [
+        {
+            "$ref": "#Activity"
+        },
+        {
+            "$ref": "#Person"
+        },
+        {
+            "$ref": "#Project"
+        }
+    ],
+    "definitions": {
+        "Activity": {
+            "$anchor": "Activity",
+            "@id": "http://www.w3.org/ns/prov#Activity",
+            "title": "PROV Activity",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "prov:Activity"
+                }
+            },
+            "additionalProperties": false
+        },
+        "Person": {
+            "$anchor": "Person",
+            "@id": "http://www.w3.org/ns/prov#Person",
+            "title": "PROV Person",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "prov:Person"
+                }
+            },
+            "additionalProperties": false
+        },
+        "Project": {
+            "$anchor": "Project",
+            "@id": "http://www.w3.org/ns/prov#Project",
+            "title": "PROV Project",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "prov:Project"
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

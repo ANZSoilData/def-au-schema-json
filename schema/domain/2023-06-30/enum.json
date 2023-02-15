@@ -1,0 +1,105 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "./enum.json",
+    "title": "ANSIS Soil Domain Enumerations",
+    "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
+    "definitions": {
+        "ToBeDefined": {
+            "$anchor": "enum_tobedefined",
+            "title": "To Be Defined",
+            "description": "Placeholder for enumerations yet to be created.",
+			"oneOf": [
+				{
+					"const": "xx:a",
+					"description": "value a"
+				},
+				{
+					"const": "xx:b",
+					"description": "value b"
+				}
+			]
+		},
+        "EntityTypes": {
+            "$anchor": "enum_entitytypes",
+            "title": "ANSIS Entity Types",
+            "$comment": "Experimental - an enumeration to help JSON Schema aware clients display type names/labels as pop-ups, etc.",
+            "oneOf": [
+                {
+                    "const": "ansis:LandsurveySite",
+                    "description": "LandSurveySite"
+                },
+                {
+                    "const": "ansis:SoilSite",
+                    "description": "SoilSite"
+                },
+                {
+                    "const": "ansis:Sample",
+                    "description": "Sample"
+                },
+                {
+                    "const": "ansis:SoilProfile",
+                    "description": "SoilProfile"
+                },
+                {
+                    "const": "ansis:SoilBody",
+                    "description": "SoilBody"
+                },
+                {
+                    "const": "ansis:SoilLayer",
+                    "description": "SoilLayer"
+                },
+                {
+                    "const": "ansis:SoilHorizon",
+                    "description": "SoilHorizon"
+                },
+                {
+                    "const": "ansis:SoilSurface",
+                    "description": "SoilSurface"
+                },
+                {
+                    "const": "prov:Activity",
+                    "description": "Activity"
+                },
+                {
+                    "const": "prov:Person",
+                    "description": "Person"
+                },
+                {
+                    "const": "prov:Project",
+                    "description": "Project"
+                }
+            ]
+        },
+        "SoilWaterDrainage": {
+            "$anchor": "enum_soilwaterdrainage",
+            "title": "Soil Water Drainage",
+            "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
+			"oneOf": [
+				{
+					"const": "sp:soil-water-drainage-1",
+					"description": "very poorly drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-2",
+					"description": "poorly drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-3",
+					"description": "imperfectly drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-4",
+					"description": "moderately well drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-5",
+					"description": "well drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-6",
+					"description": "rapidly drained"
+				}
+			]
+		}
+    }
+}
