@@ -34,9 +34,6 @@
         },
         {
             "$ref": "#Treatment"
-        },
-        {
-            "$ref": "#SoilProfile"
         }
     ],
     "definitions": {
@@ -46,7 +43,8 @@
             "title": "ANSIS Land Survey Site",
             "description": "A Site established to make observations of landscape entities.",
             "required": [
-                "@type"
+                "@type",
+                "hasGeometry"
             ],
             "properties": {
                 "$schema": {
@@ -61,6 +59,12 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandsurveySite"
+                },
+                "hasGeometry": {
+                    "type": "array",
+                    "items": {
+                    	"$ref": "./geosparql.json#hasGeometry"
+                    }
                 },
                 "hasErosion": {
                     "$ref": "./properties.json#hasErosion"
@@ -115,7 +119,16 @@
                     "const": "ansis:SoilBody"
                 },
                 "classification": {
-                    "$ref": "./properties.json#classification"
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#classification"
+                	}
+                },
+                "hasGeometry": {
+                    "type": "array",
+                    "items": {
+                    	"$ref": "./geosparql.json#hasGeometry"
+                    }
                 },
                 "hasLandManagement": {
                     "$ref": "./properties.json#hasLandManagement"
@@ -142,7 +155,10 @@
                     "$ref": "./properties.json#relatedHorizon"
                 },
                 "relatedLayer": {
-                    "$ref": "./properties.json#relatedLayer"
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedLayer"
+                	}
                 },
                 "relatedSample": {
                     "$ref": "./properties.json#relatedSample"
@@ -162,7 +178,8 @@
             "title": "ANSIS Soil Horizon",
             "description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
             "required": [
-                "@type"
+                "@type",
+                "designation"
             ],
             "properties": {
                 "$schema": {
@@ -179,7 +196,7 @@
                     "const": "ansis:SoilHorizon"
                 },
                 "designation": {
-                    "$ref": "./properties.json#classification"
+                    "$ref": "./properties.json#designation"
                 },
                 "hasCoarseFragments": {
                     "$ref": "./properties.json#hasCoarseFragments"
@@ -220,7 +237,10 @@
             "title": "ANSIS Soil Layer",
             "description": "Region within a soil body usually observed as a specified depth interval within a profile.",
             "required": [
-                "@type"
+                "@type",
+                "depthUpper",
+                "depthLower",
+                "relatedSoilBody"
             ],
             "properties": {
                 "$schema": {
@@ -235,6 +255,12 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilLayer"
+                },
+                "depthUpper": {
+                    "$ref": "./properties.json#depth-upper"
+                },
+                "depthLower": {
+                    "$ref": "./properties.json#depth-lower"
                 },
                 "hasCoarseFragments": {
                     "$ref": "./properties.json#hasCoarseFragments"
@@ -275,7 +301,11 @@
             "title": "ANSIS Soil Profile",
             "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
             "required": [
-                "@type"
+                "@type",
+                "hasGeometry",
+                "relatedSite",
+                "procedure",
+                "depth"
             ],
             "properties": {
                 "$schema": {
@@ -291,6 +321,15 @@
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilProfile"
                 },
+                "depth": {
+                    "$ref": "./properties.json#depth-quantity"
+                },
+                "procedure": {
+                    "$ref": "./sosa.json#usedProcedure"
+                },
+                "hasGeometry": {
+                    "$ref": "./geosparql.json#hasGeometry"
+                },
                 "hasRoots": {
                     "$ref": "./properties.json#hasRoots"
                 },
@@ -301,7 +340,16 @@
                     "$ref": "./properties.json#relatedHorizon"
                 },
                 "relatedLayer": {
-                    "$ref": "./properties.json#relatedLayer"
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedLayer"
+                	}
+                },
+                "relatedLayer": {
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedLayer"
+                	}
                 },
                 "relatedSample": {
                     "$ref": "./properties.json#relatedSample"
@@ -321,7 +369,9 @@
             "title": "ANSIS Soil Sample",
             "description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
             "required": [
-                "@type"
+                "@type",
+                "isSampleOf",
+                "relatedProfile"
             ],
             "properties": {
                 "$schema": {
@@ -337,8 +387,14 @@
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilSample"
                 },
+                "isSampleOf": {
+                	"$ref": "./sosa.json#isSampleOf"
+                },
                 "relatedProfile": {
-                    "$ref": "./properties.json#relatedProfile"
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedProfile"
+                	}
                 }
             },
             "additionalProperties": false
@@ -349,7 +405,9 @@
             "title": "ANSIS Soil Site",
             "description": "A site where samples, observations, and treatments of soil are carried out.",
             "required": [
-                "@type"
+                "@type",
+                "hasGeometry",
+                "relatedProject"
             ],
             "properties": {
                 "$schema": {
@@ -432,7 +490,16 @@
                     "$ref": "./properties.json#relatedLandSurveySite"
                 },
                 "relatedProfile": {
-                    "$ref": "./properties.json#relatedProfile"
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedProfile"
+                	}
+                },
+                "relatedProject": {
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedProject"
+                	}
                 },
                 "relatedSite": {
                     "$ref": "./properties.json#relatedSite"
@@ -487,12 +554,20 @@
             "title": "ANSIS Substrate",
             "description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
             "required": [
-                "@type"
+                "@type",
+                "distance",
+                "depth"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Substrate"
+                },
+                "distance": {
+                    "$ref": "./properties.json#distance"
+                },
+                "depth": {
+                    "$ref": "./properties.json#depth-quantity"
                 },
                 "relatedSample": {
                     "$ref": "./properties.json#relatedSample"
@@ -1118,7 +1193,10 @@
                     "$ref": "./properties.json#relatedLandSurveySite"
                 },
                 "relatedProject": {
-                    "$ref": "./properties.json#relatedProject"
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#relatedProject"
+                	}
                 },
                 "relatedSite": {
                     "$ref": "./properties.json#relatedSite"
