@@ -43,6 +43,9 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "sosa:Actuation"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
                 }
             },
             "additionalProperties": false
@@ -68,6 +71,9 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "sosa:Observation"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
                 }
             },
             "additionalProperties": false
@@ -143,21 +149,100 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "sosa:Sampling"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
                 }
             },
             "additionalProperties": false
         },
-		"isSampleOf": {
-			"$anchor": "isSampleOf",
-			"@id": "http://www.w3.org/ns/sosa/isSampleOf",
-			"title": "is sample of",
-			"description": "template",
-			"$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
+        "Sensor": {
+            "$anchor": "Sensor",
+            "@id": "http://www.w3.org/ns/sosa/Sensor",
+            "title": "SOSA Sensor",
+            "description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "sosa:Sensor"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
+                }
+            },
+            "additionalProperties": false
+        },
+		"actsOnProperty": {
+			"$anchor": "actsOnProperty",
+			"@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+			"title": "acts on property",
+			"description": "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
+			"$comment": "Forcing a URI on assumption of a property registry somewhere else (observable properties?).",
 			"type": [
 				"object",
 				"null"
 			],
 			"$ref": "./base.json#Entity_Link"
+		},
+		"hasFeatureOfInterest": {
+			"$anchor": "hasFeatureOfInterest",
+			"@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+			"title": "has feature of interest",
+			"description": "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+			"$comment": "Forcing a URI (link) for now.",
+			"type": [
+				"object",
+				"null"
+			],
+			"$ref": "./base.json#Entity_Link"
+		},
+		"isSampleOf": {
+			"$anchor": "isSampleOf",
+			"@id": "http://www.w3.org/ns/sosa/isSampleOf",
+			"title": "is sample of",
+			"description": "template",
+			"$comment": "Forcing a URI (link) for now.",
+			"type": [
+				"object",
+				"null"
+			],
+			"$ref": "./base.json#Entity_Link"
+		},
+		"hasResult": {
+			"$anchor": "hasResult",
+			"@id": "http://www.w3.org/ns/sosa/hasResult",
+			"title": "has result",
+			"description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
+			"$comment": "Sticking to a QUDT Quantity Value for this initial implementation.",
+			"type": [
+				"object",
+				"null"
+			],
+			"$ref": "./qudt.json#QuantityValue"
+		},
+		"hasSample": {
+			"$anchor": "hasSample",
+			"@id": "http://www.w3.org/ns/sosa/hasSample",
+			"title": "has sample",
+			"description": "Undefined.",
+			"$comment": "Forcing a URI (link) for now.",
+			"type": [
+				"object",
+				"null"
+			],
+			"$ref": "./qudt.json#QuantityValue"
 		},
 		"madeBySensor": {
 			"$anchor": "madeBySensor",
@@ -169,7 +254,14 @@
 				"object",
 				"null"
 			],
-			"$ref": "./base.json#Entity_Link"
+			"oneOf": [
+				{
+					"$ref": "#Sensor"
+				},
+				{
+					"$ref": "./base.json#Entity_Link"
+				}
+			]
 		},
 		"usedProcedure": {
 			"$anchor": "usedProcedure",
@@ -177,6 +269,18 @@
 			"title": "Made by Sensor",
 			"description": "Relation between an Observation and the Sensor which made the Observations.",
 			"$comment": "Forcing a URI pointing to an ANSIS methods vocabulary {!!probably too restrictive!!}. No local enumeration as the list is too long.",
+			"type": [
+				"object",
+				"null"
+			],
+			"$ref": "./base.json#Entity_Link"
+		},
+		"observedProperty": {
+			"$anchor": "observedProperty",
+			"@id": "http://www.w3.org/ns/sosa/observedProperty",
+			"title": "observed property",
+			"description": "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+			"$comment": "",
 			"type": [
 				"object",
 				"null"

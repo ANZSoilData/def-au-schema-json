@@ -37,6 +37,9 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Activity"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
                 }
             },
             "additionalProperties": false
