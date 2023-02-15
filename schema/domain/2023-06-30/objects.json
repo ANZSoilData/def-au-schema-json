@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "./objects.json",
+	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/objects.json",
 	"title": "ANSIS JSON Objects",
 	"description": "Reusable objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
 	"definitions": {

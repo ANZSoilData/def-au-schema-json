@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "./enum.json",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/enum.json",
     "title": "ANSIS Soil Domain Enumerations",
     "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
     "definitions": {
