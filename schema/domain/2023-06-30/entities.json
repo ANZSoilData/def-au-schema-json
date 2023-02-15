@@ -59,6 +59,30 @@
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandsurveySite"
                 },
+                "hasErosion": {
+                    "$ref": "./properties.json#hasErosion"
+                },
+                "hasLandCover": {
+                    "$ref": "./properties.json#hasLandCover"
+                },
+                "hasLandManagement": {
+                    "$ref": "./properties.json#hasLandManagement"
+                },
+                "hasLandSurface": {
+                    "$ref": "./properties.json#hasLandSurface"
+                },
+                "hasLandUse": {
+                    "type": "array",
+                    "items": {
+                    	"$ref": "./properties.json#hasLandUse"
+                    }
+                },
+                "hasLandform": {
+                    "$ref": "./properties.json#hasLandform"
+                },
+                "hasOutcrop": {
+                    "$ref": "./properties.json#hasOutcrop"
+                },
                 "relatedLandsurveySite": {
                     "$ref": "./properties.json#relatedLandSurveySite"
                 }
@@ -89,6 +113,27 @@
                 },
                 "classification": {
                     "$ref": "./properties.json#classification"
+                },
+                "hasLandManagement": {
+                    "$ref": "./properties.json#hasLandManagement"
+                },
+                "hasLandSurface": {
+                    "$ref": "./properties.json#hasLandSurface"
+                },
+                "hasLandUse": {
+                    "type": "array",
+                    "items": {
+                    	"$ref": "./properties.json#hasLandUse"
+                    }
+                },
+                "hasLandform": {
+                    "$ref": "./properties.json#hasLandform"
+                },
+                "hasMicrorelief": {
+                    "$ref": "./properties.json#hasMicrorelief"
+                },
+                "hasSubstrate": {
+                    "$ref": "./properties.json#hasSubstrate"
                 },
                 "relatedHorizon": {
                     "$ref": "./properties.json#relatedHorizon"
@@ -133,6 +178,30 @@
                 "designation": {
                     "$ref": "./properties.json#classification"
                 },
+                "hasCoarseFragments": {
+                    "$ref": "./properties.json#hasCoarseFragments"
+                },
+                "hasCracks": {
+                    "$ref": "./properties.json#hasCracks"
+                },
+                "hasCutans": {
+                    "$ref": "./properties.json#hasCutans"
+                },
+                "hasMottles": {
+                    "$ref": "./properties.json#hasMottles"
+                },
+                "hasPans": {
+                    "$ref": "./properties.json#hasPans"
+                },
+                "hasPores": {
+                    "$ref": "./properties.json#hasPores"
+                },
+                "hasRoots": {
+                    "$ref": "./properties.json#hasRoots"
+                },
+                "hasSegregations": {
+                    "$ref": "./properties.json#hasSegregations"
+                },
                 "relatedSample": {
                     "$ref": "./properties.json#relatedSample"
                 },
@@ -164,6 +233,30 @@
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilLayer"
                 },
+                "hasCoarseFragments": {
+                    "$ref": "./properties.json#hasCoarseFragments"
+                },
+                "hasCracks": {
+                    "$ref": "./properties.json#hasCracks"
+                },
+                "hasCutans": {
+                    "$ref": "./properties.json#hasCutans"
+                },
+                "hasMottles": {
+                    "$ref": "./properties.json#hasMottles"
+                },
+                "hasPans": {
+                    "$ref": "./properties.json#hasPans"
+                },
+                "hasPores": {
+                    "$ref": "./properties.json#hasPores"
+                },
+                "hasRoots": {
+                    "$ref": "./properties.json#hasRoots"
+                },
+                "hasSegregations": {
+                    "$ref": "./properties.json#hasSegregations"
+                },
                 "relatedSample": {
                     "$ref": "./properties.json#relatedSample"
                 },
@@ -194,6 +287,12 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilProfile"
+                },
+                "hasRoots": {
+                    "$ref": "./properties.json#hasRoots"
+                },
+                "hasSubstrate": {
+                    "$ref": "./properties.json#hasSubstrate"
                 },
                 "relatedHorizon": {
                     "$ref": "./properties.json#relatedHorizon"
@@ -369,6 +468,9 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilSurface"
+                },
+                "hasCoarseFragments": {
+                    "$ref": "./properties.json#hasCoarseFragments"
                 },
                 "relatedSoilBody": {
                     "$ref": "./properties.json#relatedSoilBody"
@@ -551,6 +653,15 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandSurface"
+                },
+                "hasCoarseFragments": {
+                    "$ref": "./properties.json#hasCoarseFragments"
+                },
+                "hasErosion": {
+                    "$ref": "./properties.json#hasErosion"
+                },
+                "hasInundation": {
+                    "$ref": "./properties.json#hasInundation"
                 }
             },
             "additionalProperties": false
@@ -583,6 +694,12 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Landform"
+                },
+                "hasLandformElement": {
+                    "$ref": "./properties.json#hasLandformElement"
+                },
+                "hasLandformPattern": {
+                    "$ref": "./properties.json#hasLandformPattern"
                 }
             },
             "additionalProperties": false
@@ -615,6 +732,12 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandformPattern"
+                },
+                "hasLandformElement": {
+                    "$ref": "./properties.json#hasLandformElement"
+                },
+                "hasStreamChannel": {
+                    "$ref": "./properties.json#hasStreamChannel"
                 }
             },
             "additionalProperties": false
@@ -631,6 +754,18 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Microrelief"
+                },
+                "hasMicrorelief-biotic": {
+                    "$ref": "#Microrelief_biotic"
+                },
+                "hasMicrorelief-gilgai": {
+                    "$ref": "#Microrelief_gilgai"
+                },
+                "hasMicrorelief-hummocky": {
+                    "$ref": "#Microrelief_hummocky"
+                },
+                "hasMicrorelief-other": {
+                    "$ref": "#Microrelief_other"
                 }
             },
             "additionalProperties": false
