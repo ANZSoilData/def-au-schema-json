@@ -6,19 +6,34 @@
     "type": "object",
     "oneOf": [
         {
-            "$ref": "#SoilSite"
-        },
-        {
-            "$ref": "#SoilProfile"
+            "$ref": "#LandSurveySite"
         },
         {
             "$ref": "#SoilBody"
         },
         {
+            "$ref": "#SoilHorizon"
+        },
+        {
             "$ref": "#SoilLayer"
         },
         {
-            "$ref": "#SoilHorizon"
+            "$ref": "#SoilProfile"
+        },
+        {
+            "$ref": "#SoilSample"
+        },
+        {
+            "$ref": "#SoilSurface"
+        },
+        {
+            "$ref": "#Substrate"
+        },
+        {
+            "$ref": "#Treatment"
+        },
+        {
+            "$ref": "#SoilProfile"
         }
     ],
     "definitions": {
@@ -43,6 +58,185 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandsurveySite"
+                },
+                "relatedLandsurveySite": {
+                    "$ref": "./properties.json#relatedLandSurveySite"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilBody": {
+            "$anchor": "SoilBody",
+            "@id": "https://anzsoil.org/def/au/domain/SoilBody",
+            "title": "ANSIS Soil Body",
+            "description": "Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilBody"
+                },
+                "classification": {
+                    "$ref": "./properties.json#classification"
+                },
+                "relatedHorizon": {
+                    "$ref": "./properties.json#relatedHorizon"
+                },
+                "relatedLayer": {
+                    "$ref": "./properties.json#relatedLayer"
+                },
+                "relatedSample": {
+                    "$ref": "./properties.json#relatedSample"
+                },
+                "relatedSite": {
+                    "$ref": "./properties.json#relatedSite"
+                },
+                "relatedSoilSurface": {
+                    "$ref": "./properties.json#relatedSoilSurface"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilHorizon": {
+            "$anchor": "SoilHorizon",
+            "@id": "https://anzsoil.org/def/au/domain/SoilHorizon",
+            "title": "ANSIS Soil Horizon",
+            "description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilHorizon"
+                },
+                "designation": {
+                    "$ref": "./properties.json#classification"
+                },
+                "relatedSample": {
+                    "$ref": "./properties.json#relatedSample"
+                },
+                "relatedSoilBody": {
+                    "$ref": "./properties.json#relatedSoilBody"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilLayer": {
+            "$anchor": "SoilLayer",
+            "@id": "https://anzsoil.org/def/au/domain/SoilLayer",
+            "title": "ANSIS Soil Layer",
+            "description": "Region within a soil body usually observed as a specified depth interval within a profile.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilLayer"
+                },
+                "relatedSample": {
+                    "$ref": "./properties.json#relatedSample"
+                },
+                "relatedSoilBody": {
+                    "$ref": "./properties.json#relatedSoilBody"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilProfile": {
+            "$anchor": "SoilProfile",
+            "@id": "https://anzsoil.org/def/au/domain/SoilProfile",
+            "title": "ANSIS Soil Profile",
+            "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilProfile"
+                },
+                "relatedHorizon": {
+                    "$ref": "./properties.json#relatedHorizon"
+                },
+                "relatedLayer": {
+                    "$ref": "./properties.json#relatedLayer"
+                },
+                "relatedSample": {
+                    "$ref": "./properties.json#relatedSample"
+                },
+                "relatedSite": {
+                    "$ref": "./properties.json#relatedSite"
+                },
+                "relatedSoilSurface": {
+                    "$ref": "./properties.json#relatedSoilSurface"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilSample": {
+            "$anchor": "SoilSample",
+            "@id": "https://anzsoil.org/def/au/domain/SoilSample",
+            "title": "ANSIS Soil Sample",
+            "description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilSample"
+                },
+                "relatedProfile": {
+                    "$ref": "./properties.json#relatedProfile"
                 }
             },
             "additionalProperties": false
@@ -136,14 +330,7 @@
                     "$ref": "./properties.json#relatedLandSurveySite"
                 },
                 "relatedProfile": {
-                    "oneOf": [
-                        {
-                            "$ref": "./base.json#Entity_Link"
-                        },
-                        {
-                            "$ref": "#SoilProfile"
-                        }
-                    ]
+                    "$ref": "./properties.json#relatedProfile"
                 },
                 "relatedSite": {
                     "$ref": "./properties.json#relatedSite"
@@ -157,272 +344,6 @@
                 "type": {
                     "$ref": "./properties.json#ansis-type"
                     
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilSample": {
-            "$anchor": "SoilSample",
-            "@id": "https://anzsoil.org/def/au/domain/SoilSample",
-            "title": "ANSIS Soil Sample",
-            "description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilSample"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilProfile": {
-            "$anchor": "SoilProfile",
-            "@id": "https://anzsoil.org/def/au/domain/SoilProfile",
-            "title": "ANSIS Soil Profile",
-            "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilProfile"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilBody": {
-            "$anchor": "SoilBody",
-            "@id": "https://anzsoil.org/def/au/domain/SoilBody",
-            "title": "ANSIS Soil Body",
-            "description": "Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilBody"
-                },
-                "classification": {
-                    "$ref": "./properties.json#classification"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilClassification": {
-            "$anchor": "SoilClassification",
-            "@id": "https://anzsoil.org/def/au/domain/SoilClassification",
-            "title": "ANSIS Soil Classification",
-            "description": "",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilClassification"
-                },
-                "classificationFamilyA1texture": {
-                    "$ref": "./properties.json#classification-family-A1texture"
-                },
-                "classificationFamilyA1thickness": {
-                    "$ref": "./properties.json#classification-family-A1thickness"
-                },
-                "classificationFamilyBtexture": {
-                    "$ref": "./properties.json#classification-family-Btexture"
-                },
-                "classificationFamilyDepth": {
-                    "$ref": "./properties.json#classification-family-depth"
-                },
-                "classificationFamilyGravel": {
-                    "$ref": "./properties.json#classification-family-gravel"
-                },
-                "classificationGreatGroup": {
-                    "$ref": "./properties.json#classification-greatgroup"
-                },
-                "classificationOrder": {
-                    "$ref": "./properties.json#classification-order"
-                },
-                "classificationSubGroup": {
-                    "$ref": "./properties.json#classification-subgroup"
-                },
-                "classificationSubOrder": {
-                    "$ref": "./properties.json#classification-suborder"
-                }
-            }
-        },
-        "SoilLayer": {
-            "$anchor": "SoilLayer",
-            "@id": "https://anzsoil.org/def/au/domain/SoilLayer",
-            "title": "ANSIS Soil Layer",
-            "description": "Region within a soil body usually observed as a specified depth interval within a profile.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilLayer"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilHorizon": {
-            "$anchor": "SoilHorizon",
-            "@id": "https://anzsoil.org/def/au/domain/SoilHorizon",
-            "title": "ANSIS Soil Horizon",
-            "description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilHorizon"
-                },
-                "designation": {
-                    "$ref": "./properties.json#classification"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilHorizon_Designation": {
-            "$anchor": "HorizonDesignation",
-            "@id": "https://anzsoil.org/def/au/domain/HorizonDesignation",
-            "title": "ANSIS Soil Horizon Designation",
-            "description": "Soil horizon designation. ",
-            "required": [
-                "@type",
-                "designationMaster"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:HorizonDesignation"
-                },
-                "designationPrefix": {
-                    "$ref": "./properties.json#designation-prefix"
-                },
-                "designationSubdivision": {
-                    "$ref": "./properties.json#designation-subdivision"
-                },
-                "designationSuffix": {
-                    "$ref": "./properties.json#designation-suffix"
-                },
-                "designationMaster": {
-                    "$ref": "./properties.json#designation-master"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilStrength": {
-            "$anchor": "SoilStrength",
-            "@id": "https://anzsoil.org/def/au/domain/SoilStrength",
-            "title": "ANSIS Soil Strength",
-            "description": "Undefined.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilStrength"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilStructure": {
-            "$anchor": "SoilStructure",
-            "@id": "https://anzsoil.org/def/au/domain/SoilStructure",
-            "title": "ANSIS Soil Structure",
-            "description": "Soil structure or pedality.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilStructure"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SiteType": {
-            "$anchor": "SiteType",
-            "@id": "https://anzsoil.org/def/au/domain/SiteType",
-            "title": "ANSIS Site Type",
-            "description": "Type of land survey site e.g. monitoring, opportunistic, farm, pedology.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SiteType"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilSampleType": {
-            "$anchor": "SoilSampleType",
-            "@id": "https://anzsoil.org/def/au/domain/SoilSampleType",
-            "title": "ANSIS Soil Sample Type",
-            "description": "Undefined. [ISSUE: real?]",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilSampleType"
                 }
             },
             "additionalProperties": false
@@ -448,10 +369,64 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilSurface"
+                },
+                "relatedSoilBody": {
+                    "$ref": "./properties.json#relatedSoilBody"
                 }
             },
             "additionalProperties": false
         },
+        "Substrate": {
+            "$anchor": "Substrate",
+            "@id": "https://anzsoil.org/def/au/domain/Substrate",
+            "title": "ANSIS Substrate",
+            "description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Substrate"
+                },
+                "relatedSample": {
+                    "$ref": "./properties.json#relatedSample"
+                },
+                "relatedSoilBody": {
+                    "$ref": "./properties.json#relatedSoilBody"
+                }
+            },
+            "additionalProperties": false
+        },
+        "Treatment": {
+            "$anchor": "Treatment",
+            "@id": "https://anzsoil.org/def/au/domain/Treatment",
+            "title": "ANSIS Treatment",
+            "description": "Intervention or treatment. Type of sosa:Actuation.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Treatment"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
+                }
+            },
+            "additionalProperties": false
+        },
+        
         "CoarseFragments": {
             "$anchor": "CoarseFragments",
             "@id": "https://anzsoil.org/def/au/domain/CoarseFragments",
@@ -496,136 +471,6 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Cutans"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilSiteDesign": {
-            "$anchor": "SoilSite-design",
-            "@id": "https://anzsoil.org/def/au/domain/SoilSite-design",
-            "title": "ANSIS Soil Site Design",
-            "description": "Undefined.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilSite-design"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SurveyDesign": {
-            "$anchor": "Survey-design",
-            "@id": "https://anzsoil.org/def/au/domain/Survey-design",
-            "title": "ANSIS Survey Design",
-            "description": "Undefined.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:Survey-design"
-                }
-            },
-            "additionalProperties": false
-        },
-        "ProfilePurpose": {
-            "$anchor": "Profile-purpose",
-            "@id": "https://anzsoil.org/def/au/domain/Profile-purpose",
-            "title": "ANSIS Profile Purpose",
-            "description": "Undefined.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:Profile-purpose"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SitePurpose": {
-            "$anchor": "Site-purpose",
-            "@id": "https://anzsoil.org/def/au/domain/Site-purpose",
-            "title": "ANSIS Site Purpose",
-            "description": "Undefined.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:Site-purpose"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SoilPlasticity": {
-            "$anchor": "SoilPlasticity",
-            "@id": "https://anzsoil.org/def/au/domain/SoilPlasticity",
-            "title": "ANSIS Soil Plasticity",
-            "description": "Undefined.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SoilPlasticity"
-                }
-            },
-            "additionalProperties": false
-        },
-        "SiteVisit": {
-            "$anchor": "SiteVisit",
-            "@id": "https://anzsoil.org/def/au/domain/SiteVisit",
-            "title": "ANSIS Site Visit",
-            "description": "A visit to a designated site, for the purpose of taking samples, making observations, and other activities.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:SiteVisit"
-                }
-            },
-            "additionalProperties": false
-        },
-        "Treatment": {
-            "$anchor": "Treatment",
-            "@id": "https://anzsoil.org/def/au/domain/Treatment",
-            "title": "ANSIS Treatment",
-            "description": "Intervention or treatment. Type of sosa:Actuation.",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "ansis:Treatment"
                 }
             },
             "additionalProperties": false
@@ -830,6 +675,15 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Outcrop"
+                },
+                "relatedLandsurveySite": {
+                    "$ref": "./properties.json#relatedLandSurveySite"
+                },
+                "relatedSample": {
+                    "$ref": "./properties.json#relatedSample"
+                },
+                "relatedSite": {
+                    "$ref": "./properties.json#relatedSite"
                 }
             },
             "additionalProperties": false
@@ -866,6 +720,22 @@
             },
             "additionalProperties": false
         },
+        "ProfilePurpose": {
+            "$anchor": "Profile-purpose",
+            "@id": "https://anzsoil.org/def/au/domain/Profile-purpose",
+            "title": "ANSIS Profile Purpose",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Profile-purpose"
+                }
+            },
+            "additionalProperties": false
+        },
         "Roots": {
             "$anchor": "Roots",
             "@id": "https://anzsoil.org/def/au/domain/Roots",
@@ -898,6 +768,226 @@
             },
             "additionalProperties": false
         },
+        "SoilClassification": {
+            "$anchor": "SoilClassification",
+            "@id": "https://anzsoil.org/def/au/domain/SoilClassification",
+            "title": "ANSIS Soil Classification",
+            "description": "",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilClassification"
+                },
+                "classificationFamilyA1texture": {
+                    "$ref": "./properties.json#classification-family-A1texture"
+                },
+                "classificationFamilyA1thickness": {
+                    "$ref": "./properties.json#classification-family-A1thickness"
+                },
+                "classificationFamilyBtexture": {
+                    "$ref": "./properties.json#classification-family-Btexture"
+                },
+                "classificationFamilyDepth": {
+                    "$ref": "./properties.json#classification-family-depth"
+                },
+                "classificationFamilyGravel": {
+                    "$ref": "./properties.json#classification-family-gravel"
+                },
+                "classificationGreatGroup": {
+                    "$ref": "./properties.json#classification-greatgroup"
+                },
+                "classificationOrder": {
+                    "$ref": "./properties.json#classification-order"
+                },
+                "classificationSubGroup": {
+                    "$ref": "./properties.json#classification-subgroup"
+                },
+                "classificationSubOrder": {
+                    "$ref": "./properties.json#classification-suborder"
+                }
+            }
+        },
+        "SoilHorizon_Designation": {
+            "$anchor": "HorizonDesignation",
+            "@id": "https://anzsoil.org/def/au/domain/HorizonDesignation",
+            "title": "ANSIS Soil Horizon Designation",
+            "description": "Soil horizon designation. ",
+            "required": [
+                "@type",
+                "designationMaster"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:HorizonDesignation"
+                },
+                "designationPrefix": {
+                    "$ref": "./properties.json#designation-prefix"
+                },
+                "designationSubdivision": {
+                    "$ref": "./properties.json#designation-subdivision"
+                },
+                "designationSuffix": {
+                    "$ref": "./properties.json#designation-suffix"
+                },
+                "designationMaster": {
+                    "$ref": "./properties.json#designation-master"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilPlasticity": {
+            "$anchor": "SoilPlasticity",
+            "@id": "https://anzsoil.org/def/au/domain/SoilPlasticity",
+            "title": "ANSIS Soil Plasticity",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilPlasticity"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilSampleType": {
+            "$anchor": "SoilSampleType",
+            "@id": "https://anzsoil.org/def/au/domain/SoilSampleType",
+            "title": "ANSIS Soil Sample Type",
+            "description": "Undefined. [ISSUE: real?]",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilSampleType"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilSiteDesign": {
+            "$anchor": "SoilSite-design",
+            "@id": "https://anzsoil.org/def/au/domain/SoilSite-design",
+            "title": "ANSIS Soil Site Design",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilSite-design"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilStrength": {
+            "$anchor": "SoilStrength",
+            "@id": "https://anzsoil.org/def/au/domain/SoilStrength",
+            "title": "ANSIS Soil Strength",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilStrength"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SoilStructure": {
+            "$anchor": "SoilStructure",
+            "@id": "https://anzsoil.org/def/au/domain/SoilStructure",
+            "title": "ANSIS Soil Structure",
+            "description": "Soil structure or pedality.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilStructure"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SitePurpose": {
+            "$anchor": "Site-purpose",
+            "@id": "https://anzsoil.org/def/au/domain/Site-purpose",
+            "title": "ANSIS Site Purpose",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Site-purpose"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SiteType": {
+            "$anchor": "SiteType",
+            "@id": "https://anzsoil.org/def/au/domain/SiteType",
+            "title": "ANSIS Site Type",
+            "description": "Type of land survey site e.g. monitoring, opportunistic, farm, pedology.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SiteType"
+                }
+            },
+            "additionalProperties": false
+        },
+        "SiteVisit": {
+            "$anchor": "SiteVisit",
+            "@id": "https://anzsoil.org/def/au/domain/SiteVisit",
+            "title": "ANSIS Site Visit",
+            "description": "A visit to a designated site, for the purpose of taking samples, making observations, and other activities.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SiteVisit"
+                },
+                "relatedActivity": {
+                	"$ref": "./properties.json#relatedActivity"
+                },
+                "relatedLandsurveySite": {
+                    "$ref": "./properties.json#relatedLandSurveySite"
+                },
+                "relatedProject": {
+                    "$ref": "./properties.json#relatedProject"
+                },
+                "relatedSite": {
+                    "$ref": "./properties.json#relatedSite"
+                }
+            },
+            "additionalProperties": false
+        },
         "StreamChannel": {
             "$anchor": "StreamChannel",
             "@id": "https://anzsoil.org/def/au/domain/StreamChannel",
@@ -914,18 +1004,18 @@
             },
             "additionalProperties": false
         },
-        "Substrate": {
-            "$anchor": "Substrate",
-            "@id": "https://anzsoil.org/def/au/domain/Substrate",
-            "title": "ANSIS Substrate",
-            "description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
+		"SurveyDesign": {
+            "$anchor": "Survey-design",
+            "@id": "https://anzsoil.org/def/au/domain/Survey-design",
+            "title": "ANSIS Survey Design",
+            "description": "Undefined.",
             "required": [
                 "@type"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
-                    "const": "ansis:Substrate"
+                    "const": "ansis:Survey-design"
                 }
             },
             "additionalProperties": false
