@@ -11,19 +11,21 @@ odd, check here first for submitting an issue - the may be an explanation.
 ## Core practices
 
 ### JSON Schema Version
-[draft-07] - highest supported by Visual Studio Code, would prefer to use the latest
-[2020-12].
+[2020-12] - anchors behave properly in XMLSpy; not supported supported by Visual Studio Code
+(highest supported is [draft-07]) when editing schema, but fine when hand-crafting instance
+documents (if anything works better than doing the same in XMLSpy).
 
 ### Schema documents
-The `core` schema is made up of two schema documents. The naming and content are aligned with the
-ANSIS ontology RDF files (the ANSIS ontology `domain.ttl` and supporting vocabularies are combined
-into `domain.json`):
-- `domain.json`: entity and property definitions with enumeration objects linking to ANSIS
-vocabularies.
+The `domain` schema is made up of multiple sub-schema documents derived from the ANSIS ontology
+`domain.ttl` and supporting ontologies (e.g. SOSA and PROV). (Initial attempts as a single schema
+generated a document too large to be parsed by many editors):
+- `base.json`, `entities.json`, `enum.json`, `objects.json`, `properties.json`: ANSIS entity, object
+and property definitions with enumeration objects linking to ANSIS vocabularies.
+- `geosparql.json`, `prov.json`, `qudt.json`, `sosa.json`: schema derived from external ontologies.
 - `context.json`: {experimental} JSON-LD context document (see Linked Data Alignment below).
 
 Application schema should only need a `application.json` schema file linking to the subset of the
-entities and properties needed by the application use case.
+entities and properties needed by the application use case. I hope.
 
 *The JSON Schema must be treated as* views *entirely derived from, or linking to, the ANSIS domain*
 *ontology and vocabularies. Any changes to the structure and definitions of entities, properties*
@@ -32,11 +34,11 @@ entities and properties needed by the application use case.
 ###  Schema locations
 During development, schema can be directly accessed through https://anzsoildata.github.io/def-au-schema-json/schema,
 e.g.:
-- https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/domain.json
+- https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entities.json
 
 ANZSoilData [GitHub Pages](https://pages.github.com/) will also used for schema `$id`s. Upon release
 the domain/path will switch to https://anzsoil.org/def/au/schema/json/, e.g.:
-- https://anzsoil.org/def/au/schema/json/core/1.0/domain
+- https://anzsoil.org/def/au/schema/json/domain/2023-06-30/entities
 
 ### Handling ANSIS observable properties
 ANSIS makes extensive use of `observable properties` to capture metadata about the observation that
