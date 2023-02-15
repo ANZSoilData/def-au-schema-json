@@ -24,6 +24,9 @@
             "$ref": "#SoilSample"
         },
         {
+            "$ref": "#SoilSite"
+        },
+        {
             "$ref": "#SoilSurface"
         },
         {
