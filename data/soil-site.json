@@ -1,20 +1,25 @@
 {
-    "$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/domain.json",
+    "$schema": "../schema/domain/2023-06-30/entities.json",
     "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/core/0.0/context.json",
     "@id": "https://anzsoildata.github.io/def-au-schema-json/data/soil-site.json",
     "@type": "ansis:SoilSite",
-    "drainage": {
-        "@value": "sp:soil-water-drainage-1"
-    },
-    "hasGeometry": {
-        "@value": "SRID=7844;LINESTRING(-42 24, -42 42)",
-        "usedProcedure": {
-            "@id": "https://anzsoil.org/def/au/pretend/procedure/differential-gps"
+    "hasGeometry": [
+        {
+            "@value": "SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)",
+            "usedProcedure": {
+                "@id": "https://anzsoil.org/def/au/pretend/procedure/differential-gps"
+            }
         }
-    },
-    "hasProfile":{
+    ],
+    "relatedProfile": {
         "@id": "https://anzsoildata.github.io/def-au-schema-json/data/soil-profile.json",
         "@type": "ansis:SoilProfile",
         "label": "Example Soil Profile"
+    },
+    "depthFreeWater": {
+        "@value": 42,
+        "unit": {
+            "@value": "qudt:cm"
+        }
     }
 }
