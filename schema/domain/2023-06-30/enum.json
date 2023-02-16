@@ -19,57 +19,6 @@
 				}
 			]
 		},
-        "EntityTypes": {
-            "$anchor": "enum_entitytypes",
-            "title": "ANSIS Entity Types",
-            "$comment": "Experimental - an enumeration to help JSON Schema aware clients display type names/labels as pop-ups, etc.",
-            "oneOf": [
-                {
-                    "const": "ansis:LandsurveySite",
-                    "description": "LandSurveySite"
-                },
-                {
-                    "const": "ansis:SoilSite",
-                    "description": "SoilSite"
-                },
-                {
-                    "const": "ansis:Sample",
-                    "description": "Sample"
-                },
-                {
-                    "const": "ansis:SoilProfile",
-                    "description": "SoilProfile"
-                },
-                {
-                    "const": "ansis:SoilBody",
-                    "description": "SoilBody"
-                },
-                {
-                    "const": "ansis:SoilLayer",
-                    "description": "SoilLayer"
-                },
-                {
-                    "const": "ansis:SoilHorizon",
-                    "description": "SoilHorizon"
-                },
-                {
-                    "const": "ansis:SoilSurface",
-                    "description": "SoilSurface"
-                },
-                {
-                    "const": "prov:Activity",
-                    "description": "Activity"
-                },
-                {
-                    "const": "prov:Person",
-                    "description": "Person"
-                },
-                {
-                    "const": "prov:Project",
-                    "description": "Project"
-                }
-            ]
-        },
         "SoilWaterDrainage": {
             "$anchor": "enum_soilwaterdrainage",
             "title": "Soil Water Drainage",
