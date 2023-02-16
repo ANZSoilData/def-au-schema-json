@@ -613,12 +613,16 @@
             "title": "ANSIS Coarse Fragments",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "abundance"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:CoarseFragments"
+                },
+                "abundance": {
+                	"$ref": "./properties.json#abundance"
                 }
             },
             "additionalProperties": false
@@ -645,12 +649,16 @@
             "title": "ANSIS Cutans",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "abundance"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Cutans"
+                },
+                "abundance": {
+                	"$ref": "./properties.json#abundance"
                 }
             },
             "additionalProperties": false
@@ -661,12 +669,16 @@
             "title": "ANSIS ",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "type"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Erosion"
+                },
+                "type": {
+                	"$ref": "./properties.json#ansis-type"
                 }
             },
             "additionalProperties": false
@@ -677,12 +689,16 @@
             "title": "ANSIS Inundation",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "frequency"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Inundation"
+                },
+                "frequency": {
+                	"$ref": "./properties.json#frequency"
                 }
             },
             "additionalProperties": false
@@ -725,12 +741,20 @@
             "title": "ANSIS Land Surface",
             "description": "Surface landscape features of a site.",
             "required": [
-                "@type"
+                "@type",
+                "aspect",
+                "elevation"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandSurface"
+                },
+                "aspect": {
+                	"$ref": "./properties.json#aspect"
+                },
+                "elevation": {
+                	"$ref": "./properties.json#elevation"
                 },
                 "hasCoarseFragments": {
                     "$ref": "./properties.json#hasCoarseFragments"
@@ -788,12 +812,20 @@
             "title": "ANSIS Landform Element",
             "description": "Landform element (~40m).",
             "required": [
-                "@type"
+                "@type",
+                "slope",
+                "type"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandformElement"
+                },
+                "slope": {
+                	"$ref": "./properties.json#slope"
+                },
+                "type": {
+                	"$ref": "./properties.json#ansis-type"
                 }
             },
             "additionalProperties": false
@@ -804,12 +836,20 @@
             "title": "ANSIS Landform Pattern",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "relief",
+                "slope"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandformPattern"
+                },
+                "relief": {
+                	"$ref": "./properties.json#relief"
+                },
+                "slope": {
+                	"$ref": "./properties.json#slope"
                 },
                 "hasLandformElement": {
                     "$ref": "./properties.json#hasLandformElement"
@@ -849,16 +889,84 @@
             "additionalProperties": false
         },
         "Microrelief_biotic": {
-            "$anchor": "Microrelief_biotic"
+            "$anchor": "Microrelief_biotic",
+            "@id": "https://anzsoil.org/def/au/domain/Microrelief-biotic",
+            "title": "ANSIS Microrelief - Biotic",
+            "description": "Undefined.",
+            "required": [
+                "@type",
+                "agent"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Microrelief-biotic"
+                },
+                "agent": {
+                    "$ref": "./properties.json#agent"
+                }
+            },
+            "additionalProperties": false
         },
         "Microrelief_gilgai": {
-            "$anchor": "Microrelief_gilgai"
+            "$anchor": "Microrelief_gilgai",
+            "@id": "https://anzsoil.org/def/au/domain/Microrelief-gilgai",
+            "title": "ANSIS Microrelief - Gilgai",
+            "description": "Undefined.",
+            "required": [
+                "@type",
+                "type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Microrelief-gilgai"
+                },
+                "type": {
+                    "$ref": "./properties.json#ansis-type"
+                }
+            },
+            "additionalProperties": false
         },
         "Microrelief_hummocky": {
-            "$anchor": "Microrelief_hummocky"
+            "$anchor": "Microrelief_hummocky",
+            "@id": "https://anzsoil.org/def/au/domain/Microrelief-hummocky",
+            "title": "ANSIS Microrelief - Hummocky",
+            "description": "Undefined.",
+            "required": [
+                "@type",
+                "type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Microrelief-hummocky"
+                },
+                "type": {
+                    "$ref": "./properties.json#ansis-type"
+                }
+            },
+            "additionalProperties": false
         },
         "Microrelief_other": {
-            "$anchor": "Microrelief_other"
+            "$anchor": "Microrelief_other",
+            "@id": "https://anzsoil.org/def/au/domain/Microrelief-other",
+            "title": "ANSIS Microrelief - Other",
+            "description": "Undefined.",
+            "required": [
+                "@type",
+                "type"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:Microrelief-other"
+                },
+                "type": {
+                    "$ref": "./properties.json#ansis-type"
+                }
+            },
+            "additionalProperties": false
         },
         "Mottles": {
             "$anchor": "Mottles",
@@ -866,12 +974,16 @@
             "title": "ANSIS Mottles",
             "description": "Mottles and other colour patterns.",
             "required": [
-                "@type"
+                "@type",
+                "abundance"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Mottles"
+                },
+                "abundance": {
+                    "$ref": "./properties.json#abundance"
                 }
             },
             "additionalProperties": false
@@ -882,12 +994,16 @@
             "title": "ANSIS Outcrop",
             "description": "Rock outcrop.",
             "required": [
-                "@type"
+                "@type",
+                "abundance"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Outcrop"
+                },
+                "abundance": {
+                    "$ref": "./properties.json#abundance"
                 },
                 "relatedLandsurveySite": {
                     "$ref": "./properties.json#relatedLandSurveySite"
@@ -907,12 +1023,16 @@
             "title": "ANSIS Pans",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "type"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Pans"
+                },
+                "type": {
+                    "$ref": "./properties.json#ansis-type"
                 }
             },
             "additionalProperties": false
@@ -923,12 +1043,16 @@
             "title": "ANSIS Pores",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "abundance"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Pores"
+                },
+                "abundance": {
+                    "$ref": "./properties.json#abundance"
                 }
             },
             "additionalProperties": false
@@ -955,12 +1079,16 @@
             "title": "ANSIS Roots",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "abundance"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Roots"
+                },
+                "abundance": {
+                    "$ref": "./properties.json#abundance"
                 }
             },
             "additionalProperties": false
@@ -971,21 +1099,29 @@
             "title": "ANSIS Segregations",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "abundance",
+                "material"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:Segregations"
+                },
+                "abundance": {
+                    "$ref": "./properties.json#abundance"
+                },
+                "material": {
+                    "$ref": "./properties.json#material"
                 }
             },
             "additionalProperties": false
         },
-        "SoilClassification": {
-            "$anchor": "SoilClassification",
-            "@id": "https://anzsoil.org/def/au/domain/SoilClassification",
-            "title": "ANSIS Soil Classification",
-            "description": "",
+        "ASC_SoilClassification": {
+            "$anchor": "ASC_SoilClassification",
+            "@id": "https://anzsoil.org/def/au/domain/ASC-SoilClassification",
+            "title": "ANSIS Australian Soil Classification",
+            "description": "Structure Australian Soil Classification value",
             "required": [
                 "@type"
             ],
@@ -1023,6 +1159,29 @@
                 }
             }
         },
+        "SoilClassification": {
+            "$anchor": "SoilClassification",
+            "@id": "https://anzsoil.org/def/au/domain/SoilClassification",
+            "title": "ANSIS Soil Classification",
+            "description": "",
+            "required": [
+                "@type",
+                "value",
+                "scheme"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilClassification"
+                },
+                "value": {
+                    "$ref": "./properties.json#value"
+                },
+                "scheme": {
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
+        },
         "SoilHorizon_Designation": {
             "$anchor": "HorizonDesignation",
             "@id": "https://anzsoil.org/def/au/domain/HorizonDesignation",
@@ -1052,18 +1211,46 @@
             },
             "additionalProperties": false
         },
+        "SoilColour": {
+            "$anchor": "SoilColour",
+            "@id": "https://anzsoil.org/def/au/domain/SoilColour",
+            "title": "ANSIS Soil Colour",
+            "description": "Undefined.",
+            "required": [
+                "@type",
+                "moistureStatus",
+                "value"
+            ],
+            "properties": {
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "ansis:SoilStrength"
+                },
+                "moistureStatus": {
+                    "$ref": "./properties.json#moisture-status"
+                },
+                "value": {
+                    "$ref": "./properties.json#value"
+                }
+            },
+            "additionalProperties": false
+        },
         "SoilPlasticity": {
             "$anchor": "SoilPlasticity",
             "@id": "https://anzsoil.org/def/au/domain/SoilPlasticity",
             "title": "ANSIS Soil Plasticity",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "type"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilPlasticity"
+                },
+                "type": {
+                    "$ref": "./properties.json#ansis-type"
                 }
             },
             "additionalProperties": false
@@ -1106,12 +1293,20 @@
             "title": "ANSIS Soil Strength",
             "description": "Undefined.",
             "required": [
-                "@type"
+                "@type",
+                "moistureStatus",
+                "strength"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilStrength"
+                },
+                "moistureStatus": {
+                    "$ref": "./properties.json#moisture-status"
+                },
+                "strength": {
+                    "$ref": "./properties.json#strength"
                 }
             },
             "additionalProperties": false
@@ -1122,12 +1317,19 @@
             "title": "ANSIS Soil Structure",
             "description": "Soil structure or pedality.",
             "required": [
-                "@type"
+                "@type",
+                "type"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilStructure"
+                },
+                "type": {
+                	"type": "array",
+                	"items": {
+						"$ref": "./properties.json#ansis-type"
+					}
                 }
             },
             "additionalProperties": false
@@ -1210,12 +1412,16 @@
             "title": "ANSIS Stream Channel",
             "description": "Stream channel details.",
             "required": [
-                "@type"
+                "@type",
+                "development"
             ],
             "properties": {
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:StreamChannel"
+                },
+                "development": {
+                	"$ref": "./properties.json#development"
                 }
             },
             "additionalProperties": false
