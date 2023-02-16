@@ -19,7 +19,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -42,7 +42,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -64,7 +64,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -87,7 +87,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -110,7 +110,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -174,7 +174,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -197,7 +197,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -240,7 +240,7 @@
 			"title": "classification - A1 horizon texture",
 			"description": "family criteria - A1 horizon texture",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyA1thickness": {
 			"$anchor": "classification-family-A1thickness",
@@ -248,7 +248,7 @@
 			"title": "classification - A1 horizon thickness",
 			"description": "family criteria - A1 horizon thickness",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyBtexture": {
 			"$anchor": "classification-family-Btexture",
@@ -256,7 +256,7 @@
 			"title": "classification - B horizon texture",
 			"description": "family criteria - B horizon texture",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyDepth": {
 			"$anchor": "classification-family-depth",
@@ -264,7 +264,7 @@
 			"title": "classification - Soil depth",
 			"description": "family criteria - Soil depth",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyGravel": {
 			"$anchor": "classification-family-gravel",
@@ -272,7 +272,7 @@
 			"title": "classification - Gravel of the surface and A1 horizon",
 			"description": "family criteria - Gravel of the surface and A1 horizon",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationGreatGroup": {
 			"$anchor": "classification-greatgroup",
@@ -280,7 +280,7 @@
 			"title": "classification - Great group",
 			"description": "soil classification - Great group",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationOrder": {
 			"$anchor": "classification-order",
@@ -288,7 +288,7 @@
 			"title": "classification - Order",
 			"description": "soil classification - Order",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationSubGroup": {
 			"$anchor": "classification-subgroup",
@@ -296,7 +296,7 @@
 			"title": "classification - Subgroup",
 			"description": "soil classification - Subgroup",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationSubOrder": {
 			"$anchor": "classification-suborder",
@@ -304,7 +304,7 @@
 			"title": "classification - Sub-order",
 			"description": "soil classification - Sub-order",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"component": {
 			"$anchor": "component",
@@ -320,7 +320,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -343,7 +343,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -366,7 +366,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -389,7 +389,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -412,7 +412,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -435,7 +435,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -458,7 +458,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -523,7 +523,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -588,7 +588,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -702,7 +702,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -756,7 +756,7 @@
 			"title": "designation master",
 			"description": "soil horizon designation master",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"designationPrefix": {
 			"$anchor": "designation-prefix",
@@ -780,7 +780,7 @@
 			"title": "designation subdivision",
 			"description": "soil horizon designation subdivision",
 			"$comment": "",
-			"$ref": "./enum.json#enum_tobedefined"
+			"$ref": "./enum.json#tobedefined"
 		},
 		"development": {
 			"$anchor": "development",
@@ -796,7 +796,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -839,7 +839,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -882,7 +882,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -905,7 +905,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -928,7 +928,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -951,7 +951,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_soilwaterdrainage"
+							"$ref": "./enum.json#soilwaterdrainage"
 						}
 					}
 				},
@@ -997,7 +997,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1040,7 +1040,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1083,7 +1083,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1106,7 +1106,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1129,7 +1129,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1152,7 +1152,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1175,7 +1175,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1438,7 +1438,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1481,7 +1481,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1504,7 +1504,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1527,7 +1527,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1550,7 +1550,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1609,7 +1609,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1632,7 +1632,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1655,7 +1655,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1700,7 +1700,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1723,7 +1723,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1747,7 +1747,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1779,7 +1779,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -1802,7 +1802,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2036,7 +2036,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2059,7 +2059,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2082,7 +2082,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2105,7 +2105,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2128,7 +2128,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2172,7 +2172,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2195,7 +2195,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2218,7 +2218,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2273,7 +2273,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2315,7 +2315,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
@@ -2375,7 +2375,7 @@
 				{
 					"properties": {
 						"@value": {
-							"$ref": "./enum.json#enum_tobedefined"
+							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},

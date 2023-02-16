@@ -5,7 +5,7 @@
     "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
     "definitions": {
         "ToBeDefined": {
-            "$anchor": "enum_tobedefined",
+            "$anchor": "tobedefined",
             "title": "To Be Defined",
             "description": "Placeholder for enumerations yet to be created.",
 			"oneOf": [
@@ -20,7 +20,7 @@
 			]
 		},
         "SoilWaterDrainage": {
-            "$anchor": "enum_soilwaterdrainage",
+            "$anchor": "soilwaterdrainage",
             "title": "Soil Water Drainage",
             "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
 			"oneOf": [
