@@ -1192,6 +1192,25 @@
 			"$comment": "",
 			"$ref": "./entities.json#CoarseFragments"
 		},
+		"hasColour": {
+			"$anchor": "hasColour",
+			"@id": "https://anzsoil.org/def/au/domain/hasColour",
+			"title": "has colour",
+			"description": "link to description of colour",
+			"$comment": "",
+			"allOf": [
+				{
+					"properties": {
+						"@value": {
+							"$ref": "./entities.json#SoilColour"
+						}
+					}
+				},
+				{
+					"$ref": "./objects.json#ObservableProperty"
+				}
+			]
+		},
 		"hasCracks": {
 			"$anchor": "hasCracks",
 			"@id": "https://anzsoil.org/def/au/domain/hasCracks",
@@ -1375,6 +1394,44 @@
 			"description": "link to description of stream channel occurrence",
 			"$comment": "",
 			"$ref": "./entities.json#StreamChannel"
+		},
+		"hasStrength": {
+			"$anchor": "hasStrength",
+			"@id": "https://anzsoil.org/def/au/domain/hasStrength",
+			"title": "has strength",
+			"description": "link to description of strength",
+			"$comment": "",
+			"allOf": [
+				{
+					"properties": {
+						"@value": {
+							"$ref": "./entities.json#SoilStrength"
+						}
+					}
+				},
+				{
+					"$ref": "./objects.json#ObservableProperty"
+				}
+			]
+		},
+		"hasStructure": {
+			"$anchor": "hasStructure",
+			"@id": "https://anzsoil.org/def/au/domain/hasStructure",
+			"title": "has structure",
+			"description": "link to description of structure",
+			"$comment": "",
+			"allOf": [
+				{
+					"properties": {
+						"@value": {
+							"$ref": "./entities.json#SoilStructure"
+						}
+					}
+				},
+				{
+					"$ref": "./objects.json#ObservableProperty"
+				}
+			]
 		},
 		"hasSubstrate": {
 			"$anchor": "hasSubstrate",
