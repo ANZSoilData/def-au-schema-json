@@ -140,6 +140,17 @@
 				}
 			]
 		},
+		"biological": {
+			"$anchor": "biological",
+			"@id": null,
+			"@type": "sosa:ObservableProperty",
+			"title": "soil biological property",
+			"description": "",
+			"type": "array",
+			"items": {
+				"$ref": "./sosa.json#Observation"
+			}
+		},
 		"carbon": {
 			"$anchor": "carbon",
 			"@id": "https://anzsoil.org/def/au/domain/carbon",
@@ -213,7 +224,10 @@
 			"title": "soil chemical property",
 			"description": "",
 			"$comment": "Abstract property - parent of other chemical properties",
-			"type": "null"
+			"type": "array",
+			"items": {
+				"$ref": "./sosa.json#Observation"
+			}
 		},
 		"classification": {
 			"$anchor": "classification",
@@ -1795,23 +1809,10 @@
 			"@type": "sosa:ObservableProperty",
 			"title": "soil physical property",
 			"description": "",
-			"$comment": "[ISSUE] Is this used?",
-			"type": "null",
-			"required": [
-				"@value"
-			],
-			"allOf": [
-				{
-					"properties": {
-						"@value": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./objects.json#ObservableProperty"
-				}
-			]
+			"type": "array",
+			"items": {
+				"$ref": "./sosa.json#Observation"
+			}
 		},
 		"plasticity": {
 			"$anchor": "plasticity",
