@@ -72,6 +72,24 @@
                     "$ref": "./base.json#ld-type",
                     "const": "sosa:Observation"
                 },
+                "observedProperty": {
+                    "$ref": "#observedProperty"
+                },
+                "hasResult": {
+                    "$ref": "#hasResult"
+                },
+				"usedProcedure": {
+					"$ref": "#usedProcedure"
+				},
+				"madeBySensor": {
+					"$ref": "#madeBySensor"
+				},
+				"phenomenonTime": {
+					"$ref": "#phenomenonTime"
+				},
+				"resultTime": {
+					"$ref": "#resultTime"
+				},
                 "relatedActivity": {
                 	"$ref": "./properties.json#relatedActivity"
                 }
