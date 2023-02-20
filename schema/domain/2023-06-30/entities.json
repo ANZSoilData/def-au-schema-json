@@ -172,108 +172,6 @@
 			},
 			"additionalProperties": false
 		},
-		"SoilLayerProperties": {
-			"$anchor": "SoilLayerProperties",
-			"title": "ANSIS Soil Layer Properties",
-			"description": "Properties shared by an ANSIS Soil Layer and Soil Horizon.",
-			"$comment": "not to be served",
-			"properties": {
-				"depthUpper": {
-					"$ref": "./properties.json#depth-upper"
-				},
-				"depthLower": {
-					"$ref": "./properties.json#depth-lower"
-				},
-				"permeability": {
-					"$ref": "./properties.json#permeability"
-				},
-				"texture": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#texture"
-					}
-				},
-				"colour": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#colour"
-					}
-				},
-				"hasCoarseFragments": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasCoarseFragments"
-					}
-				},
-				"hasCracks": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasCracks"
-					}
-				},
-				"hasCutans": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasCutans"
-					}
-				},
-				"hasMottles": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasMottles"
-					}
-				},
-				"hasPans": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasPans"
-					}
-				},
-				"hasPores": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasPores"
-					}
-				},
-				"hasRoots": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasRoots"
-					}
-				},
-				"hasSegregations": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasSegregations"
-					}
-				},
-				"hasStrength": {
-					"$ref": "./properties.json#strength"
-				},
-				"hasStrength": {
-					"$ref": "./properties.json#structure"
-				},
-				"relatedSample": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedSample"
-					}
-				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody"
-				},
-				"chemistry": {
-					"$ref": "./properties.json#chemistry"
-				},
-				"physical": {
-					"$ref": "./properties.json#physical"
-				},
-				"biological": {
-					"$ref": "./properties.json#biological"
-				}
-			},
-			"additionalProperties": false
-		},
 		"SoilHorizon": {
 			"$anchor": "SoilHorizon",
 			"@id": "https://anzsoil.org/def/au/domain/SoilHorizon",
@@ -804,6 +702,15 @@
 				"depth"
 			],
 			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
 					"const": "ansis:Substrate"
