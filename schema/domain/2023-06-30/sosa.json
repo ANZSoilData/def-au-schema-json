@@ -152,7 +152,9 @@
             "title": "SOSA Sampling",
             "description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples. E.g. digging a pit through a soil sequence; dividing a field site into quadrants; sieving a powder to separate the subset finer than 100-mesh.",
             "required": [
-                "@type"
+                "@type",
+                "hasFeatureOfInterest",
+                "result"
             ],
             "properties": {
                 "$schema": {
@@ -168,8 +170,11 @@
                     "$ref": "./base.json#ld-type",
                     "const": "sosa:Sampling"
                 },
-                "relatedActivity": {
-                	"$ref": "./properties.json#relatedActivity"
+                "hasFeatureOfInterest": {
+                    "$ref": "#hasFeatureOfInterest"
+                },
+                "result": {
+                	"$ref": "#Sample"
                 }
             },
             "additionalProperties": false

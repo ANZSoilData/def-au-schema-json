@@ -44,6 +44,31 @@
             },
             "additionalProperties": false
         },
+        "Agent": {
+            "$anchor": "Agent",
+            "@id": "http://www.w3.org/ns/prov#Agent",
+            "title": "PROV Agent",
+            "description": "Undefined.",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "prov:Agent"
+                }
+            },
+            "additionalProperties": false
+        },
         "Person": {
             "$anchor": "Person",
             "@id": "http://www.w3.org/ns/prov#Person",
@@ -90,6 +115,18 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Project"
+                },
+                "hasLeader": {
+                    "$ref": "#Person"
+                },
+                "hasLeader": {
+                    "$ref": "#Person"
+                },
+                "hasSponsor": {
+                	"type": "array",
+                	"items": {
+						"$ref": "#Agent"
+                	}
                 }
             },
             "additionalProperties": false
