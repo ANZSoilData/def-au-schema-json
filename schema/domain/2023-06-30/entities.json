@@ -3,39 +3,42 @@
 	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entities.json",
 	"title": "ANSIS Soil Domain Entity Schema",
 	"description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
-	"type": "object",
-	"oneOf": [
-		{
-			"$ref": "#LandSurveySite"
-		},
-		{
-			"$ref": "#SoilBody"
-		},
-		{
-			"$ref": "#SoilHorizon"
-		},
-		{
-			"$ref": "#SoilLayer"
-		},
-		{
-			"$ref": "#SoilProfile"
-		},
-		{
-			"$ref": "#SoilSample"
-		},
-		{
-			"$ref": "#SoilSite"
-		},
-		{
-			"$ref": "#SoilSurface"
-		},
-		{
-			"$ref": "#Substrate"
-		},
-		{
-			"$ref": "#Treatment"
-		}
-	],
+	"$comment": "Response as array for MapForce testing.",
+	"type": "array",
+	"items": {
+		"oneOf": [
+			{
+				"$ref": "#LandSurveySite"
+			},
+			{
+				"$ref": "#SoilBody"
+			},
+			{
+				"$ref": "#SoilHorizon"
+			},
+			{
+				"$ref": "#SoilLayer"
+			},
+			{
+				"$ref": "#SoilProfile"
+			},
+			{
+				"$ref": "#SoilSample"
+			},
+			{
+				"$ref": "#SoilSite"
+			},
+			{
+				"$ref": "#SoilSurface"
+			},
+			{
+				"$ref": "#Substrate"
+			},
+			{
+				"$ref": "#Treatment"
+			}
+		]
+	},
 	"definitions": {
 		"LandSurveySite": {
 			"$anchor": "LandSurveySite",
