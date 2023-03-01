@@ -29,16 +29,8 @@
 			"title": "Unit",
 			"description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
 			"$comment": "Restricted to the QUDT vocabulary as a compact URI.",
-			"type": [
-				"object",
-				"null"
-			],
-			"properties": {
-				"@value": {
-					"type": "string",
-					"pattern": "^qudt:.*$"
-				}
-			}
+			"type": "string",
+			"pattern": "^qudt:.*$"
 		}
 	}
 }
