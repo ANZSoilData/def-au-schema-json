@@ -1355,7 +1355,8 @@
 			"description": "Structure Australian Soil Classification value",
 			"type": "object",
 			"required": [
-				"@type"
+				"@type",
+				"classificationOrder"
 			],
 			"properties": {
 				"@type": {
