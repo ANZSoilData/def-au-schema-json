@@ -25,8 +25,7 @@
 				{
 					"$ref": "./objects.json#ObservableProperty"
 				}
-			],
-			"additionalProperties": false
+			]
 		},
 		"wktLiteral": {
 			"$anchor": "wktLiteral",
@@ -39,8 +38,7 @@
 				"SRID=7844;POINT(-42 24)",
 				"SRID=7844;LINESTRING(-42 24, -42 42)",
 				"SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
-			],
-			"additionalProperties": false
+			]
 		}
 	}
 }
