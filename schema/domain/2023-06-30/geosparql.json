@@ -11,9 +11,6 @@
 			"title": "Has Geometry",
 			"description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
 			"type": "object",
-			"required": [
-				"@value"
-			],
 			"allOf": [
 				{
 					"properties": {
