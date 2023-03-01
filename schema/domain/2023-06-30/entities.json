@@ -3,7 +3,7 @@
 	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entities.json",
 	"title": "ANSIS Soil Domain Entity Schema",
 	"description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
-	"$comment": "Response as array for MapForce testing.",
+	"$comment": "Root element as array for MapForce testing.",
 	"type": "array",
 	"items": {
 		"oneOf": [
@@ -45,6 +45,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandsurveySite",
 			"title": "ANSIS Land Survey Site",
 			"description": "A Site established to make observations of landscape entities.",
+			"type": "object",
 			"required": [
 				"@type",
 				"hasGeometry"
@@ -104,6 +105,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilBody",
 			"title": "ANSIS Soil Body",
 			"description": "Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -180,6 +182,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilHorizon",
 			"title": "ANSIS Soil Horizon",
 			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+			"type": "object",
 			"required": [
 				"@type",
 				"depthUpper",
@@ -305,6 +308,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilLayer",
 			"title": "ANSIS Soil Layer",
 			"description": "Region within a soil body usually observed as a specified depth interval within a profile.",
+			"type": "object",
 			"required": [
 				"@type",
 				"depthUpper",
@@ -426,6 +430,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilProfile",
 			"title": "ANSIS Soil Profile",
 			"description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
+			"type": "object",
 			"required": [
 				"@type",
 				"hasGeometry",
@@ -477,12 +482,6 @@
 						"$ref": "./properties.json#relatedLayer"
 					}
 				},
-				"relatedLayer": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedLayer"
-					}
-				},
 				"relatedSample": {
 					"$ref": "./properties.json#relatedSample"
 				},
@@ -500,6 +499,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilSample",
 			"title": "ANSIS Soil Sample",
 			"description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
+			"type": "object",
 			"required": [
 				"@type",
 				"isSampleOf",
@@ -548,6 +548,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilSite",
 			"title": "ANSIS Soil Site",
 			"description": "A site where samples, observations, and treatments of soil are carried out.",
+			"type": "object",
 			"required": [
 				"@type",
 				"hasGeometry",
@@ -665,6 +666,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilSurface",
 			"title": "ANSIS Soil Surface",
 			"description": "The surface of the soil body.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -699,6 +701,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Substrate",
 			"title": "ANSIS Substrate",
 			"description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
+			"type": "object",
 			"required": [
 				"@type",
 				"distance",
@@ -744,6 +747,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Treatment",
 			"title": "ANSIS Treatment",
 			"description": "Intervention or treatment. Type of sosa:Actuation.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -784,6 +788,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/CoarseFragments",
 			"title": "ANSIS Coarse Fragments",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance"
@@ -807,6 +812,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Cracks",
 			"title": "ANSIS Cracks",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -823,6 +829,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Cutans",
 			"title": "ANSIS Cutans",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance"
@@ -843,6 +850,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Erosion",
 			"title": "ANSIS ",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -866,6 +874,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Inundation",
 			"title": "ANSIS Inundation",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"frequency"
@@ -886,6 +895,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandCover",
 			"title": "ANSIS Land Cover",
 			"description": "Land cover, including vegetation.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -902,6 +912,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandManagement",
 			"title": "ANSIS Land Management",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -918,6 +929,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandSurface",
 			"title": "ANSIS Land Surface",
 			"description": "Surface landscape features of a site.",
+			"type": "object",
 			"required": [
 				"@type",
 				"aspect",
@@ -957,6 +969,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandUse",
 			"title": "ANSIS Land Use",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -973,6 +986,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Landform",
 			"title": "ANSIS Landform",
 			"description": "Landscape features within which the site is located",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -995,6 +1009,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandformElement",
 			"title": "ANSIS Landform Element",
 			"description": "Landform element (~40m).",
+			"type": "object",
 			"required": [
 				"@type",
 				"slope",
@@ -1022,6 +1037,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/LandformPattern",
 			"title": "ANSIS Landform Pattern",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"relief",
@@ -1055,6 +1071,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Microrelief",
 			"title": "ANSIS Microrelief",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1083,6 +1100,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Microrelief-biotic",
 			"title": "ANSIS Microrelief - Biotic",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"agent"
@@ -1103,6 +1121,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Microrelief-gilgai",
 			"title": "ANSIS Microrelief - Gilgai",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -1123,6 +1142,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Microrelief-hummocky",
 			"title": "ANSIS Microrelief - Hummocky",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -1143,6 +1163,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Microrelief-other",
 			"title": "ANSIS Microrelief - Other",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -1163,6 +1184,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Mottles",
 			"title": "ANSIS Mottles",
 			"description": "Mottles and other colour patterns.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance"
@@ -1192,6 +1214,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Outcrop",
 			"title": "ANSIS Outcrop",
 			"description": "Rock outcrop.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance",
@@ -1225,6 +1248,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Pans",
 			"title": "ANSIS Pans",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -1245,6 +1269,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Pores",
 			"title": "ANSIS Pores",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance"
@@ -1265,6 +1290,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Profile-purpose",
 			"title": "ANSIS Profile Purpose",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1281,6 +1307,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Roots",
 			"title": "ANSIS Roots",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance"
@@ -1301,6 +1328,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Segregations",
 			"title": "ANSIS Segregations",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"abundance",
@@ -1325,6 +1353,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/ASC-SoilClassification",
 			"title": "ANSIS Australian Soil Classification",
 			"description": "Structure Australian Soil Classification value",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1367,6 +1396,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilClassification",
 			"title": "ANSIS Soil Classification",
 			"description": "",
+			"type": "object",
 			"required": [
 				"@type",
 				"value",
@@ -1390,6 +1420,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/HorizonDesignation",
 			"title": "ANSIS Soil Horizon Designation",
 			"description": "Soil horizon designation. ",
+			"type": "object",
 			"required": [
 				"@type",
 				"designationMaster"
@@ -1419,6 +1450,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilColour",
 			"title": "ANSIS Soil Colour",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"moistureStatus",
@@ -1443,6 +1475,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilPlasticity",
 			"title": "ANSIS Soil Plasticity",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -1463,6 +1496,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilSampleType",
 			"title": "ANSIS Soil Sample Type",
 			"description": "Undefined. [ISSUE: real?]",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1479,6 +1513,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilSite-design",
 			"title": "ANSIS Soil Site Design",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1495,6 +1530,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilStrength",
 			"title": "ANSIS Soil Strength",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type",
 				"moistureStatus",
@@ -1519,6 +1555,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SoilStructure",
 			"title": "ANSIS Soil Structure",
 			"description": "Soil structure or pedality.",
+			"type": "object",
 			"required": [
 				"@type",
 				"type"
@@ -1548,6 +1585,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Site-purpose",
 			"title": "ANSIS Site Purpose",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1564,6 +1602,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SiteType",
 			"title": "ANSIS Site Type",
 			"description": "Type of land survey site e.g. monitoring, opportunistic, farm, pedology.",
+			"type": "object",
 			"required": [
 				"@type"
 			],
@@ -1580,6 +1619,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/SiteVisit",
 			"title": "ANSIS Site Visit",
 			"description": "A visit to a designated site, for the purpose of taking samples, making observations, and other activities.",
+			"type": "object",
 			"required": [
 				"@type",
 				"relatedActivity",
@@ -1626,6 +1666,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/StreamChannel",
 			"title": "ANSIS Stream Channel",
 			"description": "Stream channel details.",
+			"type": "object",
 			"required": [
 				"@type",
 				"development"
@@ -1649,6 +1690,7 @@
 			"@id": "https://anzsoil.org/def/au/domain/Survey-design",
 			"title": "ANSIS Survey Design",
 			"description": "Undefined.",
+			"type": "object",
 			"required": [
 				"@type"
 			],

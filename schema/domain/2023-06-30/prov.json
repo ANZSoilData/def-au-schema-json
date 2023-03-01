@@ -21,6 +21,7 @@
             "@id": "http://www.w3.org/ns/prov#Activity",
             "title": "PROV Activity",
             "description": "Undefined.",
+			"type": "object",
             "required": [
                 "@type"
             ],
@@ -49,6 +50,7 @@
             "@id": "http://www.w3.org/ns/prov#Agent",
             "title": "PROV Agent",
             "description": "Undefined.",
+			"type": "object",
             "required": [
                 "@type"
             ],
@@ -74,6 +76,7 @@
             "@id": "http://www.w3.org/ns/prov#Person",
             "title": "PROV Person",
             "description": "Undefined.",
+			"type": "object",
             "required": [
                 "@type"
             ],
@@ -99,6 +102,7 @@
             "@id": "http://www.w3.org/ns/prov#Project",
             "title": "PROV Project",
             "description": "Undefined.",
+			"type": "object",
             "required": [
                 "@type"
             ],

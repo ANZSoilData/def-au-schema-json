@@ -46,6 +46,7 @@
             "$anchor": "Entity_Link",
             "title": "ANSIS Entity Link",
             "description": "A simple object supporting a link (e.g. a hyperlink) to another entity.",
+			"type": "object",
             "required": [
                 "@id"
             ],

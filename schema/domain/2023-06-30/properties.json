@@ -12,6 +12,7 @@
 			"title": "abundance",
 			"description": "abundance of items",
 			"$comment": "Requires conditional logical to support different vocabularies for different types.",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -35,6 +36,7 @@
 			"title": "agent",
 			"description": "agent of geomorphological or biotic activity",
 			"$comment": "Requires conditional logical to support different vocabularies for different types.",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -57,6 +59,7 @@
 			"@type": "sosa:ObservableProperty",
 			"title": "aggradation",
 			"description": "aggradation presence",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -80,6 +83,7 @@
 			"title": "alteration",
 			"description": "type of alteration",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -103,6 +107,7 @@
 			"title": "analyte",
 			"description": "chemical species measured",
 			"$comment": "Large vocabulary, external link.",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -126,6 +131,7 @@
 			"title": "aspect",
 			"description": "direction or azimuth that a terrain surface faces",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit",
@@ -158,6 +164,7 @@
 			"title": "carbon",
 			"description": "soil carbon",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -178,6 +185,7 @@
 			"title": "effervescence of carbonate",
 			"description": "effervescence of carbonate in fine earth",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -201,6 +209,7 @@
 			"title": "cementation",
 			"description": "degree of cementation",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -236,6 +245,7 @@
 			"title": "has classification",
 			"description": "classification of the soil body or profile",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"classificationOrder"
 			],
@@ -254,6 +264,7 @@
 			"title": "classification - A1 horizon texture",
 			"description": "family criteria - A1 horizon texture",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyA1thickness": {
@@ -262,6 +273,7 @@
 			"title": "classification - A1 horizon thickness",
 			"description": "family criteria - A1 horizon thickness",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyBtexture": {
@@ -270,6 +282,7 @@
 			"title": "classification - B horizon texture",
 			"description": "family criteria - B horizon texture",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyDepth": {
@@ -278,6 +291,7 @@
 			"title": "classification - Soil depth",
 			"description": "family criteria - Soil depth",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationFamilyGravel": {
@@ -286,6 +300,7 @@
 			"title": "classification - Gravel of the surface and A1 horizon",
 			"description": "family criteria - Gravel of the surface and A1 horizon",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationGreatGroup": {
@@ -294,6 +309,7 @@
 			"title": "classification - Great group",
 			"description": "soil classification - Great group",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationOrder": {
@@ -302,6 +318,7 @@
 			"title": "classification - Order",
 			"description": "soil classification - Order",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationSubGroup": {
@@ -310,6 +327,7 @@
 			"title": "classification - Subgroup",
 			"description": "soil classification - Subgroup",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"classificationSubOrder": {
@@ -318,6 +336,7 @@
 			"title": "classification - Sub-order",
 			"description": "soil classification - Sub-order",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"component": {
@@ -327,6 +346,7 @@
 			"title": "component",
 			"description": "type of component element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -350,6 +370,7 @@
 			"title": "compound pedality",
 			"description": "",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -373,6 +394,7 @@
 			"title": "condition when dry",
 			"description": "surface condition when dry",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -396,21 +418,7 @@
 			"description": "confidence in assessment",
 			"$comment": "",
 			"type": "string",
-			"required": [
-				"@value"
-			],
-			"allOf": [
-				{
-					"properties": {
-						"@value": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./objects.json#ObservableProperty"
-				}
-			]
+			"$ref": "./enum.json#tobedefined"
 		},
 		"continuity": {
 			"$anchor": "continuity",
@@ -419,6 +427,7 @@
 			"title": "continuity",
 			"description": "continuity of linear or planar elements",
 			"$comment": "Definition implies domain beyond pans - use conditional logic for enum $refs.",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -442,6 +451,7 @@
 			"title": "contrast",
 			"description": "degree of colour contrast",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -465,6 +475,7 @@
 			"title": "degree or intensity",
 			"description": "degree or severity or intensity of phenomenon",
 			"$comment": "use conditional logic for enum $refs",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -488,6 +499,7 @@
 			"title": "density",
 			"description": "mass per unit volume of a substance",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -513,6 +525,7 @@
 			"$anchor": "depth-quantity",
 			"title": "depth (as quantity)",
 			"$comment": "see #depth",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -524,12 +537,14 @@
 				{
 					"$ref": "./objects.json#ObservableProperty"
 				}
-			]
+			],
+			"additionalProperties": false
 		},
 		"depth-inundation": {
 			"$anchor": "depth-inundation",
 			"title": "inundation depth",
 			"$comment": "see #depth",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -553,6 +568,7 @@
 			"title": "depth",
 			"description": "Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface.",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -578,6 +594,7 @@
 			"$anchor": "depthGully-quantity",
 			"title": "depthGully (as quantity)",
 			"$comment": "see #depthGully",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -595,6 +612,7 @@
 			"$anchor": "depthGully-category",
 			"title": "depthGully (as category)",
 			"$comment": "see #depthGully",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -618,6 +636,7 @@
 			"title": "lower depth",
 			"description": "depth from local surface to the base of the element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -638,6 +657,7 @@
 			"title": "depth to R-Horizon",
 			"description": "depth from local surface to the top of the R-Horizon",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -666,6 +686,7 @@
 			"title": "upper depth",
 			"description": "depth from local surface to the top of the element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -692,6 +713,7 @@
 			"$anchor": "depthWidthRatio-quantity",
 			"title": "depthWidthRatio (as quantity)",
 			"$comment": "see #depthWidthRatio",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -709,6 +731,7 @@
 			"$anchor": "depthWidthRatio-streamchannel",
 			"title": "channel depth-width",
 			"$comment": "see #depthWidthRatio",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -731,6 +754,7 @@
 			"title": "site design",
 			"description": "overall design of sampling at the site e.g. ASLS|grid|transect",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#SoilSite-design"
 		},
 		"designSurvey": {
@@ -739,6 +763,7 @@
 			"title": "survey design",
 			"description": "overall design of soil or landscape survey e.g. free|grid|stratified|miscellaneous",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Survey-design"
 		},
 		"designation": {
@@ -748,6 +773,7 @@
 			"title": "horizon designation",
 			"description": "designation of soil horizon with the sequence composing the Profile or Soil Body",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -770,6 +796,7 @@
 			"title": "designation master",
 			"description": "soil horizon designation master",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"designationPrefix": {
@@ -794,6 +821,7 @@
 			"title": "designation subdivision",
 			"description": "soil horizon designation subdivision",
 			"$comment": "",
+			"type": "string",
 			"$ref": "./enum.json#tobedefined"
 		},
 		"development": {
@@ -803,6 +831,7 @@
 			"title": "development",
 			"description": "degree of development of element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -826,6 +855,7 @@
 			"title": "diameter",
 			"description": "thickness or width of round object",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -846,6 +876,7 @@
 			"title": "directionality",
 			"description": "network directionality",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -869,6 +900,7 @@
 			"title": "distance",
 			"description": "spatial separation of objects",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -889,6 +921,7 @@
 			"title": "distinctness",
 			"description": "distinctness of boundary - in the context of a soil horizon, this refers to the distinctness of the lower boundary",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -912,6 +945,7 @@
 			"title": "distribution",
 			"description": "spatial arrangement of items",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -935,6 +969,7 @@
 			"title": "disturbance",
 			"description": "disturbance of site",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -958,6 +993,7 @@
 			"title": "drainage",
 			"description": "Drainage of site or profile.",
 			"$comment": "example of a property bound to an enumeration",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -987,6 +1023,7 @@
 			"$anchor": "duration-quantity",
 			"title": "duration (as quantity)",
 			"$comment": "see #duration",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -1004,6 +1041,7 @@
 			"$anchor": "duration-inundation",
 			"title": "inundation duration",
 			"$comment": "see #duration",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1027,6 +1065,7 @@
 			"title": "elevation",
 			"description": "elevation of element above a datum (usually MSL)",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -1047,6 +1086,7 @@
 			"title": "fabric",
 			"description": "fabric of soil element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1070,6 +1110,7 @@
 			"title": "frequency",
 			"description": "temporal frequency of event or phenomenon",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -1090,6 +1131,7 @@
 			"title": "genesis",
 			"description": "formation process for material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1113,6 +1155,7 @@
 			"title": "geomorphology mode",
 			"description": "mode of geomorphological activity",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1136,6 +1179,7 @@
 			"title": "geomorphology status",
 			"description": "status of geomorphological activity",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1159,6 +1203,7 @@
 			"title": "grade",
 			"description": "grade or degree of development of structure",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1182,6 +1227,7 @@
 			"title": "grain size",
 			"description": "size of the most common particles of a material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1204,6 +1250,7 @@
 			"title": "has coarse fragments",
 			"description": "link to description of coarse fragments",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#CoarseFragments"
 		},
 		"colour": {
@@ -1212,6 +1259,7 @@
 			"title": "colour",
 			"description": "link to description of colour",
 			"$comment": "",
+			"type": "object",
 			"allOf": [
 				{
 					"properties": {
@@ -1231,6 +1279,7 @@
 			"title": "has cracks",
 			"description": "link to description of cracks",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Cracks"
 		},
 		"hasCutans": {
@@ -1239,6 +1288,7 @@
 			"title": "has cutans",
 			"description": "link to description of cutans",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Cutans"
 		},
 		"hasErosion": {
@@ -1247,6 +1297,7 @@
 			"title": "has erosion",
 			"description": "link to description of erosion",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Erosion"
 		},
 		"hasInundation": {
@@ -1255,6 +1306,7 @@
 			"title": "has inundation",
 			"description": "link to description of inundation",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Inundation"
 		},
 		"hasLandCover": {
@@ -1263,6 +1315,7 @@
 			"title": "has land cover",
 			"description": "link to description of land cover",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#LandCover"
 		},
 		"hasLandManagement": {
@@ -1271,6 +1324,7 @@
 			"title": "has land management",
 			"description": "link to description of land management",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#LandManagement"
 		},
 		"hasLandSurface": {
@@ -1279,6 +1333,7 @@
 			"title": "has land surface",
 			"description": "link to description of land surface",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#LandSurface"
 		},
 		"hasLandUse": {
@@ -1287,6 +1342,7 @@
 			"title": "has land use",
 			"description": "link to description of land use",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#LandUse"
 		},
 		"hasLandform": {
@@ -1295,6 +1351,7 @@
 			"title": "has landform",
 			"description": "link to description of landform",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Landform"
 		},
 		"hasLandformElement": {
@@ -1303,6 +1360,7 @@
 			"title": "has landform element",
 			"description": "link to description of landform element",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#LandformElement"
 		},
 		"hasLandformPattern": {
@@ -1311,6 +1369,7 @@
 			"title": "has landform pattern",
 			"description": "link to description of landform pattern",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#LandformPattern"
 		},
 		"hasMicrorelief": {
@@ -1319,6 +1378,7 @@
 			"title": "has microrelief",
 			"description": "link to description of microrelief at the site",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Microrelief"
 		},
 		"hasMicrorelief_biotic": {
@@ -1327,6 +1387,7 @@
 			"title": "has microrelief - biotic",
 			"description": "link to description of biotic microrelief at the site",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Microrelief_biotic"
 		},
 		"hasMicrorelief_gilgai": {
@@ -1335,6 +1396,7 @@
 			"title": "has microrelief - gilgai",
 			"description": "link to description of gilgai microrelief at the site",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Microrelief_gilgai"
 		},
 		"hasMicrorelief_hummocky": {
@@ -1343,6 +1405,7 @@
 			"title": "has microrelief - hummocky",
 			"description": "link to description of hummocky microrelief at the site",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Microrelief_hummocky"
 		},
 		"hasMicrorelief_other": {
@@ -1351,6 +1414,7 @@
 			"title": "has microrelief - other",
 			"description": "link to description of other microrelief at the site",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Microrelief_other"
 		},
 		"hasMottles": {
@@ -1359,6 +1423,7 @@
 			"title": "has mottles",
 			"description": "link to description of mottles and other colour patterns",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Mottles"
 		},
 		"hasOutcrop": {
@@ -1367,6 +1432,7 @@
 			"title": "has outcrop",
 			"description": "link to description of rock outcrop at this entity",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Outcrop"
 		},
 		"hasPans": {
@@ -1375,6 +1441,7 @@
 			"title": "has pans",
 			"description": "link to description of pans",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Pans"
 		},
 		"hasPores": {
@@ -1383,6 +1450,7 @@
 			"title": "has macropores",
 			"description": "link to description of macropores",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Pores"
 		},
 		"hasRoots": {
@@ -1391,6 +1459,7 @@
 			"title": "has roots",
 			"description": "link to description of roots",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Roots"
 		},
 		"hasSegregations": {
@@ -1399,6 +1468,7 @@
 			"title": "has segregations",
 			"description": "link to description of segregations",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Segregations"
 		},
 		"hasStreamChannel": {
@@ -1407,6 +1477,7 @@
 			"title": "has stream channel",
 			"description": "link to description of stream channel occurrence",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#StreamChannel"
 		},
 		"hasStrength": {
@@ -1415,6 +1486,7 @@
 			"title": "has strength",
 			"description": "link to description of strength",
 			"$comment": "",
+			"type": "object",
 			"allOf": [
 				{
 					"properties": {
@@ -1434,6 +1506,7 @@
 			"title": "has structure",
 			"description": "link to description of structure",
 			"$comment": "",
+			"type": "object",
 			"allOf": [
 				{
 					"properties": {
@@ -1453,6 +1526,7 @@
 			"title": "has substrate",
 			"description": "link to description of substrate",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#Substrate"
 		},
 		"height": {
@@ -1462,6 +1536,7 @@
 			"title": "height",
 			"description": "vertical extent of element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -1482,6 +1557,7 @@
 			"title": "drainage height",
 			"description": "vertical extent of drainage",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -1502,6 +1578,7 @@
 			"title": "integration",
 			"description": "integration of stream channel network",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1525,6 +1602,7 @@
 			"title": "length",
 			"description": "linear extent - larger dimension",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -1545,6 +1623,7 @@
 			"title": "lithology",
 			"description": "lithological type of material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1568,6 +1647,7 @@
 			"title": "location in landform element",
 			"description": "location within landform element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1591,6 +1671,7 @@
 			"title": "location in toposequence",
 			"description": "location within a toposequence",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1614,6 +1695,7 @@
 			"title": "magnetic attributes",
 			"description": "magnetic attributes",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1638,6 +1720,8 @@
 			"$comment": "",
 			"type": "string"
 		},
+		
+		
 		"material": {
 			"$anchor": "material",
 			"@id": "https://anzsoil.org/def/au/domain/material",
@@ -1646,8 +1730,7 @@
 			"description": "material or composition of entity or element",
 			"$comment": ""
 			
-			
-			
+		
 		},
 		"methodElevation": {
 			"$anchor": "method-elevation",
@@ -1673,6 +1756,7 @@
 			"title": "migration rate",
 			"description": "migration-rate",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1696,6 +1780,7 @@
 			"title": "moisture status",
 			"description": "moisture state of material while property evaluation is carried out",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1719,6 +1804,7 @@
 			"title": "morphological type",
 			"description": "morphological type of landform element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1742,6 +1828,7 @@
 			"title": "pH",
 			"description": "alkalinity of materia",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"usedProcedure"
@@ -1764,6 +1851,7 @@
 			"title": "pattern",
 			"description": "spatial pattern of channels or other linear element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1787,6 +1875,7 @@
 			"title": "permeability",
 			"description": "rate of flow of liquid through the material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1821,6 +1910,7 @@
 			"title": "plasticity",
 			"description": "capability of being formed or molded",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./entities.json#SoilPlasticity"
 		},
 		"porosity": {
@@ -1830,6 +1920,7 @@
 			"title": "porosity",
 			"description": "proportion of void space in material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1853,6 +1944,7 @@
 			"title": "proportions",
 			"description": "proportion of void space in material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -1876,6 +1968,7 @@
 			"title": "purpose",
 			"description": "purpose of or reason for activity",
 			"$comment": "",
+			"type": "object",
 			"oneOf": [
 				{
 					"$ref": "./entities.json#Profile-purpose"
@@ -1891,6 +1984,7 @@
 			"title": "related activity",
 			"description": "link to an activity related to this context",
 			"$comment": "[ISSUE] ontology has contradictory range/rangeIncludes statements",
+			"type": "object",
 			"oneOf": [
 				{
 					"$ref": "./base.json#Entity_Link",
@@ -2087,6 +2181,7 @@
 			"title": "relative inclination",
 			"description": "relative slope or inclination",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2110,6 +2205,7 @@
 			"title": "relief",
 			"description": "amount of vertical variation of the landform",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2133,6 +2229,7 @@
 			"title": "runoff",
 			"description": "degree of surface water runoff",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2156,6 +2253,7 @@
 			"title": "shape",
 			"description": "geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2179,6 +2277,7 @@
 			"title": "size",
 			"description": "geometric scale and extent of element",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2202,6 +2301,7 @@
 			"title": "slope",
 			"description": "divergence of surface from horizontal",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit",
@@ -2223,6 +2323,7 @@
 			"title": "spacing",
 			"description": "lateral separation of elements - in the context of substrate this refers to the spacing of discontinuities",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2246,6 +2347,7 @@
 			"title": "state",
 			"description": "erosion status",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2269,6 +2371,7 @@
 			"title": "stickiness",
 			"description": "adhesiveness or viscosity",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2292,6 +2395,7 @@
 			"title": "strength",
 			"description": "strength of material",
 			"$comment": "",
+			"type": "object",
 			"oneOf": [
 				{
 					"$ref": "./objects.json#ObservableProperty"
@@ -2308,6 +2412,7 @@
 			"title": "structure",
 			"description": "internal arrangement of elements of the material or entity",
 			"$comment": "",
+			"type": "object",
 			"oneOf": [
 				{
 					"$ref": "./objects.json#ObservableProperty"
@@ -2324,6 +2429,7 @@
 			"title": "texture",
 			"description": "material texture, in terms of particle size distribution and component materials",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2343,14 +2449,11 @@
 		"ansisType": {
 			"$anchor": "ansis-type",
 			"@id": "https://anzsoil.org/def/au/domain/type",
-			"@type": "sosa:ObservableProperty",
 			"title": "type",
 			"description": "type of ansis soil entity",
 			"$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
+			"type": "object",
 			"oneOf": [
-				{
-					"$ref": "./objects.json#ObservableProperty"
-				},
 				{
 					"$ref": "./entities.json#SiteType"
 				},
@@ -2366,6 +2469,7 @@
 			"title": "underlying material",
 			"description": "lithology of material underlying the landform",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2398,6 +2502,7 @@
 			"title": "velocity",
 			"description": "velocity of entity",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
@@ -2417,6 +2522,7 @@
 			"title": "visitor",
 			"description": "site visitor, for the purpose of sampling or observation",
 			"$comment": "",
+			"type": "object",
 			"$ref": "./prov.json#Person"
 		},
 		"waterRepellence": {
@@ -2426,6 +2532,7 @@
 			"title": "water repellence",
 			"description": "water repellence of material",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value"
 			],
@@ -2449,6 +2556,7 @@
 			"title": "width",
 			"description": "linear extent - smaller dimension",
 			"$comment": "",
+			"type": "object",
 			"required": [
 				"@value",
 				"unit"
