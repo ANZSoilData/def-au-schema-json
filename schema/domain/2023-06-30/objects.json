@@ -28,7 +28,11 @@
 			"$anchor": "ConceptValue",
 			"title": "Concept Value",
 			"description": "A compact URI referencing an entry in an ANSIS vocabulary.",
+			"$comment": "For circumstances when a concept is expected, but it is not constrained by a specific vocabulary.",
 			"type": "object",
+			"required": [
+				"@value"
+			],
 			"properties": {
 				"@value": {
 					"type": "string"
