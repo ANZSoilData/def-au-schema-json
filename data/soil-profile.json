@@ -1,13 +1,13 @@
 {
-    "$schema": "../schema/domain/2023-06-30/entities.json",
+    "$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entities.json",
     "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/context.json",
     "@id": "https://anzsoildata.github.io/def-au-schema-json/data/soil-profile.json",
     "@type": "ansis:SoilProfile",
     "drainage": {
-        "@value": "sp:soil-water-drainage-1"
+        "hasResult": "sp:soil-water-drainage-1"
     },
     "hasGeometry": {
-        "@value": "SRID=7844;LINESTRING(-42 24, -42 42)",
+        "hasResult": "SRID=7844;LINESTRING(-42 24, -42 42)",
         "usedProcedure": {
             "@id": "https://anzsoil.org/def/au/pretend/procedure/differential-gps"
         }
