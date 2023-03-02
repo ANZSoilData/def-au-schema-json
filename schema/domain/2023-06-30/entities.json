@@ -3,42 +3,7 @@
 	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entities.json",
 	"title": "ANSIS Soil Domain Entity Schema",
 	"description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
-	"$comment": "Root element as array for MapForce testing.",
-	"type": "array",
-	"items": {
-		"oneOf": [
-			{
-				"$ref": "#LandSurveySite"
-			},
-			{
-				"$ref": "#SoilBody"
-			},
-			{
-				"$ref": "#SoilHorizon"
-			},
-			{
-				"$ref": "#SoilLayer"
-			},
-			{
-				"$ref": "#SoilProfile"
-			},
-			{
-				"$ref": "#SoilSample"
-			},
-			{
-				"$ref": "#SoilSite"
-			},
-			{
-				"$ref": "#SoilSurface"
-			},
-			{
-				"$ref": "#Substrate"
-			},
-			{
-				"$ref": "#Treatment"
-			}
-		]
-	},
+	"$comment": "Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.",
 	"definitions": {
 		"LandSurveySite": {
 			"$anchor": "LandSurveySite",
@@ -61,7 +26,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandsurveySite"
 				},
 				"hasGeometry": {
@@ -120,7 +85,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilBody"
 				},
 				"classification": {
@@ -201,7 +166,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilHorizon"
 				},
 				"designation": {
@@ -326,7 +291,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilLayer"
 				},
 				"depthUpper": {
@@ -449,7 +414,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilProfile"
 				},
 				"depth": {
@@ -516,7 +481,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilSample"
 				},
 				"type": {
@@ -565,7 +530,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilSite"
 				},
 				"hasGeometry": {
@@ -681,7 +646,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilSurface"
 				},
 				"conditionWhenDry": {
@@ -718,7 +683,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Substrate"
 				},
 				"type": {
@@ -762,7 +727,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Treatment"
 				},
 				"actsOnProperty": {
@@ -795,7 +760,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:CoarseFragments"
 				},
 				"abundance": {
@@ -818,7 +783,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Cracks"
 				}
 			},
@@ -836,7 +801,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Cutans"
 				},
 				"abundance": {
@@ -857,7 +822,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Erosion"
 				},
 				"type": {
@@ -881,7 +846,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Inundation"
 				},
 				"frequency": {
@@ -901,7 +866,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandCover"
 				}
 			},
@@ -918,7 +883,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandManagement"
 				}
 			},
@@ -937,7 +902,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandSurface"
 				},
 				"aspect": {
@@ -975,7 +940,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandUse"
 				}
 			},
@@ -992,7 +957,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Landform"
 				},
 				"hasLandformElement": {
@@ -1017,7 +982,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandformElement"
 				},
 				"slope": {
@@ -1045,7 +1010,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:LandformPattern"
 				},
 				"type": {
@@ -1077,7 +1042,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Microrelief"
 				},
 				"hasMicrorelief-biotic": {
@@ -1107,7 +1072,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Microrelief-biotic"
 				},
 				"agent": {
@@ -1128,7 +1093,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Microrelief-gilgai"
 				},
 				"type": {
@@ -1149,7 +1114,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Microrelief-hummocky"
 				},
 				"type": {
@@ -1170,7 +1135,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Microrelief-other"
 				},
 				"type": {
@@ -1191,7 +1156,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Mottles"
 				},
 				"type": {
@@ -1222,7 +1187,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Outcrop"
 				},
 				"abundance": {
@@ -1255,7 +1220,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Pans"
 				},
 				"type": {
@@ -1276,7 +1241,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Pores"
 				},
 				"abundance": {
@@ -1296,7 +1261,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Profile-purpose"
 				}
 			},
@@ -1314,7 +1279,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Roots"
 				},
 				"abundance": {
@@ -1336,7 +1301,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Segregations"
 				},
 				"abundance": {
@@ -1360,7 +1325,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilClassification"
 				},
 				"classificationFamilyA1texture": {
@@ -1405,7 +1370,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilClassification"
 				},
 				"value": {
@@ -1428,7 +1393,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:HorizonDesignation"
 				},
 				"designationPrefix": {
@@ -1459,7 +1424,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilStrength"
 				},
 				"moistureStatus": {
@@ -1483,7 +1448,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilPlasticity"
 				},
 				"type": {
@@ -1503,7 +1468,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilSampleType"
 				}
 			},
@@ -1520,7 +1485,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilSite-design"
 				}
 			},
@@ -1539,7 +1504,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilStrength"
 				},
 				"moistureStatus": {
@@ -1563,7 +1528,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SoilStructure"
 				},
 				"type": {
@@ -1592,7 +1557,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Site-purpose"
 				}
 			},
@@ -1609,7 +1574,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SiteType"
 				}
 			},
@@ -1638,7 +1603,7 @@
 					"$ref": "./base.json#ld-id"
 				},
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:SiteVisit"
 				},
 				"visitor": {
@@ -1674,7 +1639,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:StreamChannel"
 				},
 				"development": {
@@ -1697,7 +1662,7 @@
 			],
 			"properties": {
 				"@type": {
-					"$ref": "./base.json#ld-type",
+					"type": "string",
 					"const": "ansis:Survey-design"
 				}
 			},
