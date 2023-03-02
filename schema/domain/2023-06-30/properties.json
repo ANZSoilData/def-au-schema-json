@@ -16,16 +16,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -40,16 +40,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -63,16 +63,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -87,16 +87,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -111,16 +111,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -140,7 +140,7 @@
 					"required": [
 						"usedProcedure"
 					],
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -168,7 +168,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -183,16 +183,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -207,16 +207,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -243,16 +243,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./entities.json#SoilClassification"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -348,16 +348,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -372,16 +372,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -396,16 +396,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -429,16 +429,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -453,16 +453,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -477,16 +477,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -503,7 +503,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -525,7 +525,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -537,16 +537,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -563,7 +563,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -585,7 +585,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -597,16 +597,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -623,7 +623,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -640,7 +640,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -665,7 +665,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -688,7 +688,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -700,16 +700,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -742,16 +742,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./entities.json#HorizonDesignation"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -800,16 +800,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -826,7 +826,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -841,16 +841,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -867,7 +867,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -882,16 +882,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -906,16 +906,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -930,16 +930,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -954,16 +954,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#soilwaterdrainage"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -986,7 +986,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -998,16 +998,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1024,7 +1024,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1039,16 +1039,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1065,7 +1065,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1080,16 +1080,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1104,16 +1104,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1128,16 +1128,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1152,16 +1152,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1176,16 +1176,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1208,16 +1208,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./entities.json#SoilColour"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1438,16 +1438,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./entities.json#SoilStrength"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1461,16 +1461,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./entities.json#SoilStructure"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1496,7 +1496,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1513,7 +1513,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1528,16 +1528,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1554,7 +1554,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1569,16 +1569,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1593,16 +1593,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1617,16 +1617,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1641,16 +1641,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1695,16 +1695,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1719,16 +1719,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1743,16 +1743,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1772,7 +1772,7 @@
 					"required": [
 						"usedProcedure"
 					],
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1787,16 +1787,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1811,16 +1811,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1856,16 +1856,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -1880,16 +1880,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2117,16 +2117,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2141,16 +2141,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2165,16 +2165,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2189,16 +2189,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2213,16 +2213,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2242,7 +2242,7 @@
 					"required": [
 						"usedProcedure"
 					],
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2257,16 +2257,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2281,16 +2281,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2305,16 +2305,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2328,7 +2328,7 @@
 			"type": "object",
 			"oneOf": [
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				},
 				{
 					"$ref": "./entities.json#SoilStrength"
@@ -2345,7 +2345,7 @@
 			"type": "object",
 			"oneOf": [
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				},
 				{
 					"$ref": "./entities.json#SoilStructure"
@@ -2363,16 +2363,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2403,16 +2403,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2438,7 +2438,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2462,16 +2462,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},
@@ -2488,7 +2488,7 @@
 					"$ref": "./qudt.json#QuantityValue"
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		}

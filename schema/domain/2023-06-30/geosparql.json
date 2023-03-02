@@ -14,16 +14,16 @@
 			"allOf": [
 				{
 					"required": [
-						"@value"
+						"hasResult"
 					],
 					"properties": {
-						"@value": {
+						"hasResult": {
 							"$ref": "#wktLiteral"
 						}
 					}
 				},
 				{
-					"$ref": "./objects.json#ObservableProperty"
+					"$ref": "./sosa.json#ObservableProperty"
 				}
 			]
 		},

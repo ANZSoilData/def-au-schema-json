@@ -1,87 +1,88 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/sosa.json",
-    "title": "SOSA Entity Schema",
-    "description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
-    "type": "object",
-    "oneOf": [
-        {
-            "$ref": "#Actuation"
-        },
-        {
-            "$ref": "#Observation"
-        },
-        {
-            "$ref": "#Sample"
-        },
-        {
-            "$ref": "#Sampler"
-        },
-        {
-            "$ref": "#Sampling"
-        }
-    ],
-    "definitions": {
-        "Actuation": {
-            "$anchor": "Actuation",
-            "@id": "http://www.w3.org/ns/sosa/Actuation",
-            "title": "SOSA Actuation",
-            "description": "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/sosa.json",
+	"title": "SOSA Entity Schema",
+	"description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
+	"type": "object",
+	"oneOf": [
+		{
+			"$ref": "#Actuation"
+		},
+		{
+			"$ref": "#Observation"
+		},
+		{
+			"$ref": "#Sample"
+		},
+		{
+			"$ref": "#Sampler"
+		},
+		{
+			"$ref": "#Sampling"
+		}
+	],
+	"definitions": {
+		"Actuation": {
+			"$anchor": "Actuation",
+			"@id": "http://www.w3.org/ns/sosa/Actuation",
+			"title": "SOSA Actuation",
+			"description": "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.",
 			"type": "object",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "sosa:Actuation"
-                },
-                "relatedActivity": {
-                	"$ref": "./properties.json#relatedActivity"
-                }
-            },
-            "additionalProperties": false
-        },
-        "Observation": {
-            "$anchor": "Observation",
-            "@id": "http://www.w3.org/ns/sosa/Observation",
-            "title": "SOSA Observation",
-            "description": "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
+			"required": [
+				"@type"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "sosa:Actuation"
+				},
+				"relatedActivity": {
+					"$ref": "./properties.json#relatedActivity"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Observation": {
+			"$anchor": "Observation",
+			"@id": "http://www.w3.org/ns/sosa/Observation",
+			"title": "SOSA Observation",
+			"description": "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
 			"type": "object",
-            "required": [
-                "@type",
-                "hasResult",
+			"required": [
+				"@type",
+				"observedProperty",
+				"hasResult",
 				"usedProcedure"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "sosa:Observation"
-                },
-                "observedProperty": {
-                    "$ref": "#observedProperty"
-                },
-                "hasResult": {
-                    "$ref": "#hasResult"
-                },
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "sosa:Observation"
+				},
+				"observedProperty": {
+					"$ref": "#observedProperty"
+				},
+				"hasResult": {
+					"$ref": "#hasResult"
+				},
 				"usedProcedure": {
 					"$ref": "#usedProcedure"
 				},
@@ -94,127 +95,147 @@
 				"resultTime": {
 					"$ref": "#resultTime"
 				},
-                "relatedActivity": {
-                	"$ref": "./properties.json#relatedActivity"
-                }
-            },
-            "additionalProperties": false
-        },
-        "Sample": {
-            "$anchor": "Sample",
-            "@id": "http://www.w3.org/ns/sosa/Sample",
-            "title": "SOSA Sample",
-            "description": "A Sample is the result from an act of Sampling. Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made. Physical samples are sometimes known as 'specimens'. Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign. A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features.",
+				"relatedActivity": {
+					"$ref": "./properties.json#relatedActivity"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ObservableProperty": {
+			"$anchor": "ObservableProperty",
+			"title": "Observable Property",
+			"description": "SOSA properties for an observable property value. Used when the observedProperty is a key in a JSON object and the feature of interest is the object.",
 			"type": "object",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "sosa:Sample"
-                }
-            },
-            "additionalProperties": false
-        },
-        "Sampler": {
-            "$anchor": "Sampler",
-            "@id": "http://www.w3.org/ns/sosa/Sampler",
-            "title": "SOSA Sampler",
-            "description": "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.",
+			"properties": {
+				"usedProcedure": {
+					"$ref": "#usedProcedure"
+				},
+				"madeBySensor": {
+					"$ref": "#madeBySensor"
+				},
+				"phenomenonTime": {
+					"$ref": "#phenomenonTime"
+				},
+				"resultTime": {
+					"$ref": "#resultTime"
+				}
+			}
+		},
+		"Sample": {
+			"$anchor": "Sample",
+			"@id": "http://www.w3.org/ns/sosa/Sample",
+			"title": "SOSA Sample",
+			"description": "A Sample is the result from an act of Sampling. Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made. Physical samples are sometimes known as 'specimens'. Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign. A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features.",
 			"type": "object",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "sosa:Sampler"
-                }
-            },
-            "additionalProperties": false
-        },
-        "Sampling": {
-            "$anchor": "Sampling",
-            "@id": "http://www.w3.org/ns/sosa/Sampling",
-            "title": "SOSA Sampling",
-            "description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples. E.g. digging a pit through a soil sequence; dividing a field site into quadrants; sieving a powder to separate the subset finer than 100-mesh.",
+			"required": [
+				"@type"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "sosa:Sample"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Sampler": {
+			"$anchor": "Sampler",
+			"@id": "http://www.w3.org/ns/sosa/Sampler",
+			"title": "SOSA Sampler",
+			"description": "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.",
 			"type": "object",
-            "required": [
-                "@type",
-                "hasFeatureOfInterest",
-                "result"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "sosa:Sampling"
-                },
-                "hasFeatureOfInterest": {
-                    "$ref": "#hasFeatureOfInterest"
-                },
-                "result": {
-                	"$ref": "#Sample"
-                }
-            },
-            "additionalProperties": false
-        },
-        "Sensor": {
-            "$anchor": "Sensor",
-            "@id": "http://www.w3.org/ns/sosa/Sensor",
-            "title": "SOSA Sensor",
-            "description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+			"required": [
+				"@type"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "sosa:Sampler"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Sampling": {
+			"$anchor": "Sampling",
+			"@id": "http://www.w3.org/ns/sosa/Sampling",
+			"title": "SOSA Sampling",
+			"description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples. E.g. digging a pit through a soil sequence; dividing a field site into quadrants; sieving a powder to separate the subset finer than 100-mesh.",
 			"type": "object",
-            "required": [
-                "@type"
-            ],
-            "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "sosa:Sensor"
-                },
-                "relatedActivity": {
-                	"$ref": "./properties.json#relatedActivity"
-                }
-            },
-            "additionalProperties": false
-        },
+			"required": [
+				"@type",
+				"hasFeatureOfInterest",
+				"result"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "sosa:Sampling"
+				},
+				"hasFeatureOfInterest": {
+					"$ref": "#hasFeatureOfInterest"
+				},
+				"result": {
+					"$ref": "#Sample"
+				}
+			},
+			"additionalProperties": false
+		},
+		"Sensor": {
+			"$anchor": "Sensor",
+			"@id": "http://www.w3.org/ns/sosa/Sensor",
+			"title": "SOSA Sensor",
+			"description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+			"type": "object",
+			"required": [
+				"@type"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "sosa:Sensor"
+				},
+				"relatedActivity": {
+					"$ref": "./properties.json#relatedActivity"
+				}
+			},
+			"additionalProperties": false
+		},
 		"actsOnProperty": {
 			"$anchor": "actsOnProperty",
 			"@id": "http://www.w3.org/ns/sosa/actsOnProperty",
@@ -342,5 +363,5 @@
 			],
 			"format": "date-time"
 		}
-    }
+	}
 }
