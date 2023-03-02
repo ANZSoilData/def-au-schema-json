@@ -1,5 +1,7 @@
 # ANSIS JSON(-LD) Schema
 
+> **Active development of ANSIS Schema is in the branch version-0.0. Switch to that branch for the**
+> **latest, but not necessarily stable, versions of the schema.**
 
 ## Overview
 
