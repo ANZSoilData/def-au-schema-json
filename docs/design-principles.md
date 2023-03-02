@@ -19,8 +19,8 @@ documents (if anything works better than doing the same in XMLSpy).
 The `domain` schema is made up of multiple sub-schema documents derived from the ANSIS ontology
 `domain.ttl` and supporting ontologies (e.g. SOSA and PROV). (Initial attempts as a single schema
 generated a document too large to be parsed by many editors):
-- `base.json`, `entities.json`, `enum.json`, `objects.json`, `properties.json`: ANSIS entity, object
-and property definitions with enumeration objects linking to ANSIS vocabularies.
+- `base.json`, `entities.json`, `enum.json`, `properties.json`: ANSIS entity and property
+definitions with enumeration objects linking to ANSIS vocabularies.
 - `geosparql.json`, `prov.json`, `qudt.json`, `sosa.json`: schema derived from external ontologies.
 - `context.json`: {experimental} JSON-LD context document (see Linked Data Alignment below).
 
@@ -47,7 +47,6 @@ was made to determine an environmental property's value. Values are captured as 
 property values should always be a JSON object with the required SOSA properties. To fit into the
 encoding pattern established for this schema some tweaks are required
 1. The `sosa:observedProperty` is the json key.
-1. `sosa:hasResult` will be presented as `@value` (for consistency with our use of JSON-LD keys).
 1. The required/optional SOSA properties will be set on a property-by-property basis. Quantitative
 lab results will have stricter metadata requirements than qualitative field observations.
 
