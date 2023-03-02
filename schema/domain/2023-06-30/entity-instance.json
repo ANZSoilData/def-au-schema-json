@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entity-collection.json",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entity-instance.json",
     "title": "ANSIS Soil Domain Entity Instance Schema",
     "description": "An instance of an entity - e.g. for service responses.",
     "$comment": "Split into a small schema as having this in the entities.json schema appears to overload parsers.",
