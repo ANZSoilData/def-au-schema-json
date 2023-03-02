@@ -1,0 +1,112 @@
+{
+    "$schema": "./entities.json",
+    "@type": "ansis:SoilSite",
+    "hasGeometry": [
+        {
+            "@value": "SRID=7844;LINESTRING(-42 24, -42 42)"
+        }
+    ],
+    "isSampleOf": {
+        "@id": "https://",
+        "@type": "ansis:SoilBody"
+    },
+    "depthFreeWater": {
+        "@value": 0,
+        "unit": {
+            "@value": "qudt:",
+            "nigel": null
+        }
+    },
+    "designSite": {
+        "@type": "ansis:SoilSite-design"
+    },
+    "designSurvey": {
+        "@type": "ansis:Survey-design"
+    },
+    "disturbance": {
+        "@value": "xx:a"
+    },
+    "drainage": {
+        "@value": "sp:soil-water-drainage-4",
+        "madeBySensor": null
+    },
+    "hasErosion": {
+        "@type": "ansis:Erosion"
+    },
+    "hasLandCover": {
+        "@type": "ansis:LandCover"
+    },
+    "hasLandManagement": {
+        "@type": "ansis:LandManagement"
+    },
+    "hasLandSurface": {
+        "@type": "ansis:LandSurface"
+    },
+    "hasLandUse": [
+        {
+            "@type": "ansis:LandUse"
+        }
+    ],
+    "hasLandform": {
+        "@type": "ansis:Landform"
+    },
+    "hasMicrorelief": {
+        "@type": "ansis:Microrelief"
+    },
+    "hasOutcrop": {
+        "@type": "ansis:Outcrop"
+    },
+    "heightDrainage": {
+        "@value": 42,
+        "unit": {
+            "@value": "qudt:cm"
+        }
+    },
+    "locationInElement": {
+        "@value": "xx:a"
+    },
+    "locationInToposequence": {
+        "@value":"xx:b"
+    },
+    "purpose": {
+        "@type": "ansis:Profile-purpose"
+    },
+    "relatedLandSurveySite": {
+        "@id": "https://",
+        "@type": "ansis:LandsurveySite"
+    },
+    "relatedProfile": {
+        "@id": "https://",
+        "@type": "ansis:SoilProfile"
+    },
+    "relatedSite": {
+        "@id": "https://",
+        "@type": "ansis:SoilSite"
+    },
+    "relatedSoilBody": {
+        "@id": "https://",
+        "@type": "ansis:SoilBody",
+        "classification": {
+            "@type": "ansis:SoilClassification",
+            "classificationFamilyA1texture": "xx:a",
+            "classificationFamilyA1thickness": "xx:a",
+            "classificationFamilyBtexture": "xx:a",
+            "classificationFamilyDepth": "xx:a",
+            "classificationFamilyGravel": "xx:a",
+            "classificationGreatGroup": "xx:a",
+            "classificationOrder": "xx:a",
+            "classificationSubGroup": "xx:a",
+            "classificationSubOrder": "xx:a",
+            "usedProcedure": {
+                "@id": "https://"
+            }
+        }
+    },
+    "relatedSoilSurface": {
+        "@id": "https://",
+        "@type": "ansis:SoilSurface"
+    },
+    "type": {
+
+    }
+}

@@ -4,6 +4,14 @@ Example JSON objects that conform to the ANSIS JSON Schema defined [here](../sch
 
 ## Contents
 
-| File                                 | Description                                                                              |
-| ------------------------------------ | ---------------------------------------------------------------------------------------- |
-| [placeholder.json](placeholder.json) | A placeholder for real examples. One day this may grow up to be a real `ansis:SoilSite`. |
+| File                                   | Description                                                               |
+| -------------------------------------- | --------------------------------------------------------------------------|
+| [soil-site.json](soil-site.json)       | An example of an `ansis:SoilSite`. Contains links to other example files. |
+| [soil-profile.json](soil-profile.json) | An example of an `ansis:SoilProfile`.                                     |
+
+## Notes
+
+- `@id` values in these examples are URLs linking to these files, rather than true
+Linked Data URIs (see 'Linked Data Alignment' in the [design principles](../docs/design-principles.md)).
+This is for convenience so that examples can be linked together without the overhead of setting up
+sLinked Data URIs and redirects.

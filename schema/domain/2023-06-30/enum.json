@@ -1,0 +1,104 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/enum.json",
+    "title": "ANSIS Soil Domain Enumerations",
+    "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
+    "definitions": {
+        "ToBeDefined": {
+            "$anchor": "tobedefined",
+            "title": "To Be Defined",
+            "description": "Placeholder for enumerations yet to be created.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "xx:a",
+					"description": "value a"
+				},
+				{
+					"const": "xx:b",
+					"description": "value b"
+				}
+			]
+		},
+		"ansisEntities": {
+            "$anchor": "ansis-entities",
+            "title": "ANSIS Entitiy Types",
+            "description": "Core ANSIS entities (features) served by the ANSIS system.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ansis:LandSurveySite",
+					"description": "Land Survey Site"
+				},
+				{
+					"const": "ansis:SoilBody",
+					"description": "Soil Body"
+				},
+				{
+					"const": "ansis:SoilHorizon",
+					"description": "Soil Horizon"
+				},
+				{
+					"const": "ansis:SoilLayer",
+					"description": "Soil Layer"
+				},
+				{
+					"const": "ansis:SoilProfile",
+					"description": "Soil Profile"
+				},
+				{
+					"const": "ansis:Soilample",
+					"description": "Soil Sample"
+				},
+				{
+					"const": "ansis:SoilSite",
+					"description": "Soil Site"
+				},
+				{
+					"const": "ansis:SoilSurface",
+					"description": "Soil Surface"
+				},
+				{
+					"const": "ansis:Substrate",
+					"description": "Substrate"
+				},
+				{
+					"const": "ansis:Treatment",
+					"description": "Treatment"
+				}
+			]
+		},
+        "SoilWaterDrainage": {
+            "$anchor": "soilwaterdrainage",
+            "title": "Soil Water Drainage",
+            "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:soil-water-drainage-1",
+					"description": "very poorly drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-2",
+					"description": "poorly drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-3",
+					"description": "imperfectly drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-4",
+					"description": "moderately well drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-5",
+					"description": "well drained"
+				},
+				{
+					"const": "sp:soil-water-drainage-6",
+					"description": "rapidly drained"
+				}
+			]
+		}
+    }
+}

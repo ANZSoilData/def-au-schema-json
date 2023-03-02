@@ -30,11 +30,11 @@ The principles guiding the design of the schema are documented [here](./docs/des
 
 ## Contributing
 
-Please raise any issues in MS Teams the ANSIS *1.3.2 Data Standards Project* team chat.
+Please raise any issues in MS Teams in the ANSIS *1.3.2 Data Standards Project* team chat.
 
 Non-ANSIS project members can contact [Peter Wilson](mailto:peter.wilson@csiro.au).
 
-When providing feed back or raising issues, please note the relationship between the JSON schema
+When providing feedback or raising issues, please note the relationship between the JSON schema
 and the domain ontology:
 1. Contributions concerning the definitions of entities, properties and enumerations (vocabularies)
 relate to the domain ontology and should be made in the context of the domain ontology.

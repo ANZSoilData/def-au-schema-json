@@ -1,0 +1,11 @@
+{
+    "@context": {
+        "ansis": "https://anzsoil.org/def/au/domain/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sp": "http://anzsoil.org/def/au/asls/soil-profile/",
+        "geo": "http://www.opengis.net/ont/geosparql#",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "qudt": "http://qudt.org/schema/qudt/",
+        "prov": "http://www.w3.org/ns/prov#"
+    }
+}

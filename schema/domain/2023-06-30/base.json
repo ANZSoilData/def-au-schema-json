@@ -1,0 +1,67 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/base.json",
+    "title": "ANSIS JSON Base Schema",
+    "description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
+    "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
+    "$defs": {
+        "$schema": {
+            "$anchor": "js-schema",
+            "title": "JSON $schema",
+            "$comment": "The JSON schema for the object. For use when \"additionalProperties\": false and therefore a property names $schema reference is a Bad Thing.",
+            "type": "string"
+        },
+        "@id": {
+            "$anchor": "ld-id",
+            "title": "JSON-LD Identifier",
+            "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
+            "$comment": "After: https://www.w3.org/TR/json-ld/#node-identifiers",
+            "type": "string",
+            "format": "uri"
+        },
+        "@type": {
+            "$anchor": "ld-type",
+            "title": "JSON-LD Type",
+            "description": "A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model.",
+            "$comment": "After: https://www.w3.org/TR/json-ld/#specifying-the-type",
+            "type": "string"
+        },
+        "@context": {
+            "$anchor": "ld-context",
+            "title": "JSON-LD Context",
+            "description": "A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI.",
+            "$comment": "After: https://www.w3.org/TR/json-ld/#the-context",
+            "type": "string",
+            "format": "uri",
+            "const": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/context.json"
+        },
+        "label": {
+            "$anchor": "label",
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "title": "RDF Schema Label",
+            "description": "A human-readable name for the object.",
+            "type": "string"
+        },
+        "Entity_Link": {
+            "$anchor": "Entity_Link",
+            "title": "ANSIS Entity Link",
+            "description": "A simple object supporting a link (e.g. a hyperlink) to another entity.",
+			"type": "object",
+            "required": [
+                "@id"
+            ],
+            "properties": {
+                "@id": {
+                    "$ref": "#ld-id"
+                },
+                "@type": {
+                    "$ref": "#ld-type"
+                },
+                "label": {
+                    "$ref": "#label"
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}
