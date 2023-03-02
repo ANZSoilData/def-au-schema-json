@@ -120,8 +120,8 @@
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Project"
                 },
-                "hasLeader": {
-                    "$ref": "#Person"
+                "label": {
+                    "$ref": "./base.json#label"
                 },
                 "hasLeader": {
                     "$ref": "#Person"
