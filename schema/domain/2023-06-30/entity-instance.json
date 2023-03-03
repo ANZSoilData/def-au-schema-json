@@ -35,6 +35,9 @@
         },
         {
             "$ref": "./entities.json#Treatment"
+        },
+        {
+            "$ref": "./sosa.json#Observation"
         }
     ]
 }
