@@ -20,12 +20,12 @@ JSON objects.
 > inferencing. The JSON schema and RDF approaches should therefore be considered complimentary.
 
 Several collections of schema will be provided:
-- The `core` schema represents the full ANSIS information model as structured data (i.e. related
+- The `domain` schema represents the full ANSIS information model as structured data (i.e. related
 complex objects). ANSIS data providers should refer to this schema for guidance on what data ANSIS
 may require for all of its use cases.
-- Additional 'application schema' will define subsets of the `core` schema for particular use cases.
-These may denormalise the data for certain data types - e.g. GIS Layers or spreadsheets. ANSIS data
-providers should use these schema for guidance on supporting a specific ANSIS use case.
+- Additional 'application schema' will define subsets of the `domain` schema for particular use
+cases. These may denormalise the data for certain data types - e.g. GIS Layers or spreadsheets.
+ANSIS data providers should use these schema for guidance on supporting a specific ANSIS use case.
 
 The principles guiding the design of the schema are documented [here](./docs/design-principles.md).
 
