@@ -278,18 +278,18 @@
 			],
 			"$ref": "./base.json#Entity_Link"
 		},
-		"hasResult": {
-			"$anchor": "hasResult",
-			"@id": "http://www.w3.org/ns/sosa/hasResult",
-			"title": "has result",
-			"description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
-			"$comment": "Sticking to a QUDT Quantity Value for this initial implementation.",
-			"type": [
-				"object",
-				"null"
-			],
-			"$ref": "./qudt.json#QuantityValue"
-		},
+        "hasResult": {
+            "$anchor": "hasResult",
+            "@id": "http://www.w3.org/ns/sosa/hasResult",
+            "title": "has result",
+            "description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
+            "$comment": "Sticking to a QUDT Quantity Value for this initial implementation.",
+            "type": [
+                "object",
+                "null"
+            ],
+            "$ref": "./qudt.json#QuantityValue"
+        },
 		"hasSample": {
 			"$anchor": "hasSample",
 			"@id": "http://www.w3.org/ns/sosa/hasSample",
@@ -300,7 +300,7 @@
 				"object",
 				"null"
 			],
-			"$ref": "./qudt.json#QuantityValue"
+			"$ref": "./base.json#Entity_Link"
 		},
 		"madeBySensor": {
 			"$anchor": "madeBySensor",
@@ -374,7 +374,7 @@
 			"@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
 			"title": "Quality of Observation",
 			"description": "The adjudged quality of the Result.",
-			"$comment": "placholder",
+			"$comment": "placeholder",
             "type": "null"
 		}
 	}
