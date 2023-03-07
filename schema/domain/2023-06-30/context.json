@@ -5,6 +5,7 @@
         "sp": "http://anzsoil.org/def/au/asls/soil-profile/",
         "geo": "http://www.opengis.net/ont/geosparql#",
         "sosa": "http://www.w3.org/ns/sosa/",
+        "ssn-system": "http://www.w3.org/ns/ssn/systems/",
         "qudt": "http://qudt.org/schema/qudt/",
         "prov": "http://www.w3.org/ns/prov#"
     }

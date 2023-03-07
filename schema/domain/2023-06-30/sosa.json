@@ -83,6 +83,9 @@
 				"hasResult": {
 					"$ref": "#hasResult"
 				},
+				"qualityOfObservation": {
+					"$ref": "#qualityOfObservation"
+				},
 				"usedProcedure": {
 					"$ref": "#usedProcedure"
 				},
@@ -107,6 +110,9 @@
 			"description": "SOSA properties for an observable property value. Used when the observedProperty is a key in a JSON object and the feature of interest is the object.",
 			"type": "object",
 			"properties": {
+				"qualityOfObservation": {
+					"$ref": "#qualityOfObservation"
+				},
 				"usedProcedure": {
 					"$ref": "#usedProcedure"
 				},
@@ -362,6 +368,14 @@
 				"null"
 			],
 			"format": "date-time"
+		},
+		"qualityOfObservation": {
+			"$anchor": "qualityOfObservation",
+			"@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+			"title": "Quality of Observation",
+			"description": "The adjudged quality of the Result.",
+			"$comment": "placholder",
+            "type": "null"
 		}
 	}
 }
