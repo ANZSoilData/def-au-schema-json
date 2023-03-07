@@ -38,7 +38,13 @@
 			},
 			{
 				"$ref": "./sosa.json#Observation"
-			}
+			},
+			{
+				"$ref": "./sosa.json#Sample"
+			},
+            {
+                "$ref": "./sosa.json#Sampling"
+            }
 		]
 	}
 }
