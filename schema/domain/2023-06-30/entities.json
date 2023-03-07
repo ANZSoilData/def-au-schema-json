@@ -487,6 +487,9 @@
 				"type": {
 					"$ref": "./properties.json#ansis-type"
 				},
+				"hasGeometry": {
+					"$ref": "./geosparql.json#hasGeometry"
+				},
 				"depthLower": {
 					"$ref": "./properties.json#depth-upper"
 				},

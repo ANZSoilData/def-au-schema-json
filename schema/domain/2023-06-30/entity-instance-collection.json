@@ -35,7 +35,16 @@
 			},
 			{
 				"$ref": "./entities.json#Treatment"
-			}
+			},
+			{
+				"$ref": "./sosa.json#Observation"
+			},
+			{
+				"$ref": "./sosa.json#Sample"
+			},
+            {
+                "$ref": "./sosa.json#Sampling"
+            }
 		]
 	}
 }
