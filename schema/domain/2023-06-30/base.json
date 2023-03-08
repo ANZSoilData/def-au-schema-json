@@ -42,6 +42,13 @@
             "description": "A human-readable name for the object.",
             "type": "string"
         },
+        "name": {
+            "$anchor": "name",
+            "@id": "http://xmlns.com/foaf/0.1/#term_name",
+            "title": "FOAF Name",
+            "description": "A name for some thing.",
+            "type": "string"
+        },
         "Entity_Link": {
             "$anchor": "Entity_Link",
             "title": "ANSIS Entity Link",

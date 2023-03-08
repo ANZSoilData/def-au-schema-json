@@ -41,6 +41,38 @@
                 },
                 "relatedActivity": {
                 	"$ref": "./properties.json#relatedActivity"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
+                }
+            },
+            "additionalProperties": false
+        },
+        "Organization": {
+            "$anchor": "Organization",
+            "@id": "http://www.w3.org/ns/prov#Organization",
+            "title": "PROV Organization",
+            "description": "An organization is a social or legal institution such as a company, society, etc..",
+			"type": "object",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
                 }
             },
             "additionalProperties": false
@@ -67,6 +99,9 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
                 }
             },
             "additionalProperties": false
@@ -92,7 +127,10 @@
                 },
                 "@type": {
                     "$ref": "./base.json#ld-type",
-                    "const": "prov:Person"
+                    "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
                 }
             },
             "additionalProperties": false
@@ -120,17 +158,20 @@
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Project"
                 },
-                "label": {
-                    "$ref": "./base.json#label"
-                },
                 "hasLeader": {
-                    "$ref": "#Person"
+                    "$ref": "#Organization"
                 },
                 "hasSponsor": {
                 	"type": "array",
                 	"items": {
-						"$ref": "#Agent"
+						"$ref": "#Organization"
                 	}
+                },
+                "name": {
+                    "$ref": "./base.json#name"
+                },
+                "label": {
+                    "$ref": "./base.json#label"
                 }
             },
             "additionalProperties": false
