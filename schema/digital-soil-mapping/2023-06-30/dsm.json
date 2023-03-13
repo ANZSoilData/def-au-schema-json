@@ -1,0 +1,109 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm.json",
+    "title": "ANSIS Digital Soil Mapping Instance Schema",
+    "description": "ANSIS Soil Samples for Digital Soil Mapping.",
+    "type": "array",
+	"items": {
+		"$ref": "#SoilSample"
+	},
+    "definitions": {
+        "SoilSample": {
+			"$anchor": "SoilSample",
+			"@id": "https://anzsoil.org/def/au/domain/SoilSample",
+			"title": "ANSIS Soil Sample",
+			"description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
+			"$comment": "",
+			"type": "object",
+			"required": [
+				"@type",
+				"hasGeometry",
+				"depthLower",
+				"depthUpper",
+				"hasObservation"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "../../domain/2023-06-30/base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "../../domain/2023-06-30/base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "../../domain/2023-06-30/base.json#ld-id"
+				},
+				"@type": {
+					"type": "string",
+					"const": "ansis:SoilSample"
+				},
+				"hasGeometry": {
+					"$ref": "../../domain/2023-06-30/geosparql.json#hasGeometry",
+					"$comment": "Use X,Y values instead of EWKT?"
+				},
+				"depthLower": {
+					"$ref": "../../domain/2023-06-30/properties.json#depth-upper"
+				},
+				"depthUpper": {
+					"$ref": "../../domain/2023-06-30/properties.json#depth-lower"
+				},
+				"hasObservation": {
+					"type": "array",
+					"items": {
+						"$ref": "#Observation"
+					}
+				},
+				"component": {
+					"$ref": "../../domain/2023-06-30/properties.json#component"
+				},
+				"isSampleOf": {
+					"$ref": "../../domain/2023-06-30/sosa.json#isSampleOf"
+				},
+				"relatedProfile": {
+					"type": "array",
+					"items": {
+						"$ref": "../../domain/2023-06-30/properties.json#relatedProfile"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"Observation": {
+			"$anchor": "Observation",
+			"@id": "http://www.w3.org/ns/sosa/Observation",
+			"title": "SOSA Observation",
+			"description": "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
+			"$comment": "",
+			"type": "object",
+			"required": [
+				"@type",
+				"observedProperty",
+				"hasResult"
+			],
+			"properties": {
+				"@id": {
+					"$ref": "../../domain/2023-06-30/base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "../../domain/2023-06-30/base.json#ld-type",
+					"const": "sosa:Observation"
+				},
+				"observedProperty": {
+					"$ref": "../../domain/2023-06-30/sosa.json#observedProperty"
+				},
+				"hasResult": {
+					"$ref": "../../domain/2023-06-30/sosa.json#hasResult"
+				},
+				"qualityOfObservation": {
+					"$ref": "../../domain/2023-06-30/sosa.json#qualityOfObservation"
+				},
+				"usedProcedure": {
+					"$ref": "../../domain/2023-06-30/sosa.json#usedProcedure"
+				},
+				"relatedActivity": {
+					"$ref": "../../domain/2023-06-30/properties.json#relatedActivity"
+				}
+			},
+			"additionalProperties": false
+		}
+    }
+}
