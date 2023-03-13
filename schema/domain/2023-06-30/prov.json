@@ -6,6 +6,9 @@
     "type": "object",
     "oneOf": [
         {
+            "$ref": "#Organization"
+        },
+        {
             "$ref": "#Activity"
         },
         {
@@ -20,7 +23,7 @@
             "$anchor": "Activity",
             "@id": "http://www.w3.org/ns/prov#Activity",
             "title": "PROV Activity",
-            "description": "Undefined.",
+            "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
 			"type": "object",
             "required": [
                 "@type"
@@ -52,7 +55,7 @@
             "$anchor": "Organization",
             "@id": "http://www.w3.org/ns/prov#Organization",
             "title": "PROV Organization",
-            "description": "An organization is a social or legal institution such as a company, society, etc..",
+            "description": "An organization is a social or legal institution such as a company, society, etc.",
 			"type": "object",
             "required": [
                 "@type"
@@ -81,7 +84,7 @@
             "$anchor": "Agent",
             "@id": "http://www.w3.org/ns/prov#Agent",
             "title": "PROV Agent",
-            "description": "Undefined.",
+            "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
 			"type": "object",
             "required": [
                 "@type"
@@ -110,7 +113,7 @@
             "$anchor": "Person",
             "@id": "http://www.w3.org/ns/prov#Person",
             "title": "PROV Person",
-            "description": "Undefined.",
+            "description": "Person agents are people.",
 			"type": "object",
             "required": [
                 "@type"
@@ -137,9 +140,9 @@
         },
         "Project": {
             "$anchor": "Project",
-            "@id": "http://www.w3.org/ns/prov#Project",
+            "@id": " https://linked.data.gov.au/def/project#Project",
             "title": "PROV Project",
-            "description": "Undefined.",
+            "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
 			"type": "object",
             "required": [
                 "@type"
