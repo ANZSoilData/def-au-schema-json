@@ -5,148 +5,8 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 
 > Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.
 
-## Entities
+## Core Entities
 
-### ANSIS Land Survey Site - `ansis:LandSurveySite`
-
-A Site established to make observations of landscape entities.
-
-| Property | Value Count | Type | Description |
-| -------- | ----------- | ---- | ----------- |
-| $schema | 0..1 | string |  |
-| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
-| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
-| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| hasGeometry | 1..* | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
-| hasErosion | 0..1 | object | link to description of erosion |
-| hasLandCover | 0..1 | object | link to description of land cover |
-| hasLandManagement | 0..1 | object | link to description of land management |
-| hasLandSurface | 0..1 | object | link to description of land surface |
-| hasLandUse | 0..* | object | link to description of land use |
-| hasLandform | 0..1 | object | link to description of landform |
-| hasOutcrop | 0..1 | object | link to description of rock outcrop at this entity |
-| relatedLandsurveySite | 0..1 | object | link to a land survey site related to this context |
-### ANSIS Soil Body - `ansis:SoilBody`
-
-Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.
-
-| Property | Value Count | Type | Description |
-| -------- | ----------- | ---- | ----------- |
-| $schema | 0..1 | string |  |
-| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
-| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
-| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| classification | 0..* | object | classification of the soil body or profile |
-| hasGeometry | 0..* | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
-| hasLandManagement | 0..1 | object | link to description of land management |
-| hasLandSurface | 0..1 | object | link to description of land surface |
-| hasLandUse | 0..* | object | link to description of land use |
-| hasLandform | 0..1 | object | link to description of landform |
-| hasMicrorelief | 0..1 | object | link to description of microrelief at the site |
-| hasSubstrate | 0..1 | object | link to description of substrate |
-| relatedHorizon | 0..1 | object | related soil horizon within a soil body or sample, or associated with a contact |
-| relatedLayer | 0..* | object | related soil layer within a soil body or profile |
-| relatedSample | 0..1 | object | link to a sample related to this context |
-| relatedSite | 0..1 | object | link to a soil site related to this context |
-| relatedSoilSurface | 0..1 | object | soil surface of this entity |
-### ANSIS Soil Horizon - `ansis:SoilHorizon`
-
-Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.
-
-| Property | Value Count | Type | Description |
-| -------- | ----------- | ---- | ----------- |
-| $schema | 0..1 | string |  |
-| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
-| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
-| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| designation | 1..1 | object | designation of soil horizon with the sequence composing the Profile or Soil Body |
-| depthUpper | 1..1 | object | depth from local surface to the top of the element |
-| depthLower | 1..1 | object | depth from local surface to the base of the element |
-| permeability | 0..1 | object | rate of flow of liquid through the material |
-| texture | 0..* | object | material texture, in terms of particle size distribution and component materials |
-| colour | 0..* | object | link to description of colour |
-| hasCoarseFragments | 0..* | object | link to description of coarse fragments |
-| hasCracks | 0..* | object | link to description of cracks |
-| hasCutans | 0..* | object | link to description of cutans |
-| hasMottles | 0..* | object | link to description of mottles and other colour patterns |
-| hasPans | 0..* | object | link to description of pans |
-| hasPores | 0..* | object | link to description of macropores |
-| hasRoots | 0..* | object | link to description of roots |
-| hasSegregations | 0..* | object | link to description of segregations |
-| hasStrength | 0..1 | object | internal arrangement of elements of the material or entity |
-| relatedSample | 0..* | object | link to a sample related to this context |
-| relatedSoilBody | 1..1 | object | link to a soil body related to this context |
-| chemistry | 0..1 | array |  |
-| physical | 0..1 | array |  |
-| biological | 0..1 | array |  |
-### ANSIS Soil Layer - `ansis:SoilLayer`
-
-Region within a soil body usually observed as a specified depth interval within a profile.
-
-| Property | Value Count | Type | Description |
-| -------- | ----------- | ---- | ----------- |
-| $schema | 0..1 | string |  |
-| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
-| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
-| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| depthUpper | 1..1 | object | depth from local surface to the top of the element |
-| depthLower | 1..1 | object | depth from local surface to the base of the element |
-| permeability | 0..1 | object | rate of flow of liquid through the material |
-| texture | 0..* | object | material texture, in terms of particle size distribution and component materials |
-| colour | 0..* | object | link to description of colour |
-| hasCoarseFragments | 0..* | object | link to description of coarse fragments |
-| hasCracks | 0..* | object | link to description of cracks |
-| hasCutans | 0..* | object | link to description of cutans |
-| hasMottles | 0..* | object | link to description of mottles and other colour patterns |
-| hasPans | 0..* | object | link to description of pans |
-| hasPores | 0..* | object | link to description of macropores |
-| hasRoots | 0..* | object | link to description of roots |
-| hasSegregations | 0..* | object | link to description of segregations |
-| hasStrength | 0..1 | object | internal arrangement of elements of the material or entity |
-| relatedSample | 0..* | object | link to a sample related to this context |
-| relatedSoilBody | 1..1 | object | link to a soil body related to this context |
-| chemistry | 0..1 | array |  |
-| physical | 0..1 | array |  |
-| biological | 0..1 | array |  |
-### ANSIS Soil Profile - `ansis:SoilProfile`
-
-A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.
-
-| Property | Value Count | Type | Description |
-| -------- | ----------- | ---- | ----------- |
-| $schema | 0..1 | string |  |
-| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
-| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
-| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| depth | 1..1 | object |  |
-| drainage | 0..1 | object | Drainage of site or profile. |
-| procedure | 1..1 | object; null | Relation between an Observation and the Sensor which made the Observations. |
-| purpose | 0..1 | object | purpose of or reason for activity |
-| hasGeometry | 1..1 | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
-| hasRoots | 0..1 | object | link to description of roots |
-| hasSubstrate | 0..1 | object | link to description of substrate |
-| relatedHorizon | 0..1 | object | related soil horizon within a soil body or sample, or associated with a contact |
-| relatedLayer | 0..* | object | related soil layer within a soil body or profile |
-| relatedSample | 0..1 | object | link to a sample related to this context |
-| relatedSite | 1..1 | object | link to a soil site related to this context |
-| relatedSoilSurface | 0..1 | object | soil surface of this entity |
-### ANSIS Soil Sample - `ansis:SoilSample`
-
-Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.
-
-| Property | Value Count | Type | Description |
-| -------- | ----------- | ---- | ----------- |
-| $schema | 0..1 | string |  |
-| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
-| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
-| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| type | 0..1 | object | type of ansis soil entity |
-| hasGeometry | 0..1 | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
-| depthLower | 0..1 | object | depth from local surface to the top of the element |
-| depthUpper | 0..1 | object | depth from local surface to the base of the element |
-| component | 0..1 | object | type of component element |
-| isSampleOf | 1..1 | object; null | template |
-| relatedProfile | 1..* | object | Link to a soil profile related to this context. |
 ### ANSIS Soil Site - `ansis:SoilSite`
 
 A site where samples, observations, and treatments of soil are carried out.
@@ -183,6 +43,146 @@ A site where samples, observations, and treatments of soil are carried out.
 | relatedSoilBody | 0..1 | object | link to a soil body related to this context |
 | relatedSoilSurface | 0..1 | object | soil surface of this entity |
 | type | 0..1 | object | type of ansis soil entity |
+### ANSIS Soil Profile - `ansis:SoilProfile`
+
+A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.
+
+| Property | Value Count | Type | Description |
+| -------- | ----------- | ---- | ----------- |
+| $schema | 0..1 | string |  |
+| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
+| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
+| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
+| depth | 1..1 | object |  |
+| drainage | 0..1 | object | Drainage of site or profile. |
+| procedure | 1..1 | object; null | Relation between an Observation and the Sensor which made the Observations. |
+| purpose | 0..1 | object | purpose of or reason for activity |
+| hasGeometry | 1..1 | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasRoots | 0..1 | object | link to description of roots |
+| hasSubstrate | 0..1 | object | link to description of substrate |
+| relatedHorizon | 0..1 | object | related soil horizon within a soil body or sample, or associated with a contact |
+| relatedLayer | 0..* | object | related soil layer within a soil body or profile |
+| relatedSample | 0..1 | object | link to a sample related to this context |
+| relatedSite | 1..1 | object | link to a soil site related to this context |
+| relatedSoilSurface | 0..1 | object | soil surface of this entity |
+### ANSIS Soil Body - `ansis:SoilBody`
+
+Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.
+
+| Property | Value Count | Type | Description |
+| -------- | ----------- | ---- | ----------- |
+| $schema | 0..1 | string |  |
+| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
+| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
+| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
+| classification | 0..* | object | classification of the soil body or profile |
+| hasGeometry | 0..* | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasLandManagement | 0..1 | object | link to description of land management |
+| hasLandSurface | 0..1 | object | link to description of land surface |
+| hasLandUse | 0..* | object | link to description of land use |
+| hasLandform | 0..1 | object | link to description of landform |
+| hasMicrorelief | 0..1 | object | link to description of microrelief at the site |
+| hasSubstrate | 0..1 | object | link to description of substrate |
+| relatedHorizon | 0..1 | object | related soil horizon within a soil body or sample, or associated with a contact |
+| relatedLayer | 0..* | object | related soil layer within a soil body or profile |
+| relatedSample | 0..1 | object | link to a sample related to this context |
+| relatedSite | 0..1 | object | link to a soil site related to this context |
+| relatedSoilSurface | 0..1 | object | soil surface of this entity |
+### ANSIS Soil Layer - `ansis:SoilLayer`
+
+Region within a soil body usually observed as a specified depth interval within a profile.
+
+| Property | Value Count | Type | Description |
+| -------- | ----------- | ---- | ----------- |
+| $schema | 0..1 | string |  |
+| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
+| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
+| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
+| depthUpper | 1..1 | object | depth from local surface to the top of the element |
+| depthLower | 1..1 | object | depth from local surface to the base of the element |
+| permeability | 0..1 | object | rate of flow of liquid through the material |
+| texture | 0..* | object | material texture, in terms of particle size distribution and component materials |
+| colour | 0..* | object | link to description of colour |
+| hasCoarseFragments | 0..* | object | link to description of coarse fragments |
+| hasCracks | 0..* | object | link to description of cracks |
+| hasCutans | 0..* | object | link to description of cutans |
+| hasMottles | 0..* | object | link to description of mottles and other colour patterns |
+| hasPans | 0..* | object | link to description of pans |
+| hasPores | 0..* | object | link to description of macropores |
+| hasRoots | 0..* | object | link to description of roots |
+| hasSegregations | 0..* | object | link to description of segregations |
+| hasStrength | 0..1 | object | internal arrangement of elements of the material or entity |
+| relatedSample | 0..* | object | link to a sample related to this context |
+| relatedSoilBody | 1..1 | object | link to a soil body related to this context |
+| chemistry | 0..1 | array |  |
+| physical | 0..1 | array |  |
+| biological | 0..1 | array |  |
+### ANSIS Soil Horizon - `ansis:SoilHorizon`
+
+Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.
+
+| Property | Value Count | Type | Description |
+| -------- | ----------- | ---- | ----------- |
+| $schema | 0..1 | string |  |
+| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
+| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
+| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
+| designation | 1..1 | object | designation of soil horizon with the sequence composing the Profile or Soil Body |
+| depthUpper | 1..1 | object | depth from local surface to the top of the element |
+| depthLower | 1..1 | object | depth from local surface to the base of the element |
+| permeability | 0..1 | object | rate of flow of liquid through the material |
+| texture | 0..* | object | material texture, in terms of particle size distribution and component materials |
+| colour | 0..* | object | link to description of colour |
+| hasCoarseFragments | 0..* | object | link to description of coarse fragments |
+| hasCracks | 0..* | object | link to description of cracks |
+| hasCutans | 0..* | object | link to description of cutans |
+| hasMottles | 0..* | object | link to description of mottles and other colour patterns |
+| hasPans | 0..* | object | link to description of pans |
+| hasPores | 0..* | object | link to description of macropores |
+| hasRoots | 0..* | object | link to description of roots |
+| hasSegregations | 0..* | object | link to description of segregations |
+| hasStrength | 0..1 | object | internal arrangement of elements of the material or entity |
+| relatedSample | 0..* | object | link to a sample related to this context |
+| relatedSoilBody | 1..1 | object | link to a soil body related to this context |
+| chemistry | 0..1 | array |  |
+| physical | 0..1 | array |  |
+| biological | 0..1 | array |  |
+### ANSIS Soil Sample - `ansis:SoilSample`
+
+Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.
+
+| Property | Value Count | Type | Description |
+| -------- | ----------- | ---- | ----------- |
+| $schema | 0..1 | string |  |
+| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
+| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
+| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
+| type | 0..1 | object | type of ansis soil entity |
+| hasGeometry | 0..1 | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| depthLower | 0..1 | object | depth from local surface to the top of the element |
+| depthUpper | 0..1 | object | depth from local surface to the base of the element |
+| component | 0..1 | object | type of component element |
+| isSampleOf | 1..1 | object; null | template |
+| relatedProfile | 1..* | object | Link to a soil profile related to this context. |
+### ANSIS Land Survey Site - `ansis:LandSurveySite`
+
+A Site established to make observations of landscape entities.
+
+| Property | Value Count | Type | Description |
+| -------- | ----------- | ---- | ----------- |
+| $schema | 0..1 | string |  |
+| @context | 0..1 | string | A link to a JSON-LD Context document that maps property JSON keywords onto OWL/RDF definitions and namespaces (e.g. ansis) onto their base URI. |
+| @id | 0..1 | string | An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource. |
+| @type | 1..1 | string | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
+| hasGeometry | 1..* | object | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasErosion | 0..1 | object | link to description of erosion |
+| hasLandCover | 0..1 | object | link to description of land cover |
+| hasLandManagement | 0..1 | object | link to description of land management |
+| hasLandSurface | 0..1 | object | link to description of land surface |
+| hasLandUse | 0..* | object | link to description of land use |
+| hasLandform | 0..1 | object | link to description of landform |
+| hasOutcrop | 0..1 | object | link to description of rock outcrop at this entity |
+| relatedLandsurveySite | 0..1 | object | link to a land survey site related to this context |
 ### ANSIS Soil Surface - `ansis:SoilSurface`
 
 The surface of the soil body.
@@ -226,6 +226,8 @@ Intervention or treatment. Type of sosa:Actuation.
 | hasFeatureOfInterest | 0..1 | object; null | A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled. |
 | phenomenonTime | 0..1 | string; null | The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time]. |
 | relatedActivity | 0..* | object | link to an activity related to this context |
+## Other Entities
+
 ### ANSIS Coarse Fragments - `ansis:CoarseFragments`
 
 Undefined.
