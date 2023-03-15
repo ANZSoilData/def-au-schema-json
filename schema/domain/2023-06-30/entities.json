@@ -5,15 +5,16 @@
 	"description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
 	"$comment": "Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.",
 	"definitions": {
-		"LandSurveySite": {
-			"$anchor": "LandSurveySite",
-			"@id": "https://anzsoil.org/def/au/domain/LandsurveySite",
-			"title": "ANSIS Land Survey Site",
-			"description": "A Site established to make observations of landscape entities.",
+		"SoilSite": {
+			"$anchor": "SoilSite",
+			"@id": "https://anzsoil.org/def/au/domain/SoilSite",
+			"title": "ANSIS Soil Site",
+			"description": "A site where samples, observations, and treatments of soil are carried out.",
 			"type": "object",
 			"required": [
 				"@type",
-				"hasGeometry"
+				"hasGeometry",
+				"relatedProject"
 			],
 			"properties": {
 				"$schema": {
@@ -27,13 +28,31 @@
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
-					"const": "ansis:LandsurveySite"
+					"const": "ansis:SoilSite"
 				},
 				"hasGeometry": {
 					"type": "array",
 					"items": {
 						"$ref": "./geosparql.json#hasGeometry"
 					}
+				},
+				"isSampleOf": {
+					"$ref": "./sosa.json#isSampleOf"
+				},
+				"depthFreeWater": {
+					"$ref": "./properties.json#depth-free-water"
+				},
+				"designSite": {
+					"$ref": "./properties.json#design-site"
+				},
+				"designSurvey": {
+					"$ref": "./properties.json#design-survey"
+				},
+				"disturbance": {
+					"$ref": "./properties.json#disturbance"
+				},
+				"drainage": {
+					"$ref": "./properties.json#drainage"
 				},
 				"hasErosion": {
 					"$ref": "./properties.json#hasErosion"
@@ -56,11 +75,119 @@
 				"hasLandform": {
 					"$ref": "./properties.json#hasLandform"
 				},
+				"hasMicrorelief": {
+					"$ref": "./properties.json#hasMicrorelief"
+				},
 				"hasOutcrop": {
 					"$ref": "./properties.json#hasOutcrop"
 				},
-				"relatedLandsurveySite": {
+				"heightDrainage": {
+					"$ref": "./properties.json#height-drainage"
+				},
+				"locationInElement": {
+					"$ref": "./properties.json#location-in-element"
+				},
+				"locationInToposequence": {
+					"$ref": "./properties.json#location-in-toposequence"
+				},
+				"purpose": {
+					"$ref": "./properties.json#purpose"
+				},
+				"relatedLandSurveySite": {
 					"$ref": "./properties.json#relatedLandSurveySite"
+				},
+				"relatedProfile": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#relatedProfile"
+					}
+				},
+				"relatedProject": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#relatedProject"
+					}
+				},
+				"relatedSite": {
+					"$ref": "./properties.json#relatedSite"
+				},
+				"relatedSoilBody": {
+					"$ref": "./properties.json#relatedSoilBody"
+				},
+				"relatedSoilSurface": {
+					"$ref": "./properties.json#relatedSoilSurface"
+				},
+				"type": {
+					"$ref": "./properties.json#ansis-type"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SoilProfile": {
+			"$anchor": "SoilProfile",
+			"@id": "https://anzsoil.org/def/au/domain/SoilProfile",
+			"title": "ANSIS Soil Profile",
+			"description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
+			"type": "object",
+			"required": [
+				"@type",
+				"hasGeometry",
+				"relatedSite",
+				"procedure",
+				"depth"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "ansis:SoilProfile"
+				},
+				"depth": {
+					"$ref": "./properties.json#depth-quantity"
+				},
+				"drainage": {
+					"$ref": "./properties.json#drainage"
+				},
+				"procedure": {
+					"$ref": "./sosa.json#usedProcedure"
+				},
+				"purpose": {
+					"$ref": "./properties.json#purpose"
+				},
+				"hasGeometry": {
+					"$ref": "./geosparql.json#hasGeometry"
+				},
+				"hasRoots": {
+					"$ref": "./properties.json#hasRoots"
+				},
+				"hasSubstrate": {
+					"$ref": "./properties.json#hasSubstrate"
+				},
+				"relatedHorizon": {
+					"$ref": "./properties.json#relatedHorizon"
+				},
+				"relatedLayer": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#relatedLayer"
+					}
+				},
+				"relatedSample": {
+					"$ref": "./properties.json#relatedSample"
+				},
+				"relatedSite": {
+					"$ref": "./properties.json#relatedSite"
+				},
+				"relatedSoilSurface": {
+					"$ref": "./properties.json#relatedSoilSurface"
 				}
 			},
 			"additionalProperties": false
@@ -138,6 +265,128 @@
 				},
 				"relatedSoilSurface": {
 					"$ref": "./properties.json#relatedSoilSurface"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SoilLayer": {
+			"$anchor": "SoilLayer",
+			"@id": "https://anzsoil.org/def/au/domain/SoilLayer",
+			"title": "ANSIS Soil Layer",
+			"description": "Region within a soil body usually observed as a specified depth interval within a profile.",
+			"type": "object",
+			"required": [
+				"@type",
+				"depthUpper",
+				"depthLower",
+				"relatedSoilBody"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "./base.json#js-schema"
+				},
+				"@context": {
+					"$ref": "./base.json#ld-context"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "ansis:SoilLayer"
+				},
+				"depthUpper": {
+					"$ref": "./properties.json#depth-upper"
+				},
+				"depthLower": {
+					"$ref": "./properties.json#depth-lower"
+				},
+				"permeability": {
+					"$ref": "./properties.json#permeability"
+				},
+				"texture": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#texture"
+					}
+				},
+				"colour": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#colour"
+					}
+				},
+				"hasCoarseFragments": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasCoarseFragments"
+					}
+				},
+				"hasCracks": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasCracks"
+					}
+				},
+				"hasCutans": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasCutans"
+					}
+				},
+				"hasMottles": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasMottles"
+					}
+				},
+				"hasPans": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasPans"
+					}
+				},
+				"hasPores": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasPores"
+					}
+				},
+				"hasRoots": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasRoots"
+					}
+				},
+				"hasSegregations": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#hasSegregations"
+					}
+				},
+				"hasStrength": {
+					"$ref": "./properties.json#strength"
+				},
+				"hasStrength": {
+					"$ref": "./properties.json#structure"
+				},
+				"relatedSample": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#relatedSample"
+					}
+				},
+				"relatedSoilBody": {
+					"$ref": "./properties.json#relatedSoilBody"
+				},
+				"chemistry": {
+					"$ref": "./properties.json#chemistry"
+				},
+				"physical": {
+					"$ref": "./properties.json#physical"
+				},
+				"biological": {
+					"$ref": "./properties.json#biological"
 				}
 			},
 			"additionalProperties": false
@@ -268,197 +517,6 @@
 			},
 			"additionalProperties": false
 		},
-		"SoilLayer": {
-			"$anchor": "SoilLayer",
-			"@id": "https://anzsoil.org/def/au/domain/SoilLayer",
-			"title": "ANSIS Soil Layer",
-			"description": "Region within a soil body usually observed as a specified depth interval within a profile.",
-			"type": "object",
-			"required": [
-				"@type",
-				"depthUpper",
-				"depthLower",
-				"relatedSoilBody"
-			],
-			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
-				},
-				"@type": {
-					"$ref": "./base.json#ld-type",
-					"const": "ansis:SoilLayer"
-				},
-				"depthUpper": {
-					"$ref": "./properties.json#depth-upper"
-				},
-				"depthLower": {
-					"$ref": "./properties.json#depth-lower"
-				},
-				"permeability": {
-					"$ref": "./properties.json#permeability"
-				},
-				"texture": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#texture"
-					}
-				},
-				"colour": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#colour"
-					}
-				},
-				"hasCoarseFragments": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasCoarseFragments"
-					}
-				},
-				"hasCracks": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasCracks"
-					}
-				},
-				"hasCutans": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasCutans"
-					}
-				},
-				"hasMottles": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasMottles"
-					}
-				},
-				"hasPans": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasPans"
-					}
-				},
-				"hasPores": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasPores"
-					}
-				},
-				"hasRoots": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasRoots"
-					}
-				},
-				"hasSegregations": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#hasSegregations"
-					}
-				},
-				"hasStrength": {
-					"$ref": "./properties.json#strength"
-				},
-				"hasStrength": {
-					"$ref": "./properties.json#structure"
-				},
-				"relatedSample": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedSample"
-					}
-				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody"
-				},
-				"chemistry": {
-					"$ref": "./properties.json#chemistry"
-				},
-				"physical": {
-					"$ref": "./properties.json#physical"
-				},
-				"biological": {
-					"$ref": "./properties.json#biological"
-				}
-			},
-			"additionalProperties": false
-		},
-		"SoilProfile": {
-			"$anchor": "SoilProfile",
-			"@id": "https://anzsoil.org/def/au/domain/SoilProfile",
-			"title": "ANSIS Soil Profile",
-			"description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
-			"type": "object",
-			"required": [
-				"@type",
-				"hasGeometry",
-				"relatedSite",
-				"procedure",
-				"depth"
-			],
-			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
-				},
-				"@type": {
-					"$ref": "./base.json#ld-type",
-					"const": "ansis:SoilProfile"
-				},
-				"depth": {
-					"$ref": "./properties.json#depth-quantity"
-				},
-				"drainage": {
-					"$ref": "./properties.json#drainage"
-				},
-				"procedure": {
-					"$ref": "./sosa.json#usedProcedure"
-				},
-				"purpose": {
-					"$ref": "./properties.json#purpose"
-				},
-				"hasGeometry": {
-					"$ref": "./geosparql.json#hasGeometry"
-				},
-				"hasRoots": {
-					"$ref": "./properties.json#hasRoots"
-				},
-				"hasSubstrate": {
-					"$ref": "./properties.json#hasSubstrate"
-				},
-				"relatedHorizon": {
-					"$ref": "./properties.json#relatedHorizon"
-				},
-				"relatedLayer": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedLayer"
-					}
-				},
-				"relatedSample": {
-					"$ref": "./properties.json#relatedSample"
-				},
-				"relatedSite": {
-					"$ref": "./properties.json#relatedSite"
-				},
-				"relatedSoilSurface": {
-					"$ref": "./properties.json#relatedSoilSurface"
-				}
-			},
-			"additionalProperties": false
-		},
 		"SoilSample": {
 			"$anchor": "SoilSample",
 			"@id": "https://anzsoil.org/def/au/domain/SoilSample",
@@ -511,16 +569,15 @@
 			},
 			"additionalProperties": false
 		},
-		"SoilSite": {
-			"$anchor": "SoilSite",
-			"@id": "https://anzsoil.org/def/au/domain/SoilSite",
-			"title": "ANSIS Soil Site",
-			"description": "A site where samples, observations, and treatments of soil are carried out.",
+		"LandSurveySite": {
+			"$anchor": "LandSurveySite",
+			"@id": "https://anzsoil.org/def/au/domain/LandsurveySite",
+			"title": "ANSIS Land Survey Site",
+			"description": "A Site established to make observations of landscape entities.",
 			"type": "object",
 			"required": [
 				"@type",
-				"hasGeometry",
-				"relatedProject"
+				"hasGeometry"
 			],
 			"properties": {
 				"$schema": {
@@ -534,31 +591,13 @@
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
-					"const": "ansis:SoilSite"
+					"const": "ansis:LandsurveySite"
 				},
 				"hasGeometry": {
 					"type": "array",
 					"items": {
 						"$ref": "./geosparql.json#hasGeometry"
 					}
-				},
-				"isSampleOf": {
-					"$ref": "./sosa.json#isSampleOf"
-				},
-				"depthFreeWater": {
-					"$ref": "./properties.json#depth-free-water"
-				},
-				"designSite": {
-					"$ref": "./properties.json#design-site"
-				},
-				"designSurvey": {
-					"$ref": "./properties.json#design-survey"
-				},
-				"disturbance": {
-					"$ref": "./properties.json#disturbance"
-				},
-				"drainage": {
-					"$ref": "./properties.json#drainage"
 				},
 				"hasErosion": {
 					"$ref": "./properties.json#hasErosion"
@@ -581,50 +620,11 @@
 				"hasLandform": {
 					"$ref": "./properties.json#hasLandform"
 				},
-				"hasMicrorelief": {
-					"$ref": "./properties.json#hasMicrorelief"
-				},
 				"hasOutcrop": {
 					"$ref": "./properties.json#hasOutcrop"
 				},
-				"heightDrainage": {
-					"$ref": "./properties.json#height-drainage"
-				},
-				"locationInElement": {
-					"$ref": "./properties.json#location-in-element"
-				},
-				"locationInToposequence": {
-					"$ref": "./properties.json#location-in-toposequence"
-				},
-				"purpose": {
-					"$ref": "./properties.json#purpose"
-				},
-				"relatedLandSurveySite": {
+				"relatedLandsurveySite": {
 					"$ref": "./properties.json#relatedLandSurveySite"
-				},
-				"relatedProfile": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedProfile"
-					}
-				},
-				"relatedProject": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedProject"
-					}
-				},
-				"relatedSite": {
-					"$ref": "./properties.json#relatedSite"
-				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody"
-				},
-				"relatedSoilSurface": {
-					"$ref": "./properties.json#relatedSoilSurface"
-				},
-				"type": {
-					"$ref": "./properties.json#ansis-type"
 				}
 			},
 			"additionalProperties": false
