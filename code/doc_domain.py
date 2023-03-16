@@ -9,7 +9,7 @@ def json_schema_to_markdown(json_schema_path, json_schema_file):
 
     schema_file = open(json_schema_path + json_schema_file, "r")
     core_entity_file = open(json_schema_path + "entity-instance.json", "r")
-    md_file = open("docs/ansis-domain.md", "w")
+    md_file = open("docs/ansis-entities.md", "w")
 
     schema_root = json.loads(schema_file.read())
     core_entity_schema = json.loads(core_entity_file.read())
