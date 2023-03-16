@@ -8,7 +8,7 @@
 		"hasGeometry": {
 			"$anchor": "hasGeometry",
 			"@id": "geo:hasGeometry",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"geo:wktLiteral"
 			],

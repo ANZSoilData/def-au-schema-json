@@ -15,7 +15,7 @@ A site where samples, observations, and treatments of soil are carried out.
 | -------- | ----------- | ---- | ----------- |
 | id | 0..1 | xs:string | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. |
 | @type | 1..1 | xs:anyURI | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| hasGeometry | 1..* |  | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasGeometry | 1..* | sosa:ObservableProperty; geo:wktLiteral | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
 | isSampleOf | 0..1 | ansis:SoilProfile; ansis:SoilBody; ansis:SoilLayer; ansis:SoilHorizon; ansis:SoilSurface; ansis:Substrate | template |
 | depthFreeWater | 0..1 | sosa:ObservableProperty; qudt:QuantityValue | Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface. |
 | designSite | 0..1 | ansis:SoilSite-design | overall design of sampling at the site e.g. ASLS|grid|transect |
@@ -53,7 +53,7 @@ A soil profile is a vertical section of a soil from the soil surface through all
 | drainage | 0..1 | sosa:ObservableProperty; skos:Concept | Drainage of site or profile. |
 | procedure | 1..1 | skos:Concept | Relation between an Observation and the Sensor which made the Observations. |
 | purpose | 0..1 | ansis:Profile-purpose; ansis:Site-purpose | purpose of or reason for activity |
-| hasGeometry | 1..1 |  | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasGeometry | 1..1 | sosa:ObservableProperty; geo:wktLiteral | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
 | hasRoots | 0..1 | ansis:Roots | a description of roots |
 | hasSubstrate | 0..1 | ansis:Substrate | a description of substrate |
 | relatedHorizon | 0..1 | ansis:SoilHorizon | related soil horizon within a soil body or sample, or associated with a contact |
@@ -70,7 +70,7 @@ Part of the soil cover that is delineated at a scale useful for an application, 
 | id | 0..1 | xs:string | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. |
 | @type | 1..1 | xs:anyURI | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
 | classification | 0..* | sosa:ObservableProperty; ansis:SoilClassification | classification of the soil body or profile |
-| hasGeometry | 0..* |  | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasGeometry | 0..* | sosa:ObservableProperty; geo:wktLiteral | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
 | hasLandManagement | 0..1 | ansis:LandManagement | a description of land management |
 | hasLandSurface | 0..1 | ansis:LandSurface | a description of land surface |
 | hasLandUse | 0..* | ansis:LandUse | a description of land use |
@@ -146,7 +146,7 @@ Sample of soil or soil entity. Sample is a key class in the context of observati
 | id | 0..1 | xs:string | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. |
 | @type | 1..1 | xs:anyURI | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
 | type | 0..1 | ansis:SiteType; ansis:SoilSampleType | type of ansis soil entity |
-| hasGeometry | 0..1 |  | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasGeometry | 0..1 | sosa:ObservableProperty; geo:wktLiteral | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
 | depthLower | 0..1 | sosa:ObservableProperty; qudt:QuantityValue | depth from local surface to the top of the element |
 | depthUpper | 0..1 | sosa:ObservableProperty; qudt:QuantityValue | depth from local surface to the base of the element |
 | component | 0..1 | sosa:ObservableProperty; skos:Concept | type of component element |
@@ -160,7 +160,7 @@ A Site established to make observations of landscape entities.
 | -------- | ----------- | ---- | ----------- |
 | id | 0..1 | xs:string | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. |
 | @type | 1..1 | xs:anyURI | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. |
-| hasGeometry | 1..* |  | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
+| hasGeometry | 1..* | sosa:ObservableProperty; geo:wktLiteral | The default geometry to be used in spatial calculations. It is Usually the most detailed geometry. |
 | hasErosion | 0..1 | ansis:Erosion | a description of erosion |
 | hasLandCover | 0..1 | ansis:LandManagement | a description of land cover |
 | hasLandManagement | 0..1 | ansis:LandManagement | a description of land management |
