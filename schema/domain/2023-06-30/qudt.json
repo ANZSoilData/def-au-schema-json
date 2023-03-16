@@ -6,7 +6,7 @@
 	"definitions": {
 		"QuantityValue": {
 			"$anchor": "QuantityValue",
-			"@id": "http://qudt.org/schema/qudt/QuantityValue",
+			"@id": "qudt:QuantityValue",
 			"title": "QUDT QuantityValue",
 			"description": "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit.",
 			"type": "object",
@@ -25,11 +25,13 @@
 		},
 		"unit": {
 			"$anchor": "unit",
-			"@id": "http://qudt.org/schema/qudt/unit",
+			"@id": "qudt:unit",
+			"range@type": "xs:anyURI",
 			"title": "Unit",
 			"description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
 			"$comment": "Restricted to the QUDT vocabulary as a compact URI.",
 			"type": "string",
+			"format": "iri",
 			"pattern": "^unit:.*$"
 		}
 	}

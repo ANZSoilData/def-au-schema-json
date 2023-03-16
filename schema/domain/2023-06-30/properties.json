@@ -155,7 +155,7 @@
 		"biological": {
 			"$anchor": "biological",
 			"@id": null,
-			"@type": "sosa:Observation",
+			"range@type": "sosa:Observation",
 			"title": "soil biological property",
 			"description": "",
 			"type": "array",
@@ -166,7 +166,7 @@
 		"carbon": {
 			"$anchor": "carbon",
 			"@id": "ansis:carbon",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -193,7 +193,7 @@
 		"carbonateEffervescence": {
 			"$anchor": "carbonate-effervescence",
 			"@id": "ansis:carbonate-effervescence",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -220,7 +220,7 @@
 		"cementation": {
 			"$anchor": "cementation",
 			"@id": "ansis:cementation",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -247,7 +247,7 @@
 		"chemistry": {
 			"$anchor": "chemistry",
 			"@id": "ansis:chemistry",
-			"@type": "sosa:Observation",
+			"range@type": "sosa:Observation",
 			"title": "soil chemical property",
 			"description": "",
 			"$comment": "Abstract property - parent of other chemical properties",
@@ -259,7 +259,7 @@
 		"classification": {
 			"$anchor": "classification",
 			"@id": "ansis:classification",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"ansis:SoilClassification"
 			],
@@ -286,7 +286,7 @@
 		"classificationFamilyA1texture": {
 			"$anchor": "classification-family-A1texture",
 			"@id": "ansis:classification-family-A1texture",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - A1 horizon texture",
 			"description": "family criteria - A1 horizon texture",
 			"$comment": "",
@@ -296,7 +296,7 @@
 		"classificationFamilyA1thickness": {
 			"$anchor": "classification-family-A1thickness",
 			"@id": "ansis:classification-family-A1thickness",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - A1 horizon thickness",
 			"description": "family criteria - A1 horizon thickness",
 			"$comment": "",
@@ -306,7 +306,7 @@
 		"classificationFamilyBtexture": {
 			"$anchor": "classification-family-Btexture",
 			"@id": "ansis:classification-family-Btexture",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - B horizon texture",
 			"description": "family criteria - B horizon texture",
 			"$comment": "",
@@ -316,7 +316,7 @@
 		"classificationFamilyDepth": {
 			"$anchor": "classification-family-depth",
 			"@id": "ansis:classification-family-depth",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - Soil depth",
 			"description": "family criteria - Soil depth",
 			"$comment": "",
@@ -326,7 +326,7 @@
 		"classificationFamilyGravel": {
 			"$anchor": "classification-family-gravel",
 			"@id": "ansis:classification-family-gravel",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - Gravel of the surface and A1 horizon",
 			"description": "family criteria - Gravel of the surface and A1 horizon",
 			"$comment": "",
@@ -336,7 +336,7 @@
 		"classificationGreatGroup": {
 			"$anchor": "classification-greatgroup",
 			"@id": "ansis:classification-greatgroup",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - Great group",
 			"description": "soil classification - Great group",
 			"$comment": "",
@@ -346,7 +346,7 @@
 		"classificationOrder": {
 			"$anchor": "classification-order",
 			"@id": "ansis:classification-order",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - Order",
 			"description": "soil classification - Order",
 			"$comment": "",
@@ -356,7 +356,7 @@
 		"classificationSubGroup": {
 			"$anchor": "classification-subgroup",
 			"@id": "ansis:classification-subgroup",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - Subgroup",
 			"description": "soil classification - Subgroup",
 			"$comment": "",
@@ -366,7 +366,7 @@
 		"classificationSubOrder": {
 			"$anchor": "classification-suborder",
 			"@id": "ansis:classification-suborder",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "classification - Sub-order",
 			"description": "soil classification - Sub-order",
 			"$comment": "",
@@ -376,8 +376,12 @@
 		"colour": {
 			"$anchor": "colour",
 			"@id": "ansis:colour",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
 			"title": "colour",
-			"description": "link to description of colour",
+			"description": "a description of colour",
 			"$comment": "",
 			"type": "object",
 			"allOf": [
@@ -399,7 +403,7 @@
 		"component": {
 			"$anchor": "component",
 			"@id": "ansis:component",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -426,7 +430,7 @@
 		"compoundPedality": {
 			"$anchor": "compoundPedality",
 			"@id": "ansis:compoundPedality",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -453,7 +457,7 @@
 		"conditionWhenDry": {
 			"$anchor": "condition-when-dry",
 			"@id": "ansis:condition-when-dry",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -480,7 +484,7 @@
 		"confidence": {
 			"$anchor": "confidence",
 			"@id": "ansis:confidence",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "confidence",
 			"description": "confidence in assessment",
 			"$comment": "",
@@ -490,7 +494,7 @@
 		"continuity": {
 			"$anchor": "continuity",
 			"@id": "ansis:continuity",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -517,7 +521,7 @@
 		"contrast": {
 			"$anchor": "contrast",
 			"@id": "ansis:contrast",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -544,7 +548,7 @@
 		"degree": {
 			"$anchor": "degree",
 			"@id": "ansis:degree",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -571,7 +575,7 @@
 		"density": {
 			"$anchor": "density",
 			"@id": "ansis:density",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -597,7 +601,7 @@
 		},
 		"depth": {
 			"@id": "ansis:depth",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue",
 				"skos:Concept"
@@ -610,7 +614,7 @@
 		"depth-quantity": {
 			"$anchor": "depth-quantity",
 			"@id": "ansis:depth",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -636,7 +640,7 @@
 		"depth-inundation": {
 			"$anchor": "depth-inundation",
 			"@id": "ansis:depth",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -662,7 +666,7 @@
 		"depthFreeWater": {
 			"$anchor": "depth-free-water",
 			"@id": "ansis:depth-free-water",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -688,7 +692,7 @@
 		},
 		"depthGully": {
 			"@id": "ansis:depth-gully",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue",
 				"skos:Concept"
@@ -701,7 +705,7 @@
 		"depthGully-quantity": {
 			"$anchor": "depthGully-quantity",
 			"@id": "ansis:depth-gully",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -727,7 +731,7 @@
 		"depthGully-category": {
 			"$anchor": "depthGully-category",
 			"@id": "ansis:depth-gully",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -753,7 +757,7 @@
 		"depthLower": {
 			"$anchor": "depth-lower",
 			"@id": "ansis:depth-lower",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -780,7 +784,7 @@
 		"depthRHorizon": {
 			"$anchor": "depth-r-horizon",
 			"@id": "ansis:depth-r-horizon",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -807,7 +811,7 @@
 		"depthReason": {
 			"$anchor": "depth-reason",
 			"@id": "ansis:depth-reason",
-			"@type": "xs:string",
+			"range@type": "xs:string",
 			"title": "reason for profile depth",
 			"description": "reason for the specific depth of this profile e.g. length of auger | depth of interest | rock | too wet … ",
 			"$comment": "",
@@ -816,7 +820,7 @@
 		"depthUpper": {
 			"$anchor": "depth-upper",
 			"@id": "ansis:depth-upper",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -843,7 +847,7 @@
 		"depthWidthRatio": {
 			"$anchor": "depth-width-ratio",
 			"@id": "ansis:depth-width-ratio",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue",
 				"skos:Concept"
@@ -856,7 +860,7 @@
 		"depthWidthRatio-quantity": {
 			"$anchor": "depthWidthRatio-quantity",
 			"@id": "ansis:depth-width-ratio",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -882,7 +886,7 @@
 		"depthWidthRatio-streamchannel": {
 			"$anchor": "depthWidthRatio-streamchannel",
 			"@id": "ansis:depth-width-ratio",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -908,7 +912,7 @@
 		"designSite": {
 			"$anchor": "design-site",
 			"@id": "ansis:design-site",
-			"@type": "ansis:SoilSite-design",
+			"range@type": "ansis:SoilSite-design",
 			"title": "site design",
 			"description": "overall design of sampling at the site e.g. ASLS|grid|transect",
 			"$comment": "",
@@ -918,7 +922,7 @@
 		"designSurvey": {
 			"$anchor": "design-survey",
 			"@id": "ansis:design-survey",
-			"@type": "ansis:Survey-design",
+			"range@type": "ansis:Survey-design",
 			"title": "survey design",
 			"description": "overall design of soil or landscape survey e.g. free|grid|stratified|miscellaneous",
 			"$comment": "",
@@ -928,7 +932,7 @@
 		"designation": {
 			"$anchor": "designation",
 			"@id": "ansis:designation",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"ansis:HorizonDesignation"
 			],
@@ -955,7 +959,7 @@
 		"designationMaster": {
 			"$anchor": "designation-master",
 			"@id": "ansis:designation-master",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "designation master",
 			"description": "soil horizon designation master",
 			"$comment": "",
@@ -965,7 +969,7 @@
 		"designationPrefix": {
 			"$anchor": "designation-prefix",
 			"@id": "ansis:designation-prefix",
-			"@type": "xs:integer",
+			"range@type": "xs:integer",
 			"title": "designation prefix",
 			"description": "soil horizon designation prefix",
 			"$comment": "",
@@ -974,7 +978,7 @@
 		"designationSubdivision": {
 			"$anchor": "designation-subdivision",
 			"@id": "ansis:designation-subdivision",
-			"@type": "xs:integer",
+			"range@type": "xs:integer",
 			"title": "designation subdivision",
 			"description": "soil horizon designation subdivision",
 			"$comment": "",
@@ -983,7 +987,7 @@
 		"designationSuffix": {
 			"$anchor": "designation-suffix",
 			"@id": "ansis:designation-suffix",
-			"@type": "skos:Concept",
+			"range@type": "skos:Concept",
 			"title": "designation subdivision",
 			"description": "soil horizon designation subdivision",
 			"$comment": "",
@@ -993,7 +997,7 @@
 		"development": {
 			"$anchor": "development",
 			"@id": "ansis:development",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1020,7 +1024,7 @@
 		"diameter": {
 			"$anchor": "diameter",
 			"@id": "ansis:diameter",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1047,7 +1051,7 @@
 		"directionality": {
 			"$anchor": "directionality",
 			"@id": "ansis:directionality",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1074,7 +1078,7 @@
 		"distance": {
 			"$anchor": "distance",
 			"@id": "ansis:distance",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1101,7 +1105,7 @@
 		"distinctness": {
 			"$anchor": "distinctness",
 			"@id": "ansis:distinctness",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1128,7 +1132,7 @@
 		"distribution": {
 			"$anchor": "distribution",
 			"@id": "ansis:distribution",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1155,7 +1159,7 @@
 		"disturbance": {
 			"$anchor": "disturbance",
 			"@id": "ansis:disturbance",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1182,7 +1186,7 @@
 		"drainage": {
 			"$anchor": "drainage",
 			"@id": "ansis:drainage",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1209,7 +1213,7 @@
 		"duration": {
 			"$anchor": "duration",
 			"@id": "ansis:duration",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue",
 				"skos:Concept"
@@ -1222,7 +1226,7 @@
 		"duration-quantity": {
 			"$anchor": "duration-quantity",
 			"@id": "ansis:duration",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1248,7 +1252,7 @@
 		"duration-inundation": {
 			"$anchor": "duration-inundation",
 			"@id": "ansis:duration",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1274,7 +1278,7 @@
 		"elevation": {
 			"$anchor": "elevation",
 			"@id": "ansis:elevation",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1301,7 +1305,7 @@
 		"fabric": {
 			"$anchor": "fabric",
 			"@id": "ansis:fabric",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1328,7 +1332,7 @@
 		"frequency": {
 			"$anchor": "frequency",
 			"@id": "ansis:frequency",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1355,7 +1359,7 @@
 		"genesis": {
 			"$anchor": "genesis",
 			"@id": "ansis:genesis",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1382,7 +1386,7 @@
 		"geomorphologyMode": {
 			"$anchor": "geomorphologyMode",
 			"@id": "ansis:geomorphologyMode",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1409,7 +1413,7 @@
 		"geomorphologyStatus": {
 			"$anchor": "geomorphologyStatus",
 			"@id": "ansis:geomorphologyStatus",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1436,7 +1440,7 @@
 		"grade": {
 			"$anchor": "grade",
 			"@id": "ansis:grade",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1463,7 +1467,7 @@
 		"grainSize": {
 			"$anchor": "grain-size",
 			"@id": "ansis:grain-size",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1490,9 +1494,9 @@
 		"hasCoarseFragments": {
 			"$anchor": "hasCoarseFragments",
 			"@id": "ansis:hasCoarseFragments",
-			"@type": "ansis:CoarseFragments",
+			"range@type": "ansis:CoarseFragments",
 			"title": "has coarse fragments",
-			"description": "link to description of coarse fragments",
+			"description": "a description of coarse fragments",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#CoarseFragments"
@@ -1500,9 +1504,9 @@
 		"hasCracks": {
 			"$anchor": "hasCracks",
 			"@id": "ansis:hasCracks",
-			"@type": "ansis:Cracks",
+			"range@type": "ansis:Cracks",
 			"title": "has cracks",
-			"description": "link to description of cracks",
+			"description": "a description of cracks",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Cracks"
@@ -1510,9 +1514,9 @@
 		"hasCutans": {
 			"$anchor": "hasCutans",
 			"@id": "ansis:hasCutans",
-			"@type": "ansis:Cutans",
+			"range@type": "ansis:Cutans",
 			"title": "has cutans",
-			"description": "link to description of cutans",
+			"description": "a description of cutans",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Cutans"
@@ -1520,9 +1524,9 @@
 		"hasErosion": {
 			"$anchor": "hasErosion",
 			"@id": "ansis:hasErosion",
-			"@type": "ansis:Erosion",
+			"range@type": "ansis:Erosion",
 			"title": "has erosion",
-			"description": "link to description of erosion",
+			"description": "a description of erosion",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Erosion"
@@ -1530,9 +1534,9 @@
 		"hasInundation": {
 			"$anchor": "hasInundation",
 			"@id": "ansis:hasInundation",
-			"@type": "ansis:Inundation",
+			"range@type": "ansis:Inundation",
 			"title": "has inundation",
-			"description": "link to description of inundation",
+			"description": "a description of inundation",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Inundation"
@@ -1540,9 +1544,9 @@
 		"hasLandCover": {
 			"$anchor": "hasLandCover",
 			"@id": "ansis:hasLandCover",
-			"@type": "ansis:LandManagement",
+			"range@type": "ansis:LandManagement",
 			"title": "has land cover",
-			"description": "link to description of land cover",
+			"description": "a description of land cover",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#LandManagement"
@@ -1550,9 +1554,9 @@
 		"hasLandManagement": {
 			"$anchor": "hasLandManagement",
 			"@id": "ansis:hasLandManagement",
-			"@type": "ansis:LandManagement",
+			"range@type": "ansis:LandManagement",
 			"title": "has land management",
-			"description": "link to description of land management",
+			"description": "a description of land management",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#LandManagement"
@@ -1560,9 +1564,9 @@
 		"hasLandSurface": {
 			"$anchor": "hasLandSurface",
 			"@id": "ansis:hasLandSurface",
-			"@type": "ansis:LandSurface",
+			"range@type": "ansis:LandSurface",
 			"title": "has land surface",
-			"description": "link to description of land surface",
+			"description": "a description of land surface",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#LandSurface"
@@ -1570,9 +1574,9 @@
 		"hasLandUse": {
 			"$anchor": "hasLandUse",
 			"@id": "ansis:hasLandUse",
-			"@type": "ansis:LandUse",
+			"range@type": "ansis:LandUse",
 			"title": "has land use",
-			"description": "link to description of land use",
+			"description": "a description of land use",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#LandUse"
@@ -1580,9 +1584,9 @@
 		"hasLandform": {
 			"$anchor": "hasLandform",
 			"@id": "ansis:hasLandform",
-			"@type": "ansis:Landform",
+			"range@type": "ansis:Landform",
 			"title": "has landform",
-			"description": "link to description of landform",
+			"description": "a description of landform",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Landform"
@@ -1590,9 +1594,9 @@
 		"hasLandformElement": {
 			"$anchor": "hasLandformElement",
 			"@id": "ansis:hasLandformElement",
-			"@type": "ansis:LandformElement",
+			"range@type": "ansis:LandformElement",
 			"title": "has landform element",
-			"description": "link to description of landform element",
+			"description": "a description of landform element",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#LandformElement"
@@ -1600,9 +1604,9 @@
 		"hasLandformPattern": {
 			"$anchor": "hasLandformPattern",
 			"@id": "ansis:hasLandformPattern",
-			"@type": "ansis:LandformPattern",
+			"range@type": "ansis:LandformPattern",
 			"title": "has landform pattern",
-			"description": "link to description of landform pattern",
+			"description": "a description of landform pattern",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#LandformPattern"
@@ -1610,9 +1614,9 @@
 		"hasMicrorelief": {
 			"$anchor": "hasMicrorelief",
 			"@id": "ansis:hasMicrorelief",
-			"@type": "ansis:Microrelief",
+			"range@type": "ansis:Microrelief",
 			"title": "has microrelief",
-			"description": "link to description of microrelief at the site",
+			"description": "a description of microrelief at the site",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Microrelief"
@@ -1620,9 +1624,9 @@
 		"hasMicrorelief_biotic": {
 			"$anchor": "hasMicrorelief-biotic",
 			"@id": "ansis:hasMicrorelief-biotic",
-			"@type": "ansis:Microrelief_biotic",
+			"range@type": "ansis:Microrelief_biotic",
 			"title": "has microrelief - biotic",
-			"description": "link to description of biotic microrelief at the site",
+			"description": "a description of biotic microrelief at the site",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Microrelief_biotic"
@@ -1630,9 +1634,9 @@
 		"hasMicrorelief_gilgai": {
 			"$anchor": "hasMicrorelief-gilgai",
 			"@id": "ansis:hasMicrorelief-gilgai",
-			"@type": "ansis:Microrelief_gilgai",
+			"range@type": "ansis:Microrelief_gilgai",
 			"title": "has microrelief - gilgai",
-			"description": "link to description of gilgai microrelief at the site",
+			"description": "a description of gilgai microrelief at the site",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Microrelief_gilgai"
@@ -1640,9 +1644,9 @@
 		"hasMicrorelief_hummocky": {
 			"$anchor": "hasMicrorelief-hummocky",
 			"@id": "ansis:hasMicrorelief-hummocky",
-			"@type": "ansis:Microrelief_hummocky",
+			"range@type": "ansis:Microrelief_hummocky",
 			"title": "has microrelief - hummocky",
-			"description": "link to description of hummocky microrelief at the site",
+			"description": "a description of hummocky microrelief at the site",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Microrelief_hummocky"
@@ -1650,9 +1654,9 @@
 		"hasMicrorelief_other": {
 			"$anchor": "hasMicrorelief-other",
 			"@id": "ansis:hasMicrorelief-other",
-			"@type": "ansis:Microrelief_other",
+			"range@type": "ansis:Microrelief_other",
 			"title": "has microrelief - other",
-			"description": "link to description of other microrelief at the site",
+			"description": "a description of other microrelief at the site",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Microrelief_other"
@@ -1660,9 +1664,9 @@
 		"hasMottles": {
 			"$anchor": "hasMottles",
 			"@id": "ansis:hasMottles",
-			"@type": "ansis:Mottles",
+			"range@type": "ansis:Mottles",
 			"title": "has mottles",
-			"description": "link to description of mottles and other colour patterns",
+			"description": "a description of mottles and other colour patterns",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Mottles"
@@ -1670,9 +1674,9 @@
 		"hasOutcrop": {
 			"$anchor": "hasOutcrop",
 			"@id": "ansis:hasOutcrop",
-			"@type": "ansis:Outcrop",
+			"range@type": "ansis:Outcrop",
 			"title": "has outcrop",
-			"description": "link to description of rock outcrop at this entity",
+			"description": "a description of rock outcrop at this entity",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Outcrop"
@@ -1680,9 +1684,9 @@
 		"hasPans": {
 			"$anchor": "hasPans",
 			"@id": "ansis:hasPans",
-			"@type": "ansis:Pans",
+			"range@type": "ansis:Pans",
 			"title": "has pans",
-			"description": "link to description of pans",
+			"description": "a description of pans",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Pans"
@@ -1690,9 +1694,9 @@
 		"hasPores": {
 			"$anchor": "hasPores",
 			"@id": "ansis:hasPores",
-			"@type": "ansis:Pores",
+			"range@type": "ansis:Pores",
 			"title": "has macropores",
-			"description": "link to description of macropores",
+			"description": "a description of macropores",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Pores"
@@ -1700,9 +1704,9 @@
 		"hasRoots": {
 			"$anchor": "hasRoots",
 			"@id": "ansis:hasRoots",
-			"@type": "ansis:Roots",
+			"range@type": "ansis:Roots",
 			"title": "has roots",
-			"description": "link to description of roots",
+			"description": "a description of roots",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Roots"
@@ -1710,9 +1714,9 @@
 		"hasSegregations": {
 			"$anchor": "hasSegregations",
 			"@id": "ansis:hasSegregations",
-			"@type": "ansis:Segregations",
+			"range@type": "ansis:Segregations",
 			"title": "has segregations",
-			"description": "link to description of segregations",
+			"description": "a description of segregations",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Segregations"
@@ -1720,9 +1724,9 @@
 		"hasStreamChannel": {
 			"$anchor": "hasStreamChannel",
 			"@id": "ansis:hasStreamChannel",
-			"@type": "ansis:StreamChannel",
+			"range@type": "ansis:StreamChannel",
 			"title": "has stream channel",
-			"description": "link to description of stream channel occurrence",
+			"description": "a description of stream channel occurrence",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#StreamChannel"
@@ -1730,9 +1734,9 @@
 		"hasStrength": {
 			"$anchor": "hasStrength",
 			"@id": "ansis:hasStrength",
-			"@type": "ansis:SoilStrength",
+			"range@type": "ansis:SoilStrength",
 			"title": "has strength",
-			"description": "link to description of strength",
+			"description": "a description of strength",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./sosa.json#ObservableProperty"
@@ -1741,8 +1745,8 @@
 			"$anchor": "hasStructure",
 			"@id": "ansis:hasStructure",
 			"title": "has structure",
-			"@type": "ansis:SoilStructure",
-			"description": "link to description of structure",
+			"range@type": "ansis:SoilStructure",
+			"description": "a description of structure",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./sosa.json#ObservableProperty"
@@ -1750,9 +1754,9 @@
 		"hasSubstrate": {
 			"$anchor": "hasSubstrate",
 			"@id": "ansis:hasSubstrate",
-			"@type": "ansis:Substrate",
+			"range@type": "ansis:Substrate",
 			"title": "has substrate",
-			"description": "link to description of substrate",
+			"description": "a description of substrate",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Substrate"
@@ -1760,7 +1764,7 @@
 		"height": {
 			"$anchor": "height",
 			"@id": "ansis:height",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1787,7 +1791,7 @@
 		"heightDrainage": {
 			"$anchor": "height-drainage",
 			"@id": "ansis:height-drainage",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1814,7 +1818,7 @@
 		"integration": {
 			"$anchor": "temintegrationlate",
 			"@id": "ansis:integration",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1841,7 +1845,7 @@
 		"length": {
 			"$anchor": "length",
 			"@id": "ansis:length",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -1868,7 +1872,7 @@
 		"lithology": {
 			"$anchor": "lithology",
 			"@id": "ansis:lithology",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1895,7 +1899,7 @@
 		"locationInElement": {
 			"$anchor": "location-in-element",
 			"@id": "ansis:location-in-element",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1922,7 +1926,7 @@
 		"locationInToposequence": {
 			"$anchor": "location-in-toposequence",
 			"@id": "ansis:location-in-toposequence",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1949,7 +1953,7 @@
 		"magneticAttributes": {
 			"$anchor": "magnetic-attributes",
 			"@id": "ansis:magnetic-attributes",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -1976,7 +1980,7 @@
 		"mapSheet": {
 			"$anchor": "mapSheet",
 			"@id": "ansis:mapSheet",
-			"@type": "xs:string",
+			"range@type": "xs:string",
 			"title": "mapSheet",
 			"description": "map-sheet on which this location is found",
 			"$comment": "",
@@ -1985,7 +1989,7 @@
 		"material": {
 			"$anchor": "material",
 			"@id": "ansis:material",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty"
 			],
 			"title": "material",
@@ -2009,7 +2013,7 @@
 		"migrationRate": {
 			"$anchor": "migration-rate",
 			"@id": "ansis:migration-rate",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2036,7 +2040,7 @@
 		"moistureStatus": {
 			"$anchor": "moisture-status",
 			"@id": "ansis:moisture-status",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2063,7 +2067,7 @@
 		"morphologicalType": {
 			"$anchor": "morphological-type",
 			"@id": "ansis:morphological-type",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2090,7 +2094,7 @@
 		"pH": {
 			"$anchor": "pH",
 			"@id": "ansis:pH",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -2120,7 +2124,7 @@
 		"ansisPattern": {
 			"$anchor": "pattern",
 			"@id": "ansis:pattern",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2147,7 +2151,7 @@
 		"permeability": {
 			"$anchor": "permeability",
 			"@id": "ansis:permeability",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2174,7 +2178,7 @@
 		"physical": {
 			"$anchor": "physical",
 			"@id": "ansis:physical",
-			"@type": "sosa:Observation",
+			"range@type": "sosa:Observation",
 			"title": "soil physical property",
 			"description": "",
 			"type": "array",
@@ -2185,7 +2189,7 @@
 		"plasticity": {
 			"$anchor": "plasticity",
 			"@id": "ansis:plasticity",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"ansis:SoilPlasticity"
 			],
@@ -2198,7 +2202,7 @@
 		"porosity": {
 			"$anchor": "porosity",
 			"@id": "ansis:porosity",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2225,7 +2229,7 @@
 		"proportions": {
 			"$anchor": "proportions",
 			"@id": "ansis:proportions",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2252,7 +2256,7 @@
 		"purpose": {
 			"$anchor": "purpose",
 			"@id": "ansis:purpose",
-			"@type": [
+			"range@type": [
 				"ansis:Profile-purpose",
 				"ansis:Site-purpose"
 			],
@@ -2272,7 +2276,7 @@
 		"relatedActivity": {
 			"$anchor": "relatedActivity",
 			"@id": "ansis:relatedActivity",
-			"@type": ["prov:Activity","sosa:Actuation","sosa:Observation","sosa:Sampling","ansis:SiteVisit","ansis:Treatment"],
+			"range@type": ["prov:Activity","sosa:Actuation","sosa:Observation","sosa:Sampling","ansis:SiteVisit","ansis:Treatment"],
 			"title": "related activity",
 			"description": "link to an activity related to this context",
 			"$comment": "[ISSUE] ontology has contradictory range/rangeIncludes statements",
@@ -2325,7 +2329,7 @@
 		"relatedHorizon": {
 			"$anchor": "relatedHorizon",
 			"@id": "ansis:relatedHorizon",
-			"@type": "ansis:SoilHorizon",
+			"range@type": "ansis:SoilHorizon",
 			"title": "related soil horizon",
 			"description": "related soil horizon within a soil body or sample, or associated with a contact",
 			"type": "object",
@@ -2342,7 +2346,7 @@
 		"relatedLandSurveySite": {
 			"$anchor": "relatedLandSurveySite",
 			"@id": "ansis:relatedLandsurveySite",
-			"@type": "ansis:LandSurveySite",
+			"range@type": "ansis:LandSurveySite",
 			"title": "related land survey site",
 			"description": "link to a land survey site related to this context",
 			"type": "object",
@@ -2359,7 +2363,7 @@
 		"relatedLayer": {
 			"$anchor": "relatedLayer",
 			"@id": "ansis:relatedLayer",
-			"@type": "ansis:SoilLayer",
+			"range@type": "ansis:SoilLayer",
 			"title": "related soil layer",
 			"description": "related soil layer within a soil body or profile",
 			"type": "object",
@@ -2376,7 +2380,7 @@
 		"relatedProfile": {
 			"$anchor": "relatedProfile",
 			"@id": "ansis:relatedProfile",
-			"@type": "ansis:SoilProfile",
+			"range@type": "ansis:SoilProfile",
 			"title": "Related Profile",
 			"description": "Link to a soil profile related to this context.",
 			"type": "object",
@@ -2393,7 +2397,7 @@
 		"relatedProject": {
 			"$anchor": "relatedProject",
 			"@id": "ansis:relatedProject",
-			"@type": "ansis:Project",
+			"range@type": "ansis:Project",
 			"title": "related project",
 			"description": "link to project that supported this activity",
 			"type": "object",
@@ -2410,7 +2414,7 @@
 		"relatedSample": {
 			"$anchor": "relatedSample",
 			"@id": "ansis:relatedSample",
-			"@type": "ansis:SoilSample",
+			"range@type": "ansis:SoilSample",
 			"title": "related sample",
 			"description": "link to a sample related to this context",
 			"type": "object",
@@ -2427,7 +2431,7 @@
 		"relatedSite": {
 			"$anchor": "relatedSite",
 			"@id": "ansis:relatedSite",
-			"@type": "ansis:SoilSite",
+			"range@type": "ansis:SoilSite",
 			"title": "related site",
 			"description": "link to a soil site related to this context",
 			"type": "object",
@@ -2444,7 +2448,7 @@
 		"relatedSoilBody": {
 			"$anchor": "relatedSoilBody",
 			"@id": "ansis:relatedSoilBody",
-			"@type": "ansis:SoilBody",
+			"range@type": "ansis:SoilBody",
 			"title": "related soil body",
 			"description": "link to a soil body related to this context",
 			"type": "object",
@@ -2461,7 +2465,7 @@
 		"relatedSoilSurface": {
 			"$anchor": "relatedSoilSurface",
 			"@id": "ansis:relatedSoilSurface",
-			"@type": "ansis:SoilSurface",
+			"range@type": "ansis:SoilSurface",
 			"title": "related soil surface",
 			"description": "soil surface of this entity",
 			"type": "object",
@@ -2478,7 +2482,7 @@
 		"relativeInclination": {
 			"$anchor": "relative-inclination",
 			"@id": "ansis:relative-inclination",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2505,7 +2509,7 @@
 		"relief": {
 			"$anchor": "relief",
 			"@id": "ansis:relief",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2532,7 +2536,7 @@
 		"runoff": {
 			"$anchor": "runoff",
 			"@id": "ansis:runoff",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2559,7 +2563,7 @@
 		"shape": {
 			"$anchor": "shape",
 			"@id": "ansis:shape",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2586,7 +2590,7 @@
 		"size": {
 			"$anchor": "size",
 			"@id": "ansis:size",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2613,7 +2617,7 @@
 		"slope": {
 			"$anchor": "slope",
 			"@id": "ansis:slope",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -2643,7 +2647,7 @@
 		"spacing": {
 			"$anchor": "spacing",
 			"@id": "ansis:spacing",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2670,7 +2674,7 @@
 		"state": {
 			"$anchor": "state",
 			"@id": "ansis:state",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2697,7 +2701,7 @@
 		"stickiness": {
 			"$anchor": "stickiness",
 			"@id": "ansis:stickiness",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2724,7 +2728,7 @@
 		"strength": {
 			"$anchor": "strength",
 			"@id": "ansis:strength",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"ansis:SoilStrength"
 			],
@@ -2744,7 +2748,7 @@
 		"structure": {
 			"$anchor": "structure",
 			"@id": "ansis:structure",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"ansis:SoilStructure"
 			],
@@ -2764,7 +2768,7 @@
 		"texture": {
 			"$anchor": "texture",
 			"@id": "ansis:texture",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2791,7 +2795,7 @@
 		"ansisType": {
 			"$anchor": "ansis-type",
 			"@id": "ansis:type",
-			"@type": ["ansis:SiteType", "ansis:SoilSampleType"],
+			"range@type": ["ansis:SiteType", "ansis:SoilSampleType"],
 			"title": "type",
 			"description": "type of ansis soil entity",
 			"$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
@@ -2808,7 +2812,7 @@
 		"underlyingMaterial": {
 			"$anchor": "underlyingMaterial",
 			"@id": "ansis:tempunderlyingMateriallate",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2835,7 +2839,7 @@
 		"value": {
 			"$anchor": "value",
 			"@id": "ansis:value",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"xs:boolean",
 				"xs:integer",
@@ -2855,7 +2859,7 @@
 		"velocity": {
 			"$anchor": "velocity",
 			"@id": "ansis:velocity",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],
@@ -2882,7 +2886,7 @@
 		"visitor": {
 			"$anchor": "visitor",
 			"@id": "ansis:visitor",
-			"@type": "prov:Person",
+			"range@type": "prov:Person",
 			"title": "visitor",
 			"description": "site visitor, for the purpose of sampling or observation",
 			"$comment": "",
@@ -2892,7 +2896,7 @@
 		"waterRepellence": {
 			"$anchor": "waterRepellence",
 			"@id": "ansis:waterRepellence",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"skos:Concept"
 			],
@@ -2919,7 +2923,7 @@
 		"width": {
 			"$anchor": "width",
 			"@id": "ansis:width",
-			"@type": [
+			"range@type": [
 				"sosa:ObservableProperty",
 				"qudt:QuantityValue"
 			],

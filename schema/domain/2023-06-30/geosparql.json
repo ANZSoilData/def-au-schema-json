@@ -7,7 +7,7 @@
 	"definitions": {
 		"hasGeometry": {
 			"$anchor": "hasGeometry",
-			"@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+			"@id": "geo:hasGeometry",
 			"@type": [
 				"sosa:ObservableProperty",
 				"geo:wktLiteral"
@@ -33,8 +33,8 @@
 		},
 		"wktLiteral": {
 			"$anchor": "wktLiteral",
-			"@id": "http://www.opengis.net/ont/geosparql#wktLiteral",
-			"@type": "xs:string",
+			"@id": "geo:wktLiteral",
+			"range@type": "xs:string",
 			"title": "WKT Literal",
 			"description": "A Well-known Text serialization of a geometry object.",
 			"$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA 2020 (EPSG:7844)?",
