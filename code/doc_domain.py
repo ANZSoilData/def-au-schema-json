@@ -80,17 +80,22 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path):
             if target_reference:
                 print("Processing reference " + target_reference + " ...")
                 target_property = open_json_pointer(json_schema_path, "entities.json", target_reference)
-                if isinstance(target_property["type"], (list, str)):
-                    if isinstance(target_property["type"], list):
-                        target_property_type = "; ".join(target_property["type"])
-                    else:
-                        target_property_type = target_property["type"]
-                else:
-                    target_property_type = ""
-                if isinstance(target_property["description"], str):
+                # if isinstance(target_property["type"], (list, str)):
+                #     if isinstance(target_property["type"], list):
+                #         target_property_type = "; ".join(target_property["type"])
+                #     else:
+                #         target_property_type = target_property["type"]
+                # else:
+                #     target_property_type = ""
+                target_property_type = ""
+                target_property_description = ""
+                if "@type" in target_property and isinstance(target_property["@type"], (str,list)):
+                    if isinstance(target_property["@type"], list):
+                        target_property_type = "; ".join(target_property["@type"])
+                    if isinstance(target_property["@type"], str):
+                        target_property_type = target_property["@type"]
+                if "description" in target_property and isinstance(target_property["description"], str):
                     target_property_description = target_property["description"]
-                else:
-                    target_property_description = ""
             lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_type + " | " + target_property_description + " |")
     return lines
 
