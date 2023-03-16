@@ -89,11 +89,11 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path):
                 #     target_property_type = ""
                 target_property_type = ""
                 target_property_description = ""
-                if "@type" in target_property and isinstance(target_property["@type"], (str,list)):
-                    if isinstance(target_property["@type"], list):
-                        target_property_type = "; ".join(target_property["@type"])
-                    if isinstance(target_property["@type"], str):
-                        target_property_type = target_property["@type"]
+                if "range@type" in target_property and isinstance(target_property["range@type"], (str,list)):
+                    if isinstance(target_property["range@type"], list):
+                        target_property_type = "; ".join(target_property["range@type"])
+                    if isinstance(target_property["range@type"], str):
+                        target_property_type = target_property["range@type"]
                 if "description" in target_property and isinstance(target_property["description"], str):
                     target_property_description = target_property["description"]
             lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_type + " | " + target_property_description + " |")
