@@ -22,6 +22,7 @@
 		},
 		"ansisEntities": {
             "$anchor": "ansis-entities",
+            "@id": "https://anzsoil.org/def/au/domain",
             "title": "ANSIS Entitiy Types",
             "description": "Core ANSIS entities (features) served by the ANSIS system.",
 			"type": "string",
@@ -70,6 +71,7 @@
 		},
         "SoilWaterDrainage": {
             "$anchor": "soilwaterdrainage",
+            "@id": "http://anzsoil.org/def/au/asls/soil-profile/Site-drainage",
             "title": "Soil Water Drainage",
             "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
 			"type": "string",
