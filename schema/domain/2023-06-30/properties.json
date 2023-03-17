@@ -157,7 +157,7 @@
 			"@id": null,
 			"range@type": "sosa:Observation",
 			"title": "soil biological property",
-			"description": "",
+			"description": "Laboratory measurements of soil biological properties.",
 			"type": "array",
 			"items": {
 				"$ref": "./sosa.json#Observation"
@@ -249,8 +249,7 @@
 			"@id": "ansis:chemistry",
 			"range@type": "sosa:Observation",
 			"title": "soil chemical property",
-			"description": "",
-			"$comment": "Abstract property - parent of other chemical properties",
+			"description": "Laboratory measurements of soil chemical properties.",
 			"type": "array",
 			"items": {
 				"$ref": "./sosa.json#Observation"
@@ -378,7 +377,7 @@
 			"@id": "ansis:colour",
 			"range@type": [
 				"sosa:ObservableProperty",
-				"skos:Concept"
+				"ansis:SoilColour"
 			],
 			"title": "colour",
 			"description": "a description of colour",
@@ -2180,7 +2179,7 @@
 			"@id": "ansis:physical",
 			"range@type": "sosa:Observation",
 			"title": "soil physical property",
-			"description": "",
+			"description": "Laboratory measurements of soil physical properties.",
 			"type": "array",
 			"items": {
 				"$ref": "./sosa.json#Observation"

@@ -98,6 +98,9 @@
 				"resultTime": {
 					"$ref": "#resultTime"
 				},
+				"hasFeatureOfInterest": {
+					"$ref": "#hasFeatureOfInterest"
+				},
 				"relatedActivity": {
 					"$ref": "./properties.json#relatedActivity"
 				}
