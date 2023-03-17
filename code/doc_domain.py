@@ -55,48 +55,89 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path):
     '''Process each individual definition entry.'''
     
     print("Processing definition " + def_key + " ...")
+
     lines.append("### " + def_value["title"] + " - `ansis:" + def_value["$anchor"] + "`\n")
     lines.append(def_value["description"] + "\n")
+
     if "$comment" in def_value:
         lines.append("> " + def_value["$comment"] + "\n")
+
     if "required" in def_value:
         required_properties = def_value["required"]
+
+    if "ansisPreferred" in def_value and isinstance(def_value["ansisPreferred"], list):
+        ansis_preferred_properties = def_value["ansisPreferred"]
+    else:
+        ansis_preferred_properties = []
+
     if "properties" in def_value:
+
         schema_properties = pandas.DataFrame(def_value["properties"])
-        lines.append("| Property | Value Count | Type | Description |")
-        lines.append("| -------- | ----------- | ---- | ----------- |")
+
+        lines.append("| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |")
+        lines.append("| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |")
+
         for prop_key, prop_value in schema_properties.items():
+
             print("Processing property " + prop_key + " ...")
+
             if prop_key in required_properties:
                 MIN_COUNT = "1"
             else:
                 MIN_COUNT = "0"
+
             if "type" in prop_value and prop_value["type"] == "array":
                 MAX_COUNT = "*"
                 target_reference = prop_value["items"]["$ref"]
             else:
                 MAX_COUNT = "1"
                 target_reference = prop_value["$ref"]
+
+            if prop_key in ansis_preferred_properties:
+                target_property_preferred = "Y"
+            else:
+                target_property_preferred = ""
+
             if target_reference:
+
                 print("Processing reference " + target_reference + " ...")
+
                 target_property = open_json_pointer(json_schema_path, "entities.json", target_reference)
-                # if isinstance(target_property["type"], (list, str)):
-                #     if isinstance(target_property["type"], list):
-                #         target_property_type = "; ".join(target_property["type"])
-                #     else:
-                #         target_property_type = target_property["type"]
-                # else:
-                #     target_property_type = ""
+
                 target_property_type = ""
+
+                target_property_enum_ref = ""
+                target_property_enum = {}
+                target_property_vocab = ""
+                target_property_comment = ""
                 target_property_description = ""
+
                 if "range@type" in target_property and isinstance(target_property["range@type"], (str,list)):
                     if isinstance(target_property["range@type"], list):
                         target_property_type = "; ".join(target_property["range@type"])
                     if isinstance(target_property["range@type"], str):
                         target_property_type = target_property["range@type"]
+
+                if "$comment" in target_property and isinstance(target_property["$comment"], str) and target_property["$comment"] != "":
+                    target_property_comment = " \[_" + target_property["$comment"] + "_\]"
+                
                 if "description" in target_property and isinstance(target_property["description"], str):
                     target_property_description = target_property["description"]
-            lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_type + " | " + target_property_description + " |")
+                target_property_description = (target_property_description + target_property_comment).lstrip(" ")
+                
+                if "$ref" in target_property and isinstance(target_property["$ref"], str) and "enum" in target_property["$ref"]:
+                    target_property_enum_ref = target_property["$ref"]
+                
+                if "allOf" in target_property and isinstance(target_property["allOf"],list):
+                    if isinstance(target_property["allOf"][0]["properties"]["hasResult"]["$ref"], str) and "enum" in target_property["allOf"][0]["properties"]["hasResult"]["$ref"]:
+                        target_property_enum_ref = target_property["allOf"][0]["properties"]["hasResult"]["$ref"]
+                
+                if target_property_enum_ref != "":
+                    target_property_enum = open_json_pointer(json_schema_path, "entities.json", target_property_enum_ref)
+                    target_property_vocab = target_property_enum["title"]
+            
+            lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_preferred + " | " + target_property_type + " | " + target_property_vocab + " | " + target_property_description + " |")
+
     return lines
 
 def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
