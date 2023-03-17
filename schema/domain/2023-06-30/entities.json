@@ -16,6 +16,17 @@
 				"hasGeometry",
 				"relatedProject"
 			],
+			"ansisPreferred": [
+				"designSite",
+				"designSurvey",
+				"purpose",
+				"drainage",
+				"hasLandUse",
+				"hasLandform",
+				"hasLandSurface",
+				"relatedSoilSurface",
+				"purpose"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -130,6 +141,10 @@
 				"procedure",
 				"depth"
 			],
+			"ansisPreferred": [
+				"purpose",
+				"drainage"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -188,6 +203,10 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
+				"classification",
+				"hasGeometry"
 			],
 			"properties": {
 				"id": {
@@ -262,6 +281,18 @@
 				"depthUpper",
 				"depthLower",
 				"relatedSoilBody"
+			],
+			"ansisPreferred": [
+				"texture",
+				"colour",
+				"permeability",
+				"hasStrength",
+				"hasStructure",
+				"hasCoarseFragments",
+				"hasMottles",
+				"chemistry",
+				"physical",
+				"biological"
 			],
 			"properties": {
 				"id": {
@@ -343,7 +374,7 @@
 				"hasStrength": {
 					"$ref": "./properties.json#strength"
 				},
-				"hasStrength": {
+				"hasStructure": {
 					"$ref": "./properties.json#structure"
 				},
 				"relatedSample": {
@@ -379,6 +410,18 @@
 				"depthLower",
 				"relatedSoilBody",
 				"designation"
+			],
+			"ansisPreferred": [
+				"texture",
+				"colour",
+				"permeability",
+				"hasStrength",
+				"hasStructure",
+				"hasCoarseFragments",
+				"hasMottles",
+				"chemistry",
+				"physical",
+				"biological"
 			],
 			"properties": {
 				"id": {
@@ -498,6 +541,12 @@
 				"isSampleOf",
 				"relatedProfile"
 			],
+			"ansisPreferred": [
+				"depthLower",
+				"depthUpper",
+				"type",
+				"component"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -542,6 +591,8 @@
 			"required": [
 				"@type",
 				"hasGeometry"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -596,6 +647,9 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+				"conditionWhenDry"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -627,6 +681,9 @@
 				"distance",
 				"depth"
 			],
+			"ansisPreferred": [
+				"confidence"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -647,6 +704,9 @@
 				"confidence": {
 					"$ref": "./properties.json#confidence"
 				},
+				"lithology": {
+					"$ref": "./properties.json#lithology"
+				},
 				"relatedSample": {
 					"$ref": "./properties.json#relatedSample"
 				},
@@ -665,6 +725,11 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+				"hasFeatureOfInterest",
+				"actsOnProperty",
+				"phenomenonTime"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -678,6 +743,9 @@
 				},
 				"hasFeatureOfInterest": {
 					"$ref": "./sosa.json#hasFeatureOfInterest"
+				},
+				"actsOnProperty": {
+					"$ref": "./sosa.json#actsOnProperty"
 				},
 				"phenomenonTime": {
 					"$ref": "./sosa.json#phenomenonTime"
@@ -700,6 +768,9 @@
 			"required": [
 				"@type",
 				"abundance"
+			],
+			"ansisPreferred": [
+				"shape"
 			],
 			"properties": {
 				"id": {
@@ -727,6 +798,8 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -747,6 +820,8 @@
 			"required": [
 				"@type",
 				"abundance"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -771,6 +846,9 @@
 			"required": [
 				"@type",
 				"type"
+			],
+			"ansisPreferred": [
+				"degree"
 			],
 			"properties": {
 				"id": {
@@ -799,6 +877,9 @@
 				"@type",
 				"frequency"
 			],
+			"ansisPreferred": [
+				"duration"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -809,6 +890,9 @@
 				},
 				"frequency": {
 					"$ref": "./properties.json#frequency"
+				},
+				"duration": {
+					"$ref": "./properties.json#duration-inundation"
 				}
 			},
 			"additionalProperties": false
@@ -821,6 +905,8 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -841,6 +927,8 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -863,6 +951,10 @@
 				"@type",
 				"aspect",
 				"elevation"
+			],
+			"ansisPreferred": [
+				"hasErosion",
+				"hasMicrorelief"
 			],
 			"properties": {
 				"id": {
@@ -905,6 +997,8 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -924,6 +1018,10 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
+				"hasLandformElement",
+				"hasLandformPattern"
 			],
 			"properties": {
 				"id": {
@@ -952,6 +1050,9 @@
 				"@type",
 				"slope",
 				"morphologicalType"
+			],
+			"ansisPreferred": [
+				"type"
 			],
 			"properties": {
 				"id": {
@@ -983,6 +1084,9 @@
 				"@type",
 				"relief",
 				"slope"
+			],
+			"ansisPreferred": [
+				"type"
 			],
 			"properties": {
 				"id": {
@@ -1019,6 +1123,8 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1052,6 +1158,8 @@
 				"@type",
 				"agent"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1075,6 +1183,8 @@
 			"required": [
 				"@type",
 				"type"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1100,6 +1210,8 @@
 				"@type",
 				"type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1124,6 +1236,8 @@
 				"@type",
 				"type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1147,6 +1261,10 @@
 			"required": [
 				"@type",
 				"abundance"
+			],
+			"ansisPreferred": [
+				"type",
+				"colour"
 			],
 			"properties": {
 				"id": {
@@ -1180,6 +1298,9 @@
 			"required": [
 				"@type",
 				"abundance",
+				"lithology"
+			],
+			"ansisPreferred": [
 				"lithology"
 			],
 			"properties": {
@@ -1218,6 +1339,9 @@
 				"@type",
 				"type"
 			],
+			"ansisPreferred": [
+				"cementation"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1228,6 +1352,9 @@
 				},
 				"type": {
 					"$ref": "./properties.json#ansis-type"
+				},
+				"cementation": {
+					"$ref": "./properties.json#cementation"
 				}
 			},
 			"additionalProperties": false
@@ -1241,6 +1368,8 @@
 			"required": [
 				"@type",
 				"abundance"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1265,6 +1394,8 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1285,6 +1416,8 @@
 			"required": [
 				"@type",
 				"abundance"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1310,6 +1443,8 @@
 				"@type",
 				"abundance",
 				"material"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1337,6 +1472,8 @@
 			"required": [
 				"@type",
 				"classificationOrder"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1386,6 +1523,8 @@
 				"value",
 				"scheme"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1411,6 +1550,11 @@
 			"required": [
 				"@type",
 				"designationMaster"
+			],
+			"ansisPreferred": [
+				"designationPrefix",
+				"designationSubdivision",
+				"designationSuffix"
 			],
 			"properties": {
 				"id": {
@@ -1446,6 +1590,8 @@
 				"moistureStatus",
 				"value"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1473,6 +1619,8 @@
 				"@type",
 				"type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1496,6 +1644,8 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1515,6 +1665,8 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1537,6 +1689,8 @@
 				"@type",
 				"moistureStatus",
 				"strength"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1564,6 +1718,10 @@
 			"required": [
 				"@type",
 				"type"
+			],
+			"ansisPreferred": [
+				"grade",
+				"size"
 			],
 			"properties": {
 				"id": {
@@ -1597,6 +1755,8 @@
 			"required": [
 				"@type"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1616,6 +1776,8 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
@@ -1640,16 +1802,9 @@
 				"relatedProject",
 				"relatedSite"
 			],
+			"ansisPreferred": [
+			],
 			"properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
 				"id": {
 					"$ref": "./base.json#id"
 				},
@@ -1688,6 +1843,9 @@
 				"@type",
 				"development"
 			],
+			"ansisPreferred": [
+				"pattern"
+			],
 			"properties": {
 				"id": {
 					"$ref": "./base.json#id"
@@ -1713,6 +1871,8 @@
 			"type": "object",
 			"required": [
 				"@type"
+			],
+			"ansisPreferred": [
 			],
 			"properties": {
 				"id": {
