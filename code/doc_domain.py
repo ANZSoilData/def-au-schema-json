@@ -34,11 +34,15 @@ def json_schema_to_markdown(json_schema_path, json_schema_file):
 
     lines.append("## Core Entities\n")
 
+    lines.append("> Core entities are those primary soil and sample entities that are provided, queried and downloaded in ANSIS.\n")
+
     for def_key, def_value in schema_definitions.items():
         if def_value["$anchor"] in core_entities:
             lines = process_schema_definitions(def_key, def_value, lines, json_schema_path)
 
     lines.append("## Other Entities\n")
+
+    lines.append("> Other entities refer to structured data object that provide values for properties of core entities. They are only provided as property values in core entities.\n")
 
     for def_key, def_value in schema_definitions.items():
         if def_value["$anchor"] not in core_entities:
@@ -56,8 +60,8 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path):
     
     print("Processing definition " + def_key + " ...")
 
-    lines.append("### " + def_value["title"] + " - `ansis:" + def_value["$anchor"] + "`\n")
-    lines.append(def_value["description"] + "\n")
+    lines.append("### ansis:" + def_value["$anchor"] + "\n")
+    lines.append("*" + def_value["title"] + "*. " + def_value["description"] + "\n")
 
     if "$comment" in def_value:
         lines.append("> " + def_value["$comment"] + "\n")

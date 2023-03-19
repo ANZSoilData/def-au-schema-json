@@ -7,9 +7,11 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 
 ## Core Entities
 
-### ANSIS Soil Site - `ansis:SoilSite`
+> Core entities are those primary soil and sample entities that are provided, queried and downloaded in ANSIS.
 
-A site where samples, observations, and treatments of soil are carried out.
+### ansis:SoilSite
+
+*ANSIS Soil Site*. A site where samples, observations, and treatments of soil are carried out.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -41,9 +43,9 @@ A site where samples, observations, and treatments of soil are carried out.
 | relatedSoilBody | 0..1 |  | ansis:SoilBody |  | link to a soil body related to this context |
 | relatedSoilSurface | 0..1 | Y | ansis:SoilSurface |  | soil surface of this entity |
 | type | 0..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
-### ANSIS Soil Profile - `ansis:SoilProfile`
+### ansis:SoilProfile
 
-A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.
+*ANSIS Soil Profile*. A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -61,9 +63,9 @@ A soil profile is a vertical section of a soil from the soil surface through all
 | relatedSample | 0..1 |  | ansis:SoilSample |  | link to a sample related to this context |
 | relatedSite | 1..1 |  | ansis:SoilSite |  | link to a soil site related to this context |
 | relatedSoilSurface | 0..1 |  | ansis:SoilSurface |  | soil surface of this entity |
-### ANSIS Soil Body - `ansis:SoilBody`
+### ansis:SoilBody
 
-Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.
+*ANSIS Soil Body*. Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -82,9 +84,9 @@ Part of the soil cover that is delineated at a scale useful for an application, 
 | relatedSample | 0..1 |  | ansis:SoilSample |  | link to a sample related to this context |
 | relatedSite | 0..1 |  | ansis:SoilSite |  | link to a soil site related to this context |
 | relatedSoilSurface | 0..1 |  | ansis:SoilSurface |  | soil surface of this entity |
-### ANSIS Soil Layer - `ansis:SoilLayer`
+### ansis:SoilLayer
 
-Region within a soil body usually observed as a specified depth interval within a profile.
+*ANSIS Soil Layer*. Region within a soil body usually observed as a specified depth interval within a profile.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -110,9 +112,9 @@ Region within a soil body usually observed as a specified depth interval within 
 | chemistry | 0..1 | Y | sosa:Observation |  | Laboratory measurements of soil chemical properties. |
 | physical | 0..1 | Y | sosa:Observation |  | Laboratory measurements of soil physical properties. |
 | biological | 0..1 | Y | sosa:Observation |  | Laboratory measurements of soil biological properties. |
-### ANSIS Soil Horizon - `ansis:SoilHorizon`
+### ansis:SoilHorizon
 
-Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.
+*ANSIS Soil Horizon*. Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -138,9 +140,9 @@ Soil layer which is compositionally and/or structurally homogeneous, delineated 
 | chemistry | 0..1 | Y | sosa:Observation |  | Laboratory measurements of soil chemical properties. |
 | physical | 0..1 | Y | sosa:Observation |  | Laboratory measurements of soil physical properties. |
 | biological | 0..1 | Y | sosa:Observation |  | Laboratory measurements of soil biological properties. |
-### ANSIS Soil Sample - `ansis:SoilSample`
+### ansis:SoilSample
 
-Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.
+*ANSIS Soil Sample*. Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -153,9 +155,9 @@ Sample of soil or soil entity. Sample is a key class in the context of observati
 | component | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | type of component element |
 | isSampleOf | 1..1 |  | ansis:SoilProfile; ansis:SoilBody; ansis:SoilLayer; ansis:SoilHorizon; ansis:SoilSurface; ansis:Substrate |  | template \[_Forcing a URI (link) for now._\] |
 | relatedProfile | 1..* |  | ansis:SoilProfile |  | Link to a soil profile related to this context. |
-### ANSIS Land Survey Site - `ansis:LandSurveySite`
+### ansis:LandSurveySite
 
-A Site established to make observations of landscape entities.
+*ANSIS Land Survey Site*. A Site established to make observations of landscape entities.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -170,9 +172,9 @@ A Site established to make observations of landscape entities.
 | hasLandform | 0..1 |  | ansis:Landform |  | a description of landform |
 | hasOutcrop | 0..1 |  | ansis:Outcrop |  | a description of rock outcrop at this entity |
 | relatedLandsurveySite | 0..1 |  | ansis:LandSurveySite |  | link to a land survey site related to this context |
-### ANSIS Soil Surface - `ansis:SoilSurface`
+### ansis:SoilSurface
 
-The surface of the soil body.
+*ANSIS Soil Surface*. The surface of the soil body.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -181,9 +183,9 @@ The surface of the soil body.
 | conditionWhenDry | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | surface condition when dry |
 | hasCoarseFragments | 0..1 |  | ansis:CoarseFragments |  | a description of coarse fragments |
 | relatedSoilBody | 0..1 |  | ansis:SoilBody |  | link to a soil body related to this context |
-### ANSIS Substrate - `ansis:Substrate`
+### ansis:Substrate
 
-Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.
+*ANSIS Substrate*. Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -196,9 +198,9 @@ Observed or inferred materials and masses of earth or rock that do not show pedo
 | lithology | 0..1 |  | sosa:ObservableProperty; skos:Concept | To Be Defined | lithological type of material |
 | relatedSample | 0..1 |  | ansis:SoilSample |  | link to a sample related to this context |
 | relatedSoilBody | 0..1 |  | ansis:SoilBody |  | link to a soil body related to this context |
-### ANSIS Treatment - `ansis:Treatment`
+### ansis:Treatment
 
-Intervention or treatment. Type of sosa:Actuation.
+*ANSIS Treatment*. Intervention or treatment. Type of sosa:Actuation.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -210,9 +212,11 @@ Intervention or treatment. Type of sosa:Actuation.
 | relatedActivity | 0..* |  | prov:Activity; sosa:Actuation; sosa:Observation; sosa:Sampling; ansis:SiteVisit; ansis:Treatment |  | link to an activity related to this context \[_[ISSUE] ontology has contradictory range/rangeIncludes statements_\] |
 ## Other Entities
 
-### ANSIS Coarse Fragments - `ansis:CoarseFragments`
+> Other entities refer to structured data object that provide values for properties of core entities. They are only provided as property values in core entities.
 
-Undefined.
+### ansis:CoarseFragments
+
+*ANSIS Coarse Fragments*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -220,26 +224,26 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
 | shape | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary |
-### ANSIS Cracks - `ansis:Cracks`
+### ansis:Cracks
 
-Undefined.
+*ANSIS Cracks*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Cutans - `ansis:Cutans`
+### ansis:Cutans
 
-Undefined.
+*ANSIS Cutans*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
-### ANSIS  - `ansis:Erosion`
+### ansis:Erosion
 
-Undefined.
+*ANSIS *. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -247,9 +251,9 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
 | degree | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | degree or severity or intensity of phenomenon \[_use conditional logic for enum $refs_\] |
-### ANSIS Inundation - `ansis:Inundation`
+### ansis:Inundation
 
-Undefined.
+*ANSIS Inundation*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -257,25 +261,25 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | frequency | 1..1 |  | sosa:ObservableProperty; qudt:QuantityValue |  | temporal frequency of event or phenomenon |
 | duration | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | \[_see #duration_\] |
-### ANSIS Land Cover - `ansis:LandCover`
+### ansis:LandCover
 
-Land cover, including vegetation.
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
-| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Land Management - `ansis:LandManagement`
-
-Undefined.
+*ANSIS Land Cover*. Land cover, including vegetation.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Land Surface - `ansis:LandSurface`
+### ansis:LandManagement
 
-Surface landscape features of a site.
+*ANSIS Land Management*. Undefined.
+
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
+| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
+### ansis:LandSurface
+
+*ANSIS Land Surface*. Surface landscape features of a site.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -288,17 +292,17 @@ Surface landscape features of a site.
 | hasErosion | 0..1 | Y | ansis:Erosion |  | a description of erosion |
 | hasMicrorelief | 0..1 | Y | ansis:Microrelief |  | a description of microrelief at the site |
 | hasInundation | 0..1 |  | ansis:Inundation |  | a description of inundation |
-### ANSIS Land Use - `ansis:LandUse`
+### ansis:LandUse
 
-Undefined.
+*ANSIS Land Use*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Landform - `ansis:Landform`
+### ansis:Landform
 
-Landscape features within which the site is located
+*ANSIS Landform*. Landscape features within which the site is located
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -306,9 +310,9 @@ Landscape features within which the site is located
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | hasLandformElement | 0..1 | Y | ansis:LandformElement |  | a description of landform element |
 | hasLandformPattern | 0..1 | Y | ansis:LandformPattern |  | a description of landform pattern |
-### ANSIS Landform Element - `ansis:LandformElement`
+### ansis:LandformElement
 
-Landform element (~40m).
+*ANSIS Landform Element*. Landform element (~40m).
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -317,9 +321,9 @@ Landform element (~40m).
 | slope | 1..1 |  | sosa:ObservableProperty; qudt:QuantityValue |  | divergence of surface from horizontal |
 | type | 0..1 | Y | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
 | morphologicalType | 1..1 |  | sosa:ObservableProperty; skos:Concept | To Be Defined | morphological type of landform element |
-### ANSIS Landform Pattern - `ansis:LandformPattern`
+### ansis:LandformPattern
 
-Undefined.
+*ANSIS Landform Pattern*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -330,9 +334,9 @@ Undefined.
 | slope | 1..1 |  | sosa:ObservableProperty; qudt:QuantityValue |  | divergence of surface from horizontal |
 | hasLandformElement | 0..1 |  | ansis:LandformElement |  | a description of landform element |
 | hasStreamChannel | 0..1 |  | ansis:StreamChannel |  | a description of stream channel occurrence |
-### ANSIS Microrelief - `ansis:Microrelief`
+### ansis:Microrelief
 
-Undefined.
+*ANSIS Microrelief*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -342,45 +346,45 @@ Undefined.
 | hasMicrorelief-gilgai | 0..1 |  | ansis:Microrelief_gilgai |  | a description of gilgai microrelief at the site |
 | hasMicrorelief-hummocky | 0..1 |  | ansis:Microrelief_hummocky |  | a description of hummocky microrelief at the site |
 | hasMicrorelief-other | 0..1 |  | ansis:Microrelief_other |  | a description of other microrelief at the site |
-### ANSIS Microrelief - Biotic - `ansis:Microrelief_biotic`
+### ansis:Microrelief_biotic
 
-Undefined.
+*ANSIS Microrelief - Biotic*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | agent | 1..1 |  |  | To Be Defined | agent of geomorphological or biotic activity \[_Requires conditional logical to support different vocabularies for different types._\] |
-### ANSIS Microrelief - Gilgai - `ansis:Microrelief_gilgai`
+### ansis:Microrelief_gilgai
 
-Undefined.
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
-| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-| type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
-### ANSIS Microrelief - Hummocky - `ansis:Microrelief_hummocky`
-
-Undefined.
+*ANSIS Microrelief - Gilgai*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
-### ANSIS Microrelief - Other - `ansis:Microrelief_other`
+### ansis:Microrelief_hummocky
 
-Undefined.
+*ANSIS Microrelief - Hummocky*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
-### ANSIS Mottles - `ansis:Mottles`
+### ansis:Microrelief_other
 
-Mottles and other colour patterns.
+*ANSIS Microrelief - Other*. Undefined.
+
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
+| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
+| type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
+### ansis:Mottles
+
+*ANSIS Mottles*. Mottles and other colour patterns.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -389,9 +393,9 @@ Mottles and other colour patterns.
 | type | 0..1 | Y | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
 | colour | 0..* | Y | sosa:ObservableProperty; ansis:SoilColour |  | a description of colour |
-### ANSIS Outcrop - `ansis:Outcrop`
+### ansis:Outcrop
 
-Rock outcrop.
+*ANSIS Outcrop*. Rock outcrop.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -402,9 +406,9 @@ Rock outcrop.
 | relatedLandsurveySite | 0..1 |  | ansis:LandSurveySite |  | link to a land survey site related to this context |
 | relatedSample | 0..1 |  | ansis:SoilSample |  | link to a sample related to this context |
 | relatedSite | 0..1 |  | ansis:SoilSite |  | link to a soil site related to this context |
-### ANSIS Pans - `ansis:Pans`
+### ansis:Pans
 
-Undefined.
+*ANSIS Pans*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -412,35 +416,35 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
 | cementation | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | degree of cementation |
-### ANSIS Pores - `ansis:Pores`
+### ansis:Pores
 
-Undefined.
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
-| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-| abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
-### ANSIS Profile Purpose - `ansis:Profile-purpose`
-
-Undefined.
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
-| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Roots - `ansis:Roots`
-
-Undefined.
+*ANSIS Pores*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
-### ANSIS Segregations - `ansis:Segregations`
+### ansis:Profile-purpose
 
-Undefined.
+*ANSIS Profile Purpose*. Undefined.
+
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
+| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
+### ansis:Roots
+
+*ANSIS Roots*. Undefined.
+
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
+| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
+| abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
+### ansis:Segregations
+
+*ANSIS Segregations*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -448,9 +452,9 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[_Requires conditional logical to support different vocabularies for different types._\] |
 | material | 1..1 |  | sosa:ObservableProperty |  | material or composition of entity or element |
-### ANSIS Australian Soil Classification - `ansis:ASC_SoilClassification`
+### ansis:ASC_SoilClassification
 
-Structure Australian Soil Classification value
+*ANSIS Australian Soil Classification*. Structure Australian Soil Classification value
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -465,9 +469,9 @@ Structure Australian Soil Classification value
 | classificationOrder | 1..1 |  | skos:Concept | To Be Defined | soil classification - Order |
 | classificationSubGroup | 0..1 |  | skos:Concept | To Be Defined | soil classification - Subgroup |
 | classificationSubOrder | 0..1 |  | skos:Concept | To Be Defined | soil classification - Sub-order |
-### ANSIS Soil Classification - `ansis:SoilClassification`
+### ansis:SoilClassification
 
-
+*ANSIS Soil Classification*. 
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -475,9 +479,9 @@ Structure Australian Soil Classification value
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | value | 1..1 |  | sosa:ObservableProperty; xs:boolean; xs:integer; xs:decimal; xs:string; xs:dateTime |  | literal value |
 | scheme | 1..1 |  |  |  | A simple object supporting a link (e.g. a hyperlink) to another entity with extra properties to help label a link, or clarify the type of target. |
-### ANSIS Soil Horizon Designation - `ansis:HorizonDesignation`
+### ansis:HorizonDesignation
 
-Soil horizon designation. 
+*ANSIS Soil Horizon Designation*. Soil horizon designation. 
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -487,9 +491,9 @@ Soil horizon designation.
 | designationSubdivision | 0..1 | Y | xs:integer |  | soil horizon designation subdivision |
 | designationSuffix | 0..1 | Y | skos:Concept | To Be Defined | soil horizon designation subdivision |
 | designationMaster | 1..1 |  | skos:Concept | To Be Defined | soil horizon designation master |
-### ANSIS Soil Colour - `ansis:SoilColour`
+### ansis:SoilColour
 
-Undefined.
+*ANSIS Soil Colour*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -497,34 +501,34 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | moistureStatus | 1..1 |  | sosa:ObservableProperty; skos:Concept | To Be Defined | moisture state of material while property evaluation is carried out |
 | value | 1..1 |  | sosa:ObservableProperty; xs:boolean; xs:integer; xs:decimal; xs:string; xs:dateTime |  | literal value |
-### ANSIS Soil Plasticity - `ansis:SoilPlasticity`
+### ansis:SoilPlasticity
 
-Undefined.
+*ANSIS Soil Plasticity*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | type | 1..1 |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
-### ANSIS Soil Sample Type - `ansis:SoilSampleType`
+### ansis:SoilSampleType
 
-Undefined. [ISSUE: real?]
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
-| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Soil Site Design - `ansis:SoilSite-design`
-
-Undefined.
+*ANSIS Soil Sample Type*. Undefined. [ISSUE: real?]
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Soil Strength - `ansis:SoilStrength`
+### ansis:SoilSite-design
 
-Undefined.
+*ANSIS Soil Site Design*. Undefined.
+
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
+| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
+### ansis:SoilStrength
+
+*ANSIS Soil Strength*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -532,9 +536,9 @@ Undefined.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | moistureStatus | 1..1 |  | sosa:ObservableProperty; skos:Concept | To Be Defined | moisture state of material while property evaluation is carried out |
 | strength | 1..1 |  | sosa:ObservableProperty; ansis:SoilStrength |  | strength of material |
-### ANSIS Soil Structure - `ansis:SoilStructure`
+### ansis:SoilStructure
 
-Soil structure or pedality.
+*ANSIS Soil Structure*. Soil structure or pedality.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -543,25 +547,25 @@ Soil structure or pedality.
 | type | 1..* |  | ansis:SiteType; ansis:SoilSampleType |  | type of ansis soil entity \[_Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_\] |
 | grade | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | grade or degree of development of structure |
 | size | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | geometric scale and extent of element |
-### ANSIS Site Purpose - `ansis:Site-purpose`
+### ansis:Site-purpose
 
-Undefined.
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
-| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Site Type - `ansis:SiteType`
-
-Type of land survey site e.g. monitoring, opportunistic, farm, pedology.
+*ANSIS Site Purpose*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
-### ANSIS Site Visit - `ansis:SiteVisit`
+### ansis:SiteType
 
-A visit to a designated site, for the purpose of taking samples, making observations, and other activities.
+*ANSIS Site Type*. Type of land survey site e.g. monitoring, opportunistic, farm, pedology.
+
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| id | 0..1 |  | xs:string |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[_Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_\] |
+| @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
+### ansis:SiteVisit
+
+*ANSIS Site Visit*. A visit to a designated site, for the purpose of taking samples, making observations, and other activities.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -572,9 +576,9 @@ A visit to a designated site, for the purpose of taking samples, making observat
 | relatedLandsurveySite | 0..1 |  | ansis:LandSurveySite |  | link to a land survey site related to this context |
 | relatedActivity | 1..* |  | prov:Activity; sosa:Actuation; sosa:Observation; sosa:Sampling; ansis:SiteVisit; ansis:Treatment |  | link to an activity related to this context \[_[ISSUE] ontology has contradictory range/rangeIncludes statements_\] |
 | relatedSite | 1..1 |  | ansis:SoilSite |  | link to a soil site related to this context |
-### ANSIS Stream Channel - `ansis:StreamChannel`
+### ansis:StreamChannel
 
-Stream channel details.
+*ANSIS Stream Channel*. Stream channel details.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -582,9 +586,9 @@ Stream channel details.
 | @type | 1..1 |  | xs:anyURI |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[_After: https://www.w3.org/TR/json-ld/#specifying-the-type_\] |
 | development | 1..1 |  | sosa:ObservableProperty; skos:Concept | To Be Defined | degree of development of element |
 | pattern | 0..1 | Y | sosa:ObservableProperty; skos:Concept | To Be Defined | spatial pattern of channels or other linear element |
-### ANSIS Survey Design - `ansis:Survey-design`
+### ansis:Survey-design
 
-Undefined.
+*ANSIS Survey Design*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[_Comment_\] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
