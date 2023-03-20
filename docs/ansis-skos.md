@@ -13,5 +13,5 @@ Reusable SKOS objects for vocabulary entries.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| prefLabel | 1..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | The preferred label for the Concept. |
+| prefLabel | 1..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | The preferred label for the concept. |
 | definition | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A complete explanation of the intended meaning of a concept. |

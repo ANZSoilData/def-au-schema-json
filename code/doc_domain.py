@@ -302,18 +302,18 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
     
     schema_file.close()
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "geosparql.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "geosparql.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
