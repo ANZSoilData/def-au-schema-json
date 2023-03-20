@@ -261,4 +261,6 @@ json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
 
+json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+
 json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
