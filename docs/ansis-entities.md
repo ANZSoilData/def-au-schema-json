@@ -9,7 +9,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 
 > Core entities are those primary soil and sample entities that are provided, queried and downloaded in ANSIS.
 
-### entities:SoilSite
+### ansis:SoilSite
 
 *ANSIS Soil Site*. A site where samples, observations, and treatments of soil are carried out.
 
@@ -43,7 +43,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | relatedSoilBody | 0..1 |  | [ansis:SoilBody](#ansisSoilBody) |  | link to a soil body related to this context |
 | relatedSoilSurface | 0..1 | Y | [ansis:SoilSurface](#ansisSoilSurface) |  | soil surface of this entity |
 | type | 0..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
-### entities:SoilProfile
+### ansis:SoilProfile
 
 *ANSIS Soil Profile*. A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.
 
@@ -63,7 +63,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | relatedSample | 0..1 |  | [ansis:SoilSample](#ansisSoilSample) |  | link to a sample related to this context |
 | relatedSite | 1..1 |  | [ansis:SoilSite](#ansisSoilSite) |  | link to a soil site related to this context |
 | relatedSoilSurface | 0..1 |  | [ansis:SoilSurface](#ansisSoilSurface) |  | soil surface of this entity |
-### entities:SoilBody
+### ansis:SoilBody
 
 *ANSIS Soil Body*. Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.
 
@@ -84,7 +84,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | relatedSample | 0..1 |  | [ansis:SoilSample](#ansisSoilSample) |  | link to a sample related to this context |
 | relatedSite | 0..1 |  | [ansis:SoilSite](#ansisSoilSite) |  | link to a soil site related to this context |
 | relatedSoilSurface | 0..1 |  | [ansis:SoilSurface](#ansisSoilSurface) |  | soil surface of this entity |
-### entities:SoilLayer
+### ansis:SoilLayer
 
 *ANSIS Soil Layer*. Region within a soil body usually observed as a specified depth interval within a profile.
 
@@ -112,7 +112,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | chemistry | 0..1 | Y | [sosa:Observation](./ansis-sosa.md#sosaObservation) |  | Laboratory measurements of soil chemical properties. |
 | physical | 0..1 | Y | [sosa:Observation](./ansis-sosa.md#sosaObservation) |  | Laboratory measurements of soil physical properties. |
 | biological | 0..1 | Y | [sosa:Observation](./ansis-sosa.md#sosaObservation) |  | Laboratory measurements of soil biological properties. |
-### entities:SoilHorizon
+### ansis:SoilHorizon
 
 *ANSIS Soil Horizon*. Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.
 
@@ -140,7 +140,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | chemistry | 0..1 | Y | [sosa:Observation](./ansis-sosa.md#sosaObservation) |  | Laboratory measurements of soil chemical properties. |
 | physical | 0..1 | Y | [sosa:Observation](./ansis-sosa.md#sosaObservation) |  | Laboratory measurements of soil physical properties. |
 | biological | 0..1 | Y | [sosa:Observation](./ansis-sosa.md#sosaObservation) |  | Laboratory measurements of soil biological properties. |
-### entities:SoilSample
+### ansis:SoilSample
 
 *ANSIS Soil Sample*. Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.
 
@@ -155,7 +155,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | component | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | type of component element |
 | isSampleOf | 1..1 |  | [ansis:SoilProfile](#ansisSoilProfile); [ansis:SoilBody](#ansisSoilBody); [ansis:SoilLayer](#ansisSoilLayer); [ansis:SoilHorizon](#ansisSoilHorizon); [ansis:SoilSurface](#ansisSoilSurface); [ansis:Substrate](#ansisSubstrate) |  | template \[ _Forcing a URI (link) for now._ \] |
 | relatedProfile | 1..* |  | [ansis:SoilProfile](#ansisSoilProfile) |  | Link to a soil profile related to this context. |
-### entities:LandSurveySite
+### ansis:LandSurveySite
 
 *ANSIS Land Survey Site*. A Site established to make observations of landscape entities.
 
@@ -172,7 +172,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | hasLandform | 0..1 |  | [ansis:Landform](#ansisLandform) |  | a description of landform |
 | hasOutcrop | 0..1 |  | [ansis:Outcrop](#ansisOutcrop) |  | a description of rock outcrop at this entity |
 | relatedLandsurveySite | 0..1 |  | [ansis:LandSurveySite](#ansisLandSurveySite) |  | link to a land survey site related to this context |
-### entities:SoilSurface
+### ansis:SoilSurface
 
 *ANSIS Soil Surface*. The surface of the soil body.
 
@@ -183,7 +183,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | conditionWhenDry | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | surface condition when dry |
 | hasCoarseFragments | 0..1 |  | [ansis:CoarseFragments](#ansisCoarseFragments) |  | a description of coarse fragments |
 | relatedSoilBody | 0..1 |  | [ansis:SoilBody](#ansisSoilBody) |  | link to a soil body related to this context |
-### entities:Substrate
+### ansis:Substrate
 
 *ANSIS Substrate*. Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.
 
@@ -198,7 +198,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | lithology | 0..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | lithological type of material |
 | relatedSample | 0..1 |  | [ansis:SoilSample](#ansisSoilSample) |  | link to a sample related to this context |
 | relatedSoilBody | 0..1 |  | [ansis:SoilBody](#ansisSoilBody) |  | link to a soil body related to this context |
-### entities:Treatment
+### ansis:Treatment
 
 *ANSIS Treatment*. Intervention or treatment. Type of sosa:Actuation.
 
@@ -214,7 +214,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 
 > Datatype entities refer to structured data object that provide values for properties of core entities. They are only provided as property values in core entities.
 
-### entities:CoarseFragments
+### ansis:CoarseFragments
 
 *ANSIS Coarse Fragments*. Undefined.
 
@@ -224,7 +224,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
 | shape | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary |
-### entities:Cracks
+### ansis:Cracks
 
 *ANSIS Cracks*. Undefined.
 
@@ -232,7 +232,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:Cutans
+### ansis:Cutans
 
 *ANSIS Cutans*. Undefined.
 
@@ -241,7 +241,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
-### entities:Erosion
+### ansis:Erosion
 
 *ANSIS *. Undefined.
 
@@ -251,7 +251,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | type | 1..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
 | degree | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | degree or severity or intensity of phenomenon \[ _use conditional logic for enum $refs_ \] |
-### entities:Inundation
+### ansis:Inundation
 
 *ANSIS Inundation*. Undefined.
 
@@ -261,7 +261,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | frequency | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [qudt:QuantityValue](./ansis-qudt.md#qudtQuantityValue) |  | temporal frequency of event or phenomenon |
 | duration | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | \[ _see #duration_ \] |
-### entities:LandCover
+### ansis:LandCover
 
 *ANSIS Land Cover*. Land cover, including vegetation.
 
@@ -269,7 +269,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:LandManagement
+### ansis:LandManagement
 
 *ANSIS Land Management*. Undefined.
 
@@ -277,7 +277,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:LandSurface
+### ansis:LandSurface
 
 *ANSIS Land Surface*. Surface landscape features of a site.
 
@@ -292,7 +292,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | hasErosion | 0..1 | Y | [ansis:Erosion](#ansisErosion) |  | a description of erosion |
 | hasMicrorelief | 0..1 | Y | [ansis:Microrelief](#ansisMicrorelief) |  | a description of microrelief at the site |
 | hasInundation | 0..1 |  | [ansis:Inundation](#ansisInundation) |  | a description of inundation |
-### entities:LandUse
+### ansis:LandUse
 
 *ANSIS Land Use*. Undefined.
 
@@ -300,7 +300,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:Landform
+### ansis:Landform
 
 *ANSIS Landform*. Landscape features within which the site is located
 
@@ -310,7 +310,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | hasLandformElement | 0..1 | Y | [ansis:LandformElement](#ansisLandformElement) |  | a description of landform element |
 | hasLandformPattern | 0..1 | Y | [ansis:LandformPattern](#ansisLandformPattern) |  | a description of landform pattern |
-### entities:LandformElement
+### ansis:LandformElement
 
 *ANSIS Landform Element*. Landform element (~40m).
 
@@ -321,7 +321,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | slope | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [qudt:QuantityValue](./ansis-qudt.md#qudtQuantityValue) |  | divergence of surface from horizontal |
 | type | 0..1 | Y | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
 | morphologicalType | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | morphological type of landform element |
-### entities:LandformPattern
+### ansis:LandformPattern
 
 *ANSIS Landform Pattern*. Undefined.
 
@@ -334,7 +334,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | slope | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [qudt:QuantityValue](./ansis-qudt.md#qudtQuantityValue) |  | divergence of surface from horizontal |
 | hasLandformElement | 0..1 |  | [ansis:LandformElement](#ansisLandformElement) |  | a description of landform element |
 | hasStreamChannel | 0..1 |  | [ansis:StreamChannel](#ansisStreamChannel) |  | a description of stream channel occurrence |
-### entities:Microrelief
+### ansis:Microrelief
 
 *ANSIS Microrelief*. Undefined.
 
@@ -346,7 +346,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | hasMicrorelief-gilgai | 0..1 |  | [ansis:Microrelief_gilgai](#ansisMicrorelief_gilgai) |  | a description of gilgai microrelief at the site |
 | hasMicrorelief-hummocky | 0..1 |  | [ansis:Microrelief_hummocky](#ansisMicrorelief_hummocky) |  | a description of hummocky microrelief at the site |
 | hasMicrorelief-other | 0..1 |  | [ansis:Microrelief_other](#ansisMicrorelief_other) |  | a description of other microrelief at the site |
-### entities:Microrelief_biotic
+### ansis:Microrelief_biotic
 
 *ANSIS Microrelief - Biotic*. Undefined.
 
@@ -355,7 +355,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | agent | 1..1 |  |  | To Be Defined | agent of geomorphological or biotic activity \[ _Requires conditional logical to support different vocabularies for different types._ \] |
-### entities:Microrelief_gilgai
+### ansis:Microrelief_gilgai
 
 *ANSIS Microrelief - Gilgai*. Undefined.
 
@@ -364,7 +364,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | type | 1..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
-### entities:Microrelief_hummocky
+### ansis:Microrelief_hummocky
 
 *ANSIS Microrelief - Hummocky*. Undefined.
 
@@ -373,7 +373,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | type | 1..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
-### entities:Microrelief_other
+### ansis:Microrelief_other
 
 *ANSIS Microrelief - Other*. Undefined.
 
@@ -382,7 +382,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | type | 1..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
-### entities:Mottles
+### ansis:Mottles
 
 *ANSIS Mottles*. Mottles and other colour patterns.
 
@@ -393,7 +393,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | type | 0..1 | Y | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
 | colour | 0..* | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [ansis:SoilColour](#ansisSoilColour) |  | a description of colour |
-### entities:Outcrop
+### ansis:Outcrop
 
 *ANSIS Outcrop*. Rock outcrop.
 
@@ -406,7 +406,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | relatedLandsurveySite | 0..1 |  | [ansis:LandSurveySite](#ansisLandSurveySite) |  | link to a land survey site related to this context |
 | relatedSample | 0..1 |  | [ansis:SoilSample](#ansisSoilSample) |  | link to a sample related to this context |
 | relatedSite | 0..1 |  | [ansis:SoilSite](#ansisSoilSite) |  | link to a soil site related to this context |
-### entities:Pans
+### ansis:Pans
 
 *ANSIS Pans*. Undefined.
 
@@ -416,7 +416,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | type | 1..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
 | cementation | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | degree of cementation |
-### entities:Pores
+### ansis:Pores
 
 *ANSIS Pores*. Undefined.
 
@@ -425,7 +425,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
-### entities:Profile-purpose
+### ansis:Profile-purpose
 
 *ANSIS Profile Purpose*. Undefined.
 
@@ -433,7 +433,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:Roots
+### ansis:Roots
 
 *ANSIS Roots*. Undefined.
 
@@ -442,7 +442,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
-### entities:Segregations
+### ansis:Segregations
 
 *ANSIS Segregations*. Undefined.
 
@@ -452,7 +452,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | abundance | 1..1 |  |  | To Be Defined | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
 | material | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty) |  | material or composition of entity or element |
-### entities:ASC_SoilClassification
+### ansis:ASC_SoilClassification
 
 *ANSIS Australian Soil Classification*. Structure Australian Soil Classification value
 
@@ -469,7 +469,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | classificationOrder | 1..1 |  | [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | soil classification - Order |
 | classificationSubGroup | 0..1 |  | [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | soil classification - Subgroup |
 | classificationSubOrder | 0..1 |  | [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | soil classification - Sub-order |
-### entities:SoilClassification
+### ansis:SoilClassification
 
 *ANSIS Soil Classification*. 
 
@@ -479,7 +479,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | value | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean); [xs:integer](https://www.w3.org/TR/xmlschema-2/#integer); [xs:decimal](https://www.w3.org/TR/xmlschema-2/#decimal); [xs:string](https://www.w3.org/TR/xmlschema-2/#string); [xs:dateTime](https://www.w3.org/TR/xmlschema-2/#dateTime) |  | literal value |
 | scheme | 1..1 |  |  |  | A simple object supporting a link (e.g. a hyperlink) to another entity with extra properties to help label a link, or clarify the type of target. |
-### entities:HorizonDesignation
+### ansis:HorizonDesignation
 
 *ANSIS Soil Horizon Designation*. Soil horizon designation. 
 
@@ -491,7 +491,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | designationSubdivision | 0..1 | Y | [xs:integer](https://www.w3.org/TR/xmlschema-2/#integer) |  | soil horizon designation subdivision |
 | designationSuffix | 0..1 | Y | [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | soil horizon designation subdivision |
 | designationMaster | 1..1 |  | [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | soil horizon designation master |
-### entities:SoilColour
+### ansis:SoilColour
 
 *ANSIS Soil Colour*. Undefined.
 
@@ -501,7 +501,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | moistureStatus | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | moisture state of material while property evaluation is carried out |
 | value | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean); [xs:integer](https://www.w3.org/TR/xmlschema-2/#integer); [xs:decimal](https://www.w3.org/TR/xmlschema-2/#decimal); [xs:string](https://www.w3.org/TR/xmlschema-2/#string); [xs:dateTime](https://www.w3.org/TR/xmlschema-2/#dateTime) |  | literal value |
-### entities:SoilPlasticity
+### ansis:SoilPlasticity
 
 *ANSIS Soil Plasticity*. Undefined.
 
@@ -510,7 +510,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | type | 1..1 |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
-### entities:SoilSampleType
+### ansis:SoilSampleType
 
 *ANSIS Soil Sample Type*. Undefined. [ISSUE: real?]
 
@@ -518,7 +518,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:SoilSite-design
+### ansis:SoilSite-design
 
 *ANSIS Soil Site Design*. Undefined.
 
@@ -526,7 +526,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:SoilStrength
+### ansis:SoilStrength
 
 *ANSIS Soil Strength*. Undefined.
 
@@ -536,7 +536,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | moistureStatus | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | moisture state of material while property evaluation is carried out |
 | strength | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [ansis:SoilStrength](#ansisSoilStrength) |  | strength of material |
-### entities:SoilStructure
+### ansis:SoilStructure
 
 *ANSIS Soil Structure*. Soil structure or pedality.
 
@@ -547,7 +547,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | type | 1..* |  | [ansis:SiteType](#ansisSiteType); [ansis:SoilSampleType](#ansisSoilSampleType) |  | type of ansis soil entity \[ _Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?_ \] |
 | grade | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | grade or degree of development of structure |
 | size | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | geometric scale and extent of element |
-### entities:Site-purpose
+### ansis:Site-purpose
 
 *ANSIS Site Purpose*. Undefined.
 
@@ -555,7 +555,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:SiteType
+### ansis:SiteType
 
 *ANSIS Site Type*. Type of land survey site e.g. monitoring, opportunistic, farm, pedology.
 
@@ -563,7 +563,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | id | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A local system identifier (i.e. not intended or gauranteed to be universally unique) for an object in the ANSIS system. \[ _Generated by ANSIS. Used to link data together during mapping and processing. After: https://jsonapi.org/format/#document-resource-object-identification_ \] |
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
-### entities:SiteVisit
+### ansis:SiteVisit
 
 *ANSIS Site Visit*. A visit to a designated site, for the purpose of taking samples, making observations, and other activities.
 
@@ -576,7 +576,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | relatedLandsurveySite | 0..1 |  | [ansis:LandSurveySite](#ansisLandSurveySite) |  | link to a land survey site related to this context |
 | relatedActivity | 1..* |  | [prov:Activity](./ansis-prov.md#provActivity); [sosa:Actuation](./ansis-sosa.md#sosaActuation); [sosa:Observation](./ansis-sosa.md#sosaObservation); [sosa:Sampling](./ansis-sosa.md#sosaSampling); [ansis:SiteVisit](#ansisSiteVisit); [ansis:Treatment](#ansisTreatment) |  | link to an activity related to this context \[ _[ISSUE] ontology has contradictory range/rangeIncludes statements_ \] |
 | relatedSite | 1..1 |  | [ansis:SoilSite](#ansisSoilSite) |  | link to a soil site related to this context |
-### entities:StreamChannel
+### ansis:StreamChannel
 
 *ANSIS Stream Channel*. Stream channel details.
 
@@ -586,7 +586,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | development | 1..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | degree of development of element |
 | pattern | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | To Be Defined | spatial pattern of channels or other linear element |
-### entities:Survey-design
+### ansis:Survey-design
 
 *ANSIS Survey Design*. Undefined.
 
