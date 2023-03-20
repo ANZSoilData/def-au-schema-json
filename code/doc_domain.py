@@ -130,12 +130,12 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
         lines.append(enum_value["description"] + "\n")
 
         lines.append(
-            r"| ID | Preferred Label |")
+            r"| JSON Value | Preferred Label | Definition Link |")
         lines.append(
-            "| -------- | ----------- |")
+            "| ---------- | --------------- | --------------- |")
         
         for item in enum_value["oneOf"]:
-            lines.append("| " + item["const"] + " | " + item["description"] + " |")
+            lines.append("| " + item["const"] + " | " + item["description"] + " | |")
 
     md_file.write("\n".join(lines))
 
@@ -244,7 +244,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                 if target_property_enum_ref != "":
                     target_property_enum = open_json_pointer(
                         json_schema_path, "entities.json", target_property_enum_ref)
-                    target_property_vocab = target_property_enum["title"]
+                    target_property_vocab = "[" + target_property_enum["title"] + "](" + "./ansis-enum.md#" + target_property_enum["title"].replace(" ", "-") + ")"
 
             lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_preferred +
                          " | " + target_property_type + " | " + target_property_vocab + " | " + target_property_description + " |")
@@ -304,7 +304,7 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
 
 # json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
 # json_schema_to_markdown("schema/domain/2023-06-30/", "geosparql.json")
 
@@ -316,4 +316,4 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
 
 # json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
