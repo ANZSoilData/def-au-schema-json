@@ -12,6 +12,3 @@ JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ont
 *WKT Literal*. A Well-known Text serialization of a geometry object.
 
 > Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA 2020 (EPSG:7844)?
-
-| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
-| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |

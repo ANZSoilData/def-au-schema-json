@@ -172,10 +172,11 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
 
         schema_properties = pandas.DataFrame(def_value["properties"])
 
-        lines.append(
-            r"| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |")
-        lines.append(
-            "| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |")
+        if def_value["properties"] != {}:
+            lines.append(
+                r"| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |")
+            lines.append(
+                "| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |")
 
         for prop_key, prop_value in schema_properties.items():
 
