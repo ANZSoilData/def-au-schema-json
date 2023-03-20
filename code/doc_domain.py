@@ -306,7 +306,7 @@ json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "geosparql.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 

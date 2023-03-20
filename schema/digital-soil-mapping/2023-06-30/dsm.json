@@ -37,7 +37,7 @@
 					"const": "ansis:SoilSample"
 				},
 				"hasGeometry": {
-					"$ref": "../../domain/2023-06-30/geosparql.json#hasGeometry",
+					"$ref": "../../domain/2023-06-30/geo.json#hasGeometry",
 					"$comment": "Use X,Y values instead of EWKT?"
 				},
 				"depthLower": {

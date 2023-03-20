@@ -49,7 +49,7 @@
 					"$comment": "From hasGeometry."
 				},
 				"hasGeometry": {
-					"$ref": "../../domain/2023-06-30/geosparql.json#wktLiteral",
+					"$ref": "../../domain/2023-06-30/geo.json#wktLiteral",
 					"$comment": "Result WKT only, removed observable property object."
 				},
 				"depthLower": {

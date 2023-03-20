@@ -38,7 +38,7 @@
 				"hasGeometry": {
 					"type": "array",
 					"items": {
-						"$ref": "./geosparql.json#hasGeometry"
+						"$ref": "./geo.json#hasGeometry"
 					}
 				},
 				"isSampleOf": {
@@ -166,7 +166,7 @@
 					"$ref": "./properties.json#purpose"
 				},
 				"hasGeometry": {
-					"$ref": "./geosparql.json#hasGeometry"
+					"$ref": "./geo.json#hasGeometry"
 				},
 				"hasRoots": {
 					"$ref": "./properties.json#hasRoots"
@@ -225,7 +225,7 @@
 				"hasGeometry": {
 					"type": "array",
 					"items": {
-						"$ref": "./geosparql.json#hasGeometry"
+						"$ref": "./geo.json#hasGeometry"
 					}
 				},
 				"hasLandManagement": {
@@ -559,7 +559,7 @@
 					"$ref": "./properties.json#ansis-type"
 				},
 				"hasGeometry": {
-					"$ref": "./geosparql.json#hasGeometry"
+					"$ref": "./geo.json#hasGeometry"
 				},
 				"depthLower": {
 					"$ref": "./properties.json#depth-upper"
@@ -605,7 +605,7 @@
 				"hasGeometry": {
 					"type": "array",
 					"items": {
-						"$ref": "./geosparql.json#hasGeometry"
+						"$ref": "./geo.json#hasGeometry"
 					}
 				},
 				"hasErosion": {

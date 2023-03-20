@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/geosparql.json",
+	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/geo.json",
 	"title": "OGC GeoSPARQL Property Schema",
 	"description": "JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology.",
 	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl and http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf.",
@@ -43,7 +43,8 @@
 				"SRID=7844;POINT(-42 24)",
 				"SRID=7844;LINESTRING(-42 24, -42 42)",
 				"SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
-			]
+			],
+			"properties": {}
 		}
 	}
 }
