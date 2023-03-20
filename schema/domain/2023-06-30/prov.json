@@ -12,6 +12,9 @@
             "$ref": "#Activity"
         },
         {
+            "$ref": "#Agent"
+        },
+        {
             "$ref": "#Person"
         },
         {
@@ -51,11 +54,11 @@
             },
             "additionalProperties": false
         },
-        "Organization": {
-            "$anchor": "Organization",
-            "@id": "prov:Organization",
-            "title": "PROV Organization",
-            "description": "An organization is a social or legal institution such as a company, society, etc.",
+        "Agent": {
+            "$anchor": "Agent",
+            "@id": "prov:Agent",
+            "title": "PROV Agent",
+            "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
 			"type": "object",
             "required": [
                 "@type"
@@ -80,11 +83,11 @@
             },
             "additionalProperties": false
         },
-        "Agent": {
-            "$anchor": "Agent",
-            "@id": "prov:Agent",
-            "title": "PROV Agent",
-            "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
+        "Organization": {
+            "$anchor": "Organization",
+            "@id": "prov:Organization",
+            "title": "PROV Organization",
+            "description": "An organization is a social or legal institution such as a company, society, etc.",
 			"type": "object",
             "required": [
                 "@type"

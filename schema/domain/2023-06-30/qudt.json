@@ -16,12 +16,20 @@
 			],
 			"properties": {
 				"value": {
-					"type": "number"
+					"$ref": "#value"
 				},
 				"unit": {
 					"$ref": "#unit"
 				}
 			}
+		},
+		"value": {
+			"$anchor": "value",
+			"@id": "qudt:value",
+			"range@type": ["xs:decimal","xs:integer"],
+			"title": "Value",
+			"description": "The numerical value.",
+			"type": "number"
 		},
 		"unit": {
 			"$anchor": "unit",

@@ -19,6 +19,9 @@
 		},
 		{
 			"$ref": "#Sampling"
+		},
+		{
+			"$ref": "#Sensor"
 		}
 	],
 	"definitions": {
@@ -32,14 +35,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -64,14 +61,8 @@
 				"usedProcedure"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -140,14 +131,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -166,14 +151,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -194,14 +173,8 @@
 				"result"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -226,14 +199,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -399,10 +366,10 @@
 		"qualityOfObservation": {
 			"$anchor": "qualityOfObservation",
 			"@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
-			"range@type": "TDB",
+			"range@type": ["skos:Concept"],
 			"title": "Quality of Observation",
 			"description": "The adjudged quality of the Result.",
-			"$comment": "placeholder",
+			"$comment": "To be expanded - using skos:Concept for qualitative descriptions of quality.",
 			"type": "null"
 		}
 	}
