@@ -3,6 +3,8 @@
 import json
 import pandas
 
+# Yes ... this needs major refactoring into smaller functions.
+# ... and explanatory comments.
 
 def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_instance_file=""):
     '''Takes a JSON Schema and turns it into a table in a mark-down document.'''
@@ -91,6 +93,53 @@ def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_inst
 
     schema_file.close()
     core_entity_file.close()
+    md_file.close()
+
+
+def json_enum_to_markdown(json_schema_path, json_enum_file):
+    '''Takes a JSON Enumeration Schema and turns it into a table in a mark-down document.'''
+
+    md_file_name = "docs/ansis-" + json_enum_file.split(".")[0] + ".md"
+
+    enum_file = open(json_schema_path + json_enum_file, "r")
+    md_file = open(md_file_name, "w")
+
+    enum_root = json.loads(enum_file.read())
+    lines = []
+
+    lines.append("# " + enum_root["title"])
+
+    lines.append("**JSON Schema Location:** " + enum_root["$id"] + "\n")
+
+    lines.append(enum_root["description"] + "\n")
+
+    if "$comment" in enum_root and isinstance(enum_root["$comment"], str):
+        lines.append("> " + enum_root["$comment"] + "\n")
+
+    enum_definitions = pandas.DataFrame(enum_root["definitions"])
+
+    for enum_key, enum_value in enum_definitions.items():
+
+        print("Processing enum", enum_key, "...")
+
+        lines.append("## " + enum_value["title"] + "\n")
+
+        if "@id" in enum_value and isinstance(enum_value["@id"], str):
+            lines.append("**ANSIS Vocabulary Location:** " + enum_value["@id"] + "\n")
+
+        lines.append(enum_value["description"] + "\n")
+
+        lines.append(
+            r"| ID | Preferred Label |")
+        lines.append(
+            "| -------- | ----------- |")
+        
+        for item in enum_value["oneOf"]:
+            lines.append("| " + item["const"] + " | " + item["description"] + " |")
+
+    md_file.write("\n".join(lines))
+
+    enum_file.close()
     md_file.close()
 
 
@@ -250,17 +299,21 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
         print("Searching for anchor " + target_anchor + " in " + def_key + " ...")
         if def_value["$anchor"] == target_anchor:
             return def_value
+    
+    schema_file.close()
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "geosparql.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "geosparql.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+
+json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
