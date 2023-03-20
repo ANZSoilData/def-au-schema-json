@@ -101,7 +101,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
 
     if "properties" in def_value and isinstance(def_value["properties"], dict):
 
-        schema_namespace = json_schema_file.split(".")[0]
+        schema_namespace = json_schema_file.split(".")[0].replace("entities", "ansis")
 
         lines.append("### " + schema_namespace +
                      ":" + def_value["$anchor"] + "\n")
@@ -168,12 +168,12 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                     if isinstance(target_property["range@type"], list):
                         for index, item in enumerate(target_property["range@type"]):
                             target_property["range@type"][index] = build_range_type_link(
-                                item)
+                                schema_namespace, item)
                         target_property_type = "; ".join(
                             target_property["range@type"])
                     if isinstance(target_property["range@type"], str):
                         target_property_type = build_range_type_link(
-                            target_property["range@type"])
+                            schema_namespace, target_property["range@type"])
 
                 if "$comment" in target_property and isinstance(target_property["$comment"], str) and target_property["$comment"] != "":
                     target_property_comment = r" \[ _" + \
@@ -203,28 +203,28 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
     return lines
 
 
-def build_range_type_link(range_type):
+def build_range_type_link(schema_namespace, range_type):
     '''Builds a link to an anchor for the definition of the type.'''
 
-    print(range_type)
-
     target_namespace = range_type.split(":")[0]
+    target_file = target_namespace.replace("ansis","entities")
     target_name = range_type.split(":")[1]
+
+    print("schema_namespace:", schema_namespace, " target_namespace: ", target_namespace)
 
     range_type_link = range_type
 
     if target_namespace == "xs":
         range_type_link = "[" + range_type + \
             "](https://www.w3.org/TR/xmlschema-2/#" + target_name + ")"
-
-    if target_namespace == "ansis":
-        range_type_link = "[" + range_type + \
-            "](#" + range_type.replace(":", "") + ")"
-
-    if target_namespace not in ["xs", "ansis"]:
-        range_type_link = "[" + range_type + \
-            "](./ansis-" + target_namespace + ".md#" + \
-            range_type.replace(":", "") + ")"
+    else:
+        if target_namespace == schema_namespace:
+            range_type_link = "[" + range_type + \
+                "](#" + range_type.replace(":", "") + ")"
+        else:
+            range_type_link = "[" + range_type + \
+                "](./ansis-" + target_file + ".md#" + \
+                range_type.replace(":", "") + ")"
 
     return range_type_link
 
