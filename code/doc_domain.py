@@ -141,12 +141,12 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
         lines.append(enum_value["description"] + "\n")
 
         lines.append(
-            r"| JSON Value | Preferred Label | Definition Link |")
+            r"| ID/JSON Value | Preferred Label |")
         lines.append(
-            "| ---------- | --------------- | --------------- |")
+            "| ---------- | --------------- |")
         
         for item in enum_value["oneOf"]:
-            lines.append("| " + item["const"] + " | " + item["description"] + " | |")
+            lines.append("| " + item["const"] + " | " + item["description"] + " |")
 
     md_file.write("\n".join(lines))
 
@@ -328,4 +328,4 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
 
 # json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
