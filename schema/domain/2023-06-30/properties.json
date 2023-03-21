@@ -4,6 +4,14 @@
 	"title": "ANSIS Soil Domain Property Schema",
 	"description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
 	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
+	"@context": {
+		"ansis": "https://anzsoil.org/def/au/domain/",
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
 	"definitions": {
 		"abundance": {
 			"$anchor": "abundance",
@@ -14,7 +22,18 @@
 			],
 			"title": "abundance",
 			"description": "abundance of items",
-			"$comment": "Requires conditional logical to support different vocabularies for different types.",
+			"$comment": "has entity specific subtypes",
+			"type": "null"
+		},
+		"abundance_mottle": {
+			"$anchor": "mottle-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of mottles",
 			"type": "object",
 			"allOf": [
 				{
@@ -23,7 +42,163 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#mottle-abundance"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"abundance_outcrop": {
+			"$anchor": "rock-outcrop-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of outcrops",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#rock-outcrop-abundance"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"abundance_pores": {
+			"$anchor": "pore-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of pores",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#pore-abundance"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"abundance_roots": {
+			"$anchor": "root-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of roots",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#root-abundance"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"abundance_segregations": {
+			"$anchor": "segregations-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of segregations",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#segregations-abundance"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"abundance_coarse_fragments": {
+			"$anchor": "coarse-fragments-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of coarse fragments",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#coarse-fragments-abundance"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"abundance_cutans": {
+			"$anchor": "cutans-abundance",
+			"@id": "ansis:abundance",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "abundance",
+			"description": "abundance of cutans",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#cutans-abundance"
 						}
 					}
 				},
@@ -42,6 +217,17 @@
 			"title": "agent",
 			"description": "agent of geomorphological or biotic activity",
 			"$comment": "Requires conditional logical to support different vocabularies for different types.",
+			"type": "null"
+		},
+		"agent_microrelief_biotic": {
+			"$anchor": "microrelief-agent-biotic",
+			"@id": "ansis:agent",
+			"@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "agent",
+			"description": "agent of geomorphological or biotic activity",
 			"type": "object",
 			"allOf": [
 				{
@@ -50,7 +236,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#microrelief-agent-biotic"
 						}
 					}
 				},
@@ -235,7 +421,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#pans-cementation"
 						}
 					}
 				},
@@ -471,7 +657,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#surface-condition"
 						}
 					}
 				},
@@ -991,7 +1177,7 @@
 			"description": "soil horizon designation subdivision",
 			"$comment": "",
 			"type": "string",
-			"$ref": "./enum.json#tobedefined"
+			"$ref": "./enum.json#horizon-suffix"
 		},
 		"development": {
 			"$anchor": "development",
@@ -1011,7 +1197,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#channel-development"
 						}
 					}
 				},
@@ -1173,7 +1359,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#disturbance-of-site"
 						}
 					}
 				},
@@ -1265,7 +1451,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#inundation-duration"
 						}
 					}
 				},
@@ -1454,7 +1640,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#pedality-grade"
 						}
 					}
 				},
@@ -2054,7 +2240,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#colour-moisture-status"
 						}
 					}
 				},
@@ -2081,7 +2267,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#landform-element-type"
 						}
 					}
 				},
@@ -2138,7 +2324,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#channel-pattern"
 						}
 					}
 				},
@@ -2165,7 +2351,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#soil-permeability"
 						}
 					}
 				},
@@ -2586,8 +2772,47 @@
 				}
 			]
 		},
+		"shape_coarsefragments": {
+			"$anchor": "coarse-fragments-shape",
+			"@id": "ansis:shape",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "shape",
+			"description": "geometry of coarse fragments",
+			"$comment": "",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#coarse-fragments-shape"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
 		"size": {
 			"$anchor": "size",
+			"@id": "ansis:size",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "size",
+			"description": "geometric scale and extent of element",
+			"$comment": "",
+			"type": "null"
+		},
+		"size_soilstructure": {
+			"$anchor": "pedality-size",
 			"@id": "ansis:size",
 			"range@type": [
 				"sosa:ObservableProperty",
@@ -2604,7 +2829,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#pedality-size"
 						}
 					}
 				},
@@ -2775,17 +3000,26 @@
 			"description": "material texture, in terms of particle size distribution and component materials",
 			"$comment": "",
 			"type": "object",
-			"allOf": [
+			"required": [
+				"hasResult"
+			],
+			"oneOf": [
 				{
-					"required": [
-						"hasResult"
-					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#field-texture-mineral"
 						}
 					}
 				},
+				{
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#field-texture-organic"
+						}
+					}
+				}
+			],
+			"allOf": [
 				{
 					"$ref": "./sosa.json#ObservableProperty"
 				}
