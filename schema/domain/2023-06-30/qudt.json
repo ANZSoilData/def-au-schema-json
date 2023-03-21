@@ -3,6 +3,9 @@
 	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/qudt.json",
 	"title": "QUDT JSON Objects",
 	"description": "Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
+	"@context": {
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
 	"definitions": {
 		"QuantityValue": {
 			"$anchor": "QuantityValue",

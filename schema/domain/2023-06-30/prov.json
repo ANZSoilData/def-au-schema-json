@@ -3,6 +3,10 @@
     "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/prov.json",
     "title": "PROV Entity Schema",
     "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
+	"@context": {
+		"prov": "http://www.w3.org/ns/prov#",
+		"proj": "https://linked.data.gov.au/def/project#"
+	},
     "type": "object",
     "oneOf": [
         {
