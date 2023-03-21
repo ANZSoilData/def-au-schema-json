@@ -1,15 +1,29 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/enum.json",
-    "title": "ANSIS Soil Domain Enumerations",
-    "description": "ANSIS controlled vocabularies converted to JSON schema enumerations. Follow the link under the vocabulary's title for full definitions.",
-    "$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
-    "definitions": {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/enum.json",
+	"title": "ANSIS Soil Domain Enumerations",
+	"description": "ANSIS controlled vocabularies converted to JSON schema enumerations. Follow the link under the vocabulary's title for full definitions.",
+	"$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
+	"@context": {
+		"ansis": "https://anzsoil.org/def/au/domain/",
+		"asc": "http://anzsoil.org/def/au/asc/",
+		"asls": "https://anzsoil.org/def/au/domain/asls-code/",
+		"lf": "http://anzsoil.org/def/au/asls/landform/",
+		"ls": "http://anzsoil.org/def/au/asls/land-surface/",
+		"prop": "https://anzsoil.org/def/au/property/",
+		"sp": "http://anzsoil.org/def/au/asls/soil-profile/",
+		"subst": "http://anzsoil.org/def/au/asls/substrate/",
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
+	"definitions": {
 		"ansisEntities": {
-            "$anchor": "ansis-entities",
-            "@id": "https://anzsoil.org/def/au/domain",
-            "title": "ANSIS Entity Types",
-            "description": "Core ANSIS entities (features) served by the ANSIS system.",
+			"$anchor": "ansis-entities",
+			"@id": "https://anzsoil.org/def/au/domain",
+			"title": "ANSIS Entity Types",
+			"description": "Core ANSIS entities (features) served by the ANSIS system.",
 			"type": "string",
 			"oneOf": [
 				{
@@ -54,11 +68,936 @@
 				}
 			]
 		},
-        "SoilWaterDrainage": {
-            "$anchor": "soilwaterdrainage",
-            "@id": "http://anzsoil.org/def/au/asls/soil-profile/Site-drainage",
-            "title": "Soil Water Drainage",
-            "description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
+		"ChannelDevelopment": {
+			"$anchor": "channel-development",
+			"@id": "lf:Channel-development",
+			"title": "Stream channel development - enumeration",
+			"description": "The degree of development of stream channels.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "lf:stream-channel-development-A",
+					"description": "Alluvial"
+				},
+				{
+					"const": "lf:stream-channel-development-E",
+					"description": "Erosional"
+				},
+				{
+					"const": "lf:stream-channel-development-I",
+					"description": "Incipient"
+				},
+				{
+					"const": "lf:stream-channel-development-O",
+					"description": "Absent"
+				}
+			]
+		},
+		"ChannelPattern": {
+			"$anchor": "channel-pattern",
+			"@id": "lf:Channel-pattern",
+			"title": "Stream-wise channel pattern - enumeration",
+			"description": "In a traverse downstream, it may happen that tributaries enter the stream at frequent intervals, or that the stream splits into distributaries, or that these tendencies are absent (the non-tributary case) or are in balance with each other (the braided or anastomotic case called here reticulated) giving four classes of stream-wise channel pattern.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "lf:streamwise-channel-pattern-D",
+					"description": "Distributary"
+				},
+				{
+					"const": "lf:streamwise-channel-pattern-N",
+					"description": "Non-tributary"
+				},
+				{
+					"const": "lf:streamwise-channel-pattern-R",
+					"description": "Reticulated"
+				},
+				{
+					"const": "lf:streamwise-channel-pattern-T",
+					"description": "Tributary"
+				}
+			]
+		},
+		"CoarseFragmentsAbundance": {
+			"$anchor": "coarse-fragments-abundance",
+			"@id": "ls:Coarse-fragments-abundance",
+			"title": "Abundance of coarse fragments - enumeration",
+			"description": "The percentage of coarse fragments.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:coarse-fragments-abundance-0",
+					"description": "No coarse fragments"
+				},
+				{
+					"const": "ls:coarse-fragments-abundance-1",
+					"description": "Very slightly or very few"
+				},
+				{
+					"const": "ls:coarse-fragments-abundance-2",
+					"description": "Slightly or few"
+				},
+				{
+					"const": "ls:coarse-fragments-abundance-3",
+					"description": "No qualifier or common"
+				},
+				{
+					"const": "ls:coarse-fragments-abundance-4",
+					"description": "Moderately or many"
+				},
+				{
+					"const": "ls:coarse-fragments-abundance-5",
+					"description": "Very or abundant"
+				},
+				{
+					"const": "ls:coarse-fragments-abundance-6",
+					"description": "Extremely or very abundant"
+				}
+			]
+		},
+		"CoarseFragmentsShape": {
+			"$anchor": "coarse-fragments-shape",
+			"@id": "ls:Coarse-fragments-shape",
+			"title": "Shape of coarse fragments - enumeration",
+			"description": "The shape of coarse fragments is determined by referencing the chart that captures the roundness and sphericity. (Figure 12)",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:coarse-fragments-shape-A",
+					"description": "Angular"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-AP",
+					"description": "Angular platy"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-AT",
+					"description": "Angular tabular"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-R",
+					"description": "Rounded"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-RP",
+					"description": "Rounded platy"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-RT",
+					"description": "Rounded tabular"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-S",
+					"description": "Subangular"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-SP",
+					"description": "Subangular platy"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-ST",
+					"description": "Subangular tabular"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-U",
+					"description": "Subrounded"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-UP",
+					"description": "Subrounded platy"
+				},
+				{
+					"const": "ls:coarse-fragments-shape-UT",
+					"description": "Subrounded tabular"
+				}
+			]
+		},
+		"ColourMoistureStatus": {
+			"$anchor": "colour-moisture-status",
+			"@id": "sp:Colour-moisture-status",
+			"title": "Moisture status for colour description - enumeration",
+			"description": "Moisture status for colour description",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:colour-stat-D",
+					"description": "Dry (colour status)"
+				},
+				{
+					"const": "sp:colour-stat-M",
+					"description": "Moist"
+				}
+			]
+		},
+		"CutansAbundance": {
+			"$anchor": "cutans-abundance",
+			"@id": "sp:Cutans-abundance",
+			"title": "Abundance of cutans - enumeration",
+			"description": "Abundance of cutans",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:cutans-abundance-0",
+					"description": "No cutans"
+				},
+				{
+					"const": "sp:cutans-abundance-1",
+					"description": "Few (cutans abundance)"
+				},
+				{
+					"const": "sp:cutans-abundance-2",
+					"description": "Common (cutans abundance)"
+				},
+				{
+					"const": "sp:cutans-abundance-3",
+					"description": "Many (cutans abundance)"
+				}
+			]
+		},
+		"DisturbanceOfSite": {
+			"$anchor": "disturbance-of-site",
+			"@id": "ls:Disturbance-of-site",
+			"title": "Disturbance of site - enumeration",
+			"description": "These are broad categories of disturbance. Users may subdivide where considered necessary.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:disturbance-of-site-0",
+					"description": "No effective disturbance; natural"
+				},
+				{
+					"const": "ls:disturbance-of-site-1",
+					"description": "No effective disturbance other than grazing by hoofed animals"
+				},
+				{
+					"const": "ls:disturbance-of-site-2",
+					"description": "Limited clearing"
+				},
+				{
+					"const": "ls:disturbance-of-site-3",
+					"description": "Extensive clearing"
+				},
+				{
+					"const": "ls:disturbance-of-site-4",
+					"description": "Complete clearing; pasture, native or improved, but never cultivated"
+				},
+				{
+					"const": "ls:disturbance-of-site-5",
+					"description": "Complete clearing; pasture, native or improved, cultivated at some stage"
+				},
+				{
+					"const": "ls:disturbance-of-site-6",
+					"description": "Cultivation; rainfed"
+				},
+				{
+					"const": "ls:disturbance-of-site-7",
+					"description": "Cultivation; irrigated, past or present"
+				},
+				{
+					"const": "ls:disturbance-of-site-8",
+					"description": "Highly disturbed"
+				}
+			]
+		},
+		"FieldTextureMineral": {
+			"$anchor": "field-texture-mineral",
+			"@id": "sp:Field-texture-mineral",
+			"title": "Mineral soils field texture grade - enumeration",
+			"description": "The following description of determination of field texture is adapted from Northcote (1979).\r\nField texture is a measure of the behaviour of a small handful of soil when moistened and kneaded into a ball and then pressed out between thumb and forefinger.\r\nTake a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 1–2 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.\r\nThe recommended field texture grades as characterised by the behaviour of the moist bolus are described. The approximate percentage content of clay (particles less than 0.002 mm in diameter) and silt (particles between 0.02 and 0.002 mm in diameter) are given as a guide. These percentages must not be used to determine a field texture, that is, do not use them to convert a laboratory particle size value to a field texture grade. Similarly, do not adjust a field texture grade when laboratory particle size data become available.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:field-texture-CL",
+					"description": "Clay loam"
+				},
+				{
+					"const": "sp:field-texture-CLS",
+					"description": "Clay loam, sandy"
+				},
+				{
+					"const": "sp:field-texture-CS",
+					"description": "Clayey sand"
+				},
+				{
+					"const": "sp:field-texture-HC",
+					"description": "Heavy clay"
+				},
+				{
+					"const": "sp:field-texture-L",
+					"description": "Loam"
+				},
+				{
+					"const": "sp:field-texture-LC",
+					"description": "Light clay"
+				},
+				{
+					"const": "sp:field-texture-LMC",
+					"description": "Light medium clay"
+				},
+				{
+					"const": "sp:field-texture-LS",
+					"description": "Loamy sand"
+				},
+				{
+					"const": "sp:field-texture-MC",
+					"description": "Medium clay"
+				},
+				{
+					"const": "sp:field-texture-MHC",
+					"description": "Medium heavy clay"
+				},
+				{
+					"const": "sp:field-texture-S",
+					"description": "Sand (field texture)"
+				},
+				{
+					"const": "sp:field-texture-SCL",
+					"description": "Sandy clay loam"
+				},
+				{
+					"const": "sp:field-texture-SL",
+					"description": "Sandy loam"
+				},
+				{
+					"const": "sp:field-texture-ZCL",
+					"description": "Silty clay loam"
+				},
+				{
+					"const": "sp:field-texture-ZL",
+					"description": "Silty loam"
+				}
+			]
+		},
+		"FieldTextureOrganic": {
+			"$anchor": "field-texture-organic",
+			"@id": "sp:Field-texture-organic",
+			"title": "Organic soils field texture - enumeration",
+			"description": "Organic soils do not have textural grades, as soil texture is determined by the size of mineral particles finer than 2 mm (NCST). In a sense, organic soils do have a texture related to the plant materials from which they formed and the degree of decomposition, exposure and drying. These field texture names may be used to characterise materials that on field examination are considered to be clearly dominated by organic matter. Peats may be assessed by examining the degree of decomposition and distinctness of plant remains. This work is adapted from Soil Survey Staff (1975) and Avery (1980).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:field-texture-AP",
+					"description": "Sapric peat"
+				},
+				{
+					"const": "sp:field-texture-CP",
+					"description": "Clayey peat"
+				},
+				{
+					"const": "sp:field-texture-GP",
+					"description": "Granular peat"
+				},
+				{
+					"const": "sp:field-texture-HP",
+					"description": "Hemic peat"
+				},
+				{
+					"const": "sp:field-texture-IP",
+					"description": "Fibric peat"
+				},
+				{
+					"const": "sp:field-texture-LP",
+					"description": "Loamy peat"
+				},
+				{
+					"const": "sp:field-texture-SP",
+					"description": "Sandy peat"
+				}
+			]
+		},
+		"HorizonSuffix": {
+			"$anchor": "horizon-suffix",
+			"@id": "sp:Horizon-suffix",
+			"title": "Horizon suffixes",
+			"description": "The horizon's alphabetic suffix is used to further define the horizon. It always comes after the numeric subdivision except for suffix p, where the number always follows the letter (e.g. Ap2).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:horizon-suffix-b",
+					"description": "Horizon suffix b"
+				},
+				{
+					"const": "sp:horizon-suffix-c",
+					"description": "Horizon suffix c"
+				},
+				{
+					"const": "sp:horizon-suffix-d",
+					"description": "Horizon suffix d"
+				},
+				{
+					"const": "sp:horizon-suffix-e",
+					"description": "Horizon suffix e"
+				},
+				{
+					"const": "sp:horizon-suffix-f",
+					"description": "Horizon suffix f"
+				},
+				{
+					"const": "sp:horizon-suffix-g",
+					"description": "Horizon suffix g"
+				},
+				{
+					"const": "sp:horizon-suffix-h",
+					"description": "Horizon suffix h"
+				},
+				{
+					"const": "sp:horizon-suffix-j",
+					"description": "Horizon suffix j"
+				},
+				{
+					"const": "sp:horizon-suffix-k",
+					"description": "Horizon suffix k"
+				},
+				{
+					"const": "sp:horizon-suffix-m",
+					"description": "Horizon suffix m"
+				},
+				{
+					"const": "sp:horizon-suffix-p",
+					"description": "Horizon suffix p"
+				},
+				{
+					"const": "sp:horizon-suffix-q",
+					"description": "Horizon suffix q"
+				},
+				{
+					"const": "sp:horizon-suffix-r",
+					"description": "Horizon suffix r"
+				},
+				{
+					"const": "sp:horizon-suffix-s",
+					"description": "Horizon suffix s"
+				},
+				{
+					"const": "sp:horizon-suffix-t",
+					"description": "Horizon suffix t"
+				},
+				{
+					"const": "sp:horizon-suffix-w",
+					"description": "Horizon suffix w"
+				},
+				{
+					"const": "sp:horizon-suffix-x",
+					"description": "Horizon suffix x"
+				},
+				{
+					"const": "sp:horizon-suffix-y",
+					"description": "Horizon suffix y"
+				},
+				{
+					"const": "sp:horizon-suffix-z",
+					"description": "Horizon suffix z"
+				}
+			]
+		},
+		"InundationDuration": {
+			"$anchor": "inundation-duration",
+			"@id": "ls:Inundation-duration",
+			"title": "Duration (annual) of inundation - enumeration",
+			"description": "Give likely duration of an inundation event.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:inundation-duration-1",
+					"description": "Less than 1 day"
+				},
+				{
+					"const": "ls:inundation-duration-2",
+					"description": "Between 1 and 20 days"
+				},
+				{
+					"const": "ls:inundation-duration-3",
+					"description": "Between 20 and 120 days"
+				},
+				{
+					"const": "ls:inundation-duration-4",
+					"description": "More than 120 days"
+				}
+			]
+		},
+		"LandformElementType": {
+			"$anchor": "landform-element-type",
+			"@id": "lf:Landform-element-type",
+			"title": "Morphological type - enumeration",
+			"description": "Landform elements fall into morphological types as sketched in Figure 1. Ten types are distinguished.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "lf:Relative-inclination",
+					"description": "Relative inclination of slope elements - enumeration"
+				},
+				{
+					"const": "lf:compound-morphological-types",
+					"description": "Compound morphological types - enumeration"
+				},
+				{
+					"const": "lf:morphological-type-C",
+					"description": "Crest"
+				},
+				{
+					"const": "lf:morphological-type-D",
+					"description": "Closed depression"
+				},
+				{
+					"const": "lf:morphological-type-F",
+					"description": "Flat"
+				},
+				{
+					"const": "lf:morphological-type-H",
+					"description": "Hillock"
+				},
+				{
+					"const": "lf:morphological-type-L",
+					"description": "Lower slope (requires inclination modifier)"
+				},
+				{
+					"const": "lf:morphological-type-LA",
+					"description": "Lower slope Maximal"
+				},
+				{
+					"const": "lf:morphological-type-LI",
+					"description": "Lower slope Minimal"
+				},
+				{
+					"const": "lf:morphological-type-LN",
+					"description": "Lower slope Waning"
+				},
+				{
+					"const": "lf:morphological-type-LX",
+					"description": "Lower slope Waxing"
+				},
+				{
+					"const": "lf:morphological-type-M",
+					"description": "Mid-slope (requires inclination modifier)"
+				},
+				{
+					"const": "lf:morphological-type-MA",
+					"description": "Mid-slope Maximal"
+				},
+				{
+					"const": "lf:morphological-type-MI",
+					"description": "Mid-slope Minimal"
+				},
+				{
+					"const": "lf:morphological-type-MN",
+					"description": "Mid-slope Waning"
+				},
+				{
+					"const": "lf:morphological-type-MX",
+					"description": "Mid-slope Waxing"
+				},
+				{
+					"const": "lf:morphological-type-R",
+					"description": "Ridge"
+				},
+				{
+					"const": "lf:morphological-type-S",
+					"description": "Simple slope"
+				},
+				{
+					"const": "lf:morphological-type-U",
+					"description": "Upper slope (requires inclination modifier)"
+				},
+				{
+					"const": "lf:morphological-type-UA",
+					"description": "Upper slope Maximal"
+				},
+				{
+					"const": "lf:morphological-type-UI",
+					"description": "Upper slope Minimal"
+				},
+				{
+					"const": "lf:morphological-type-UN",
+					"description": "Upper slope Waning"
+				},
+				{
+					"const": "lf:morphological-type-UX",
+					"description": "Upper slope Waxing"
+				},
+				{
+					"const": "lf:morphological-type-V",
+					"description": "Open depression (vale)"
+				}
+			]
+		},
+		"LithologyCoarseFragments": {
+			"$anchor": "lithology-coarse-fragments",
+			"@id": "ls:Lithology-coarse-fragments",
+			"title": "Lithology of coarse fragments - enumeration",
+			"description": "The lithology of the coarse fragments is usually identified as coming from the substrate or from rock outcrop. Where the lithology of the coarse fragments is different from that of the substrate material and/or rock outcrop, describe it as for lithology of substrate material only where the rock type is definitely known or is confidently presumed. Some coarse fragments are commonly encountered that are not directly related to the substrate material.    ",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:lithology-CC",
+					"description": "Charcoal"
+				},
+				{
+					"const": "ls:lithology-IS",
+					"description": "Ironstone"
+				},
+				{
+					"const": "ls:lithology-M",
+					"description": "Same as substrate material"
+				},
+				{
+					"const": "ls:lithology-OT",
+					"description": "Other"
+				},
+				{
+					"const": "ls:lithology-OW",
+					"description": "Opalised wood"
+				},
+				{
+					"const": "ls:lithology-PU",
+					"description": "Pumice"
+				},
+				{
+					"const": "ls:lithology-R",
+					"description": "Same as rock outcrop"
+				},
+				{
+					"const": "ls:lithology-SS",
+					"description": "Shells"
+				}
+			]
+		},
+		"MicroreliefAgentBiotic": {
+			"$anchor": "microrelief-agent-biotic",
+			"@id": "ls:Microrelief-agent-biotic",
+			"title": "Biotic microrelief agents - enumeration",
+			"description": "The biotic agents causing the relief.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:biotic-microrelief-agent-A",
+					"description": "Ant"
+				},
+				{
+					"const": "ls:biotic-microrelief-agent-B",
+					"description": "Bird"
+				},
+				{
+					"const": "ls:biotic-microrelief-agent-M",
+					"description": "Human"
+				},
+				{
+					"const": "ls:biotic-microrelief-agent-N",
+					"description": "Animal"
+				},
+				{
+					"const": "ls:biotic-microrelief-agent-O",
+					"description": "Other"
+				},
+				{
+					"const": "ls:biotic-microrelief-agent-T",
+					"description": "Termite"
+				},
+				{
+					"const": "ls:biotic-microrelief-agent-V",
+					"description": "Vegetation"
+				}
+			]
+		},
+		"MottleAbundance": {
+			"$anchor": "mottle-abundance",
+			"@id": "sp:Mottle-abundance",
+			"title": "Mottle abundance - enumeration",
+			"description": "The percentage of mottles is estimated by eye using the chart in Figure 11 (ASLSFH3Ed) for comparison. ",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:mottle-abundance-0",
+					"description": "No mottles or other colour patterns"
+				},
+				{
+					"const": "sp:mottle-abundance-1",
+					"description": "Very few (mottle abundance)"
+				},
+				{
+					"const": "sp:mottle-abundance-2",
+					"description": "Few (mottle abundance)"
+				},
+				{
+					"const": "sp:mottle-abundance-3",
+					"description": "Common (mottle abundance)"
+				},
+				{
+					"const": "sp:mottle-abundance-4",
+					"description": "Many (mottle abundance)"
+				}
+			]
+		},
+		"PansCementation": {
+			"$anchor": "pans-cementation",
+			"@id": "sp:Pans-cementation",
+			"title": "Cementation of pan - enumeration",
+			"description": "Place a 30 mm diameter piece of the pan in water for 1 hour. If it slakes, it is uncemented; if not, it is cemented. The degree of cementation is assessed on the following scale after the 1 hour soaking in water.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:pans-cementation-0",
+					"description": "Uncemented"
+				},
+				{
+					"const": "sp:pans-cementation-1",
+					"description": "Weakly cemented"
+				},
+				{
+					"const": "sp:pans-cementation-2",
+					"description": "Moderately cemented"
+				},
+				{
+					"const": "sp:pans-cementation-3",
+					"description": "Strongly cemented"
+				},
+				{
+					"const": "sp:pans-cementation-4",
+					"description": "Very strongly cemented"
+				}
+			]
+		},
+		"PedalityGrade": {
+			"$anchor": "pedality-grade",
+			"@id": [
+				"sp:Pedality-grade-pedal",
+				"sp:Pedality-grade-apedal"
+			],
+			"title": "Pedal soil grades - enumeration",
+			"description": "Pedal soils have observable peds and are divided into: sp:structure-pedality-grade-M, sp:structure-pedality-grade-S and sp:structure-pedality-grade-W. Apedal soils have no observable peds and are divided into: sp:structure-pedality-grade-G and sp:structure-pedality-grade-V",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:structure-pedality-grade-M",
+					"description": "Moderate (structure pedality grade)"
+				},
+				{
+					"const": "sp:structure-pedality-grade-S",
+					"description": "Strong (structure pedality grade)"
+				},
+				{
+					"const": "sp:structure-pedality-grade-W",
+					"description": "Weak (structure pedality grade)"
+				},
+				{
+					"const": "sp:structure-pedality-grade-G",
+					"description": "Single grain"
+				},
+				{
+					"const": "sp:structure-pedality-grade-V",
+					"description": "Massive (structure pedality grade)"
+				}
+			]
+		},
+		"PedalitySize": {
+			"$anchor": "pedality-size",
+			"@id": "sp:Pedality-size",
+			"title": "Size of peds",
+			"description": "The average least dimension of peds is used to determine the class interval. Use figure 17. The least dimension is the vertical dimension for platy structure; the horizontal dimension for prismatic, columnar, blocky and polyhedral peds; the maximum separation of convex faces for lenticular peds; and the diameter for granular peds.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:structure-pedality-size-1",
+					"description": "< 2 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-2",
+					"description": "2-5 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-3",
+					"description": "5-10 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-4",
+					"description": "10-20 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-5",
+					"description": "20-50 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-6",
+					"description": "50-100 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-7",
+					"description": "100-200 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-8",
+					"description": "200-500 mm"
+				},
+				{
+					"const": "sp:structure-pedality-size-9",
+					"description": "> 500 mm"
+				}
+			]
+		},
+		"PoreAbundance": {
+			"$anchor": "pore-abundance",
+			"@id": [
+				"sp:Pore-abundance-fine",
+				"sp:Pore-abundance-coarse"
+			],
+			"title": "Abundance of very fine, fine, medium and coarse macropores",
+			"description": "Abundance of very fine and fine macropores (less than 2mm diameter), and medium and coarse macropores (greater than 2 mm diameter).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:voids-macropores-abundance-0",
+					"description": "No macropores"
+				},
+				{
+					"const": "sp:voids-macropores-abundance-1",
+					"description": "Few fine or very fine macropores"
+				},
+				{
+					"const": "sp:voids-macropores-abundance-2",
+					"description": "Common fine or very fine macropores"
+				},
+				{
+					"const": "sp:voids-macropores-abundance-3",
+					"description": "Many fine or very fine macropores"
+				},
+				{
+					"const": "sp:voids-macropores-abundance-4",
+					"description": "Few medium or coarse macropores"
+				},
+				{
+					"const": "sp:voids-macropores-abundance-5",
+					"description": "Common medium or coarse macropores"
+				},
+				{
+					"const": "sp:voids-macropores-abundance-6",
+					"description": "Many medium or coarse macropores"
+				}
+			]
+		},
+		"RockOutcropAbundance": {
+			"$anchor": "rock-outcrop-abundance",
+			"@id": "ls:Rock-outcrop-abundance",
+			"title": "Abundance of rock outcrop - enumeration",
+			"description": "Abundance of rock outcrop.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:rock-outcrop-abundance-0",
+					"description": "No rock outcrop"
+				},
+				{
+					"const": "ls:rock-outcrop-abundance-1",
+					"description": "Very slightly rocky"
+				},
+				{
+					"const": "ls:rock-outcrop-abundance-2",
+					"description": "Slightly rocky"
+				},
+				{
+					"const": "ls:rock-outcrop-abundance-3",
+					"description": "Rocky"
+				},
+				{
+					"const": "ls:rock-outcrop-abundance-4",
+					"description": "Very rocky"
+				},
+				{
+					"const": "ls:rock-outcrop-abundance-5",
+					"description": "Rockland"
+				}
+			]
+		},
+		"RootAbundance": {
+			"$anchor": "root-abundance",
+			"@id": "sp:Root-abundance",
+			"title": "Root abundance - enumeration",
+			"description": "Number of roots per 0.01 m2 (100 mm × 100 mm)",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:roots-abundance-0",
+					"description": "No roots"
+				},
+				{
+					"const": "sp:roots-abundance-1",
+					"description": "Few (roots abundance)"
+				},
+				{
+					"const": "sp:roots-abundance-2",
+					"description": "Common (roots abundance)"
+				},
+				{
+					"const": "sp:roots-abundance-3",
+					"description": "Many (roots abundance)"
+				},
+				{
+					"const": "sp:roots-abundance-4",
+					"description": "Abundant (roots abundance)"
+				}
+			]
+		},
+		"SegregationsAbundance": {
+			"$anchor": "segregations-abundance",
+			"@id": "sp:Segregations-abundance",
+			"title": "Abundance of segregations - enumeration",
+			"description": "Abundance of segregations. Use figure 11 as a guide.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:segregations-abundance-0",
+					"description": "No segregations"
+				},
+				{
+					"const": "sp:segregations-abundance-1",
+					"description": "Very few (segregations abundance)"
+				},
+				{
+					"const": "sp:segregations-abundance-2",
+					"description": "Few (segregations abundance)"
+				},
+				{
+					"const": "sp:segregations-abundance-3",
+					"description": "Common (segregations abundance)"
+				},
+				{
+					"const": "sp:segregations-abundance-4",
+					"description": "Many (segregations abundance)"
+				},
+				{
+					"const": "sp:segregations-abundance-5",
+					"description": "Very many (segregations abundance)"
+				}
+			]
+		},
+		"SoilPermeability": {
+			"$anchor": "soil-permeability",
+			"@id": "sp:Soil-permeability",
+			"title": "Permeability - enumeration",
+			"description": "Permeability is independent of climate and drainage, and – as applied to a soil – is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink–swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:soil-water-permeability-1",
+					"description": "Very slowly permeable"
+				},
+				{
+					"const": "sp:soil-water-permeability-2",
+					"description": "Slowly permeable"
+				},
+				{
+					"const": "sp:soil-water-permeability-3",
+					"description": "Moderately permeable"
+				},
+				{
+					"const": "sp:soil-water-permeability-4",
+					"description": "Highly permeable"
+				}
+			]
+		},
+		"SoilWaterDrainage": {
+			"$anchor": "soilwaterdrainage",
+			"@id": "sp:Site-drainage",
+			"title": "Soil Water Drainage",
+			"description": "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.",
 			"type": "string",
 			"oneOf": [
 				{
@@ -87,10 +1026,75 @@
 				}
 			]
 		},
-        "ToBeDefined": {
-            "$anchor": "tobedefined",
-            "title": "To Be Defined",
-            "description": "Placeholder for enumerations yet to be created.",
+		"SurfaceCondition": {
+			"$anchor": "surface-condition",
+			"@id": "sp:Surface-condition",
+			"title": "Condition of surface soil when dry - enumeration",
+			"description": "Many surface soils have a characteristic appearance when dry. Because surface conditions are often relevant to the use of the soil and indicative of particular kinds of soil, every effort should be made to observe the surface condition in the dry state. The surface conditions are not necessarily mutually exclusive:",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:surfacecondition-C",
+					"description": "Surface crust"
+				},
+				{
+					"const": "sp:surfacecondition-F",
+					"description": "Firm (surface condition)"
+				},
+				{
+					"const": "sp:surfacecondition-G",
+					"description": "Cracking"
+				},
+				{
+					"const": "sp:surfacecondition-H",
+					"description": "Hard setting"
+				},
+				{
+					"const": "sp:surfacecondition-L",
+					"description": "Loose (surface condition)"
+				},
+				{
+					"const": "sp:surfacecondition-M",
+					"description": "Self-mulching"
+				},
+				{
+					"const": "sp:surfacecondition-O",
+					"description": "Other (surface condition)"
+				},
+				{
+					"const": "sp:surfacecondition-P",
+					"description": "Poached"
+				},
+				{
+					"const": "sp:surfacecondition-R",
+					"description": "Recently cultivated"
+				},
+				{
+					"const": "sp:surfacecondition-S",
+					"description": "Soft"
+				},
+				{
+					"const": "sp:surfacecondition-T",
+					"description": "Trampled"
+				},
+				{
+					"const": "sp:surfacecondition-X",
+					"description": "Surface flake"
+				},
+				{
+					"const": "sp:surfacecondition-Y",
+					"description": "Cryptogam surface"
+				},
+				{
+					"const": "sp:surfacecondition-Z",
+					"description": "Saline (surface condition)"
+				}
+			]
+		},
+		"ToBeDefined": {
+			"$anchor": "tobedefined",
+			"title": "To Be Defined",
+			"description": "Placeholder for enumerations yet to be created.",
 			"type": "string",
 			"oneOf": [
 				{
@@ -103,5 +1107,5 @@
 				}
 			]
 		}
-    }
+	}
 }
