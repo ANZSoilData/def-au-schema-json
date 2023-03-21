@@ -105,6 +105,7 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
     md_file = open(md_file_name, "w")
 
     enum_root = json.loads(enum_file.read())
+
     lines = []
 
     lines.append("# " + enum_root["title"])
@@ -125,7 +126,17 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
         lines.append("## " + enum_value["title"] + "\n")
 
         if "@id" in enum_value and isinstance(enum_value["@id"], str):
-            lines.append("**ANSIS Vocabulary Location:** " + enum_value["@id"] + "\n")
+
+            enum_uri_prefix = enum_value["@id"].split(":")[0]
+            print("enum_uri_prefix: " + enum_uri_prefix)
+
+            if "@context" in enum_root and enum_uri_prefix in enum_root["@context"]:
+                print(enum_root["@context"].get(enum_uri_prefix))
+                enum_location = "[" + enum_value["@id"] + "](" + enum_root["@context"].get(enum_uri_prefix) + enum_value["@id"].split(":")[1] + ")"
+            else:
+                enum_location = enum_value["@id"]
+
+            lines.append("**ANSIS Vocabulary Location:** " + enum_location + "\n")
 
         lines.append(enum_value["description"] + "\n")
 
@@ -303,18 +314,18 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
     
     schema_file.close()
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+# json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
