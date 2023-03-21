@@ -22,7 +22,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | depthFreeWater | 0..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [qudt:QuantityValue](./ansis-qudt.md#qudtQuantityValue) |  | Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface. |
 | designSite | 0..1 | Y | [ansis:SoilSite-design](#ansisSoilSite-design) |  | overall design of sampling at the site e.g. ASLS|grid|transect |
 | designSurvey | 0..1 | Y | [ansis:Survey-design](#ansisSurvey-design) |  | overall design of soil or landscape survey e.g. free|grid|stratified|miscellaneous |
-| disturbance | 0..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | [To Be Defined](./ansis-enum.md#To-Be-Defined) | disturbance of site |
+| disturbance | 0..1 |  | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | [Disturbance of site - enumeration](./ansis-enum.md#Disturbance-of-site---enumeration) | disturbance of site |
 | drainage | 0..1 | Y | [sosa:ObservableProperty](./ansis-sosa.md#sosaObservableProperty); [skos:Concept](./ansis-skos.md#skosConcept) | [Soil Water Drainage](./ansis-enum.md#Soil-Water-Drainage) | Drainage of site or profile. \[ _example of a property bound to an enumeration_ \] |
 | hasErosion | 0..1 |  | [ansis:Erosion](#ansisErosion) |  | a description of erosion |
 | hasLandCover | 0..1 |  | [ansis:LandManagement](#ansisLandManagement) |  | a description of land cover |
@@ -243,7 +243,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | abundance | 1..1 |  |  | [To Be Defined](./ansis-enum.md#To-Be-Defined) | abundance of items \[ _Requires conditional logical to support different vocabularies for different types._ \] |
 ### ansis:Erosion
 
-*ANSIS *. Undefined.
+*ANSIS Erosion*. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |

@@ -23,9 +23,26 @@ Core ANSIS entities (features) served by the ANSIS system.
 | ansis:SoilSurface | Soil Surface | |
 | ansis:Substrate | Substrate | |
 | ansis:Treatment | Treatment | |
+## Disturbance of site - enumeration
+
+**ANSIS Vocabulary Location:** ls:Disturbance-of-site
+
+These are broad categories of disturbance. Users may subdivide where considered necessary.
+
+| JSON Value | Preferred Label | Definition Link |
+| ---------- | --------------- | --------------- |
+| ls:disturbance-of-site-0 | No effective disturbance; natural | |
+| ls:disturbance-of-site-1 | No effective disturbance other than grazing by hoofed animals | |
+| ls:disturbance-of-site-2 | Limited clearing | |
+| ls:disturbance-of-site-3 | Extensive clearing | |
+| ls:disturbance-of-site-4 | Complete clearing; pasture, native or improved, but never cultivated | |
+| ls:disturbance-of-site-5 | Complete clearing; pasture, native or improved, cultivated at some stage | |
+| ls:disturbance-of-site-6 | Cultivation; rainfed | |
+| ls:disturbance-of-site-7 | Cultivation; irrigated, past or present | |
+| ls:disturbance-of-site-8 | Highly disturbed | |
 ## Soil Water Drainage
 
-**ANSIS Vocabulary Location:** http://anzsoil.org/def/au/asls/soil-profile/Site-drainage
+**ANSIS Vocabulary Location:** sp:Site-drainage
 
 Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape.
 
