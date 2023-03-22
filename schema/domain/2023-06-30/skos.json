@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/skos.json",
+    "title": "SKOS JSON Objects",
+    "description": "Reusable SKOS objects for vocabulary entries.",
+    "$comment": "Created to provide a definition for skos:Concept references elsewhere in the schema. Actually implemented with enumerations in JSON instances.",
+	"@context": {
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"skos": "http://www.w3.org/2004/02/skos/core#"
+	},
+    "definitions": {
+        "Concept": {
+            "$anchor": "Concept",
+            "@id": "skos:Concept",
+            "title": "SKOS Concept",
+            "description": "Concepts are the units of thought — ideas, meanings, or (categories of) objects and events—which underlie many knowledge organization systems. As such, concepts exist in the mind as abstract entities which are independent of the terms used to label them.",
+            "$concept": "ANSIS uses SKOS Concepts to define terms in controlled vocabularies - e.g. 'well drained' from the Site Drainage vocabulary.",
+            "type": "object",
+            "required": [
+                "@type",
+                "prefLabel"
+            ],
+            "properties": {
+                "prefLabel": {
+                    "$ref": "#prefLabel"
+                },
+                "definition": {
+                    "$ref": "#definition"
+                }
+            }
+        },
+        "preferredLabel": {
+            "$anchor": "prefLabel",
+            "@id": "skos:prefLabel",
+            "range@type": [
+                "xs:string"
+            ],
+            "title": "Preferred Label",
+            "description": "The preferred label for the concept.",
+            "type": "string"
+        },
+        "definition": {
+            "$anchor": "definition",
+            "@id": "skos:definition",
+            "range@type": [
+                "xs:string"
+            ],
+            "title": "Definition",
+            "description": "A complete explanation of the intended meaning of a concept.",
+            "type": "string"
+        }
+    }
+}

@@ -47,7 +47,7 @@ We urge contributors to be familiar with the [domain ontology][def-au-domain],
 [JSON Schema](https://json-schema.org/) and the
 [JSON Schema Specification](https://json-schema.org/specification.html).
 
-> This work currently uses `draft-07` of the specification.
+> This work currently uses `draft/2020-12` of the specification.
 
 
 ## Navigating this repository

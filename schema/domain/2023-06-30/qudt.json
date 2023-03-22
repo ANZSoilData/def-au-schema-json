@@ -3,10 +3,13 @@
 	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/qudt.json",
 	"title": "QUDT JSON Objects",
 	"description": "Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
+	"@context": {
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
 	"definitions": {
 		"QuantityValue": {
 			"$anchor": "QuantityValue",
-			"@id": "http://qudt.org/schema/qudt/QuantityValue",
+			"@id": "qudt:QuantityValue",
 			"title": "QUDT QuantityValue",
 			"description": "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit.",
 			"type": "object",
@@ -16,21 +19,31 @@
 			],
 			"properties": {
 				"value": {
-					"type": "number"
+					"$ref": "#value"
 				},
 				"unit": {
 					"$ref": "#unit"
 				}
 			}
 		},
+		"value": {
+			"$anchor": "value",
+			"@id": "qudt:value",
+			"range@type": ["xs:decimal","xs:integer"],
+			"title": "Value",
+			"description": "The numerical value.",
+			"type": "number"
+		},
 		"unit": {
 			"$anchor": "unit",
-			"@id": "http://qudt.org/schema/qudt/unit",
+			"@id": "qudt:unit",
+			"range@type": "xs:anyURI",
 			"title": "Unit",
 			"description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
 			"$comment": "Restricted to the QUDT vocabulary as a compact URI.",
 			"type": "string",
-			"pattern": "^qudt:.*$"
+			"format": "iri",
+			"pattern": "^unit:.*$"
 		}
 	}
 }

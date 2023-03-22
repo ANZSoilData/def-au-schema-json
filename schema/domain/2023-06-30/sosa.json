@@ -3,6 +3,13 @@
 	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/sosa.json",
 	"title": "SOSA Entity Schema",
 	"description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
+	"@context": {
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
 	"type": "object",
 	"oneOf": [
 		{
@@ -19,12 +26,15 @@
 		},
 		{
 			"$ref": "#Sampling"
+		},
+		{
+			"$ref": "#Sensor"
 		}
 	],
 	"definitions": {
 		"Actuation": {
 			"$anchor": "Actuation",
-			"@id": "http://www.w3.org/ns/sosa/Actuation",
+			"@id": "sosa:Actuation",
 			"title": "SOSA Actuation",
 			"description": "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.",
 			"type": "object",
@@ -32,14 +42,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -53,7 +57,7 @@
 		},
 		"Observation": {
 			"$anchor": "Observation",
-			"@id": "http://www.w3.org/ns/sosa/Observation",
+			"@id": "sosa:Observation",
 			"title": "SOSA Observation",
 			"description": "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
 			"type": "object",
@@ -64,14 +68,8 @@
 				"usedProcedure"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -97,6 +95,9 @@
 				},
 				"resultTime": {
 					"$ref": "#resultTime"
+				},
+				"hasFeatureOfInterest": {
+					"$ref": "#hasFeatureOfInterest"
 				},
 				"relatedActivity": {
 					"$ref": "./properties.json#relatedActivity"
@@ -129,7 +130,7 @@
 		},
 		"Sample": {
 			"$anchor": "Sample",
-			"@id": "http://www.w3.org/ns/sosa/Sample",
+			"@id": "sosa:Sample",
 			"title": "SOSA Sample",
 			"description": "A Sample is the result from an act of Sampling. Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made. Physical samples are sometimes known as 'specimens'. Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign. A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features.",
 			"type": "object",
@@ -137,14 +138,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -155,7 +150,7 @@
 		},
 		"Sampler": {
 			"$anchor": "Sampler",
-			"@id": "http://www.w3.org/ns/sosa/Sampler",
+			"@id": "sosa:Sampler",
 			"title": "SOSA Sampler",
 			"description": "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.",
 			"type": "object",
@@ -163,14 +158,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -181,7 +170,7 @@
 		},
 		"Sampling": {
 			"$anchor": "Sampling",
-			"@id": "http://www.w3.org/ns/sosa/Sampling",
+			"@id": "sosa:Sampling",
 			"title": "SOSA Sampling",
 			"description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples. E.g. digging a pit through a soil sequence; dividing a field site into quadrants; sieving a powder to separate the subset finer than 100-mesh.",
 			"type": "object",
@@ -191,14 +180,8 @@
 				"result"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -215,7 +198,7 @@
 		},
 		"Sensor": {
 			"$anchor": "Sensor",
-			"@id": "http://www.w3.org/ns/sosa/Sensor",
+			"@id": "sosa:Sensor",
 			"title": "SOSA Sensor",
 			"description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
 			"type": "object",
@@ -223,14 +206,8 @@
 				"@type"
 			],
 			"properties": {
-				"$schema": {
-					"$ref": "./base.json#js-schema"
-				},
-				"@context": {
-					"$ref": "./base.json#ld-context"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
+				"id": {
+					"$ref": "./base.json#id"
 				},
 				"@type": {
 					"$ref": "./base.json#ld-type",
@@ -244,7 +221,8 @@
 		},
 		"actsOnProperty": {
 			"$anchor": "actsOnProperty",
-			"@id": "http://www.w3.org/ns/sosa/actsOnProperty",
+			"@id": "sosa:actsOnProperty",
+			"range@type": "rdf:Property",
 			"title": "acts on property",
 			"description": "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
 			"$comment": "Forcing a URI on assumption of a property registry somewhere else (observable properties?).",
@@ -256,7 +234,15 @@
 		},
 		"hasFeatureOfInterest": {
 			"$anchor": "hasFeatureOfInterest",
-			"@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+			"@id": "sosa:hasFeatureOfInterest",
+			"range@type": [
+				"ansis:SoilProfile",
+				"ansis:SoilBody",
+				"ansis:SoilLayer",
+				"ansis:SoilHorizon",
+				"ansis:SoilSurface",
+				"ansis:Substrate"
+			],
 			"title": "has feature of interest",
 			"description": "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
 			"$comment": "Forcing a URI (link) for now.",
@@ -268,7 +254,15 @@
 		},
 		"isSampleOf": {
 			"$anchor": "isSampleOf",
-			"@id": "http://www.w3.org/ns/sosa/isSampleOf",
+			"@id": "sosa:isSampleOf",
+			"range@type": [
+				"ansis:SoilProfile",
+				"ansis:SoilBody",
+				"ansis:SoilLayer",
+				"ansis:SoilHorizon",
+				"ansis:SoilSurface",
+				"ansis:Substrate"
+			],
 			"title": "is sample of",
 			"description": "template",
 			"$comment": "Forcing a URI (link) for now.",
@@ -280,7 +274,8 @@
 		},
 		"hasResult": {
 			"$anchor": "hasResult",
-			"@id": "http://www.w3.org/ns/sosa/hasResult",
+			"@id": "sosa:hasResult",
+			"range@type": "qudt:QuantityValue",
 			"title": "has result",
 			"description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
 			"$comment": "Sticking to a QUDT Quantity Value for this initial implementation.",
@@ -292,7 +287,8 @@
 		},
 		"hasSample": {
 			"$anchor": "hasSample",
-			"@id": "http://www.w3.org/ns/sosa/hasSample",
+			"@id": "sosa:hasSample",
+			"range@type": "sosa:Sample",
 			"title": "has sample",
 			"description": "Undefined.",
 			"$comment": "Forcing a URI (link) for now.",
@@ -300,11 +296,12 @@
 				"object",
 				"null"
 			],
-			"$ref": "./qudt.json#QuantityValue"
+			"$ref": "./base.json#Entity_Link"
 		},
 		"madeBySensor": {
 			"$anchor": "madeBySensor",
-			"@id": "http://www.w3.org/ns/sosa/madeBySensor",
+			"@id": "sosa:madeBySensor",
+			"range@type": "sosa:Sensor",
 			"title": "Made by Sensor",
 			"description": "Relation between an Observation and the Sensor which made the Observations.",
 			"$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
@@ -323,7 +320,8 @@
 		},
 		"usedProcedure": {
 			"$anchor": "usedProcedure",
-			"@id": "http://www.w3.org/ns/sosa/usedProcedure",
+			"@id": "sosa:usedProcedure",
+			"range@type": "skos:Concept",
 			"title": "Made by Sensor",
 			"description": "Relation between an Observation and the Sensor which made the Observations.",
 			"$comment": "Forcing a URI pointing to an ANSIS methods vocabulary {!!probably too restrictive!!}. No local enumeration as the list is too long.",
@@ -335,7 +333,8 @@
 		},
 		"observedProperty": {
 			"$anchor": "observedProperty",
-			"@id": "http://www.w3.org/ns/sosa/observedProperty",
+			"@id": "sosa:observedProperty",
+			"range@type": "rdf:Property",
 			"title": "observed property",
 			"description": "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
 			"$comment": "",
@@ -347,7 +346,8 @@
 		},
 		"phenomenonTime": {
 			"$anchor": "phenomenonTime",
-			"@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+			"@id": "sosa:phenomenonTime",
+			"range@type": "xs:dateTime",
 			"title": "Phenomenon Time",
 			"description": "The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time].",
 			"$comment": "Initially restricting to date-time",
@@ -359,7 +359,8 @@
 		},
 		"resultTime": {
 			"$anchor": "resultTime",
-			"@id": "http://www.w3.org/ns/sosa/resultTime",
+			"@id": "sosa:resultTime",
+			"range@type": "xs:dateTime",
 			"title": "Result Time",
 			"description": "The result time is the instant of time when the Observation activity was completed.",
 			"$comment": "Initially restricting to date-time",
@@ -372,10 +373,11 @@
 		"qualityOfObservation": {
 			"$anchor": "qualityOfObservation",
 			"@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+			"range@type": ["skos:Concept"],
 			"title": "Quality of Observation",
 			"description": "The adjudged quality of the Result.",
-			"$comment": "placholder",
-            "type": "null"
+			"$comment": "To be expanded - using skos:Concept for qualitative descriptions of quality.",
+			"type": "null"
 		}
 	}
 }

@@ -1,0 +1,50 @@
+[
+	{
+		"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm-simple.json",
+		"hasGeometryX": 24,
+		"hasGeometryY": -42,
+		"hasGeometrySRID": 4283,
+		"hasGeometry": "SRID=4283;POINT(24 -42)",
+		"depthLower": 0,
+		"depthUpper": 0,
+		"depthUnit": "unit:M",
+		"observedProperty@id": "ansis:slope",
+		"hasResult": 24,
+		"hasResultUnit": "unit:DEG",
+		"usedProcedure@id": "ansis-x:clinometer",
+		"isSampleOf@type": "ansis:LandformElement",
+		"sourceObservation@id": "https://example.ansis.net/id/observation/a"
+	},
+	{
+		"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm-simple.json",
+		"hasGeometryX": 24,
+		"hasGeometryY": -42,
+		"hasGeometrySRID": 4283,
+		"hasGeometry": "SRID=4283;POINT(24 -42)",
+		"depthLower": 0,
+		"depthUpper": 0.1,
+		"depthUnit": "unit:M",
+		"observedProperty@id": "ansis-x:sand",
+		"hasResult": 42,
+		"hasResultUnit": "unit:PERCENT",
+		"isSampleOf@type": "ansis:SoilHorizon",
+		"sourceSample@id": "https://example.ansis.net/id/sample/a",
+		"sourceObservation@id": "https://example.ansis.net/id/observation/b"
+	},
+	{
+		"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm-simple.json",
+		"hasGeometryX": 24,
+		"hasGeometryY": -42,
+		"hasGeometrySRID": 4283,
+		"hasGeometry": "SRID=4283;POINT(24 -42)",
+		"depthLower": 0,
+		"depthUpper": 0.1,
+		"depthUnit": "unit:M",
+		"observedProperty@id": "ansis-x:silt",
+		"hasResult": 24,
+		"hasResultUnit": "unit:PERCENT",
+		"isSampleOf@type": "ansis:SoilHorizon",
+		"sourceSample@id": "https://example.ansis.net/id/sample/a",
+		"sourceObservation@id": "https://example.ansis.net/id/observation/c"
+	}
+]

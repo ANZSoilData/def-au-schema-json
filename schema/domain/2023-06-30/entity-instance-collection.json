@@ -7,25 +7,22 @@
 	"items": {
 		"oneOf": [
 			{
-				"$ref": "./entities.json#LandSurveySite"
-			},
-			{
-				"$ref": "./entities.json#SoilBody"
-			},
-			{
-				"$ref": "./entities.json#SoilHorizon"
-			},
-			{
-				"$ref": "./entities.json#SoilLayer"
+				"$ref": "./entities.json#SoilSite"
 			},
 			{
 				"$ref": "./entities.json#SoilProfile"
 			},
 			{
-				"$ref": "./entities.json#SoilSample"
+				"$ref": "./entities.json#SoilBody"
 			},
 			{
-				"$ref": "./entities.json#SoilSite"
+				"$ref": "./entities.json#SoilLayer"
+			},
+			{
+				"$ref": "./entities.json#SoilHorizon"
+			},
+			{
+				"$ref": "./entities.json#SoilSample"
 			},
 			{
 				"$ref": "./entities.json#SoilSurface"
@@ -37,14 +34,17 @@
 				"$ref": "./entities.json#Treatment"
 			},
 			{
+				"$ref": "./entities.json#LandSurveySite"
+			},
+			{
 				"$ref": "./sosa.json#Observation"
 			},
 			{
 				"$ref": "./sosa.json#Sample"
 			},
-            {
-                "$ref": "./sosa.json#Sampling"
-            }
+			{
+				"$ref": "./sosa.json#Sampling"
+			}
 		]
 	}
 }

@@ -3,10 +3,20 @@
     "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/prov.json",
     "title": "PROV Entity Schema",
     "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
+	"@context": {
+		"prov": "http://www.w3.org/ns/prov#",
+		"proj": "https://linked.data.gov.au/def/project#"
+	},
     "type": "object",
     "oneOf": [
         {
+            "$ref": "#Organization"
+        },
+        {
             "$ref": "#Activity"
+        },
+        {
+            "$ref": "#Agent"
         },
         {
             "$ref": "#Person"
@@ -18,9 +28,9 @@
     "definitions": {
         "Activity": {
             "$anchor": "Activity",
-            "@id": "http://www.w3.org/ns/prov#Activity",
+            "@id": "prov:Activity",
             "title": "PROV Activity",
-            "description": "Undefined.",
+            "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
 			"type": "object",
             "required": [
                 "@type"
@@ -41,15 +51,18 @@
                 },
                 "relatedActivity": {
                 	"$ref": "./properties.json#relatedActivity"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
                 }
             },
             "additionalProperties": false
         },
         "Agent": {
             "$anchor": "Agent",
-            "@id": "http://www.w3.org/ns/prov#Agent",
+            "@id": "prov:Agent",
             "title": "PROV Agent",
-            "description": "Undefined.",
+            "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
 			"type": "object",
             "required": [
                 "@type"
@@ -67,15 +80,18 @@
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
                 }
             },
             "additionalProperties": false
         },
-        "Person": {
-            "$anchor": "Person",
-            "@id": "http://www.w3.org/ns/prov#Person",
-            "title": "PROV Person",
-            "description": "Undefined.",
+        "Organization": {
+            "$anchor": "Organization",
+            "@id": "prov:Organization",
+            "title": "PROV Organization",
+            "description": "An organization is a social or legal institution such as a company, society, etc.",
 			"type": "object",
             "required": [
                 "@type"
@@ -92,16 +108,48 @@
                 },
                 "@type": {
                     "$ref": "./base.json#ld-type",
-                    "const": "prov:Person"
+                    "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
+                }
+            },
+            "additionalProperties": false
+        },
+        "Person": {
+            "$anchor": "Person",
+            "@id": "prov:Person",
+            "title": "PROV Person",
+            "description": "Person agents are people.",
+			"type": "object",
+            "required": [
+                "@type"
+            ],
+            "properties": {
+                "$schema": {
+                    "$ref": "./base.json#js-schema"
+                },
+                "@context": {
+                    "$ref": "./base.json#ld-context"
+                },
+                "@id": {
+                    "$ref": "./base.json#ld-id"
+                },
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#name"
                 }
             },
             "additionalProperties": false
         },
         "Project": {
             "$anchor": "Project",
-            "@id": "http://www.w3.org/ns/prov#Project",
+            "@id": "proj:Project",
             "title": "PROV Project",
-            "description": "Undefined.",
+            "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
 			"type": "object",
             "required": [
                 "@type"
@@ -120,17 +168,20 @@
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Project"
                 },
-                "label": {
-                    "$ref": "./base.json#label"
-                },
                 "hasLeader": {
-                    "$ref": "#Person"
+                    "$ref": "#Organization"
                 },
                 "hasSponsor": {
                 	"type": "array",
                 	"items": {
-						"$ref": "#Agent"
+						"$ref": "#Organization"
                 	}
+                },
+                "name": {
+                    "$ref": "./base.json#name"
+                },
+                "label": {
+                    "$ref": "./base.json#label"
                 }
             },
             "additionalProperties": false

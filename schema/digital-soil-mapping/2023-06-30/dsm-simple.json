@@ -1,0 +1,107 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm-simple.json",
+    "title": "ANSIS Digital Soil Mapping Instance Schema - Simple Object View",
+    "description": "A simplified (simple JSON object) view of ANSIS Soil Samples and SOSA Observations for Digital Soil Mapping.",
+    "type": "array",
+	"items": {
+		"$ref": "#DSM_SoilSample"
+	},
+    "definitions": {
+        "DSM_SoilSample": {
+			"$anchor": "DSM_SoilSample",
+			"@id": [
+				"https://anzsoil.org/def/au/domain/SoilSample",
+				"http://www.w3.org/ns/sosa/Observation"
+			],
+			"title": "ANSIS DSM Soil Sample",
+			"description": "An ANSIS Soil Sample and SOSA Observation merged and flattened into a simple JSON object that can easily converted to a CSV file.",
+			"$comment": "Schema @id references above are informative - they link to the entities modified to create this view. Property names match as close as possible their equivalents in the ANSIS domain model.",
+			"type": "object",
+			"required": [
+				"hasGeometryX",
+				"hasGeometryY",
+				"hasGeometrySRID",
+				"depthLower",
+				"depthUpper",
+				"depthUnit",
+				"observedProperty@id",
+				"hasResult",
+				"hasResultUnit"
+			],
+			"properties": {
+				"$schema": {
+					"$ref": "../../domain/2023-06-30/base.json#js-schema"
+				},
+				"hasGeometryX": {
+					"type": "number",
+					"description": "X coordinate of a point, or the representative point (e.g. centroid) of a polygon or linstring.",
+					"$comment": "From hasGeometry."
+				},
+				"hasGeometryY": {
+					"type": "number",
+					"description": "Y coordinate of a point, or the representative point (e.g. centroid) of a polygon or linstring.",
+					"$comment": "From hasGeometry."
+				},
+				"hasGeometrySRID": {
+					"type": "integer",
+					"description": "EPSG ID of the geoemtry's spatial reference system.",
+					"$comment": "From hasGeometry."
+				},
+				"hasGeometry": {
+					"$ref": "../../domain/2023-06-30/geo.json#wktLiteral",
+					"$comment": "Result WKT only, removed observable property object."
+				},
+				"depthLower": {
+					"type": "number",
+					"$comment": "Unit in depthUnit."
+				},
+				"depthUpper": {
+					"type": "number",
+					"$comment": "Unit in depthUnit."
+				},
+				"depthUnit": {
+					"$ref": "../../domain/2023-06-30/qudt.json#unit"
+				},
+				"observedProperty@id": {
+					"$ref": "#CURIE",
+					"description": "URI linking to the ANSIS domain model/observable properties vocabulary."
+				},
+				"hasResult": {
+					"type": [
+						"integer",
+						"number",
+						"string"
+					]
+				},
+				"hasResultUnit": {
+					"$ref": "../../domain/2023-06-30/qudt.json#unit"
+				},
+				"usedProcedure@id": {
+					"$ref": "#CURIE",
+					"description": "URI linking to the ANSIS procedure vocabulary."
+				},
+				"isSampleOf@type": {
+					"$ref": "#CURIE",
+					"description": "URI linking to the ANSIS feature (entity) of interest type (horizon, etc)."
+				},
+				"sourceSample@id": {
+					"$ref": "../../domain/2023-06-30/base.json#ld-id",
+					"description": "URI linking to the source soil sample."
+				},
+				"sourceObservation@id": {
+					"$ref": "../../domain/2023-06-30/base.json#ld-id",
+					"description": "URI linking to the source observation."
+				}
+			},
+			"additionalProperties": false
+		},
+		"CURIE": {
+			"$anchor": "CURIE",
+			"title": "Compact URI Datatype",
+			"description": "Compact URI identifying ANSIS properties or procedures. CURIE namespaces in https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/context.json.",
+			"type": "string",
+			"format": "uri"
+		}
+    }
+}

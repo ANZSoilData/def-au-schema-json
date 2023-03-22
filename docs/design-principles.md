@@ -21,7 +21,7 @@ The `domain` schema is made up of multiple sub-schema documents derived from the
 generated a document too large to be parsed by many editors):
 - `base.json`, `entities.json`, `enum.json`, `properties.json`: ANSIS entity and property
 definitions with enumeration objects linking to ANSIS vocabularies.
-- `geosparql.json`, `prov.json`, `qudt.json`, `sosa.json`: schema derived from external ontologies.
+- `geo.json`, `prov.json`, `qudt.json`, `sosa.json`: schema derived from external ontologies.
 - `context.json`: {experimental} JSON-LD context document (see Linked Data Alignment below).
 
 Application schema should only need a `application.json` schema file linking to the subset of the
