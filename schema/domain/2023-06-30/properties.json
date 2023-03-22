@@ -603,7 +603,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#ansis-entities-component"
 						}
 					}
 				},
@@ -674,7 +674,7 @@
 			"description": "confidence in assessment",
 			"$comment": "",
 			"type": "string",
-			"$ref": "./enum.json#tobedefined"
+			"$ref": "./enum.json#substrate-confidence"
 		},
 		"continuity": {
 			"$anchor": "continuity",
@@ -749,6 +749,32 @@
 					"properties": {
 						"hasResult": {
 							"$ref": "./enum.json#tobedefined"
+						}
+					}
+				},
+				{
+					"$ref": "./sosa.json#ObservableProperty"
+				}
+			]
+		},
+		"degree_erosion": {
+			"$anchor": "degree-erosion",
+			"@id": "ansis:degree",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"title": "degree or intensity of erosion",
+			"description": "degree or severity or intensity of erosion",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"hasResult"
+					],
+					"properties": {
+						"hasResult": {
+							"$ref": "./enum.json#erosion-severity"
 						}
 					}
 				},
@@ -2072,7 +2098,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#lithology-rock"
 						}
 					}
 				},
@@ -2709,7 +2735,7 @@
 					],
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
+							"$ref": "./enum.json#relief"
 						}
 					}
 				},
