@@ -48,7 +48,8 @@ def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name=
 
     enum_object["title"] = concept_scheme_json["prefLabel"]["_value"]
 
-    enum_object["description"] = concept_scheme_json["definition"]
+    if "definition" in concept_scheme_json and isinstance(concept_scheme_json["definition"], str):
+        enum_object["description"] = concept_scheme_json["definition"]
 
     enum_object["type"] = "string"
 
@@ -132,4 +133,8 @@ def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name=
 
 # get_ansis_enum("Channel-development", "http://anzsoil.org/def/au/asls/landform/", "lf")
 
-get_ansis_enum("Channel-pattern", "http://anzsoil.org/def/au/asls/landform/", "lf")
+# get_ansis_enum("Channel-pattern", "http://anzsoil.org/def/au/asls/landform/", "lf")
+
+# get_ansis_enum("Erosion-severity", "http://anzsoil.org/def/au/asls/land-surface/", "ls")
+
+get_ansis_enum("Relief", "http://anzsoil.org/def/au/asls/landform/", "lf")
