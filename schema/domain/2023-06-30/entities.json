@@ -865,7 +865,7 @@
 					"$ref": "./properties.json#ansis-type"
 				},
 				"degree": {
-					"$ref": "./properties.json#degree"
+					"$ref": "./properties.json#degree-erosion"
 				}
 			},
 			"additionalProperties": false
