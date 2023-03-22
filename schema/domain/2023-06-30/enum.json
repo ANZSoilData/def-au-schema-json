@@ -19,10 +19,10 @@
 		"qudt": "http://qudt.org/schema/qudt/"
 	},
 	"definitions": {
-		"ansisEntities": {
-			"$anchor": "ansis-entities",
+		"ansisEntities_core": {
+			"$anchor": "ansis-entities-core",
 			"@id": "https://anzsoil.org/def/au/domain",
-			"title": "ANSIS Entity Types",
+			"title": "ANSIS Core Entity Types",
 			"description": "Core ANSIS entities (features) served by the ANSIS system.",
 			"type": "string",
 			"oneOf": [
@@ -65,6 +65,83 @@
 				{
 					"const": "ansis:Treatment",
 					"description": "Treatment"
+				}
+			]
+		},
+		"ansisEntities_component": {
+			"$anchor": "ansis-entities-component",
+			"@id": "https://anzsoil.org/def/au/domain",
+			"title": "ANSIS Sampled Entity Types",
+			"description": "ANSIS entities that may be sampled (the component of a sample).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ansis:SoilBody",
+					"description": "Soil Body"
+				},
+				{
+					"const": "ansis:SoilHorizon",
+					"description": "Soil Horizon"
+				},
+				{
+					"const": "ansis:SoilLayer",
+					"description": "Soil Layer"
+				},
+				{
+					"const": "ansis:SoilSurface",
+					"description": "Soil Surface"
+				},
+				{
+					"const": "ansis:Substrate",
+					"description": "Substrate"
+				},
+				{
+					"const": "ansis:CoarseFragments",
+					"description": "ANSIS Coarse Fragments"
+				},
+				{
+					"const": "ansis:Cracks",
+					"description": "ANSIS Cracks"
+				},
+				{
+					"const": "ansis:Cutans",
+					"description": "ANSIS Cutans"
+				},
+				{
+					"const": "ansis:Landform",
+					"description": "ANSIS Landform"
+				},
+				{
+					"const": "ansis:Mottles",
+					"description": "ANSIS Mottles"
+				},
+				{
+					"const": "ansis:Outcrop",
+					"description": "ANSIS Outcrop"
+				},
+				{
+					"const": "ansis:Pans",
+					"description": "ANSIS Pans"
+				},
+				{
+					"const": "ansis:Pores",
+					"description": "ANSIS Pores"
+				},
+				{
+					"const": "ansis:Roots",
+					"description": "ANSIS Roots"
+				},
+				{
+					"const": "ansis:Segregations",
+					"description": "ANSIS Segregations"
+				},
+				{
+					"const": "ansis:SoilStructure",
+					"description": "ANSIS Soil Structure"
+				},
+				{
+					"const": "ansis:StreamChannel",
+					"description": "ANSIS Stream Channel"
 				}
 			]
 		},
@@ -296,6 +373,50 @@
 				{
 					"const": "ls:disturbance-of-site-8",
 					"description": "Highly disturbed"
+				}
+			]
+		},
+		"ErosionSeverity": {
+			"$anchor": "erosion-severity",
+			"@id": "ls:Erosion-severity",
+			"title": "Erosion severity",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "ls:Erosion-severity-gully",
+					"description": "Gully erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-mass-movement",
+					"description": "Mass movement - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-rill",
+					"description": "Rill erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-scald",
+					"description": "Scald erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-sheet",
+					"description": "Sheet erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-stream-bank",
+					"description": "Stream bank erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-tunnel",
+					"description": "Tunnel erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-wave",
+					"description": "Wave erosion - enumeration"
+				},
+				{
+					"const": "ls:Erosion-severity-wind",
+					"description": "Wind erosion - enumeration"
 				}
 			]
 		},
@@ -661,6 +782,348 @@
 				}
 			]
 		},
+		"Lithology_Rock": {
+			"$anchor": "lithology-rock",
+			"@id": "ls:Lithology-rock",
+			"title": "Lithological type - rock - enumeration",
+			"description": "Lithological type of rock material and unconsolidated material",
+			"$comment": "Needs full lithology labels.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "subst:lithology-AC",
+					"description": "AC"
+				},
+				{
+					"const": "subst:lithology-AD",
+					"description": "AD"
+				},
+				{
+					"const": "subst:lithology-AF",
+					"description": "AF"
+				},
+				{
+					"const": "subst:lithology-AG",
+					"description": "AG"
+				},
+				{
+					"const": "subst:lithology-AH",
+					"description": "AH"
+				},
+				{
+					"const": "subst:lithology-AM",
+					"description": "AM"
+				},
+				{
+					"const": "subst:lithology-AN",
+					"description": "AN"
+				},
+				{
+					"const": "subst:lithology-AP",
+					"description": "AP"
+				},
+				{
+					"const": "subst:lithology-AR",
+					"description": "AR"
+				},
+				{
+					"const": "subst:lithology-AS",
+					"description": "AS"
+				},
+				{
+					"const": "subst:lithology-BA",
+					"description": "BA"
+				},
+				{
+					"const": "subst:lithology-BB",
+					"description": "BB"
+				},
+				{
+					"const": "subst:lithology-BR",
+					"description": "BR"
+				},
+				{
+					"const": "subst:lithology-C",
+					"description": "C"
+				},
+				{
+					"const": "subst:lithology-CG",
+					"description": "CG"
+				},
+				{
+					"const": "subst:lithology-CH",
+					"description": "CH"
+				},
+				{
+					"const": "subst:lithology-CO",
+					"description": "CO"
+				},
+				{
+					"const": "subst:lithology-CU",
+					"description": "CU"
+				},
+				{
+					"const": "subst:lithology-DI",
+					"description": "DI"
+				},
+				{
+					"const": "subst:lithology-DM",
+					"description": "DM"
+				},
+				{
+					"const": "subst:lithology-DR",
+					"description": "DR"
+				},
+				{
+					"const": "subst:lithology-FC",
+					"description": "FC"
+				},
+				{
+					"const": "subst:lithology-GA",
+					"description": "GA"
+				},
+				{
+					"const": "subst:lithology-GD",
+					"description": "GD"
+				},
+				{
+					"const": "subst:lithology-GE",
+					"description": "GE"
+				},
+				{
+					"const": "subst:lithology-GN",
+					"description": "GN"
+				},
+				{
+					"const": "subst:lithology-GR",
+					"description": "GR"
+				},
+				{
+					"const": "subst:lithology-GS",
+					"description": "GS"
+				},
+				{
+					"const": "subst:lithology-GV",
+					"description": "GV"
+				},
+				{
+					"const": "subst:lithology-GW",
+					"description": "GW"
+				},
+				{
+					"const": "subst:lithology-GY",
+					"description": "GY"
+				},
+				{
+					"const": "subst:lithology-HA",
+					"description": "HA"
+				},
+				{
+					"const": "subst:lithology-HO",
+					"description": "HO"
+				},
+				{
+					"const": "subst:lithology-IG",
+					"description": "IG"
+				},
+				{
+					"const": "subst:lithology-JA",
+					"description": "JA"
+				},
+				{
+					"const": "subst:lithology-KA",
+					"description": "KA"
+				},
+				{
+					"const": "subst:lithology-KC",
+					"description": "KC"
+				},
+				{
+					"const": "subst:lithology-KL",
+					"description": "KL"
+				},
+				{
+					"const": "subst:lithology-KM",
+					"description": "KM"
+				},
+				{
+					"const": "subst:lithology-KR",
+					"description": "KR"
+				},
+				{
+					"const": "subst:lithology-KS",
+					"description": "KS"
+				},
+				{
+					"const": "subst:lithology-LC",
+					"description": "LC"
+				},
+				{
+					"const": "subst:lithology-LI",
+					"description": "LI"
+				},
+				{
+					"const": "subst:lithology-M",
+					"description": "M"
+				},
+				{
+					"const": "subst:lithology-MB",
+					"description": "MB"
+				},
+				{
+					"const": "subst:lithology-MD",
+					"description": "MD"
+				},
+				{
+					"const": "subst:lithology-ME",
+					"description": "ME"
+				},
+				{
+					"const": "subst:lithology-MG",
+					"description": "MG"
+				},
+				{
+					"const": "subst:lithology-MI",
+					"description": "MI"
+				},
+				{
+					"const": "subst:lithology-ML",
+					"description": "ML"
+				},
+				{
+					"const": "subst:lithology-MS",
+					"description": "MS"
+				},
+				{
+					"const": "subst:lithology-MU",
+					"description": "MU"
+				},
+				{
+					"const": "subst:lithology-MY",
+					"description": "MY"
+				},
+				{
+					"const": "subst:lithology-PC",
+					"description": "PC"
+				},
+				{
+					"const": "subst:lithology-PE",
+					"description": "PE"
+				},
+				{
+					"const": "subst:lithology-PG",
+					"description": "PG"
+				},
+				{
+					"const": "subst:lithology-PH",
+					"description": "PH"
+				},
+				{
+					"const": "subst:lithology-PL",
+					"description": "PL"
+				},
+				{
+					"const": "subst:lithology-PO",
+					"description": "PO"
+				},
+				{
+					"const": "subst:lithology-PY",
+					"description": "PY"
+				},
+				{
+					"const": "subst:lithology-QP",
+					"description": "QP"
+				},
+				{
+					"const": "subst:lithology-QS",
+					"description": "QS"
+				},
+				{
+					"const": "subst:lithology-QU",
+					"description": "QU"
+				},
+				{
+					"const": "subst:lithology-QZ",
+					"description": "QZ"
+				},
+				{
+					"const": "subst:lithology-R",
+					"description": "R"
+				},
+				{
+					"const": "subst:lithology-RB",
+					"description": "RB"
+				},
+				{
+					"const": "subst:lithology-RH",
+					"description": "RH"
+				},
+				{
+					"const": "subst:lithology-S",
+					"description": "S"
+				},
+				{
+					"const": "subst:lithology-SA",
+					"description": "SA"
+				},
+				{
+					"const": "subst:lithology-SD",
+					"description": "SD"
+				},
+				{
+					"const": "subst:lithology-SH",
+					"description": "SH"
+				},
+				{
+					"const": "subst:lithology-SK",
+					"description": "SK"
+				},
+				{
+					"const": "subst:lithology-SL",
+					"description": "SL"
+				},
+				{
+					"const": "subst:lithology-SR",
+					"description": "SR"
+				},
+				{
+					"const": "subst:lithology-ST",
+					"description": "ST"
+				},
+				{
+					"const": "subst:lithology-SY",
+					"description": "SY"
+				},
+				{
+					"const": "subst:lithology-TR",
+					"description": "TR"
+				},
+				{
+					"const": "subst:lithology-TU",
+					"description": "TU"
+				},
+				{
+					"const": "subst:lithology-UC",
+					"description": "UC"
+				},
+				{
+					"const": "subst:lithology-VB",
+					"description": "VB"
+				},
+				{
+					"const": "subst:lithology-VG",
+					"description": "VG"
+				},
+				{
+					"const": "subst:lithology-Z",
+					"description": "Z"
+				},
+				{
+					"const": "subst:lithology-ZS",
+					"description": "ZS"
+				}
+			]
+		},
 		"MicroreliefAgentBiotic": {
 			"$anchor": "microrelief-agent-biotic",
 			"@id": "ls:Microrelief-agent-biotic",
@@ -906,6 +1369,35 @@
 				}
 			]
 		},
+		"Relief": {
+			"$anchor": "relief",
+			"@id": "lf:Relief",
+			"title": "Relief - enumeration",
+			"description": "Relief is defined as the difference in elevation between the high and low points of a land surface. Its estimation will be made easier by visualising two surfaces of accordance that are planar or gently curved, one touching the major crests of a landform pattern, and the other passing through the major depressions. The average vertical separation of the two surfaces is a measure of the relief. Make this estimation at a field site, either visually or by using a map, and express it in metres.\r\nRelief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Löffler (1974), and are broadly compatible with those of Löffler and Ruxton (1969).\r\nTable 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "lf:relief-class-H",
+					"description": "High"
+				},
+				{
+					"const": "lf:relief-class-L",
+					"description": "Low"
+				},
+				{
+					"const": "lf:relief-class-M",
+					"description": "Very high"
+				},
+				{
+					"const": "lf:relief-class-P",
+					"description": "Extremely low"
+				},
+				{
+					"const": "lf:relief-class-R",
+					"description": "Very low"
+				}
+			]
+		},
 		"RootAbundance": {
 			"$anchor": "root-abundance",
 			"@id": "sp:Root-abundance",
@@ -1023,6 +1515,31 @@
 				{
 					"const": "sp:soil-water-drainage-6",
 					"description": "rapidly drained"
+				}
+			]
+		},
+		"SubstrateConfidence": {
+			"$anchor": "substrate-confidence",
+			"@id": "subst:Confidence",
+			"title": "Confidence that substrate is parent material",
+			"description": "The observer should state the degree of confidence that the observed substrate material is in fact the parent material of the observed soil profile or the major part of that profile, that is, of the B horizon.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "subst:confidence-certain",
+					"description": "certain"
+				},
+				{
+					"const": "subst:confidence-probable",
+					"description": "probable"
+				},
+				{
+					"const": "subst:confidence-doubtful",
+					"description": "doubtful"
+				},
+				{
+					"const": "subst:confidence-not-parent",
+					"description": "not-parent"
 				}
 			]
 		},
