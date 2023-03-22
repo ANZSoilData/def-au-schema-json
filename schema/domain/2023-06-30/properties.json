@@ -3029,23 +3029,14 @@
 			"required": [
 				"hasResult"
 			],
-			"oneOf": [
+			"allOf": [
 				{
 					"properties": {
 						"hasResult": {
-							"$ref": "./enum.json#field-texture-mineral"
+							"$ref": "./enum.json#field-texture-combined"
 						}
 					}
 				},
-				{
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#field-texture-organic"
-						}
-					}
-				}
-			],
-			"allOf": [
 				{
 					"$ref": "./sosa.json#ObservableProperty"
 				}

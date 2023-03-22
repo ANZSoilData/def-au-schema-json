@@ -420,6 +420,104 @@
 				}
 			]
 		},
+		"FieldTexture_Combined": {
+			"$anchor": "field-texture-combined",
+			"@id": ["sp:Field-texture-mineral","sp:Field-texture-organic"],
+			"title": "Mineral and organic soils field texture grade",
+			"description": "Merger of Mineral soils field texture grade and Organic soils field texture",
+			"$comment": "WARNING - TERRIBLE HACK: mineral and organic textures are merged into one vocabulary ... for now.",		
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:field-texture-CL",
+					"description": "(mineral) Clay loam"
+				},
+				{
+					"const": "sp:field-texture-CLS",
+					"description": "(mineral) Clay loam, sandy"
+				},
+				{
+					"const": "sp:field-texture-CS",
+					"description": "(mineral) Clayey sand"
+				},
+				{
+					"const": "sp:field-texture-HC",
+					"description": "(mineral) Heavy clay"
+				},
+				{
+					"const": "sp:field-texture-L",
+					"description": "(mineral) Loam"
+				},
+				{
+					"const": "sp:field-texture-LC",
+					"description": "(mineral) Light clay"
+				},
+				{
+					"const": "sp:field-texture-LMC",
+					"description": "(mineral) Light medium clay"
+				},
+				{
+					"const": "sp:field-texture-LS",
+					"description": "(mineral) Loamy sand"
+				},
+				{
+					"const": "sp:field-texture-MC",
+					"description": "(mineral) Medium clay"
+				},
+				{
+					"const": "sp:field-texture-MHC",
+					"description": "(mineral) Medium heavy clay"
+				},
+				{
+					"const": "sp:field-texture-S",
+					"description": "(mineral) Sand (field texture)"
+				},
+				{
+					"const": "sp:field-texture-SCL",
+					"description": "(mineral) Sandy clay loam"
+				},
+				{
+					"const": "sp:field-texture-SL",
+					"description": "(mineral) Sandy loam"
+				},
+				{
+					"const": "sp:field-texture-ZCL",
+					"description": "(mineral) Silty clay loam"
+				},
+				{
+					"const": "sp:field-texture-ZL",
+					"description": "(mineral) Silty loam"
+				},
+				{
+					"const": "sp:field-texture-AP",
+					"description": "(organic) Sapric peat"
+				},
+				{
+					"const": "sp:field-texture-CP",
+					"description": "(organic) Clayey peat"
+				},
+				{
+					"const": "sp:field-texture-GP",
+					"description": "(organic) Granular peat"
+				},
+				{
+					"const": "sp:field-texture-HP",
+					"description": "(organic) Hemic peat"
+				},
+				{
+					"const": "sp:field-texture-IP",
+					"description": "(organic) Fibric peat"
+				},
+				{
+					"const": "sp:field-texture-LP",
+					"description": "(organic) Loamy peat"
+				},
+				{
+					"const": "sp:field-texture-SP",
+					"description": "(organic) Sandy peat"
+				}
+			]
+		},
 		"FieldTextureMineral": {
 			"$anchor": "field-texture-mineral",
 			"@id": "sp:Field-texture-mineral",
