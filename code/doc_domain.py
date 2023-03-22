@@ -138,13 +138,32 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
 
             lines.append("**ANSIS Vocabulary Location:** " + enum_location + "\n")
 
-        lines.append(enum_value["description"] + "\n")
+        if "@id" in enum_value and isinstance(enum_value["@id"], list):
+
+            enum_locations = []
+
+            for item in enum_value["@id"]:
+                enum_uri_prefix = item.split(":")[0]
+                print("enum_uri_prefix: " + enum_uri_prefix)
+
+                if "@context" in enum_root and enum_uri_prefix in enum_root["@context"]:
+                    print(enum_root["@context"].get(enum_uri_prefix))
+                    enum_location = "[" + item + "](" + enum_root["@context"].get(enum_uri_prefix) + item.split(":")[1] + ")"
+                else:
+                    enum_location = item
+                
+                enum_locations.append(enum_location)
+
+            lines.append("**ANSIS Vocabulary Location:** " + "; ".join(enum_locations) + "\n")
+
+        if "description" in enum_value and isinstance(enum_value["description"], str):
+            lines.append(enum_value["description"] + "\n")
 
         lines.append(
             r"| ID/JSON Value | Preferred Label |")
         lines.append(
             "| ---------- | --------------- |")
-        
+
         for item in enum_value["oneOf"]:
             lines.append("| " + item["const"] + " | " + item["description"] + " |")
 
@@ -311,7 +330,7 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
         print("Searching for anchor " + target_anchor + " in " + def_key + " ...")
         if def_value["$anchor"] == target_anchor:
             return def_value
-    
+
     schema_file.close()
 
 # json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
@@ -328,4 +347,4 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
 
 # json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
