@@ -5,7 +5,7 @@ ANSIS controlled vocabularies converted to JSON schema enumerations. Follow the 
 
 > Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57
 
-## ANSIS Entity Types
+## ANSIS Core Entity Types
 
 **ANSIS Vocabulary Location:** https://anzsoil.org/def/au/domain
 
@@ -23,6 +23,31 @@ Core ANSIS entities (features) served by the ANSIS system.
 | ansis:SoilSurface | Soil Surface |
 | ansis:Substrate | Substrate |
 | ansis:Treatment | Treatment |
+## ANSIS Sampled Entity Types
+
+**ANSIS Vocabulary Location:** https://anzsoil.org/def/au/domain
+
+ANSIS entities that may be sampled (the component of a sample).
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| ansis:SoilBody | Soil Body |
+| ansis:SoilHorizon | Soil Horizon |
+| ansis:SoilLayer | Soil Layer |
+| ansis:SoilSurface | Soil Surface |
+| ansis:Substrate | Substrate |
+| ansis:CoarseFragments | ANSIS Coarse Fragments |
+| ansis:Cracks | ANSIS Cracks |
+| ansis:Cutans | ANSIS Cutans |
+| ansis:Landform | ANSIS Landform |
+| ansis:Mottles | ANSIS Mottles |
+| ansis:Outcrop | ANSIS Outcrop |
+| ansis:Pans | ANSIS Pans |
+| ansis:Pores | ANSIS Pores |
+| ansis:Roots | ANSIS Roots |
+| ansis:Segregations | ANSIS Segregations |
+| ansis:SoilStructure | ANSIS Soil Structure |
+| ansis:StreamChannel | ANSIS Stream Channel |
 ## Stream channel development - enumeration
 
 **ANSIS Vocabulary Location:** [lf:Channel-development](http://anzsoil.org/def/au/asls/landform/Channel-development)
@@ -121,6 +146,51 @@ These are broad categories of disturbance. Users may subdivide where considered 
 | ls:disturbance-of-site-6 | Cultivation; rainfed |
 | ls:disturbance-of-site-7 | Cultivation; irrigated, past or present |
 | ls:disturbance-of-site-8 | Highly disturbed |
+## Erosion severity
+
+**ANSIS Vocabulary Location:** [ls:Erosion-severity](http://anzsoil.org/def/au/asls/land-surface/Erosion-severity)
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| ls:Erosion-severity-gully | Gully erosion - enumeration |
+| ls:Erosion-severity-mass-movement | Mass movement - enumeration |
+| ls:Erosion-severity-rill | Rill erosion - enumeration |
+| ls:Erosion-severity-scald | Scald erosion - enumeration |
+| ls:Erosion-severity-sheet | Sheet erosion - enumeration |
+| ls:Erosion-severity-stream-bank | Stream bank erosion - enumeration |
+| ls:Erosion-severity-tunnel | Tunnel erosion - enumeration |
+| ls:Erosion-severity-wave | Wave erosion - enumeration |
+| ls:Erosion-severity-wind | Wind erosion - enumeration |
+## Mineral and organic soils field texture grade
+
+**ANSIS Vocabulary Location:** [sp:Field-texture-mineral](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-mineral); [sp:Field-texture-organic](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-organic)
+
+Merger of Mineral soils field texture grade and Organic soils field texture
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| sp:field-texture-CL | (mineral) Clay loam |
+| sp:field-texture-CLS | (mineral) Clay loam, sandy |
+| sp:field-texture-CS | (mineral) Clayey sand |
+| sp:field-texture-HC | (mineral) Heavy clay |
+| sp:field-texture-L | (mineral) Loam |
+| sp:field-texture-LC | (mineral) Light clay |
+| sp:field-texture-LMC | (mineral) Light medium clay |
+| sp:field-texture-LS | (mineral) Loamy sand |
+| sp:field-texture-MC | (mineral) Medium clay |
+| sp:field-texture-MHC | (mineral) Medium heavy clay |
+| sp:field-texture-S | (mineral) Sand (field texture) |
+| sp:field-texture-SCL | (mineral) Sandy clay loam |
+| sp:field-texture-SL | (mineral) Sandy loam |
+| sp:field-texture-ZCL | (mineral) Silty clay loam |
+| sp:field-texture-ZL | (mineral) Silty loam |
+| sp:field-texture-AP | (organic) Sapric peat |
+| sp:field-texture-CP | (organic) Clayey peat |
+| sp:field-texture-GP | (organic) Granular peat |
+| sp:field-texture-HP | (organic) Hemic peat |
+| sp:field-texture-IP | (organic) Fibric peat |
+| sp:field-texture-LP | (organic) Loamy peat |
+| sp:field-texture-SP | (organic) Sandy peat |
 ## Mineral soils field texture grade - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Field-texture-mineral](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-mineral)
@@ -249,6 +319,97 @@ The lithology of the coarse fragments is usually identified as coming from the s
 | ls:lithology-PU | Pumice |
 | ls:lithology-R | Same as rock outcrop |
 | ls:lithology-SS | Shells |
+## Lithological type - rock - enumeration
+
+**ANSIS Vocabulary Location:** [ls:Lithology-rock](http://anzsoil.org/def/au/asls/land-surface/Lithology-rock)
+
+Lithological type of rock material and unconsolidated material
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| subst:lithology-AC | AC |
+| subst:lithology-AD | AD |
+| subst:lithology-AF | AF |
+| subst:lithology-AG | AG |
+| subst:lithology-AH | AH |
+| subst:lithology-AM | AM |
+| subst:lithology-AN | AN |
+| subst:lithology-AP | AP |
+| subst:lithology-AR | AR |
+| subst:lithology-AS | AS |
+| subst:lithology-BA | BA |
+| subst:lithology-BB | BB |
+| subst:lithology-BR | BR |
+| subst:lithology-C | C |
+| subst:lithology-CG | CG |
+| subst:lithology-CH | CH |
+| subst:lithology-CO | CO |
+| subst:lithology-CU | CU |
+| subst:lithology-DI | DI |
+| subst:lithology-DM | DM |
+| subst:lithology-DR | DR |
+| subst:lithology-FC | FC |
+| subst:lithology-GA | GA |
+| subst:lithology-GD | GD |
+| subst:lithology-GE | GE |
+| subst:lithology-GN | GN |
+| subst:lithology-GR | GR |
+| subst:lithology-GS | GS |
+| subst:lithology-GV | GV |
+| subst:lithology-GW | GW |
+| subst:lithology-GY | GY |
+| subst:lithology-HA | HA |
+| subst:lithology-HO | HO |
+| subst:lithology-IG | IG |
+| subst:lithology-JA | JA |
+| subst:lithology-KA | KA |
+| subst:lithology-KC | KC |
+| subst:lithology-KL | KL |
+| subst:lithology-KM | KM |
+| subst:lithology-KR | KR |
+| subst:lithology-KS | KS |
+| subst:lithology-LC | LC |
+| subst:lithology-LI | LI |
+| subst:lithology-M | M |
+| subst:lithology-MB | MB |
+| subst:lithology-MD | MD |
+| subst:lithology-ME | ME |
+| subst:lithology-MG | MG |
+| subst:lithology-MI | MI |
+| subst:lithology-ML | ML |
+| subst:lithology-MS | MS |
+| subst:lithology-MU | MU |
+| subst:lithology-MY | MY |
+| subst:lithology-PC | PC |
+| subst:lithology-PE | PE |
+| subst:lithology-PG | PG |
+| subst:lithology-PH | PH |
+| subst:lithology-PL | PL |
+| subst:lithology-PO | PO |
+| subst:lithology-PY | PY |
+| subst:lithology-QP | QP |
+| subst:lithology-QS | QS |
+| subst:lithology-QU | QU |
+| subst:lithology-QZ | QZ |
+| subst:lithology-R | R |
+| subst:lithology-RB | RB |
+| subst:lithology-RH | RH |
+| subst:lithology-S | S |
+| subst:lithology-SA | SA |
+| subst:lithology-SD | SD |
+| subst:lithology-SH | SH |
+| subst:lithology-SK | SK |
+| subst:lithology-SL | SL |
+| subst:lithology-SR | SR |
+| subst:lithology-ST | ST |
+| subst:lithology-SY | SY |
+| subst:lithology-TR | TR |
+| subst:lithology-TU | TU |
+| subst:lithology-UC | UC |
+| subst:lithology-VB | VB |
+| subst:lithology-VG | VG |
+| subst:lithology-Z | Z |
+| subst:lithology-ZS | ZS |
 ## Biotic microrelief agents - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Microrelief-agent-biotic](http://anzsoil.org/def/au/asls/land-surface/Microrelief-agent-biotic)
@@ -292,6 +453,8 @@ Place a 30 mm diameter piece of the pan in water for 1 hour. If it slakes, it is
 | sp:pans-cementation-4 | Very strongly cemented |
 ## Pedal soil grades - enumeration
 
+**ANSIS Vocabulary Location:** [sp:Pedality-grade-pedal](http://anzsoil.org/def/au/asls/soil-profile/Pedality-grade-pedal); [sp:Pedality-grade-apedal](http://anzsoil.org/def/au/asls/soil-profile/Pedality-grade-apedal)
+
 Pedal soils have observable peds and are divided into: sp:structure-pedality-grade-M, sp:structure-pedality-grade-S and sp:structure-pedality-grade-W. Apedal soils have no observable peds and are divided into: sp:structure-pedality-grade-G and sp:structure-pedality-grade-V
 
 | ID/JSON Value | Preferred Label |
@@ -320,6 +483,8 @@ The average least dimension of peds is used to determine the class interval. Use
 | sp:structure-pedality-size-9 | > 500 mm |
 ## Abundance of very fine, fine, medium and coarse macropores
 
+**ANSIS Vocabulary Location:** [sp:Pore-abundance-fine](http://anzsoil.org/def/au/asls/soil-profile/Pore-abundance-fine); [sp:Pore-abundance-coarse](http://anzsoil.org/def/au/asls/soil-profile/Pore-abundance-coarse)
+
 Abundance of very fine and fine macropores (less than 2mm diameter), and medium and coarse macropores (greater than 2 mm diameter).
 
 | ID/JSON Value | Preferred Label |
@@ -345,6 +510,21 @@ Abundance of rock outcrop.
 | ls:rock-outcrop-abundance-3 | Rocky |
 | ls:rock-outcrop-abundance-4 | Very rocky |
 | ls:rock-outcrop-abundance-5 | Rockland |
+## Relief - enumeration
+
+**ANSIS Vocabulary Location:** [lf:Relief](http://anzsoil.org/def/au/asls/landform/Relief)
+
+Relief is defined as the difference in elevation between the high and low points of a land surface. Its estimation will be made easier by visualising two surfaces of accordance that are planar or gently curved, one touching the major crests of a landform pattern, and the other passing through the major depressions. The average vertical separation of the two surfaces is a measure of the relief. Make this estimation at a field site, either visually or by using a map, and express it in metres.
+Relief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Löffler (1974), and are broadly compatible with those of Löffler and Ruxton (1969).
+Table 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics.
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| lf:relief-class-H | High |
+| lf:relief-class-L | Low |
+| lf:relief-class-M | Very high |
+| lf:relief-class-P | Extremely low |
+| lf:relief-class-R | Very low |
 ## Root abundance - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Root-abundance](http://anzsoil.org/def/au/asls/soil-profile/Root-abundance)
@@ -398,6 +578,18 @@ Drainage is a useful term to summarise local soil wetness conditions, that is, i
 | sp:soil-water-drainage-4 | moderately well drained |
 | sp:soil-water-drainage-5 | well drained |
 | sp:soil-water-drainage-6 | rapidly drained |
+## Confidence that substrate is parent material
+
+**ANSIS Vocabulary Location:** [subst:Confidence](http://anzsoil.org/def/au/asls/substrate/Confidence)
+
+The observer should state the degree of confidence that the observed substrate material is in fact the parent material of the observed soil profile or the major part of that profile, that is, of the B horizon.
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| subst:confidence-certain | certain |
+| subst:confidence-probable | probable |
+| subst:confidence-doubtful | doubtful |
+| subst:confidence-not-parent | not-parent |
 ## Condition of surface soil when dry - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Surface-condition](http://anzsoil.org/def/au/asls/soil-profile/Surface-condition)
