@@ -21,6 +21,16 @@
                 "prefLabel"
             ],
             "properties": {
+				"id": {
+					"$ref": "./base.json#id"
+				},
+				"@id": {
+					"$ref": "./base.json#ld-id"
+				},
+				"@type": {
+					"$ref": "./base.json#ld-type",
+					"const": "skos:Concept"
+				},
                 "prefLabel": {
                     "$ref": "#prefLabel"
                 },

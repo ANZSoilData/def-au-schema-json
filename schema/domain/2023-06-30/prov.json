@@ -36,15 +36,9 @@
                 "@type"
             ],
             "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
+				"id": {
+					"$ref": "./base.json#id"
+				},
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Activity"
@@ -68,15 +62,9 @@
                 "@type"
             ],
             "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
+				"id": {
+					"$ref": "./base.json#id"
+				},
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Agent"
@@ -97,15 +85,9 @@
                 "@type"
             ],
             "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
+				"id": {
+					"$ref": "./base.json#id"
+				},
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Agent"
@@ -126,15 +108,9 @@
                 "@type"
             ],
             "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
+				"id": {
+					"$ref": "./base.json#id"
+				},
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Agent"
@@ -155,15 +131,9 @@
                 "@type"
             ],
             "properties": {
-                "$schema": {
-                    "$ref": "./base.json#js-schema"
-                },
-                "@context": {
-                    "$ref": "./base.json#ld-context"
-                },
-                "@id": {
-                    "$ref": "./base.json#ld-id"
-                },
+				"id": {
+					"$ref": "./base.json#id"
+				},
                 "@type": {
                     "$ref": "./base.json#ld-type",
                     "const": "prov:Project"
