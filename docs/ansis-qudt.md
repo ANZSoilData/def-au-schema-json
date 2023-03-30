@@ -12,5 +12,5 @@ Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a v
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
 | value | 1..1 |  | [xs:decimal](https://www.w3.org/TR/xmlschema-2/#decimal); [xs:integer](https://www.w3.org/TR/xmlschema-2/#integer) |  | The numerical value. |
-| unit | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A reference to the unit of measure of a quantity (variable or constant) of interest. \[ _Restricted to the QUDT vocabulary as a compact URI._ \] |
+| unit | 1..1 |  | [xs:anyuri](https://www.w3.org/TR/xmlschema-2/#anyuri) |  | A reference to the unit of measure of a quantity (variable or constant) of interest. \[ _Restricted to the QUDT vocabulary as a compact URI._ \] |
 

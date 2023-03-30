@@ -290,6 +290,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
 def build_range_type_link(schema_namespace, range_type):
     '''Builds a link to an anchor for the definition of the type.'''
 
+    range_type = range_type.lower()
     target_namespace = range_type.split(":")[0]
     target_file = target_namespace.replace("ansis","entities")
     target_name = range_type.split(":")[1]
