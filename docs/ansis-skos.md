@@ -18,3 +18,4 @@ Reusable SKOS objects for vocabulary entries.
 | @type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object according to the OWL/RDF domain model. \[ _After: https://www.w3.org/TR/json-ld/#specifying-the-type_ \] |
 | prefLabel | 1..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | The preferred label for the concept. |
 | definition | 0..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | A complete explanation of the intended meaning of a concept. |
+

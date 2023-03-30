@@ -23,6 +23,8 @@ Core ANSIS entities (features) served by the ANSIS system.
 | ansis:SoilSurface | Soil Surface |
 | ansis:Substrate | Substrate |
 | ansis:Treatment | Treatment |
+
+
 ## ANSIS Sampled Entity Types
 
 **ANSIS Vocabulary Location:** https://anzsoil.org/def/au/domain
@@ -48,6 +50,8 @@ ANSIS entities that may be sampled (the component of a sample).
 | ansis:Segregations | ANSIS Segregations |
 | ansis:SoilStructure | ANSIS Soil Structure |
 | ansis:StreamChannel | ANSIS Stream Channel |
+
+
 ## Stream channel development - enumeration
 
 **ANSIS Vocabulary Location:** [lf:Channel-development](http://anzsoil.org/def/au/asls/landform/Channel-development)
@@ -60,6 +64,8 @@ The degree of development of stream channels.
 | lf:stream-channel-development-E | Erosional |
 | lf:stream-channel-development-I | Incipient |
 | lf:stream-channel-development-O | Absent |
+
+
 ## Stream-wise channel pattern - enumeration
 
 **ANSIS Vocabulary Location:** [lf:Channel-pattern](http://anzsoil.org/def/au/asls/landform/Channel-pattern)
@@ -72,6 +78,8 @@ In a traverse downstream, it may happen that tributaries enter the stream at fre
 | lf:streamwise-channel-pattern-N | Non-tributary |
 | lf:streamwise-channel-pattern-R | Reticulated |
 | lf:streamwise-channel-pattern-T | Tributary |
+
+
 ## Abundance of coarse fragments - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Coarse-fragments-abundance](http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-abundance)
@@ -87,6 +95,8 @@ The percentage of coarse fragments.
 | ls:coarse-fragments-abundance-4 | Moderately or many |
 | ls:coarse-fragments-abundance-5 | Very or abundant |
 | ls:coarse-fragments-abundance-6 | Extremely or very abundant |
+
+
 ## Shape of coarse fragments - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Coarse-fragments-shape](http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-shape)
@@ -107,6 +117,8 @@ The shape of coarse fragments is determined by referencing the chart that captur
 | ls:coarse-fragments-shape-U | Subrounded |
 | ls:coarse-fragments-shape-UP | Subrounded platy |
 | ls:coarse-fragments-shape-UT | Subrounded tabular |
+
+
 ## Moisture status for colour description - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Colour-moisture-status](http://anzsoil.org/def/au/asls/soil-profile/Colour-moisture-status)
@@ -117,6 +129,8 @@ Moisture status for colour description
 | ---------- | --------------- |
 | sp:colour-stat-D | Dry (colour status) |
 | sp:colour-stat-M | Moist |
+
+
 ## Abundance of cutans - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Cutans-abundance](http://anzsoil.org/def/au/asls/soil-profile/Cutans-abundance)
@@ -129,6 +143,8 @@ Abundance of cutans
 | sp:cutans-abundance-1 | Few (cutans abundance) |
 | sp:cutans-abundance-2 | Common (cutans abundance) |
 | sp:cutans-abundance-3 | Many (cutans abundance) |
+
+
 ## Disturbance of site - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Disturbance-of-site](http://anzsoil.org/def/au/asls/land-surface/Disturbance-of-site)
@@ -146,6 +162,8 @@ These are broad categories of disturbance. Users may subdivide where considered 
 | ls:disturbance-of-site-6 | Cultivation; rainfed |
 | ls:disturbance-of-site-7 | Cultivation; irrigated, past or present |
 | ls:disturbance-of-site-8 | Highly disturbed |
+
+
 ## Erosion severity
 
 **ANSIS Vocabulary Location:** [ls:Erosion-severity](http://anzsoil.org/def/au/asls/land-surface/Erosion-severity)
@@ -161,6 +179,8 @@ These are broad categories of disturbance. Users may subdivide where considered 
 | ls:Erosion-severity-tunnel | Tunnel erosion - enumeration |
 | ls:Erosion-severity-wave | Wave erosion - enumeration |
 | ls:Erosion-severity-wind | Wind erosion - enumeration |
+
+
 ## Mineral and organic soils field texture grade
 
 **ANSIS Vocabulary Location:** [sp:Field-texture-mineral](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-mineral); [sp:Field-texture-organic](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-organic)
@@ -191,6 +211,8 @@ Merger of Mineral soils field texture grade and Organic soils field texture
 | sp:field-texture-IP | (organic) Fibric peat |
 | sp:field-texture-LP | (organic) Loamy peat |
 | sp:field-texture-SP | (organic) Sandy peat |
+
+
 ## Mineral soils field texture grade - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Field-texture-mineral](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-mineral)
@@ -217,6 +239,8 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-SL | Sandy loam |
 | sp:field-texture-ZCL | Silty clay loam |
 | sp:field-texture-ZL | Silty loam |
+
+
 ## Organic soils field texture - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Field-texture-organic](http://anzsoil.org/def/au/asls/soil-profile/Field-texture-organic)
@@ -232,6 +256,8 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | sp:field-texture-IP | Fibric peat |
 | sp:field-texture-LP | Loamy peat |
 | sp:field-texture-SP | Sandy peat |
+
+
 ## Horizon suffixes
 
 **ANSIS Vocabulary Location:** [sp:Horizon-suffix](http://anzsoil.org/def/au/asls/soil-profile/Horizon-suffix)
@@ -259,6 +285,8 @@ The horizon's alphabetic suffix is used to further define the horizon. It always
 | sp:horizon-suffix-x | Horizon suffix x |
 | sp:horizon-suffix-y | Horizon suffix y |
 | sp:horizon-suffix-z | Horizon suffix z |
+
+
 ## Duration (annual) of inundation - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Inundation-duration](http://anzsoil.org/def/au/asls/land-surface/Inundation-duration)
@@ -271,6 +299,8 @@ Give likely duration of an inundation event.
 | ls:inundation-duration-2 | Between 1 and 20 days |
 | ls:inundation-duration-3 | Between 20 and 120 days |
 | ls:inundation-duration-4 | More than 120 days |
+
+
 ## Morphological type - enumeration
 
 **ANSIS Vocabulary Location:** [lf:Landform-element-type](http://anzsoil.org/def/au/asls/landform/Landform-element-type)
@@ -303,6 +333,8 @@ Landform elements fall into morphological types as sketched in Figure 1. Ten typ
 | lf:morphological-type-UN | Upper slope Waning |
 | lf:morphological-type-UX | Upper slope Waxing |
 | lf:morphological-type-V | Open depression (vale) |
+
+
 ## Lithology of coarse fragments - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Lithology-coarse-fragments](http://anzsoil.org/def/au/asls/land-surface/Lithology-coarse-fragments)
@@ -319,6 +351,8 @@ The lithology of the coarse fragments is usually identified as coming from the s
 | ls:lithology-PU | Pumice |
 | ls:lithology-R | Same as rock outcrop |
 | ls:lithology-SS | Shells |
+
+
 ## Lithological type - rock - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Lithology-rock](http://anzsoil.org/def/au/asls/land-surface/Lithology-rock)
@@ -410,6 +444,8 @@ Lithological type of rock material and unconsolidated material
 | subst:lithology-VG | VG |
 | subst:lithology-Z | Z |
 | subst:lithology-ZS | ZS |
+
+
 ## Biotic microrelief agents - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Microrelief-agent-biotic](http://anzsoil.org/def/au/asls/land-surface/Microrelief-agent-biotic)
@@ -425,6 +461,8 @@ The biotic agents causing the relief.
 | ls:biotic-microrelief-agent-O | Other |
 | ls:biotic-microrelief-agent-T | Termite |
 | ls:biotic-microrelief-agent-V | Vegetation |
+
+
 ## Mottle abundance - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Mottle-abundance](http://anzsoil.org/def/au/asls/soil-profile/Mottle-abundance)
@@ -438,6 +476,8 @@ The percentage of mottles is estimated by eye using the chart in Figure 11 (ASLS
 | sp:mottle-abundance-2 | Few (mottle abundance) |
 | sp:mottle-abundance-3 | Common (mottle abundance) |
 | sp:mottle-abundance-4 | Many (mottle abundance) |
+
+
 ## Cementation of pan - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Pans-cementation](http://anzsoil.org/def/au/asls/soil-profile/Pans-cementation)
@@ -451,6 +491,8 @@ Place a 30 mm diameter piece of the pan in water for 1 hour. If it slakes, it is
 | sp:pans-cementation-2 | Moderately cemented |
 | sp:pans-cementation-3 | Strongly cemented |
 | sp:pans-cementation-4 | Very strongly cemented |
+
+
 ## Pedal soil grades - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Pedality-grade-pedal](http://anzsoil.org/def/au/asls/soil-profile/Pedality-grade-pedal); [sp:Pedality-grade-apedal](http://anzsoil.org/def/au/asls/soil-profile/Pedality-grade-apedal)
@@ -464,6 +506,8 @@ Pedal soils have observable peds and are divided into: sp:structure-pedality-gra
 | sp:structure-pedality-grade-W | Weak (structure pedality grade) |
 | sp:structure-pedality-grade-G | Single grain |
 | sp:structure-pedality-grade-V | Massive (structure pedality grade) |
+
+
 ## Size of peds
 
 **ANSIS Vocabulary Location:** [sp:Pedality-size](http://anzsoil.org/def/au/asls/soil-profile/Pedality-size)
@@ -481,6 +525,8 @@ The average least dimension of peds is used to determine the class interval. Use
 | sp:structure-pedality-size-7 | 100-200 mm |
 | sp:structure-pedality-size-8 | 200-500 mm |
 | sp:structure-pedality-size-9 | > 500 mm |
+
+
 ## Abundance of very fine, fine, medium and coarse macropores
 
 **ANSIS Vocabulary Location:** [sp:Pore-abundance-fine](http://anzsoil.org/def/au/asls/soil-profile/Pore-abundance-fine); [sp:Pore-abundance-coarse](http://anzsoil.org/def/au/asls/soil-profile/Pore-abundance-coarse)
@@ -496,6 +542,8 @@ Abundance of very fine and fine macropores (less than 2mm diameter), and medium 
 | sp:voids-macropores-abundance-4 | Few medium or coarse macropores |
 | sp:voids-macropores-abundance-5 | Common medium or coarse macropores |
 | sp:voids-macropores-abundance-6 | Many medium or coarse macropores |
+
+
 ## Abundance of rock outcrop - enumeration
 
 **ANSIS Vocabulary Location:** [ls:Rock-outcrop-abundance](http://anzsoil.org/def/au/asls/land-surface/Rock-outcrop-abundance)
@@ -510,6 +558,8 @@ Abundance of rock outcrop.
 | ls:rock-outcrop-abundance-3 | Rocky |
 | ls:rock-outcrop-abundance-4 | Very rocky |
 | ls:rock-outcrop-abundance-5 | Rockland |
+
+
 ## Relief - enumeration
 
 **ANSIS Vocabulary Location:** [lf:Relief](http://anzsoil.org/def/au/asls/landform/Relief)
@@ -525,6 +575,8 @@ Table 6 lists types of landform pattern defined in the glossary according to the
 | lf:relief-class-M | Very high |
 | lf:relief-class-P | Extremely low |
 | lf:relief-class-R | Very low |
+
+
 ## Root abundance - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Root-abundance](http://anzsoil.org/def/au/asls/soil-profile/Root-abundance)
@@ -538,6 +590,8 @@ Number of roots per 0.01 m2 (100 mm × 100 mm)
 | sp:roots-abundance-2 | Common (roots abundance) |
 | sp:roots-abundance-3 | Many (roots abundance) |
 | sp:roots-abundance-4 | Abundant (roots abundance) |
+
+
 ## Abundance of segregations - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Segregations-abundance](http://anzsoil.org/def/au/asls/soil-profile/Segregations-abundance)
@@ -552,6 +606,8 @@ Abundance of segregations. Use figure 11 as a guide.
 | sp:segregations-abundance-3 | Common (segregations abundance) |
 | sp:segregations-abundance-4 | Many (segregations abundance) |
 | sp:segregations-abundance-5 | Very many (segregations abundance) |
+
+
 ## Permeability - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Soil-permeability](http://anzsoil.org/def/au/asls/soil-profile/Soil-permeability)
@@ -564,6 +620,8 @@ Permeability is independent of climate and drainage, and – as applied to a soi
 | sp:soil-water-permeability-2 | Slowly permeable |
 | sp:soil-water-permeability-3 | Moderately permeable |
 | sp:soil-water-permeability-4 | Highly permeable |
+
+
 ## Soil Water Drainage
 
 **ANSIS Vocabulary Location:** [sp:Site-drainage](http://anzsoil.org/def/au/asls/soil-profile/Site-drainage)
@@ -578,6 +636,8 @@ Drainage is a useful term to summarise local soil wetness conditions, that is, i
 | sp:soil-water-drainage-4 | moderately well drained |
 | sp:soil-water-drainage-5 | well drained |
 | sp:soil-water-drainage-6 | rapidly drained |
+
+
 ## Confidence that substrate is parent material
 
 **ANSIS Vocabulary Location:** [subst:Confidence](http://anzsoil.org/def/au/asls/substrate/Confidence)
@@ -590,6 +650,8 @@ The observer should state the degree of confidence that the observed substrate m
 | subst:confidence-probable | probable |
 | subst:confidence-doubtful | doubtful |
 | subst:confidence-not-parent | not-parent |
+
+
 ## Condition of surface soil when dry - enumeration
 
 **ANSIS Vocabulary Location:** [sp:Surface-condition](http://anzsoil.org/def/au/asls/soil-profile/Surface-condition)
@@ -612,6 +674,8 @@ Many surface soils have a characteristic appearance when dry. Because surface co
 | sp:surfacecondition-X | Surface flake |
 | sp:surfacecondition-Y | Cryptogam surface |
 | sp:surfacecondition-Z | Saline (surface condition) |
+
+
 ## To Be Defined
 
 Placeholder for enumerations yet to be created.
@@ -620,3 +684,4 @@ Placeholder for enumerations yet to be created.
 | ---------- | --------------- |
 | xx:a | value a |
 | xx:b | value b |
+
