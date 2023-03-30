@@ -167,6 +167,8 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
         for item in enum_value["oneOf"]:
             lines.append("| " + item["const"] + " | " + item["description"] + " |")
 
+        lines.append("\n")
+
     md_file.write("\n".join(lines))
 
     enum_file.close()
@@ -280,6 +282,8 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
             lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_preferred +
                          " | " + target_property_type + " | " + target_property_vocab + " | " + target_property_description + " |")
 
+        lines.append("\n")
+
     return lines
 
 
@@ -333,18 +337,18 @@ def open_json_pointer(json_schema_path, json_schema_file, json_pointer):
 
     schema_file.close()
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
