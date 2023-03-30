@@ -277,7 +277,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                 if target_property_enum_ref != "":
                     target_property_enum = open_json_pointer(
                         json_schema_path, "entities.json", target_property_enum_ref)
-                    target_property_vocab = "[" + target_property_enum["title"] + "](" + "./ansis-enum.md#" + target_property_enum["title"].replace(" ", "-") + ")"
+                    target_property_vocab = "[" + target_property_enum["title"] + "](" + "./ansis-enum#" + target_property_enum["title"].lower().replace(" ", "-") + ")"
 
             lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_preferred +
                          " | " + target_property_type + " | " + target_property_vocab + " | " + target_property_description + " |")
@@ -290,7 +290,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
 def build_range_type_link(schema_namespace, range_type):
     '''Builds a link to an anchor for the definition of the type.'''
 
-    range_type = range_type.lower()
+    range_type_anchor = range_type.lower().replace(":", "")
     target_namespace = range_type.split(":")[0]
     target_file = target_namespace.replace("ansis","entities")
     target_name = range_type.split(":")[1]
@@ -305,11 +305,11 @@ def build_range_type_link(schema_namespace, range_type):
     else:
         if target_namespace == schema_namespace:
             range_type_link = "[" + range_type + \
-                "](#" + range_type.replace(":", "") + ")"
+                "](#" + range_type_anchor + ")"
         else:
             range_type_link = "[" + range_type + \
-                "](./ansis-" + target_file + ".md#" + \
-                range_type.replace(":", "") + ")"
+                "](./ansis-" + target_file + "#" + \
+                range_type_anchor + ")"
 
     return range_type_link
 
