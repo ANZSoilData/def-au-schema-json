@@ -1024,7 +1024,7 @@
 			"@id": "ansis:depth-reason",
 			"range@type": "xs:string",
 			"title": "reason for profile depth",
-			"description": "reason for the specific depth of this profile e.g. length of auger | depth of interest | rock | too wet … ",
+			"description": "reason for the specific depth of this profile e.g. length of auger, depth of interest, rock, too wet … ",
 			"$comment": "",
 			"type": "string"
 		},
@@ -1125,7 +1125,7 @@
 			"@id": "ansis:design-site",
 			"range@type": "ansis:SoilSite-design",
 			"title": "site design",
-			"description": "overall design of sampling at the site e.g. ASLS|grid|transect",
+			"description": "overall design of sampling at the site e.g. ASLS, grid, transect",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#SoilSite-design"
@@ -1135,7 +1135,7 @@
 			"@id": "ansis:design-survey",
 			"range@type": "ansis:Survey-design",
 			"title": "survey design",
-			"description": "overall design of soil or landscape survey e.g. free|grid|stratified|miscellaneous",
+			"description": "overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous",
 			"$comment": "",
 			"type": "object",
 			"$ref": "./entities.json#Survey-design"
