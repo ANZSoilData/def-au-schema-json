@@ -124,7 +124,7 @@
         "Project": {
             "$anchor": "Project",
             "@id": "proj:Project",
-            "title": "PROV Project",
+            "title": "PROJ Project",
             "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
 			"type": "object",
             "required": [

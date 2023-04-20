@@ -2608,7 +2608,7 @@
 		"relatedProject": {
 			"$anchor": "relatedProject",
 			"@id": "ansis:relatedProject",
-			"range@type": "ansis:Project",
+			"range@type": "proj:Project",
 			"title": "related project",
 			"description": "link to project that supported this activity",
 			"type": "object",
