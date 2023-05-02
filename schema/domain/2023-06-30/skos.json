@@ -4,11 +4,11 @@
     "title": "SKOS JSON Objects",
     "description": "Reusable SKOS objects for vocabulary entries.",
     "$comment": "Created to provide a definition for skos:Concept references elsewhere in the schema. Actually implemented with enumerations in JSON instances.",
-	"@context": {
-		"xs": "https://www.w3.org/TR/xmlschema-2/#",
-		"skos": "http://www.w3.org/2004/02/skos/core#"
-	},
     "$defs": {
+        "curiPrefix": {
+            "xs": "https://www.w3.org/TR/xmlschema-2/#",
+            "skos": "http://www.w3.org/2004/02/skos/core#"
+        },
         "Concept": {
             "$anchor": "Concept",
             "@id": "skos:Concept",
@@ -21,30 +21,20 @@
                 "prefLabel"
             ],
             "properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-				"@id": {
-					"$ref": "./base.json#ld-id"
-				},
-				"@type": {
-					"$ref": "./base.json#ld-type",
-					"const": "skos:Concept"
-				},
-                "prefLabel": {
-                    "$ref": "#prefLabel"
+                "id": {"$ref": "./base.json#id"},
+                "@id": {"$ref": "./base.json#ld-id"},
+                "@type": {
+                    "$ref": "./base.json#ld-type",
+                    "const": "skos:Concept"
                 },
-                "definition": {
-                    "$ref": "#definition"
-                }
+                "prefLabel": {"$ref": "#prefLabel"},
+                "definition": {"$ref": "#definition"}
             }
         },
         "preferredLabel": {
             "$anchor": "prefLabel",
             "@id": "skos:prefLabel",
-            "range@type": [
-                "xs:string"
-            ],
+            "range@type": ["xs:string"],
             "title": "Preferred Label",
             "description": "The preferred label for the concept.",
             "type": "string"
@@ -52,9 +42,7 @@
         "definition": {
             "$anchor": "definition",
             "@id": "skos:definition",
-            "range@type": [
-                "xs:string"
-            ],
+            "range@type": ["xs:string"],
             "title": "Definition",
             "description": "A complete explanation of the intended meaning of a concept.",
             "type": "string"

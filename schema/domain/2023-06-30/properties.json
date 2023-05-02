@@ -1,3201 +1,2653 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/properties.json",
-	"title": "ANSIS Soil Domain Property Schema",
-	"description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
-	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
-	"@context": {
-		"ansis": "https://anzsoil.org/def/au/domain/",
-		"sosa": "http://www.w3.org/ns/sosa/",
-		"xs": "https://www.w3.org/TR/xmlschema-2/#",
-		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-		"skos": "http://www.w3.org/2004/02/skos/core#",
-		"qudt": "http://qudt.org/schema/qudt/"
-	},
-	"$defs": {
-		"abundance": {
-			"$anchor": "abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of items",
-			"$comment": "has entity specific subtypes",
-			"type": "null"
-		},
-		"abundance_mottle": {
-			"$anchor": "mottle-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of mottles",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#mottle-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"abundance_outcrop": {
-			"$anchor": "rock-outcrop-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of outcrops",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#rock-outcrop-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"abundance_pores": {
-			"$anchor": "pore-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of pores",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#pore-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"abundance_roots": {
-			"$anchor": "root-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of roots",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#root-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"abundance_segregations": {
-			"$anchor": "segregations-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of segregations",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#segregations-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"abundance_coarse_fragments": {
-			"$anchor": "coarse-fragments-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of coarse fragments",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#coarse-fragments-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"abundance_cutans": {
-			"$anchor": "cutans-abundance",
-			"@id": "ansis:abundance",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "abundance",
-			"description": "abundance of cutans",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#cutans-abundance"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"agent": {
-			"$anchor": "agent",
-			"@id": "ansis:agent",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "agent",
-			"description": "agent of geomorphological or biotic activity",
-			"$comment": "Requires conditional logical to support different vocabularies for different types.",
-			"type": "null"
-		},
-		"agent_microrelief_biotic": {
-			"$anchor": "microrelief-agent-biotic",
-			"@id": "ansis:agent",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "agent",
-			"description": "agent of geomorphological or biotic activity",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#microrelief-agent-biotic"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"aggradation": {
-			"$anchor": "aggradation",
-			"@id": "ansis:aggradation",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "aggradation",
-			"description": "aggradation presence",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"alteration": {
-			"$anchor": "alteration",
-			"@id": "ansis:alteration",
-			"@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "alteration",
-			"description": "type of alteration",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"analyte": {
-			"$anchor": "analyte",
-			"@id": "ansis:analyte",
-			"@type": "skos:Concept",
-			"title": "analyte",
-			"description": "chemical species measured",
-			"$comment": "Large vocabulary, external link.",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"aspect": {
-			"$anchor": "aspect",
-			"@id": "ansis:aspect",
-			"@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "aspect",
-			"description": "direction or azimuth that a terrain surface faces",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"required": [
-						"usedProcedure"
-					],
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"biological": {
-			"$anchor": "biological",
-			"@id": null,
-			"range@type": "sosa:Observation",
-			"title": "soil biological property",
-			"description": "Laboratory measurements of soil biological properties.",
-			"type": "array",
-			"items": {
-				"$ref": "./sosa.json#Observation"
-			}
-		},
-		"carbon": {
-			"$anchor": "carbon",
-			"@id": "ansis:carbon",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "carbon",
-			"description": "soil carbon",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"carbonateEffervescence": {
-			"$anchor": "carbonate-effervescence",
-			"@id": "ansis:carbonate-effervescence",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "effervescence of carbonate",
-			"description": "effervescence of carbonate in fine earth",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"cementation": {
-			"$anchor": "cementation",
-			"@id": "ansis:cementation",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "cementation",
-			"description": "degree of cementation",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#pans-cementation"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"chemistry": {
-			"$anchor": "chemistry",
-			"@id": "ansis:chemistry",
-			"range@type": "sosa:Observation",
-			"title": "soil chemical property",
-			"description": "Laboratory measurements of soil chemical properties.",
-			"type": "array",
-			"items": {
-				"$ref": "./sosa.json#Observation"
-			}
-		},
-		"classification": {
-			"$anchor": "classification",
-			"@id": "ansis:classification",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:SoilClassification"
-			],
-			"title": "has classification",
-			"description": "classification of the soil body or profile",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./entities.json#SoilClassification"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"classificationFamilyA1texture": {
-			"$anchor": "classification-family-A1texture",
-			"@id": "ansis:classification-family-A1texture",
-			"range@type": "skos:Concept",
-			"title": "classification - A1 horizon texture",
-			"description": "family criteria - A1 horizon texture",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationFamilyA1thickness": {
-			"$anchor": "classification-family-A1thickness",
-			"@id": "ansis:classification-family-A1thickness",
-			"range@type": "skos:Concept",
-			"title": "classification - A1 horizon thickness",
-			"description": "family criteria - A1 horizon thickness",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationFamilyBtexture": {
-			"$anchor": "classification-family-Btexture",
-			"@id": "ansis:classification-family-Btexture",
-			"range@type": "skos:Concept",
-			"title": "classification - B horizon texture",
-			"description": "family criteria - B horizon texture",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationFamilyDepth": {
-			"$anchor": "classification-family-depth",
-			"@id": "ansis:classification-family-depth",
-			"range@type": "skos:Concept",
-			"title": "classification - Soil depth",
-			"description": "family criteria - Soil depth",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationFamilyGravel": {
-			"$anchor": "classification-family-gravel",
-			"@id": "ansis:classification-family-gravel",
-			"range@type": "skos:Concept",
-			"title": "classification - Gravel of the surface and A1 horizon",
-			"description": "family criteria - Gravel of the surface and A1 horizon",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationGreatGroup": {
-			"$anchor": "classification-greatgroup",
-			"@id": "ansis:classification-greatgroup",
-			"range@type": "skos:Concept",
-			"title": "classification - Great group",
-			"description": "soil classification - Great group",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationOrder": {
-			"$anchor": "classification-order",
-			"@id": "ansis:classification-order",
-			"range@type": "skos:Concept",
-			"title": "classification - Order",
-			"description": "soil classification - Order",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationSubGroup": {
-			"$anchor": "classification-subgroup",
-			"@id": "ansis:classification-subgroup",
-			"range@type": "skos:Concept",
-			"title": "classification - Subgroup",
-			"description": "soil classification - Subgroup",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"classificationSubOrder": {
-			"$anchor": "classification-suborder",
-			"@id": "ansis:classification-suborder",
-			"range@type": "skos:Concept",
-			"title": "classification - Sub-order",
-			"description": "soil classification - Sub-order",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"colour": {
-			"$anchor": "colour",
-			"@id": "ansis:colour",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:SoilColour"
-			],
-			"title": "colour",
-			"description": "a description of colour",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./entities.json#SoilColour"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"component": {
-			"$anchor": "component",
-			"@id": "ansis:component",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "component",
-			"description": "type of component element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#ansis-entities-component"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"compoundPedality": {
-			"$anchor": "compoundPedality",
-			"@id": "ansis:compoundPedality",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "compound pedality",
-			"description": "",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"conditionWhenDry": {
-			"$anchor": "condition-when-dry",
-			"@id": "ansis:condition-when-dry",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "condition when dry",
-			"description": "surface condition when dry",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#surface-condition"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"confidence": {
-			"$anchor": "confidence",
-			"@id": "ansis:confidence",
-			"range@type": "skos:Concept",
-			"title": "confidence",
-			"description": "confidence in assessment",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#substrate-confidence"
-		},
-		"continuity": {
-			"$anchor": "continuity",
-			"@id": "ansis:continuity",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "continuity",
-			"description": "continuity of linear or planar elements",
-			"$comment": "Definition implies domain beyond pans - use conditional logic for enum $refs.",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"contrast": {
-			"$anchor": "contrast",
-			"@id": "ansis:contrast",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "contrast",
-			"description": "degree of colour contrast",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"degree": {
-			"$anchor": "degree",
-			"@id": "ansis:degree",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "degree or intensity",
-			"description": "degree or severity or intensity of phenomenon",
-			"$comment": "use conditional logic for enum $refs",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"degree_erosion": {
-			"$anchor": "degree-erosion",
-			"@id": "ansis:degree",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "degree or intensity of erosion",
-			"description": "degree or severity or intensity of erosion",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#erosion-severity"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"density": {
-			"$anchor": "density",
-			"@id": "ansis:density",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "density",
-			"description": "mass per unit volume of a substance",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depth": {
-			"@id": "ansis:depth",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue",
-				"skos:Concept"
-			],
-			"title": "depth",
-			"description": "depth from local surface of entity",
-			"$comment": "shared property with bonus domain-context polymorphism so has related sub-schema",
-			"type": "null"
-		},
-		"depth-quantity": {
-			"$anchor": "depth-quantity",
-			"@id": "ansis:depth",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "depth (as quantity)",
-			"$comment": "see #depth",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depth-inundation": {
-			"$anchor": "depth-inundation",
-			"@id": "ansis:depth",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "inundation depth",
-			"$comment": "see #depth",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthFreeWater": {
-			"$anchor": "depth-free-water",
-			"@id": "ansis:depth-free-water",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "depth",
-			"description": "Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface.",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthGully": {
-			"@id": "ansis:depth-gully",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue",
-				"skos:Concept"
-			],
-			"title": "gully depth",
-			"description": "depth from local surface to the base of the gully",
-			"$comment": "polymorphism so has related sub-schema",
-			"type": "null"
-		},
-		"depthGully-quantity": {
-			"$anchor": "depthGully-quantity",
-			"@id": "ansis:depth-gully",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "depthGully (as quantity)",
-			"$comment": "see #depthGully",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthGully-category": {
-			"$anchor": "depthGully-category",
-			"@id": "ansis:depth-gully",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "depthGully (as category)",
-			"$comment": "see #depthGully",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthLower": {
-			"$anchor": "depth-lower",
-			"@id": "ansis:depth-lower",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "lower depth",
-			"description": "depth from local surface to the base of the element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthRHorizon": {
-			"$anchor": "depth-r-horizon",
-			"@id": "ansis:depth-r-horizon",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "depth to R-Horizon",
-			"description": "depth from local surface to the top of the R-Horizon",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthReason": {
-			"$anchor": "depth-reason",
-			"@id": "ansis:depth-reason",
-			"range@type": "xs:string",
-			"title": "reason for profile depth",
-			"description": "reason for the specific depth of this profile e.g. length of auger, depth of interest, rock, too wet … ",
-			"$comment": "",
-			"type": "string"
-		},
-		"depthUpper": {
-			"$anchor": "depth-upper",
-			"@id": "ansis:depth-upper",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "upper depth",
-			"description": "depth from local surface to the top of the element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthWidthRatio": {
-			"$anchor": "depth-width-ratio",
-			"@id": "ansis:depth-width-ratio",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue",
-				"skos:Concept"
-			],
-			"title": "depth width ratio",
-			"description": "depth to width ratio of entity; ratio of depth to width of the element",
-			"$comment": "shared property with bonus domain-context polymorphism so has sub-schema",
-			"type": "null"
-		},
-		"depthWidthRatio-quantity": {
-			"$anchor": "depthWidthRatio-quantity",
-			"@id": "ansis:depth-width-ratio",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "depthWidthRatio (as quantity)",
-			"$comment": "see #depthWidthRatio",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"depthWidthRatio-streamchannel": {
-			"$anchor": "depthWidthRatio-streamchannel",
-			"@id": "ansis:depth-width-ratio",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "channel depth-width",
-			"$comment": "see #depthWidthRatio",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"designSite": {
-			"$anchor": "design-site",
-			"@id": "ansis:design-site",
-			"range@type": "ansis:SoilSite-design",
-			"title": "site design",
-			"description": "overall design of sampling at the site e.g. ASLS, grid, transect",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#SoilSite-design"
-		},
-		"designSurvey": {
-			"$anchor": "design-survey",
-			"@id": "ansis:design-survey",
-			"range@type": "ansis:Survey-design",
-			"title": "survey design",
-			"description": "overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Survey-design"
-		},
-		"designation": {
-			"$anchor": "designation",
-			"@id": "ansis:designation",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:HorizonDesignation"
-			],
-			"title": "horizon designation",
-			"description": "designation of soil horizon with the sequence composing the Profile or Soil Body",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./entities.json#HorizonDesignation"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"designationMaster": {
-			"$anchor": "designation-master",
-			"@id": "ansis:designation-master",
-			"range@type": "skos:Concept",
-			"title": "designation master",
-			"description": "soil horizon designation master",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#tobedefined"
-		},
-		"designationPrefix": {
-			"$anchor": "designation-prefix",
-			"@id": "ansis:designation-prefix",
-			"range@type": "xs:integer",
-			"title": "designation prefix",
-			"description": "soil horizon designation prefix",
-			"$comment": "",
-			"type": "integer"
-		},
-		"designationSubdivision": {
-			"$anchor": "designation-subdivision",
-			"@id": "ansis:designation-subdivision",
-			"range@type": "xs:integer",
-			"title": "designation subdivision",
-			"description": "soil horizon designation subdivision",
-			"$comment": "",
-			"type": "integer"
-		},
-		"designationSuffix": {
-			"$anchor": "designation-suffix",
-			"@id": "ansis:designation-suffix",
-			"range@type": "skos:Concept",
-			"title": "designation subdivision",
-			"description": "soil horizon designation subdivision",
-			"$comment": "",
-			"type": "string",
-			"$ref": "./enum.json#horizon-suffix"
-		},
-		"development": {
-			"$anchor": "development",
-			"@id": "ansis:development",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "development",
-			"description": "degree of development of element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#channel-development"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"diameter": {
-			"$anchor": "diameter",
-			"@id": "ansis:diameter",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "diameter",
-			"description": "thickness or width of round object",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"directionality": {
-			"$anchor": "directionality",
-			"@id": "ansis:directionality",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "directionality",
-			"description": "network directionality",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"distance": {
-			"$anchor": "distance",
-			"@id": "ansis:distance",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "distance",
-			"description": "spatial separation of objects",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"distinctness": {
-			"$anchor": "distinctness",
-			"@id": "ansis:distinctness",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "distinctness",
-			"description": "distinctness of boundary - in the context of a soil horizon, this refers to the distinctness of the lower boundary",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"distribution": {
-			"$anchor": "distribution",
-			"@id": "ansis:distribution",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "distribution",
-			"description": "spatial arrangement of items",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"disturbance": {
-			"$anchor": "disturbance",
-			"@id": "ansis:disturbance",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "disturbance",
-			"description": "disturbance of site",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#disturbance-of-site"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"drainage": {
-			"$anchor": "drainage",
-			"@id": "ansis:drainage",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "drainage",
-			"description": "Drainage of site or profile.",
-			"$comment": "example of a property bound to an enumeration",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#soilwaterdrainage"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"duration": {
-			"$anchor": "duration",
-			"@id": "ansis:duration",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue",
-				"skos:Concept"
-			],
-			"title": "duration",
-			"description": "temporal extent of event or phenomenon",
-			"$comment": "shared property with bonus domain-context polymorphism so has sub-schema",
-			"type": "null"
-		},
-		"duration-quantity": {
-			"$anchor": "duration-quantity",
-			"@id": "ansis:duration",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "duration (as quantity)",
-			"$comment": "see #duration",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"duration-inundation": {
-			"$anchor": "duration-inundation",
-			"@id": "ansis:duration",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "inundation duration",
-			"$comment": "see #duration",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#inundation-duration"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"elevation": {
-			"$anchor": "elevation",
-			"@id": "ansis:elevation",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "elevation",
-			"description": "elevation of element above a datum (usually MSL)",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"fabric": {
-			"$anchor": "fabric",
-			"@id": "ansis:fabric",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "fabric",
-			"description": "fabric of soil element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"frequency": {
-			"$anchor": "frequency",
-			"@id": "ansis:frequency",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "frequency",
-			"description": "temporal frequency of event or phenomenon",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"genesis": {
-			"$anchor": "genesis",
-			"@id": "ansis:genesis",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "genesis",
-			"description": "formation process for material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"geomorphologyMode": {
-			"$anchor": "geomorphologyMode",
-			"@id": "ansis:geomorphologyMode",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "geomorphology mode",
-			"description": "mode of geomorphological activity",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"geomorphologyStatus": {
-			"$anchor": "geomorphologyStatus",
-			"@id": "ansis:geomorphologyStatus",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "geomorphology status",
-			"description": "status of geomorphological activity",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"grade": {
-			"$anchor": "grade",
-			"@id": "ansis:grade",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "grade",
-			"description": "grade or degree of development of structure",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#pedality-grade"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"grainSize": {
-			"$anchor": "grain-size",
-			"@id": "ansis:grain-size",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "grain size",
-			"description": "size of the most common particles of a material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"hasCoarseFragments": {
-			"$anchor": "hasCoarseFragments",
-			"@id": "ansis:hasCoarseFragments",
-			"range@type": "ansis:CoarseFragments",
-			"title": "has coarse fragments",
-			"description": "a description of coarse fragments",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#CoarseFragments"
-		},
-		"hasCracks": {
-			"$anchor": "hasCracks",
-			"@id": "ansis:hasCracks",
-			"range@type": "ansis:Cracks",
-			"title": "has cracks",
-			"description": "a description of cracks",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Cracks"
-		},
-		"hasCutans": {
-			"$anchor": "hasCutans",
-			"@id": "ansis:hasCutans",
-			"range@type": "ansis:Cutans",
-			"title": "has cutans",
-			"description": "a description of cutans",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Cutans"
-		},
-		"hasErosion": {
-			"$anchor": "hasErosion",
-			"@id": "ansis:hasErosion",
-			"range@type": "ansis:Erosion",
-			"title": "has erosion",
-			"description": "a description of erosion",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Erosion"
-		},
-		"hasInundation": {
-			"$anchor": "hasInundation",
-			"@id": "ansis:hasInundation",
-			"range@type": "ansis:Inundation",
-			"title": "has inundation",
-			"description": "a description of inundation",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Inundation"
-		},
-		"hasLandCover": {
-			"$anchor": "hasLandCover",
-			"@id": "ansis:hasLandCover",
-			"range@type": "ansis:LandManagement",
-			"title": "has land cover",
-			"description": "a description of land cover",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#LandManagement"
-		},
-		"hasLandManagement": {
-			"$anchor": "hasLandManagement",
-			"@id": "ansis:hasLandManagement",
-			"range@type": "ansis:LandManagement",
-			"title": "has land management",
-			"description": "a description of land management",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#LandManagement"
-		},
-		"hasLandSurface": {
-			"$anchor": "hasLandSurface",
-			"@id": "ansis:hasLandSurface",
-			"range@type": "ansis:LandSurface",
-			"title": "has land surface",
-			"description": "a description of land surface",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#LandSurface"
-		},
-		"hasLandUse": {
-			"$anchor": "hasLandUse",
-			"@id": "ansis:hasLandUse",
-			"range@type": "ansis:LandUse",
-			"title": "has land use",
-			"description": "a description of land use",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#LandUse"
-		},
-		"hasLandform": {
-			"$anchor": "hasLandform",
-			"@id": "ansis:hasLandform",
-			"range@type": "ansis:Landform",
-			"title": "has landform",
-			"description": "a description of landform",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Landform"
-		},
-		"hasLandformElement": {
-			"$anchor": "hasLandformElement",
-			"@id": "ansis:hasLandformElement",
-			"range@type": "ansis:LandformElement",
-			"title": "has landform element",
-			"description": "a description of landform element",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#LandformElement"
-		},
-		"hasLandformPattern": {
-			"$anchor": "hasLandformPattern",
-			"@id": "ansis:hasLandformPattern",
-			"range@type": "ansis:LandformPattern",
-			"title": "has landform pattern",
-			"description": "a description of landform pattern",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#LandformPattern"
-		},
-		"hasMicrorelief": {
-			"$anchor": "hasMicrorelief",
-			"@id": "ansis:hasMicrorelief",
-			"range@type": "ansis:Microrelief",
-			"title": "has microrelief",
-			"description": "a description of microrelief at the site",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Microrelief"
-		},
-		"hasMicrorelief_biotic": {
-			"$anchor": "hasMicrorelief-biotic",
-			"@id": "ansis:hasMicrorelief-biotic",
-			"range@type": "ansis:Microrelief_biotic",
-			"title": "has microrelief - biotic",
-			"description": "a description of biotic microrelief at the site",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Microrelief_biotic"
-		},
-		"hasMicrorelief_gilgai": {
-			"$anchor": "hasMicrorelief-gilgai",
-			"@id": "ansis:hasMicrorelief-gilgai",
-			"range@type": "ansis:Microrelief_gilgai",
-			"title": "has microrelief - gilgai",
-			"description": "a description of gilgai microrelief at the site",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Microrelief_gilgai"
-		},
-		"hasMicrorelief_hummocky": {
-			"$anchor": "hasMicrorelief-hummocky",
-			"@id": "ansis:hasMicrorelief-hummocky",
-			"range@type": "ansis:Microrelief_hummocky",
-			"title": "has microrelief - hummocky",
-			"description": "a description of hummocky microrelief at the site",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Microrelief_hummocky"
-		},
-		"hasMicrorelief_other": {
-			"$anchor": "hasMicrorelief-other",
-			"@id": "ansis:hasMicrorelief-other",
-			"range@type": "ansis:Microrelief_other",
-			"title": "has microrelief - other",
-			"description": "a description of other microrelief at the site",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Microrelief_other"
-		},
-		"hasMottles": {
-			"$anchor": "hasMottles",
-			"@id": "ansis:hasMottles",
-			"range@type": "ansis:Mottles",
-			"title": "has mottles",
-			"description": "a description of mottles and other colour patterns",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Mottles"
-		},
-		"hasOutcrop": {
-			"$anchor": "hasOutcrop",
-			"@id": "ansis:hasOutcrop",
-			"range@type": "ansis:Outcrop",
-			"title": "has outcrop",
-			"description": "a description of rock outcrop at this entity",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Outcrop"
-		},
-		"hasPans": {
-			"$anchor": "hasPans",
-			"@id": "ansis:hasPans",
-			"range@type": "ansis:Pans",
-			"title": "has pans",
-			"description": "a description of pans",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Pans"
-		},
-		"hasPores": {
-			"$anchor": "hasPores",
-			"@id": "ansis:hasPores",
-			"range@type": "ansis:Pores",
-			"title": "has macropores",
-			"description": "a description of macropores",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Pores"
-		},
-		"hasRoots": {
-			"$anchor": "hasRoots",
-			"@id": "ansis:hasRoots",
-			"range@type": "ansis:Roots",
-			"title": "has roots",
-			"description": "a description of roots",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Roots"
-		},
-		"hasSegregations": {
-			"$anchor": "hasSegregations",
-			"@id": "ansis:hasSegregations",
-			"range@type": "ansis:Segregations",
-			"title": "has segregations",
-			"description": "a description of segregations",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Segregations"
-		},
-		"hasStreamChannel": {
-			"$anchor": "hasStreamChannel",
-			"@id": "ansis:hasStreamChannel",
-			"range@type": "ansis:StreamChannel",
-			"title": "has stream channel",
-			"description": "a description of stream channel occurrence",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#StreamChannel"
-		},
-		"hasStrength": {
-			"$anchor": "hasStrength",
-			"@id": "ansis:hasStrength",
-			"range@type": "ansis:SoilStrength",
-			"title": "has strength",
-			"description": "a description of strength",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./sosa.json#ObservableProperty"
-		},
-		"hasStructure": {
-			"$anchor": "hasStructure",
-			"@id": "ansis:hasStructure",
-			"title": "has structure",
-			"range@type": "ansis:SoilStructure",
-			"description": "a description of structure",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./sosa.json#ObservableProperty"
-		},
-		"hasSubstrate": {
-			"$anchor": "hasSubstrate",
-			"@id": "ansis:hasSubstrate",
-			"range@type": "ansis:Substrate",
-			"title": "has substrate",
-			"description": "a description of substrate",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#Substrate"
-		},
-		"height": {
-			"$anchor": "height",
-			"@id": "ansis:height",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "height",
-			"description": "vertical extent of element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"heightDrainage": {
-			"$anchor": "height-drainage",
-			"@id": "ansis:height-drainage",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "drainage height",
-			"description": "vertical extent of drainage",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"integration": {
-			"$anchor": "temintegrationlate",
-			"@id": "ansis:integration",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "integration",
-			"description": "integration of stream channel network",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"length": {
-			"$anchor": "length",
-			"@id": "ansis:length",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "length",
-			"description": "linear extent - larger dimension",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"lithology": {
-			"$anchor": "lithology",
-			"@id": "ansis:lithology",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "lithology",
-			"description": "lithological type of material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#lithology-rock"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"locationInElement": {
-			"$anchor": "location-in-element",
-			"@id": "ansis:location-in-element",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "location in landform element",
-			"description": "location within landform element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"locationInToposequence": {
-			"$anchor": "location-in-toposequence",
-			"@id": "ansis:location-in-toposequence",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "location in toposequence",
-			"description": "location within a toposequence",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"magneticAttributes": {
-			"$anchor": "magnetic-attributes",
-			"@id": "ansis:magnetic-attributes",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "magnetic attributes",
-			"description": "magnetic attributes",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"mapSheet": {
-			"$anchor": "mapSheet",
-			"@id": "ansis:mapSheet",
-			"range@type": "xs:string",
-			"title": "mapSheet",
-			"description": "map-sheet on which this location is found",
-			"$comment": "",
-			"type": "string"
-		},
-		"material": {
-			"$anchor": "material",
-			"@id": "ansis:material",
-			"range@type": [
-				"sosa:ObservableProperty"
-			],
-			"title": "material",
-			"description": "material or composition of entity or element",
-			"$comment": ""
-		},
-		"methodElevation": {
-			"$anchor": "method-elevation",
-			"@id": "ansis:method-elevation",
-			"title": "elevation method",
-			"description": "means of evaluation of elevation",
-			"$comment": "[ISSUE - discuss switching this to a vocab for usedProcedure]"
-		},
-		"methodSlope": {
-			"$anchor": "method-slope",
-			"@id": "ansis:method-slope",
-			"title": "slope method",
-			"description": "means of evaluation of slope",
-			"$comment": "[ISSUE - discuss switching this to a vocab for usedProcedure]"
-		},
-		"migrationRate": {
-			"$anchor": "migration-rate",
-			"@id": "ansis:migration-rate",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "migration rate",
-			"description": "migration-rate",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"moistureStatus": {
-			"$anchor": "moisture-status",
-			"@id": "ansis:moisture-status",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "moisture status",
-			"description": "moisture state of material while property evaluation is carried out",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#colour-moisture-status"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"morphologicalType": {
-			"$anchor": "morphological-type",
-			"@id": "ansis:morphological-type",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "morphological type",
-			"description": "morphological type of landform element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#landform-element-type"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"pH": {
-			"$anchor": "pH",
-			"@id": "ansis:pH",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "pH",
-			"description": "alkalinity of materia",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"required": [
-						"usedProcedure"
-					],
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"ansisPattern": {
-			"$anchor": "pattern",
-			"@id": "ansis:pattern",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "pattern",
-			"description": "spatial pattern of channels or other linear element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#channel-pattern"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"permeability": {
-			"$anchor": "permeability",
-			"@id": "ansis:permeability",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "permeability",
-			"description": "rate of flow of liquid through the material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#soil-permeability"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"physical": {
-			"$anchor": "physical",
-			"@id": "ansis:physical",
-			"range@type": "sosa:Observation",
-			"title": "soil physical property",
-			"description": "Laboratory measurements of soil physical properties.",
-			"type": "array",
-			"items": {
-				"$ref": "./sosa.json#Observation"
-			}
-		},
-		"plasticity": {
-			"$anchor": "plasticity",
-			"@id": "ansis:plasticity",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:SoilPlasticity"
-			],
-			"title": "plasticity",
-			"description": "capability of being formed or molded",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./entities.json#SoilPlasticity"
-		},
-		"porosity": {
-			"$anchor": "porosity",
-			"@id": "ansis:porosity",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "porosity",
-			"description": "proportion of void space in material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"proportions": {
-			"$anchor": "proportions",
-			"@id": "ansis:proportions",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "proportions",
-			"description": "proportion of void space in material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"purpose": {
-			"$anchor": "purpose",
-			"@id": "ansis:purpose",
-			"range@type": [
-				"ansis:Profile-purpose",
-				"ansis:Site-purpose"
-			],
-			"title": "purpose",
-			"description": "purpose of or reason for activity",
-			"$comment": "",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./entities.json#Profile-purpose"
-				},
-				{
-					"$ref": "./entities.json#Site-purpose"
-				}
-			]
-		},
-		"relatedActivity": {
-			"$anchor": "relatedActivity",
-			"@id": "ansis:relatedActivity",
-			"range@type": ["prov:Activity","sosa:Actuation","sosa:Observation","sosa:Sampling","ansis:SiteVisit","ansis:Treatment"],
-			"title": "related activity",
-			"description": "link to an activity related to this context",
-			"$comment": "[ISSUE] ontology has contradictory range/rangeIncludes statements",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "prov:Activity"
-				},
-				{
-					"$ref": "./prov.json#Activity"
-				},
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "sosa:Actuation"
-				},
-				{
-					"$ref": "./sosa.json#Actuation"
-				},
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "sosa:Observation"
-				},
-				{
-					"$ref": "./sosa.json#Observation"
-				},
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "sosa:Sampling"
-				},
-				{
-					"$ref": "./sosa.json#Sampling"
-				},
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SiteVisit"
-				},
-				{
-					"$ref": "./entities.json#SiteVisit"
-				},
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:Treatment"
-				},
-				{
-					"$ref": "./entities.json#Treatment"
-				}
-			]
-		},
-		"relatedHorizon": {
-			"$anchor": "relatedHorizon",
-			"@id": "ansis:relatedHorizon",
-			"range@type": "ansis:SoilHorizon",
-			"title": "related soil horizon",
-			"description": "related soil horizon within a soil body or sample, or associated with a contact",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SoilHorizon"
-				},
-				{
-					"$ref": "./entities.json#SoilHorizon"
-				}
-			]
-		},
-		"relatedLandSurveySite": {
-			"$anchor": "relatedLandSurveySite",
-			"@id": "ansis:relatedLandsurveySite",
-			"range@type": "ansis:LandSurveySite",
-			"title": "related land survey site",
-			"description": "link to a land survey site related to this context",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:LandsurveySite"
-				},
-				{
-					"$ref": "./entities.json#LandSurveySite"
-				}
-			]
-		},
-		"relatedLayer": {
-			"$anchor": "relatedLayer",
-			"@id": "ansis:relatedLayer",
-			"range@type": "ansis:SoilLayer",
-			"title": "related soil layer",
-			"description": "related soil layer within a soil body or profile",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SoilLayer"
-				},
-				{
-					"$ref": "./entities.json#SoilLayer"
-				}
-			]
-		},
-		"relatedProfile": {
-			"$anchor": "relatedProfile",
-			"@id": "ansis:relatedProfile",
-			"range@type": "ansis:SoilProfile",
-			"title": "Related Profile",
-			"description": "Link to a soil profile related to this context.",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SoilProfile"
-				},
-				{
-					"$ref": "./entities.json#SoilProfile"
-				}
-			]
-		},
-		"relatedProject": {
-			"$anchor": "relatedProject",
-			"@id": "ansis:relatedProject",
-			"range@type": "proj:Project",
-			"title": "related project",
-			"description": "link to project that supported this activity",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "proj:Project"
-				},
-				{
-					"$ref": "./prov.json#Project"
-				}
-			]
-		},
-		"relatedSample": {
-			"$anchor": "relatedSample",
-			"@id": "ansis:relatedSample",
-			"range@type": "ansis:SoilSample",
-			"title": "related sample",
-			"description": "link to a sample related to this context",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "sosa:Sample"
-				},
-				{
-					"$ref": "./entities.json#SoilSample"
-				}
-			]
-		},
-		"relatedSite": {
-			"$anchor": "relatedSite",
-			"@id": "ansis:relatedSite",
-			"range@type": "ansis:SoilSite",
-			"title": "related site",
-			"description": "link to a soil site related to this context",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SoilSite"
-				},
-				{
-					"$ref": "./entities.json#SoilSite"
-				}
-			]
-		},
-		"relatedSoilBody": {
-			"$anchor": "relatedSoilBody",
-			"@id": "ansis:relatedSoilBody",
-			"range@type": "ansis:SoilBody",
-			"title": "related soil body",
-			"description": "link to a soil body related to this context",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SoilBody"
-				},
-				{
-					"$ref": "./entities.json#SoilBody"
-				}
-			]
-		},
-		"relatedSoilSurface": {
-			"$anchor": "relatedSoilSurface",
-			"@id": "ansis:relatedSoilSurface",
-			"range@type": "ansis:SoilSurface",
-			"title": "related soil surface",
-			"description": "soil surface of this entity",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#Entity_Link",
-					"const": "ansis:SoilSurface"
-				},
-				{
-					"$ref": "./entities.json#SoilSurface"
-				}
-			]
-		},
-		"relativeInclination": {
-			"$anchor": "relative-inclination",
-			"@id": "ansis:relative-inclination",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "relative inclination",
-			"description": "relative slope or inclination",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"relief": {
-			"$anchor": "relief",
-			"@id": "ansis:relief",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "relief",
-			"description": "amount of vertical variation of the landform",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#relief"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"runoff": {
-			"$anchor": "runoff",
-			"@id": "ansis:runoff",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "runoff",
-			"description": "degree of surface water runoff",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"shape": {
-			"$anchor": "shape",
-			"@id": "ansis:shape",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "shape",
-			"description": "geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"shape_coarsefragments": {
-			"$anchor": "coarse-fragments-shape",
-			"@id": "ansis:shape",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "shape",
-			"description": "geometry of coarse fragments",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#coarse-fragments-shape"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"size": {
-			"$anchor": "size",
-			"@id": "ansis:size",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "size",
-			"description": "geometric scale and extent of element",
-			"$comment": "",
-			"type": "null"
-		},
-		"size_soilstructure": {
-			"$anchor": "pedality-size",
-			"@id": "ansis:size",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "size",
-			"description": "geometric scale and extent of element",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#pedality-size"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"slope": {
-			"$anchor": "slope",
-			"@id": "ansis:slope",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "slope",
-			"description": "divergence of surface from horizontal",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"required": [
-						"usedProcedure"
-					],
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"spacing": {
-			"$anchor": "spacing",
-			"@id": "ansis:spacing",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "spacing",
-			"description": "lateral separation of elements - in the context of substrate this refers to the spacing of discontinuities",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"state": {
-			"$anchor": "state",
-			"@id": "ansis:state",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "state",
-			"description": "erosion status",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"stickiness": {
-			"$anchor": "stickiness",
-			"@id": "ansis:stickiness",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "stickiness",
-			"description": "adhesiveness or viscosity",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"strength": {
-			"$anchor": "strength",
-			"@id": "ansis:strength",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:SoilStrength"
-			],
-			"title": "strength",
-			"description": "strength of material",
-			"$comment": "",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				},
-				{
-					"$ref": "./entities.json#SoilStrength"
-				}
-			]
-		},
-		"structure": {
-			"$anchor": "structure",
-			"@id": "ansis:structure",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:SoilStructure"
-			],
-			"title": "structure",
-			"description": "internal arrangement of elements of the material or entity",
-			"$comment": "",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				},
-				{
-					"$ref": "./entities.json#SoilStructure"
-				}
-			]
-		},
-		"texture": {
-			"$anchor": "texture",
-			"@id": "ansis:texture",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "texture",
-			"description": "material texture, in terms of particle size distribution and component materials",
-			"$comment": "",
-			"type": "object",
-			"required": [
-				"hasResult"
-			],
-			"allOf": [
-				{
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#field-texture-combined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"ansisType": {
-			"$anchor": "ansis-type",
-			"@id": "ansis:type",
-			"range@type": ["ansis:SiteType", "ansis:SoilSampleType"],
-			"title": "type",
-			"description": "type of ansis soil entity",
-			"$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./entities.json#SiteType"
-				},
-				{
-					"$ref": "./entities.json#SoilSampleType"
-				}
-			]
-		},
-		"underlyingMaterial": {
-			"$anchor": "underlyingMaterial",
-			"@id": "ansis:tempunderlyingMateriallate",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "underlying material",
-			"description": "lithology of material underlying the landform",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"value": {
-			"$anchor": "value",
-			"@id": "ansis:value",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"xs:boolean",
-				"xs:integer",
-				"xs:decimal",
-				"xs:string",
-				"xs:dateTime"
-			],
-			"title": "value",
-			"description": "literal value",
-			"type": [
-				"boolean",
-				"integer",
-				"number",
-				"string"
-			]
-		},
-		"velocity": {
-			"$anchor": "velocity",
-			"@id": "ansis:velocity",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "velocity",
-			"description": "velocity of entity",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"visitor": {
-			"$anchor": "visitor",
-			"@id": "ansis:visitor",
-			"range@type": "prov:Person",
-			"title": "visitor",
-			"description": "site visitor, for the purpose of sampling or observation",
-			"$comment": "",
-			"type": "object",
-			"$ref": "./prov.json#Person"
-		},
-		"waterRepellence": {
-			"$anchor": "waterRepellence",
-			"@id": "ansis:waterRepellence",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
-			"title": "water repellence",
-			"description": "water repellence of material",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./enum.json#tobedefined"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"width": {
-			"$anchor": "width",
-			"@id": "ansis:width",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "width",
-			"description": "linear extent - smaller dimension",
-			"$comment": "",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "./qudt.json#QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		}
-	}
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/properties.json",
+    "title": "ANSIS Soil Domain Property Schema",
+    "description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
+    "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
+    "$defs": {
+        "curiPrefix": {
+            "ansis": "https://anzsoil.org/def/au/domain/",
+            "sosa": "http://www.w3.org/ns/sosa/",
+            "xs": "https://www.w3.org/TR/xmlschema-2/#",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "skos": "http://www.w3.org/2004/02/skos/core#",
+            "qudt": "http://qudt.org/schema/qudt/"
+        },
+        "abundance": {
+            "$anchor": "abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of items",
+            "$comment": "has entity specific subtypes",
+            "type": "null"
+        },
+        "abundance_mottle": {
+            "$anchor": "mottle-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of mottles",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#mottle-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "abundance_outcrop": {
+            "$anchor": "rock-outcrop-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of outcrops",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#rock-outcrop-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "abundance_pores": {
+            "$anchor": "pore-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of pores",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#pore-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "abundance_roots": {
+            "$anchor": "root-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of roots",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#root-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "abundance_segregations": {
+            "$anchor": "segregations-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of segregations",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#segregations-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "abundance_coarse_fragments": {
+            "$anchor": "coarse-fragments-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of coarse fragments",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#coarse-fragments-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "abundance_cutans": {
+            "$anchor": "cutans-abundance",
+            "@id": "ansis:abundance",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "abundance",
+            "description": "abundance of cutans",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#cutans-abundance"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "agent": {
+            "$anchor": "agent",
+            "@id": "ansis:agent",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "agent",
+            "description": "agent of geomorphological or biotic activity",
+            "$comment": "Requires conditional logical to support different vocabularies for different types.",
+            "type": "null"
+        },
+        "agent_microrelief_biotic": {
+            "$anchor": "microrelief-agent-biotic",
+            "@id": "ansis:agent",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "agent",
+            "description": "agent of geomorphological or biotic activity",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#microrelief-agent-biotic"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "aggradation": {
+            "$anchor": "aggradation",
+            "@id": "ansis:aggradation",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "aggradation",
+            "description": "aggradation presence",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "alteration": {
+            "$anchor": "alteration",
+            "@id": "ansis:alteration",
+            "@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "alteration",
+            "description": "type of alteration",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "analyte": {
+            "$anchor": "analyte",
+            "@id": "ansis:analyte",
+            "@type": "skos:Concept",
+            "title": "analyte",
+            "description": "chemical species measured",
+            "$comment": "Large vocabulary, external link.",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "aspect": {
+            "$anchor": "aspect",
+            "@id": "ansis:aspect",
+            "@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "aspect",
+            "description": "direction or azimuth that a terrain surface faces",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {
+                    "required": ["usedProcedure"],
+                    "$ref": "./sosa.json#ObservableProperty"
+                }
+            ]
+        },
+        "biological": {
+            "$anchor": "biological",
+            "@id": null,
+            "range@type": "sosa:Observation",
+            "title": "soil biological property",
+            "description": "Laboratory measurements of soil biological properties.",
+            "type": "array",
+            "items": {"$ref": "./sosa.json#Observation"}
+        },
+        "carbon": {
+            "$anchor": "carbon",
+            "@id": "ansis:carbon",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "carbon",
+            "description": "soil carbon",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "carbonateEffervescence": {
+            "$anchor": "carbonate-effervescence",
+            "@id": "ansis:carbonate-effervescence",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "effervescence of carbonate",
+            "description": "effervescence of carbonate in fine earth",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "cementation": {
+            "$anchor": "cementation",
+            "@id": "ansis:cementation",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "cementation",
+            "description": "degree of cementation",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#pans-cementation"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "chemistry": {
+            "$anchor": "chemistry",
+            "@id": "ansis:chemistry",
+            "range@type": "sosa:Observation",
+            "title": "soil chemical property",
+            "description": "Laboratory measurements of soil chemical properties.",
+            "type": "array",
+            "items": {"$ref": "./sosa.json#Observation"}
+        },
+        "classification": {
+            "$anchor": "classification",
+            "@id": "ansis:classification",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:SoilClassification"
+            ],
+            "title": "has classification",
+            "description": "classification of the soil body or profile",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./entities.json#SoilClassification"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "classificationFamilyA1texture": {
+            "$anchor": "classification-family-A1texture",
+            "@id": "ansis:classification-family-A1texture",
+            "range@type": "skos:Concept",
+            "title": "classification - A1 horizon texture",
+            "description": "family criteria - A1 horizon texture",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationFamilyA1thickness": {
+            "$anchor": "classification-family-A1thickness",
+            "@id": "ansis:classification-family-A1thickness",
+            "range@type": "skos:Concept",
+            "title": "classification - A1 horizon thickness",
+            "description": "family criteria - A1 horizon thickness",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationFamilyBtexture": {
+            "$anchor": "classification-family-Btexture",
+            "@id": "ansis:classification-family-Btexture",
+            "range@type": "skos:Concept",
+            "title": "classification - B horizon texture",
+            "description": "family criteria - B horizon texture",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationFamilyDepth": {
+            "$anchor": "classification-family-depth",
+            "@id": "ansis:classification-family-depth",
+            "range@type": "skos:Concept",
+            "title": "classification - Soil depth",
+            "description": "family criteria - Soil depth",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationFamilyGravel": {
+            "$anchor": "classification-family-gravel",
+            "@id": "ansis:classification-family-gravel",
+            "range@type": "skos:Concept",
+            "title": "classification - Gravel of the surface and A1 horizon",
+            "description": "family criteria - Gravel of the surface and A1 horizon",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationGreatGroup": {
+            "$anchor": "classification-greatgroup",
+            "@id": "ansis:classification-greatgroup",
+            "range@type": "skos:Concept",
+            "title": "classification - Great group",
+            "description": "soil classification - Great group",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationOrder": {
+            "$anchor": "classification-order",
+            "@id": "ansis:classification-order",
+            "range@type": "skos:Concept",
+            "title": "classification - Order",
+            "description": "soil classification - Order",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationSubGroup": {
+            "$anchor": "classification-subgroup",
+            "@id": "ansis:classification-subgroup",
+            "range@type": "skos:Concept",
+            "title": "classification - Subgroup",
+            "description": "soil classification - Subgroup",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "classificationSubOrder": {
+            "$anchor": "classification-suborder",
+            "@id": "ansis:classification-suborder",
+            "range@type": "skos:Concept",
+            "title": "classification - Sub-order",
+            "description": "soil classification - Sub-order",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "colour": {
+            "$anchor": "colour",
+            "@id": "ansis:colour",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:SoilColour"
+            ],
+            "title": "colour",
+            "description": "a description of colour",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./entities.json#SoilColour"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "component": {
+            "$anchor": "component",
+            "@id": "ansis:component",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "component",
+            "description": "type of component element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#ansis-entities-component"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "compoundPedality": {
+            "$anchor": "compoundPedality",
+            "@id": "ansis:compoundPedality",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "compound pedality",
+            "description": "",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "conditionWhenDry": {
+            "$anchor": "condition-when-dry",
+            "@id": "ansis:condition-when-dry",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "condition when dry",
+            "description": "surface condition when dry",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#surface-condition"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "confidence": {
+            "$anchor": "confidence",
+            "@id": "ansis:confidence",
+            "range@type": "skos:Concept",
+            "title": "confidence",
+            "description": "confidence in assessment",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#substrate-confidence"
+        },
+        "continuity": {
+            "$anchor": "continuity",
+            "@id": "ansis:continuity",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "continuity",
+            "description": "continuity of linear or planar elements",
+            "$comment": "Definition implies domain beyond pans - use conditional logic for enum $refs.",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "contrast": {
+            "$anchor": "contrast",
+            "@id": "ansis:contrast",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "contrast",
+            "description": "degree of colour contrast",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "degree": {
+            "$anchor": "degree",
+            "@id": "ansis:degree",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "degree or intensity",
+            "description": "degree or severity or intensity of phenomenon",
+            "$comment": "use conditional logic for enum $refs",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "degree_erosion": {
+            "$anchor": "degree-erosion",
+            "@id": "ansis:degree",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "degree or intensity of erosion",
+            "description": "degree or severity or intensity of erosion",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#erosion-severity"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "density": {
+            "$anchor": "density",
+            "@id": "ansis:density",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "density",
+            "description": "mass per unit volume of a substance",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depth": {
+            "@id": "ansis:depth",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue",
+                "skos:Concept"
+            ],
+            "title": "depth",
+            "description": "depth from local surface of entity",
+            "$comment": "shared property with bonus domain-context polymorphism so has related sub-schema",
+            "type": "null"
+        },
+        "depth-quantity": {
+            "$anchor": "depth-quantity",
+            "@id": "ansis:depth",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "depth (as quantity)",
+            "$comment": "see #depth",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depth-inundation": {
+            "$anchor": "depth-inundation",
+            "@id": "ansis:depth",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "inundation depth",
+            "$comment": "see #depth",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthFreeWater": {
+            "$anchor": "depth-free-water",
+            "@id": "ansis:depth-free-water",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "depth",
+            "description": "Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface.",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthGully": {
+            "@id": "ansis:depth-gully",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue",
+                "skos:Concept"
+            ],
+            "title": "gully depth",
+            "description": "depth from local surface to the base of the gully",
+            "$comment": "polymorphism so has related sub-schema",
+            "type": "null"
+        },
+        "depthGully-quantity": {
+            "$anchor": "depthGully-quantity",
+            "@id": "ansis:depth-gully",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "depthGully (as quantity)",
+            "$comment": "see #depthGully",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthGully-category": {
+            "$anchor": "depthGully-category",
+            "@id": "ansis:depth-gully",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "depthGully (as category)",
+            "$comment": "see #depthGully",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthLower": {
+            "$anchor": "depth-lower",
+            "@id": "ansis:depth-lower",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "lower depth",
+            "description": "depth from local surface to the base of the element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthRHorizon": {
+            "$anchor": "depth-r-horizon",
+            "@id": "ansis:depth-r-horizon",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "depth to R-Horizon",
+            "description": "depth from local surface to the top of the R-Horizon",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthReason": {
+            "$anchor": "depth-reason",
+            "@id": "ansis:depth-reason",
+            "range@type": "xs:string",
+            "title": "reason for profile depth",
+            "description": "reason for the specific depth of this profile e.g. length of auger, depth of interest, rock, too wet … ",
+            "$comment": "",
+            "type": "string"
+        },
+        "depthUpper": {
+            "$anchor": "depth-upper",
+            "@id": "ansis:depth-upper",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "upper depth",
+            "description": "depth from local surface to the top of the element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthWidthRatio": {
+            "$anchor": "depth-width-ratio",
+            "@id": "ansis:depth-width-ratio",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue",
+                "skos:Concept"
+            ],
+            "title": "depth width ratio",
+            "description": "depth to width ratio of entity; ratio of depth to width of the element",
+            "$comment": "shared property with bonus domain-context polymorphism so has sub-schema",
+            "type": "null"
+        },
+        "depthWidthRatio-quantity": {
+            "$anchor": "depthWidthRatio-quantity",
+            "@id": "ansis:depth-width-ratio",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "depthWidthRatio (as quantity)",
+            "$comment": "see #depthWidthRatio",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "depthWidthRatio-streamchannel": {
+            "$anchor": "depthWidthRatio-streamchannel",
+            "@id": "ansis:depth-width-ratio",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "channel depth-width",
+            "$comment": "see #depthWidthRatio",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "designSite": {
+            "$anchor": "design-site",
+            "@id": "ansis:design-site",
+            "range@type": "ansis:SoilSite-design",
+            "title": "site design",
+            "description": "overall design of sampling at the site e.g. ASLS, grid, transect",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#SoilSite-design"
+        },
+        "designSurvey": {
+            "$anchor": "design-survey",
+            "@id": "ansis:design-survey",
+            "range@type": "ansis:Survey-design",
+            "title": "survey design",
+            "description": "overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Survey-design"
+        },
+        "designation": {
+            "$anchor": "designation",
+            "@id": "ansis:designation",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:HorizonDesignation"
+            ],
+            "title": "horizon designation",
+            "description": "designation of soil horizon with the sequence composing the Profile or Soil Body",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./entities.json#HorizonDesignation"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "designationMaster": {
+            "$anchor": "designation-master",
+            "@id": "ansis:designation-master",
+            "range@type": "skos:Concept",
+            "title": "designation master",
+            "description": "soil horizon designation master",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#tobedefined"
+        },
+        "designationPrefix": {
+            "$anchor": "designation-prefix",
+            "@id": "ansis:designation-prefix",
+            "range@type": "xs:integer",
+            "title": "designation prefix",
+            "description": "soil horizon designation prefix",
+            "$comment": "",
+            "type": "integer"
+        },
+        "designationSubdivision": {
+            "$anchor": "designation-subdivision",
+            "@id": "ansis:designation-subdivision",
+            "range@type": "xs:integer",
+            "title": "designation subdivision",
+            "description": "soil horizon designation subdivision",
+            "$comment": "",
+            "type": "integer"
+        },
+        "designationSuffix": {
+            "$anchor": "designation-suffix",
+            "@id": "ansis:designation-suffix",
+            "range@type": "skos:Concept",
+            "title": "designation subdivision",
+            "description": "soil horizon designation subdivision",
+            "$comment": "",
+            "type": "string",
+            "$ref": "./enum.json#horizon-suffix"
+        },
+        "development": {
+            "$anchor": "development",
+            "@id": "ansis:development",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "development",
+            "description": "degree of development of element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#channel-development"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "diameter": {
+            "$anchor": "diameter",
+            "@id": "ansis:diameter",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "diameter",
+            "description": "thickness or width of round object",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "directionality": {
+            "$anchor": "directionality",
+            "@id": "ansis:directionality",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "directionality",
+            "description": "network directionality",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "distance": {
+            "$anchor": "distance",
+            "@id": "ansis:distance",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "distance",
+            "description": "spatial separation of objects",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "distinctness": {
+            "$anchor": "distinctness",
+            "@id": "ansis:distinctness",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "distinctness",
+            "description": "distinctness of boundary - in the context of a soil horizon, this refers to the distinctness of the lower boundary",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "distribution": {
+            "$anchor": "distribution",
+            "@id": "ansis:distribution",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "distribution",
+            "description": "spatial arrangement of items",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "disturbance": {
+            "$anchor": "disturbance",
+            "@id": "ansis:disturbance",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "disturbance",
+            "description": "disturbance of site",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#disturbance-of-site"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "drainage": {
+            "$anchor": "drainage",
+            "@id": "ansis:drainage",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "drainage",
+            "description": "Drainage of site or profile.",
+            "$comment": "example of a property bound to an enumeration",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#soilwaterdrainage"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "duration": {
+            "$anchor": "duration",
+            "@id": "ansis:duration",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue",
+                "skos:Concept"
+            ],
+            "title": "duration",
+            "description": "temporal extent of event or phenomenon",
+            "$comment": "shared property with bonus domain-context polymorphism so has sub-schema",
+            "type": "null"
+        },
+        "duration-quantity": {
+            "$anchor": "duration-quantity",
+            "@id": "ansis:duration",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "duration (as quantity)",
+            "$comment": "see #duration",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "duration-inundation": {
+            "$anchor": "duration-inundation",
+            "@id": "ansis:duration",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "inundation duration",
+            "$comment": "see #duration",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#inundation-duration"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "elevation": {
+            "$anchor": "elevation",
+            "@id": "ansis:elevation",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "elevation",
+            "description": "elevation of element above a datum (usually MSL)",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "fabric": {
+            "$anchor": "fabric",
+            "@id": "ansis:fabric",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "fabric",
+            "description": "fabric of soil element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "frequency": {
+            "$anchor": "frequency",
+            "@id": "ansis:frequency",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "frequency",
+            "description": "temporal frequency of event or phenomenon",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "genesis": {
+            "$anchor": "genesis",
+            "@id": "ansis:genesis",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "genesis",
+            "description": "formation process for material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "geomorphologyMode": {
+            "$anchor": "geomorphologyMode",
+            "@id": "ansis:geomorphologyMode",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "geomorphology mode",
+            "description": "mode of geomorphological activity",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "geomorphologyStatus": {
+            "$anchor": "geomorphologyStatus",
+            "@id": "ansis:geomorphologyStatus",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "geomorphology status",
+            "description": "status of geomorphological activity",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "grade": {
+            "$anchor": "grade",
+            "@id": "ansis:grade",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "grade",
+            "description": "grade or degree of development of structure",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#pedality-grade"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "grainSize": {
+            "$anchor": "grain-size",
+            "@id": "ansis:grain-size",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "grain size",
+            "description": "size of the most common particles of a material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "hasCoarseFragments": {
+            "$anchor": "hasCoarseFragments",
+            "@id": "ansis:hasCoarseFragments",
+            "range@type": "ansis:CoarseFragments",
+            "title": "has coarse fragments",
+            "description": "a description of coarse fragments",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#CoarseFragments"
+        },
+        "hasCracks": {
+            "$anchor": "hasCracks",
+            "@id": "ansis:hasCracks",
+            "range@type": "ansis:Cracks",
+            "title": "has cracks",
+            "description": "a description of cracks",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Cracks"
+        },
+        "hasCutans": {
+            "$anchor": "hasCutans",
+            "@id": "ansis:hasCutans",
+            "range@type": "ansis:Cutans",
+            "title": "has cutans",
+            "description": "a description of cutans",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Cutans"
+        },
+        "hasErosion": {
+            "$anchor": "hasErosion",
+            "@id": "ansis:hasErosion",
+            "range@type": "ansis:Erosion",
+            "title": "has erosion",
+            "description": "a description of erosion",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Erosion"
+        },
+        "hasInundation": {
+            "$anchor": "hasInundation",
+            "@id": "ansis:hasInundation",
+            "range@type": "ansis:Inundation",
+            "title": "has inundation",
+            "description": "a description of inundation",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Inundation"
+        },
+        "hasLandCover": {
+            "$anchor": "hasLandCover",
+            "@id": "ansis:hasLandCover",
+            "range@type": "ansis:LandManagement",
+            "title": "has land cover",
+            "description": "a description of land cover",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#LandManagement"
+        },
+        "hasLandManagement": {
+            "$anchor": "hasLandManagement",
+            "@id": "ansis:hasLandManagement",
+            "range@type": "ansis:LandManagement",
+            "title": "has land management",
+            "description": "a description of land management",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#LandManagement"
+        },
+        "hasLandSurface": {
+            "$anchor": "hasLandSurface",
+            "@id": "ansis:hasLandSurface",
+            "range@type": "ansis:LandSurface",
+            "title": "has land surface",
+            "description": "a description of land surface",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#LandSurface"
+        },
+        "hasLandUse": {
+            "$anchor": "hasLandUse",
+            "@id": "ansis:hasLandUse",
+            "range@type": "ansis:LandUse",
+            "title": "has land use",
+            "description": "a description of land use",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#LandUse"
+        },
+        "hasLandform": {
+            "$anchor": "hasLandform",
+            "@id": "ansis:hasLandform",
+            "range@type": "ansis:Landform",
+            "title": "has landform",
+            "description": "a description of landform",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Landform"
+        },
+        "hasLandformElement": {
+            "$anchor": "hasLandformElement",
+            "@id": "ansis:hasLandformElement",
+            "range@type": "ansis:LandformElement",
+            "title": "has landform element",
+            "description": "a description of landform element",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#LandformElement"
+        },
+        "hasLandformPattern": {
+            "$anchor": "hasLandformPattern",
+            "@id": "ansis:hasLandformPattern",
+            "range@type": "ansis:LandformPattern",
+            "title": "has landform pattern",
+            "description": "a description of landform pattern",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#LandformPattern"
+        },
+        "hasMicrorelief": {
+            "$anchor": "hasMicrorelief",
+            "@id": "ansis:hasMicrorelief",
+            "range@type": "ansis:Microrelief",
+            "title": "has microrelief",
+            "description": "a description of microrelief at the site",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Microrelief"
+        },
+        "hasMicrorelief_biotic": {
+            "$anchor": "hasMicrorelief-biotic",
+            "@id": "ansis:hasMicrorelief-biotic",
+            "range@type": "ansis:Microrelief_biotic",
+            "title": "has microrelief - biotic",
+            "description": "a description of biotic microrelief at the site",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Microrelief_biotic"
+        },
+        "hasMicrorelief_gilgai": {
+            "$anchor": "hasMicrorelief-gilgai",
+            "@id": "ansis:hasMicrorelief-gilgai",
+            "range@type": "ansis:Microrelief_gilgai",
+            "title": "has microrelief - gilgai",
+            "description": "a description of gilgai microrelief at the site",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Microrelief_gilgai"
+        },
+        "hasMicrorelief_hummocky": {
+            "$anchor": "hasMicrorelief-hummocky",
+            "@id": "ansis:hasMicrorelief-hummocky",
+            "range@type": "ansis:Microrelief_hummocky",
+            "title": "has microrelief - hummocky",
+            "description": "a description of hummocky microrelief at the site",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Microrelief_hummocky"
+        },
+        "hasMicrorelief_other": {
+            "$anchor": "hasMicrorelief-other",
+            "@id": "ansis:hasMicrorelief-other",
+            "range@type": "ansis:Microrelief_other",
+            "title": "has microrelief - other",
+            "description": "a description of other microrelief at the site",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Microrelief_other"
+        },
+        "hasMottles": {
+            "$anchor": "hasMottles",
+            "@id": "ansis:hasMottles",
+            "range@type": "ansis:Mottles",
+            "title": "has mottles",
+            "description": "a description of mottles and other colour patterns",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Mottles"
+        },
+        "hasOutcrop": {
+            "$anchor": "hasOutcrop",
+            "@id": "ansis:hasOutcrop",
+            "range@type": "ansis:Outcrop",
+            "title": "has outcrop",
+            "description": "a description of rock outcrop at this entity",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Outcrop"
+        },
+        "hasPans": {
+            "$anchor": "hasPans",
+            "@id": "ansis:hasPans",
+            "range@type": "ansis:Pans",
+            "title": "has pans",
+            "description": "a description of pans",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Pans"
+        },
+        "hasPores": {
+            "$anchor": "hasPores",
+            "@id": "ansis:hasPores",
+            "range@type": "ansis:Pores",
+            "title": "has macropores",
+            "description": "a description of macropores",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Pores"
+        },
+        "hasRoots": {
+            "$anchor": "hasRoots",
+            "@id": "ansis:hasRoots",
+            "range@type": "ansis:Roots",
+            "title": "has roots",
+            "description": "a description of roots",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Roots"
+        },
+        "hasSegregations": {
+            "$anchor": "hasSegregations",
+            "@id": "ansis:hasSegregations",
+            "range@type": "ansis:Segregations",
+            "title": "has segregations",
+            "description": "a description of segregations",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Segregations"
+        },
+        "hasStreamChannel": {
+            "$anchor": "hasStreamChannel",
+            "@id": "ansis:hasStreamChannel",
+            "range@type": "ansis:StreamChannel",
+            "title": "has stream channel",
+            "description": "a description of stream channel occurrence",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#StreamChannel"
+        },
+        "hasStrength": {
+            "$anchor": "hasStrength",
+            "@id": "ansis:hasStrength",
+            "range@type": "ansis:SoilStrength",
+            "title": "has strength",
+            "description": "a description of strength",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./sosa.json#ObservableProperty"
+        },
+        "hasStructure": {
+            "$anchor": "hasStructure",
+            "@id": "ansis:hasStructure",
+            "title": "has structure",
+            "range@type": "ansis:SoilStructure",
+            "description": "a description of structure",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./sosa.json#ObservableProperty"
+        },
+        "hasSubstrate": {
+            "$anchor": "hasSubstrate",
+            "@id": "ansis:hasSubstrate",
+            "range@type": "ansis:Substrate",
+            "title": "has substrate",
+            "description": "a description of substrate",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#Substrate"
+        },
+        "height": {
+            "$anchor": "height",
+            "@id": "ansis:height",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "height",
+            "description": "vertical extent of element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "heightDrainage": {
+            "$anchor": "height-drainage",
+            "@id": "ansis:height-drainage",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "drainage height",
+            "description": "vertical extent of drainage",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "integration": {
+            "$anchor": "temintegrationlate",
+            "@id": "ansis:integration",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "integration",
+            "description": "integration of stream channel network",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "length": {
+            "$anchor": "length",
+            "@id": "ansis:length",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "length",
+            "description": "linear extent - larger dimension",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "lithology": {
+            "$anchor": "lithology",
+            "@id": "ansis:lithology",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "lithology",
+            "description": "lithological type of material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#lithology-rock"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "locationInElement": {
+            "$anchor": "location-in-element",
+            "@id": "ansis:location-in-element",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "location in landform element",
+            "description": "location within landform element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "locationInToposequence": {
+            "$anchor": "location-in-toposequence",
+            "@id": "ansis:location-in-toposequence",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "location in toposequence",
+            "description": "location within a toposequence",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "magneticAttributes": {
+            "$anchor": "magnetic-attributes",
+            "@id": "ansis:magnetic-attributes",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "magnetic attributes",
+            "description": "magnetic attributes",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "mapSheet": {
+            "$anchor": "mapSheet",
+            "@id": "ansis:mapSheet",
+            "range@type": "xs:string",
+            "title": "mapSheet",
+            "description": "map-sheet on which this location is found",
+            "$comment": "",
+            "type": "string"
+        },
+        "material": {
+            "$anchor": "material",
+            "@id": "ansis:material",
+            "range@type": ["sosa:ObservableProperty"],
+            "title": "material",
+            "description": "material or composition of entity or element",
+            "$comment": ""
+        },
+        "methodElevation": {
+            "$anchor": "method-elevation",
+            "@id": "ansis:method-elevation",
+            "title": "elevation method",
+            "description": "means of evaluation of elevation",
+            "$comment": "[ISSUE - discuss switching this to a vocab for usedProcedure]"
+        },
+        "methodSlope": {
+            "$anchor": "method-slope",
+            "@id": "ansis:method-slope",
+            "title": "slope method",
+            "description": "means of evaluation of slope",
+            "$comment": "[ISSUE - discuss switching this to a vocab for usedProcedure]"
+        },
+        "migrationRate": {
+            "$anchor": "migration-rate",
+            "@id": "ansis:migration-rate",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "migration rate",
+            "description": "migration-rate",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "moistureStatus": {
+            "$anchor": "moisture-status",
+            "@id": "ansis:moisture-status",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "moisture status",
+            "description": "moisture state of material while property evaluation is carried out",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#colour-moisture-status"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "morphologicalType": {
+            "$anchor": "morphological-type",
+            "@id": "ansis:morphological-type",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "morphological type",
+            "description": "morphological type of landform element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#landform-element-type"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "pH": {
+            "$anchor": "pH",
+            "@id": "ansis:pH",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "pH",
+            "description": "alkalinity of materia",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {
+                    "required": ["usedProcedure"],
+                    "$ref": "./sosa.json#ObservableProperty"
+                }
+            ]
+        },
+        "ansisPattern": {
+            "$anchor": "pattern",
+            "@id": "ansis:pattern",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "pattern",
+            "description": "spatial pattern of channels or other linear element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#channel-pattern"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "permeability": {
+            "$anchor": "permeability",
+            "@id": "ansis:permeability",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "permeability",
+            "description": "rate of flow of liquid through the material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#soil-permeability"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "physical": {
+            "$anchor": "physical",
+            "@id": "ansis:physical",
+            "range@type": "sosa:Observation",
+            "title": "soil physical property",
+            "description": "Laboratory measurements of soil physical properties.",
+            "type": "array",
+            "items": {"$ref": "./sosa.json#Observation"}
+        },
+        "plasticity": {
+            "$anchor": "plasticity",
+            "@id": "ansis:plasticity",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:SoilPlasticity"
+            ],
+            "title": "plasticity",
+            "description": "capability of being formed or molded",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./entities.json#SoilPlasticity"
+        },
+        "porosity": {
+            "$anchor": "porosity",
+            "@id": "ansis:porosity",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "porosity",
+            "description": "proportion of void space in material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "proportions": {
+            "$anchor": "proportions",
+            "@id": "ansis:proportions",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "proportions",
+            "description": "proportion of void space in material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "purpose": {
+            "$anchor": "purpose",
+            "@id": "ansis:purpose",
+            "range@type": [
+                "ansis:Profile-purpose",
+                "ansis:Site-purpose"
+            ],
+            "title": "purpose",
+            "description": "purpose of or reason for activity",
+            "$comment": "",
+            "type": "object",
+            "oneOf": [
+                {"$ref": "./entities.json#Profile-purpose"},
+                {"$ref": "./entities.json#Site-purpose"}
+            ]
+        },
+        "relatedActivity": {
+            "$anchor": "relatedActivity",
+            "@id": "ansis:relatedActivity",
+            "range@type": [
+                "prov:Activity",
+                "sosa:Actuation",
+                "sosa:Observation",
+                "sosa:Sampling",
+                "ansis:SiteVisit",
+                "ansis:Treatment"
+            ],
+            "title": "related activity",
+            "description": "link to an activity related to this context",
+            "$comment": "[ISSUE] ontology has contradictory range/rangeIncludes statements",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "prov:Activity"
+                },
+                {"$ref": "./prov.json#Activity"},
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "sosa:Actuation"
+                },
+                {"$ref": "./sosa.json#Actuation"},
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "sosa:Observation"
+                },
+                {"$ref": "./sosa.json#Observation"},
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "sosa:Sampling"
+                },
+                {"$ref": "./sosa.json#Sampling"},
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SiteVisit"
+                },
+                {"$ref": "./entities.json#SiteVisit"},
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:Treatment"
+                },
+                {"$ref": "./entities.json#Treatment"}
+            ]
+        },
+        "relatedHorizon": {
+            "$anchor": "relatedHorizon",
+            "@id": "ansis:relatedHorizon",
+            "range@type": "ansis:SoilHorizon",
+            "title": "related soil horizon",
+            "description": "related soil horizon within a soil body or sample, or associated with a contact",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SoilHorizon"
+                },
+                {"$ref": "./entities.json#SoilHorizon"}
+            ]
+        },
+        "relatedLandSurveySite": {
+            "$anchor": "relatedLandSurveySite",
+            "@id": "ansis:relatedLandsurveySite",
+            "range@type": "ansis:LandSurveySite",
+            "title": "related land survey site",
+            "description": "link to a land survey site related to this context",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:LandsurveySite"
+                },
+                {"$ref": "./entities.json#LandSurveySite"}
+            ]
+        },
+        "relatedLayer": {
+            "$anchor": "relatedLayer",
+            "@id": "ansis:relatedLayer",
+            "range@type": "ansis:SoilLayer",
+            "title": "related soil layer",
+            "description": "related soil layer within a soil body or profile",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SoilLayer"
+                },
+                {"$ref": "./entities.json#SoilLayer"}
+            ]
+        },
+        "relatedProfile": {
+            "$anchor": "relatedProfile",
+            "@id": "ansis:relatedProfile",
+            "range@type": "ansis:SoilProfile",
+            "title": "Related Profile",
+            "description": "Link to a soil profile related to this context.",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SoilProfile"
+                },
+                {"$ref": "./entities.json#SoilProfile"}
+            ]
+        },
+        "relatedProject": {
+            "$anchor": "relatedProject",
+            "@id": "ansis:relatedProject",
+            "range@type": "proj:Project",
+            "title": "related project",
+            "description": "link to project that supported this activity",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "proj:Project"
+                },
+                {"$ref": "./prov.json#Project"}
+            ]
+        },
+        "relatedSample": {
+            "$anchor": "relatedSample",
+            "@id": "ansis:relatedSample",
+            "range@type": "ansis:SoilSample",
+            "title": "related sample",
+            "description": "link to a sample related to this context",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "sosa:Sample"
+                },
+                {"$ref": "./entities.json#SoilSample"}
+            ]
+        },
+        "relatedSite": {
+            "$anchor": "relatedSite",
+            "@id": "ansis:relatedSite",
+            "range@type": "ansis:SoilSite",
+            "title": "related site",
+            "description": "link to a soil site related to this context",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SoilSite"
+                },
+                {"$ref": "./entities.json#SoilSite"}
+            ]
+        },
+        "relatedSoilBody": {
+            "$anchor": "relatedSoilBody",
+            "@id": "ansis:relatedSoilBody",
+            "range@type": "ansis:SoilBody",
+            "title": "related soil body",
+            "description": "link to a soil body related to this context",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SoilBody"
+                },
+                {"$ref": "./entities.json#SoilBody"}
+            ]
+        },
+        "relatedSoilSurface": {
+            "$anchor": "relatedSoilSurface",
+            "@id": "ansis:relatedSoilSurface",
+            "range@type": "ansis:SoilSurface",
+            "title": "related soil surface",
+            "description": "soil surface of this entity",
+            "type": "object",
+            "oneOf": [
+                {
+                    "$ref": "./base.json#Entity_Link",
+                    "const": "ansis:SoilSurface"
+                },
+                {"$ref": "./entities.json#SoilSurface"}
+            ]
+        },
+        "relativeInclination": {
+            "$anchor": "relative-inclination",
+            "@id": "ansis:relative-inclination",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "relative inclination",
+            "description": "relative slope or inclination",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "relief": {
+            "$anchor": "relief",
+            "@id": "ansis:relief",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "relief",
+            "description": "amount of vertical variation of the landform",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#relief"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "runoff": {
+            "$anchor": "runoff",
+            "@id": "ansis:runoff",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "runoff",
+            "description": "degree of surface water runoff",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "shape": {
+            "$anchor": "shape",
+            "@id": "ansis:shape",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "shape",
+            "description": "geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "shape_coarsefragments": {
+            "$anchor": "coarse-fragments-shape",
+            "@id": "ansis:shape",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "shape",
+            "description": "geometry of coarse fragments",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#coarse-fragments-shape"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "size": {
+            "$anchor": "size",
+            "@id": "ansis:size",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "size",
+            "description": "geometric scale and extent of element",
+            "$comment": "",
+            "type": "null"
+        },
+        "size_soilstructure": {
+            "$anchor": "pedality-size",
+            "@id": "ansis:size",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "size",
+            "description": "geometric scale and extent of element",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#pedality-size"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "slope": {
+            "$anchor": "slope",
+            "@id": "ansis:slope",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "slope",
+            "description": "divergence of surface from horizontal",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {
+                    "required": ["usedProcedure"],
+                    "$ref": "./sosa.json#ObservableProperty"
+                }
+            ]
+        },
+        "spacing": {
+            "$anchor": "spacing",
+            "@id": "ansis:spacing",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "spacing",
+            "description": "lateral separation of elements - in the context of substrate this refers to the spacing of discontinuities",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "state": {
+            "$anchor": "state",
+            "@id": "ansis:state",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "state",
+            "description": "erosion status",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "stickiness": {
+            "$anchor": "stickiness",
+            "@id": "ansis:stickiness",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "stickiness",
+            "description": "adhesiveness or viscosity",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "strength": {
+            "$anchor": "strength",
+            "@id": "ansis:strength",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:SoilStrength"
+            ],
+            "title": "strength",
+            "description": "strength of material",
+            "$comment": "",
+            "type": "object",
+            "oneOf": [
+                {"$ref": "./sosa.json#ObservableProperty"},
+                {"$ref": "./entities.json#SoilStrength"}
+            ]
+        },
+        "structure": {
+            "$anchor": "structure",
+            "@id": "ansis:structure",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:SoilStructure"
+            ],
+            "title": "structure",
+            "description": "internal arrangement of elements of the material or entity",
+            "$comment": "",
+            "type": "object",
+            "oneOf": [
+                {"$ref": "./sosa.json#ObservableProperty"},
+                {"$ref": "./entities.json#SoilStructure"}
+            ]
+        },
+        "texture": {
+            "$anchor": "texture",
+            "@id": "ansis:texture",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "texture",
+            "description": "material texture, in terms of particle size distribution and component materials",
+            "$comment": "",
+            "type": "object",
+            "required": ["hasResult"],
+            "allOf": [
+                {
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#field-texture-combined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "ansisType": {
+            "$anchor": "ansis-type",
+            "@id": "ansis:type",
+            "range@type": [
+                "ansis:SiteType",
+                "ansis:SoilSampleType"
+            ],
+            "title": "type",
+            "description": "type of ansis soil entity",
+            "$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
+            "type": "object",
+            "oneOf": [
+                {"$ref": "./entities.json#SiteType"},
+                {"$ref": "./entities.json#SoilSampleType"}
+            ]
+        },
+        "underlyingMaterial": {
+            "$anchor": "underlyingMaterial",
+            "@id": "ansis:tempunderlyingMateriallate",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "underlying material",
+            "description": "lithology of material underlying the landform",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "value": {
+            "$anchor": "value",
+            "@id": "ansis:value",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "xs:boolean",
+                "xs:integer",
+                "xs:decimal",
+                "xs:string",
+                "xs:dateTime"
+            ],
+            "title": "value",
+            "description": "literal value",
+            "type": [
+                "boolean",
+                "integer",
+                "number",
+                "string"
+            ]
+        },
+        "velocity": {
+            "$anchor": "velocity",
+            "@id": "ansis:velocity",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "velocity",
+            "description": "velocity of entity",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "visitor": {
+            "$anchor": "visitor",
+            "@id": "ansis:visitor",
+            "range@type": "prov:Person",
+            "title": "visitor",
+            "description": "site visitor, for the purpose of sampling or observation",
+            "$comment": "",
+            "type": "object",
+            "$ref": "./prov.json#Person"
+        },
+        "waterRepellence": {
+            "$anchor": "waterRepellence",
+            "@id": "ansis:waterRepellence",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "water repellence",
+            "description": "water repellence of material",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "width": {
+            "$anchor": "width",
+            "@id": "ansis:width",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "qudt:QuantityValue"
+            ],
+            "title": "width",
+            "description": "linear extent - smaller dimension",
+            "$comment": "",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        }
+    }
 }

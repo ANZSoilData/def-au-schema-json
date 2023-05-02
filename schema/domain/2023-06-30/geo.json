@@ -1,55 +1,49 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/geo.json",
-	"title": "OGC GeoSPARQL Property Schema",
-	"description": "JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology.",
-	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl and http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf.",
-	"@context": {
-		"sosa": "http://www.w3.org/ns/sosa/",
-		"xs": "https://www.w3.org/TR/xmlschema-2/#",
-		"geo": "http://www.opengis.net/ont/geosparql#"
-	},
-	"$defs": {
-		"hasGeometry": {
-			"$anchor": "hasGeometry",
-			"@id": "geo:hasGeometry",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"geo:wktLiteral"
-			],
-			"title": "Has Geometry",
-			"description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"hasResult"
-					],
-					"properties": {
-						"hasResult": {
-							"$ref": "#wktLiteral"
-						}
-					}
-				},
-				{
-					"$ref": "./sosa.json#ObservableProperty"
-				}
-			]
-		},
-		"wktLiteral": {
-			"$anchor": "wktLiteral",
-			"@id": "geo:wktLiteral",
-			"range@type": "xs:string",
-			"title": "WKT Literal",
-			"description": "A Well-known Text serialization of a geometry object.",
-			"$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA 2020 (EPSG:7844)?",
-			"type": "string",
-			"examples": [
-				"SRID=7844;POINT(-42 24)",
-				"SRID=7844;LINESTRING(-42 24, -42 42)",
-				"SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
-			],
-			"properties": {}
-		}
-	}
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/geo.json",
+    "title": "OGC GeoSPARQL Property Schema",
+    "description": "JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology.",
+    "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl and http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf.",
+    "$defs": {
+        "curiPrefix": {
+            "sosa": "http://www.w3.org/ns/sosa/",
+            "xs": "https://www.w3.org/TR/xmlschema-2/#",
+            "geo": "http://www.opengis.net/ont/geosparql#"
+        },
+        "hasGeometry": {
+            "$anchor": "hasGeometry",
+            "@id": "geo:hasGeometry",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "geo:wktLiteral"
+            ],
+            "title": "Has Geometry",
+            "description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
+            "type": "object",
+            "allOf": [
+                {
+                    "required": ["hasResult"],
+                    "properties": {
+                        "hasResult": {"$ref": "#wktLiteral"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
+        },
+        "wktLiteral": {
+            "$anchor": "wktLiteral",
+            "@id": "geo:wktLiteral",
+            "range@type": "xs:string",
+            "title": "WKT Literal",
+            "description": "A Well-known Text serialization of a geometry object.",
+            "$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA 2020 (EPSG:7844)?",
+            "type": "string",
+            "examples": [
+                "SRID=7844;POINT(-42 24)",
+                "SRID=7844;LINESTRING(-42 24, -42 42)",
+                "SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
+            ],
+            "properties": {}
+        }
+    }
 }
