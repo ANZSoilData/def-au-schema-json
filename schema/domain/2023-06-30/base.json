@@ -14,7 +14,6 @@
             "$anchor": "js-schema",
             "range@type": "xs:anyURI",
             "title": "JSON $schema",
-            "range@type": "xs:anyURI",
             "$comment": "The JSON schema for the object. For use when \"additionalProperties\": false and therefore a property names $schema reference is a Bad Thing.",
             "type": "string",
             "format": "iri"

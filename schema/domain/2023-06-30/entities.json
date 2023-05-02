@@ -509,7 +509,7 @@
 				"hasStrength": {
 					"$ref": "./properties.json#strength"
 				},
-				"hasStrength": {
+				"hasStructure": {
 					"$ref": "./properties.json#structure"
 				},
 				"relatedSample": {
@@ -746,9 +746,6 @@
 				},
 				"hasFeatureOfInterest": {
 					"$ref": "./sosa.json#hasFeatureOfInterest"
-				},
-				"actsOnProperty": {
-					"$ref": "./sosa.json#actsOnProperty"
 				},
 				"phenomenonTime": {
 					"$ref": "./sosa.json#phenomenonTime"
