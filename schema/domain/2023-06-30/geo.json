@@ -9,7 +9,7 @@
 		"xs": "https://www.w3.org/TR/xmlschema-2/#",
 		"geo": "http://www.opengis.net/ont/geosparql#"
 	},
-	"definitions": {
+	"$defs": {
 		"hasGeometry": {
 			"$anchor": "hasGeometry",
 			"@id": "geo:hasGeometry",

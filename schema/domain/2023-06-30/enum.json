@@ -18,7 +18,7 @@
 		"skos": "http://www.w3.org/2004/02/skos/core#",
 		"qudt": "http://qudt.org/schema/qudt/"
 	},
-	"definitions": {
+	"$defs": {
 		"ansisEntities_core": {
 			"$anchor": "ansis-entities-core",
 			"@id": "https://anzsoil.org/def/au/domain",

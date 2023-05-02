@@ -7,7 +7,7 @@
 	"@context": {
 		"ansis": "https://anzsoil.org/def/au/domain/"
 	},
-	"definitions": {
+	"$defs": {
 		"SoilSite": {
 			"$anchor": "SoilSite",
 			"@id": "ansis:SoilSite",

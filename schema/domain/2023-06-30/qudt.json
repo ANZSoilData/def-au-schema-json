@@ -6,7 +6,7 @@
 	"@context": {
 		"qudt": "http://qudt.org/schema/qudt/"
 	},
-	"definitions": {
+	"$defs": {
 		"QuantityValue": {
 			"$anchor": "QuantityValue",
 			"@id": "qudt:QuantityValue",

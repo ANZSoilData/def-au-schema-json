@@ -8,7 +8,7 @@
 		"xs": "https://www.w3.org/TR/xmlschema-2/#",
 		"skos": "http://www.w3.org/2004/02/skos/core#"
 	},
-    "definitions": {
+    "$defs": {
         "Concept": {
             "$anchor": "Concept",
             "@id": "skos:Concept",

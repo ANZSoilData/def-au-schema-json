@@ -31,7 +31,7 @@
 			"$ref": "#Sensor"
 		}
 	],
-	"definitions": {
+	"$defs": {
 		"Actuation": {
 			"$anchor": "Actuation",
 			"@id": "sosa:Actuation",
