@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/entities.json",
+    "$id": "entities.json",
     "title": "ANSIS Soil Domain Entity Schema",
     "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
     "$comment": "Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.",
@@ -34,32 +34,64 @@
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:SoilSite"
                 },
-                "hasGeometry": {
+                "ansisType": {
                     "type": "array",
-                    "items": {"$ref": "./geo.json#hasGeometry"}
+                    "items": {"$ref": "./properties.json#ansis-type-site"}
                 },
-                "isSampleOf": {"$ref": "./sosa.json#isSampleOf"},
-                "depthFreeWater": {"$ref": "./properties.json#depth-free-water"},
+                "aspect": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#aspect"}
+                },
+                "depthFreeWater": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#depth-free-water"}
+                },
                 "designSite": {"$ref": "./properties.json#design-site"},
                 "designSurvey": {"$ref": "./properties.json#design-survey"},
                 "disturbance": {"$ref": "./properties.json#disturbance"},
                 "drainage": {"$ref": "./properties.json#drainage"},
-                "hasErosion": {"$ref": "./properties.json#hasErosion"},
+                "elevation": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#elevation"}
+                },
+                "hasErosion": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasErosion"}
+                },
+                "hasGeometry": {
+                    "type": "array",
+                    "items": {"$ref": "./geo.json#hasGeometry"}
+                },
                 "hasLandCover": {"$ref": "./properties.json#hasLandCover"},
                 "hasLandManagement": {"$ref": "./properties.json#hasLandManagement"},
                 "hasLandSurface": {"$ref": "./properties.json#hasLandSurface"},
-                "hasLandUse": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#hasLandUse"}
-                },
+                "hasLandUse": {"$ref": "./properties.json#hasLandUse"},
                 "hasLandform": {"$ref": "./properties.json#hasLandform"},
-                "hasMicrorelief": {"$ref": "./properties.json#hasMicrorelief"},
-                "hasOutcrop": {"$ref": "./properties.json#hasOutcrop"},
-                "heightDrainage": {"$ref": "./properties.json#height-drainage"},
-                "locationInElement": {"$ref": "./properties.json#location-in-element"},
-                "locationInToposequence": {"$ref": "./properties.json#location-in-toposequence"},
+                "hasMicrorelief": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasMicrorelief"}
+                },
+                "hasOutcrop": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasOutcrop"}
+                },
+                "heightDrainage": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#height-drainage"}
+                },
+                "locationInElement": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#location-in-element"}
+                },
+                "locationInToposequence": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#location-in-toposequence"}
+                },
                 "purpose": {"$ref": "./properties.json#purpose"},
-                "relatedLandSurveySite": {"$ref": "./properties.json#relatedLandSurveySite"},
+                "relatedLandSurveySite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite"}
+                },
                 "relatedProfile": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedProfile"}
@@ -73,8 +105,7 @@
                     "items": {"$ref": "./properties.json#relatedSite"}
                 },
                 "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody"},
-                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface"},
-                "type": {"$ref": "./properties.json#ansis-type"}
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface"}
             },
             "additionalProperties": false
         },
@@ -406,23 +437,61 @@
                     "$ref": "./base.json#ld-type",
                     "const": "ansis:LandsurveySite"
                 },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-site"}
+                },
+                "aspect": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#aspect"}
+                },
+                "disturbance": {"$ref": "./properties.json#disturbance"},
+                "drainage": {"$ref": "./properties.json#drainage"},
+                "elevation": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#elevation"}
+                },
                 "hasGeometry": {
                     "type": "array",
                     "items": {"$ref": "./geo.json#hasGeometry"}
                 },
-                "hasErosion": {"$ref": "./properties.json#hasErosion"},
+                "hasErosion": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasErosion"}
+                },
                 "hasLandCover": {"$ref": "./properties.json#hasLandCover"},
                 "hasLandManagement": {"$ref": "./properties.json#hasLandManagement"},
                 "hasLandSurface": {"$ref": "./properties.json#hasLandSurface"},
-                "hasLandUse": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#hasLandUse"}
-                },
+                "hasLandUse": {"$ref": "./properties.json#hasLandUse"},
                 "hasLandform": {"$ref": "./properties.json#hasLandform"},
-                "hasOutcrop": {"$ref": "./properties.json#hasOutcrop"},
-                "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite"}
+                "hasMicrorelief": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasMicrorelief"}
+                },
+                "hasOutcrop": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasOutcrop"}
+                },
+                "locationInElement": {"$ref": "./properties.json#location-in-element"},
+                "locationInToposequence": {"$ref": "./properties.json#location-in-toposequence"},
+                "relatedLandsurveySite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite"}
+                }
             },
             "additionalProperties": false
+        },
+        "LandscapeEntity": {
+            "$anchor": "LandscapeEntity",
+            "@id": "ansis:LandscapeEntity",
+            "title": "ANSIS Landscape Entity",
+            "description": "Landscape entity.",
+            "oneOf": [
+                {"$ref": "#SoilBody"},
+                {"$ref": "#LandCover"},
+                {"$ref": "#Landform"},
+                {"$ref": "#LandSurface"}
+            ]
         },
         "SoilSurface": {
             "$anchor": "SoilSurface",
@@ -1226,7 +1295,7 @@
                     "items": {"$ref": "./properties.json#ansis-type"}
                 },
                 "grade": {"$ref": "./properties.json#grade"},
-                "size": {"$ref": "./properties.json#pedality-size"}
+                "size": {"$ref": "./properties.json#size-soilstructure"}
             },
             "additionalProperties": false
         },
