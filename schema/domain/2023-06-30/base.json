@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/base.json",
+    "$id": "base.json",
     "title": "ANSIS JSON Base Schema",
     "description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
     "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
@@ -44,7 +44,7 @@
             "$comment": "After: https://www.w3.org/TR/json-ld/#the-context",
             "type": "string",
             "format": "uri",
-            "const": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/context.json"
+            "const": "context.json"
         },
         "id": {
             "$anchor": "id",
