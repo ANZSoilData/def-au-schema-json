@@ -2211,7 +2211,7 @@
             "$defs": {
                 "object": {
                     "$anchor": "relatedSoilBody-object",
-                    "$ref": "./entities.json#xxxx"
+                    "$ref": "./entities.json#SoilBody"
                 },
                 "link": {
                     "$anchor": "relatedSoilBody-link",

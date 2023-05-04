@@ -90,22 +90,22 @@
                 "purpose": {"$ref": "./properties.json#purpose"},
                 "relatedLandSurveySite": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedLandSurveySite"}
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
                 },
                 "relatedProfile": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedProfile"}
+                    "items": {"$ref": "./properties.json#relatedProfile-object"}
                 },
                 "relatedProject": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedProject"}
+                    "items": {"$ref": "./properties.json#relatedProject-object"}
                 },
                 "relatedSite": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSite"}
+                    "items": {"$ref": "./properties.json#relatedSite-link"}
                 },
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody"},
-                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface"}
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-object"},
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-object"}
             },
             "additionalProperties": false
         },
@@ -141,21 +141,21 @@
                 "hasSubstrate": {"$ref": "./properties.json#hasSubstrate"},
                 "relatedHorizon": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedHorizon"}
+                    "items": {"$ref": "./properties.json#relatedHorizon-object"}
                 },
                 "relatedLayer": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedLayer"}
+                    "items": {"$ref": "./properties.json#relatedLayer-object"}
                 },
                 "relatedSample": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSample"}
+                    "items": {"$ref": "./properties.json#relatedSample-object"}
                 },
                 "relatedSite": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSite"}
+                    "items": {"$ref": "./properties.json#relatedSite-link"}
                 },
-                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface"}
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-link"}
             },
             "additionalProperties": false
         },
@@ -195,18 +195,18 @@
                 "hasSubstrate": {"$ref": "./properties.json#hasSubstrate"},
                 "relatedHorizon": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedHorizon"}
+                    "items": {"$ref": "./properties.json#relatedHorizon-object"}
                 },
                 "relatedLayer": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedLayer"}
+                    "items": {"$ref": "./properties.json#relatedLayer-object"}
                 },
                 "relatedSample": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSample"}
+                    "items": {"$ref": "./properties.json#relatedSample-object"}
                 },
-                "relatedSite": {"$ref": "./properties.json#relatedSite"},
-                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface"}
+                "relatedSite": {"$ref": "./properties.json#relatedSite-link"},
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-link"}
             },
             "additionalProperties": false
         },
@@ -287,9 +287,9 @@
                 "hasStructure": {"$ref": "./properties.json#structure"},
                 "relatedSample": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSample"}
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
                 },
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody"},
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
                 "chemistry": {"$ref": "./properties.json#chemistry"},
                 "physical": {"$ref": "./properties.json#physical"},
                 "biological": {"$ref": "./properties.json#biological"}
@@ -375,9 +375,9 @@
                 "hasStructure": {"$ref": "./properties.json#structure"},
                 "relatedSample": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSample"}
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
                 },
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody"},
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
                 "chemistry": {"$ref": "./properties.json#chemistry"},
                 "physical": {"$ref": "./properties.json#physical"},
                 "biological": {"$ref": "./properties.json#biological"}
@@ -412,10 +412,9 @@
                 "depthLower": {"$ref": "./properties.json#depth-upper"},
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
                 "component": {"$ref": "./properties.json#component"},
-                "isSampleOf": {"$ref": "./sosa.json#isSampleOf"},
                 "relatedProfile": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedProfile"}
+                    "items": {"$ref": "./properties.json#relatedProfile-link"}
                 }
             },
             "additionalProperties": false
@@ -476,7 +475,7 @@
                 "locationInToposequence": {"$ref": "./properties.json#location-in-toposequence"},
                 "relatedLandsurveySite": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedLandSurveySite"}
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
                 }
             },
             "additionalProperties": false
@@ -509,7 +508,7 @@
                 },
                 "conditionWhenDry": {"$ref": "./properties.json#condition-when-dry"},
                 "hasCoarseFragments": {"$ref": "./properties.json#hasCoarseFragments"},
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody"}
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"}
             },
             "additionalProperties": false
         },
@@ -536,8 +535,8 @@
                 "depth": {"$ref": "./properties.json#depth-quantity"},
                 "confidence": {"$ref": "./properties.json#confidence"},
                 "lithology": {"$ref": "./properties.json#lithology"},
-                "relatedSample": {"$ref": "./properties.json#relatedSample"},
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody"}
+                "relatedSample": {"$ref": "./properties.json#relatedSample-link"},
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"}
             },
             "additionalProperties": false
         },
@@ -586,8 +585,8 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:CoarseFragments"
                 },
-                "abundance": {"$ref": "./properties.json#coarse-fragments-abundance"},
-                "shape": {"$ref": "./properties.json#coarse-fragments-shape"}
+                "abundance": {"$ref": "./properties.json#abundance-coarse-fragments"},
+                "shape": {"$ref": "./properties.json#shape-coarse-fragments"}
             },
             "additionalProperties": false
         },
@@ -625,7 +624,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Cutans"
                 },
-                "abundance": {"$ref": "./properties.json#cutans-abundance"}
+                "abundance": {"$ref": "./properties.json#abundance-cutans"}
             },
             "additionalProperties": false
         },
@@ -865,7 +864,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Microrelief-biotic"
                 },
-                "agent": {"$ref": "./properties.json#microrelief-agent-biotic"}
+                "agent": {"$ref": "./properties.json#agent-microrelief-biotic"}
             },
             "additionalProperties": false
         },
@@ -953,7 +952,7 @@
                     "const": "ansis:Mottles"
                 },
                 "ansisType": {"$ref": "./properties.json#ansis-type"},
-                "abundance": {"$ref": "./properties.json#mottle-abundance"},
+                "abundance": {"$ref": "./properties.json#abundance-mottle"},
                 "colour": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#colour"}
@@ -979,7 +978,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Outcrop"
                 },
-                "abundance": {"$ref": "./properties.json#rock-outcrop-abundance"},
+                "abundance": {"$ref": "./properties.json#abundance-rock-outcrop"},
                 "lithology": {"$ref": "./properties.json#lithology"},
                 "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite"},
                 "relatedSample": {"$ref": "./properties.json#relatedSample"},
@@ -1026,7 +1025,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Pores"
                 },
-                "abundance": {"$ref": "./properties.json#pore-abundance"}
+                "abundance": {"$ref": "./properties.json#abundance-pore"}
             },
             "additionalProperties": false
         },
@@ -1064,7 +1063,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Roots"
                 },
-                "abundance": {"$ref": "./properties.json#root-abundance"}
+                "abundance": {"$ref": "./properties.json#abundance-root"}
             },
             "additionalProperties": false
         },
@@ -1086,7 +1085,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Segregations"
                 },
-                "abundance": {"$ref": "./properties.json#segregations-abundance"},
+                "abundance": {"$ref": "./properties.json#abundance-segregation"},
                 "material": {"$ref": "./properties.json#material"}
             },
             "additionalProperties": false
