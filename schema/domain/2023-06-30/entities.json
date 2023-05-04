@@ -13,7 +13,7 @@
             "description": "A site where samples, observations, and treatments of soil are carried out.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "hasGeometry",
                 "relatedProject"
             ],
@@ -30,8 +30,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilSite"
                 },
                 "ansisType": {
@@ -116,7 +116,7 @@
             "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "hasGeometry",
                 "relatedSite",
                 "procedure",
@@ -128,8 +128,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilProfile"
                 },
                 "depth": {"$ref": "./properties.json#depth-quantity"},
@@ -165,15 +165,15 @@
             "title": "ANSIS Soil Body",
             "description": "Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [
                 "classification",
                 "hasGeometry"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilBody"
                 },
                 "classification": {
@@ -217,7 +217,7 @@
             "description": "Region within a soil body usually observed as a specified depth interval within a profile.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "depthUpper",
                 "depthLower",
                 "relatedSoilBody"
@@ -236,8 +236,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilLayer"
                 },
                 "depthUpper": {"$ref": "./properties.json#depth-upper"},
@@ -303,7 +303,7 @@
             "description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "depthUpper",
                 "depthLower",
                 "relatedSoilBody",
@@ -323,8 +323,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilHorizon"
                 },
                 "designation": {"$ref": "./properties.json#designation"},
@@ -391,23 +391,23 @@
             "description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "isSampleOf",
                 "relatedProfile"
             ],
             "ansisPreferred": [
                 "depthLower",
                 "depthUpper",
-                "type",
+                "ansisType",
                 "component"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilSample"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "hasGeometry": {"$ref": "./geo.json#hasGeometry"},
                 "depthLower": {"$ref": "./properties.json#depth-upper"},
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
@@ -427,14 +427,14 @@
             "description": "A Site established to make observations of landscape entities.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "hasGeometry"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandsurveySite"
                 },
                 "ansisType": {
@@ -499,12 +499,12 @@
             "title": "ANSIS Soil Surface",
             "description": "The surface of the soil body.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": ["conditionWhenDry"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilSurface"
                 },
                 "conditionWhenDry": {"$ref": "./properties.json#condition-when-dry"},
@@ -520,18 +520,18 @@
             "description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "distance",
                 "depth"
             ],
             "ansisPreferred": ["confidence"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Substrate"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "distance": {"$ref": "./properties.json#distance"},
                 "depth": {"$ref": "./properties.json#depth-quantity"},
                 "confidence": {"$ref": "./properties.json#confidence"},
@@ -547,7 +547,7 @@
             "title": "ANSIS Treatment",
             "description": "Intervention or treatment. Type of sosa:Actuation.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [
                 "hasFeatureOfInterest",
                 "actsOnProperty",
@@ -555,8 +555,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Treatment"
                 },
                 "actsOnProperty": {"$ref": "./sosa.json#actsOnProperty"},
@@ -576,14 +576,14 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance"
             ],
             "ansisPreferred": ["shape"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:CoarseFragments"
                 },
                 "abundance": {"$ref": "./properties.json#coarse-fragments-abundance"},
@@ -597,12 +597,12 @@
             "title": "ANSIS Cracks",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Cracks"
                 }
             },
@@ -615,14 +615,14 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Cutans"
                 },
                 "abundance": {"$ref": "./properties.json#cutans-abundance"}
@@ -636,17 +636,17 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": ["degree"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Erosion"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "degree": {"$ref": "./properties.json#degree-erosion"}
             },
             "additionalProperties": false
@@ -658,14 +658,14 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "frequency"
             ],
             "ansisPreferred": ["duration"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Inundation"
                 },
                 "frequency": {"$ref": "./properties.json#frequency"},
@@ -679,12 +679,12 @@
             "title": "ANSIS Land Cover",
             "description": "Land cover, including vegetation.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandCover"
                 }
             },
@@ -696,12 +696,12 @@
             "title": "ANSIS Land Management",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandManagement"
                 }
             },
@@ -714,7 +714,7 @@
             "description": "Surface landscape features of a site.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "aspect",
                 "elevation"
             ],
@@ -724,8 +724,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandSurface"
                 },
                 "aspect": {"$ref": "./properties.json#aspect"},
@@ -744,12 +744,12 @@
             "title": "ANSIS Land Use",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandUse"
                 }
             },
@@ -761,15 +761,15 @@
             "title": "ANSIS Landform",
             "description": "Landscape features within which the site is located",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [
                 "hasLandformElement",
                 "hasLandformPattern"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Landform"
                 },
                 "hasLandformElement": {"$ref": "./properties.json#hasLandformElement"},
@@ -784,19 +784,19 @@
             "description": "Landform element (~40m).",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "slope",
                 "morphologicalType"
             ],
             "ansisPreferred": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandformElement"
                 },
                 "slope": {"$ref": "./properties.json#slope"},
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "morphologicalType": {"$ref": "./properties.json#morphological-type"}
             },
             "additionalProperties": false
@@ -808,18 +808,18 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "relief",
                 "slope"
             ],
             "ansisPreferred": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:LandformPattern"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "relief": {"$ref": "./properties.json#relief"},
                 "slope": {"$ref": "./properties.json#slope"},
                 "hasLandformElement": {"$ref": "./properties.json#hasLandformElement"},
@@ -833,12 +833,12 @@
             "title": "ANSIS Microrelief",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Microrelief"
                 },
                 "hasMicrorelief-biotic": {"$ref": "./properties.json#hasMicrorelief-biotic"},
@@ -855,14 +855,14 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "agent"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Microrelief-biotic"
                 },
                 "agent": {"$ref": "./properties.json#microrelief-agent-biotic"}
@@ -876,17 +876,17 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Microrelief-gilgai"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"}
+                "ansisType": {"$ref": "./properties.json#ansis-type"}
             },
             "additionalProperties": false
         },
@@ -897,17 +897,17 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Microrelief-hummocky"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"}
+                "ansisType": {"$ref": "./properties.json#ansis-type"}
             },
             "additionalProperties": false
         },
@@ -918,17 +918,17 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Microrelief-other"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"}
+                "ansisType": {"$ref": "./properties.json#ansis-type"}
             },
             "additionalProperties": false
         },
@@ -939,20 +939,20 @@
             "description": "Mottles and other colour patterns.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance"
             ],
             "ansisPreferred": [
-                "type",
+                "ansisType",
                 "colour"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Mottles"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "abundance": {"$ref": "./properties.json#mottle-abundance"},
                 "colour": {
                     "type": "array",
@@ -968,15 +968,15 @@
             "description": "Rock outcrop.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance",
                 "lithology"
             ],
             "ansisPreferred": ["lithology"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Outcrop"
                 },
                 "abundance": {"$ref": "./properties.json#rock-outcrop-abundance"},
@@ -994,17 +994,17 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": ["cementation"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Pans"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"},
+                "ansisType": {"$ref": "./properties.json#ansis-type"},
                 "cementation": {"$ref": "./properties.json#cementation"}
             },
             "additionalProperties": false
@@ -1016,14 +1016,14 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Pores"
                 },
                 "abundance": {"$ref": "./properties.json#pore-abundance"}
@@ -1036,12 +1036,12 @@
             "title": "ANSIS Profile Purpose",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Profile-purpose"
                 }
             },
@@ -1054,14 +1054,14 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Roots"
                 },
                 "abundance": {"$ref": "./properties.json#root-abundance"}
@@ -1075,15 +1075,15 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "abundance",
                 "material"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Segregations"
                 },
                 "abundance": {"$ref": "./properties.json#segregations-abundance"},
@@ -1098,14 +1098,14 @@
             "description": "Structure Australian Soil Classification value",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "classificationOrder"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilClassification"
                 },
                 "classificationFamilyA1texture": {"$ref": "./properties.json#classification-family-A1texture"},
@@ -1126,15 +1126,15 @@
             "description": "",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "value",
                 "scheme"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilClassification"
                 },
                 "value": {"$ref": "./properties.json#value"},
@@ -1148,7 +1148,7 @@
             "description": "Soil horizon designation. ",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "designationMaster"
             ],
             "ansisPreferred": [
@@ -1158,8 +1158,8 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:HorizonDesignation"
                 },
                 "designationPrefix": {"$ref": "./properties.json#designation-prefix"},
@@ -1176,15 +1176,15 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "moistureStatus",
                 "value"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilStrength"
                 },
                 "moistureStatus": {"$ref": "./properties.json#moisture-status"},
@@ -1199,17 +1199,17 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilPlasticity"
                 },
-                "type": {"$ref": "./properties.json#ansis-type"}
+                "ansisType": {"$ref": "./properties.json#ansis-type"}
             },
             "additionalProperties": false
         },
@@ -1219,12 +1219,12 @@
             "title": "ANSIS Soil Sample Type",
             "description": "Undefined. [ISSUE: real?]",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilSampleType"
                 }
             },
@@ -1236,12 +1236,12 @@
             "title": "ANSIS Soil Site Design",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilSite-design"
                 }
             },
@@ -1254,15 +1254,15 @@
             "description": "Undefined.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "moistureStatus",
                 "strength"
             ],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilStrength"
                 },
                 "moistureStatus": {"$ref": "./properties.json#moisture-status"},
@@ -1277,8 +1277,8 @@
             "description": "Soil structure or pedality.",
             "type": "object",
             "required": [
-                "@type",
-                "type"
+                "type",
+                "ansisType"
             ],
             "ansisPreferred": [
                 "grade",
@@ -1286,11 +1286,11 @@
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SoilStructure"
                 },
-                "type": {
+                "ansisType": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#ansis-type"}
                 },
@@ -1305,12 +1305,12 @@
             "title": "ANSIS Site Purpose",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Site-purpose"
                 }
             },
@@ -1322,12 +1322,12 @@
             "title": "ANSIS Site Type",
             "description": "Type of land survey site e.g. monitoring, opportunistic, farm, pedology.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SiteType"
                 }
             },
@@ -1340,7 +1340,7 @@
             "description": "A visit to a designated site, for the purpose of taking samples, making observations, and other activities.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "relatedActivity",
                 "relatedProject",
                 "relatedSite"
@@ -1348,8 +1348,8 @@
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:SiteVisit"
                 },
                 "visitor": {"$ref": "./properties.json#visitor"},
@@ -1370,14 +1370,14 @@
             "description": "Stream channel details.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "development"
             ],
             "ansisPreferred": ["pattern"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:StreamChannel"
                 },
                 "development": {"$ref": "./properties.json#development"},
@@ -1391,12 +1391,12 @@
             "title": "ANSIS Survey Design",
             "description": "Undefined.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "ansis:Survey-design"
                 }
             },

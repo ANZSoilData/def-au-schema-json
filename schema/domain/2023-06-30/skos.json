@@ -17,19 +17,28 @@
             "$concept": "ANSIS uses SKOS Concepts to define terms in controlled vocabularies - e.g. 'well drained' from the Site Drainage vocabulary.",
             "type": "object",
             "required": [
-                "@type",
+                "type",
                 "prefLabel"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@id": {"$ref": "./base.json#ld-id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "@id": {"$ref": "#ld-id"},
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "skos:Concept"
                 },
                 "prefLabel": {"$ref": "#prefLabel"},
                 "definition": {"$ref": "#definition"}
             }
+        },
+        "@id": {
+            "$anchor": "ld-id",
+            "range@type": "xs:anyURI",
+            "title": "JSON-LD Identifier",
+            "description": "An HTTP URI uniquely identifying the object as a Linked Data resource. Dereferencing the URI should, but may not, lead to a JSON or HTML representation of the resource.",
+            "$comment": "Used provide the concept's RDF ID and to link the concept to its definition in Research Vocabularies Australia. After: https://www.w3.org/TR/json-ld/#node-identifiers",
+            "type": "string",
+            "format": "iri"
         },
         "preferredLabel": {
             "$anchor": "prefLabel",

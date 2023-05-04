@@ -22,11 +22,11 @@
             "title": "PROV Activity",
             "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Activity"
                 },
                 "relatedActivity": {"$ref": "./properties.json#relatedActivity"},
@@ -40,11 +40,11 @@
             "title": "PROV Agent",
             "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Agent"
                 },
                 "name": {"$ref": "./base.json#name"}
@@ -57,11 +57,11 @@
             "title": "PROV Organization",
             "description": "An organization is a social or legal institution such as a company, society, etc.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Agent"
                 },
                 "name": {"$ref": "./base.json#name"}
@@ -74,11 +74,11 @@
             "title": "PROV Person",
             "description": "Person agents are people.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Agent"
                 },
                 "name": {"$ref": "./base.json#name"}
@@ -91,11 +91,11 @@
             "title": "PROJ Project",
             "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
             "type": "object",
-            "required": ["@type"],
+            "required": ["type"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Project"
                 },
                 "hasLeader": {"$ref": "#Organization"},

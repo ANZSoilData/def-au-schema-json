@@ -629,10 +629,10 @@
             "$defs": {
                 "depth-quantity": {
                     "$anchor": "depth-quantity",
-                   "range@type": [
-                       "sosa:ObservableProperty",
-                       "qudt:QuantityValue"
-                   ],
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
                     "description": "depth from local surface of entity - as quantity",
                     "type": "object",
                     "allOf": [
@@ -819,42 +819,42 @@
             "description": "depth to width ratio of entity; ratio of depth to width of the element",
             "$comment": "Type specific $defs supporting different vocabularies or data types.",
             "$defs": {
-               "quantity": {
-                   "$anchor": "depthWidthRatio-quantity",
-                   "range@type": [
-                       "sosa:ObservableProperty",
-                       "qudt:QuantityValue"
-                   ],
-                   "description": "depthWidthRatio (as quantity)",
-                   "type": "object",
-                   "allOf": [
-                       {
-                           "required": ["hasResult"],
-                           "properties": {
-                               "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                           }
-                       },
-                       {"$ref": "./sosa.json#ObservableProperty"}
-                   ]
-               },
-               "streamchannel": {
-                   "$anchor": "depthWidthRatio-streamchannel",
-                   "range@type": [
-                       "sosa:ObservableProperty",
-                       "skos:Concept"
-                   ],
-                   "description": "channel depth-width",
-                   "type": "object",
-                   "allOf": [
-                       {
-                           "required": ["hasResult"],
-                           "properties": {
-                               "hasResult": {"$ref": "./enum.json#tobedefined"}
-                           }
-                       },
-                       {"$ref": "./sosa.json#ObservableProperty"}
-                   ]
-               }
+                "quantity": {
+                    "$anchor": "depthWidthRatio-quantity",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
+                    "description": "depthWidthRatio (as quantity)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "streamchannel": {
+                    "$anchor": "depthWidthRatio-streamchannel",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "channel depth-width",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
             }
         },
         "designSite": {
@@ -1116,43 +1116,43 @@
             "description": "temporal extent of event or phenomenon",
             "$comment": "Type specific $defs supporting different data types.",
             "$defs": {
-               "quantity": {
-                   "$anchor": "duration-quantity",
-                   "range@type": [
-                       "sosa:ObservableProperty",
-                       "qudt:QuantityValue"
-                   ],
-                   "description": "duration (as quantity)",
-                   "type": "object",
-                   "allOf": [
-                       {
-                           "required": ["hasResult"],
-                           "properties": {
-                               "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                           }
-                       },
-                       {"$ref": "./sosa.json#ObservableProperty"}
-                   ]
-               },
-               "inundation": {
-                   "$anchor": "duration-inundation",
-                   "range@type": [
-                       "sosa:ObservableProperty",
-                       "skos:Concept"
-                   ],
-                   "description": "inundation duration",
-                   "type": "object",
-                   "allOf": [
-                       {
-                           "required": ["hasResult"],
-                           "properties": {
-                               "hasResult": {"$ref": "./enum.json#inundation-duration"}
-                           }
-                       },
-                       {"$ref": "./sosa.json#ObservableProperty"}
-                   ]
-               }
-        }
+                "quantity": {
+                    "$anchor": "duration-quantity",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
+                    "description": "duration (as quantity)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "inundation": {
+                    "$anchor": "duration-inundation",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "inundation duration",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#inundation-duration"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "elevation": {
             "$anchor": "elevation",
@@ -2016,35 +2016,12 @@
             "$comment": "[ISSUE] ontology has contradictory range/rangeIncludes statements",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "prov:Activity"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./prov.json#Activity"},
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "sosa:Actuation"
-                },
                 {"$ref": "./sosa.json#Actuation"},
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "sosa:Observation"
-                },
                 {"$ref": "./sosa.json#Observation"},
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "sosa:Sampling"
-                },
                 {"$ref": "./sosa.json#Sampling"},
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SiteVisit"
-                },
                 {"$ref": "./entities.json#SiteVisit"},
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:Treatment"
-                },
                 {"$ref": "./entities.json#Treatment"}
             ]
         },
@@ -2057,8 +2034,7 @@
             "type": "object",
             "oneOf": [
                 {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SoilHorizon"
+                    "$ref": "./base.json#Entity_Link"
                 },
                 {"$ref": "./entities.json#SoilHorizon"}
             ]
@@ -2070,7 +2046,10 @@
             "title": "related land survey site",
             "description": "link to a land survey site related to this context",
             "type": "object",
-            "$ref": "./base.json#Entity_Link"
+            "oneOf": [
+                {"$ref": "./base.json#Entity_Link"},
+                {"$ref": "./entities.json#LandSurveySite"}
+            ]
         },
         "relatedLayer": {
             "$anchor": "relatedLayer",
@@ -2080,10 +2059,7 @@
             "description": "related soil layer within a soil body or profile",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SoilLayer"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilLayer"}
             ]
         },
@@ -2095,10 +2071,7 @@
             "description": "Link to a soil profile related to this context.",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SoilProfile"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilProfile"}
             ]
         },
@@ -2110,10 +2083,7 @@
             "description": "link to project that supported this activity",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "proj:Project"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./prov.json#Project"}
             ]
         },
@@ -2125,10 +2095,7 @@
             "description": "link to a sample related to this context",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "sosa:Sample"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilSample"}
             ]
         },
@@ -2140,12 +2107,8 @@
             "description": "link to a soil site related to this context",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SoilSite"
-                },
-                {"$ref": "./entities.json#SoilSite"}
-            ]
+                {"$ref": "./base.json#Entity_Link"},
+                {"$ref": "./entities.json#SoilSite"}]
         },
         "relatedSoilBody": {
             "$anchor": "relatedSoilBody",
@@ -2155,10 +2118,7 @@
             "description": "link to a soil body related to this context",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SoilBody"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilBody"}
             ]
         },
@@ -2170,10 +2130,7 @@
             "description": "soil surface of this entity",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link",
-                    "const": "ansis:SoilSurface"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilSurface"}
             ]
         },
@@ -2261,21 +2218,21 @@
                 {"$ref": "./sosa.json#ObservableProperty"}
             ],
             "$defs": {
-               "coarseFragments": {
-                   "$anchor": "shape-coarse-fragments",
-                   "description": "geometry of coarse fragments",
-                   "$comment": "Restricts ansis:shape.",
-                   "type": "object",
-                   "allOf": [
-                       {
-                           "required": ["hasResult"],
-                           "properties": {
-                               "hasResult": {"$ref": "./enum.json#coarse-fragments-shape"}
-                           }
-                       },
-                       {"$ref": "./sosa.json#ObservableProperty"}
-                   ]
-               }
+                "coarseFragments": {
+                    "$anchor": "shape-coarse-fragments",
+                    "description": "geometry of coarse fragments",
+                    "$comment": "Restricts ansis:shape.",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#coarse-fragments-shape"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
             }
         },
         "size": {
@@ -2289,27 +2246,27 @@
             "description": "geometric scale and extent of element",
             "$comment": "",
             "$defs": {
-               "soilStructure": {
-                   "$anchor": "size-soilstructure",
-                   "@id": "ansis:size",
-                   "range@type": [
-                       "sosa:ObservableProperty",
-                       "skos:Concept"
-                   ],
-                   "title": "size",
-                   "description": "geometric scale and extent of element",
-                   "$comment": "",
-                   "type": "object",
-                   "allOf": [
-                       {
-                           "required": ["hasResult"],
-                           "properties": {
-                               "hasResult": {"$ref": "./enum.json#pedality-size"}
-                           }
-                       },
-                       {"$ref": "./sosa.json#ObservableProperty"}
-                   ]
-               }
+                "soilStructure": {
+                    "$anchor": "size-soilstructure",
+                    "@id": "ansis:size",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "title": "size",
+                    "description": "geometric scale and extent of element",
+                    "$comment": "",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#pedality-size"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
             }
         },
         "slope": {
