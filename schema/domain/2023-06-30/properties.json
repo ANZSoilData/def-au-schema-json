@@ -2023,7 +2023,25 @@
                 {"$ref": "./sosa.json#Sampling"},
                 {"$ref": "./entities.json#SiteVisit"},
                 {"$ref": "./entities.json#Treatment"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedActivity-object",
+                    "oneOf": [
+                        {"$ref": "./base.json#Entity_Link"},
+                        {"$ref": "./prov.json#Activity"},
+                        {"$ref": "./sosa.json#Actuation"},
+                        {"$ref": "./sosa.json#Observation"},
+                        {"$ref": "./sosa.json#Sampling"},
+                        {"$ref": "./entities.json#SiteVisit"},
+                        {"$ref": "./entities.json#Treatment"}
+                    ]
+                },
+                "link": {
+                    "$anchor": "relatedActivity-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedHorizon": {
             "$anchor": "relatedHorizon",
@@ -2033,11 +2051,19 @@
             "description": "related soil horizon within a soil body or sample, or associated with a contact",
             "type": "object",
             "oneOf": [
-                {
-                    "$ref": "./base.json#Entity_Link"
-                },
+                {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilHorizon"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedHorizon-object",
+                    "$ref": "./entities.json#SoilHorizon"
+                },
+                "link": {
+                    "$anchor": "relatedHorizon-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedLandSurveySite": {
             "$anchor": "relatedLandSurveySite",
@@ -2049,7 +2075,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#LandSurveySite"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedLandSurveySite-object",
+                    "$ref": "./entities.json#LandSurveySite"
+                },
+                "link": {
+                    "$anchor": "relatedLandSurveySite-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedLayer": {
             "$anchor": "relatedLayer",
@@ -2061,7 +2097,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilLayer"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedLayer-object",
+                    "$ref": "./entities.json#SoilLayer"
+                },
+                "link": {
+                    "$anchor": "relatedLayer-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedProfile": {
             "$anchor": "relatedProfile",
@@ -2073,7 +2119,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilProfile"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedProfile-object",
+                    "$ref": "./entities.json#SoilProfile"
+                },
+                "link": {
+                    "$anchor": "relatedProfile-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedProject": {
             "$anchor": "relatedProject",
@@ -2085,7 +2141,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./prov.json#Project"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedProject-object",
+                    "$ref": "./prov.json#Project"
+                },
+                "link": {
+                    "$anchor": "relatedProject-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedSample": {
             "$anchor": "relatedSample",
@@ -2097,7 +2163,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilSample"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedSample-object",
+                    "$ref": "./entities.json#SoilSample"
+                },
+                "link": {
+                    "$anchor": "relatedSample-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedSite": {
             "$anchor": "relatedSite",
@@ -2108,7 +2184,18 @@
             "type": "object",
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
-                {"$ref": "./entities.json#SoilSite"}]
+                {"$ref": "./entities.json#SoilSite"}
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedSite-object",
+                    "$ref": "./entities.json#SoilSite"
+                },
+                "link": {
+                    "$anchor": "relatedSite-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedSoilBody": {
             "$anchor": "relatedSoilBody",
@@ -2120,7 +2207,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilBody"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedSoilBody-object",
+                    "$ref": "./entities.json#xxxx"
+                },
+                "link": {
+                    "$anchor": "relatedSoilBody-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relatedSoilSurface": {
             "$anchor": "relatedSoilSurface",
@@ -2132,7 +2229,17 @@
             "oneOf": [
                 {"$ref": "./base.json#Entity_Link"},
                 {"$ref": "./entities.json#SoilSurface"}
-            ]
+            ],
+            "$defs": {
+                "object": {
+                    "$anchor": "relatedSoilSurface-object",
+                    "$ref": "./entities.json#SoilSurface"
+                },
+                "link": {
+                    "$anchor": "relatedSoilSurface-link",
+                    "$ref": "./base.json#Entity_Link"
+                }
+            }
         },
         "relativeInclination": {
             "$anchor": "relative-inclination",
