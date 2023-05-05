@@ -4,6 +4,7 @@
     "title": "ANSIS JSON Base Schema",
     "description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
     "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
+    "type": "null",
     "$defs": {
      	"curiPrefix": {
      		"xs": "https://www.w3.org/TR/xmlschema-2/#",

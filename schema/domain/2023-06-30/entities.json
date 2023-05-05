@@ -4,6 +4,7 @@
     "title": "ANSIS Soil Domain Entity Schema",
     "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
     "$comment": "Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.",
+    "type": "null",
     "$defs": {
         "curiPrefix": {"ansis": "https://anzsoil.org/def/au/domain/"},
         "SoilSite": {
@@ -130,7 +131,7 @@
                 },
                 "ansisType": {
                     "type": "array",
-                    "items": {"type": "./properties.json#ansis-type-soil-profile"}
+                    "items": {"$ref": "./properties.json#ansis-type-soil-profile"}
                 },
                 "classification": {
                     "type": "array",
@@ -1169,7 +1170,7 @@
                     "const": "ansis:SoilClassification"
                 },
                 "value": {"$ref": "./properties.json#value"},
-                "source": {"type": "./base.json#source"}
+                "source": {"$ref": "./base.json#source"}
             }
         },
         "HorizonDesignation": {

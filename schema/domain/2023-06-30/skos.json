@@ -4,6 +4,7 @@
     "title": "SKOS JSON Objects",
     "description": "Reusable SKOS objects for vocabulary entries.",
     "$comment": "Created to provide a definition for skos:Concept references elsewhere in the schema. Actually implemented with enumerations in JSON instances.",
+    "type": "null",
     "$defs": {
         "curiPrefix": {
             "xs": "https://www.w3.org/TR/xmlschema-2/#",

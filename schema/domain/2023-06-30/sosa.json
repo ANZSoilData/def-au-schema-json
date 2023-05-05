@@ -138,7 +138,7 @@
             "required": [
                 "type",
                 "hasFeatureOfInterest",
-                "result"
+                "hasResult"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
@@ -147,7 +147,10 @@
                     "const": "sosa:Sampling"
                 },
                 "hasFeatureOfInterest": {"$ref": "#hasFeatureOfInterest"},
-                "result": {"$ref": "#Sample"}
+                "hasResult": {
+                    "type": "array",
+                    "items": {"$ref": "#Sample"}
+                }
             },
             "additionalProperties": false
         },

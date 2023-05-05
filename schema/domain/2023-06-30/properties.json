@@ -4,6 +4,7 @@
     "title": "ANSIS Soil Domain Property Schema",
     "description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
     "$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
+    "type": "null",
     "$defs": {
         "curiPrefix": {
             "ansis": "https://anzsoil.org/def/au/domain/",
