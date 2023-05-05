@@ -96,10 +96,7 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedProfile-object"}
                 },
-                "relatedProject": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#relatedProject-object"}
-                },
+                "relatedProject": {"$ref": "./properties.json#relatedProject-object"},
                 "relatedSite": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedSite-link"}
@@ -118,27 +115,38 @@
             "required": [
                 "type",
                 "hasGeometry",
-                "relatedSite",
-                "procedure",
-                "depth"
-            ],
-            "ansisPreferred": [
                 "purpose",
-                "drainage"
+                "relatedSite",
+                "usedProcedure",
+                "depth",
+                "depthReason"
             ],
+            "ansisPreferred": ["drainage"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
                 "type": {
                     "$ref": "./base.json#type",
                     "const": "ansis:SoilProfile"
                 },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"type": "./properties.json#ansis-type-soil-profile"}
+                },
+                "classification": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#classification"}
+                },
                 "depth": {"$ref": "./properties.json#depth-quantity"},
+                "depthReason": {"$ref": "./properties.json#depth-reason"},
+                "depthRHorizon": {"$ref": "./properties.json#depth-r-horizon"},
                 "drainage": {"$ref": "./properties.json#drainage"},
-                "procedure": {"$ref": "./sosa.json#usedProcedure"},
-                "purpose": {"$ref": "./properties.json#purpose"},
                 "hasGeometry": {"$ref": "./geo.json#hasGeometry"},
-                "hasRoots": {"$ref": "./properties.json#hasRoots"},
+                "hasRoots": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#hasRoots"}
+                },
                 "hasSubstrate": {"$ref": "./properties.json#hasSubstrate"},
+                "purpose": {"$ref": "./properties.json#purpose"},
                 "relatedHorizon": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedHorizon-object"}
@@ -155,7 +163,9 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedSite-link"}
                 },
-                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-link"}
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-link"},
+                "usedProcedure": {"$ref": "./sosa.json#usedProcedure-ProfileConstruction"}
             },
             "additionalProperties": false
         },
@@ -219,8 +229,7 @@
             "required": [
                 "type",
                 "depthUpper",
-                "depthLower",
-                "relatedSoilBody"
+                "depthLower"
             ],
             "ansisPreferred": [
                 "texture",
@@ -306,7 +315,6 @@
                 "type",
                 "depthUpper",
                 "depthLower",
-                "relatedSoilBody",
                 "designation"
             ],
             "ansisPreferred": [
@@ -333,7 +341,7 @@
                 "permeability": {"$ref": "./properties.json#permeability"},
                 "texture": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#texture"}
+                    "items": {"$ref": "./properties.json#texture-soil"}
                 },
                 "colour": {
                     "type": "array",
@@ -427,7 +435,8 @@
             "type": "object",
             "required": [
                 "type",
-                "hasGeometry"
+                "hasGeometry",
+                "relatedProject"
             ],
             "ansisPreferred": [],
             "properties": {
@@ -476,7 +485,8 @@
                 "relatedLandsurveySite": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
-                }
+                },
+                "relatedProject": {"$ref": "./properties.json#relatedProject"}
             },
             "additionalProperties": false
         },
@@ -521,7 +531,10 @@
             "required": [
                 "type",
                 "distance",
-                "depth"
+                "depth",
+                "relatedSoilBody",
+                "texture",
+                "usedProcedure"
             ],
             "ansisPreferred": ["confidence"],
             "properties": {
@@ -536,7 +549,9 @@
                 "confidence": {"$ref": "./properties.json#confidence"},
                 "lithology": {"$ref": "./properties.json#lithology"},
                 "relatedSample": {"$ref": "./properties.json#relatedSample-link"},
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"}
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "texture": {"$ref": "./properties.json#texture-substrate"},
+                "usedProcedure": {"$ref": "./sosa.json#usedProcedure-ProfileConstruction"}
             },
             "additionalProperties": false
         },
@@ -546,21 +561,33 @@
             "title": "ANSIS Treatment",
             "description": "Intervention or treatment. Type of sosa:Actuation.",
             "type": "object",
-            "required": ["type"],
-            "ansisPreferred": [
-                "hasFeatureOfInterest",
+            "required": [
+                "type",
                 "actsOnProperty",
-                "phenomenonTime"
+                "hasFeatureOfInterest",
+                "hasResult",
+                "madeByActuator",
+                "resultTime"
             ],
+            "ansisPreferred": ["phenomenonTime"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
                 "type": {
                     "$ref": "./base.json#type",
                     "const": "ansis:Treatment"
                 },
-                "actsOnProperty": {"$ref": "./sosa.json#actsOnProperty"},
+                "actsOnProperty": {
+                    "type": "array",
+                    "items": {"$ref": "./sosa.json#actsOnProperty"}
+                },
                 "hasFeatureOfInterest": {"$ref": "./sosa.json#hasFeatureOfInterest"},
+                "hasResult": {
+                    "type": "array",
+                    "items": {"$ref": "./sosa.json#hasResult"}
+                },
+                "resultTime": {"$ref": "./sosa.json#resultTime"},
                 "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
+                "madeByActuator": {"$ref": "./sosa.json#madeByActuator"},
                 "relatedActivity": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedActivity"}
@@ -658,7 +685,8 @@
             "type": "object",
             "required": [
                 "type",
-                "frequency"
+                "frequency",
+                "velocity"
             ],
             "ansisPreferred": ["duration"],
             "properties": {
@@ -667,8 +695,9 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:Inundation"
                 },
+                "duration": {"$ref": "./properties.json#duration-inundation"},
                 "frequency": {"$ref": "./properties.json#frequency"},
-                "duration": {"$ref": "./properties.json#duration-inundation"}
+                "velocity": {"$ref": "./properties.json#velocity"}
             },
             "additionalProperties": false
         },
@@ -677,6 +706,7 @@
             "@id": "ansis:LandCover",
             "title": "ANSIS Land Cover",
             "description": "Land cover, including vegetation.",
+            "$comment": "No defined properties in the ANSIS ontology.",
             "type": "object",
             "required": ["type"],
             "ansisPreferred": [],
@@ -694,6 +724,7 @@
             "@id": "ansis:LandManagement",
             "title": "ANSIS Land Management",
             "description": "Undefined.",
+            "$comment": "No defined properties in the ANSIS ontology.",
             "type": "object",
             "required": ["type"],
             "ansisPreferred": [],
@@ -715,12 +746,10 @@
             "required": [
                 "type",
                 "aspect",
-                "elevation"
-            ],
-            "ansisPreferred": [
-                "hasErosion",
+                "elevation",
                 "hasMicrorelief"
             ],
+            "ansisPreferred": ["hasErosion"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
                 "type": {
@@ -742,6 +771,7 @@
             "@id": "ansis:LandUse",
             "title": "ANSIS Land Use",
             "description": "Undefined.",
+            "$comment": "No defined properties in the ANSIS ontology.",
             "type": "object",
             "required": ["type"],
             "ansisPreferred": [],
@@ -785,9 +815,10 @@
             "required": [
                 "type",
                 "slope",
-                "morphologicalType"
+                "morphologicalType",
+                "underlyingMaterial"
             ],
-            "ansisPreferred": ["type"],
+            "ansisPreferred": ["ansisType"],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
                 "type": {
@@ -796,7 +827,8 @@
                 },
                 "slope": {"$ref": "./properties.json#slope"},
                 "ansisType": {"$ref": "./properties.json#ansis-type"},
-                "morphologicalType": {"$ref": "./properties.json#morphological-type"}
+                "morphologicalType": {"$ref": "./properties.json#morphological-type"},
+                "underlyingMaterial": {"$ref": "./properties.json#underlyingMaterial"}
             },
             "additionalProperties": false
         },
@@ -1127,7 +1159,7 @@
             "required": [
                 "type",
                 "value",
-                "scheme"
+                "source"
             ],
             "ansisPreferred": [],
             "properties": {
@@ -1137,10 +1169,10 @@
                     "const": "ansis:SoilClassification"
                 },
                 "value": {"$ref": "./properties.json#value"},
-                "scheme": {"$ref": "./base.json#Entity_Link"}
+                "source": {"type": "./base.json#source"}
             }
         },
-        "SoilHorizon_Designation": {
+        "HorizonDesignation": {
             "$anchor": "HorizonDesignation",
             "@id": "ansis:HorizonDesignation",
             "title": "ANSIS Soil Horizon Designation",
@@ -1208,7 +1240,7 @@
                     "$ref": "./base.json#type",
                     "const": "ansis:SoilPlasticity"
                 },
-                "ansisType": {"$ref": "./properties.json#ansis-type"}
+                "ansisType": {"$ref": "./properties.json#ansis-type-soil-plasticity"}
             },
             "additionalProperties": false
         },
@@ -1277,12 +1309,11 @@
             "type": "object",
             "required": [
                 "type",
-                "ansisType"
-            ],
-            "ansisPreferred": [
+                "ansisType",
                 "grade",
                 "size"
             ],
+            "ansisPreferred": [],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
                 "type": {
@@ -1320,6 +1351,7 @@
             "@id": "ansis:SiteType",
             "title": "ANSIS Site Type",
             "description": "Type of land survey site e.g. monitoring, opportunistic, farm, pedology.",
+            "$comment": "Is a sub-class of skos:Concept. Should this be a vocabulary?",
             "type": "object",
             "required": ["type"],
             "ansisPreferred": [],
@@ -1342,7 +1374,9 @@
                 "type",
                 "relatedActivity",
                 "relatedProject",
-                "relatedSite"
+                "relatedSite",
+                "endedAtTime",
+                "startedAtTime"
             ],
             "ansisPreferred": [],
             "properties": {
@@ -1353,12 +1387,14 @@
                 },
                 "visitor": {"$ref": "./properties.json#visitor"},
                 "relatedProject": {"$ref": "./properties.json#relatedProject"},
-                "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite"},
+                "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite-link"},
                 "relatedActivity": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedActivity"}
                 },
-                "relatedSite": {"$ref": "./properties.json#relatedSite"}
+                "relatedSite": {"$ref": "./properties.json#relatedSite-link"},
+                "endedAtTime": {"$ref": "./prov.json#endedAtTime"},
+                "startedAtTime": {"$ref": "./prov.json#startedAtTime"}
             },
             "additionalProperties": false
         },

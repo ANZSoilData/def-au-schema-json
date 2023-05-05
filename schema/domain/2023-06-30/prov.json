@@ -30,7 +30,9 @@
                     "const": "prov:Activity"
                 },
                 "relatedActivity": {"$ref": "./properties.json#relatedActivity"},
-                "name": {"$ref": "./base.json#name"}
+                "name": {"$ref": "./base.json#name"},
+                "endedAtTime": {"$ref": "#endedAtTime"},
+                "startedAtTime": {"$ref": "#startedAtTime"}
             },
             "additionalProperties": false
         },
@@ -107,6 +109,32 @@
                 "label": {"$ref": "./base.json#label"}
             },
             "additionalProperties": false
+        },
+        "endedAtTime": {
+            "$anchor": "endedAtTime",
+            "@id": "prov:endedAtTime",
+            "range@type": "xs:dateTime",
+            "title": "Ended at Time",
+            "description": "The time at which an activity ended.",
+            "$comment": "See also startedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
+        },
+        "startedAtTime": {
+            "$anchor": "startedAtTime",
+            "@id": "prov:startedAtTime",
+            "range@type": "xs:dateTime",
+            "title": "Started at Time",
+            "description": "The time at which an activity started.",
+            "$comment": "See also endedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date-time"
         }
     }
 }

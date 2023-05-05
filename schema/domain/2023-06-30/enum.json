@@ -1437,6 +1437,10 @@
                 }
             ]
         },
+        "ProfileConstruction": {
+            "$anchor": "profile-construction",
+            "@id": "sp:Profile-construction"
+        },
         "RockOutcropAbundance": {
             "$anchor": "rock-outcrop-abundance",
             "@id": "ls:Rock-outcrop-abundance",

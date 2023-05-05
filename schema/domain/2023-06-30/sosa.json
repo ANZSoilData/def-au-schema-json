@@ -37,6 +37,23 @@
             },
             "additionalProperties": false
         },
+        "Actuator": {
+            "$anchor": "Actuator",
+            "@id": "sosa:Actuator",
+            "title": "SOSA Actuator",
+            "description": "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world.",
+            "$comment": "Incomplete.",
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "sosa:Actuator"
+                }
+            },
+            "additionalProperties": false
+        },
         "Observation": {
             "$anchor": "Observation",
             "@id": "sosa:Observation",
@@ -246,6 +263,21 @@
                 {"$ref": "./base.json#Entity_Link"}
             ]
         },
+        "madeByActuator": {
+            "$anchor": "madeByActuator",
+            "@id": "sosa:madeByActuator",
+            "range@type": "sosa:Actuator",
+            "title": "Made by Actuator",
+            "description": "Relation linking an Actuation to the Actuator that made that Actuation.",
+            "type": [
+                "object",
+                "null"
+            ],
+            "oneOf": [
+                {"$ref": "#Actuator"},
+                {"$ref": "./base.json#Entity_Link"}
+            ]
+        },
         "usedProcedure": {
             "$anchor": "usedProcedure",
             "@id": "sosa:usedProcedure",
@@ -257,7 +289,13 @@
                 "object",
                 "null"
             ],
-            "$ref": "./base.json#Entity_Link"
+            "$ref": "./base.json#Entity_Link",
+            "$defs": {
+                "SoilProfile": {
+                    "$anchor": "usedProcedure-ProfileConstruction",
+                    "$ref": "./enum.json#profile-construction"
+                }
+            }
         },
         "observedProperty": {
             "$anchor": "observedProperty",

@@ -51,6 +51,14 @@
             "description": "A name for some thing.",
             "type": "string"
         },
+        "source": {
+            "$anchor": "source",
+            "@id": "dcterms:source",
+            "range@Type": "xs:string",
+            "title": "Dublin Core Source",
+            "description": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.",
+            "type": "string"
+        },
         "Entity_Link": {
             "$anchor": "Entity_Link",
             "title": "ANSIS Entity Link",

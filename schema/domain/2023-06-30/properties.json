@@ -202,6 +202,44 @@
             "type": "string",
             "$ref": "./enum.json#tobedefined"
         },
+        "ansisType": {
+            "$anchor": "ansis-type",
+            "@id": "ansis:type",
+            "range@type": [
+                "ansis:SiteType",
+                "ansis:SoilSampleType"
+            ],
+            "title": "type",
+            "description": "type of ansis soil entity",
+            "$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
+            "$defs": {
+                "site": {
+                    "$anchor": "ansis-type-site",
+                    "description": "type of ansis soil entity (Site)",
+                    "type": "object",
+                    "$ref": "./entities.json#SiteType"
+                },
+                "soilSample": {
+                    "$anchor": "ansis-type-sample",
+                    "description": "type of ansis soil entity (Site)",
+                    "type": "object",
+                    "$ref": "./entities.json#SoilSampleType"
+                },
+                "soilProfile": {
+                    "$anchor": "ansis-type-soil-profile",
+                    "description": "type of ansis soil entity (Soil Profile)",
+                    "type": "object",
+                    "$comment": "Vocabulary sp:observation-type?",
+                    "$ref": "./enum.json#tobedefined"
+                },
+                "soilPlasticity": {
+                    "$anchor": "ansis-type-soil-plasticity",
+                    "description": "type of ansis soil entity (Soil Profile)",
+                    "type": "object",
+                    "$ref": "./enum.json#tobedefined"
+                }
+            }
+        },
         "aspect": {
             "$anchor": "aspect",
             "@id": "ansis:aspect",
@@ -2504,41 +2542,34 @@
                 "skos:Concept"
             ],
             "title": "texture",
-            "description": "material texture, in terms of particle size distribution and component materials",
-            "$comment": "",
-            "type": "object",
-            "required": ["hasResult"],
-            "allOf": [
-                {
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#field-texture-combined"}
-                    }
-                },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
-        },
-        "ansisType": {
-            "$anchor": "ansis-type",
-            "@id": "ansis:type",
-            "range@type": [
-                "ansis:SiteType",
-                "ansis:SoilSampleType"
-            ],
-            "title": "type",
-            "description": "type of ansis soil entity",
-            "$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword. [ISSUE] ObservableProperty?",
             "$defs": {
-                "site": {
-                    "$anchor": "ansis-type-site",
-                    "description": "type of ansis soil entity (Site)",
+                "soil": {
+                    "$anchor": "texture-soil",
+                    "description": "material (organic or mineral) texture, in terms of particle size distribution and component materials",
                     "type": "object",
-                    "$ref": "./entities.json#SiteType"
+                    "required": ["hasResult"],
+                    "allOf": [
+                        {
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#field-texture-combined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                "sample": {
-                    "$anchor": "ansis-type-sample",
-                    "description": "type of ansis soil entity (Site)",
+                "substrate": {
+                    "$anchor": "texture-substrate",
+                    "description": "material texture, in terms of particle size distribution and component materials",
                     "type": "object",
-                    "$ref": "./entities.json#SoilSampleType"
+                    "required": ["hasResult"],
+                    "allOf": [
+                        {
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 }
             }
         },
