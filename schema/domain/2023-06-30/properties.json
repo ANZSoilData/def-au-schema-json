@@ -25,8 +25,36 @@
             "description": "abundance of items",
             "$comment": "Type specific $defs supporting different vocabularies.",
             "$defs": {
-                "mottle": {
-                    "$anchor": "abundance-mottle",
+                "coarseFragments": {
+                    "$anchor": "abundance-coarse-fragments",
+                    "description": "abundance of coarse fragments",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#coarse-fragments-abundance"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "cutans": {
+                    "$anchor": "abundance-cutans",
+                    "description": "abundance of cutans",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#cutans-abundance"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "mottles": {
+                    "$anchor": "abundance-mottles",
                     "description": "abundance of mottles",
                     "type": "object",
                     "allOf": [
@@ -94,34 +122,6 @@
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
                     ]
-                },
-                "coarse_fragments": {
-                    "$anchor": "abundance-coarse-fragments",
-                    "description": "abundance of coarse fragments",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#coarse-fragments-abundance"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "cutans": {
-                    "$anchor": "abundance-cutans",
-                    "description": "abundance of cutans",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#cutans-abundance"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
                 }
             }
         },
@@ -138,13 +138,139 @@
             "$defs": {
                 "microrelief_biotic": {
                     "$anchor": "agent-microrelief-biotic",
-                    "description": "agent of geomorphological or biotic activity",
+                    "description": "agent of biotic activity",
                     "type": "object",
                     "allOf": [
                         {
                             "required": ["hasResult"],
                             "properties": {
                                 "hasResult": {"$ref": "./enum.json#microrelief-agent-biotic"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_bio": {
+                    "$anchor": "agent-geomorphology-bio",
+                    "description": "agent of geomorphological activity (bio)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_extra": {
+                    "$anchor": "agent-geomorphology-extra",
+                    "description": "agent of geomorphological activity (extra)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_gravity": {
+                    "$anchor": "agent-geomorphology-gravity",
+                    "description": "agent of geomorphological activity (gravity)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_ice": {
+                    "$anchor": "agent-geomorphology-ice",
+                    "description": "agent of geomorphological activity (ice)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_internal": {
+                    "$anchor": "agent-geomorphology-internal",
+                    "description": "agent of geomorphological activity (internal)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_precipitation": {
+                    "$anchor": "agent-geomorphology-precipitation",
+                    "description": "agent of geomorphological activity (precipitation)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_stand": {
+                    "$anchor": "agent-geomorphology-stand",
+                    "description": "agent of geomorphological activity (stand)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_streamflow": {
+                    "$anchor": "agent-geomorphology-streamflow",
+                    "description": "agent of geomorphological activity (streamflow)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "geomorphology_wind": {
+                    "$anchor": "agent-geomorphology-wind",
+                    "description": "agent of geomorphological activity (wind)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -487,17 +613,36 @@
             ],
             "title": "component",
             "description": "type of component element",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#ansis-entities-component"}
-                    }
+            "$defs": {
+                "microrelief_biotic": {
+                    "$anchor": "component-microrelief-biotic",
+                    "description": "",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "microrelief_sampled": {
+                    "$anchor": "component-microrelief-sampled",
+                    "description": "abundance of cutans",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "compoundPedality": {
             "$anchor": "compoundPedality",
@@ -602,17 +747,148 @@
             ],
             "title": "degree or intensity",
             "description": "degree or severity or intensity of phenomenon",
-            "$comment": "use conditional logic for enum $refs",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
-                    }
+            "$defs": {
+                "erosion_gully": {
+                    "$anchor": "degree-gully",
+                    "title": "degree or intensity of erosion (gully)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "erosion_mass_movement": {
+                    "$anchor": "degree-mass-movement",
+                    "title": "degree or intensity of erosion (mass-movement)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_rill": {
+                    "$anchor": "degree-rill",
+                    "title": "degree or intensity of erosion (rill)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_scald": {
+                    "$anchor": "degree-scald",
+                    "title": "degree or intensity of erosion (scald)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_sheet": {
+                    "$anchor": "degree-sheet",
+                    "title": "degree or intensity of erosion (sheet)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_stream_bank": {
+                    "$anchor": "degree-stream-bank",
+                    "title": "degree or intensity of erosion (stream-bank)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_tunnel": {
+                    "$anchor": "degree-tunnel",
+                    "title": "degree or intensity of erosion (tunnel)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_wave": {
+                    "$anchor": "degree-wave",
+                    "title": "degree or intensity of erosion (wave)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "erosion_wind": {
+                    "$anchor": "degree-wind",
+                    "title": "degree or intensity of erosion (wind)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "consistence_plasticity": {
+                    "$anchor": "degree-consistence-plasticity",
+                    "title": "degree or intensity of consistence plasticity",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "degree_erosion": {
             "$anchor": "degree-erosion",
@@ -1001,21 +1277,40 @@
             "@id": "ansis:diameter",
             "range@type": [
                 "sosa:ObservableProperty",
-                "qudt:QuantityValue"
+                "skos:Concept"
             ],
             "title": "diameter",
             "description": "thickness or width of round object",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                    }
+            "$defs": {
+                "pore": {
+                    "$anchor": "diameter-pore",
+                    "title": "pore diameter",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "root": {
+                    "$anchor": "diameter-root",
+                    "title": "root sizze",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "directionality": {
             "$anchor": "directionality",
@@ -1067,18 +1362,51 @@
                 "skos:Concept"
             ],
             "title": "distinctness",
-            "description": "distinctness of boundary - in the context of a soil horizon, this refers to the distinctness of the lower boundary",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
-                    }
+            "description": "distinctness of boundary",
+            "$defs": {
+                "boundary": {
+                    "$anchor": "distinctness-boundary",
+                    "description": "distinctness of the horizon's lower boundary",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#boundary-distinctness"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "cutans": {
+                    "$anchor": "distinctness-cutans",
+                    "description": "distinctness of cutans",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#cutans-distinctness"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "mottles": {
+                    "$anchor": "distinctness-mottles",
+                    "description": "distinctness of mottles",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#mottle-distinctness"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "distribution": {
             "$anchor": "distribution",
@@ -1202,17 +1530,22 @@
             ],
             "title": "elevation",
             "description": "elevation of element above a datum (usually MSL)",
-            "$comment": "",
             "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                    }
+            "required": [
+                "hasResult",
+                "usedProcedure"
+            ],
+            "properties": {
+                "hasResult": {"$ref": "./qudt.json#QuantityValue"},
+                "qualityOfObservation": {"$ref": "./sosa.json#qualityOfObservation"},
+                "usedProcedure": {
+                    "$comment": "replaces ansis:methodElevation",
+                    "$ref": "./enum.json#tobedefined"
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "madeBySensor": {"$ref": "./sosa.json#madeBySensor"},
+                "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
+                "resultTime": {"$ref": "./sosa.json#resultTime"}
+            }
         },
         "fabric": {
             "$anchor": "fabric",
@@ -1244,17 +1577,44 @@
             ],
             "title": "frequency",
             "description": "temporal frequency of event or phenomenon",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                    }
+            "$defs": {
+                "quantity": {
+                    "$anchor": "frequency-quantity",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
+                    "description": "duration (as quantity)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "inundation": {
+                    "$anchor": "frequency-inundation",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "inundation frequency",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "genesis": {
             "$anchor": "genesis",
@@ -1814,7 +2174,44 @@
             "range@type": ["sosa:ObservableProperty"],
             "title": "material",
             "description": "material or composition of entity or element",
-            "$comment": ""
+            "$defs": {
+                "material_segregations": {
+                    "$anchor": "material-segregations",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "Nature of segregations.",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "material_ubstrate_mineral_composition": {
+                    "$anchor": "material-substrate-mineral-composition",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "Substrate mineral composition.",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "methodElevation": {
             "$anchor": "method-elevation",
@@ -1860,17 +2257,34 @@
             ],
             "title": "moisture status",
             "description": "moisture state of material while property evaluation is carried out",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#colour-moisture-status"}
-                    }
+            "$defs": {
+                "colour": {
+                    "$anchor": "moisture-status-colour",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#colour-moisture-status"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "soil": {
+                    "$anchor": "moisture-status-soil-water-status",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "morphologicalType": {
             "$anchor": "morphological-type",
@@ -1947,17 +2361,44 @@
             ],
             "title": "permeability",
             "description": "rate of flow of liquid through the material",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#soil-permeability"}
-                    }
+            "$defs": {
+                "quantity": {
+                    "$anchor": "permeability-quantity",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
+                    "description": "permeability (as quantity)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "soil": {
+                    "$anchor": "permeability-soil",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "soil permeability",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#soil-permeability"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "physical": {
             "$anchor": "physical",
@@ -2387,16 +2828,43 @@
                 {"$ref": "./sosa.json#ObservableProperty"}
             ],
             "$defs": {
+                "boundary": {
+                    "$anchor": "shape-boundary",
+                    "description": "shape of the lower horizon boundary",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
                 "coarseFragments": {
                     "$anchor": "shape-coarse-fragments",
                     "description": "geometry of coarse fragments",
-                    "$comment": "Restricts ansis:shape.",
                     "type": "object",
                     "allOf": [
                         {
                             "required": ["hasResult"],
                             "properties": {
                                 "hasResult": {"$ref": "./enum.json#coarse-fragments-shape"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "segregations": {
+                    "$anchor": "shape-segregations",
+                    "description": "geometry of segregations",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2415,22 +2883,75 @@
             "description": "geometric scale and extent of element",
             "$comment": "",
             "$defs": {
+                "coarseFragments": {
+                    "$anchor": "size-coarse-fragments",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "title": "size - coarse fragments",
+                    "description": "geometric scale and extent of element (coarse fragments)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "mottles": {
+                    "$anchor": "size-mottles",
+                    "title": "size - mottles",
+                    "description": "geometric scale and extent of element (mottles)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
                 "soilStructure": {
-                    "$anchor": "size-soilstructure",
+                    "$anchor": "size-soil-structure",
                     "@id": "ansis:size",
                     "range@type": [
                         "sosa:ObservableProperty",
                         "skos:Concept"
                     ],
                     "title": "size",
-                    "description": "geometric scale and extent of element",
-                    "$comment": "",
+                    "description": "geometric scale and extent of element (soil structure)",
                     "type": "object",
                     "allOf": [
                         {
                             "required": ["hasResult"],
                             "properties": {
                                 "hasResult": {"$ref": "./enum.json#pedality-size"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "segregations": {
+                    "$anchor": "size-segregations",
+                    "@id": "ansis:size",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "title": "size",
+                    "description": "geometric scale and extent of element (segregations)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2447,21 +2968,62 @@
             ],
             "title": "slope",
             "description": "divergence of surface from horizontal",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
+            "$defs": {
+                "quantity": {
+                    "$anchor": "slope-quantity",
+                    "type": "object",
+                    "range@type": "qudt:QuantityValue",
+                    "required": [
+                        "hasResult",
+                        "usedProcedure"
+                    ],
                     "properties": {
-                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"},
+                        "qualityOfObservation": {"$ref": "./sosa.json#qualityOfObservation"},
+                        "usedProcedure": {
+                            "$comment": "replaces ansis:methodSlope",
+                            "$ref": "./enum.json#tobedefined"
+                        },
+                        "madeBySensor": {"$ref": "./sosa.json#madeBySensor"},
+                        "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
+                        "resultTime": {"$ref": "./sosa.json#resultTime"}
                     }
                 },
-                {
-                    "required": ["usedProcedure"],
-                    "$ref": "./sosa.json#ObservableProperty",
-                    "$comment": "expand to encompass/replace method_slope"
+                "class": {
+                    "$anchor": "slope-class",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "title": "slope - class",
+                    "description": "divergence of surface from horizontal - class",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "modal": {
+                    "$anchor": "slope-modal",
+                    "title": "slope - modal",
+                    "description": "divergence of surface from horizontal - modal",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 }
-            ]
+            }
         },
         "spacing": {
             "$anchor": "spacing",
@@ -2472,17 +3034,36 @@
             ],
             "title": "spacing",
             "description": "lateral separation of elements - in the context of substrate this refers to the spacing of discontinuities",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
-                    }
+            "$defs": {
+                "channel": {
+                    "$anchor": "spacing-channel",
+                    "title": "spacing - channel",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "substrate_discontinuity": {
+                    "$anchor": "spacing-substrate-discontinuity",
+                    "title": "spacing - substrate discontinuity",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "state": {
             "$anchor": "state",
@@ -2612,7 +3193,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#lithology-rock"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2699,17 +3280,44 @@
             ],
             "title": "width",
             "description": "linear extent - smaller dimension",
-            "$comment": "",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                    }
+            "$defs": {
+                "quantity": {
+                    "$anchor": "width-quantity",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
+                    "description": "width (as quantity)",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./qudt.json#QuantityValue"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "inundation": {
+                    "$anchor": "width-cracks",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "width of cracks",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         }
     }
 }
