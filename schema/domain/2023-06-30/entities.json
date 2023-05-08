@@ -89,6 +89,10 @@
                     "items": {"$ref": "./properties.json#location-in-toposequence"}
                 },
                 "purpose": {"$ref": "./properties.json#purpose"},
+                "relatedActivity": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedActivity-siteVisit"}
+                },
                 "relatedLandSurveySite": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
@@ -97,13 +101,16 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedProfile-object"}
                 },
-                "relatedProject": {"$ref": "./properties.json#relatedProject-object"},
                 "relatedSite": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedSite-link"}
                 },
                 "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-object"},
-                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-object"}
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-object"},
+                "scopedIdentifier": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#scopedIdentifier"}
+                }
             },
             "additionalProperties": false
         },
@@ -417,13 +424,22 @@
                     "const": "ansis:SoilSample"
                 },
                 "ansisType": {"$ref": "./properties.json#ansis-type"},
-                "hasGeometry": {"$ref": "./geo.json#hasGeometry"},
+                "component": {"$ref": "./properties.json#component"},
                 "depthLower": {"$ref": "./properties.json#depth-upper"},
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
-                "component": {"$ref": "./properties.json#component"},
+                "hasGeometry": {"$ref": "./geo.json#hasGeometry"},
+                "hasResult": {"$ref": "./sosa.json#hasResult-Observation"},
+                "isSampleOf": {
+                    "type": "array",
+                    "items": {"$ref": "./sosa.json#isSampleOf"}
+                },
                 "relatedProfile": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedProfile-link"}
+                },
+                "scopedIdentifier": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#scopedIdentifier"}
                 }
             },
             "additionalProperties": false
@@ -487,7 +503,14 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
                 },
-                "relatedProject": {"$ref": "./properties.json#relatedProject"}
+                "relatedActivity": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedActivity-siteVisit"}
+                },
+                "scopedIdentifier": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#scopedIdentifier"}
+                }
             },
             "additionalProperties": false
         },
@@ -1375,7 +1398,6 @@
                 "type",
                 "relatedActivity",
                 "relatedProject",
-                "relatedSite",
                 "endedAtTime",
                 "startedAtTime"
             ],
@@ -1387,11 +1409,11 @@
                     "const": "ansis:SiteVisit"
                 },
                 "visitor": {"$ref": "./properties.json#visitor"},
-                "relatedProject": {"$ref": "./properties.json#relatedProject"},
+                "relatedProject": {"$ref": "./properties.json#relatedProject-object"},
                 "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite-link"},
                 "relatedActivity": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedActivity"}
+                    "items": {"$ref": "./properties.json#relatedActivity-sampling"}
                 },
                 "relatedSite": {"$ref": "./properties.json#relatedSite-link"},
                 "endedAtTime": {"$ref": "./prov.json#endedAtTime"},

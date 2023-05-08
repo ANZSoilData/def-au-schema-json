@@ -59,6 +59,7 @@
             "@id": "sosa:Observation",
             "title": "SOSA Observation",
             "description": "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
+            "$comment": "ANSIS result restricted to a simple result - qudt:QuantityValue.",
             "type": "object",
             "required": [
                 "type",
@@ -73,7 +74,7 @@
                     "const": "sosa:Observation"
                 },
                 "observedProperty": {"$ref": "#observedProperty"},
-                "hasResult": {"$ref": "#hasResult"},
+                "hasResult": {"$ref": "#hasResult-QuantityValue"},
                 "qualityOfObservation": {"$ref": "#qualityOfObservation"},
                 "usedProcedure": {"$ref": "#usedProcedure"},
                 "madeBySensor": {"$ref": "#madeBySensor"},
@@ -102,6 +103,7 @@
             "@id": "sosa:Sample",
             "title": "SOSA Sample",
             "description": "A Sample is the result from an act of Sampling. Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made. Physical samples are sometimes known as 'specimens'. Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign. A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features.",
+            "$comment": "For reference. Use ansis:SoilSample (sub-type).",
             "type": "object",
             "required": ["type"],
             "properties": {
@@ -137,7 +139,6 @@
             "type": "object",
             "required": [
                 "type",
-                "hasFeatureOfInterest",
                 "hasResult"
             ],
             "properties": {
@@ -146,11 +147,16 @@
                     "$ref": "./base.json#type",
                     "const": "sosa:Sampling"
                 },
-                "hasFeatureOfInterest": {"$ref": "#hasFeatureOfInterest"},
                 "hasResult": {
                     "type": "array",
-                    "items": {"$ref": "#Sample"}
-                }
+                    "items": {"$ref": "#hasResult-SoilSample"}
+                },
+                "madeBySampler": {
+                    "type": "array",
+                    "items": {"$ref": "#madeBySampler"}
+                },
+                "resultTime": {"$ref": "#resultTime"},
+                "usedProcedure": {"$ref": "#usedProcedure"}
             },
             "additionalProperties": false
         },
@@ -184,26 +190,6 @@
             ],
             "$ref": "./base.json#Entity_Link"
         },
-        "hasFeatureOfInterest": {
-            "$anchor": "hasFeatureOfInterest",
-            "@id": "sosa:hasFeatureOfInterest",
-            "range@type": [
-                "ansis:SoilProfile",
-                "ansis:SoilBody",
-                "ansis:SoilLayer",
-                "ansis:SoilHorizon",
-                "ansis:SoilSurface",
-                "ansis:Substrate"
-            ],
-            "title": "has feature of interest",
-            "description": "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-            "$comment": "Forcing a URI (link) for now.",
-            "type": [
-                "object",
-                "null"
-            ],
-            "$ref": "./base.json#Entity_Link"
-        },
         "isSampleOf": {
             "$anchor": "isSampleOf",
             "@id": "sosa:isSampleOf",
@@ -224,18 +210,54 @@
             ],
             "$ref": "./base.json#Entity_Link"
         },
-        "hasResult": {
-            "$anchor": "hasResult",
-            "@id": "sosa:hasResult",
-            "range@type": "qudt:QuantityValue",
-            "title": "has result",
-            "description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
-            "$comment": "Sticking to a QUDT Quantity Value for this initial implementation.",
+        "hasFeatureOfInterest": {
+            "$anchor": "hasFeatureOfInterest",
+            "@id": "sosa:hasFeatureOfInterest",
+            "range@type": [
+                "ansis:SoilProfile",
+                "ansis:SoilBody",
+                "ansis:SoilLayer",
+                "ansis:SoilHorizon",
+                "ansis:SoilSurface",
+                "ansis:Substrate"
+            ],
+            "title": "has feature of interest",
+            "description": "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+            "$comment": "Forcing a URI (link) for now.",
             "type": [
                 "object",
                 "null"
             ],
-            "$ref": "./qudt.json#QuantityValue"
+            "$ref": "./base.json#Entity_Link"
+        },
+        "hasResult": {
+            "$anchor": "hasResult",
+            "@id": "sosa:hasResult",
+            "range@type": [
+                "sosa:Observation",
+                "qudt:QuantityValue",
+                "ansis:SoilSample"
+            ],
+            "title": "has result",
+            "description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
+            "$defs": {
+                "Observation": {
+                    "$anchor": "hasResult-Observation",
+                    "range@type": "sosa:Observation",
+                    "$ref": "#Observation"
+                },
+                "QuantityValue": {
+                    "$anchor": "hasResult-QuantityValue",
+                    "range@type": "qudt:QuantityValue",
+                    "@id": "sosa:hasSimpleResult",
+                    "$ref": "./qudt.json#QuantityValue"
+                },
+                "SoilSample": {
+                    "$anchor": "hasResult-SoilSample",
+                    "range@type": "ansis:SoilSample",
+                    "$ref": "./entities.json#SoilSample"
+                }
+            }
         },
         "hasSample": {
             "$anchor": "hasSample",
@@ -249,6 +271,22 @@
                 "null"
             ],
             "$ref": "./base.json#Entity_Link"
+        },
+        "madeBySampler": {
+            "$anchor": "madeBySampler",
+            "@id": "sosa:madeBySampler",
+            "range@type": "sosa:Sampler",
+            "title": "Made by Sampler",
+            "description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+            "$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
+            "type": [
+                "object",
+                "null"
+            ],
+            "oneOf": [
+                {"$ref": "#Sensor"},
+                {"$ref": "./base.json#Entity_Link"}
+            ]
         },
         "madeBySensor": {
             "$anchor": "madeBySensor",
@@ -280,25 +318,6 @@
                 {"$ref": "#Actuator"},
                 {"$ref": "./base.json#Entity_Link"}
             ]
-        },
-        "usedProcedure": {
-            "$anchor": "usedProcedure",
-            "@id": "sosa:usedProcedure",
-            "range@type": "skos:Concept",
-            "title": "Made by Sensor",
-            "description": "Relation between an Observation and the Sensor which made the Observations.",
-            "$comment": "Forcing a URI pointing to an ANSIS methods vocabulary {!!probably too restrictive!!}. No local enumeration as the list is too long.",
-            "type": [
-                "object",
-                "null"
-            ],
-            "$ref": "./base.json#Entity_Link",
-            "$defs": {
-                "SoilProfile": {
-                    "$anchor": "usedProcedure-ProfileConstruction",
-                    "$ref": "./enum.json#profile-construction"
-                }
-            }
         },
         "observedProperty": {
             "$anchor": "observedProperty",
@@ -338,6 +357,25 @@
                 "null"
             ],
             "format": "date-time"
+        },
+        "usedProcedure": {
+            "$anchor": "usedProcedure",
+            "@id": "sosa:usedProcedure",
+            "range@type": "skos:Concept",
+            "title": "Made by Sensor",
+            "description": "Relation between an Observation and the Sensor which made the Observations.",
+            "$comment": "Forcing a URI pointing to an ANSIS methods vocabulary {!!probably too restrictive!!}. No local enumeration as the list is too long.",
+            "type": [
+                "object",
+                "null"
+            ],
+            "$ref": "./base.json#Entity_Link",
+            "$defs": {
+                "SoilProfile": {
+                    "$anchor": "usedProcedure-ProfileConstruction",
+                    "$ref": "./enum.json#profile-construction"
+                }
+            }
         },
         "qualityOfObservation": {
             "$anchor": "qualityOfObservation",

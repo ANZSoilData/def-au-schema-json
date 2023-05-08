@@ -2079,6 +2079,14 @@
                 "link": {
                     "$anchor": "relatedActivity-link",
                     "$ref": "./base.json#Entity_Link"
+                },
+                "sampling": {
+                    "$anchor": "relatedActivity-sampling",
+                    "$ref": "./sosa.json#Sampling"
+                },
+                "siteVisit": {
+                    "$anchor": "relatedActivity-siteVisit",
+                    "$ref": "./entities.json#SiteVisit"
                 }
             }
         },
@@ -2342,6 +2350,21 @@
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
             ]
+        },
+        "scopedIdentifier": {
+            "$anchor": "scopedIdentifier",
+            "title": "scoped identifier",
+            "description": "An identifier for a site or sample scoped to the authority that assigned the identifier.",
+            "$comment": "Based on the GML identifier (scoped name - code with with authority) allowing an identifier to be linked to an agency - e.g. the ID assigned by CSIRO or Federation University.",
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+                "name": {"type": "string"},
+                "authority": {
+                    "type": "string",
+                    "$comment": "The ID of the provider (suggestion)."
+                }
+            }
         },
         "shape": {
             "$anchor": "shape",
