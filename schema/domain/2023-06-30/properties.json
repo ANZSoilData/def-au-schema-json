@@ -146,127 +146,54 @@
                         {"$ref": "./sosa.json#ObservableProperty"}
                     ]
                 },
-                "geomorphology_bio": {
-                    "$anchor": "agent-geomorphology-bio",
-                    "description": "Biological.",
+                "geomorphology": {
+                    "$anchor": "agent-geomorphology",
+                    "description": "Geomorphology.",
                     "type": "object",
                     "allOf": [
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_extra": {
-                    "$anchor": "agent-geomorphology-extra",
-                    "description": "Extra.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_gravity": {
-                    "$anchor": "agent-geomorphology-gravity",
-                    "description": "Gravity.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_ice": {
-                    "$anchor": "agent-geomorphology-ice",
-                    "description": "Ice.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_internal": {
-                    "$anchor": "agent-geomorphology-internal",
-                    "description": "Internal.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_precipitation": {
-                    "$anchor": "agent-geomorphology-precipitation",
-                    "description": "Precipitation.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_stand": {
-                    "$anchor": "agent-geomorphology-stand",
-                    "description": "Stand.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_streamflow": {
-                    "$anchor": "agent-geomorphology-streamflow",
-                    "description": "Streamflow.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
-                },
-                "geomorphology_wind": {
-                    "$anchor": "agent-geomorphology-wind",
-                    "description": "Wind.",
-                    "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {
+                                    "oneOf": [
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "bio"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "extra"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "gravity"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "ice"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "internal"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "precipitation"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "stand"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "streamflow"
+                                        },
+                                        {
+                                            "$ref": "./enum.json#tobedefined",
+                                            "$comment": "wind"
+                                        }
+                                    ]
+                                }
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -658,24 +585,52 @@
             "$ref": "./enum.json#tobedefined"
         },
         "colour": {
-            "$anchor": "colour",
             "@id": "ansis:colour",
             "range@type": [
                 "sosa:ObservableProperty",
-                "ansis:SoilColour"
+                "ansis:SoilColour",
+                "skos:Concept"
             ],
             "title": "colour",
             "description": "A description of colour.",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {"$ref": "./entities.json#SoilColour"}
-                    }
+            "$defs": {
+                "microrelief_biotic": {
+                    "$anchor": "colour-mottle",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "Mottle.",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+                "soil": {
+                    "$anchor": "colour-soil",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "ansis:SoilColour"
+                    ],
+                    "description": "Soil.",
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "required": ["hasResult"],
+                            "properties": {
+                                "hasResult": {"$ref": "./entities.json#SoilColour"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "component": {
             "@id": "ansis:component",
@@ -1098,7 +1053,7 @@
             "description": "Depth to width ratio of entity; ratio of depth to width of the element.",
             "$defs": {
                 "quantity": {
-                    "$anchor": "depthWidthRatio-quantity",
+                    "$anchor": "depth-width-ratio-quantity",
                     "range@type": [
                         "sosa:ObservableProperty",
                         "qudt:QuantityValue"
@@ -1116,7 +1071,7 @@
                     ]
                 },
                 "streamchannel": {
-                    "$anchor": "depthWidthRatio-streamchannel",
+                    "$anchor": "depth-width-ratio-stream-channel",
                     "range@type": [
                         "sosa:ObservableProperty",
                         "skos:Concept"
@@ -1236,8 +1191,8 @@
             "title": "diameter",
             "description": "Thickness or width of round object.",
             "$defs": {
-                "pore": {
-                    "$anchor": "diameter-pore",
+                "pores": {
+                    "$anchor": "diameter-pores",
                     "title": "pore diameter",
                     "description": "Pore.",
                     "type": "object",
@@ -1251,8 +1206,8 @@
                         {"$ref": "./sosa.json#ObservableProperty"}
                     ]
                 },
-                "root": {
-                    "$anchor": "diameter-root",
+                "roots": {
+                    "$anchor": "diameter-roots",
                     "title": "root size",
                     "description": "Root.",
                     "type": "object",
@@ -2339,6 +2294,13 @@
                     "type": "object",
                     "$ref": "./entities.json#Site-purpose"
                 },
+                "siteVisit": {
+                    "$anchor": "purpose-site-visit",
+                    "range@type": "ansis:Site-purpose",
+                    "description": "Site Visit.",
+                    "$comment": "No defintion/vocabulary defined for SiteVisit.purpose.",
+                    "type": "string"
+                },
                 "soilProfile": {
                     "$anchor": "purpose-soil-profile",
                     "range@type": "ansis:Profile-purpose",
@@ -2398,6 +2360,11 @@
                     "$anchor": "relatedActivity-siteVisit",
                     "description": "Site Visit.",
                     "$ref": "./entities.json#SiteVisit"
+                },
+                "treatment": {
+                    "$anchor": "relatedActivity-treatment",
+                    "description": "Treatment.",
+                    "$ref": "./entities.json#Treatment"
                 }
             }
         },
@@ -2944,19 +2911,88 @@
             ]
         },
         "strength": {
-            "$anchor": "strength",
             "@id": "ansis:strength",
             "range@type": [
                 "sosa:ObservableProperty",
-                "ansis:SoilStrength"
+                "ansis:SoilStrength",
+                "skos:Concept"
             ],
             "title": "strength",
             "description": "Strength of material.",
-            "type": "object",
-            "oneOf": [
-                {"$ref": "./sosa.json#ObservableProperty"},
-                {"$ref": "./entities.json#SoilStrength"}
-            ]
+            "$defs": {
+                "consistence": {
+                    "$anchor": "strength-consistence",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "Consistence.",
+                    "type": "object",
+                    "required": ["hasResult"],
+                    "allOf": [
+                        {
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "material": {
+                    "$anchor": "strength-material",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "Material.",
+                    "type": "object",
+                    "required": ["hasResult"],
+                    "allOf": [
+                        {
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "soil": {
+                    "$anchor": "strength-soil",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "ansis:SoilStrength"
+                    ],
+                    "description": "Soil.",
+                    "type": "object",
+                    "required": ["hasResult"],
+                    "allOf": [
+                        {
+                            "properties": {
+                                "hasResult": {"$ref": "./entities.json#SoilStrength"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                },
+                "segregations": {
+                    "$anchor": "strength-segregations",
+                    "range@type": [
+                        "sosa:ObservableProperty",
+                        "skos:Concept"
+                    ],
+                    "description": "Segregations.",
+                    "type": "object",
+                    "required": ["hasResult"],
+                    "allOf": [
+                        {
+                            "properties": {
+                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                            }
+                        },
+                        {"$ref": "./sosa.json#ObservableProperty"}
+                    ]
+                }
+            }
         },
         "structure": {
             "$anchor": "structure",
