@@ -6,11 +6,11 @@
     "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
     "type": "null",
     "$defs": {
-     	"curiPrefix": {
-     		"xs": "https://www.w3.org/TR/xmlschema-2/#",
-     		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-     		"foaf": "http://xmlns.com/foaf/0.1/#"
-     	},
+        "curiPrefix": {
+            "xs": "https://www.w3.org/TR/xmlschema-2/#",
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "foaf": "http://xmlns.com/foaf/0.1/#"
+        },
         "$schema": {
             "$anchor": "js-schema",
             "range@type": "xs:anyURI",
@@ -73,23 +73,13 @@
             "$anchor": "Entity_Link",
             "title": "ANSIS Entity Link",
             "description": "A simple object supporting a link (id and pointer) to another entity with extra properties to help label the link, or clarify the type of target.",
-			"type": "object",
-            "required": [
-                "id"
-            ],
+            "type": "object",
+            "required": ["id"],
             "properties": {
-                "id": {
-                    "$ref": "#id"
-                },
-                "pointer": {
-                    "$ref": "#pointer"
-                },
-                "type": {
-                    "$ref": "#type"
-                },
-                "label": {
-                    "$ref": "#label"
-                }
+                "id": {"$ref": "#id"},
+                "pointer": {"$ref": "#pointer"},
+                "type": {"$ref": "#type"},
+                "label": {"$ref": "#label"}
             },
             "additionalProperties": false
         }
