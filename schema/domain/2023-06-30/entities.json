@@ -26,6 +26,7 @@
                 "hasLandUse",
                 "hasLandform",
                 "hasLandSurface",
+                "relatedProject",
                 "relatedSoilSurface",
                 "purpose"
             ],
@@ -100,6 +101,10 @@
                 "relatedProfile": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedProfile-object"}
+                },
+                "relatedProject": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedProject-object"}
                 },
                 "relatedSite": {
                     "type": "array",
@@ -570,6 +575,10 @@
                 "relatedActivity": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedActivity-siteVisit"}
+                },
+                "relatedProject": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedProject-object"}
                 },
                 "scopedIdentifier": {
                     "type": "array",
@@ -1612,7 +1621,7 @@
                     }
                 },
                 "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite-link"},
-                "relatedProject": {"$ref": "./properties.json#relatedProject-object"},
+                "relatedProject": {"$ref": "./properties.json#relatedProject-link"},
                 "relatedSite": {"$ref": "./properties.json#relatedSite-link"},
                 "startedAtTime": {"$ref": "./prov.json#startedAtTime"},
                 "visitor": {"$ref": "./properties.json#visitor"}
