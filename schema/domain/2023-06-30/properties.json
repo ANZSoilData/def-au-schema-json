@@ -157,40 +157,31 @@
                                 "hasResult": {
                                     "oneOf": [
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "bio"
+                                            "$ref": "./enum.json#geomorphology-agent-bio"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "extra"
+                                            "$ref": "./enum.json#geomorphology-agent-extra"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "gravity"
+                                            "$ref": "./enum.json#geomorphology-agent-gravity"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "ice"
+                                            "$ref": "./enum.json#geomorphology-agent-ice"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "internal"
+                                            "$ref": "./enum.json#geomorphology-agent-internal"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "precipitation"
+                                            "$ref": "./enum.json#geomorphology-agent-precipitation"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "stand"
+                                            "$ref": "./enum.json#geomorphology-agent-stand"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "streamflow"
+                                            "$ref": "./enum.json#geomorphology-agent-streamflow"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "wind"
+                                            "$ref": "./enum.json#geomorphology-agent-wind"
                                         }
                                     ]
                                 }
@@ -215,7 +206,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#aggradation"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -235,7 +226,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#rock-alteration"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -248,8 +239,7 @@
             "title": "analyte",
             "description": "Chemical species measured.",
             "$comment": "Large vocabulary, external link.",
-            "type": "string",
-            "$ref": "./enum.json#tobedefined"
+            "type": "string"
         },
         "ansisType": {
             "@id": "ansis:type",
@@ -267,91 +257,94 @@
                     "range@type": "skos:Concept",
                     "description": "Cutans.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#cutans-type"
                 },
                 "erosion": {
                     "$anchor": "ansis-type-erosion",
                     "range@type": "skos:Concept",
                     "description": "Erosion.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#erosion-type"
                 },
                 "fabric": {
                     "$anchor": "ansis-type-fabric",
                     "range@type": "skos:Concept",
                     "description": "Fabric.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#fabric-type"
                 },
                 "landformElement": {
                     "$anchor": "ansis-type-landform-element-name",
                     "range@type": "skos:Concept",
                     "description": "Landform element.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#landform-element-name"
                 },
                 "landformPattern": {
                     "$anchor": "ansis-type-landform-pattern-name",
                     "range@type": "skos:Concept",
                     "description": "Landform pattern.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#landform-pattern-name"
                 },
                 "landformPattern_erosional": {
                     "$anchor": "ansis-type-landform-pattern-erosional",
                     "range@type": "skos:Concept",
                     "description": "Landform pattern - erosional.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#landform-pattern-erosional"
                 },
                 "microrelief-gilgai": {
                     "$anchor": "ansis-type-microrelief-gilgai",
                     "range@type": "skos:Concept",
                     "description": "Microrelief - Gilgai.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#microrelief-type-gilgai"
                 },
                 "microrelief-hummocky": {
                     "$anchor": "ansis-type-microrelief-hummocky",
                     "range@type": "skos:Concept",
                     "description": "Microrelief - Hummocky.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#microrelief-type-hummocky"
                 },
                 "microrelief-other": {
                     "$anchor": "ansis-type-microrelief-other",
                     "range@type": "skos:Concept",
                     "description": "Microrelief - Other.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#microrelief-type-other"
                 },
                 "mottle": {
                     "$anchor": "ansis-type-mottle",
                     "range@type": "skos:Concept",
                     "description": "Mottle.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#mottle-type"
                 },
                 "pans": {
                     "$anchor": "ansis-type-pans",
                     "range@type": "skos:Concept",
                     "description": "Pan.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#pans-type"
                 },
                 "pedality": {
                     "$anchor": "ansis-type-pedality",
                     "range@type": "skos:Concept",
                     "description": "Pedality.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "oneOf": [
+						{"$ref": "./enum.json#artificial-aggregates-structure"},
+						{"$ref": "./enum.json#pedality-type"}
+                    ]
                 },
                 "plasticity": {
                     "$anchor": "ansis-type-soil-plasticity",
                     "range@type": "skos:Concept",
                     "description": "Plasticity.",
                     "type": "object",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#consistence-plasticity-type"
                 },
                 "site": {
                     "$anchor": "ansis-type-site",
@@ -372,8 +365,8 @@
                     "range@type": "skos:Concept",
                     "description": "Soil Profile.",
                     "type": "object",
-                    "$comment": "Vocabulary sp:observation-type?",
-                    "$ref": "./enum.json#tobedefined"
+                    "$comment": "Vocabulary sp:Profile-construction?",
+                    "$ref": "./enum.json#profile-construction"
                 }
             }
         },
@@ -461,7 +454,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#carbonate-effervescence"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -594,7 +587,7 @@
             "title": "colour",
             "description": "A description of colour.",
             "$defs": {
-                "microrelief_biotic": {
+                "mottle": {
                     "$anchor": "colour-mottle",
                     "range@type": [
                         "sosa:ObservableProperty",
@@ -606,7 +599,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#mottle-colour"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -649,7 +642,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#microrelief-component-biotic"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -663,7 +656,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#microrelief-component-sampled"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -680,6 +673,7 @@
             ],
             "title": "compound pedality",
             "description": "Compound pedality.",
+            "$comment": "No defined vocabulary.",
             "type": "object",
             "allOf": [
                 {
@@ -734,7 +728,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#pans-continuity"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -754,7 +748,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#mottle-contrast"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -780,40 +774,31 @@
                                 "hasResult": {
                                     "oneOf": [
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "gully"
+                                            "$ref": "./enum.json#erosion-severity-gully"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "mass-movement"
+                                            "$ref": "./enum.json#erosion-severity-mass-movement"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "rill"
+                                            "$ref": "./enum.json#erosion-severity-rill"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "scald"
+                                            "$ref": "./enum.json#erosion-severity-scald"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "sheet"
+                                            "$ref": "./enum.json#erosion-severity-sheet"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "stream-bank"
+                                            "$ref": "./enum.json#erosion-severity-stream-bank"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "tunnel"
+                                            "$ref": "./enum.json#erosion-severity-tunnel"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "wave"
+                                            "$ref": "./enum.json#erosion-severity-wave"
                                         },
                                         {
-                                            "$ref": "./enum.json#tobedefined",
-                                            "$comment": "wind"
+                                            "$ref": "./enum.json#erosion-severity-wind"
                                         }
                                     ]
                                 }
@@ -830,7 +815,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#consistence-plasticity-degree"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}

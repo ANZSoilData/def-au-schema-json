@@ -146,6 +146,73 @@
                 }
             ]
         },
+        "Aggradation": {
+            "$anchor": "aggradation",
+            "@id": "ls:Aggradation",
+            "title": "Aggradation - enumeration",
+            "description": "This refers to the presence of material deposited on a pre-existing surface as a result of wind and/or water erosion.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:aggradation-0",
+                    "description": "No aggradation"
+                },
+                {
+                    "const": "ls:aggradation-1",
+                    "description": "Present"
+                },
+                {
+                    "const": "ls:aggradation-X",
+                    "description": "Not apparent"
+                }
+            ]
+        },
+        "ArtificialAggregatesStructure": {
+            "$anchor": "artificial-aggregates-structure",
+            "@id": "sp:Artificial-aggregates-structure",
+            "title": "Structure of artificial aggregates",
+            "description": "Cultivated horizons (Ap horizons) often consist of artificial aggregates formed by cultivation or work being done on the soil. The distinction between artificial aggregates and peds can be difficult. In cultivated horizons, where the pedologist is confident the aggregates are natural peds they should be recorded as such. If the pedologist is doubtful, or the aggregates are obviously artificial, they should be recorded as clods or fragments.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:structure-artificial-CL",
+                    "description": "Clod"
+                },
+                {
+                    "const": "sp:structure-artificial-FR",
+                    "description": "Fragment"
+                }
+            ]
+        },
+        "CarbonateEffervescence": {
+            "$anchor": "carbonate-effervescence",
+            "@id": "sp:Carbonate-effervescence",
+            "title": "Effervescence of carbonate in fine earth - enumeration",
+            "description": "Effervescence of carbonate in fine earth using two or three drops of 1-molar HCl.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:effervescence-H",
+                    "description": "Highly calcareous"
+                },
+                {
+                    "const": "sp:effervescence-M",
+                    "description": "Moderately calcareous"
+                },
+                {
+                    "const": "sp:effervescence-N",
+                    "description": "Non-calcareous"
+                },
+                {
+                    "const": "sp:effervescence-S",
+                    "description": "Slightly calcareous"
+                },
+                {
+                    "const": "sp:effervescence-V",
+                    "description": "Very highly calcareous"
+                }
+            ]
+        },
         "ChannelDevelopment": {
             "$anchor": "channel-development",
             "@id": "lf:Channel-development",
@@ -307,6 +374,56 @@
                 }
             ]
         },
+        "ConsistencePlasticityDegree": {
+            "$anchor": "consistence-plasticity-degree",
+            "@id": "sp:Consistence-plasticity-degree",
+            "title": "Plasticity Degree - enumeration",
+            "description": "Plasticity is the ability to change shape and retain the new shape after the stress is removed. The degree of plasticity given below applies only to normal plasticity. The degree of plasticity is determined at the soil moisture content used for field texturing, that is, just below sticky point. The soil is rolled between the palms of the hand and, if possible, 40 mm long rolls are formed. The rolls are dangled from the thumb and forefinger. Plasticity is determined on the behaviour of rolls of varying thickness.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:consistence-plasticity-degree-0",
+                    "description": "Non-plastic"
+                },
+                {
+                    "const": "sp:consistence-plasticity-degree-1",
+                    "description": "Slightly plastic"
+                },
+                {
+                    "const": "sp:consistence-plasticity-degree-2",
+                    "description": "Moderately plastic"
+                },
+                {
+                    "const": "sp:consistence-plasticity-degree-3",
+                    "description": "Very plastic"
+                }
+            ]
+        },
+        "ConsistencePlasticityType": {
+            "$anchor": "consistence-plasticity-type",
+            "@id": "sp:Consistence-plasticity-type",
+            "title": "Plasticity Type - enumeration",
+            "description": "The type of plasticity refers to the degree to which either the consistence, field texture or both properties of a soil suggest the amount of clay-sized particles it contains (Butler 1955). It may be identified by determining two field textures: one after an initial 1 to 2 minute working of the soil sample, and another after a prolonged 10 minute kneading. The change in field texture from the initial to the prolonged working of the soil sample indicates the type of plasticity.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:consistence-plasticity-type-N",
+                    "description": "Normal plasticity"
+                },
+                {
+                    "const": "sp:consistence-plasticity-type-S",
+                    "description": "Superplastic"
+                },
+                {
+                    "const": "sp:consistence-plasticity-type-T",
+                    "description": "Strongly subplastic"
+                },
+                {
+                    "const": "sp:consistence-plasticity-type-U",
+                    "description": "Subplastic"
+                }
+            ]
+        },
         "CutansAbundance": {
             "$anchor": "cutans-abundance",
             "@id": "sp:Cutans-abundance",
@@ -329,6 +446,43 @@
                 {
                     "const": "sp:cutans-abundance-3",
                     "description": "Many (cutans abundance)"
+                }
+            ]
+        },
+        "CutansType": {
+            "$anchor": "cutans-type",
+            "@id": "sp:Cutans-type",
+            "title": "Types of cutans - enumeration",
+            "description": "Types of cutans",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:cutans-type-C",
+                    "description": "Clay skins"
+                },
+                {
+                    "const": "sp:cutans-type-K",
+                    "description": "Slickensides"
+                },
+                {
+                    "const": "sp:cutans-type-M",
+                    "description": "Mangans"
+                },
+                {
+                    "const": "sp:cutans-type-O",
+                    "description": "Other cutans"
+                },
+                {
+                    "const": "sp:cutans-type-S",
+                    "description": "Stress cutans"
+                },
+                {
+                    "const": "sp:cutans-type-U",
+                    "description": "Unspecified"
+                },
+                {
+                    "const": "sp:cutans-type-Z",
+                    "description": "Zero or no cutans"
                 }
             ]
         },
@@ -418,6 +572,293 @@
                 {
                     "const": "ls:Erosion-severity-wind",
                     "description": "Wind erosion - enumeration"
+                }
+            ]
+        },
+        "ErosionSeverityGully": {
+            "$anchor": "erosion-severity-gully",
+            "@id": "ls:Erosion-severity-gully",
+            "title": "Gully erosion - enumeration",
+            "description": "A gully is a channel more than 0.3 m deep.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-G-0",
+                    "description": "No gully erosion"
+                },
+                {
+                    "const": "ls:erosion-G-1",
+                    "description": "Minor gully erosion"
+                },
+                {
+                    "const": "ls:erosion-G-2",
+                    "description": "Moderate gully erosion"
+                },
+                {
+                    "const": "ls:erosion-G-3",
+                    "description": "Severe gully erosion"
+                }
+            ]
+        },
+        "ErosionSeverityMassMovement": {
+            "$anchor": "erosion-severity-mass-movement",
+            "@id": "ls:Erosion-severity-mass-movement",
+            "title": "Mass movement - enumeration",
+            "description": "This includes all relatively large downslope movement of soil, rock or mixture of both, for example landslides, slumps, earth flows, debris avalanches and solifluxion.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-M-0",
+                    "description": "No mass movement"
+                },
+                {
+                    "const": "ls:erosion-M-1",
+                    "description": "Present"
+                }
+            ]
+        },
+        "ErosionSeverityRill": {
+            "$anchor": "erosion-severity-rill",
+            "@id": "ls:Erosion-severity-rill",
+            "title": "Rill erosion - enumeration",
+            "description": "A rill is a small channel up to 0.3 m deep, which can be largely obliterated by tillage operations (Houghton and Charman 1986).",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-R-0",
+                    "description": "No rill erosion"
+                },
+                {
+                    "const": "ls:erosion-R-1",
+                    "description": "Minor"
+                },
+                {
+                    "const": "ls:erosion-R-2",
+                    "description": "Moderate"
+                },
+                {
+                    "const": "ls:erosion-R-3",
+                    "description": "Severe"
+                }
+            ]
+        },
+        "ErosionSeverityScald": {
+            "$anchor": "erosion-severity-scald",
+            "@id": "ls:Erosion-severity-scald",
+            "title": "Scald erosion - enumeration",
+            "description": "This is the removal of surface soil by water and/or wind, often exposing a more clayey subsoil which is devoid of vegetation and relatively impermeable to water. Scalds are most common in arid or semi-arid lands.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-C-0",
+                    "description": "No scalding"
+                },
+                {
+                    "const": "ls:erosion-C-1",
+                    "description": "Minor scalding"
+                },
+                {
+                    "const": "ls:erosion-C-2",
+                    "description": "Moderate scalding"
+                },
+                {
+                    "const": "ls:erosion-C-3",
+                    "description": "Severe scalding"
+                }
+            ]
+        },
+        "ErosionSeveritySheet": {
+            "$anchor": "erosion-severity-sheet",
+            "@id": "ls:Erosion-severity-sheet",
+            "title": "Sheet erosion - enumeration",
+            "description": "This is the relatively uniform removal of soil from an area without the development of conspicuous channels. Indicators of sheet erosion include soil deposits in downslope sediment traps, such as fencelines or farm dams, and pedestalling, root exposure or exposure of subsoils.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-S-0",
+                    "description": "No sheet erosion"
+                },
+                {
+                    "const": "ls:erosion-S-1",
+                    "description": "Minor"
+                },
+                {
+                    "const": "ls:erosion-S-2",
+                    "description": "Moderate"
+                },
+                {
+                    "const": "ls:erosion-S-3",
+                    "description": "Severe"
+                },
+                {
+                    "const": "ls:erosion-S-X",
+                    "description": "Not apparent"
+                }
+            ]
+        },
+        "ErosionSeverityStreamBank": {
+            "$anchor": "erosion-severity-stream-bank",
+            "@id": "ls:Erosion-severity-stream-bank",
+            "title": "Stream bank erosion - enumeration",
+            "description": "This is the removal of soil from a stream bank, typically during periods of high stream flow.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-B-0",
+                    "description": "No stream bank erosion"
+                },
+                {
+                    "const": "ls:erosion-B-1",
+                    "description": "Present"
+                },
+                {
+                    "const": "ls:erosion-B-X",
+                    "description": "Not apparent"
+                }
+            ]
+        },
+        "ErosionSeverityTunnel": {
+            "$anchor": "erosion-severity-tunnel",
+            "@id": "ls:Erosion-severity-tunnel",
+            "title": "Tunnel erosion - enumeration",
+            "description": "This is the removal of subsoil by water while the surface soil remains relatively intact (Crouch 1976).",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-T-0",
+                    "description": "No tunnel erosion"
+                },
+                {
+                    "const": "ls:erosion-T-1",
+                    "description": "Present"
+                },
+                {
+                    "const": "ls:erosion-T-X",
+                    "description": "Not apparent"
+                }
+            ]
+        },
+        "ErosionSeverityWave": {
+            "$anchor": "erosion-severity-wave",
+            "@id": "ls:Erosion-severity-wave",
+            "title": "Wave erosion - enumeration",
+            "description": "Erosion of beaches, beach ridges and/or dunes. This is the removal of sand or soil from the margins of beaches, beach ridges, dunes, lakes or dams by wave action.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-V-0",
+                    "description": "No wave erosion"
+                },
+                {
+                    "const": "ls:erosion-V-1",
+                    "description": "Present"
+                },
+                {
+                    "const": "ls:erosion-V-X",
+                    "description": "Not apparent"
+                }
+            ]
+        },
+        "ErosionSeverityWind": {
+            "$anchor": "erosion-severity-wind",
+            "@id": "ls:Erosion-severity-wind",
+            "title": "Wind erosion - enumeration",
+            "description": "Give presence/absence or extent of accelerated erosion.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-W-0",
+                    "description": "No wind erosion"
+                },
+                {
+                    "const": "ls:erosion-W-1",
+                    "description": "Minor or present"
+                },
+                {
+                    "const": "ls:erosion-W-2",
+                    "description": "Moderate"
+                },
+                {
+                    "const": "ls:erosion-W-3",
+                    "description": "Severe"
+                },
+                {
+                    "const": "ls:erosion-W-4",
+                    "description": "Very severe"
+                },
+                {
+                    "const": "ls:erosion-W-X",
+                    "description": "Not apparent"
+                }
+            ]
+        },
+        "ErosionType": {
+            "$anchor": "erosion-type",
+            "@id": "ls:Erosion-type",
+            "title": "Type of erosion - enumeration",
+            "description": "Type of erosion",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-type-B",
+                    "description": "Stream bank"
+                },
+                {
+                    "const": "ls:erosion-type-C",
+                    "description": "Scald"
+                },
+                {
+                    "const": "ls:erosion-type-G",
+                    "description": "Gully"
+                },
+                {
+                    "const": "ls:erosion-type-M",
+                    "description": "Mass movement"
+                },
+                {
+                    "const": "ls:erosion-type-R",
+                    "description": "Rill"
+                },
+                {
+                    "const": "ls:erosion-type-S",
+                    "description": "Sheet"
+                },
+                {
+                    "const": "ls:erosion-type-T",
+                    "description": "Tunnel"
+                },
+                {
+                    "const": "ls:erosion-type-V",
+                    "description": "Wave"
+                },
+                {
+                    "const": "ls:erosion-type-W",
+                    "description": "Wind"
+                }
+            ]
+        },
+        "FabricType": {
+            "$anchor": "fabric-type",
+            "@id": "sp:Fabric-type",
+            "title": "Fabric - enumeration",
+            "description": "The definition of soil fabric in Australia is incomplete. The following description is adapted from Northcote (1979).\r\nFabric describes the appearance of the soil material (under \u00d710 hand lens). Differences in fabric are associated with the presence or absence of peds, the lustre or lack of lustre of the ped surfaces, and the presence, size and arrangement of pores (voids) in the soil mass. The descriptions given below apply primarily to B horizons.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:fabric-E",
+                    "description": "Earthy (fabric)"
+                },
+                {
+                    "const": "sp:fabric-G",
+                    "description": "Sandy (grains prominent)"
+                },
+                {
+                    "const": "sp:fabric-R",
+                    "description": "Rough-ped"
+                },
+                {
+                    "const": "sp:fabric-S",
+                    "description": "Smooth-ped"
                 }
             ]
         },
@@ -628,6 +1069,150 @@
                 }
             ]
         },
+        "GeomorphologyAgentBio": {
+            "$anchor": "geomorphology-agent-bio",
+            "@id": "lf:Geomorphology-agent-bio",
+            "title": "Geomorphological agents - biological agents - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-BI",
+                    "description": "Non-human biological agents"
+                },
+                {
+                    "const": "lf:geomorphological-agent-HU",
+                    "description": "Human agents"
+                }
+            ]
+        },
+        "GeomorphologyAgentExtra": {
+            "$anchor": "geomorphology-agent-extra",
+            "@id": "lf:Geomorphology-agent-extra",
+            "title": "Geomorphological agents - extraterrestrial agents - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-IM",
+                    "description": "Impact by meteors"
+                }
+            ]
+        },
+        "GeomorphologyAgentGravity": {
+            "$anchor": "geomorphology-agent-gravity",
+            "@id": "lf:Geomorphology-agent-gravity",
+            "title": "Geomorphological agents - gravity - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-GR",
+                    "description": "Gravity"
+                }
+            ]
+        },
+        "GeomorphologyAgentIce": {
+            "$anchor": "geomorphology-agent-ice",
+            "@id": "lf:Geomorphology-agent-ice",
+            "title": "Geomorphological agents - ice - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-FR",
+                    "description": "Frost"
+                },
+                {
+                    "const": "lf:geomorphological-agent-GL",
+                    "description": "Glacier flow"
+                }
+            ]
+        },
+        "GeomorphologyAgentInternal": {
+            "$anchor": "geomorphology-agent-internal",
+            "@id": "lf:Geomorphology-agent-internal",
+            "title": "Geomorphological agents - internal forces - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-DI",
+                    "description": "Diastrophism"
+                },
+                {
+                    "const": "lf:geomorphological-agent-VO",
+                    "description": "Volcanism"
+                }
+            ]
+        },
+        "GeomorphologyAgentPrecipitation": {
+            "$anchor": "geomorphology-agent-precipitation",
+            "@id": "lf:Geomorphology-agent-precipitation",
+            "title": "Geomorphological agents - precipitation - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-SH",
+                    "description": "Sheet flow, sheet wash, surface wash"
+                },
+                {
+                    "const": "lf:geomorphological-agent-SM",
+                    "description": "Soil moisture status changes"
+                },
+                {
+                    "const": "lf:geomorphological-agent-SO",
+                    "description": "Solution"
+                },
+                {
+                    "const": "lf:geomorphological-agent-WM",
+                    "description": "Water-aided mass movements"
+                }
+            ]
+        },
+        "GeomorphologyAgentStand": {
+            "$anchor": "geomorphology-agent-stand",
+            "@id": "lf:Geomorphology-agent-stand",
+            "title": "Geomorphological agents - standing water - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-EU",
+                    "description": "Eustasy"
+                },
+                {
+                    "const": "lf:geomorphological-agent-TI",
+                    "description": "Tides"
+                },
+                {
+                    "const": "lf:geomorphological-agent-WA",
+                    "description": "Waves"
+                }
+            ]
+        },
+        "GeomorphologyAgentStreamflow": {
+            "$anchor": "geomorphology-agent-streamflow",
+            "@id": "lf:Geomorphology-agent-streamflow",
+            "title": "Geomorphological agents - stream flow - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-CH",
+                    "description": "Channelled stream flow"
+                },
+                {
+                    "const": "lf:geomorphological-agent-OV",
+                    "description": "Overbank stream flow, unchannelled"
+                }
+            ]
+        },
+        "GeomorphologyAgentWind": {
+            "$anchor": "geomorphology-agent-wind",
+            "@id": "lf:Geomorphology-agent-wind",
+            "title": "Geomorphological agents - wind - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:geomorphological-agent-WI",
+                    "description": "Wind"
+                }
+            ]
+        },
         "HorizonSuffix": {
             "$anchor": "horizon-suffix",
             "@id": "sp:Horizon-suffix",
@@ -738,6 +1323,335 @@
                 }
             ]
         },
+        "LandformElementName": {
+            "$anchor": "landform-element-name",
+            "@id": "lf:Landform-element-name",
+            "title": "Glossary of landform elements",
+            "description": "The landform element glossary aims to provide an adequate, concise set of names for types of landform element.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:landform-element-ALC",
+                    "description": "Alcove"
+                },
+                {
+                    "const": "lf:landform-element-BAN",
+                    "description": "Bank (stream bank)"
+                },
+                {
+                    "const": "lf:landform-element-BAR",
+                    "description": "Bar (stream bar)"
+                },
+                {
+                    "const": "lf:landform-element-BEA",
+                    "description": "Beach"
+                },
+                {
+                    "const": "lf:landform-element-BEN",
+                    "description": "Bench"
+                },
+                {
+                    "const": "lf:landform-element-BER",
+                    "description": "Berm"
+                },
+                {
+                    "const": "lf:landform-element-BKP",
+                    "description": "Backplain"
+                },
+                {
+                    "const": "lf:landform-element-BOU",
+                    "description": "Blow-out"
+                },
+                {
+                    "const": "lf:landform-element-BRI",
+                    "description": "Beach ridge"
+                },
+                {
+                    "const": "lf:landform-element-BRK",
+                    "description": "Breakaway"
+                },
+                {
+                    "const": "lf:landform-element-CBE",
+                    "description": "Channel bench"
+                },
+                {
+                    "const": "lf:landform-element-CFS",
+                    "description": "Cliff-footslope"
+                },
+                {
+                    "const": "lf:landform-element-CIR",
+                    "description": "Cirque"
+                },
+                {
+                    "const": "lf:landform-element-CLI",
+                    "description": "Cliff"
+                },
+                {
+                    "const": "lf:landform-element-CON",
+                    "description": "Cone (volcanic)"
+                },
+                {
+                    "const": "lf:landform-element-COS",
+                    "description": "Cut-over surface"
+                },
+                {
+                    "const": "lf:landform-element-CRA",
+                    "description": "Crater"
+                },
+                {
+                    "const": "lf:landform-element-CUT",
+                    "description": "Cut face"
+                },
+                {
+                    "const": "lf:landform-element-DAM",
+                    "description": "Dam"
+                },
+                {
+                    "const": "lf:landform-element-DBA",
+                    "description": "Deflation basin"
+                },
+                {
+                    "const": "lf:landform-element-DDE",
+                    "description": "Drainage depression"
+                },
+                {
+                    "const": "lf:landform-element-DOC",
+                    "description": "Collapse doline"
+                },
+                {
+                    "const": "lf:landform-element-DOL",
+                    "description": "Solution doline"
+                },
+                {
+                    "const": "lf:landform-element-DUB",
+                    "description": "Barchan dune"
+                },
+                {
+                    "const": "lf:landform-element-DUC",
+                    "description": "Dunecrest"
+                },
+                {
+                    "const": "lf:landform-element-DUF",
+                    "description": "Linear or longitudinal (seif) dune"
+                },
+                {
+                    "const": "lf:landform-element-DUH",
+                    "description": "Hummocky (weakly oriented) dune"
+                },
+                {
+                    "const": "lf:landform-element-DUN",
+                    "description": "Dune"
+                },
+                {
+                    "const": "lf:landform-element-DUP",
+                    "description": "Parabolic dune"
+                },
+                {
+                    "const": "lf:landform-element-DUS",
+                    "description": "Duneslope"
+                },
+                {
+                    "const": "lf:landform-element-EMB",
+                    "description": "Embankment"
+                },
+                {
+                    "const": "lf:landform-element-EST",
+                    "description": "Estuary"
+                },
+                {
+                    "const": "lf:landform-element-FAN",
+                    "description": "Fan"
+                },
+                {
+                    "const": "lf:landform-element-FIL",
+                    "description": "Fill-top"
+                },
+                {
+                    "const": "lf:landform-element-FLD",
+                    "description": "Flood-out"
+                },
+                {
+                    "const": "lf:landform-element-FOO",
+                    "description": "Footslope"
+                },
+                {
+                    "const": "lf:landform-element-FOR",
+                    "description": "Foredune"
+                },
+                {
+                    "const": "lf:landform-element-GUL",
+                    "description": "Gully"
+                },
+                {
+                    "const": "lf:landform-element-HCR",
+                    "description": "Hillcrest"
+                },
+                {
+                    "const": "lf:landform-element-HSL",
+                    "description": "Hillslope"
+                },
+                {
+                    "const": "lf:landform-element-ITF",
+                    "description": "Intertidal flat"
+                },
+                {
+                    "const": "lf:landform-element-LAG",
+                    "description": "Lagoon"
+                },
+                {
+                    "const": "lf:landform-element-LAK",
+                    "description": "Lake"
+                },
+                {
+                    "const": "lf:landform-element-LDS",
+                    "description": "Landslide"
+                },
+                {
+                    "const": "lf:landform-element-LEV",
+                    "description": "Levee"
+                },
+                {
+                    "const": "lf:landform-element-LUN",
+                    "description": "Lunette"
+                },
+                {
+                    "const": "lf:landform-element-MAA",
+                    "description": "Maar"
+                },
+                {
+                    "const": "lf:landform-element-MOU",
+                    "description": "Mound"
+                },
+                {
+                    "const": "lf:landform-element-OXB",
+                    "description": "Ox-bow"
+                },
+                {
+                    "const": "lf:landform-element-PED",
+                    "description": "Pediment"
+                },
+                {
+                    "const": "lf:landform-element-PIT",
+                    "description": "Pit"
+                },
+                {
+                    "const": "lf:landform-element-PLA",
+                    "description": "Plain"
+                },
+                {
+                    "const": "lf:landform-element-PLY",
+                    "description": "Playa"
+                },
+                {
+                    "const": "lf:landform-element-PST",
+                    "description": "Prior stream"
+                },
+                {
+                    "const": "lf:landform-element-REC",
+                    "description": "Risecrest"
+                },
+                {
+                    "const": "lf:landform-element-REF",
+                    "description": "Reef flat"
+                },
+                {
+                    "const": "lf:landform-element-RER",
+                    "description": "Residual rise"
+                },
+                {
+                    "const": "lf:landform-element-RES",
+                    "description": "Riseslope"
+                },
+                {
+                    "const": "lf:landform-element-RFL",
+                    "description": "Rock flat"
+                },
+                {
+                    "const": "lf:landform-element-RPL",
+                    "description": "Rock platform"
+                },
+                {
+                    "const": "lf:landform-element-SCA",
+                    "description": "Scarp"
+                },
+                {
+                    "const": "lf:landform-element-SCD",
+                    "description": "Scald"
+                },
+                {
+                    "const": "lf:landform-element-SCR",
+                    "description": "Scroll"
+                },
+                {
+                    "const": "lf:landform-element-SFS",
+                    "description": "Scarp-footslope"
+                },
+                {
+                    "const": "lf:landform-element-SRP",
+                    "description": "Scroll plain"
+                },
+                {
+                    "const": "lf:landform-element-STB",
+                    "description": "Stream bed"
+                },
+                {
+                    "const": "lf:landform-element-STC",
+                    "description": "Stream channel"
+                },
+                {
+                    "const": "lf:landform-element-STF",
+                    "description": "Supratidal flat"
+                },
+                {
+                    "const": "lf:landform-element-SUS",
+                    "description": "Summit surface"
+                },
+                {
+                    "const": "lf:landform-element-SWL",
+                    "description": "Swale"
+                },
+                {
+                    "const": "lf:landform-element-SWP",
+                    "description": "Swamp"
+                },
+                {
+                    "const": "lf:landform-element-TAL",
+                    "description": "Talus"
+                },
+                {
+                    "const": "lf:landform-element-TDC",
+                    "description": "Tidal creek"
+                },
+                {
+                    "const": "lf:landform-element-TDF",
+                    "description": "Tidal flat"
+                },
+                {
+                    "const": "lf:landform-element-TEF",
+                    "description": "Terrace flat"
+                },
+                {
+                    "const": "lf:landform-element-TEP",
+                    "description": "Terrace plain"
+                },
+                {
+                    "const": "lf:landform-element-TOR",
+                    "description": "Tor"
+                },
+                {
+                    "const": "lf:landform-element-TRE",
+                    "description": "Trench"
+                },
+                {
+                    "const": "lf:landform-element-TUM",
+                    "description": "Tumulus"
+                },
+                {
+                    "const": "lf:landform-element-VLF",
+                    "description": "Valley flat"
+                }
+            ]
+        },
         "LandformElementType": {
             "$anchor": "landform-element-type",
             "@id": "lf:Landform-element-type",
@@ -840,6 +1754,272 @@
                 {
                     "const": "lf:morphological-type-V",
                     "description": "Open depression (vale)"
+                }
+            ]
+        },
+        "LandformPatternErosional": {
+            "$anchor": "landform-pattern-erosional",
+            "@id": "lf:Landform-pattern-erosional",
+            "title": "Simple erosional landform patterns - enumeration",
+            "description": "Simple erosional landform patterns are based on relief and modal slope.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:simple-erosional-landform-pattern-B",
+                    "description": "Badlands (simple erosional pattern)"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-GP",
+                    "description": "Gently undulating plain"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-GR",
+                    "description": "Gently undulating rises"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-LP",
+                    "description": "Level plain"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-PH",
+                    "description": "Precipitous hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-PM",
+                    "description": "Precipitous mountains"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-RH",
+                    "description": "Rolling hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-RL",
+                    "description": "Rolling low hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-RM",
+                    "description": "Rolling mountains"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-RP",
+                    "description": "Rolling plain"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-RR",
+                    "description": "Rolling rises"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-SH",
+                    "description": "Steep hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-SL",
+                    "description": "Steep low hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-SM",
+                    "description": "Steep mountains"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-SR",
+                    "description": "Steep rises"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-UH",
+                    "description": "Undulating hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-UL",
+                    "description": "Undulating low hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-UP",
+                    "description": "Undulating plain"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-UR",
+                    "description": "Undulating rises"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-VH",
+                    "description": "Very steep hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-VL",
+                    "description": "Very steep low hills"
+                },
+                {
+                    "const": "lf:simple-erosional-landform-pattern-VM",
+                    "description": "Very steep mountains"
+                }
+            ]
+        },
+        "LandformPatternName": {
+            "$anchor": "landform-pattern-name",
+            "@id": "lf:Landform-pattern-name",
+            "title": "Glossary of landform patterns",
+            "description": "The definitions in this glossary refer explicitly to the attributes of landform patterns that have been set down in the preceding sections.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:landform-pattern-ALF",
+                    "description": "Alluvial fan"
+                },
+                {
+                    "const": "lf:landform-pattern-ALP",
+                    "description": "Alluvial plain"
+                },
+                {
+                    "const": "lf:landform-pattern-ANA",
+                    "description": "Anastomotic plain"
+                },
+                {
+                    "const": "lf:landform-pattern-BAD",
+                    "description": "Badlands"
+                },
+                {
+                    "const": "lf:landform-pattern-BAR",
+                    "description": "Bar plain"
+                },
+                {
+                    "const": "lf:landform-pattern-BEA",
+                    "description": "Beach ridge plain"
+                },
+                {
+                    "const": "lf:landform-pattern-CAL",
+                    "description": "Caldera"
+                },
+                {
+                    "const": "lf:landform-pattern-CHE",
+                    "description": "Chenier plain"
+                },
+                {
+                    "const": "lf:landform-pattern-COR",
+                    "description": "Coral reef"
+                },
+                {
+                    "const": "lf:landform-pattern-COV",
+                    "description": "Covered plain"
+                },
+                {
+                    "const": "lf:landform-pattern-DEL",
+                    "description": "Delta"
+                },
+                {
+                    "const": "lf:landform-pattern-DUN",
+                    "description": "Dunefield"
+                },
+                {
+                    "const": "lf:landform-pattern-ESC",
+                    "description": "Escarpment"
+                },
+                {
+                    "const": "lf:landform-pattern-FLO",
+                    "description": "Food plain"
+                },
+                {
+                    "const": "lf:landform-pattern-HIL",
+                    "description": "Hills"
+                },
+                {
+                    "const": "lf:landform-pattern-KAR",
+                    "description": "Karst"
+                },
+                {
+                    "const": "lf:landform-pattern-LAC",
+                    "description": "Lacustrine plain"
+                },
+                {
+                    "const": "lf:landform-pattern-LAV",
+                    "description": "Lava plain"
+                },
+                {
+                    "const": "lf:landform-pattern-LON",
+                    "description": "Longitudinal dunefield"
+                },
+                {
+                    "const": "lf:landform-pattern-LOW",
+                    "description": "Low hills"
+                },
+                {
+                    "const": "lf:landform-pattern-MAD",
+                    "description": "Made land"
+                },
+                {
+                    "const": "lf:landform-pattern-MAR",
+                    "description": "Marine plain"
+                },
+                {
+                    "const": "lf:landform-pattern-MEA",
+                    "description": "Meander plain"
+                },
+                {
+                    "const": "lf:landform-pattern-MET",
+                    "description": "Meteor crater"
+                },
+                {
+                    "const": "lf:landform-pattern-MOU",
+                    "description": "Mountains"
+                },
+                {
+                    "const": "lf:landform-pattern-PAR",
+                    "description": "Parabolic dunefield"
+                },
+                {
+                    "const": "lf:landform-pattern-PED",
+                    "description": "Pediment (pattern)"
+                },
+                {
+                    "const": "lf:landform-pattern-PEP",
+                    "description": "Pediplain"
+                },
+                {
+                    "const": "lf:landform-pattern-PLA",
+                    "description": "Plain (pattern)"
+                },
+                {
+                    "const": "lf:landform-pattern-PLT",
+                    "description": "Plateau"
+                },
+                {
+                    "const": "lf:landform-pattern-PLY",
+                    "description": "Playa plain"
+                },
+                {
+                    "const": "lf:landform-pattern-PNP",
+                    "description": "Peneplain"
+                },
+                {
+                    "const": "lf:landform-pattern-RIS",
+                    "description": "Rises"
+                },
+                {
+                    "const": "lf:landform-pattern-SAN",
+                    "description": "Sand plain"
+                },
+                {
+                    "const": "lf:landform-pattern-SHF",
+                    "description": "Sheet-flood fan"
+                },
+                {
+                    "const": "lf:landform-pattern-STA",
+                    "description": "Stagnant alluvial plain"
+                },
+                {
+                    "const": "lf:landform-pattern-TEL",
+                    "description": "Terraced land (alluvial)"
+                },
+                {
+                    "const": "lf:landform-pattern-TER",
+                    "description": "Terrace (alluvial)"
+                },
+                {
+                    "const": "lf:landform-pattern-TID",
+                    "description": "Tidal flat (pattern)"
+                },
+                {
+                    "const": "lf:landform-pattern-VOL",
+                    "description": "Volcano"
                 }
             ]
         },
@@ -1263,6 +2443,175 @@
                 }
             ]
         },
+        "MicroreliefComponentBiotic": {
+            "$anchor": "microrelief-component-biotic",
+            "@id": "ls:Microrelief-component-biotic",
+            "title": "Component of biotic relief - enumeration",
+            "description": "The component of the biotic relief.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:biotic-microrelief-component-D",
+                    "description": "Depression"
+                },
+                {
+                    "const": "ls:biotic-microrelief-component-E",
+                    "description": "Elongate mound"
+                },
+                {
+                    "const": "ls:biotic-microrelief-component-H",
+                    "description": "Hole"
+                },
+                {
+                    "const": "ls:biotic-microrelief-component-L",
+                    "description": "Elongate depression"
+                },
+                {
+                    "const": "ls:biotic-microrelief-component-M",
+                    "description": "Mound"
+                },
+                {
+                    "const": "ls:biotic-microrelief-component-O",
+                    "description": "Other."
+                },
+                {
+                    "const": "ls:biotic-microrelief-component-T",
+                    "description": "Terrace"
+                }
+            ]
+        },
+        "MicroreliefComponentSampled": {
+            "$anchor": "microrelief-component-sampled",
+            "@id": "ls:Microrelief-component-sampled",
+            "title": "Component of microrelief sampled - enumeration",
+            "description": "Give the component of the microrelief in which the described soil profile is located.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:microrelief-component-D",
+                    "description": "Depression"
+                },
+                {
+                    "const": "ls:microrelief-component-E",
+                    "description": "Elongate mound"
+                },
+                {
+                    "const": "ls:microrelief-component-F",
+                    "description": "Flat"
+                },
+                {
+                    "const": "ls:microrelief-component-K",
+                    "description": "Hummock"
+                },
+                {
+                    "const": "ls:microrelief-component-L",
+                    "description": "Elongate depression"
+                },
+                {
+                    "const": "ls:microrelief-component-M",
+                    "description": "Mound"
+                },
+                {
+                    "const": "ls:microrelief-component-S",
+                    "description": "Shelf"
+                }
+            ]
+        },
+        "MicroreliefTypeGilgai": {
+            "$anchor": "microrelief-type-gilgai",
+            "@id": "ls:Microrelief-type-gilgai",
+            "title": "Type of gilgai microrelief - enumeration",
+            "description": "Gilgai is surface microrelief associated with soils containing shrink\u2013swell clays. It does not include microrelief that apparently results from repeated freezing and thawing, solifluxion or faunal activity. Gilgai consist of mounds and depressions showing varying degrees of order, sometimes separated by a subplanar or slightly undulating surface.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:microrelief-A",
+                    "description": "Lattice gilgai"
+                },
+                {
+                    "const": "ls:microrelief-C",
+                    "description": "Crabhole gilgai"
+                },
+                {
+                    "const": "ls:microrelief-G",
+                    "description": "Contour gilgai"
+                },
+                {
+                    "const": "ls:microrelief-L",
+                    "description": "Linear gilgai"
+                },
+                {
+                    "const": "ls:microrelief-M",
+                    "description": "Melonhole gilgai"
+                },
+                {
+                    "const": "ls:microrelief-N",
+                    "description": "Normal gilgai"
+                }
+            ]
+        },
+        "MicroreliefTypeHummocky": {
+            "$anchor": "microrelief-type-hummocky",
+            "@id": "ls:Microrelief-type-hummocky",
+            "title": "Type of hummocky microrelief - enumeration",
+            "description": "Hummocky microrelief is not thought to be associated with the shrink\u2013swell process involved in gilgai microrelief.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:microrelief-D",
+                    "description": "Debil-debil"
+                },
+                {
+                    "const": "ls:microrelief-W",
+                    "description": "Swamp hummock"
+                }
+            ]
+        },
+        "MicroreliefTypeOther": {
+            "$anchor": "microrelief-type-other",
+            "@id": "ls:Microrelief-type-other",
+            "title": "Type of other microrelief - enumeration",
+            "description": "Type of other microrelief - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:microrelief-H",
+                    "description": "Spring hollow"
+                },
+                {
+                    "const": "ls:microrelief-I",
+                    "description": "Sinkhole"
+                },
+                {
+                    "const": "ls:microrelief-K",
+                    "description": "Karst microrelief"
+                },
+                {
+                    "const": "ls:microrelief-O",
+                    "description": "Other microrelief"
+                },
+                {
+                    "const": "ls:microrelief-P",
+                    "description": "Spring mound"
+                },
+                {
+                    "const": "ls:microrelief-R",
+                    "description": "Terracettes"
+                },
+                {
+                    "const": "ls:microrelief-S",
+                    "description": "Mass movement microrelief"
+                },
+                {
+                    "const": "ls:microrelief-T",
+                    "description": "Contour trench"
+                },
+                {
+                    "const": "ls:microrelief-U",
+                    "description": "Mound/depression microrelief"
+                }
+            ]
+        },
         "MottleAbundance": {
             "$anchor": "mottle-abundance",
             "@id": "sp:Mottle-abundance",
@@ -1292,6 +2641,93 @@
                 }
             ]
         },
+        "MottleColour": {
+            "$anchor": "mottle-colour",
+            "@id": "sp:Mottle-colour",
+            "title": "Mottle colour - enumeration",
+            "description": "This should be described in terms of Munsell or Revised Standard Soil colours, but abbreviated forms can be used",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:mottle-colour-B",
+                    "description": "Brown"
+                },
+                {
+                    "const": "sp:mottle-colour-D",
+                    "description": "Dark"
+                },
+                {
+                    "const": "sp:mottle-colour-G",
+                    "description": "Grey"
+                },
+                {
+                    "const": "sp:mottle-colour-L",
+                    "description": "Gley"
+                },
+                {
+                    "const": "sp:mottle-colour-O",
+                    "description": "Orange"
+                },
+                {
+                    "const": "sp:mottle-colour-P",
+                    "description": "Pale"
+                },
+                {
+                    "const": "sp:mottle-colour-R",
+                    "description": "Red"
+                },
+                {
+                    "const": "sp:mottle-colour-Y",
+                    "description": "Yellow"
+                }
+            ]
+        },
+        "MottleContrast": {
+            "$anchor": "mottle-contrast",
+            "@id": "sp:Mottle-contrast",
+            "title": "Mottle contrast - enumeration",
+            "description": "Mottle contrast",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:mottle-contrast-D",
+                    "description": "Distinct (mottle contrast)"
+                },
+                {
+                    "const": "sp:mottle-contrast-F",
+                    "description": "Faint (mottle contrast)"
+                },
+                {
+                    "const": "sp:mottle-contrast-P",
+                    "description": "Prominent (mottle contrast)"
+                }
+            ]
+        },
+        "MottleType": {
+            "$anchor": "mottle-type",
+            "@id": "sp:Mottle-type",
+            "title": "Mottle or colour pattern type - enumeration",
+            "description": "The type of mottle can suggest the origin of the mottles.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:mottle-type-M",
+                    "description": "Mottles"
+                },
+                {
+                    "const": "sp:mottle-type-X",
+                    "description": "Mottle type X"
+                },
+                {
+                    "const": "sp:mottle-type-Y",
+                    "description": "Mottle type Y"
+                },
+                {
+                    "const": "sp:mottle-type-Z",
+                    "description": "Mottle type Z"
+                }
+            ]
+        },
         "PansCementation": {
             "$anchor": "pans-cementation",
             "@id": "sp:Pans-cementation",
@@ -1318,6 +2754,96 @@
                 {
                     "const": "sp:pans-cementation-4",
                     "description": "Very strongly cemented"
+                }
+            ]
+        },
+        "PansContinuity": {
+            "$anchor": "pans-continuity",
+            "@id": "sp:Pans-continuity",
+            "title": "Continuity of pan - enumeration",
+            "description": "Continuity of pan",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:pans-continuity-B",
+                    "description": "Broken (pans continuity)"
+                },
+                {
+                    "const": "sp:pans-continuity-C",
+                    "description": "Continuous (pans continuity)"
+                },
+                {
+                    "const": "sp:pans-continuity-D",
+                    "description": "Discontinuous (pans continuity)"
+                }
+            ]
+        },
+        "PansType": {
+            "$anchor": "pans-type",
+            "@id": "sp:Pans-type",
+            "title": "Type of pan - enumeration",
+            "description": "Type of pan",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:pans-type-A",
+                    "description": "Alcrete (pans type)"
+                },
+                {
+                    "const": "sp:pans-type-C",
+                    "description": "Organic pan"
+                },
+                {
+                    "const": "sp:pans-type-D",
+                    "description": "Duripan"
+                },
+                {
+                    "const": "sp:pans-type-E",
+                    "description": "Ferricrete (pans type)"
+                },
+                {
+                    "const": "sp:pans-type-F",
+                    "description": "Fragipan"
+                },
+                {
+                    "const": "sp:pans-type-I",
+                    "description": "Thin ironpan"
+                },
+                {
+                    "const": "sp:pans-type-K",
+                    "description": "Calcrete (pans type)"
+                },
+                {
+                    "const": "sp:pans-type-L",
+                    "description": "Silcrete (pans type)"
+                },
+                {
+                    "const": "sp:pans-type-M",
+                    "description": "Manganiferous pan"
+                },
+                {
+                    "const": "sp:pans-type-N",
+                    "description": "Densipan"
+                },
+                {
+                    "const": "sp:pans-type-O",
+                    "description": "Other pans"
+                },
+                {
+                    "const": "sp:pans-type-R",
+                    "description": "Red-brown hardpan (pans type)"
+                },
+                {
+                    "const": "sp:pans-type-T",
+                    "description": "Ortstein"
+                },
+                {
+                    "const": "sp:pans-type-V",
+                    "description": "Cultivation pan"
+                },
+                {
+                    "const": "sp:pans-type-Z",
+                    "description": "Zero or no pan"
                 }
             ]
         },
@@ -1398,6 +2924,51 @@
                 }
             ]
         },
+        "PedalityType": {
+            "$anchor": "pedality-type",
+            "@id": "sp:Pedality-type",
+            "title": "Type of pedality",
+            "description": "The types of structure are illustrated in diagrammatic form. See figure 17.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:structure-pedality-type-AB",
+                    "description": "Angular blocky"
+                },
+                {
+                    "const": "sp:structure-pedality-type-CA",
+                    "description": "Cast"
+                },
+                {
+                    "const": "sp:structure-pedality-type-CO",
+                    "description": "Columnar"
+                },
+                {
+                    "const": "sp:structure-pedality-type-GR",
+                    "description": "Granular"
+                },
+                {
+                    "const": "sp:structure-pedality-type-LE",
+                    "description": "Lenticular"
+                },
+                {
+                    "const": "sp:structure-pedality-type-PL",
+                    "description": "Platy (structure pedality)"
+                },
+                {
+                    "const": "sp:structure-pedality-type-PO",
+                    "description": "Polyhedral"
+                },
+                {
+                    "const": "sp:structure-pedality-type-PR",
+                    "description": "Prismatic"
+                },
+                {
+                    "const": "sp:structure-pedality-type-SB",
+                    "description": "Subangular blocky"
+                }
+            ]
+        },
         "PoreAbundance": {
             "$anchor": "pore-abundance",
             "@id": [
@@ -1440,7 +3011,28 @@
         },
         "ProfileConstruction": {
             "$anchor": "profile-construction",
-            "@id": "sp:Profile-construction"
+            "@id": "sp:Profile-construction",
+            "title": "Type of soil observation - enumeration",
+            "description": "The soil profile may be described using several types of observation.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:observation-type-A",
+                    "description": "Auger boring"
+                },
+                {
+                    "const": "sp:observation-type-C",
+                    "description": "Relatively undisturbed soil core"
+                },
+                {
+                    "const": "sp:observation-type-E",
+                    "description": "Existing vertical exposure"
+                },
+                {
+                    "const": "sp:observation-type-P",
+                    "description": "Soil pit"
+                }
+            ]
         },
         "RockOutcropAbundance": {
             "$anchor": "rock-outcrop-abundance",
@@ -1501,6 +3093,35 @@
                 {
                     "const": "lf:relief-class-R",
                     "description": "Very low"
+                }
+            ]
+        },
+        "RockAlteration": {
+            "$anchor": "rock-alteration",
+            "@id": "subst:Rock-alteration",
+            "title": "Alteration - enumeration",
+            "description": "Substrate materials may be so extensively altered (as in deep weathering profiles) that it may be difficult or impossible to determine their original nature. Certain constituents may be either depleted or enriched. Thus, in many laterite profiles, some horizons are ferruginised, partially ferruginised and partially kaolinised, and the pallid zone kaolinised. Silicification may also be associated with deep weathering profiles although not exclusively so; for instance, some limestones may be variably silicified. In contrast, calcification, which is widespread in parts of southern Australia, is not usually associated with deep weathering.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:alteration-F",
+                    "description": "Ferruginised"
+                },
+                {
+                    "const": "subst:alteration-K",
+                    "description": "Calcified"
+                },
+                {
+                    "const": "subst:alteration-L",
+                    "description": "Kaolinised"
+                },
+                {
+                    "const": "subst:alteration-O",
+                    "description": "Other"
+                },
+                {
+                    "const": "subst:alteration-S",
+                    "description": "Silicified"
                 }
             ]
         },
