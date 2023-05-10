@@ -184,6 +184,112 @@
                 }
             ]
         },
+        "ASC_ClassifierCode": {
+            "$anchor": "classifier-code",
+            "@id": "asc:Classifier-code",
+            "title": "ASC Classifier - code",
+            "description": "Australian Soil Classification Classifier - code.",
+            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
+            "type": "string"
+        },
+        "ASC_DepthCode": {
+            "$anchor": "depth-code",
+            "@id": "asc:Depth-code",
+            "title": "ASC Depth - code",
+            "description": "Australian Soil Classification Depth - code.",
+            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
+            "type": "string"
+        },
+        "ASC_GravelCode": {
+            "$anchor": "gravel-code",
+            "@id": "asc:Gravel-code",
+            "title": "ASC Gravel - code",
+            "description": "Australian Soil Classification Gravel - code.",
+            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
+            "type": "string"
+        },
+        "ASC_OrderCode": {
+            "$anchor": "order-code",
+            "@id": "asc:Order-code",
+            "title": "ASC Order - code",
+            "description": "Australian Soil Classification Order - code.",
+            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
+            "type": "string"
+        },
+        "ASC_TextureCode": {
+            "$anchor": "texture-code",
+            "@id": "asc:Texture-code",
+            "title": "ASC Texture - code",
+            "description": "Australian Soil Classification Texture - code.",
+            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
+            "type": "string"
+        },
+        "ASC_ThicknessCode": {
+            "$anchor": "thickness-code",
+            "@id": "asc:Thickness-code",
+            "title": "ASC Thickness - code",
+            "description": "Australian Soil Classification Thickness - code.",
+            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
+            "type": "string"
+        },
+        "BoundaryDistinctness": {
+            "$anchor": "boundary-distinctness",
+            "@id": "sp:Boundary-distinctness",
+            "title": "Boundary distinctness - enumeration",
+            "description": "Distinctness of the boundaries between horizons",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:horizon-boundary-distinctness-A",
+                    "description": "Abrupt"
+                },
+                {
+                    "const": "sp:horizon-boundary-distinctness-C",
+                    "description": "Clear (horizon boundary distinctness)"
+                },
+                {
+                    "const": "sp:horizon-boundary-distinctness-D",
+                    "description": "Diffuse (horizon boundary distinctness)"
+                },
+                {
+                    "const": "sp:horizon-boundary-distinctness-G",
+                    "description": "Gradual (horizon boundary distinctness)"
+                },
+                {
+                    "const": "sp:horizon-boundary-distinctness-S",
+                    "description": "Sharp (horizon boundary distinctness)"
+                }
+            ]
+        },
+        "BoundaryShape": {
+            "$anchor": "boundary-shape",
+            "@id": "sp:Boundary-shape",
+            "title": "Boundary shape - enumeration",
+            "description": "Shape of boundary between horizons",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:horizon-boundary-shape-B",
+                    "description": "Broken (horizon boundary shape)"
+                },
+                {
+                    "const": "sp:horizon-boundary-shape-I",
+                    "description": "Irregular"
+                },
+                {
+                    "const": "sp:horizon-boundary-shape-S",
+                    "description": "Smooth"
+                },
+                {
+                    "const": "sp:horizon-boundary-shape-T",
+                    "description": "Tongued"
+                },
+                {
+                    "const": "sp:horizon-boundary-shape-W",
+                    "description": "Wavy"
+                }
+            ]
+        },
         "CarbonateEffervescence": {
             "$anchor": "carbonate-effervescence",
             "@id": "sp:Carbonate-effervescence",
@@ -213,6 +319,31 @@
                 }
             ]
         },
+        "ChannelDepthWidth": {
+            "$anchor": "channel-depth-width",
+            "@id": "lf:Channel-depth-width",
+            "title": "Stream channel depth relative to width - enumeration",
+            "description": "Channel depth and width refer to the dimensions of a landform that is dominated by channelled stream flow. The limit of channelled stream flow dominance must be identified before width or depth can be estimated. Depth is taken from the top of the stream bank down to the average height of the line following the deepest part of the channel.\r\nThe distinction between stream bank and hillslope or scarp according to dominant process requires particular care where streams are incised, especially if they are cut into terraces that could be mistaken for flood plains.\r\n \r\nFor detailed studies, keep records of width and depth measurements. In other surveys, use the following classes of relative depth.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:stream-channel-relative-depth-width-D",
+                    "description": "Deep"
+                },
+                {
+                    "const": "lf:stream-channel-relative-depth-width-M",
+                    "description": "Moderately deep"
+                },
+                {
+                    "const": "lf:stream-channel-relative-depth-width-S",
+                    "description": "Shallow"
+                },
+                {
+                    "const": "lf:stream-channel-relative-depth-width-V",
+                    "description": "Very shallow"
+                }
+            ]
+        },
         "ChannelDevelopment": {
             "$anchor": "channel-development",
             "@id": "lf:Channel-development",
@@ -238,6 +369,85 @@
                 }
             ]
         },
+        "ChannelDirectionality": {
+            "$anchor": "channel-directionality",
+            "@id": "lf:Channel-directionality",
+            "title": "Stream channel network directionality - enumeration",
+            "description": "This attribute combines two simpler attributes: the degree of lineation, that is, the degree to which the channels tend to align in an organised way; and the degree of convergence or divergence of channels in the downstream direction. The latter is distinct from tributary/distributary behaviour, which refers to the combining and splitting of stream channels, rather than their directionality.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:stream-channel-network-directionality-B",
+                    "description": "Bidirectional"
+                },
+                {
+                    "const": "lf:stream-channel-network-directionality-C",
+                    "description": "Convergent"
+                },
+                {
+                    "const": "lf:stream-channel-network-directionality-D",
+                    "description": "Divergent"
+                },
+                {
+                    "const": "lf:stream-channel-network-directionality-F",
+                    "description": "Centrifugal"
+                },
+                {
+                    "const": "lf:stream-channel-network-directionality-N",
+                    "description": "Non-directional"
+                },
+                {
+                    "const": "lf:stream-channel-network-directionality-P",
+                    "description": "Centripetal"
+                },
+                {
+                    "const": "lf:stream-channel-network-directionality-U",
+                    "description": "Unidirectional"
+                }
+            ]
+        },
+        "ChannelIntegration": {
+            "$anchor": "channel-integration",
+            "@id": "lf:Channel-integration",
+            "title": "Stream channel network integration - enumeration",
+            "description": "In an integrated channel network, one can traverse from any point on a stream channel to any other point on a stream channel without passing through any landform elements other than stream channels. The channel network may be interrupted at points where water loss into the ground or the atmosphere is sufficiently large, and in the extreme case, typical of karst terrain, the surface stream network is disintegrated. Classes of channel network integration are:",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:stream-channel-network-integration-D",
+                    "description": "Disintegrated"
+                },
+                {
+                    "const": "lf:stream-channel-network-integration-I",
+                    "description": "Integrated"
+                },
+                {
+                    "const": "lf:stream-channel-network-integration-P",
+                    "description": "Interrupted (partial integration)"
+                }
+            ]
+        },
+        "ChannelMigration": {
+            "$anchor": "channel-migration",
+            "@id": "lf:Channel-migration",
+            "title": "Stream channel migration - enumeration",
+            "description": "The presence of relict channel landforms or unvegetated, newly formed channel margins or immovable channel margins may permit an assessment of channel migration.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:stream-channel-migration-F",
+                    "description": "Fixed"
+                },
+                {
+                    "const": "lf:stream-channel-migration-R",
+                    "description": "Rapidly migrating"
+                },
+                {
+                    "const": "lf:stream-channel-migration-S",
+                    "description": "Slowly migrating"
+                }
+            ]
+        },
         "ChannelPattern": {
             "$anchor": "channel-pattern",
             "@id": "lf:Channel-pattern",
@@ -260,6 +470,47 @@
                 {
                     "const": "lf:streamwise-channel-pattern-T",
                     "description": "Tributary"
+                }
+            ]
+        },
+        "ChannelSpacing": {
+            "$anchor": "channel-spacing",
+            "@id": "lf:Channel-spacing",
+            "title": "Stream channel spacing - enumeration",
+            "description": "The average spacing of stream channels, L/N, is determined by counting the number, N, of their intersections with an arbitrary line of length L.*\r\nA convenient tool for estimating channel spacing is a circle, with a circumference of 2 km at map or photo scale, drawn on transparent material.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:stream-channel-spacing-AB",
+                    "description": "Absent or very rare"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-CS",
+                    "description": "Closely spaced"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-MS",
+                    "description": "Moderately spaced"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-NU",
+                    "description": "Numerous"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-SP",
+                    "description": "Sparse"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-VC",
+                    "description": "Very closely spaced"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-VW",
+                    "description": "Very widely spaced"
+                },
+                {
+                    "const": "lf:stream-channel-spacing-WS",
+                    "description": "Widely spaced"
                 }
             ]
         },
@@ -297,6 +548,31 @@
                 {
                     "const": "ls:coarse-fragments-abundance-6",
                     "description": "Extremely or very abundant"
+                }
+            ]
+        },
+        "CoarseFragmentsDistribution": {
+            "$anchor": "coarse-fragments-distribution",
+            "@id": "sp:Coarse-fragments-distribution",
+            "title": "Distribution of coarse fragments - enumeration",
+            "description": "Coarse fragments may occur throughout the profile.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:coarse-fragments-distribution-D",
+                    "description": "Dispersed"
+                },
+                {
+                    "const": "sp:coarse-fragments-distribution-R",
+                    "description": "Reoriented"
+                },
+                {
+                    "const": "sp:coarse-fragments-distribution-S",
+                    "description": "Stratified"
+                },
+                {
+                    "const": "sp:coarse-fragments-distribution-U",
+                    "description": "Undisturbed"
                 }
             ]
         },
@@ -354,6 +630,43 @@
                 {
                     "const": "ls:coarse-fragments-shape-UT",
                     "description": "Subrounded tabular"
+                }
+            ]
+        },
+        "CoarseFragmentsSize": {
+            "$anchor": "coarse-fragments-size",
+            "@id": "ls:Coarse-fragments-size",
+            "title": "Size of coarse fragments -enumeration",
+            "description": "The scale adopted employs class boundaries at (2 \u00d7 10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:coarse-fragments-size-1",
+                    "description": "Fine gravelly or small pebbles"
+                },
+                {
+                    "const": "ls:coarse-fragments-size-2",
+                    "description": "Medium gravelly or medium pebbles"
+                },
+                {
+                    "const": "ls:coarse-fragments-size-3",
+                    "description": "Coarse gravelly or large pebbles"
+                },
+                {
+                    "const": "ls:coarse-fragments-size-4",
+                    "description": "Cobbly or cobbles"
+                },
+                {
+                    "const": "ls:coarse-fragments-size-5",
+                    "description": "Stony or stones"
+                },
+                {
+                    "const": "ls:coarse-fragments-size-6",
+                    "description": "Bouldery or boulders"
+                },
+                {
+                    "const": "ls:coarse-fragments-size-7",
+                    "description": "Large boulders"
                 }
             ]
         },
@@ -424,6 +737,101 @@
                 }
             ]
         },
+        "ConsistenceStickiness": {
+            "$anchor": "consistence-stickiness",
+            "@id": "sp:Consistence-stickiness",
+            "title": "Stickiness - enumeration",
+            "description": "Stickiness is determined on wet soil by pressing the wet sample between thumb and forefinger and then observing the adherence of the soil to the fingers.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:consistence-stickiness-0",
+                    "description": "Non-sticky"
+                },
+                {
+                    "const": "sp:consistence-stickiness-1",
+                    "description": "Slightly sticky"
+                },
+                {
+                    "const": "sp:consistence-stickiness-2",
+                    "description": "Moderately sticky"
+                },
+                {
+                    "const": "sp:consistence-stickiness-3",
+                    "description": "Very sticky"
+                }
+            ]
+        },
+        "ConsistenceStrength": {
+            "$anchor": "consistence-strength",
+            "@id": "sp:Consistence-strength",
+            "title": "Strength - enumeration",
+            "description": "Strength of soil is the resistance to breaking or deformation. Strength is determined by the force just sufficient to break or deform a 20 mm diameter piece of soil when a compressive shearing force is applied between thumb and forefinger. The 20 mm piece of soil may be a ped, part of a ped, a compound ped or a fragment.\r\n\r\nForces 0 to 5 are equivalent to the following dry consistence classes in the \u2018USDA Soil Survey Manual\u2019 (Soil Survey Staff 1951):\r\n0\tLoose\r\n1\tSoft\r\n2\tSlightly hard\r\n3\tHard\r\n4\tVery hard\r\n5\tExtremely hard",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:consistence-strength-0",
+                    "description": "Loose (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-1",
+                    "description": "Very weak (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-2",
+                    "description": "Weak (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-3",
+                    "description": "Firm (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-4",
+                    "description": "Very Firm (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-5",
+                    "description": "Strong (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-6",
+                    "description": "Very Strong (consistence strength)"
+                },
+                {
+                    "const": "sp:consistence-strength-7",
+                    "description": "Rigid (consistence strength)"
+                }
+            ]
+        },
+        "CracksWidth": {
+            "$anchor": "cracks-width",
+            "@id": "sp:Cracks-width",
+            "title": "Width of cracks",
+            "description": "Width of planar voids",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:voids-cracks-1",
+                    "description": "Fine (voids cracks)"
+                },
+                {
+                    "const": "sp:voids-cracks-2",
+                    "description": "Medium (voids cracks)"
+                },
+                {
+                    "const": "sp:voids-cracks-3",
+                    "description": "Coarse (voids cracks)"
+                },
+                {
+                    "const": "sp:voids-cracks-4",
+                    "description": "Very coarse (voids cracks)"
+                },
+                {
+                    "const": "sp:voids-cracks-5",
+                    "description": "Extremely coarse (voids cracks)"
+                }
+            ]
+        },
         "CutansAbundance": {
             "$anchor": "cutans-abundance",
             "@id": "sp:Cutans-abundance",
@@ -446,6 +854,27 @@
                 {
                     "const": "sp:cutans-abundance-3",
                     "description": "Many (cutans abundance)"
+                }
+            ]
+        },
+        "CutansDistinctness": {
+            "$anchor": "cutans-distinctness",
+            "@id": "sp:Cutans-distinctness",
+            "title": "Distinctness of cutans - enumeration",
+            "description": "This refers to the ease and certainty with which a cutan is identified. Distinctness relates to thickness and to the colour contrast with the adjacent material; it may change markedly with moisture content.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:cutans-distinctness-D",
+                    "description": "Distinct (cutans distinctness)"
+                },
+                {
+                    "const": "sp:cutans-distinctness-F",
+                    "description": "Faint (cutans distinctness)"
+                },
+                {
+                    "const": "sp:cutans-distinctness-P",
+                    "description": "Prominent (cutans distinctness)"
                 }
             ]
         },
@@ -528,6 +957,52 @@
                 {
                     "const": "ls:disturbance-of-site-8",
                     "description": "Highly disturbed"
+                }
+            ]
+        },
+        "ElevationEvaluationMeans": {
+            "$anchor": "elevation-evaluation-means",
+            "@id": "ls:Elevation-evaluation-means",
+            "title": "Means of evaluation of elevation - enumeration",
+            "description": "Means of evaluation of elevation",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:elevation-evaluation-means-A",
+                    "description": "Determined by altimeter"
+                },
+                {
+                    "const": "ls:elevation-evaluation-means-E",
+                    "description": "Estimate"
+                },
+                {
+                    "const": "ls:elevation-evaluation-means-L",
+                    "description": "Levelled from survey datum or estimated from contour plan"
+                },
+                {
+                    "const": "ls:elevation-evaluation-means-M",
+                    "description": "Interpolated from contour map"
+                }
+            ]
+        },
+        "ErosionDepthGully": {
+            "$anchor": "erosion-depth-gully",
+            "@id": "ls:Erosion-depth-gully",
+            "title": "Gully depth - enumeration",
+            "description": "This gives the maximum depth within the site.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-G-depth-1",
+                    "description": "Gully depth <1.5 m"
+                },
+                {
+                    "const": "ls:erosion-G-depth-2",
+                    "description": "Gully depth 1.5-3.0 m"
+                },
+                {
+                    "const": "ls:erosion-G-depth-3",
+                    "description": "Gully depth >3 m"
                 }
             ]
         },
@@ -792,6 +1267,27 @@
                 }
             ]
         },
+        "ErosionState": {
+            "$anchor": "erosion-state",
+            "@id": "ls:Erosion-state",
+            "title": "State of erosion - enumeration",
+            "description": "State of erosion",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:erosion-state-A",
+                    "description": "Active"
+                },
+                {
+                    "const": "ls:erosion-state-P",
+                    "description": "Partly stabilised"
+                },
+                {
+                    "const": "ls:erosion-state-S",
+                    "description": "Stabilised"
+                }
+            ]
+        },
         "ErosionType": {
             "$anchor": "erosion-type",
             "@id": "ls:Erosion-type",
@@ -862,104 +1358,27 @@
                 }
             ]
         },
-        "FieldTexture_Combined": {
-            "$anchor": "field-texture-combined",
-            "@id": [
-                "sp:Field-texture-mineral",
-                "sp:Field-texture-organic"
-            ],
-            "title": "Mineral and organic soils field texture grade",
-            "description": "Merger of Mineral soils field texture grade and Organic soils field texture",
-            "$comment": "WARNING - TERRIBLE HACK: mineral and organic textures are merged into one vocabulary ... for now.",
+        "FieldTexture": {
+            "$anchor": "field-texture",
+            "@id": "subst:Field-texture",
+            "title": "Texture - enumeration",
             "type": "string",
             "oneOf": [
                 {
-                    "const": "sp:field-texture-CL",
-                    "description": "(mineral) Clay loam"
+                    "const": "subst:texture-A",
+                    "description": "Amorphous"
                 },
                 {
-                    "const": "sp:field-texture-CLS",
-                    "description": "(mineral) Clay loam, sandy"
+                    "const": "subst:texture-F",
+                    "description": "Fragmental"
                 },
                 {
-                    "const": "sp:field-texture-CS",
-                    "description": "(mineral) Clayey sand"
+                    "const": "subst:texture-P",
+                    "description": "Porphyritic"
                 },
                 {
-                    "const": "sp:field-texture-HC",
-                    "description": "(mineral) Heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-L",
-                    "description": "(mineral) Loam"
-                },
-                {
-                    "const": "sp:field-texture-LC",
-                    "description": "(mineral) Light clay"
-                },
-                {
-                    "const": "sp:field-texture-LMC",
-                    "description": "(mineral) Light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-LS",
-                    "description": "(mineral) Loamy sand"
-                },
-                {
-                    "const": "sp:field-texture-MC",
-                    "description": "(mineral) Medium clay"
-                },
-                {
-                    "const": "sp:field-texture-MHC",
-                    "description": "(mineral) Medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-S",
-                    "description": "(mineral) Sand (field texture)"
-                },
-                {
-                    "const": "sp:field-texture-SCL",
-                    "description": "(mineral) Sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-SL",
-                    "description": "(mineral) Sandy loam"
-                },
-                {
-                    "const": "sp:field-texture-ZCL",
-                    "description": "(mineral) Silty clay loam"
-                },
-                {
-                    "const": "sp:field-texture-ZL",
-                    "description": "(mineral) Silty loam"
-                },
-                {
-                    "const": "sp:field-texture-AP",
-                    "description": "(organic) Sapric peat"
-                },
-                {
-                    "const": "sp:field-texture-CP",
-                    "description": "(organic) Clayey peat"
-                },
-                {
-                    "const": "sp:field-texture-GP",
-                    "description": "(organic) Granular peat"
-                },
-                {
-                    "const": "sp:field-texture-HP",
-                    "description": "(organic) Hemic peat"
-                },
-                {
-                    "const": "sp:field-texture-IP",
-                    "description": "(organic) Fibric peat"
-                },
-                {
-                    "const": "sp:field-texture-LP",
-                    "description": "(organic) Loamy peat"
-                },
-                {
-                    "const": "sp:field-texture-SP",
-                    "description": "(organic) Sandy peat"
+                    "const": "subst:texture-X",
+                    "description": "Crystalline (non-porphyritic)"
                 }
             ]
         },
@@ -1213,6 +1632,113 @@
                 }
             ]
         },
+        "GeomorphologyMode": {
+            "$anchor": "geomorphology-mode",
+            "@id": "lf:Geomorphology-mode",
+            "title": "Mode of geomorphological activity - enumeration",
+            "description": "Various modes of geomorphological activity may be distinguished (Figure 3).",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:mode-of-geomorphological-activity-AG",
+                    "description": "Aggraded"
+                },
+                {
+                    "const": "lf:mode-of-geomorphological-activity-BU",
+                    "description": "Built up"
+                },
+                {
+                    "const": "lf:mode-of-geomorphological-activity-EA",
+                    "description": "Eroded or aggraded"
+                },
+                {
+                    "const": "lf:mode-of-geomorphological-activity-ER",
+                    "description": "Eroded"
+                },
+                {
+                    "const": "lf:mode-of-geomorphological-activity-EX",
+                    "description": "Excavated or dug out"
+                },
+                {
+                    "const": "lf:mode-of-geomorphological-activity-HU",
+                    "description": "Heaved up or elevated"
+                },
+                {
+                    "const": "lf:mode-of-geomorphological-activity-SU",
+                    "description": "Subsided or depressed"
+                }
+            ]
+        },
+        "GeomorphologyStatus": {
+            "$anchor": "geomorphology-status",
+            "@id": "lf:Geomorphology-status",
+            "title": "Status of geomorphological activity - enumeration",
+            "description": "Status of geomorphological activity",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:status-of-geomorphological-activity-B",
+                    "description": "Barely active"
+                },
+                {
+                    "const": "lf:status-of-geomorphological-activity-C",
+                    "description": "Continuously active"
+                },
+                {
+                    "const": "lf:status-of-geomorphological-activity-F",
+                    "description": "Frequently active"
+                },
+                {
+                    "const": "lf:status-of-geomorphological-activity-R",
+                    "description": "Relict"
+                },
+                {
+                    "const": "lf:status-of-geomorphological-activity-S",
+                    "description": "Seldom active"
+                },
+                {
+                    "const": "lf:status-of-geomorphological-activity-U",
+                    "description": "Unspecified"
+                }
+            ]
+        },
+        "HorizonCode": {
+            "$anchor": "horizon-code",
+            "@id": "sp:Horizon-code",
+            "title": "Type of soil horizon - enumeration",
+            "description": "A soil horizon is a layer of soil, approximately parallel to the land surface, with morphological properties different from layers below and/or above it. Tongues of material from one horizon may penetrate into adjacent horizons. Give horizon notation as described below.\r\n\r\nAs horizon notation is deduced from the profile description data (Northcote 1979) and in some instances laboratory data, record it after the profile is described. Horizons may be difficult to name, but should be named in the field. Opinions formed at the time of description are useful for later reference.\r\n\r\nWith regard to horizon notation, the long-established usage in horizon designation is adopted. Emphasis is on factual objective notation rather than assumed genesis, as genetic implications are often uncertain and difficult to establish. Thus the notation E indicating eluvial horizon (International Society of Soil Science 1967) has not been used, even though this has been adopted by a number of overseas organisations, for example Hodgson (1974), Soil Survey Staff (1990).",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:horizons-A",
+                    "description": "A horizons"
+                },
+                {
+                    "const": "sp:horizons-B",
+                    "description": "B horizons"
+                },
+                {
+                    "const": "sp:horizons-C",
+                    "description": "C horizons"
+                },
+                {
+                    "const": "sp:horizons-D",
+                    "description": "D horizons"
+                },
+                {
+                    "const": "sp:horizons-O",
+                    "description": "O horizons"
+                },
+                {
+                    "const": "sp:horizons-P",
+                    "description": "P horizons"
+                },
+                {
+                    "const": "sp:horizons-R",
+                    "description": "R horizons"
+                }
+            ]
+        },
         "HorizonSuffix": {
             "$anchor": "horizon-suffix",
             "@id": "sp:Horizon-suffix",
@@ -1298,6 +1824,35 @@
                 }
             ]
         },
+        "InundationDepth": {
+            "$anchor": "inundation-depth",
+            "@id": "ls:Inundation-depth",
+            "title": "Depth of inundation (annual) - enumeration",
+            "description": "Give likely maximum depth of water in an inundation event (mm). ",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:inundation-depth-1",
+                    "description": "Inundation depth <50 mm"
+                },
+                {
+                    "const": "ls:inundation-depth-2",
+                    "description": "Inundation depth 50-100 mm"
+                },
+                {
+                    "const": "ls:inundation-depth-3",
+                    "description": "Inundation depth 100-300 mm"
+                },
+                {
+                    "const": "ls:inundation-depth-4",
+                    "description": "Inundation depth 300-1000 mm"
+                },
+                {
+                    "const": "ls:inundation-depth-5",
+                    "description": "Inundation depth >1000 mm"
+                }
+            ]
+        },
         "InundationDuration": {
             "$anchor": "inundation-duration",
             "@id": "ls:Inundation-duration",
@@ -1320,6 +1875,39 @@
                 {
                     "const": "ls:inundation-duration-4",
                     "description": "More than 120 days"
+                }
+            ]
+        },
+        "InundationFrequency": {
+            "$anchor": "inundation-frequency",
+            "@id": "ls:Inundation-frequency",
+            "title": "Frequency of inundation - enumeration",
+            "description": "Give long-term average of inundation. Among alluvial plains, flood plains typically fall in categories 4 and 3.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:inundation-frequency-0",
+                    "description": "No inundation"
+                },
+                {
+                    "const": "ls:inundation-frequency-1",
+                    "description": "Less than one occurrence per 100 years"
+                },
+                {
+                    "const": "ls:inundation-frequency-2",
+                    "description": "One occurrence in between 50 and 100 years"
+                },
+                {
+                    "const": "ls:inundation-frequency-3",
+                    "description": "One occurrence in between 10 and 50 years"
+                },
+                {
+                    "const": "ls:inundation-frequency-4",
+                    "description": "One occurrence in between 1 and 10 years"
+                },
+                {
+                    "const": "ls:inundation-frequency-5",
+                    "description": "More than one occurrence per year"
                 }
             ]
         },
@@ -2064,345 +2652,803 @@
                 }
             ]
         },
-        "Lithology_Rock": {
+        "LithologyRock": {
             "$anchor": "lithology-rock",
-            "@id": "ls:Lithology-rock",
-            "title": "Lithological type - rock - enumeration",
-            "description": "Lithological type of rock material and unconsolidated material",
-            "$comment": "Needs full lithology labels.",
+            "@id": "subst:Lithology-rock",
+            "title": "Lithological type- rock - enumeration",
+            "description": "Lithological type - rock.",
             "type": "string",
             "oneOf": [
                 {
                     "const": "subst:lithology-AC",
-                    "description": "AC"
+                    "description": "Alcrete"
                 },
                 {
                     "const": "subst:lithology-AD",
-                    "description": "AD"
+                    "description": "Adamellite"
                 },
                 {
                     "const": "subst:lithology-AF",
-                    "description": "AF"
+                    "description": "Volcanic ash (fine)"
                 },
                 {
                     "const": "subst:lithology-AG",
-                    "description": "AG"
+                    "description": "Agglomerate"
                 },
                 {
                     "const": "subst:lithology-AH",
-                    "description": "AH"
+                    "description": "Anhydrite"
                 },
                 {
                     "const": "subst:lithology-AM",
-                    "description": "AM"
+                    "description": "Amphibolite"
                 },
                 {
                     "const": "subst:lithology-AN",
-                    "description": "AN"
+                    "description": "Andesite"
                 },
                 {
                     "const": "subst:lithology-AP",
-                    "description": "AP"
+                    "description": "Aplite"
                 },
                 {
                     "const": "subst:lithology-AR",
-                    "description": "AR"
+                    "description": "Arkose"
                 },
                 {
                     "const": "subst:lithology-AS",
-                    "description": "AS"
+                    "description": "Volcanic ash (sandy)"
                 },
                 {
                     "const": "subst:lithology-BA",
-                    "description": "BA"
+                    "description": "Basalt"
                 },
                 {
                     "const": "subst:lithology-BB",
-                    "description": "BB"
+                    "description": "Bombs (or blocks)"
                 },
                 {
                     "const": "subst:lithology-BR",
-                    "description": "BR"
+                    "description": "Breccia"
                 },
                 {
                     "const": "subst:lithology-C",
-                    "description": "C"
+                    "description": "Clay"
                 },
                 {
                     "const": "subst:lithology-CG",
-                    "description": "CG"
+                    "description": "Conglomerate"
                 },
                 {
                     "const": "subst:lithology-CH",
-                    "description": "CH"
+                    "description": "Chert"
                 },
                 {
                     "const": "subst:lithology-CO",
-                    "description": "CO"
+                    "description": "Coal"
                 },
                 {
                     "const": "subst:lithology-CU",
-                    "description": "CU"
+                    "description": "Consolidated rock"
                 },
                 {
                     "const": "subst:lithology-DI",
-                    "description": "DI"
+                    "description": "Diorite"
                 },
                 {
                     "const": "subst:lithology-DM",
-                    "description": "DM"
+                    "description": "Dolomite"
                 },
                 {
                     "const": "subst:lithology-DR",
-                    "description": "DR"
+                    "description": "Dolerite"
                 },
                 {
                     "const": "subst:lithology-FC",
-                    "description": "FC"
+                    "description": "Ferricrete"
                 },
                 {
                     "const": "subst:lithology-GA",
-                    "description": "GA"
+                    "description": "Gabbro"
                 },
                 {
                     "const": "subst:lithology-GD",
-                    "description": "GD"
+                    "description": "Granodiorite"
                 },
                 {
                     "const": "subst:lithology-GE",
-                    "description": "GE"
+                    "description": "Greenstone"
                 },
                 {
                     "const": "subst:lithology-GN",
-                    "description": "GN"
+                    "description": "Granite"
                 },
                 {
                     "const": "subst:lithology-GR",
-                    "description": "GR"
+                    "description": "Granulite"
                 },
                 {
                     "const": "subst:lithology-GS",
-                    "description": "GS"
+                    "description": "Gneiss"
                 },
                 {
                     "const": "subst:lithology-GV",
-                    "description": "GV"
+                    "description": "Gravel"
                 },
                 {
                     "const": "subst:lithology-GW",
-                    "description": "GW"
+                    "description": "Graywacke"
                 },
                 {
                     "const": "subst:lithology-GY",
-                    "description": "GY"
+                    "description": "Gypsum"
                 },
                 {
                     "const": "subst:lithology-HA",
-                    "description": "HA"
+                    "description": "Halite"
                 },
                 {
                     "const": "subst:lithology-HO",
-                    "description": "HO"
+                    "description": "Hornfels"
                 },
                 {
                     "const": "subst:lithology-IG",
-                    "description": "IG"
+                    "description": "Igneous rock"
                 },
                 {
                     "const": "subst:lithology-JA",
-                    "description": "JA"
+                    "description": "Jasper"
                 },
                 {
                     "const": "subst:lithology-KA",
-                    "description": "KA"
+                    "description": "Calcarenite"
                 },
                 {
                     "const": "subst:lithology-KC",
-                    "description": "KC"
+                    "description": "Calcrete"
                 },
                 {
                     "const": "subst:lithology-KL",
-                    "description": "KL"
+                    "description": "Calcilutite"
                 },
                 {
                     "const": "subst:lithology-KM",
-                    "description": "KM"
+                    "description": "Calcareous mudstone"
                 },
                 {
                     "const": "subst:lithology-KR",
-                    "description": "KR"
+                    "description": "Calcirudite"
                 },
                 {
                     "const": "subst:lithology-KS",
-                    "description": "KS"
+                    "description": "Calcareous sand"
                 },
                 {
                     "const": "subst:lithology-LC",
-                    "description": "LC"
+                    "description": "Silcrete"
                 },
                 {
                     "const": "subst:lithology-LI",
-                    "description": "LI"
+                    "description": "Limestone"
                 },
                 {
                     "const": "subst:lithology-M",
-                    "description": "M"
+                    "description": "Same as substrate material"
                 },
                 {
                     "const": "subst:lithology-MB",
-                    "description": "MB"
+                    "description": "Marble"
                 },
                 {
                     "const": "subst:lithology-MD",
-                    "description": "MD"
+                    "description": "Microdiorite"
                 },
                 {
                     "const": "subst:lithology-ME",
-                    "description": "ME"
+                    "description": "Metamorphic rock"
                 },
                 {
                     "const": "subst:lithology-MG",
-                    "description": "MG"
+                    "description": "Microgranite"
                 },
                 {
                     "const": "subst:lithology-MI",
-                    "description": "MI"
+                    "description": "Migmatite"
                 },
                 {
                     "const": "subst:lithology-ML",
-                    "description": "ML"
+                    "description": "Marl"
                 },
                 {
                     "const": "subst:lithology-MS",
-                    "description": "MS"
+                    "description": "Microsyenite"
                 },
                 {
                     "const": "subst:lithology-MU",
-                    "description": "MU"
+                    "description": "Mudstone"
                 },
                 {
                     "const": "subst:lithology-MY",
-                    "description": "MY"
+                    "description": "Mylonite"
                 },
                 {
                     "const": "subst:lithology-PC",
-                    "description": "PC"
+                    "description": "Porcellanite"
                 },
                 {
                     "const": "subst:lithology-PE",
-                    "description": "PE"
+                    "description": "Peridotite"
                 },
                 {
                     "const": "subst:lithology-PG",
-                    "description": "PG"
+                    "description": "Pegmatite"
                 },
                 {
                     "const": "subst:lithology-PH",
-                    "description": "PH"
+                    "description": "Phyllite"
                 },
                 {
                     "const": "subst:lithology-PL",
-                    "description": "PL"
+                    "description": "Phonolite"
                 },
                 {
                     "const": "subst:lithology-PO",
-                    "description": "PO"
+                    "description": "Porphyry"
                 },
                 {
                     "const": "subst:lithology-PY",
-                    "description": "PY"
+                    "description": "Pyroxenite"
                 },
                 {
                     "const": "subst:lithology-QP",
-                    "description": "QP"
+                    "description": "Quartz porphyry"
                 },
                 {
                     "const": "subst:lithology-QS",
-                    "description": "QS"
+                    "description": "Quartz sandstone"
                 },
                 {
                     "const": "subst:lithology-QU",
-                    "description": "QU"
+                    "description": "Quartzite"
                 },
                 {
                     "const": "subst:lithology-QZ",
-                    "description": "QZ"
+                    "description": "Quartz"
                 },
                 {
                     "const": "subst:lithology-R",
-                    "description": "R"
+                    "description": "Same as rock outcrop"
                 },
                 {
                     "const": "subst:lithology-RB",
-                    "description": "RB"
+                    "description": "Red-brown hardpan"
                 },
                 {
                     "const": "subst:lithology-RH",
-                    "description": "RH"
+                    "description": "Rhyolite"
                 },
                 {
                     "const": "subst:lithology-S",
-                    "description": "S"
+                    "description": "Sand"
                 },
                 {
                     "const": "subst:lithology-SA",
-                    "description": "SA"
+                    "description": "Sandstone"
                 },
                 {
                     "const": "subst:lithology-SD",
-                    "description": "SD"
+                    "description": "Detrital sedimentary rock"
                 },
                 {
                     "const": "subst:lithology-SH",
-                    "description": "SH"
+                    "description": "Shale"
                 },
                 {
                     "const": "subst:lithology-SK",
-                    "description": "SK"
+                    "description": "Scoria"
                 },
                 {
                     "const": "subst:lithology-SL",
-                    "description": "SL"
+                    "description": "Slate"
                 },
                 {
                     "const": "subst:lithology-SR",
-                    "description": "SR"
+                    "description": "Serpentinite"
                 },
                 {
                     "const": "subst:lithology-ST",
-                    "description": "ST"
+                    "description": "Schist"
                 },
                 {
                     "const": "subst:lithology-SY",
-                    "description": "SY"
+                    "description": "Syenite"
                 },
                 {
                     "const": "subst:lithology-TR",
-                    "description": "TR"
+                    "description": "Trachyte"
                 },
                 {
                     "const": "subst:lithology-TU",
-                    "description": "TU"
+                    "description": "Tuff"
                 },
                 {
                     "const": "subst:lithology-UC",
-                    "description": "UC"
+                    "description": "Unconsolidated material"
                 },
                 {
                     "const": "subst:lithology-VB",
-                    "description": "VB"
+                    "description": "Volcanic breccia"
                 },
                 {
                     "const": "subst:lithology-VG",
-                    "description": "VG"
+                    "description": "Volcanic glass"
                 },
                 {
                     "const": "subst:lithology-Z",
-                    "description": "Z"
+                    "description": "Silt"
                 },
                 {
                     "const": "subst:lithology-ZS",
-                    "description": "ZS"
+                    "description": "Siltstone"
+                }
+            ]
+        },
+        "LithologyRockOutcrop": {
+            "$anchor": "lithology-rock-outcrop",
+            "@id": "ls:Lithology-rock-outcrop",
+            "title": "Lithology of rock outcrop - enumeration",
+            "description": "Where the lithology of the rock outcrop is different from that of the substrate material, record it as for lithology of substrate material. ",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AC",
+                    "description": "Alcrete"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AD",
+                    "description": "Adamellite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AF",
+                    "description": "Volcanic ash (fine)"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AG",
+                    "description": "Agglomerate"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AH",
+                    "description": "Anhydrite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AM",
+                    "description": "Amphibolite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AN",
+                    "description": "Andesite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AP",
+                    "description": "Aplite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AR",
+                    "description": "Arkose"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-AS",
+                    "description": "Volcanic ash (sandy)"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-BA",
+                    "description": "Basalt"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-BB",
+                    "description": "Bombs (or blocks)"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-BR",
+                    "description": "Breccia"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-C",
+                    "description": "Clay"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-CG",
+                    "description": "Conglomerate"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-CH",
+                    "description": "Chert"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-CO",
+                    "description": "Coal"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-CU",
+                    "description": "Consolidated rock"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-DI",
+                    "description": "Diorite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-DM",
+                    "description": "Dolomite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-DR",
+                    "description": "Dolerite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-FC",
+                    "description": "Ferricrete"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GA",
+                    "description": "Gabbro"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GD",
+                    "description": "Granodiorite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GE",
+                    "description": "Greenstone"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GN",
+                    "description": "Granite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GR",
+                    "description": "Granulite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GS",
+                    "description": "Gneiss"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GV",
+                    "description": "Gravel"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GW",
+                    "description": "Graywacke"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-GY",
+                    "description": "Gypsum"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-HA",
+                    "description": "Halite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-HO",
+                    "description": "Hornfels"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-IG",
+                    "description": "Igneous rock"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-JA",
+                    "description": "Jasper"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-KA",
+                    "description": "Calcarenite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-KC",
+                    "description": "Calcrete"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-KL",
+                    "description": "Calcilutite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-KM",
+                    "description": "Calcareous mudstone"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-KR",
+                    "description": "Calcirudite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-KS",
+                    "description": "Calcareous sand"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-LC",
+                    "description": "Silcrete"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-LI",
+                    "description": "Limestone"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-M",
+                    "description": "Same as substrate material"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MB",
+                    "description": "Marble"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MD",
+                    "description": "Microdiorite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-ME",
+                    "description": "Metamorphic rock"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MG",
+                    "description": "Microgranite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MI",
+                    "description": "Migmatite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-ML",
+                    "description": "Marl"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MS",
+                    "description": "Microsyenite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MU",
+                    "description": "Mudstone"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-MY",
+                    "description": "Mylonite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PC",
+                    "description": "Porcellanite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PE",
+                    "description": "Peridotite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PG",
+                    "description": "Pegmatite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PH",
+                    "description": "Phyllite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PL",
+                    "description": "Phonolite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PO",
+                    "description": "Porphyry"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-PY",
+                    "description": "Pyroxenite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-QP",
+                    "description": "Quartz porphyry"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-QS",
+                    "description": "Quartz sandstone"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-QU",
+                    "description": "Quartzite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-QZ",
+                    "description": "Quartz"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-R",
+                    "description": "Same as rock outcrop"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-RB",
+                    "description": "Red-brown hardpan"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-RH",
+                    "description": "Rhyolite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-S",
+                    "description": "Sand"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SA",
+                    "description": "Sandstone"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SD",
+                    "description": "Detrital sedimentary rock"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SH",
+                    "description": "Shale"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SK",
+                    "description": "Scoria"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SL",
+                    "description": "Slate"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SR",
+                    "description": "Serpentinite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-ST",
+                    "description": "Schist"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-SY",
+                    "description": "Syenite"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-TR",
+                    "description": "Trachyte"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-TU",
+                    "description": "Tuff"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-UC",
+                    "description": "Unconsolidated material"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-VB",
+                    "description": "Volcanic breccia"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-VG",
+                    "description": "Volcanic glass"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-Z",
+                    "description": "Silt"
+                },
+                {
+                    "const": "http://anzsoil.org/def/au/asls/substrate/lithology-ZS",
+                    "description": "Siltstone"
+                }
+            ]
+        },
+        "LithologyUnconsolidated": {
+            "$anchor": "lithology-unconsolidated",
+            "@id": "subst:Lithology-unconsolidated",
+            "title": "Lithological type- unconsolidated material - enumeration",
+            "description": "Lithological type - unconsoldiated material.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:lithology-AF",
+                    "description": "Volcanic ash (fine)"
+                },
+                {
+                    "const": "subst:lithology-AS",
+                    "description": "Volcanic ash (sandy)"
+                },
+                {
+                    "const": "subst:lithology-BB",
+                    "description": "Bombs (or blocks)"
+                },
+                {
+                    "const": "subst:lithology-BO",
+                    "description": "Boulders"
+                },
+                {
+                    "const": "subst:lithology-C",
+                    "description": "Clay"
+                },
+                {
+                    "const": "subst:lithology-CB",
+                    "description": "Cobbles"
+                },
+                {
+                    "const": "subst:lithology-GV",
+                    "description": "Gravel"
+                },
+                {
+                    "const": "subst:lithology-KS",
+                    "description": "Calcareous sand"
+                },
+                {
+                    "const": "subst:lithology-ML",
+                    "description": "Marl"
+                },
+                {
+                    "const": "subst:lithology-S",
+                    "description": "Sand"
+                },
+                {
+                    "const": "subst:lithology-SK",
+                    "description": "Scoria"
+                },
+                {
+                    "const": "subst:lithology-SN",
+                    "description": "Stones"
+                },
+                {
+                    "const": "subst:lithology-Z",
+                    "description": "Silt"
+                }
+            ]
+        },
+        "LocationInElement": {
+            "$anchor": "location-in-element",
+            "@id": "lf:Location-in-element",
+            "title": "Location within the landform element - enumeration",
+            "description": "A site chosen to represent a landform element will often be placed centrally within it. For various reasons, a site may not be centrally placed and this should be recorded. The vertical position of the site within the height of the landform element may be the best measure:",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:location-within-the-landform-element-B",
+                    "description": "Bottom"
+                },
+                {
+                    "const": "lf:location-within-the-landform-element-M",
+                    "description": "Middle"
+                },
+                {
+                    "const": "lf:location-within-the-landform-element-T",
+                    "description": "Top"
+                }
+            ]
+        },
+        "LocationInToposequence": {
+            "$anchor": "location-in-toposequence",
+            "@id": "lf:Location-in-toposequence",
+            "title": "Location within the landform toposequence - enumeration",
+            "description": "No vocabulary found.",
+            "type": "string"
+        },
+        "MaterialStrength": {
+            "$anchor": "material-strength",
+            "@id": "subst:Material-strength",
+            "title": "Strength of substrate material - enumeration",
+            "description": "The strength of a specimen of soil substrate material may be crudely estimated in the field by striking it with the head-end or the pick-end of a geological hammer or by trying to cut it with a knife, and then referring to Table 32 (ASLS Field Handbook). These estimates refer to the unconfined (or uniaxial) compressive strength. The strength is that of the intact material rather than that of the mass, the strength of which has generally been reduced by the development of fractures and other phenomena.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:material-strength-M",
+                    "description": "Moderately strong rock"
+                },
+                {
+                    "const": "subst:material-strength-S",
+                    "description": "Strong rock"
+                },
+                {
+                    "const": "subst:material-strength-VS",
+                    "description": "Very strong rock"
+                },
+                {
+                    "const": "subst:material-strength-VW",
+                    "description": "Very weak rock"
+                },
+                {
+                    "const": "subst:material-strength-W",
+                    "description": "Weak rock"
                 }
             ]
         },
@@ -2514,6 +3560,31 @@
                 {
                     "const": "ls:microrelief-component-S",
                     "description": "Shelf"
+                }
+            ]
+        },
+        "MicroreliefProportionsGilgai": {
+            "$anchor": "microrelief-proportions-gilgai",
+            "@id": "ls:Microrelief-proportions-gilgai",
+            "title": "Proportions of gilgai components - enumeration",
+            "description": "Give the proportions of gilgai components within the site, thus:",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:gilgai-microrelief-proportions-A",
+                    "description": "Equal mounds and depressions; no shelf present"
+                },
+                {
+                    "const": "ls:gilgai-microrelief-proportions-B",
+                    "description": "More mounds than depressions; no shelf present"
+                },
+                {
+                    "const": "ls:gilgai-microrelief-proportions-C",
+                    "description": "Fewer mounds than depressions; no shelf present"
+                },
+                {
+                    "const": "ls:gilgai-microrelief-proportions-D",
+                    "description": "Mound, shelf and depressions; shelf forms prominent part of gilgai"
                 }
             ]
         },
@@ -2700,6 +3771,52 @@
                 {
                     "const": "sp:mottle-contrast-P",
                     "description": "Prominent (mottle contrast)"
+                }
+            ]
+        },
+        "MottleDistinctness": {
+            "$anchor": "mottle-distinctness",
+            "@id": "sp:Mottle-distinctness",
+            "title": "Mottle distinctness of boundaries - enumeration",
+            "description": "Mottle distinctness of boundaries",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:mottle-boundary-C",
+                    "description": "Clear (mottle boundary)"
+                },
+                {
+                    "const": "sp:mottle-boundary-D",
+                    "description": "Diffuse (mottle boundary)"
+                },
+                {
+                    "const": "sp:mottle-boundary-S",
+                    "description": "Sharp (mottle boundary)"
+                }
+            ]
+        },
+        "MottleSize": {
+            "$anchor": "mottle-size",
+            "@id": "sp:Mottle-size",
+            "title": "Mottle size - enumeration",
+            "description": "Measure mottle size (mm) along the greatest dimension, except in streaks or linear forms where width is measured.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:mottle-size-1",
+                    "description": "Fine (mottle size)"
+                },
+                {
+                    "const": "sp:mottle-size-2",
+                    "description": "Medium (mottle size)"
+                },
+                {
+                    "const": "sp:mottle-size-3",
+                    "description": "Coarse (mottle size)"
+                },
+                {
+                    "const": "sp:mottle-size-4",
+                    "description": "Very coarse (mottle size)"
                 }
             ]
         },
@@ -3009,6 +4126,31 @@
                 }
             ]
         },
+        "PoreDiameter": {
+            "$anchor": "pore-diameter",
+            "@id": "sp:Pore-diameter",
+            "title": "Diameter of macropores",
+            "description": "Diameter of macropores Use Figure 18 as a guide to average diameter",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:voids-macropores-diameter-1",
+                    "description": "Very fine (voids macropores)"
+                },
+                {
+                    "const": "sp:voids-macropores-diameter-2",
+                    "description": "Fine (voids macropores)"
+                },
+                {
+                    "const": "sp:voids-macropores-diameter-3",
+                    "description": "Medium (voids macropores)"
+                },
+                {
+                    "const": "sp:voids-macropores-diameter-4",
+                    "description": "Coarse (voids macropores)"
+                }
+            ]
+        },
         "ProfileConstruction": {
             "$anchor": "profile-construction",
             "@id": "sp:Profile-construction",
@@ -3064,6 +4206,31 @@
                 {
                     "const": "ls:rock-outcrop-abundance-5",
                     "description": "Rockland"
+                }
+            ]
+        },
+        "RelativeInclination": {
+            "$anchor": "relative-inclination",
+            "@id": "lf:Relative-inclination",
+            "title": "Relative inclination of slope elements - enumeration",
+            "description": "Although lower slopes are often gentler than upper slopes, they need not be so (Figure 1i). A separate morphological attribute expresses the relative inclination of adjacent landform elements in a toposequence.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:relative-inclination-of-slope-elements-A",
+                    "description": "Maximal"
+                },
+                {
+                    "const": "lf:relative-inclination-of-slope-elements-I",
+                    "description": "Minimal"
+                },
+                {
+                    "const": "lf:relative-inclination-of-slope-elements-N",
+                    "description": "Waning"
+                },
+                {
+                    "const": "lf:relative-inclination-of-slope-elements-X",
+                    "description": "Waxing"
                 }
             ]
         },
@@ -3125,6 +4292,226 @@
                 }
             ]
         },
+        "RockGenesisHardenedArtificial": {
+            "$anchor": "rock-genesis-hardened-artificial",
+            "@id": "subst:Rock-genesis-hardened-artificial",
+            "title": "Artificially hardened materials - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:genesis-AT",
+                    "description": "Other artificially hardened materials"
+                },
+                {
+                    "const": "subst:genesis-CN",
+                    "description": "Concrete"
+                },
+                {
+                    "const": "subst:genesis-ST",
+                    "description": "Stabilised soil"
+                }
+            ]
+        },
+        "RockGenesisHardenedChemical": {
+            "$anchor": "rock-genesis-hardened-chemical",
+            "@id": "subst:Rock-genesis-hardened-chemical",
+            "title": "Chemically hardened materials - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:genesis-AC",
+                    "description": "Alcrete (bauxite)"
+                },
+                {
+                    "const": "subst:genesis-FC",
+                    "description": "Ferricrete"
+                },
+                {
+                    "const": "subst:genesis-KC",
+                    "description": "Calcrete"
+                },
+                {
+                    "const": "subst:genesis-LC",
+                    "description": "Silcrete"
+                },
+                {
+                    "const": "subst:genesis-PC",
+                    "description": "Porcellanite"
+                },
+                {
+                    "const": "subst:genesis-RB",
+                    "description": "Red-brown hardpan"
+                }
+            ]
+        },
+        "RockGenesisHardenedEvaporite": {
+            "$anchor": "rock-genesis-hardened-evaporite",
+            "@id": "subst:Rock-genesis-hardened-evaporite",
+            "title": "Evaporites - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:genesis-EV",
+                    "description": "Evaporite"
+                },
+                {
+                    "const": "subst:genesis-GY",
+                    "description": "Gypsum"
+                },
+                {
+                    "const": "subst:genesis-HA",
+                    "description": "Halite (rock salt)"
+                }
+            ]
+        },
+        "RockGenesisSediments": {
+            "$anchor": "rock-genesis-sediments",
+            "@id": "subst:Rock-genesis-sediments",
+            "title": "Sediments (unconsolidated) - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:genesis-AL",
+                    "description": "Alluvium"
+                },
+                {
+                    "const": "subst:genesis-BE",
+                    "description": "Beach sediment"
+                },
+                {
+                    "const": "subst:genesis-CD",
+                    "description": "Creep deposit"
+                },
+                {
+                    "const": "subst:genesis-CO",
+                    "description": "Colluvium"
+                },
+                {
+                    "const": "subst:genesis-ED",
+                    "description": "Eolian sediment"
+                },
+                {
+                    "const": "subst:genesis-ES",
+                    "description": "Eolian sand"
+                },
+                {
+                    "const": "subst:genesis-FI",
+                    "description": "Fill"
+                },
+                {
+                    "const": "subst:genesis-GY",
+                    "description": "Gypsum"
+                },
+                {
+                    "const": "subst:genesis-LA",
+                    "description": "Lacustrine sediment"
+                },
+                {
+                    "const": "subst:genesis-LD",
+                    "description": "Landslide deposit"
+                },
+                {
+                    "const": "subst:genesis-LO",
+                    "description": "Loess"
+                },
+                {
+                    "const": "subst:genesis-MA",
+                    "description": "Marine sediment"
+                },
+                {
+                    "const": "subst:genesis-MD",
+                    "description": "Mudflow deposit"
+                },
+                {
+                    "const": "subst:genesis-PA",
+                    "description": "Parna"
+                },
+                {
+                    "const": "subst:genesis-SE",
+                    "description": "Scree"
+                },
+                {
+                    "const": "subst:genesis-SH",
+                    "description": "Sheet flow deposit"
+                },
+                {
+                    "const": "subst:genesis-TI",
+                    "description": "Till"
+                },
+                {
+                    "const": "subst:genesis-VA",
+                    "description": "Volcanic ash"
+                }
+            ]
+        },
+        "RockGenesisUnweathered": {
+            "$anchor": "rock-genesis-unweathered",
+            "@id": "subst:Rock-genesis-unweathered",
+            "title": "Unweathered rocks of the bedrock zone - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:genesis-ET",
+                    "description": "Eolianite"
+                },
+                {
+                    "const": "subst:genesis-IG",
+                    "description": "Igneous rocks"
+                },
+                {
+                    "const": "subst:genesis-IN",
+                    "description": "Ignimbrite"
+                },
+                {
+                    "const": "subst:genesis-ME",
+                    "description": "Metamorphic rocks"
+                },
+                {
+                    "const": "subst:genesis-PL",
+                    "description": "Plutonic rocks"
+                },
+                {
+                    "const": "subst:genesis-SC",
+                    "description": "Chemical and organic sedimentary rocks"
+                },
+                {
+                    "const": "subst:genesis-SD",
+                    "description": "Detrital sedimentary rocks"
+                },
+                {
+                    "const": "subst:genesis-SP",
+                    "description": "Pyroclastic rocks"
+                },
+                {
+                    "const": "subst:genesis-SR",
+                    "description": "Sedimentary rocks"
+                },
+                {
+                    "const": "subst:genesis-VO",
+                    "description": "Volcanic rocks"
+                }
+            ]
+        },
+        "RockGenesisWeathered": {
+            "$anchor": "rock-genesis-weathered",
+            "@id": "subst:Rock-genesis-weathered",
+            "title": "Weathered rocks - enumeration",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:genesis-DR",
+                    "description": "Decomposed rock"
+                },
+                {
+                    "const": "subst:genesis-PW",
+                    "description": "Partially weathered rock"
+                },
+                {
+                    "const": "subst:genesis-SA",
+                    "description": "Saprolite"
+                }
+            ]
+        },
         "RootAbundance": {
             "$anchor": "root-abundance",
             "@id": "sp:Root-abundance",
@@ -3151,6 +4538,64 @@
                 {
                     "const": "sp:roots-abundance-4",
                     "description": "Abundant (roots abundance)"
+                }
+            ]
+        },
+        "RootSize": {
+            "$anchor": "root-size",
+            "@id": "sp:Root-size",
+            "title": "Root size - enumeration",
+            "description": "The size (diameter) of roots observed in the horizon in mm",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:roots-size-1",
+                    "description": "Very fine (roots size)"
+                },
+                {
+                    "const": "sp:roots-size-2",
+                    "description": "Fine (roots size)"
+                },
+                {
+                    "const": "sp:roots-size-3",
+                    "description": "Medium (roots size)"
+                },
+                {
+                    "const": "sp:roots-size-4",
+                    "description": "Coarse (roots size)"
+                }
+            ]
+        },
+        "Runoff": {
+            "$anchor": "runoff",
+            "@id": "ls:Runoff",
+            "title": "Runoff - enumeration",
+            "description": "Runoff is the relative rate at which water runs off the soil surface. It is largely determined by slope, surface cover and soil infiltration rate. ",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "ls:runoff-0",
+                    "description": "No runoff"
+                },
+                {
+                    "const": "ls:runoff-1",
+                    "description": "Very slow"
+                },
+                {
+                    "const": "ls:runoff-2",
+                    "description": "Slow"
+                },
+                {
+                    "const": "ls:runoff-3",
+                    "description": "Moderately rapid"
+                },
+                {
+                    "const": "ls:runoff-4",
+                    "description": "Rapid"
+                },
+                {
+                    "const": "ls:runoff-5",
+                    "description": "Very rapid"
                 }
             ]
         },
@@ -3184,6 +4629,274 @@
                 {
                     "const": "sp:segregations-abundance-5",
                     "description": "Very many (segregations abundance)"
+                }
+            ]
+        },
+        "SegregationsForm": {
+            "$anchor": "segregations-form",
+            "@id": "sp:Segregations-form",
+            "title": "Form of segregations - enumeration",
+            "description": "Form of segregations",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:segregations-form-C",
+                    "description": "Concretions"
+                },
+                {
+                    "const": "sp:segregations-form-F",
+                    "description": "Fragments"
+                },
+                {
+                    "const": "sp:segregations-form-L",
+                    "description": "Laminae"
+                },
+                {
+                    "const": "sp:segregations-form-N",
+                    "description": "Nodules (segregations)"
+                },
+                {
+                    "const": "sp:segregations-form-R",
+                    "description": "Root linings"
+                },
+                {
+                    "const": "sp:segregations-form-S",
+                    "description": "Soft segregations"
+                },
+                {
+                    "const": "sp:segregations-form-T",
+                    "description": "Tubules"
+                },
+                {
+                    "const": "sp:segregations-form-V",
+                    "description": "Veins"
+                },
+                {
+                    "const": "sp:segregations-form-X",
+                    "description": "Crystals"
+                }
+            ]
+        },
+        "SegregationsMagneticAttributes": {
+            "$anchor": "segregations-magnetic-attributes",
+            "@id": "sp:Segregations-magnetic-attributes",
+            "title": "Magnetic attributes of segregations - enumeration",
+            "description": "attraction to surface of hand-held magnet",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:segregations-magnetic-M",
+                    "description": "Magnetic"
+                },
+                {
+                    "const": "sp:segregations-magnetic-N",
+                    "description": "Non-magnetic"
+                }
+            ]
+        },
+        "SegregationsNature": {
+            "$anchor": "segregations-nature",
+            "@id": "sp:Segregations-nature",
+            "title": "Nature of segregations - enumeration",
+            "description": "Nature of segregations",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:segregations-nature-A",
+                    "description": "Aluminous"
+                },
+                {
+                    "const": "sp:segregations-nature-E",
+                    "description": "Earthy"
+                },
+                {
+                    "const": "sp:segregations-nature-F",
+                    "description": "Ferruginous"
+                },
+                {
+                    "const": "sp:segregations-nature-G",
+                    "description": "Ferruginous\u2013organic"
+                },
+                {
+                    "const": "sp:segregations-nature-H",
+                    "description": "Organic"
+                },
+                {
+                    "const": "sp:segregations-nature-K",
+                    "description": "Calcareous"
+                },
+                {
+                    "const": "sp:segregations-nature-L",
+                    "description": "Argillaceous"
+                },
+                {
+                    "const": "sp:segregations-nature-M",
+                    "description": "Manganiferous"
+                },
+                {
+                    "const": "sp:segregations-nature-N",
+                    "description": "Ferromanganiferous"
+                },
+                {
+                    "const": "sp:segregations-nature-O",
+                    "description": "Other (segregations nature)"
+                },
+                {
+                    "const": "sp:segregations-nature-S",
+                    "description": "Sulphurous"
+                },
+                {
+                    "const": "sp:segregations-nature-U",
+                    "description": "Unidentified"
+                },
+                {
+                    "const": "sp:segregations-nature-Y",
+                    "description": "Gypseous"
+                },
+                {
+                    "const": "sp:segregations-nature-Z",
+                    "description": "Saline (segregations nature)"
+                }
+            ]
+        },
+        "SegregationsSize": {
+            "$anchor": "segregations-size",
+            "@id": "sp:Segregations-size",
+            "title": "Size of segregations - enumeration",
+            "description": "Approximately equidimensional segregations (concretions, nodules) are measured in the greatest dimension. Segregations where one dimension is much greater than the other two (tubules, root linings, veins, laminae) are measured in the least dimension",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:segregations-size-1",
+                    "description": "Fine (segregations size)"
+                },
+                {
+                    "const": "sp:segregations-size-2",
+                    "description": "Medium (segregations size)"
+                },
+                {
+                    "const": "sp:segregations-size-3",
+                    "description": "Coarse (segregations size)"
+                },
+                {
+                    "const": "sp:segregations-size-4",
+                    "description": "Very coarse (segregations size)"
+                },
+                {
+                    "const": "sp:segregations-size-5",
+                    "description": "Extremely coarse (segregations size)"
+                }
+            ]
+        },
+        "SegregationsStrength": {
+            "$anchor": "segregations-strength",
+            "@id": "sp:Segregations-strength",
+            "title": "Strength of segregations - enumeration",
+            "description": "Strength may be recorded where appropriate",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:segregations-strength-1",
+                    "description": "Weak (segregations strength)"
+                },
+                {
+                    "const": "sp:segregations-strength-2",
+                    "description": "Strong (segregations strength)"
+                }
+            ]
+        },
+        "SlopeClass": {
+            "$anchor": "slope-class",
+            "@id": "lf:Slope-class",
+            "title": "Class of slope - enumeration",
+            "description": "Slope classes are defined in Table 2. The optional word \u2018inclined\u2019 is used to distinguish slope from other attributes, for example \u2018gently inclined footslope\u2019 from \u2018gently undulating rises\u2019, and \u2018moderately inclined hillslope\u2019 from \u2018moderately spaced streams\u2019.\r\nThe class boundaries given in Table 2, and repeated in Table 4, are simply boundaries separating slope terms in common use, adjusted to regular logarithmic intervals. They do not refer to observed natural clustering of slope values, since such clustering has not been shown to occur; nor do they relate precisely to boundary criteria for land use, which vary arbitrarily between organisations and which may change with advancing technology.\r\nIt may sometimes be advantageous to split each of the classes \u2018very gently inclined\u2019, \u2018gently inclined\u2019 and \u2018moderately inclined\u2019 into two levels, the appropriate boundary values being 1.8%, 5.6% and 18%.\r\nThere may also be compelling reasons for using other schemes of slope classes. However, schemes that do not have constant class widths from low to high slope values can lead to problems in subsequent statistical work.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:slope-class-CL",
+                    "description": "Cliffed"
+                },
+                {
+                    "const": "lf:slope-class-GE",
+                    "description": "Gently inclined"
+                },
+                {
+                    "const": "lf:slope-class-LE",
+                    "description": "level"
+                },
+                {
+                    "const": "lf:slope-class-MO",
+                    "description": "Moderately inclined"
+                },
+                {
+                    "const": "lf:slope-class-PR",
+                    "description": "Precipitous"
+                },
+                {
+                    "const": "lf:slope-class-ST",
+                    "description": "Steep"
+                },
+                {
+                    "const": "lf:slope-class-VG",
+                    "description": "Very gently inclined"
+                },
+                {
+                    "const": "lf:slope-class-VS",
+                    "description": "Very steep"
+                }
+            ]
+        },
+        "SlopeModal": {
+            "$anchor": "slope-modal",
+            "@id": "lf:Slope-modal",
+            "title": "Modal slope - enumeration",
+            "description": "Modal slope is defined as the most common class of slope occurring in a landform pattern. Where slope classes have been obtained by systematic sampling, define the classes using equal increments on a scale of the logarithm of the slope tangent, a procedure intended to normalise frequency distributions of observed slope (Speight 1971). Where the most common slope class is estimated by direct observation, it is thought that the estimate will compare with that calculated using the log-normal model.\r\nModal slope class determines the use of certain adjectives applied to landform patterns that are characterised by alternating crests and depressions. These are: rolling for moderate modal slopes (10\u201332%); undulating for gentle slopes (3\u201310%); and gently undulating for very gentle slopes (1\u20133%) (compare with Soil Survey Staff 1951, pages 161\u2013165). The other slope classes, precipitous, very steep, steep and level, are to be applied as they stand. The terminology for simple erosional landform patterns based on relief and modal slope is given in Table 5.\r\nTable 5 defines the category badlands by various combinations of high slope values and low relief values. These combinations imply extremely close spacing of streams or valleys. Specifically, if one assumes a sawtooth terrain profile, the valley spacing implied is less than 100 m in areas with 50 m relief and less than 30 m in areas with 5 m relief; these values appear to accord with usage.\r\nTable 7 lists types of landform pattern in order of their typical class of modal slope. This table should not be regarded as definitive, for slope within each type of landform pattern may vary widely.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:relief-class-H",
+                    "description": "High"
+                },
+                {
+                    "const": "lf:relief-class-L",
+                    "description": "Low"
+                },
+                {
+                    "const": "lf:relief-class-M",
+                    "description": "Very high"
+                },
+                {
+                    "const": "lf:relief-class-P",
+                    "description": "Extremely low"
+                },
+                {
+                    "const": "lf:relief-class-R",
+                    "description": "Very low"
+                }
+            ]
+        },
+        "SlopeProcedure": {
+            "$anchor": "slope-procedure",
+            "@id": "lf:Slope-procedure",
+            "title": "Means of evaluation of slope - enumeration",
+            "description": "Means of evaluation of slope",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "lf:slope-evaluation-A",
+                    "description": "Abney level or clinometer and tape"
+                },
+                {
+                    "const": "lf:slope-evaluation-E",
+                    "description": "Estimate"
+                },
+                {
+                    "const": "lf:slope-evaluation-P",
+                    "description": "Contour plan at 1:10 000 or larger scale"
+                },
+                {
+                    "const": "lf:slope-evaluation-T",
+                    "description": "Tripod-mounted instrument and staff"
                 }
             ]
         },
@@ -3245,6 +4958,39 @@
                 }
             ]
         },
+        "SoilWaterStatus": {
+            "$anchor": "soil-water-status",
+            "@id": "sp:Soil-water-status",
+            "title": "Soil water status",
+            "description": "Give soil water status of the soil at the time of description.\r\nIt may also be relevant to note the weather conditions immediately prior to examination of the soil if these are known, for example a soil may be wet because of local rain or from seepage.\r\nThe following guidelines may be used as a crude approximation of soil water status:\r\n\r\nDry is below wilting point. Material becomes darker or has lower colour value when moistened.\r\nModerately moist is the drier half of the available moisture range.\r\nMoist is the wetter half of the available moisture range.\r\nWet is at, or exceeding, field capacity. Will wet and/or stick to fingers when moulded.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:soil-water-status-D",
+                    "description": "Dry (soil water status)"
+                },
+                {
+                    "const": "sp:soil-water-status-M",
+                    "description": "Moist (soil water status)"
+                },
+                {
+                    "const": "sp:soil-water-status-T",
+                    "description": "Moderately moist (soil water status)"
+                },
+                {
+                    "const": "sp:soil-water-status-W",
+                    "description": "Wet (soil water status)"
+                }
+            ]
+        },
+        "StructurePedalityCompound": {
+            "$anchor": "structure-pedality-compound",
+            "@id": "sp:structure-pedality-compound",
+            "title": "Compound pedality",
+            "description": "Compound pedality occurs where large peds part along natural planes of weakness to form smaller peds, which may again part to smaller peds, and so on to the smallest or primary peds.\r\nPrimary peds are the simplest peds occurring in soil material; they cannot be divided into smaller peds, but may be packed together to form compound peds of a higher level of organisation (Brewer 1964).\r\nThe order of peds and relationship of one to the other is important and may be described as the larger peds parting to the smaller and further where necessary. For example, 'strong 50-100 mm columnar, parting to moderate 20-50 mm prismatic, parting to moderate\r\n10-20 mm angular blocky'. The word 'parting' and not 'breaking' is used. The term 'breaking' is used when soil is fractured along planes other than natural planes of weakness.\r\n1\tLargest peds (in the type of soil observation described), parting to\r\n2\tNext size peds, parting to\r\n3\tNext size peds, ... and further, if required, to the primary ped.",
+            "type": "string",
+			"$comment": "No skos:members found."
+        },
         "SubstrateConfidence": {
             "$anchor": "substrate-confidence",
             "@id": "subst:Confidence",
@@ -3267,6 +5013,105 @@
                 {
                     "const": "subst:confidence-not-parent",
                     "description": "not-parent"
+                }
+            ]
+        },
+        "SubstrateDiscontinuitySpacing": {
+            "$anchor": "substrate-discontinuity-spacing",
+            "@id": "subst:Substrate-discontinuity-spacing",
+            "title": "Spacing of discontinuities - enumeration",
+            "description": "Physical weathering opens up fissures or joints that reduce the strength of the rock mass relative to that of the intact rock material.  These fissures generally increase in number towards the land surface.  The following categories of discontinuity spacing apply (Deere 1968, Selby 1982):",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:discontinuity-spacing-B",
+                    "description": "blocky; moderately jointed."
+                },
+                {
+                    "const": "subst:discontinuity-spacing-C",
+                    "description": "crushed or shattered."
+                },
+                {
+                    "const": "subst:discontinuity-spacing-F",
+                    "description": "fractured; intensely jointed."
+                },
+                {
+                    "const": "subst:discontinuity-spacing-M",
+                    "description": "massive; few joints."
+                },
+                {
+                    "const": "subst:discontinuity-spacing-S",
+                    "description": "solid; virtually unjointed"
+                }
+            ]
+        },
+        "SubstrateGrainSize": {
+            "$anchor": "substrate-grain-size",
+            "@id": "subst:Substrate-grain-size",
+            "title": "Grain size - enumeration",
+            "description": "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:grain-size-1",
+                    "description": "<0.06 mm"
+                },
+                {
+                    "const": "subst:grain-size-2",
+                    "description": "0.06-2 mm"
+                },
+                {
+                    "const": "subst:grain-size-3",
+                    "description": ">2 mm"
+                }
+            ]
+        },
+        "SubstrateMineralComposition": {
+            "$anchor": "substrate-mineral-composition",
+            "@id": "subst:Substrate-mineral-composition",
+            "title": "Mineral composition - enumeration",
+            "description": "Make provision for recording one dominant mineral and one or two minor minerals, as identified by inspection of the hand specimen.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "subst:mineral-composition-C",
+                    "description": "Carbonaceous material"
+                },
+                {
+                    "const": "subst:mineral-composition-D",
+                    "description": "Dark minerals"
+                },
+                {
+                    "const": "subst:mineral-composition-F",
+                    "description": "Feldspar"
+                },
+                {
+                    "const": "subst:mineral-composition-G",
+                    "description": "Glauconite"
+                },
+                {
+                    "const": "subst:mineral-composition-K",
+                    "description": "Carbonates (react with 1-molar HCl)"
+                },
+                {
+                    "const": "subst:mineral-composition-L",
+                    "description": "Clays (argillaceous)"
+                },
+                {
+                    "const": "subst:mineral-composition-M",
+                    "description": "Mica"
+                },
+                {
+                    "const": "subst:mineral-composition-Q",
+                    "description": "Quartz"
+                },
+                {
+                    "const": "subst:mineral-composition-S",
+                    "description": "Sesquioxides"
+                },
+                {
+                    "const": "subst:mineral-composition-Y",
+                    "description": "Gypsum"
                 }
             ]
         },
@@ -3348,6 +5193,27 @@
                 {
                     "const": "xx:b",
                     "description": "value b"
+                }
+            ]
+        },
+        "WaterRepellence": {
+            "$anchor": "water-repellence",
+            "@id": "sp:Water-repellence",
+            "title": "Water repellence",
+            "description": "Water repellence of some soils, usually sandy, is caused by a series of long-chain polymethylene waxes, made up of acids, alcohols and esters, attached to the sand grains (Ma\u2019shum et al. 1988). These soils occur Australia-wide but are more widespread in southern Australia (Wetherby 1984, McGhie and Posner 1980). Degree of repellence is assessed by determining the concentration of ethanol required to wet the sand in 10 seconds (King 1981). An abbreviated form of this method is recommended for routine field situations.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:water-repellence-N",
+                    "description": "Non water repellent"
+                },
+                {
+                    "const": "sp:water-repellence-R",
+                    "description": "Water repellent"
+                },
+                {
+                    "const": "sp:water-repellence-S",
+                    "description": "Strongly water repellent"
                 }
             ]
         }

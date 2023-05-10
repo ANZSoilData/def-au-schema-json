@@ -511,7 +511,7 @@
             "range@type": "skos:Concept",
             "title": "classification - A1 horizon texture",
             "description": "Family criteria - A1 horizon texture.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#texture-code"
         },
         "classificationFamilyA1thickness": {
             "$anchor": "classification-family-A1thickness",
@@ -519,7 +519,7 @@
             "range@type": "skos:Concept",
             "title": "classification - A1 horizon thickness",
             "description": "Family criteria - A1 horizon thickness.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#thickness-code"
         },
         "classificationFamilyBtexture": {
             "$anchor": "classification-family-Btexture",
@@ -527,7 +527,7 @@
             "range@type": "skos:Concept",
             "title": "classification - B horizon texture",
             "description": "Family criteria - B horizon texture.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#texture-code"
         },
         "classificationFamilyDepth": {
             "$anchor": "classification-family-depth",
@@ -535,7 +535,7 @@
             "range@type": "skos:Concept",
             "title": "classification - Soil depth",
             "description": "Family criteria - Soil depth.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#depth-code"
         },
         "classificationFamilyGravel": {
             "$anchor": "classification-family-gravel",
@@ -543,7 +543,7 @@
             "range@type": "skos:Concept",
             "title": "classification - Gravel of the surface and A1 horizon",
             "description": "Family criteria - Gravel of the surface and A1 horizon.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#gravel-code"
         },
         "classificationGreatGroup": {
             "$anchor": "classification-greatgroup",
@@ -551,7 +551,7 @@
             "range@type": "skos:Concept",
             "title": "classification - Great group",
             "description": "Soil classification - Great group.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#classifier-code"
         },
         "classificationOrder": {
             "$anchor": "classification-order",
@@ -559,7 +559,7 @@
             "range@type": "skos:Concept",
             "title": "classification - Order",
             "description": "Soil classification - Order",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#order-code"
         },
         "classificationSubGroup": {
             "$anchor": "classification-subgroup",
@@ -567,7 +567,7 @@
             "range@type": "skos:Concept",
             "title": "classification - Subgroup",
             "description": "Soil classification - Subgroup.",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#classifier-code"
         },
         "classificationSubOrder": {
             "$anchor": "classification-suborder",
@@ -575,7 +575,7 @@
             "range@type": "skos:Concept",
             "title": "Classification - Sub-order.",
             "description": "soil classification - Sub-order",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#classifier-code"
         },
         "colour": {
             "@id": "ansis:colour",
@@ -673,13 +673,13 @@
             ],
             "title": "compound pedality",
             "description": "Compound pedality.",
-            "$comment": "No defined vocabulary.",
+            "$comment": "No defined vocabulary: sp:structure-pedality-compound?",
             "type": "object",
             "allOf": [
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#structure-pedality-compound"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -883,7 +883,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#inundation-depth"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -951,7 +951,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#erosion-depth-gully"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1067,7 +1067,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#channel-depth-width"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1120,7 +1120,7 @@
             "title": "designation master",
             "description": "Soil horizon designation master.",
             "type": "string",
-            "$ref": "./enum.json#tobedefined"
+            "$ref": "./enum.json#horizon-code"
         },
         "designationPrefix": {
             "$anchor": "designation-prefix",
@@ -1185,7 +1185,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#pore-diameter"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1200,7 +1200,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#root-size"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1222,7 +1222,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#channel-directionality"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1265,7 +1265,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#boundary-distinctness"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1279,7 +1279,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#cutans-distinctness"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1293,7 +1293,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#mottle-distinctness"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1315,7 +1315,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#coarse-fragments-distribution"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1429,7 +1429,7 @@
                 "qualityOfObservation": {"$ref": "./sosa.json#qualityOfObservation"},
                 "usedProcedure": {
                     "$comment": "replaces ansis:methodElevation",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./enum.json#elevation-evaluation-means"
                 },
                 "madeBySensor": {"$ref": "./sosa.json#madeBySensor"},
                 "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
@@ -1450,7 +1450,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#fabric-type"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1496,7 +1496,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#inundation-frequency"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -1518,7 +1518,16 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {
+                        	"oneOf": [
+								{"$ref": "./enum.json#rock-genesis-hardened-artificial"},
+								{"$ref": "./enum.json#rock-genesis-hardened-chemical"},
+								{"$ref": "./enum.json#rock-genesis-hardened-evaporite"},
+								{"$ref": "./enum.json#rock-genesis-sediments"},
+								{"$ref": "./enum.json#rock-genesis-unweathered"},
+								{"$ref": "./enum.json#rock-genesis-weathered"}
+                        	]
+                        }
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1538,7 +1547,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#geomorphology-mode"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1558,7 +1567,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#geomorphology-mode"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1598,7 +1607,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#substrate-grain-size"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1901,7 +1910,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#channel-integration"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1941,7 +1950,14 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#lithology-rock"}
+                        "hasResult": {
+                        	"oneOf": [
+								{"$ref": "./enum.json#lithology-coarse-fragments"},
+								{"$ref": "./enum.json#lithology-rock"},
+								{"$ref": "./enum.json#lithology-rock-outcrop"},
+								{"$ref": "./enum.json#lithology-unconsolidated"}
+                        	]
+                        }
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1961,7 +1977,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#location-in-element"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1976,12 +1992,13 @@
             ],
             "title": "location in toposequence",
             "description": "Location within a toposequence.",
+            "$comment": "No defined vocabulary. Landform vocabularies are incomplete.",
             "type": "object",
             "allOf": [
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#location-in-toposequence"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2001,7 +2018,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#segregations-magnetic-attributes"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2032,7 +2049,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#segregations-nature"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2046,7 +2063,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#substrate-mineral-composition"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2068,7 +2085,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#channel-migration"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2105,7 +2122,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#soil-water-status"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2228,7 +2245,7 @@
             "@id": "ansis:porosity",
             "range@type": [
                 "sosa:ObservableProperty",
-                "skos:Concept"
+                "skos:QuantityValue"
             ],
             "title": "porosity",
             "description": "Proportion of void space in material.",
@@ -2237,7 +2254,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2257,7 +2274,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#microrelief-proportions-gilgai"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2571,7 +2588,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#relative-inclination"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2611,7 +2628,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#runoff"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2649,7 +2666,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#boundary-shape"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2677,7 +2694,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#segregations-form"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2702,7 +2719,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#coarse-fragments-size"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2716,7 +2733,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#mottle-size"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2744,7 +2761,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#segregations-size"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2775,7 +2792,7 @@
                         "qualityOfObservation": {"$ref": "./sosa.json#qualityOfObservation"},
                         "usedProcedure": {
                             "$comment": "replaces ansis:methodSlope",
-                            "$ref": "./enum.json#tobedefined"
+                            "$ref": "./enum.json#slope-procedure"
                         },
                         "madeBySensor": {"$ref": "./sosa.json#madeBySensor"},
                         "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
@@ -2794,7 +2811,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#slope-class"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2808,7 +2825,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#slope-modal"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2833,7 +2850,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#channel-spacing"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2847,7 +2864,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#substrate-discontinuity-spacing"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2869,7 +2886,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#erosion-state"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2889,7 +2906,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#consistence-stickiness"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -2917,7 +2934,7 @@
                     "allOf": [
                         {
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#consistence-strength"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2935,7 +2952,7 @@
                     "allOf": [
                         {
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#material-strength"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -2971,7 +2988,7 @@
                     "allOf": [
                         {
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#segregations-strength"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -3011,7 +3028,12 @@
                     "allOf": [
                         {
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#field-texture-combined"}
+                                "hasResult": {
+                                	"oneOf": [
+										{"$ref": "./enum.json#field-texture-mineral"},
+										{"$ref": "./enum.json#field-texture-organic"}
+                                	]
+                                }
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -3025,7 +3047,7 @@
                     "allOf": [
                         {
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#field-texture"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
@@ -3116,7 +3138,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#tobedefined"}
+                        "hasResult": {"$ref": "./enum.json#water-repellence"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -3162,7 +3184,7 @@
                         {
                             "required": ["hasResult"],
                             "properties": {
-                                "hasResult": {"$ref": "./enum.json#tobedefined"}
+                                "hasResult": {"$ref": "./enum.json#cracks-width"}
                             }
                         },
                         {"$ref": "./sosa.json#ObservableProperty"}
