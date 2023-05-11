@@ -1,5 +1,5 @@
 # QUDT JSON Objects
-**JSON Schema Location:** https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/qudt.json
+**JSON Schema Location:** qudt.json
 
 Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.
 
