@@ -61,6 +61,13 @@
             "description": "A name for some thing.",
             "type": "string"
         },
+        "scopedIdentifier": {
+            "$anchor": "scopedIdentifier",
+            "range@type": "base:ScopedIdentifier",
+            "title": "scoped identifier",
+            "description": "An identifier for a site or sample scoped to the authority that assigned the identifier.",
+            "$ref": "#ScopedIdentifier"
+        },
         "source": {
             "$anchor": "source",
             "@id": "dcterms:source",
@@ -82,6 +89,21 @@
                 "label": {"$ref": "#label"}
             },
             "additionalProperties": false
+        },
+        "ScopedIdentifier": {
+            "$anchor": "ScopedIdentifier",
+            "title": "ANSIS Scoped Identifier",
+            "description": "A simple object holding an identifier as assigned by a provider/agency. The provider/agency may, optionally, be specified by the authority property.",
+            "$comment": "Based on the GML identifier (scoped name - code with with authority).",
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+                "name": {"$ref": "#name"},
+                "authority": {
+                    "$ref": "#name",
+                    "$comment": "The ID of the provider (suggestion)."
+                }
+            }
         }
     }
 }

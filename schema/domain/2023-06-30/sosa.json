@@ -33,7 +33,7 @@
                     "$ref": "./base.json#type",
                     "const": "sosa:Actuation"
                 },
-                "relatedActivity": {"$ref": "./properties.json#relatedActivity"}
+                "relatedActivity": {"$ref": "./properties.json#relatedActivity-link"}
             },
             "additionalProperties": false
         },
@@ -81,7 +81,7 @@
                 "phenomenonTime": {"$ref": "#phenomenonTime"},
                 "resultTime": {"$ref": "#resultTime"},
                 "hasFeatureOfInterest": {"$ref": "#hasFeatureOfInterest"},
-                "relatedActivity": {"$ref": "./properties.json#relatedActivity"}
+                "relatedActivity": {"$ref": "./properties.json#relatedActivity-link"}
             },
             "additionalProperties": false
         },
@@ -173,7 +173,7 @@
                     "$ref": "./base.json#type",
                     "const": "sosa:Sensor"
                 },
-                "relatedActivity": {"$ref": "./properties.json#relatedActivity"}
+                "relatedActivity": {"$ref": "./properties.json#relatedActivity-link"}
             },
             "additionalProperties": false
         },
@@ -231,7 +231,6 @@
             "$ref": "./base.json#Entity_Link"
         },
         "hasResult": {
-            "$anchor": "hasResult",
             "@id": "sosa:hasResult",
             "range@type": [
                 "sosa:Observation",
@@ -359,18 +358,17 @@
             "format": "date-time"
         },
         "usedProcedure": {
-            "$anchor": "usedProcedure",
             "@id": "sosa:usedProcedure",
             "range@type": "skos:Concept",
-            "title": "Made by Sensor",
-            "description": "Relation between an Observation and the Sensor which made the Observations.",
-            "$comment": "Forcing a URI pointing to an ANSIS methods vocabulary {!!probably too restrictive!!}. No local enumeration as the list is too long.",
-            "type": [
-                "object",
-                "null"
-            ],
-            "$ref": "./base.json#Entity_Link",
+            "title": "Used Procedure",
+            "description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
             "$defs": {
+            	"Concept": {
+                    "$anchor": "usedProcedure",
+					"type": "object",
+					"description": "skos:Concept Link.",
+					"$ref": "./base.json#Entity_Link"
+            	},
                 "SoilProfile": {
                     "$anchor": "usedProcedure-ProfileConstruction",
                     "$ref": "./enum.json#profile-construction"
@@ -380,7 +378,7 @@
         "qualityOfObservation": {
             "$anchor": "qualityOfObservation",
             "@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
-            "range@type": ["skos:Concept"],
+            "range@type": "skos:Concept",
             "title": "Quality of Observation",
             "description": "The adjudged quality of the Result.",
             "$comment": "To be expanded - using skos:Concept for qualitative descriptions of quality.",

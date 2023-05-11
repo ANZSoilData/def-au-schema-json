@@ -149,7 +149,7 @@
         "Aggradation": {
             "$anchor": "aggradation",
             "@id": "ls:Aggradation",
-            "title": "Aggradation - enumeration",
+            "title": "Aggradation",
             "description": "This refers to the presence of material deposited on a pre-existing surface as a result of wind and/or water erosion.",
             "type": "string",
             "oneOf": [
@@ -235,7 +235,7 @@
         "BoundaryDistinctness": {
             "$anchor": "boundary-distinctness",
             "@id": "sp:Boundary-distinctness",
-            "title": "Boundary distinctness - enumeration",
+            "title": "Boundary distinctness",
             "description": "Distinctness of the boundaries between horizons",
             "type": "string",
             "oneOf": [
@@ -264,7 +264,7 @@
         "BoundaryShape": {
             "$anchor": "boundary-shape",
             "@id": "sp:Boundary-shape",
-            "title": "Boundary shape - enumeration",
+            "title": "Boundary shape",
             "description": "Shape of boundary between horizons",
             "type": "string",
             "oneOf": [
@@ -293,7 +293,7 @@
         "CarbonateEffervescence": {
             "$anchor": "carbonate-effervescence",
             "@id": "sp:Carbonate-effervescence",
-            "title": "Effervescence of carbonate in fine earth - enumeration",
+            "title": "Effervescence of carbonate in fine earth",
             "description": "Effervescence of carbonate in fine earth using two or three drops of 1-molar HCl.",
             "type": "string",
             "oneOf": [
@@ -322,7 +322,7 @@
         "ChannelDepthWidth": {
             "$anchor": "channel-depth-width",
             "@id": "lf:Channel-depth-width",
-            "title": "Stream channel depth relative to width - enumeration",
+            "title": "Stream channel depth relative to width",
             "description": "Channel depth and width refer to the dimensions of a landform that is dominated by channelled stream flow. The limit of channelled stream flow dominance must be identified before width or depth can be estimated. Depth is taken from the top of the stream bank down to the average height of the line following the deepest part of the channel.\r\nThe distinction between stream bank and hillslope or scarp according to dominant process requires particular care where streams are incised, especially if they are cut into terraces that could be mistaken for flood plains.\r\n \r\nFor detailed studies, keep records of width and depth measurements. In other surveys, use the following classes of relative depth.",
             "type": "string",
             "oneOf": [
@@ -347,7 +347,7 @@
         "ChannelDevelopment": {
             "$anchor": "channel-development",
             "@id": "lf:Channel-development",
-            "title": "Stream channel development - enumeration",
+            "title": "Stream channel development",
             "description": "The degree of development of stream channels.",
             "type": "string",
             "oneOf": [
@@ -372,7 +372,7 @@
         "ChannelDirectionality": {
             "$anchor": "channel-directionality",
             "@id": "lf:Channel-directionality",
-            "title": "Stream channel network directionality - enumeration",
+            "title": "Stream channel network directionality",
             "description": "This attribute combines two simpler attributes: the degree of lineation, that is, the degree to which the channels tend to align in an organised way; and the degree of convergence or divergence of channels in the downstream direction. The latter is distinct from tributary/distributary behaviour, which refers to the combining and splitting of stream channels, rather than their directionality.",
             "type": "string",
             "oneOf": [
@@ -409,7 +409,7 @@
         "ChannelIntegration": {
             "$anchor": "channel-integration",
             "@id": "lf:Channel-integration",
-            "title": "Stream channel network integration - enumeration",
+            "title": "Stream channel network integration",
             "description": "In an integrated channel network, one can traverse from any point on a stream channel to any other point on a stream channel without passing through any landform elements other than stream channels. The channel network may be interrupted at points where water loss into the ground or the atmosphere is sufficiently large, and in the extreme case, typical of karst terrain, the surface stream network is disintegrated. Classes of channel network integration are:",
             "type": "string",
             "oneOf": [
@@ -430,7 +430,7 @@
         "ChannelMigration": {
             "$anchor": "channel-migration",
             "@id": "lf:Channel-migration",
-            "title": "Stream channel migration - enumeration",
+            "title": "Stream channel migration",
             "description": "The presence of relict channel landforms or unvegetated, newly formed channel margins or immovable channel margins may permit an assessment of channel migration.",
             "type": "string",
             "oneOf": [
@@ -451,7 +451,7 @@
         "ChannelPattern": {
             "$anchor": "channel-pattern",
             "@id": "lf:Channel-pattern",
-            "title": "Stream-wise channel pattern - enumeration",
+            "title": "Stream-wise channel pattern",
             "description": "In a traverse downstream, it may happen that tributaries enter the stream at frequent intervals, or that the stream splits into distributaries, or that these tendencies are absent (the non-tributary case) or are in balance with each other (the braided or anastomotic case called here reticulated) giving four classes of stream-wise channel pattern.",
             "type": "string",
             "oneOf": [
@@ -476,7 +476,7 @@
         "ChannelSpacing": {
             "$anchor": "channel-spacing",
             "@id": "lf:Channel-spacing",
-            "title": "Stream channel spacing - enumeration",
+            "title": "Stream channel spacing",
             "description": "The average spacing of stream channels, L/N, is determined by counting the number, N, of their intersections with an arbitrary line of length L.*\r\nA convenient tool for estimating channel spacing is a circle, with a circumference of 2 km at map or photo scale, drawn on transparent material.",
             "type": "string",
             "oneOf": [
@@ -517,7 +517,7 @@
         "CoarseFragmentsAbundance": {
             "$anchor": "coarse-fragments-abundance",
             "@id": "ls:Coarse-fragments-abundance",
-            "title": "Abundance of coarse fragments - enumeration",
+            "title": "Abundance of coarse fragments",
             "description": "The percentage of coarse fragments.",
             "type": "string",
             "oneOf": [
@@ -554,7 +554,7 @@
         "CoarseFragmentsDistribution": {
             "$anchor": "coarse-fragments-distribution",
             "@id": "sp:Coarse-fragments-distribution",
-            "title": "Distribution of coarse fragments - enumeration",
+            "title": "Distribution of coarse fragments",
             "description": "Coarse fragments may occur throughout the profile.",
             "type": "string",
             "oneOf": [
@@ -579,7 +579,7 @@
         "CoarseFragmentsShape": {
             "$anchor": "coarse-fragments-shape",
             "@id": "ls:Coarse-fragments-shape",
-            "title": "Shape of coarse fragments - enumeration",
+            "title": "Shape of coarse fragments",
             "description": "The shape of coarse fragments is determined by referencing the chart that captures the roundness and sphericity. (Figure 12)",
             "type": "string",
             "oneOf": [
@@ -636,7 +636,7 @@
         "CoarseFragmentsSize": {
             "$anchor": "coarse-fragments-size",
             "@id": "ls:Coarse-fragments-size",
-            "title": "Size of coarse fragments -enumeration",
+            "title": "Size of coarse fragments",
             "description": "The scale adopted employs class boundaries at (2 \u00d7 10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials.",
             "type": "string",
             "oneOf": [
@@ -673,7 +673,7 @@
         "ColourMoistureStatus": {
             "$anchor": "colour-moisture-status",
             "@id": "sp:Colour-moisture-status",
-            "title": "Moisture status for colour description - enumeration",
+            "title": "Moisture status for colour description",
             "description": "Moisture status for colour description",
             "type": "string",
             "oneOf": [
@@ -690,7 +690,7 @@
         "ConsistencePlasticityDegree": {
             "$anchor": "consistence-plasticity-degree",
             "@id": "sp:Consistence-plasticity-degree",
-            "title": "Plasticity Degree - enumeration",
+            "title": "Plasticity Degree",
             "description": "Plasticity is the ability to change shape and retain the new shape after the stress is removed. The degree of plasticity given below applies only to normal plasticity. The degree of plasticity is determined at the soil moisture content used for field texturing, that is, just below sticky point. The soil is rolled between the palms of the hand and, if possible, 40 mm long rolls are formed. The rolls are dangled from the thumb and forefinger. Plasticity is determined on the behaviour of rolls of varying thickness.",
             "type": "string",
             "oneOf": [
@@ -715,7 +715,7 @@
         "ConsistencePlasticityType": {
             "$anchor": "consistence-plasticity-type",
             "@id": "sp:Consistence-plasticity-type",
-            "title": "Plasticity Type - enumeration",
+            "title": "Plasticity Type",
             "description": "The type of plasticity refers to the degree to which either the consistence, field texture or both properties of a soil suggest the amount of clay-sized particles it contains (Butler 1955). It may be identified by determining two field textures: one after an initial 1 to 2 minute working of the soil sample, and another after a prolonged 10 minute kneading. The change in field texture from the initial to the prolonged working of the soil sample indicates the type of plasticity.",
             "type": "string",
             "oneOf": [
@@ -740,7 +740,7 @@
         "ConsistenceStickiness": {
             "$anchor": "consistence-stickiness",
             "@id": "sp:Consistence-stickiness",
-            "title": "Stickiness - enumeration",
+            "title": "Stickiness",
             "description": "Stickiness is determined on wet soil by pressing the wet sample between thumb and forefinger and then observing the adherence of the soil to the fingers.",
             "type": "string",
             "oneOf": [
@@ -765,7 +765,7 @@
         "ConsistenceStrength": {
             "$anchor": "consistence-strength",
             "@id": "sp:Consistence-strength",
-            "title": "Strength - enumeration",
+            "title": "Strength",
             "description": "Strength of soil is the resistance to breaking or deformation. Strength is determined by the force just sufficient to break or deform a 20 mm diameter piece of soil when a compressive shearing force is applied between thumb and forefinger. The 20 mm piece of soil may be a ped, part of a ped, a compound ped or a fragment.\r\n\r\nForces 0 to 5 are equivalent to the following dry consistence classes in the \u2018USDA Soil Survey Manual\u2019 (Soil Survey Staff 1951):\r\n0\tLoose\r\n1\tSoft\r\n2\tSlightly hard\r\n3\tHard\r\n4\tVery hard\r\n5\tExtremely hard",
             "type": "string",
             "oneOf": [
@@ -835,7 +835,7 @@
         "CutansAbundance": {
             "$anchor": "cutans-abundance",
             "@id": "sp:Cutans-abundance",
-            "title": "Abundance of cutans - enumeration",
+            "title": "Abundance of cutans",
             "description": "Abundance of cutans",
             "type": "string",
             "oneOf": [
@@ -860,7 +860,7 @@
         "CutansDistinctness": {
             "$anchor": "cutans-distinctness",
             "@id": "sp:Cutans-distinctness",
-            "title": "Distinctness of cutans - enumeration",
+            "title": "Distinctness of cutans",
             "description": "This refers to the ease and certainty with which a cutan is identified. Distinctness relates to thickness and to the colour contrast with the adjacent material; it may change markedly with moisture content.",
             "type": "string",
             "oneOf": [
@@ -881,7 +881,7 @@
         "CutansType": {
             "$anchor": "cutans-type",
             "@id": "sp:Cutans-type",
-            "title": "Types of cutans - enumeration",
+            "title": "Types of cutans",
             "description": "Types of cutans",
             "type": "string",
             "oneOf": [
@@ -918,7 +918,7 @@
         "DisturbanceOfSite": {
             "$anchor": "disturbance-of-site",
             "@id": "ls:Disturbance-of-site",
-            "title": "Disturbance of site - enumeration",
+            "title": "Disturbance of site",
             "description": "These are broad categories of disturbance. Users may subdivide where considered necessary.",
             "type": "string",
             "oneOf": [
@@ -963,7 +963,7 @@
         "ElevationEvaluationMeans": {
             "$anchor": "elevation-evaluation-means",
             "@id": "ls:Elevation-evaluation-means",
-            "title": "Means of evaluation of elevation - enumeration",
+            "title": "Means of evaluation of elevation",
             "description": "Means of evaluation of elevation",
             "type": "string",
             "oneOf": [
@@ -988,7 +988,7 @@
         "ErosionDepthGully": {
             "$anchor": "erosion-depth-gully",
             "@id": "ls:Erosion-depth-gully",
-            "title": "Gully depth - enumeration",
+            "title": "Gully depth",
             "description": "This gives the maximum depth within the site.",
             "type": "string",
             "oneOf": [
@@ -1014,46 +1014,46 @@
             "oneOf": [
                 {
                     "const": "ls:Erosion-severity-gully",
-                    "description": "Gully erosion - enumeration"
+                    "description": "Gully erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-mass-movement",
-                    "description": "Mass movement - enumeration"
+                    "description": "Mass movement"
                 },
                 {
                     "const": "ls:Erosion-severity-rill",
-                    "description": "Rill erosion - enumeration"
+                    "description": "Rill erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-scald",
-                    "description": "Scald erosion - enumeration"
+                    "description": "Scald erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-sheet",
-                    "description": "Sheet erosion - enumeration"
+                    "description": "Sheet erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-stream-bank",
-                    "description": "Stream bank erosion - enumeration"
+                    "description": "Stream bank erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-tunnel",
-                    "description": "Tunnel erosion - enumeration"
+                    "description": "Tunnel erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-wave",
-                    "description": "Wave erosion - enumeration"
+                    "description": "Wave erosion"
                 },
                 {
                     "const": "ls:Erosion-severity-wind",
-                    "description": "Wind erosion - enumeration"
+                    "description": "Wind erosion"
                 }
             ]
         },
         "ErosionSeverityGully": {
             "$anchor": "erosion-severity-gully",
             "@id": "ls:Erosion-severity-gully",
-            "title": "Gully erosion - enumeration",
+            "title": "Gully erosion",
             "description": "A gully is a channel more than 0.3 m deep.",
             "type": "string",
             "oneOf": [
@@ -1078,7 +1078,7 @@
         "ErosionSeverityMassMovement": {
             "$anchor": "erosion-severity-mass-movement",
             "@id": "ls:Erosion-severity-mass-movement",
-            "title": "Mass movement - enumeration",
+            "title": "Mass movement",
             "description": "This includes all relatively large downslope movement of soil, rock or mixture of both, for example landslides, slumps, earth flows, debris avalanches and solifluxion.",
             "type": "string",
             "oneOf": [
@@ -1095,7 +1095,7 @@
         "ErosionSeverityRill": {
             "$anchor": "erosion-severity-rill",
             "@id": "ls:Erosion-severity-rill",
-            "title": "Rill erosion - enumeration",
+            "title": "Rill erosion",
             "description": "A rill is a small channel up to 0.3 m deep, which can be largely obliterated by tillage operations (Houghton and Charman 1986).",
             "type": "string",
             "oneOf": [
@@ -1120,7 +1120,7 @@
         "ErosionSeverityScald": {
             "$anchor": "erosion-severity-scald",
             "@id": "ls:Erosion-severity-scald",
-            "title": "Scald erosion - enumeration",
+            "title": "Scald erosion",
             "description": "This is the removal of surface soil by water and/or wind, often exposing a more clayey subsoil which is devoid of vegetation and relatively impermeable to water. Scalds are most common in arid or semi-arid lands.",
             "type": "string",
             "oneOf": [
@@ -1145,7 +1145,7 @@
         "ErosionSeveritySheet": {
             "$anchor": "erosion-severity-sheet",
             "@id": "ls:Erosion-severity-sheet",
-            "title": "Sheet erosion - enumeration",
+            "title": "Sheet erosion",
             "description": "This is the relatively uniform removal of soil from an area without the development of conspicuous channels. Indicators of sheet erosion include soil deposits in downslope sediment traps, such as fencelines or farm dams, and pedestalling, root exposure or exposure of subsoils.",
             "type": "string",
             "oneOf": [
@@ -1174,7 +1174,7 @@
         "ErosionSeverityStreamBank": {
             "$anchor": "erosion-severity-stream-bank",
             "@id": "ls:Erosion-severity-stream-bank",
-            "title": "Stream bank erosion - enumeration",
+            "title": "Stream bank erosion",
             "description": "This is the removal of soil from a stream bank, typically during periods of high stream flow.",
             "type": "string",
             "oneOf": [
@@ -1195,7 +1195,7 @@
         "ErosionSeverityTunnel": {
             "$anchor": "erosion-severity-tunnel",
             "@id": "ls:Erosion-severity-tunnel",
-            "title": "Tunnel erosion - enumeration",
+            "title": "Tunnel erosion",
             "description": "This is the removal of subsoil by water while the surface soil remains relatively intact (Crouch 1976).",
             "type": "string",
             "oneOf": [
@@ -1216,7 +1216,7 @@
         "ErosionSeverityWave": {
             "$anchor": "erosion-severity-wave",
             "@id": "ls:Erosion-severity-wave",
-            "title": "Wave erosion - enumeration",
+            "title": "Wave erosion",
             "description": "Erosion of beaches, beach ridges and/or dunes. This is the removal of sand or soil from the margins of beaches, beach ridges, dunes, lakes or dams by wave action.",
             "type": "string",
             "oneOf": [
@@ -1237,7 +1237,7 @@
         "ErosionSeverityWind": {
             "$anchor": "erosion-severity-wind",
             "@id": "ls:Erosion-severity-wind",
-            "title": "Wind erosion - enumeration",
+            "title": "Wind erosion",
             "description": "Give presence/absence or extent of accelerated erosion.",
             "type": "string",
             "oneOf": [
@@ -1270,7 +1270,7 @@
         "ErosionState": {
             "$anchor": "erosion-state",
             "@id": "ls:Erosion-state",
-            "title": "State of erosion - enumeration",
+            "title": "State of erosion",
             "description": "State of erosion",
             "type": "string",
             "oneOf": [
@@ -1291,7 +1291,7 @@
         "ErosionType": {
             "$anchor": "erosion-type",
             "@id": "ls:Erosion-type",
-            "title": "Type of erosion - enumeration",
+            "title": "Type of erosion",
             "description": "Type of erosion",
             "type": "string",
             "oneOf": [
@@ -1336,7 +1336,7 @@
         "FabricType": {
             "$anchor": "fabric-type",
             "@id": "sp:Fabric-type",
-            "title": "Fabric - enumeration",
+            "title": "Fabric",
             "description": "The definition of soil fabric in Australia is incomplete. The following description is adapted from Northcote (1979).\r\nFabric describes the appearance of the soil material (under \u00d710 hand lens). Differences in fabric are associated with the presence or absence of peds, the lustre or lack of lustre of the ped surfaces, and the presence, size and arrangement of pores (voids) in the soil mass. The descriptions given below apply primarily to B horizons.",
             "type": "string",
             "oneOf": [
@@ -1361,7 +1361,7 @@
         "FieldTexture": {
             "$anchor": "field-texture",
             "@id": "subst:Field-texture",
-            "title": "Texture - enumeration",
+            "title": "Texture",
             "type": "string",
             "oneOf": [
                 {
@@ -1385,7 +1385,7 @@
         "FieldTextureMineral": {
             "$anchor": "field-texture-mineral",
             "@id": "sp:Field-texture-mineral",
-            "title": "Mineral soils field texture grade - enumeration",
+            "title": "Mineral soils field texture grade",
             "description": "The following description of determination of field texture is adapted from Northcote (1979).\r\nField texture is a measure of the behaviour of a small handful of soil when moistened and kneaded into a ball and then pressed out between thumb and forefinger.\r\nTake a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 1–2 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.\r\nThe recommended field texture grades as characterised by the behaviour of the moist bolus are described. The approximate percentage content of clay (particles less than 0.002 mm in diameter) and silt (particles between 0.02 and 0.002 mm in diameter) are given as a guide. These percentages must not be used to determine a field texture, that is, do not use them to convert a laboratory particle size value to a field texture grade. Similarly, do not adjust a field texture grade when laboratory particle size data become available.",
             "type": "string",
             "oneOf": [
@@ -1454,7 +1454,7 @@
         "FieldTextureOrganic": {
             "$anchor": "field-texture-organic",
             "@id": "sp:Field-texture-organic",
-            "title": "Organic soils field texture - enumeration",
+            "title": "Organic soils field texture",
             "description": "Organic soils do not have textural grades, as soil texture is determined by the size of mineral particles finer than 2 mm (NCST). In a sense, organic soils do have a texture related to the plant materials from which they formed and the degree of decomposition, exposure and drying. These field texture names may be used to characterise materials that on field examination are considered to be clearly dominated by organic matter. Peats may be assessed by examining the degree of decomposition and distinctness of plant remains. This work is adapted from Soil Survey Staff (1975) and Avery (1980).",
             "type": "string",
             "oneOf": [
@@ -1491,7 +1491,7 @@
         "GeomorphologyAgentBio": {
             "$anchor": "geomorphology-agent-bio",
             "@id": "lf:Geomorphology-agent-bio",
-            "title": "Geomorphological agents - biological agents - enumeration",
+            "title": "Geomorphological agents - biological agents",
             "type": "string",
             "oneOf": [
                 {
@@ -1507,7 +1507,7 @@
         "GeomorphologyAgentExtra": {
             "$anchor": "geomorphology-agent-extra",
             "@id": "lf:Geomorphology-agent-extra",
-            "title": "Geomorphological agents - extraterrestrial agents - enumeration",
+            "title": "Geomorphological agents - extraterrestrial agents",
             "type": "string",
             "oneOf": [
                 {
@@ -1519,7 +1519,7 @@
         "GeomorphologyAgentGravity": {
             "$anchor": "geomorphology-agent-gravity",
             "@id": "lf:Geomorphology-agent-gravity",
-            "title": "Geomorphological agents - gravity - enumeration",
+            "title": "Geomorphological agents - gravity",
             "type": "string",
             "oneOf": [
                 {
@@ -1531,7 +1531,7 @@
         "GeomorphologyAgentIce": {
             "$anchor": "geomorphology-agent-ice",
             "@id": "lf:Geomorphology-agent-ice",
-            "title": "Geomorphological agents - ice - enumeration",
+            "title": "Geomorphological agents - ice",
             "type": "string",
             "oneOf": [
                 {
@@ -1547,7 +1547,7 @@
         "GeomorphologyAgentInternal": {
             "$anchor": "geomorphology-agent-internal",
             "@id": "lf:Geomorphology-agent-internal",
-            "title": "Geomorphological agents - internal forces - enumeration",
+            "title": "Geomorphological agents - internal forces",
             "type": "string",
             "oneOf": [
                 {
@@ -1563,7 +1563,7 @@
         "GeomorphologyAgentPrecipitation": {
             "$anchor": "geomorphology-agent-precipitation",
             "@id": "lf:Geomorphology-agent-precipitation",
-            "title": "Geomorphological agents - precipitation - enumeration",
+            "title": "Geomorphological agents - precipitation",
             "type": "string",
             "oneOf": [
                 {
@@ -1587,7 +1587,7 @@
         "GeomorphologyAgentStand": {
             "$anchor": "geomorphology-agent-stand",
             "@id": "lf:Geomorphology-agent-stand",
-            "title": "Geomorphological agents - standing water - enumeration",
+            "title": "Geomorphological agents - standing water",
             "type": "string",
             "oneOf": [
                 {
@@ -1607,7 +1607,7 @@
         "GeomorphologyAgentStreamflow": {
             "$anchor": "geomorphology-agent-streamflow",
             "@id": "lf:Geomorphology-agent-streamflow",
-            "title": "Geomorphological agents - stream flow - enumeration",
+            "title": "Geomorphological agents - stream flow",
             "type": "string",
             "oneOf": [
                 {
@@ -1623,7 +1623,7 @@
         "GeomorphologyAgentWind": {
             "$anchor": "geomorphology-agent-wind",
             "@id": "lf:Geomorphology-agent-wind",
-            "title": "Geomorphological agents - wind - enumeration",
+            "title": "Geomorphological agents - wind",
             "type": "string",
             "oneOf": [
                 {
@@ -1635,7 +1635,7 @@
         "GeomorphologyMode": {
             "$anchor": "geomorphology-mode",
             "@id": "lf:Geomorphology-mode",
-            "title": "Mode of geomorphological activity - enumeration",
+            "title": "Mode of geomorphological activity",
             "description": "Various modes of geomorphological activity may be distinguished (Figure 3).",
             "type": "string",
             "oneOf": [
@@ -1672,7 +1672,7 @@
         "GeomorphologyStatus": {
             "$anchor": "geomorphology-status",
             "@id": "lf:Geomorphology-status",
-            "title": "Status of geomorphological activity - enumeration",
+            "title": "Status of geomorphological activity",
             "description": "Status of geomorphological activity",
             "type": "string",
             "oneOf": [
@@ -1705,7 +1705,7 @@
         "HorizonCode": {
             "$anchor": "horizon-code",
             "@id": "sp:Horizon-code",
-            "title": "Type of soil horizon - enumeration",
+            "title": "Type of soil horizon",
             "description": "A soil horizon is a layer of soil, approximately parallel to the land surface, with morphological properties different from layers below and/or above it. Tongues of material from one horizon may penetrate into adjacent horizons. Give horizon notation as described below.\r\n\r\nAs horizon notation is deduced from the profile description data (Northcote 1979) and in some instances laboratory data, record it after the profile is described. Horizons may be difficult to name, but should be named in the field. Opinions formed at the time of description are useful for later reference.\r\n\r\nWith regard to horizon notation, the long-established usage in horizon designation is adopted. Emphasis is on factual objective notation rather than assumed genesis, as genetic implications are often uncertain and difficult to establish. Thus the notation E indicating eluvial horizon (International Society of Soil Science 1967) has not been used, even though this has been adopted by a number of overseas organisations, for example Hodgson (1974), Soil Survey Staff (1990).",
             "type": "string",
             "oneOf": [
@@ -1827,7 +1827,7 @@
         "InundationDepth": {
             "$anchor": "inundation-depth",
             "@id": "ls:Inundation-depth",
-            "title": "Depth of inundation (annual) - enumeration",
+            "title": "Depth of inundation (annual)",
             "description": "Give likely maximum depth of water in an inundation event (mm). ",
             "type": "string",
             "oneOf": [
@@ -1856,7 +1856,7 @@
         "InundationDuration": {
             "$anchor": "inundation-duration",
             "@id": "ls:Inundation-duration",
-            "title": "Duration (annual) of inundation - enumeration",
+            "title": "Duration (annual) of inundation",
             "description": "Give likely duration of an inundation event.",
             "type": "string",
             "oneOf": [
@@ -1881,7 +1881,7 @@
         "InundationFrequency": {
             "$anchor": "inundation-frequency",
             "@id": "ls:Inundation-frequency",
-            "title": "Frequency of inundation - enumeration",
+            "title": "Frequency of inundation",
             "description": "Give long-term average of inundation. Among alluvial plains, flood plains typically fall in categories 4 and 3.",
             "type": "string",
             "oneOf": [
@@ -2243,17 +2243,17 @@
         "LandformElementType": {
             "$anchor": "landform-element-type",
             "@id": "lf:Landform-element-type",
-            "title": "Morphological type - enumeration",
+            "title": "Morphological type",
             "description": "Landform elements fall into morphological types as sketched in Figure 1. Ten types are distinguished.",
             "type": "string",
             "oneOf": [
                 {
                     "const": "lf:Relative-inclination",
-                    "description": "Relative inclination of slope elements - enumeration"
+                    "description": "Relative inclination of slope elements"
                 },
                 {
                     "const": "lf:compound-morphological-types",
-                    "description": "Compound morphological types - enumeration"
+                    "description": "Compound morphological types"
                 },
                 {
                     "const": "lf:morphological-type-C",
@@ -2348,7 +2348,7 @@
         "LandformPatternErosional": {
             "$anchor": "landform-pattern-erosional",
             "@id": "lf:Landform-pattern-erosional",
-            "title": "Simple erosional landform patterns - enumeration",
+            "title": "Simple erosional landform patterns",
             "description": "Simple erosional landform patterns are based on relief and modal slope.",
             "type": "string",
             "oneOf": [
@@ -2614,7 +2614,7 @@
         "LithologyCoarseFragments": {
             "$anchor": "lithology-coarse-fragments",
             "@id": "ls:Lithology-coarse-fragments",
-            "title": "Lithology of coarse fragments - enumeration",
+            "title": "Lithology of coarse fragments",
             "description": "The lithology of the coarse fragments is usually identified as coming from the substrate or from rock outcrop. Where the lithology of the coarse fragments is different from that of the substrate material and/or rock outcrop, describe it as for lithology of substrate material only where the rock type is definitely known or is confidently presumed. Some coarse fragments are commonly encountered that are not directly related to the substrate material.    ",
             "type": "string",
             "oneOf": [
@@ -2655,7 +2655,7 @@
         "LithologyRock": {
             "$anchor": "lithology-rock",
             "@id": "subst:Lithology-rock",
-            "title": "Lithological type- rock - enumeration",
+            "title": "Lithological type- rock",
             "description": "Lithological type - rock.",
             "type": "string",
             "oneOf": [
@@ -2996,7 +2996,7 @@
         "LithologyRockOutcrop": {
             "$anchor": "lithology-rock-outcrop",
             "@id": "ls:Lithology-rock-outcrop",
-            "title": "Lithology of rock outcrop - enumeration",
+            "title": "Lithology of rock outcrop",
             "description": "Where the lithology of the rock outcrop is different from that of the substrate material, record it as for lithology of substrate material. ",
             "type": "string",
             "oneOf": [
@@ -3337,7 +3337,7 @@
         "LithologyUnconsolidated": {
             "$anchor": "lithology-unconsolidated",
             "@id": "subst:Lithology-unconsolidated",
-            "title": "Lithological type- unconsolidated material - enumeration",
+            "title": "Lithological type- unconsolidated material",
             "description": "Lithological type - unconsoldiated material.",
             "type": "string",
             "oneOf": [
@@ -3398,7 +3398,7 @@
         "LocationInElement": {
             "$anchor": "location-in-element",
             "@id": "lf:Location-in-element",
-            "title": "Location within the landform element - enumeration",
+            "title": "Location within the landform element",
             "description": "A site chosen to represent a landform element will often be placed centrally within it. For various reasons, a site may not be centrally placed and this should be recorded. The vertical position of the site within the height of the landform element may be the best measure:",
             "type": "string",
             "oneOf": [
@@ -3419,14 +3419,14 @@
         "LocationInToposequence": {
             "$anchor": "location-in-toposequence",
             "@id": "lf:Location-in-toposequence",
-            "title": "Location within the landform toposequence - enumeration",
+            "title": "Location within the landform toposequence",
             "description": "No vocabulary found.",
             "type": "string"
         },
         "MaterialStrength": {
             "$anchor": "material-strength",
             "@id": "subst:Material-strength",
-            "title": "Strength of substrate material - enumeration",
+            "title": "Strength of substrate material",
             "description": "The strength of a specimen of soil substrate material may be crudely estimated in the field by striking it with the head-end or the pick-end of a geological hammer or by trying to cut it with a knife, and then referring to Table 32 (ASLS Field Handbook). These estimates refer to the unconfined (or uniaxial) compressive strength. The strength is that of the intact material rather than that of the mass, the strength of which has generally been reduced by the development of fractures and other phenomena.",
             "type": "string",
             "oneOf": [
@@ -3455,7 +3455,7 @@
         "MicroreliefAgentBiotic": {
             "$anchor": "microrelief-agent-biotic",
             "@id": "ls:Microrelief-agent-biotic",
-            "title": "Biotic microrelief agents - enumeration",
+            "title": "Biotic microrelief agents",
             "description": "The biotic agents causing the relief.",
             "type": "string",
             "oneOf": [
@@ -3492,7 +3492,7 @@
         "MicroreliefComponentBiotic": {
             "$anchor": "microrelief-component-biotic",
             "@id": "ls:Microrelief-component-biotic",
-            "title": "Component of biotic relief - enumeration",
+            "title": "Component of biotic relief",
             "description": "The component of the biotic relief.",
             "type": "string",
             "oneOf": [
@@ -3529,7 +3529,7 @@
         "MicroreliefComponentSampled": {
             "$anchor": "microrelief-component-sampled",
             "@id": "ls:Microrelief-component-sampled",
-            "title": "Component of microrelief sampled - enumeration",
+            "title": "Component of microrelief sampled",
             "description": "Give the component of the microrelief in which the described soil profile is located.",
             "type": "string",
             "oneOf": [
@@ -3566,7 +3566,7 @@
         "MicroreliefProportionsGilgai": {
             "$anchor": "microrelief-proportions-gilgai",
             "@id": "ls:Microrelief-proportions-gilgai",
-            "title": "Proportions of gilgai components - enumeration",
+            "title": "Proportions of gilgai components",
             "description": "Give the proportions of gilgai components within the site, thus:",
             "type": "string",
             "oneOf": [
@@ -3591,7 +3591,7 @@
         "MicroreliefTypeGilgai": {
             "$anchor": "microrelief-type-gilgai",
             "@id": "ls:Microrelief-type-gilgai",
-            "title": "Type of gilgai microrelief - enumeration",
+            "title": "Type of gilgai microrelief",
             "description": "Gilgai is surface microrelief associated with soils containing shrink\u2013swell clays. It does not include microrelief that apparently results from repeated freezing and thawing, solifluxion or faunal activity. Gilgai consist of mounds and depressions showing varying degrees of order, sometimes separated by a subplanar or slightly undulating surface.",
             "type": "string",
             "oneOf": [
@@ -3624,7 +3624,7 @@
         "MicroreliefTypeHummocky": {
             "$anchor": "microrelief-type-hummocky",
             "@id": "ls:Microrelief-type-hummocky",
-            "title": "Type of hummocky microrelief - enumeration",
+            "title": "Type of hummocky microrelief",
             "description": "Hummocky microrelief is not thought to be associated with the shrink\u2013swell process involved in gilgai microrelief.",
             "type": "string",
             "oneOf": [
@@ -3641,8 +3641,8 @@
         "MicroreliefTypeOther": {
             "$anchor": "microrelief-type-other",
             "@id": "ls:Microrelief-type-other",
-            "title": "Type of other microrelief - enumeration",
-            "description": "Type of other microrelief - enumeration",
+            "title": "Type of other microrelief",
+            "description": "Type of other microrelief",
             "type": "string",
             "oneOf": [
                 {
@@ -3686,7 +3686,7 @@
         "MottleAbundance": {
             "$anchor": "mottle-abundance",
             "@id": "sp:Mottle-abundance",
-            "title": "Mottle abundance - enumeration",
+            "title": "Mottle abundance",
             "description": "The percentage of mottles is estimated by eye using the chart in Figure 11 (ASLSFH3Ed) for comparison. ",
             "type": "string",
             "oneOf": [
@@ -3715,7 +3715,7 @@
         "MottleColour": {
             "$anchor": "mottle-colour",
             "@id": "sp:Mottle-colour",
-            "title": "Mottle colour - enumeration",
+            "title": "Mottle colour",
             "description": "This should be described in terms of Munsell or Revised Standard Soil colours, but abbreviated forms can be used",
             "type": "string",
             "oneOf": [
@@ -3756,7 +3756,7 @@
         "MottleContrast": {
             "$anchor": "mottle-contrast",
             "@id": "sp:Mottle-contrast",
-            "title": "Mottle contrast - enumeration",
+            "title": "Mottle contrast",
             "description": "Mottle contrast",
             "type": "string",
             "oneOf": [
@@ -3777,7 +3777,7 @@
         "MottleDistinctness": {
             "$anchor": "mottle-distinctness",
             "@id": "sp:Mottle-distinctness",
-            "title": "Mottle distinctness of boundaries - enumeration",
+            "title": "Mottle distinctness of boundaries",
             "description": "Mottle distinctness of boundaries",
             "type": "string",
             "oneOf": [
@@ -3798,7 +3798,7 @@
         "MottleSize": {
             "$anchor": "mottle-size",
             "@id": "sp:Mottle-size",
-            "title": "Mottle size - enumeration",
+            "title": "Mottle size",
             "description": "Measure mottle size (mm) along the greatest dimension, except in streaks or linear forms where width is measured.",
             "type": "string",
             "oneOf": [
@@ -3823,7 +3823,7 @@
         "MottleType": {
             "$anchor": "mottle-type",
             "@id": "sp:Mottle-type",
-            "title": "Mottle or colour pattern type - enumeration",
+            "title": "Mottle or colour pattern type",
             "description": "The type of mottle can suggest the origin of the mottles.",
             "type": "string",
             "oneOf": [
@@ -3848,7 +3848,7 @@
         "PansCementation": {
             "$anchor": "pans-cementation",
             "@id": "sp:Pans-cementation",
-            "title": "Cementation of pan - enumeration",
+            "title": "Cementation of pan",
             "description": "Place a 30 mm diameter piece of the pan in water for 1 hour. If it slakes, it is uncemented; if not, it is cemented. The degree of cementation is assessed on the following scale after the 1 hour soaking in water.",
             "type": "string",
             "oneOf": [
@@ -3877,7 +3877,7 @@
         "PansContinuity": {
             "$anchor": "pans-continuity",
             "@id": "sp:Pans-continuity",
-            "title": "Continuity of pan - enumeration",
+            "title": "Continuity of pan",
             "description": "Continuity of pan",
             "type": "string",
             "oneOf": [
@@ -3898,7 +3898,7 @@
         "PansType": {
             "$anchor": "pans-type",
             "@id": "sp:Pans-type",
-            "title": "Type of pan - enumeration",
+            "title": "Type of pan",
             "description": "Type of pan",
             "type": "string",
             "oneOf": [
@@ -3970,7 +3970,7 @@
                 "sp:Pedality-grade-pedal",
                 "sp:Pedality-grade-apedal"
             ],
-            "title": "Pedal soil grades - enumeration",
+            "title": "Pedal soil grades",
             "description": "Pedal soils have observable peds and are divided into: sp:structure-pedality-grade-M, sp:structure-pedality-grade-S and sp:structure-pedality-grade-W. Apedal soils have no observable peds and are divided into: sp:structure-pedality-grade-G and sp:structure-pedality-grade-V",
             "type": "string",
             "oneOf": [
@@ -4154,7 +4154,7 @@
         "ProfileConstruction": {
             "$anchor": "profile-construction",
             "@id": "sp:Profile-construction",
-            "title": "Type of soil observation - enumeration",
+            "title": "Type of soil observation",
             "description": "The soil profile may be described using several types of observation.",
             "type": "string",
             "oneOf": [
@@ -4176,10 +4176,17 @@
                 }
             ]
         },
+        "ProfileType": {
+            "$anchor": "profile-type",
+            "@id": "unknown",
+            "title": "Type of soil profile",
+            "description": "No vocabulary found.",
+            "type": "string"
+        },
         "RockOutcropAbundance": {
             "$anchor": "rock-outcrop-abundance",
             "@id": "ls:Rock-outcrop-abundance",
-            "title": "Abundance of rock outcrop - enumeration",
+            "title": "Abundance of rock outcrop",
             "description": "Abundance of rock outcrop.",
             "type": "string",
             "oneOf": [
@@ -4212,7 +4219,7 @@
         "RelativeInclination": {
             "$anchor": "relative-inclination",
             "@id": "lf:Relative-inclination",
-            "title": "Relative inclination of slope elements - enumeration",
+            "title": "Relative inclination of slope elements",
             "description": "Although lower slopes are often gentler than upper slopes, they need not be so (Figure 1i). A separate morphological attribute expresses the relative inclination of adjacent landform elements in a toposequence.",
             "type": "string",
             "oneOf": [
@@ -4237,7 +4244,7 @@
         "Relief": {
             "$anchor": "relief",
             "@id": "lf:Relief",
-            "title": "Relief - enumeration",
+            "title": "Relief",
             "description": "Relief is defined as the difference in elevation between the high and low points of a land surface. Its estimation will be made easier by visualising two surfaces of accordance that are planar or gently curved, one touching the major crests of a landform pattern, and the other passing through the major depressions. The average vertical separation of the two surfaces is a measure of the relief. Make this estimation at a field site, either visually or by using a map, and express it in metres.\r\nRelief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Löffler (1974), and are broadly compatible with those of Löffler and Ruxton (1969).\r\nTable 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics.",
             "type": "string",
             "oneOf": [
@@ -4266,7 +4273,7 @@
         "RockAlteration": {
             "$anchor": "rock-alteration",
             "@id": "subst:Rock-alteration",
-            "title": "Alteration - enumeration",
+            "title": "Alteration",
             "description": "Substrate materials may be so extensively altered (as in deep weathering profiles) that it may be difficult or impossible to determine their original nature. Certain constituents may be either depleted or enriched. Thus, in many laterite profiles, some horizons are ferruginised, partially ferruginised and partially kaolinised, and the pallid zone kaolinised. Silicification may also be associated with deep weathering profiles although not exclusively so; for instance, some limestones may be variably silicified. In contrast, calcification, which is widespread in parts of southern Australia, is not usually associated with deep weathering.",
             "type": "string",
             "oneOf": [
@@ -4295,7 +4302,7 @@
         "RockGenesisHardenedArtificial": {
             "$anchor": "rock-genesis-hardened-artificial",
             "@id": "subst:Rock-genesis-hardened-artificial",
-            "title": "Artificially hardened materials - enumeration",
+            "title": "Artificially hardened materials",
             "type": "string",
             "oneOf": [
                 {
@@ -4315,7 +4322,7 @@
         "RockGenesisHardenedChemical": {
             "$anchor": "rock-genesis-hardened-chemical",
             "@id": "subst:Rock-genesis-hardened-chemical",
-            "title": "Chemically hardened materials - enumeration",
+            "title": "Chemically hardened materials",
             "type": "string",
             "oneOf": [
                 {
@@ -4347,7 +4354,7 @@
         "RockGenesisHardenedEvaporite": {
             "$anchor": "rock-genesis-hardened-evaporite",
             "@id": "subst:Rock-genesis-hardened-evaporite",
-            "title": "Evaporites - enumeration",
+            "title": "Evaporites",
             "type": "string",
             "oneOf": [
                 {
@@ -4367,7 +4374,7 @@
         "RockGenesisSediments": {
             "$anchor": "rock-genesis-sediments",
             "@id": "subst:Rock-genesis-sediments",
-            "title": "Sediments (unconsolidated) - enumeration",
+            "title": "Sediments (unconsolidated)",
             "type": "string",
             "oneOf": [
                 {
@@ -4447,7 +4454,7 @@
         "RockGenesisUnweathered": {
             "$anchor": "rock-genesis-unweathered",
             "@id": "subst:Rock-genesis-unweathered",
-            "title": "Unweathered rocks of the bedrock zone - enumeration",
+            "title": "Unweathered rocks of the bedrock zone",
             "type": "string",
             "oneOf": [
                 {
@@ -4495,7 +4502,7 @@
         "RockGenesisWeathered": {
             "$anchor": "rock-genesis-weathered",
             "@id": "subst:Rock-genesis-weathered",
-            "title": "Weathered rocks - enumeration",
+            "title": "Weathered rocks",
             "type": "string",
             "oneOf": [
                 {
@@ -4515,7 +4522,7 @@
         "RootAbundance": {
             "$anchor": "root-abundance",
             "@id": "sp:Root-abundance",
-            "title": "Root abundance - enumeration",
+            "title": "Root abundance",
             "description": "Number of roots per 0.01 m2 (100 mm × 100 mm)",
             "type": "string",
             "oneOf": [
@@ -4544,7 +4551,7 @@
         "RootSize": {
             "$anchor": "root-size",
             "@id": "sp:Root-size",
-            "title": "Root size - enumeration",
+            "title": "Root size",
             "description": "The size (diameter) of roots observed in the horizon in mm",
             "type": "string",
             "oneOf": [
@@ -4569,7 +4576,7 @@
         "Runoff": {
             "$anchor": "runoff",
             "@id": "ls:Runoff",
-            "title": "Runoff - enumeration",
+            "title": "Runoff",
             "description": "Runoff is the relative rate at which water runs off the soil surface. It is largely determined by slope, surface cover and soil infiltration rate. ",
             "type": "string",
             "oneOf": [
@@ -4602,7 +4609,7 @@
         "SegregationsAbundance": {
             "$anchor": "segregations-abundance",
             "@id": "sp:Segregations-abundance",
-            "title": "Abundance of segregations - enumeration",
+            "title": "Abundance of segregations",
             "description": "Abundance of segregations. Use figure 11 as a guide.",
             "type": "string",
             "oneOf": [
@@ -4635,7 +4642,7 @@
         "SegregationsForm": {
             "$anchor": "segregations-form",
             "@id": "sp:Segregations-form",
-            "title": "Form of segregations - enumeration",
+            "title": "Form of segregations",
             "description": "Form of segregations",
             "type": "string",
             "oneOf": [
@@ -4680,7 +4687,7 @@
         "SegregationsMagneticAttributes": {
             "$anchor": "segregations-magnetic-attributes",
             "@id": "sp:Segregations-magnetic-attributes",
-            "title": "Magnetic attributes of segregations - enumeration",
+            "title": "Magnetic attributes of segregations",
             "description": "attraction to surface of hand-held magnet",
             "type": "string",
             "oneOf": [
@@ -4697,7 +4704,7 @@
         "SegregationsNature": {
             "$anchor": "segregations-nature",
             "@id": "sp:Segregations-nature",
-            "title": "Nature of segregations - enumeration",
+            "title": "Nature of segregations",
             "description": "Nature of segregations",
             "type": "string",
             "oneOf": [
@@ -4762,7 +4769,7 @@
         "SegregationsSize": {
             "$anchor": "segregations-size",
             "@id": "sp:Segregations-size",
-            "title": "Size of segregations - enumeration",
+            "title": "Size of segregations",
             "description": "Approximately equidimensional segregations (concretions, nodules) are measured in the greatest dimension. Segregations where one dimension is much greater than the other two (tubules, root linings, veins, laminae) are measured in the least dimension",
             "type": "string",
             "oneOf": [
@@ -4791,7 +4798,7 @@
         "SegregationsStrength": {
             "$anchor": "segregations-strength",
             "@id": "sp:Segregations-strength",
-            "title": "Strength of segregations - enumeration",
+            "title": "Strength of segregations",
             "description": "Strength may be recorded where appropriate",
             "type": "string",
             "oneOf": [
@@ -4808,7 +4815,7 @@
         "SlopeClass": {
             "$anchor": "slope-class",
             "@id": "lf:Slope-class",
-            "title": "Class of slope - enumeration",
+            "title": "Class of slope",
             "description": "Slope classes are defined in Table 2. The optional word \u2018inclined\u2019 is used to distinguish slope from other attributes, for example \u2018gently inclined footslope\u2019 from \u2018gently undulating rises\u2019, and \u2018moderately inclined hillslope\u2019 from \u2018moderately spaced streams\u2019.\r\nThe class boundaries given in Table 2, and repeated in Table 4, are simply boundaries separating slope terms in common use, adjusted to regular logarithmic intervals. They do not refer to observed natural clustering of slope values, since such clustering has not been shown to occur; nor do they relate precisely to boundary criteria for land use, which vary arbitrarily between organisations and which may change with advancing technology.\r\nIt may sometimes be advantageous to split each of the classes \u2018very gently inclined\u2019, \u2018gently inclined\u2019 and \u2018moderately inclined\u2019 into two levels, the appropriate boundary values being 1.8%, 5.6% and 18%.\r\nThere may also be compelling reasons for using other schemes of slope classes. However, schemes that do not have constant class widths from low to high slope values can lead to problems in subsequent statistical work.",
             "type": "string",
             "oneOf": [
@@ -4849,7 +4856,7 @@
         "SlopeModal": {
             "$anchor": "slope-modal",
             "@id": "lf:Slope-modal",
-            "title": "Modal slope - enumeration",
+            "title": "Modal slope",
             "description": "Modal slope is defined as the most common class of slope occurring in a landform pattern. Where slope classes have been obtained by systematic sampling, define the classes using equal increments on a scale of the logarithm of the slope tangent, a procedure intended to normalise frequency distributions of observed slope (Speight 1971). Where the most common slope class is estimated by direct observation, it is thought that the estimate will compare with that calculated using the log-normal model.\r\nModal slope class determines the use of certain adjectives applied to landform patterns that are characterised by alternating crests and depressions. These are: rolling for moderate modal slopes (10\u201332%); undulating for gentle slopes (3\u201310%); and gently undulating for very gentle slopes (1\u20133%) (compare with Soil Survey Staff 1951, pages 161\u2013165). The other slope classes, precipitous, very steep, steep and level, are to be applied as they stand. The terminology for simple erosional landform patterns based on relief and modal slope is given in Table 5.\r\nTable 5 defines the category badlands by various combinations of high slope values and low relief values. These combinations imply extremely close spacing of streams or valleys. Specifically, if one assumes a sawtooth terrain profile, the valley spacing implied is less than 100 m in areas with 50 m relief and less than 30 m in areas with 5 m relief; these values appear to accord with usage.\r\nTable 7 lists types of landform pattern in order of their typical class of modal slope. This table should not be regarded as definitive, for slope within each type of landform pattern may vary widely.",
             "type": "string",
             "oneOf": [
@@ -4878,7 +4885,7 @@
         "SlopeProcedure": {
             "$anchor": "slope-procedure",
             "@id": "lf:Slope-procedure",
-            "title": "Means of evaluation of slope - enumeration",
+            "title": "Means of evaluation of slope",
             "description": "Means of evaluation of slope",
             "type": "string",
             "oneOf": [
@@ -4903,7 +4910,7 @@
         "SoilPermeability": {
             "$anchor": "soil-permeability",
             "@id": "sp:Soil-permeability",
-            "title": "Permeability - enumeration",
+            "title": "Permeability",
             "description": "Permeability is independent of climate and drainage, and – as applied to a soil – is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink–swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).",
             "type": "string",
             "oneOf": [
@@ -5019,7 +5026,7 @@
         "SubstrateDiscontinuitySpacing": {
             "$anchor": "substrate-discontinuity-spacing",
             "@id": "subst:Substrate-discontinuity-spacing",
-            "title": "Spacing of discontinuities - enumeration",
+            "title": "Spacing of discontinuities",
             "description": "Physical weathering opens up fissures or joints that reduce the strength of the rock mass relative to that of the intact rock material.  These fissures generally increase in number towards the land surface.  The following categories of discontinuity spacing apply (Deere 1968, Selby 1982):",
             "type": "string",
             "oneOf": [
@@ -5048,7 +5055,7 @@
         "SubstrateGrainSize": {
             "$anchor": "substrate-grain-size",
             "@id": "subst:Substrate-grain-size",
-            "title": "Grain size - enumeration",
+            "title": "Grain size",
             "description": "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin.",
             "type": "string",
             "oneOf": [
@@ -5069,7 +5076,7 @@
         "SubstrateMineralComposition": {
             "$anchor": "substrate-mineral-composition",
             "@id": "subst:Substrate-mineral-composition",
-            "title": "Mineral composition - enumeration",
+            "title": "Mineral composition",
             "description": "Make provision for recording one dominant mineral and one or two minor minerals, as identified by inspection of the hand specimen.",
             "type": "string",
             "oneOf": [
@@ -5118,7 +5125,7 @@
         "SurfaceCondition": {
             "$anchor": "surface-condition",
             "@id": "sp:Surface-condition",
-            "title": "Condition of surface soil when dry - enumeration",
+            "title": "Condition of surface soil when dry",
             "description": "Many surface soils have a characteristic appearance when dry. Because surface conditions are often relevant to the use of the soil and indicative of particular kinds of soil, every effort should be made to observe the surface condition in the dry state. The surface conditions are not necessarily mutually exclusive:",
             "type": "string",
             "oneOf": [

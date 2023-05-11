@@ -27,8 +27,7 @@
                 "hasLandform",
                 "hasLandSurface",
                 "relatedProject",
-                "relatedSoilSurface",
-                "purpose"
+                "relatedSoilSurface"
             ],
             "properties": {
                 "id": {"$ref": "./base.json#id"},
@@ -114,7 +113,7 @@
                 "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-object"},
                 "scopedIdentifier": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#scopedIdentifier"}
+                    "items": {"$ref": "./base.json#scopedIdentifier"}
                 }
             },
             "additionalProperties": false
@@ -508,7 +507,7 @@
                 },
                 "scopedIdentifier": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#scopedIdentifier"}
+                    "items": {"$ref": "./base.json#scopedIdentifier"}
                 }
             },
             "additionalProperties": false
@@ -582,7 +581,7 @@
                 },
                 "scopedIdentifier": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#scopedIdentifier"}
+                    "items": {"$ref": "./base.json#scopedIdentifier"}
                 }
             },
             "additionalProperties": false
@@ -648,6 +647,7 @@
                 "ansisType": {
                     "type": "array",
                     "items": {
+						"$ref": "./properties.json#value",
                         "type": "string",
                         "$comment": "No defintion of substrate type."
                     }
@@ -702,13 +702,18 @@
                 "hasFeatureOfInterest": {"$ref": "./sosa.json#hasFeatureOfInterest"},
                 "hasResult": {
                     "type": "array",
-                    "items": {"$ref": "./sosa.json#hasResult"}
+                    "items": {
+                    	"oneOf": [
+							{"$ref": "./sosa.json#hasResult-Observation"},
+							{"$ref": "./sosa.json#hasResult-SoilSample"}
+                    	]
+                    }
                 },
                 "madeByActuator": {"$ref": "./sosa.json#madeByActuator"},
                 "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
                 "relatedActivity": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedActivity"}
+                    "items": {"$ref": "./properties.json#relatedActivity-link"}
                 },
                 "resultTime": {"$ref": "./sosa.json#resultTime"},
                 "usedProcedure": {
@@ -1205,15 +1210,15 @@
                 "lithology": {"$ref": "./properties.json#lithology"},
                 "relatedLandsurveySite": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedLandSurveySite"}
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
                 },
                 "relatedSample": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSample"}
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
                 },
                 "relatedSite": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSite"}
+                    "items": {"$ref": "./properties.json#relatedSite-link"}
                 }
             },
             "additionalProperties": false
