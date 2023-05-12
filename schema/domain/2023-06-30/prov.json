@@ -106,7 +106,8 @@
                     "items": {"$ref": "#Organization"}
                 },
                 "name": {"$ref": "./base.json#name"},
-                "label": {"$ref": "./base.json#label"}
+                "label": {"$ref": "./base.json#label"},
+                "scopedIdentifier": {"$ref": "./base.json#scopedIdentifier"}
             },
             "additionalProperties": false
         },
