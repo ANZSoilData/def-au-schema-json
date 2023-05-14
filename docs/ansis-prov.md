@@ -54,7 +54,7 @@ JSON Schema definitions of the PROV Ontology entities used by ANSIS.
 | name | 0..1 |  |  |  | A name for some thing. |
 
 
-### prov:Project
+### proj:Project
 
 *PROJ Project*. A Project is a planned activity with a budget, a sponsor, and a leader.
 
