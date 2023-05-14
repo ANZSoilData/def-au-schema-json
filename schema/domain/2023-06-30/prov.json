@@ -122,7 +122,10 @@
                 "string",
                 "null"
             ],
-            "format": "date-time"
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
         },
         "startedAtTime": {
             "$anchor": "startedAtTime",
@@ -135,7 +138,10 @@
                 "string",
                 "null"
             ],
-            "format": "date-time"
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
         }
     }
 }
