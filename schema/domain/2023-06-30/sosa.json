@@ -363,12 +363,12 @@
             "title": "Used Procedure",
             "description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
             "$defs": {
-            	"Concept": {
+                "Concept": {
                     "$anchor": "usedProcedure",
-					"type": "object",
-					"description": "skos:Concept Link.",
-					"$ref": "./base.json#Entity_Link"
-            	},
+                    "type": "object",
+                    "description": "skos:Concept Link.",
+                    "$ref": "./base.json#Entity_Link"
+                },
                 "SoilProfile": {
                     "$anchor": "usedProcedure-ProfileConstruction",
                     "$ref": "./enum.json#profile-construction"

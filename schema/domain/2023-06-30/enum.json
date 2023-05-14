@@ -4996,7 +4996,7 @@
             "title": "Compound pedality",
             "description": "Compound pedality occurs where large peds part along natural planes of weakness to form smaller peds, which may again part to smaller peds, and so on to the smallest or primary peds.\r\nPrimary peds are the simplest peds occurring in soil material; they cannot be divided into smaller peds, but may be packed together to form compound peds of a higher level of organisation (Brewer 1964).\r\nThe order of peds and relationship of one to the other is important and may be described as the larger peds parting to the smaller and further where necessary. For example, 'strong 50-100 mm columnar, parting to moderate 20-50 mm prismatic, parting to moderate\r\n10-20 mm angular blocky'. The word 'parting' and not 'breaking' is used. The term 'breaking' is used when soil is fractured along planes other than natural planes of weakness.\r\n1\tLargest peds (in the type of soil observation described), parting to\r\n2\tNext size peds, parting to\r\n3\tNext size peds, ... and further, if required, to the primary ped.",
             "type": "string",
-			"$comment": "No skos:members found."
+            "$comment": "No skos:members found."
         },
         "SubstrateConfidence": {
             "$anchor": "substrate-confidence",

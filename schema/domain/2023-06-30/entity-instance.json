@@ -6,44 +6,18 @@
     "$comment": "Split into a small schema as having this in the entities.json schema appears to overload parsers.",
     "type": "object",
     "oneOf": [
-        {
-            "$ref": "./entities.json#SoilSite"
-        },
-        {
-            "$ref": "./entities.json#SoilProfile"
-        },
-        {
-            "$ref": "./entities.json#SoilBody"
-        },
-        {
-            "$ref": "./entities.json#SoilLayer"
-        },
-        {
-            "$ref": "./entities.json#SoilHorizon"
-        },
-        {
-            "$ref": "./entities.json#SoilSample"
-        },
-        {
-            "$ref": "./entities.json#SoilSurface"
-        },
-        {
-            "$ref": "./entities.json#Substrate"
-        },
-        {
-            "$ref": "./entities.json#Treatment"
-        },
-        {
-            "$ref": "./entities.json#LandSurveySite"
-        },
-        {
-            "$ref": "./sosa.json#Observation"
-        },
-		{
-			"$ref": "./sosa.json#Sample"
-		},
-		{
-			"$ref": "./sosa.json#Sampling"
-		}
+        {"$ref": "./entities.json#SoilSite"},
+        {"$ref": "./entities.json#SoilProfile"},
+        {"$ref": "./entities.json#SoilBody"},
+        {"$ref": "./entities.json#SoilLayer"},
+        {"$ref": "./entities.json#SoilHorizon"},
+        {"$ref": "./entities.json#SoilSample"},
+        {"$ref": "./entities.json#SoilSurface"},
+        {"$ref": "./entities.json#Substrate"},
+        {"$ref": "./entities.json#Treatment"},
+        {"$ref": "./entities.json#LandSurveySite"},
+        {"$ref": "./sosa.json#Observation"},
+        {"$ref": "./sosa.json#Sample"},
+        {"$ref": "./sosa.json#Sampling"}
     ]
 }
