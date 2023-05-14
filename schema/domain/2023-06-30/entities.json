@@ -646,7 +646,7 @@
                 "ansisType": {
                     "type": "array",
                     "items": {
-						"$ref": "./properties.json#value",
+                        "$ref": "./properties.json#value",
                         "type": "string",
                         "$comment": "No defintion of substrate type."
                     }
@@ -702,10 +702,10 @@
                 "hasResult": {
                     "type": "array",
                     "items": {
-                    	"oneOf": [
-							{"$ref": "./sosa.json#hasResult-Observation"},
-							{"$ref": "./sosa.json#hasResult-SoilSample"}
-                    	]
+                        "oneOf": [
+                            {"$ref": "./sosa.json#hasResult-Observation"},
+                            {"$ref": "./sosa.json#hasResult-SoilSample"}
+                        ]
                     }
                 },
                 "madeByActuator": {"$ref": "./sosa.json#madeByActuator"},
@@ -1053,10 +1053,10 @@
                     "const": "ansis:Microrelief"
                 },
                 "component": {"$ref": "./properties.json#component-microrelief-sampled"},
-                "hasMicrorelief-biotic": {"$ref": "./properties.json#hasMicrorelief-biotic"},
-                "hasMicrorelief-gilgai": {"$ref": "./properties.json#hasMicrorelief-gilgai"},
-                "hasMicrorelief-hummocky": {"$ref": "./properties.json#hasMicrorelief-hummocky"},
-                "hasMicrorelief-other": {"$ref": "./properties.json#hasMicrorelief-other"},
+                "hasMicrorelief_biotic": {"$ref": "./properties.json#hasMicrorelief-biotic"},
+                "hasMicrorelief_gilgai": {"$ref": "./properties.json#hasMicrorelief-gilgai"},
+                "hasMicrorelief_hummocky": {"$ref": "./properties.json#hasMicrorelief-hummocky"},
+                "hasMicrorelief_other": {"$ref": "./properties.json#hasMicrorelief-other"},
                 "height": {"$ref": "./properties.json#height"},
                 "length": {"$ref": "./properties.json#length"}
             },
