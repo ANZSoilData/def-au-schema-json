@@ -156,33 +156,15 @@
                             "properties": {
                                 "hasResult": {
                                     "oneOf": [
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-bio"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-extra"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-gravity"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-ice"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-internal"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-precipitation"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-stand"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-streamflow"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#geomorphology-agent-wind"
-                                        }
+                                        {"$ref": "./enum.json#geomorphology-agent-bio"},
+                                        {"$ref": "./enum.json#geomorphology-agent-extra"},
+                                        {"$ref": "./enum.json#geomorphology-agent-gravity"},
+                                        {"$ref": "./enum.json#geomorphology-agent-ice"},
+                                        {"$ref": "./enum.json#geomorphology-agent-internal"},
+                                        {"$ref": "./enum.json#geomorphology-agent-precipitation"},
+                                        {"$ref": "./enum.json#geomorphology-agent-stand"},
+                                        {"$ref": "./enum.json#geomorphology-agent-streamflow"},
+                                        {"$ref": "./enum.json#geomorphology-agent-wind"}
                                     ]
                                 }
                             }
@@ -323,8 +305,8 @@
                     "range@type": "skos:Concept",
                     "description": "Pedality.",
                     "oneOf": [
-						{"$ref": "./enum.json#artificial-aggregates-structure"},
-						{"$ref": "./enum.json#pedality-type"}
+                        {"$ref": "./enum.json#artificial-aggregates-structure"},
+                        {"$ref": "./enum.json#pedality-type"}
                     ]
                 },
                 "plasticity": {
@@ -756,33 +738,15 @@
                             "properties": {
                                 "hasResult": {
                                     "oneOf": [
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-gully"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-mass-movement"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-rill"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-scald"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-sheet"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-stream-bank"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-tunnel"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-wave"
-                                        },
-                                        {
-                                            "$ref": "./enum.json#erosion-severity-wind"
-                                        }
+                                        {"$ref": "./enum.json#erosion-severity-gully"},
+                                        {"$ref": "./enum.json#erosion-severity-mass-movement"},
+                                        {"$ref": "./enum.json#erosion-severity-rill"},
+                                        {"$ref": "./enum.json#erosion-severity-scald"},
+                                        {"$ref": "./enum.json#erosion-severity-sheet"},
+                                        {"$ref": "./enum.json#erosion-severity-stream-bank"},
+                                        {"$ref": "./enum.json#erosion-severity-tunnel"},
+                                        {"$ref": "./enum.json#erosion-severity-wave"},
+                                        {"$ref": "./enum.json#erosion-severity-wind"}
                                     ]
                                 }
                             }
@@ -1501,14 +1465,14 @@
                     "required": ["hasResult"],
                     "properties": {
                         "hasResult": {
-                        	"oneOf": [
-								{"$ref": "./enum.json#rock-genesis-hardened-artificial"},
-								{"$ref": "./enum.json#rock-genesis-hardened-chemical"},
-								{"$ref": "./enum.json#rock-genesis-hardened-evaporite"},
-								{"$ref": "./enum.json#rock-genesis-sediments"},
-								{"$ref": "./enum.json#rock-genesis-unweathered"},
-								{"$ref": "./enum.json#rock-genesis-weathered"}
-                        	]
+                            "oneOf": [
+                                {"$ref": "./enum.json#rock-genesis-hardened-artificial"},
+                                {"$ref": "./enum.json#rock-genesis-hardened-chemical"},
+                                {"$ref": "./enum.json#rock-genesis-hardened-evaporite"},
+                                {"$ref": "./enum.json#rock-genesis-sediments"},
+                                {"$ref": "./enum.json#rock-genesis-unweathered"},
+                                {"$ref": "./enum.json#rock-genesis-weathered"}
+                            ]
                         }
                     }
                 },
@@ -1549,7 +1513,7 @@
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#geomorphology-mode"}
+                        "hasResult": {"$ref": "./enum.json#geomorphology-status"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1933,12 +1897,12 @@
                     "required": ["hasResult"],
                     "properties": {
                         "hasResult": {
-                        	"oneOf": [
-								{"$ref": "./enum.json#lithology-coarse-fragments"},
-								{"$ref": "./enum.json#lithology-rock"},
-								{"$ref": "./enum.json#lithology-rock-outcrop"},
-								{"$ref": "./enum.json#lithology-unconsolidated"}
-                        	]
+                            "oneOf": [
+                                {"$ref": "./enum.json#lithology-coarse-fragments"},
+                                {"$ref": "./enum.json#lithology-rock"},
+                                {"$ref": "./enum.json#lithology-rock-outcrop"},
+                                {"$ref": "./enum.json#lithology-unconsolidated"}
+                            ]
                         }
                     }
                 },
@@ -2935,10 +2899,10 @@
                         {
                             "properties": {
                                 "hasResult": {
-                                	"oneOf": [
-										{"$ref": "./enum.json#field-texture-mineral"},
-										{"$ref": "./enum.json#field-texture-organic"}
-                                	]
+                                    "oneOf": [
+                                        {"$ref": "./enum.json#field-texture-mineral"},
+                                        {"$ref": "./enum.json#field-texture-organic"}
+                                    ]
                                 }
                             }
                         },
