@@ -256,84 +256,72 @@
                     "$anchor": "ansis-type-cutans",
                     "range@type": "skos:Concept",
                     "description": "Cutans.",
-                    "type": "object",
                     "$ref": "./enum.json#cutans-type"
                 },
                 "erosion": {
                     "$anchor": "ansis-type-erosion",
                     "range@type": "skos:Concept",
                     "description": "Erosion.",
-                    "type": "object",
                     "$ref": "./enum.json#erosion-type"
                 },
                 "fabric": {
                     "$anchor": "ansis-type-fabric",
                     "range@type": "skos:Concept",
                     "description": "Fabric.",
-                    "type": "object",
                     "$ref": "./enum.json#fabric-type"
                 },
                 "landformElement": {
                     "$anchor": "ansis-type-landform-element-name",
                     "range@type": "skos:Concept",
                     "description": "Landform element.",
-                    "type": "object",
                     "$ref": "./enum.json#landform-element-name"
                 },
                 "landformPattern": {
                     "$anchor": "ansis-type-landform-pattern-name",
                     "range@type": "skos:Concept",
                     "description": "Landform pattern.",
-                    "type": "object",
                     "$ref": "./enum.json#landform-pattern-name"
                 },
                 "landformPattern_erosional": {
                     "$anchor": "ansis-type-landform-pattern-erosional",
                     "range@type": "skos:Concept",
                     "description": "Landform pattern - erosional.",
-                    "type": "object",
                     "$ref": "./enum.json#landform-pattern-erosional"
                 },
                 "microrelief-gilgai": {
                     "$anchor": "ansis-type-microrelief-gilgai",
                     "range@type": "skos:Concept",
                     "description": "Microrelief - Gilgai.",
-                    "type": "object",
                     "$ref": "./enum.json#microrelief-type-gilgai"
                 },
                 "microrelief-hummocky": {
                     "$anchor": "ansis-type-microrelief-hummocky",
                     "range@type": "skos:Concept",
                     "description": "Microrelief - Hummocky.",
-                    "type": "object",
                     "$ref": "./enum.json#microrelief-type-hummocky"
                 },
                 "microrelief-other": {
                     "$anchor": "ansis-type-microrelief-other",
                     "range@type": "skos:Concept",
                     "description": "Microrelief - Other.",
-                    "type": "object",
                     "$ref": "./enum.json#microrelief-type-other"
                 },
                 "mottle": {
                     "$anchor": "ansis-type-mottle",
                     "range@type": "skos:Concept",
                     "description": "Mottle.",
-                    "type": "object",
                     "$ref": "./enum.json#mottle-type"
                 },
                 "pans": {
                     "$anchor": "ansis-type-pans",
                     "range@type": "skos:Concept",
                     "description": "Pan.",
-                    "type": "object",
                     "$ref": "./enum.json#pans-type"
                 },
                 "pedality": {
                     "$anchor": "ansis-type-pedality",
                     "range@type": "skos:Concept",
                     "description": "Pedality.",
-                    "type": "object",
                     "oneOf": [
 						{"$ref": "./enum.json#artificial-aggregates-structure"},
 						{"$ref": "./enum.json#pedality-type"}
@@ -343,28 +331,24 @@
                     "$anchor": "ansis-type-soil-plasticity",
                     "range@type": "skos:Concept",
                     "description": "Plasticity.",
-                    "type": "object",
                     "$ref": "./enum.json#consistence-plasticity-type"
                 },
                 "site": {
                     "$anchor": "ansis-type-site",
                     "range@type": "ansis:SiteType",
                     "description": "Site.",
-                    "type": "object",
                     "$ref": "./entities.json#SiteType"
                 },
                 "soilSample": {
                     "$anchor": "ansis-type-sample",
                     "range@type": "ansis:SoilSampleType",
                     "description": "Soil Sample.",
-                    "type": "object",
                     "$ref": "./entities.json#SoilSampleType"
                 },
                 "soilProfile": {
                     "$anchor": "ansis-type-soil-profile",
                     "range@type": "skos:Concept",
                     "description": "Soil Profile.",
-                    "type": "object",
                     "$ref": "./enum.json#profile-type"
                 }
             }
