@@ -45,6 +45,15 @@
             "type": "string",
             "format": "iri"
         },
+        "href": {
+            "$anchor": "href",
+            "range@type": "xs:anyURI",
+            "title": "HREF",
+            "description": "a string whose value is a URI-reference [RFC3986 Section 4.1] pointing to a link’s target.",
+            "$comment": "After: https://jsonapi.org/format/#auto-id--link-objects",
+            "type": "string",
+            "format": "iri"
+        },
         "label": {
             "$anchor": "label",
             "@id": "rdfs:label",
@@ -81,12 +90,20 @@
             "title": "ANSIS Entity Link",
             "description": "A simple object supporting a link (id and pointer) to another entity with extra properties to help label the link, or clarify the type of target.",
             "type": "object",
-            "required": ["id"],
+            "oneOf": [
+                {
+                    "required": ["id"]
+                },
+                {
+                    "required": ["href"]
+                }
+            ],
             "properties": {
                 "id": {"$ref": "#id"},
+                "href": {"$ref": "#href"},
                 "pointer": {"$ref": "#pointer"},
                 "type": {"$ref": "#type"},
-                "label": {"$ref": "#label"}
+                "title": {"$ref": "#label"}
             },
             "additionalProperties": false
         },
