@@ -666,55 +666,6 @@
             },
             "additionalProperties": false
         },
-        "Treatment": {
-            "$anchor": "Treatment",
-            "@id": "ansis:Treatment",
-            "title": "ANSIS Treatment",
-            "description": "Intervention or treatment. Type of sosa:Actuation.",
-            "type": "object",
-            "required": [
-                "type",
-                "actsOnProperty",
-                "hasFeatureOfInterest",
-                "hasResult",
-                "madeByActuator",
-                "resultTime"
-            ],
-            "ansisPreferred": ["phenomenonTime"],
-            "properties": {
-                "id": {"$ref": "./base.json#id"},
-                "type": {
-                    "$ref": "./base.json#type",
-                    "const": "ansis:Treatment"
-                },
-                "actsOnProperty": {
-                    "type": "array",
-                    "items": {"$ref": "./sosa.json#actsOnProperty"}
-                },
-                "hasFeatureOfInterest": {"$ref": "./sosa.json#hasFeatureOfInterest"},
-                "hasResult": {
-                    "type": "array",
-                    "items": {
-                        "oneOf": [
-                            {"$ref": "./sosa.json#hasResult-Observation"},
-                            {"$ref": "./sosa.json#hasResult-SoilSample"}
-                        ]
-                    }
-                },
-                "madeByActuator": {"$ref": "./sosa.json#madeByActuator"},
-                "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
-                "relatedActivity": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#relatedActivity-link"}
-                },
-                "resultTime": {"$ref": "./sosa.json#resultTime"},
-                "usedProcedure": {
-                    "type": "array",
-                    "items": {"$ref": "./sosa.json#usedProcedure"}
-                }
-            },
-            "additionalProperties": false
-        },
         "CoarseFragments": {
             "$anchor": "CoarseFragments",
             "@id": "ansis:CoarseFragments",
@@ -1302,7 +1253,7 @@
                 "id": {"$ref": "./base.json#id"},
                 "type": {
                     "$ref": "./base.json#type",
-                    "const": "ansis:SoilClassification"
+                    "const": "ansis:Classification"
                 },
                 "value": {
                     "$ref": "./properties.json#value-string",
@@ -1467,10 +1418,7 @@
                 "relatedActivity": {
                     "type": "array",
                     "items": {
-                        "oneOf": [
-                            {"$ref": "./properties.json#relatedActivity-sampling"},
-                            {"$ref": "./properties.json#relatedActivity-treatment"}
-                        ]
+                    	"$ref": "./properties.json#relatedActivity-sampling"
                     }
                 },
                 "relatedLandsurveySite": {"$ref": "./properties.json#relatedLandSurveySite-link"},
