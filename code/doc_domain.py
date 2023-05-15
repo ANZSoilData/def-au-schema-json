@@ -398,20 +398,21 @@ def open_json_property(json_schema_path, json_schema_file, json_pointer):
     schema_definitions = pandas.DataFrame(schema_root["$defs"])
 
     def_dict = {}
+    def_dict_value = {}
+    def_dict_nested_value = {}
 
     for def_key, def_value in schema_definitions.items():
         if dpath.get(def_value, "/$anchor", default = "") == target_anchor:
             print("Found anchor " + target_anchor + " in " + def_key + " ...")
-            def_dict["nestedValue"] = {}
-            def_dict["value"] = def_value
+            def_dict_value = def_value
             break
-        if "$defs" in def_value and isinstance(def_value["$defs"], dict):
-            def_dict["value"] = def_value
-            nested_schema_definitions = pandas.DataFrame(def_value["$defs"])
+        nested_schema_definitions = dpath.get(def_value, "/$defs", default = {})
+        if isinstance(nested_schema_definitions, dict):
             for nested_def_key, nested_def_value in nested_schema_definitions.items():
                 if nested_def_value["$anchor"] == target_anchor:
                     print("Found nested anchor " + target_anchor + " in " + nested_def_key + " ...")
-                    def_dict["nestedValue"] = nested_def_value
+                    def_dict_value = def_value
+                    def_dict_nested_value = nested_def_value
                     break
 
     range_list = []
@@ -445,6 +446,8 @@ def open_json_property(json_schema_path, json_schema_file, json_pointer):
     if isinstance(nested_range_list_value, str):
         nested_range_list.append(nested_range_list_value)
 
+    def_dict["value"] = def_dict_value
+    def_dict["nestedValue"] = def_dict_nested_value
     def_dict["range@type"] = range_list
     def_dict["nestedRange@type"] = nested_range_list
 
@@ -479,18 +482,18 @@ def open_json_enum(json_schema_path, json_schema_file, json_pointer):
 
     return def_dict
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
 
-# json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
 
-# json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
