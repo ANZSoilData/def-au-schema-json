@@ -1613,7 +1613,7 @@
         "hasLandCover": {
             "$anchor": "hasLandCover",
             "@id": "ansis:hasLandCover",
-            "range@type": "ansis:LandCover",
+            "range@type": "ansis:Classification",
             "title": "has land cover",
             "description": "A description of land cover.",
             "type": "object",
@@ -1622,7 +1622,7 @@
         "hasLandManagement": {
             "$anchor": "hasLandManagement",
             "@id": "ansis:hasLandManagement",
-            "range@type": "ansis:LandManagement",
+            "range@type": "ansis:Classification",
             "title": "has land management",
             "description": "A description of land management.",
             "type": "object",
