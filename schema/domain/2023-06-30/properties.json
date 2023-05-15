@@ -317,15 +317,15 @@
                 },
                 "site": {
                     "$anchor": "ansis-type-site",
-                    "range@type": "skos:Concept",
+                    "range@type": "ansis:Classification",
                     "description": "Site.",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./entities.json#Classification"
                 },
                 "soilSample": {
                     "$anchor": "ansis-type-sample",
-                    "range@type": "skos:Concept",
+                    "range@type": "ansis:Classification",
                     "description": "Soil Sample.",
-                    "$ref": "./enum.json#tobedefined"
+                    "$ref": "./entities.json#Classification"
                 },
                 "soilProfile": {
                     "$anchor": "ansis-type-soil-profile",
