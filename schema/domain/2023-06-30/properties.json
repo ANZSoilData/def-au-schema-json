@@ -317,21 +317,27 @@
                 },
                 "site": {
                     "$anchor": "ansis-type-site",
-                    "range@type": "ansis:SiteType",
+                    "range@type": "skos:Concept",
                     "description": "Site.",
-                    "$ref": "./entities.json#SiteType"
+                    "$ref": "./enum.json#tobedefined"
                 },
                 "soilSample": {
                     "$anchor": "ansis-type-sample",
-                    "range@type": "ansis:SoilSampleType",
+                    "range@type": "skos:Concept",
                     "description": "Soil Sample.",
-                    "$ref": "./entities.json#SoilSampleType"
+                    "$ref": "./enum.json#tobedefined"
                 },
                 "soilProfile": {
                     "$anchor": "ansis-type-soil-profile",
-                    "range@type": "skos:Concept",
+                    "range@type": "ansis:Classification",
                     "description": "Soil Profile.",
-                    "$ref": "./enum.json#profile-type"
+                    "$ref": "./entities.json#Classification"
+                },
+                "substrate": {
+                    "$anchor": "ansis-type-substrate",
+                    "range@type": "ansis:Classification",
+                    "description": "Substrate.",
+                    "$ref": "./entities.json#Classification"
                 }
             }
         },
@@ -455,16 +461,16 @@
             "@id": "ansis:classification",
             "range@type": [
                 "sosa:ObservableProperty",
-                "ansis:SoilClassification"
+                "ansis:Classification"
             ],
             "title": "has classification",
-            "description": "Classification of the soil body or profile.",
+            "description": "Classification of a soil body, profile or landscape entity.",
             "type": "object",
             "allOf": [
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./entities.json#SoilClassification"}
+                        "hasResult": {"$ref": "./entities.json#Classification"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}
@@ -1025,20 +1031,20 @@
         "designSite": {
             "$anchor": "design-site",
             "@id": "ansis:design-site",
-            "range@type": "ansis:SoilSite-design",
+            "range@type": "ansis:Classification",
             "title": "site design",
             "description": "Overall design of sampling at the site e.g. ASLS, grid, transect.",
             "type": "object",
-            "$ref": "./entities.json#SoilSite-design"
+            "$ref": "./entities.json#Classification"
         },
         "designSurvey": {
             "$anchor": "design-survey",
             "@id": "ansis:design-survey",
-            "range@type": "ansis:Survey-design",
+            "range@type": "ansis:Classification",
             "title": "survey design",
             "description": "Overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous.",
             "type": "object",
-            "$ref": "./entities.json#Survey-design"
+            "$ref": "./entities.json#Classification"
         },
         "designation": {
             "$anchor": "designation",
@@ -1611,7 +1617,7 @@
             "title": "has land cover",
             "description": "A description of land cover.",
             "type": "object",
-            "$ref": "./entities.json#LandCover"
+            "$ref": "./entities.json#Classification"
         },
         "hasLandManagement": {
             "$anchor": "hasLandManagement",
@@ -1620,7 +1626,7 @@
             "title": "has land management",
             "description": "A description of land management.",
             "type": "object",
-            "$ref": "./entities.json#LandManagement"
+            "$ref": "./entities.json#Classification"
         },
         "hasLandSurface": {
             "$anchor": "hasLandSurface",
@@ -1634,11 +1640,11 @@
         "hasLandUse": {
             "$anchor": "hasLandUse",
             "@id": "ansis:hasLandUse",
-            "range@type": "ansis:LandUse",
+            "range@type": "ansis:Classification",
             "title": "has land use",
             "description": "A description of land use.",
             "type": "object",
-            "$ref": "./entities.json#LandUse"
+            "$ref": "./entities.json#Classification"
         },
         "hasLandform": {
             "$anchor": "hasLandform",
@@ -1883,7 +1889,6 @@
             ]
         },
         "lithology": {
-            "$anchor": "lithology",
             "@id": "ansis:lithology",
             "range@type": [
                 "sosa:ObservableProperty",
@@ -1891,23 +1896,55 @@
             ],
             "title": "lithology",
             "description": "Lithological type of material.",
-            "type": "object",
-            "allOf": [
-                {
-                    "required": ["hasResult"],
-                    "properties": {
-                        "hasResult": {
-                            "oneOf": [
-                                {"$ref": "./enum.json#lithology-coarse-fragments"},
-                                {"$ref": "./enum.json#lithology-rock"},
-                                {"$ref": "./enum.json#lithology-rock-outcrop"},
-                                {"$ref": "./enum.json#lithology-unconsolidated"}
-                            ]
-                        }
-                    }
-                },
-                {"$ref": "./sosa.json#ObservableProperty"}
-            ]
+            "$defs": {
+            	"outcrop": {
+					"$anchor": "lithology-outcrop",
+					"type": "object",
+					"description": "Outcrop.",
+					"allOf": [
+						{
+							"required": ["hasResult"],
+							"properties": {
+								"hasResult": {"$ref": "./enum.json#lithology-rock-outcrop"}
+								}
+						},
+						{"$ref": "./sosa.json#ObservableProperty"}
+					]
+            	},
+            	"coarseFragments": {
+					"$anchor": "lithology-coarse-fragments",
+					"type": "object",
+					"description": "Coarse Fragments.",
+					"allOf": [
+						{
+							"required": ["hasResult"],
+							"properties": {
+								"hasResult": {"$ref": "./enum.json#lithology-coarse-fragments"}
+							}
+						},
+						{"$ref": "./sosa.json#ObservableProperty"}
+					]
+            	},
+            	"lithology": {
+					"$anchor": "lithology",
+					"type": "object",
+					"description": "Rock/unconsolidated.",
+					"allOf": [
+						{
+							"required": ["hasResult"],
+							"properties": {
+								"hasResult": {
+									"oneOf": [
+										{"$ref": "./enum.json#lithology-rock"},
+										{"$ref": "./enum.json#lithology-unconsolidated"}
+									]
+								}
+							}
+						},
+						{"$ref": "./sosa.json#ObservableProperty"}
+					]
+            	}
+            }
         },
         "locationInElement": {
             "$anchor": "location-in-element",
@@ -2227,36 +2264,13 @@
             ]
         },
         "purpose": {
+            "$anchor": "purpose",
             "@id": "ansis:purpose",
-            "range@type": [
-                "ansis:Profile-purpose",
-                "ansis:Site-purpose"
-            ],
+            "range@type": "ansis:Classification",
             "title": "purpose",
             "description": "Purpose of or reason for activity.",
-            "$defs": {
-                "site": {
-                    "$anchor": "purpose-site",
-                    "range@type": "ansis:Site-purpose",
-                    "description": "Site.",
-                    "type": "object",
-                    "$ref": "./entities.json#Site-purpose"
-                },
-                "siteVisit": {
-                    "$anchor": "purpose-site-visit",
-                    "range@type": "ansis:Site-purpose",
-                    "description": "Site Visit.",
-                    "$comment": "No defintion/vocabulary defined for SiteVisit.purpose.",
-                    "type": "string"
-                },
-                "soilProfile": {
-                    "$anchor": "purpose-soil-profile",
-                    "range@type": "ansis:Profile-purpose",
-                    "description": "Soil Profile.",
-                    "type": "object",
-                    "$ref": "./entities.json#Profile-purpose"
-                }
-            }
+			"type": "object",
+			"$ref": "./entities.json#Classification"
         },
         "relatedActivity": {
             "@id": "ansis:relatedActivity",
@@ -2946,24 +2960,52 @@
             ]
         },
         "value": {
-            "$anchor": "value",
             "@id": "ansis:value",
             "range@type": [
-                "sosa:ObservableProperty",
                 "xs:boolean",
-                "xs:integer",
+                "xs:dateTime",
                 "xs:decimal",
-                "xs:string",
-                "xs:dateTime"
+                "xs:integer",
+                "xs:string"
             ],
             "title": "value",
-            "description": "Literal value.",
-            "type": [
-                "boolean",
-                "integer",
-                "number",
-                "string"
-            ]
+            "description": "Simple literal value.",
+            "$defs": {
+            	"boolean": {
+                    "$anchor": "value-boolean",
+                    "range@type": "xs:boolean",
+					"type": "boolean",
+					"description": "Boolean."
+            	},
+            	"datetime": {
+                    "$anchor": "value-datetime",
+                    "range@type": "xs:boolean",
+                    "type": "string",
+                    "oneOf": [
+						{"format": "date"},
+						{"format": "date-time"}
+                    ],
+					"description": "Time and/or date."
+            	},
+            	"integer": {
+                    "$anchor": "value-integer",
+                    "range@type": "xs:integer",
+					"type": "integer",
+					"description": "Integer."
+            	},
+            	"number": {
+                    "$anchor": "value-number",
+                    "range@type": "xs:decimal",
+					"type": "number",
+					"description": "Number."
+            	},
+            	"string": {
+                    "$anchor": "value-string",
+                    "range@type": "xs:string",
+					"type": "string",
+					"description": "String."
+            	}
+            }
         },
         "velocity": {
             "$anchor": "velocity",
