@@ -1,54 +1,38 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/prov.json",
+    "$id": "prov.json",
     "title": "PROV Entity Schema",
     "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
-	"@context": {
-		"prov": "http://www.w3.org/ns/prov#",
-		"proj": "https://linked.data.gov.au/def/project#"
-	},
     "type": "object",
     "oneOf": [
-        {
-            "$ref": "#Organization"
-        },
-        {
-            "$ref": "#Activity"
-        },
-        {
-            "$ref": "#Agent"
-        },
-        {
-            "$ref": "#Person"
-        },
-        {
-            "$ref": "#Project"
-        }
+        {"$ref": "#Organization"},
+        {"$ref": "#Activity"},
+        {"$ref": "#Agent"},
+        {"$ref": "#Person"},
+        {"$ref": "#Project"}
     ],
-    "definitions": {
+    "$defs": {
+        "curiPrefix": {
+            "prov": "http://www.w3.org/ns/prov#",
+            "proj": "https://linked.data.gov.au/def/project#"
+        },
         "Activity": {
             "$anchor": "Activity",
             "@id": "prov:Activity",
             "title": "PROV Activity",
             "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
-			"type": "object",
-            "required": [
-                "@type"
-            ],
+            "type": "object",
+            "required": ["type"],
             "properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Activity"
                 },
-                "relatedActivity": {
-                	"$ref": "./properties.json#relatedActivity"
-                },
-                "name": {
-                    "$ref": "./base.json#name"
-                }
+                "relatedActivity": {"$ref": "./properties.json#relatedActivity-link"},
+                "name": {"$ref": "./base.json#name"},
+                "endedAtTime": {"$ref": "#endedAtTime"},
+                "startedAtTime": {"$ref": "#startedAtTime"}
             },
             "additionalProperties": false
         },
@@ -57,21 +41,15 @@
             "@id": "prov:Agent",
             "title": "PROV Agent",
             "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
-			"type": "object",
-            "required": [
-                "@type"
-            ],
+            "type": "object",
+            "required": ["type"],
             "properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Agent"
                 },
-                "name": {
-                    "$ref": "./base.json#name"
-                }
+                "name": {"$ref": "./base.json#name"}
             },
             "additionalProperties": false
         },
@@ -80,21 +58,15 @@
             "@id": "prov:Organization",
             "title": "PROV Organization",
             "description": "An organization is a social or legal institution such as a company, society, etc.",
-			"type": "object",
-            "required": [
-                "@type"
-            ],
+            "type": "object",
+            "required": ["type"],
             "properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
                     "const": "prov:Agent"
                 },
-                "name": {
-                    "$ref": "./base.json#name"
-                }
+                "name": {"$ref": "./base.json#name"}
             },
             "additionalProperties": false
         },
@@ -103,21 +75,15 @@
             "@id": "prov:Person",
             "title": "PROV Person",
             "description": "Person agents are people.",
-			"type": "object",
-            "required": [
-                "@type"
-            ],
+            "type": "object",
+            "required": ["type"],
             "properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "prov:Agent"
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "prov:Person"
                 },
-                "name": {
-                    "$ref": "./base.json#name"
-                }
+                "name": {"$ref": "./base.json#name"}
             },
             "additionalProperties": false
         },
@@ -126,35 +92,56 @@
             "@id": "proj:Project",
             "title": "PROJ Project",
             "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
-			"type": "object",
-            "required": [
-                "@type"
-            ],
+            "type": "object",
+            "required": ["type"],
             "properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-                "@type": {
-                    "$ref": "./base.json#ld-type",
-                    "const": "prov:Project"
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "proj:Project"
                 },
-                "hasLeader": {
-                    "$ref": "#Organization"
-                },
+                "hasLeader": {"$ref": "#Organization"},
                 "hasSponsor": {
-                	"type": "array",
-                	"items": {
-						"$ref": "#Organization"
-                	}
+                    "type": "array",
+                    "items": {"$ref": "#Organization"}
                 },
-                "name": {
-                    "$ref": "./base.json#name"
-                },
-                "label": {
-                    "$ref": "./base.json#label"
-                }
+                "name": {"$ref": "./base.json#name"},
+                "label": {"$ref": "./base.json#label"},
+                "scopedIdentifier": {"$ref": "./base.json#scopedIdentifier"}
             },
             "additionalProperties": false
+        },
+        "endedAtTime": {
+            "$anchor": "endedAtTime",
+            "@id": "prov:endedAtTime",
+            "range@type": "xs:dateTime",
+            "title": "Ended at Time",
+            "description": "The time at which an activity ended.",
+            "$comment": "See also startedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
+        },
+        "startedAtTime": {
+            "$anchor": "startedAtTime",
+            "@id": "prov:startedAtTime",
+            "range@type": "xs:dateTime",
+            "title": "Started at Time",
+            "description": "The time at which an activity started.",
+            "$comment": "See also endedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
         }
     }
 }
