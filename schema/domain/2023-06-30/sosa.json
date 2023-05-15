@@ -342,7 +342,10 @@
                 "string",
                 "null"
             ],
-            "format": "date-time"
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
         },
         "resultTime": {
             "$anchor": "resultTime",
@@ -355,7 +358,10 @@
                 "string",
                 "null"
             ],
-            "format": "date-time"
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
         },
         "usedProcedure": {
             "@id": "sosa:usedProcedure",
