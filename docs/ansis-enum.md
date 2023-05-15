@@ -1826,6 +1826,14 @@ The soil profile may be described using several types of observation.
 | sp:observation-type-P | Soil pit |
 
 
+## Type of soil profile
+
+**ANSIS Vocabulary Location:** unknown
+
+No vocabulary found.
+
+
+
 ## Abundance of rock outcrop
 
 **ANSIS Vocabulary Location:** ls:Rock-outcrop-abundance
