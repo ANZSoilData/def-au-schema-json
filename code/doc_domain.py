@@ -7,7 +7,7 @@ import dpath
 # Yes ... this needs major refactoring into smaller functions.
 # ... and explanatory comments.
 
-def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_instance_file=""):
+def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_instance_file="", contains_enum=False):
     '''Takes a JSON Schema and turns it into a table in a mark-down document.'''
 
     md_file_name = "docs/ansis-" + json_schema_file.split(".")[0] + ".md"
@@ -87,6 +87,11 @@ def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_inst
         if def_lines != []:
             lines.append("## Entities\n")
             lines.append("\n".join(def_lines))
+    
+    if contains_enum:
+        lines.append("## Enumerations\n")
+        for enum_key, enum_value in schema_definitions.items():
+            lines = process_enum_definitions (enum_key, enum_value, lines, schema_file, 2)
 
     md_file.write("\n".join(lines))
 
@@ -95,7 +100,7 @@ def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_inst
     md_file.close()
 
 
-def json_enum_to_markdown(json_schema_path, json_enum_file):
+def json_enum_to_markdown(json_schema_path, json_enum_file, include_header=True):
     '''Takes a JSON Enumeration Schema and turns it into a table in a mark-down document.'''
 
     md_file_name = "docs/ansis-" + json_enum_file.split(".")[0] + ".md"
@@ -107,72 +112,25 @@ def json_enum_to_markdown(json_schema_path, json_enum_file):
 
     lines = []
 
-    lines.append("# " + enum_root["title"])
+    if include_header:
+        lines.append("# " + enum_root["title"])
 
-    lines.append("**JSON Schema Location:** " + enum_root["$id"] + "\n")
+        lines.append("**JSON Schema Location:** " + enum_root["$id"] + "\n")
 
-    lines.append(enum_root["description"] + "\n")
+        lines.append(enum_root["description"] + "\n")
 
-    if "$comment" in enum_root and isinstance(enum_root["$comment"], str):
-        lines.append("> " + enum_root["$comment"] + "\n")
+        if "$comment" in enum_root and isinstance(enum_root["$comment"], str):
+            lines.append("> " + enum_root["$comment"] + "\n")
+        
+        header_level = 1
+    else:
+        lines.append("## Enumerations")
+        header_level = 2
 
     enum_definitions = pandas.DataFrame(enum_root["$defs"])
 
     for enum_key, enum_value in enum_definitions.items():
-
-        if enum_key != "curiPrefix":
-
-            print("Processing enum", enum_key, "...")
-
-            lines.append("## " + enum_value["title"] + "\n")
-
-            if "@id" in enum_value and isinstance(enum_value["@id"], str):
-
-                enum_uri_prefix = enum_value["@id"].split(":")[0]
-                print("enum_uri_prefix: " + enum_uri_prefix)
-
-                if "@context" in enum_root and enum_uri_prefix in enum_root["@context"]:
-                    print(enum_root["@context"].get(enum_uri_prefix))
-                    enum_location = "[" + enum_value["@id"] + "](" + enum_root["@context"].get(enum_uri_prefix) + enum_value["@id"].split(":")[1] + ")"
-                else:
-                    enum_location = enum_value["@id"]
-
-                lines.append("**ANSIS Vocabulary Location:** " + enum_location + "\n")
-
-            if "@id" in enum_value and isinstance(enum_value["@id"], list):
-
-                enum_locations = []
-
-                for item in enum_value["@id"]:
-                    enum_uri_prefix = item.split(":")[0]
-                    print("enum_uri_prefix: " + enum_uri_prefix)
-
-                    if "@context" in enum_root and enum_uri_prefix in enum_root["@context"]:
-                        print(enum_root["@context"].get(enum_uri_prefix))
-                        enum_location = "[" + item + "](" + enum_root["@context"].get(enum_uri_prefix) + item.split(":")[1] + ")"
-                    else:
-                        enum_location = item
-                    
-                    enum_locations.append(enum_location)
-
-                lines.append("**ANSIS Vocabulary Location:** " + "; ".join(enum_locations) + "\n")
-
-            if "description" in enum_value and isinstance(enum_value["description"], str):
-                lines.append(enum_value["description"] + "\n")
-
-            if "$comment" in enum_value and isinstance(enum_value["$comment"], str):
-                lines.append("> " + enum_value["$comment"] + "\n")
-
-            if "oneOf" in enum_value and isinstance(enum_value["oneOf"], list):
-                lines.append(
-                    r"| ID/JSON Value | Preferred Label |")
-                lines.append(
-                    "| ---------- | --------------- |")
-
-                for item in enum_value["oneOf"]:
-                    lines.append("| " + item["const"] + " | " + item["description"] + " |")
-
-            lines.append("\n")
+        lines = process_enum_definitions (enum_key, enum_value, lines, enum_root, header_level)
 
     md_file.write("\n".join(lines))
 
@@ -185,7 +143,9 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
 
     print("Processing definition " + def_key + " ...")
 
-    if "properties" in def_value and isinstance(def_value["properties"], dict):
+    enum_test = dpath.get(def_value, "/oneOf/0/const", default = False)
+
+    if "properties" in def_value and isinstance(def_value["properties"], dict) and not enum_test:
 
         schema_namespace = json_schema_file.split(".")[0].replace("entities", "ansis")
 
@@ -280,13 +240,13 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                     target_range[index] = build_range_type_link(
                         schema_namespace, item)
                 target_property_type = "; ".join(
-                    target_range)
+                    sorted(target_range))
 
                 for index, item in enumerate(nested_range):
                     nested_range[index] = build_range_type_link(
                         schema_namespace, item)
                 nested_property_type = "; ".join(
-                    nested_range)
+                    sorted(nested_range))
                 if len(nested_property_type) > 0:
                     final_property_type = nested_property_type
                 else:
@@ -343,12 +303,76 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                             json_schema_path, "enum.json", item)
                         target_property_vocab_list.append("[" + target_property_enum["title"] + "](" + "./ansis-enum#" + target_property_enum["title"].lower().replace(" ", "-") + ")")
 
-                target_property_vocab_list = list(set(target_property_vocab_list))
+                target_property_vocab_list = sorted(list(set(target_property_vocab_list)))
 
                 target_property_vocab = "; ".join(target_property_vocab_list)
 
             lines.append("| " + prop_key + " | " + MIN_COUNT + ".." + MAX_COUNT + " | " + target_property_preferred +
                          " | " + final_property_type + " | " + target_property_vocab + " | " + target_property_description + " |")
+
+        lines.append("\n")
+
+    return lines
+
+
+def process_enum_definitions (enum_key, enum_value, lines, enum_root, header_level=1):
+    '''Process each individual definition entry.'''
+
+    enum_test = dpath.get(enum_value, "/oneOf/0/const", default = False)
+
+    print("enum_test:", enum_test)
+
+    if enum_key != "curiPrefix" and enum_test:
+
+        print("Processing enum", enum_key, "...")
+
+        lines.append("#" * (header_level + 1) + " " + enum_value["title"] + "\n")
+
+        if "@id" in enum_value and isinstance(enum_value["@id"], str):
+
+            enum_uri_prefix = enum_value["@id"].split(":")[0]
+            print("enum_uri_prefix: " + enum_uri_prefix)
+
+            if "@context" in enum_root and enum_uri_prefix in enum_root["@context"]:
+                print(enum_root["@context"].get(enum_uri_prefix))
+                enum_location = "[" + enum_value["@id"] + "](" + enum_root["@context"].get(enum_uri_prefix) + enum_value["@id"].split(":")[1] + ")"
+            else:
+                enum_location = enum_value["@id"]
+
+            lines.append("**ANSIS Vocabulary Location:** " + enum_location + "\n")
+
+        if "@id" in enum_value and isinstance(enum_value["@id"], list):
+
+            enum_locations = []
+
+            for item in enum_value["@id"]:
+                enum_uri_prefix = item.split(":")[0]
+                print("enum_uri_prefix: " + enum_uri_prefix)
+
+                if "@context" in enum_root and enum_uri_prefix in enum_root["@context"]:
+                    print(enum_root["@context"].get(enum_uri_prefix))
+                    enum_location = "[" + item + "](" + enum_root["@context"].get(enum_uri_prefix) + item.split(":")[1] + ")"
+                else:
+                    enum_location = item
+                
+                enum_locations.append(enum_location)
+
+            lines.append("**ANSIS Vocabulary Location:** " + "; ".join(enum_locations) + "\n")
+
+        if "description" in enum_value and isinstance(enum_value["description"], str):
+            lines.append(enum_value["description"] + "\n")
+
+        if "$comment" in enum_value and isinstance(enum_value["$comment"], str):
+            lines.append("> " + enum_value["$comment"] + "\n")
+
+        if "oneOf" in enum_value and isinstance(enum_value["oneOf"], list):
+            lines.append(
+                r"| ID/JSON Value | Preferred Label |")
+            lines.append(
+                "| ---------- | --------------- |")
+
+            for item in enum_value["oneOf"]:
+                lines.append("| " + item["const"] + " | " + item["description"] + " |")
 
         lines.append("\n")
 
@@ -490,7 +514,7 @@ json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json")
+json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json", "", True)
 
 json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
 
