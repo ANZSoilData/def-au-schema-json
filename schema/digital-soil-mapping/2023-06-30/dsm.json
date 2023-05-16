@@ -16,7 +16,7 @@
 			"$comment": "",
 			"type": "object",
 			"required": [
-				"@type",
+				"type",
 				"hasGeometry",
 				"depthLower",
 				"depthUpper",
@@ -26,13 +26,10 @@
 				"$schema": {
 					"$ref": "../../domain/2023-06-30/base.json#js-schema"
 				},
-				"@context": {
-					"$ref": "../../domain/2023-06-30/base.json#ld-context"
+				"id": {
+					"$ref": "../../domain/2023-06-30/base.json#id"
 				},
-				"@id": {
-					"$ref": "../../domain/2023-06-30/base.json#ld-id"
-				},
-				"@type": {
+				"type": {
 					"type": "string",
 					"const": "ansis:SoilSample"
 				},
@@ -52,16 +49,10 @@
 						"$ref": "#Observation"
 					}
 				},
-				"component": {
-					"$ref": "../../domain/2023-06-30/properties.json#component"
-				},
-				"isSampleOf": {
-					"$ref": "../../domain/2023-06-30/sosa.json#isSampleOf"
-				},
 				"relatedProfile": {
 					"type": "array",
 					"items": {
-						"$ref": "../../domain/2023-06-30/properties.json#relatedProfile"
+						"$ref": "../../domain/2023-06-30/properties.json#relatedProfile-link"
 					}
 				}
 			},
@@ -75,32 +66,29 @@
 			"$comment": "",
 			"type": "object",
 			"required": [
-				"@type",
+				"type",
 				"observedProperty",
 				"hasResult"
 			],
 			"properties": {
-				"@id": {
-					"$ref": "../../domain/2023-06-30/base.json#ld-id"
+				"id": {
+					"$ref": "../../domain/2023-06-30/base.json#id"
 				},
-				"@type": {
-					"$ref": "../../domain/2023-06-30/base.json#ld-type",
+				"type": {
+					"$ref": "../../domain/2023-06-30/base.json#type",
 					"const": "sosa:Observation"
 				},
 				"observedProperty": {
 					"$ref": "../../domain/2023-06-30/sosa.json#observedProperty"
 				},
 				"hasResult": {
-					"$ref": "../../domain/2023-06-30/sosa.json#hasResult"
+					"$ref": "../../domain/2023-06-30/sosa.json#hasResult-QuantityValue"
 				},
 				"qualityOfObservation": {
 					"$ref": "../../domain/2023-06-30/sosa.json#qualityOfObservation"
 				},
 				"usedProcedure": {
 					"$ref": "../../domain/2023-06-30/sosa.json#usedProcedure"
-				},
-				"relatedActivity": {
-					"$ref": "../../domain/2023-06-30/properties.json#relatedActivity"
 				}
 			},
 			"additionalProperties": false
