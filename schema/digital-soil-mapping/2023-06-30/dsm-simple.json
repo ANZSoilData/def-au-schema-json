@@ -77,20 +77,20 @@
 				"hasResultUnit": {
 					"$ref": "../../domain/2023-06-30/qudt.json#unit"
 				},
-				"usedProcedure@id": {
+				"usedProcedureId": {
 					"$ref": "#CURIE",
 					"description": "URI linking to the ANSIS procedure vocabulary."
 				},
-				"isSampleOf@type": {
+				"isSampleOfType": {
 					"$ref": "#CURIE",
 					"description": "URI linking to the ANSIS feature (entity) of interest type (horizon, etc)."
 				},
-				"sourceSample@id": {
-					"$ref": "../../domain/2023-06-30/base.json#ld-id",
+				"sourceSampleId": {
+					"$ref": "../../domain/2023-06-30/base.json#id",
 					"description": "URI linking to the source soil sample."
 				},
-				"sourceObservation@id": {
-					"$ref": "../../domain/2023-06-30/base.json#ld-id",
+				"sourceObservationId": {
+					"$ref": "../../domain/2023-06-30/base.json#id",
 					"description": "URI linking to the source observation."
 				}
 			},

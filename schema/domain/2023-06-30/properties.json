@@ -1072,7 +1072,6 @@
             "range@type": "skos:Concept",
             "title": "designation master",
             "description": "Soil horizon designation master.",
-            "type": "string",
             "$ref": "./enum.json#horizon-code"
         },
         "designationPrefix": {
@@ -1097,7 +1096,6 @@
             "range@type": "skos:Concept",
             "title": "designation subdivision",
             "description": "Soil horizon designation subdivision.",
-            "type": "string",
             "$ref": "./enum.json#horizon-suffix"
         },
         "development": {
@@ -2279,8 +2277,7 @@
                 "sosa:Actuation",
                 "sosa:Observation",
                 "sosa:Sampling",
-                "ansis:SiteVisit",
-                "ansis:Treatment"
+                "ansis:SiteVisit"
             ],
             "title": "related activity",
             "description": "Link to an activity related to this context.",
@@ -2293,8 +2290,7 @@
                         {"$ref": "./sosa.json#Actuation"},
                         {"$ref": "./sosa.json#Observation"},
                         {"$ref": "./sosa.json#Sampling"},
-                        {"$ref": "./entities.json#SiteVisit"},
-                        {"$ref": "./entities.json#Treatment"}
+                        {"$ref": "./entities.json#SiteVisit"}
                     ]
                 },
                 "link": {
@@ -2313,12 +2309,6 @@
                     "range@type": "ansis:SiteVisit",
                     "description": "Site Visit.",
                     "$ref": "./entities.json#SiteVisit"
-                },
-                "treatment": {
-                    "$anchor": "relatedActivity-treatment",
-                    "range@type": "ansis:Treatment",
-                    "description": "Treatment.",
-                    "$ref": "./entities.json#Treatment"
                 }
             }
         },

@@ -1,84 +1,82 @@
 [
 	{
 		"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm.json",
-        "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/context.json",
-        "@id": "https://example.ansis.net/id/sample/0",
-        "@type": "ansis:SoilSample",
-        "hasGeometry": {
-          "hasResult": "SRID=4283;POINT(24 -42)"
-        },
-        "depthLower": {
-          "value": 0,
-          "unit": "unit:M"
-        },
-        "depthUpper": {
-          "value": 0,
-          "unit": "unit:M"
-        },
-        "hasObservation": [
-        	{
-				"@id": "https://example.ansis.net/id/observation/a",
-        		"@type": "sosa:Observation",
-        		"observedProperty": {
-					"@id": "ansis:slope"
-        		},
-        		"hasResult": {
-        			"value": 24,
-        			"unit": "unit:DEG"
-        		},
-        		"usedProcedure": {
-        			"@id": "ansis-x:clinometer"
-        		}
-        	}
-        ],
-        "isSampleOf": {
-        	"@id": "https://ansis/nil/missing",
-			"@type": "ansis:LandformElement"
-        }
-    },
+		"id": "sample-a",
+		"type": "ansis:SoilSample",
+		"hasGeometry": {
+			"hasResult": "SRID=4283;POINT(24 -42)"
+		},
+		"depthLower": {
+			"hasResult": {
+				"value": 0,
+				"unit": "unit:M"
+			}
+		},
+		"depthUpper": {
+			"hasResult": {
+				"value": 0,
+				"unit": "unit:M"
+			}
+		},
+		"hasObservation": [
+			{
+				"id": "observation-a",
+				"type": "sosa:Observation",
+				"observedProperty": {
+					"id": "ansis:slope"
+				},
+				"hasResult": {
+					"value": 24,
+					"unit": "unit:DEG"
+				},
+				"usedProcedure": {
+					"id": "ansis-x:clinometer"
+				}
+			}
+		]
+	},
 	{
 		"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/digital-soil-mapping/2023-06-30/dsm.json",
-        "@context": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/context.json",
-        "@id": "https://example.ansis.net/id/sample/a",
-        "@type": "ansis:SoilSample",
-        "hasGeometry": {
-          "hasResult": "SRID=4283;POINT(24 -42)"
-        },
-        "depthLower": {
-          "value": 0,
-          "unit": "unit:M"
-        },
-        "depthUpper": {
-          "value": 0.1,
-          "unit": "unit:M"
-        },
-        "hasObservation": [
-        	{
-				"@id": "https://example.ansis.net/id/observation/b",
-        		"@type": "sosa:Observation",
-        		"observedProperty": {
-					"@id": "ansis-x:sand"
-        		},
-        		"hasResult": {
-        			"value": 42,
-        			"unit": "unit:PERCENT"
-        		}
-        	},
-        	{
-				"@id": "https://example.ansis.net/id/observation/c",
-        		"@type": "sosa:Observation",
-        		"observedProperty": {
-					"@id": "ansis-x:silt"
-        		},
-        		"hasResult": {
-        			"value": 24,
-        			"unit": "unit:PERCENT"
-        		}
-        	}
-        ],
-        "isSampleOf": {
-        	"@id": "https://ansis/nil/missing",
-			"@type": "ansis:SoilHorizon"
-        }
-    }
+		"id": "sample-b",
+		"type": "ansis:SoilSample",
+		"hasGeometry": {
+			"hasResult": "SRID=4283;POINT(24 -42)"
+		},
+		"depthLower": {
+			"hasResult": {
+				"value": 0,
+				"unit": "unit:M"
+			}
+		},
+		"depthUpper": {
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:M"
+			}
+		},
+		"hasObservation": [
+			{
+				"id": "observation-b",
+				"type": "sosa:Observation",
+				"observedProperty": {
+					"id": "ansis-x:sand"
+				},
+				"hasResult": {
+					"value": 42,
+					"unit": "unit:PERCENT"
+				}
+			},
+			{
+				"id": "observation-c",
+				"type": "sosa:Observation",
+				"observedProperty": {
+					"id": "ansis-x:silt"
+				},
+				"hasResult": {
+					"value": 24,
+					"unit": "unit:PERCENT"
+				}
+			}
+		]
+	}
 ]
