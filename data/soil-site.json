@@ -1,5 +1,6 @@
-[
-    {
+{
+    "$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/ansis.json",
+    "data": {
         "id": "some-system-id",
         "type": "ansis:SoilSite",
         "ansisType": [
@@ -612,4 +613,4 @@
             }
         ]
     }
-]
+}
