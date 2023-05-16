@@ -5187,22 +5187,6 @@
                 }
             ]
         },
-        "ToBeDefined": {
-            "$anchor": "tobedefined",
-            "title": "To Be Defined",
-            "description": "Placeholder for enumerations yet to be created.",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:a",
-                    "description": "value a"
-                },
-                {
-                    "const": "xx:b",
-                    "description": "value b"
-                }
-            ]
-        },
         "WaterRepellence": {
             "$anchor": "water-repellence",
             "@id": "sp:Water-repellence",
