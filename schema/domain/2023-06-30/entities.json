@@ -492,7 +492,10 @@
                 "depthLower": {"$ref": "./properties.json#depth-upper"},
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
                 "hasGeometry": {"$ref": "./geo.json#hasGeometry"},
-                "hasResult": {"$ref": "./sosa.json#hasResult-Observation"},
+                "hasResult": {
+                    "type": "array",
+                    "items": {"$ref": "./sosa.json#hasResult-Observation"}
+                },
                 "isSampleOf": {
                     "type": "array",
                     "items": {"$ref": "./sosa.json#isSampleOf"}
