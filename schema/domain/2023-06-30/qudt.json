@@ -5,7 +5,10 @@
     "description": "Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
     "type": "null",
     "$defs": {
-        "curiPrefix": {"qudt": "http://qudt.org/schema/qudt/"},
+        "curiPrefix": {
+        	"qudt": "http://qudt.org/schema/qudt/",
+            "unit": "https://qudt.org/2.1/vocab/unit/"
+        },
         "QuantityValue": {
             "$anchor": "QuantityValue",
             "@id": "qudt:QuantityValue",
@@ -42,6 +45,29 @@
             "type": "string",
             "format": "iri",
             "pattern": "^unit:.*$"
+        },
+        "vocabUnit": {
+            "$anchor": "vocab-unit",
+            "@id": "https://qudt.org/2.1/vocab/unit",
+            "title": "Unit",
+            "description": "Units of measure as defined by QUDT.",
+            "$comment": "A JSON Schema labelled enumeration.",
+            "type": "string",
+            "format": "iri",
+            "oneOf": [
+                {
+                    "const": "unit:DEG",
+                    "description": "degree (angle)"
+                },
+                {
+                    "const": "unit:M",
+                    "description": "meter"
+                },
+                {
+                    "const": "unit:PERCENT",
+                    "description": "percent"
+                }
+            ]
         }
     }
 }
