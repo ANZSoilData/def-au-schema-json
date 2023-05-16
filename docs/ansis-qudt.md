@@ -14,3 +14,20 @@ Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a v
 | value | 1..1 |  | [xs:decimal](https://www.w3.org/TR/xmlschema-2/#decimal); [xs:integer](https://www.w3.org/TR/xmlschema-2/#integer) |  | The numerical value. |
 | unit | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A reference to the unit of measure of a quantity (variable or constant) of interest.\[ _Restricted to the QUDT vocabulary as a compact URI._ \] |
 
+
+## Enumerations
+
+### Unit
+
+**ANSIS Vocabulary Location:** https://qudt.org/2.1/vocab/unit
+
+Units of measure as defined by QUDT.
+
+> A JSON Schema labelled enumeration.
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| unit:DEG | degree (angle) |
+| unit:M | meter |
+| unit:PERCENT | percent |
+

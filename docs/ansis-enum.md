@@ -85,6 +85,9 @@ Australian Soil Classification Classifier - code.
 
 > ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## ASC Depth - code
@@ -95,6 +98,9 @@ Australian Soil Classification Depth - code.
 
 > ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## ASC Gravel - code
@@ -105,6 +111,9 @@ Australian Soil Classification Gravel - code.
 
 > ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## ASC Order - code
@@ -115,6 +124,9 @@ Australian Soil Classification Order - code.
 
 > ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## ASC Texture - code
@@ -125,6 +137,9 @@ Australian Soil Classification Texture - code.
 
 > ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## ASC Thickness - code
@@ -135,6 +150,9 @@ Australian Soil Classification Thickness - code.
 
 > ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## Boundary distinctness
@@ -1453,14 +1471,6 @@ A site chosen to represent a landform element will often be placed centrally wit
 | lf:location-within-the-landform-element-T | Top |
 
 
-## Location within the landform toposequence
-
-**ANSIS Vocabulary Location:** lf:Location-in-toposequence
-
-No vocabulary found.
-
-
-
 ## Strength of substrate material
 
 **ANSIS Vocabulary Location:** subst:Material-strength
@@ -1824,14 +1834,6 @@ The soil profile may be described using several types of observation.
 | sp:observation-type-C | Relatively undisturbed soil core |
 | sp:observation-type-E | Existing vertical exposure |
 | sp:observation-type-P | Soil pit |
-
-
-## Type of soil profile
-
-**ANSIS Vocabulary Location:** unknown
-
-No vocabulary found.
-
 
 
 ## Abundance of rock outcrop
@@ -2248,6 +2250,9 @@ The order of peds and relationship of one to the other is important and may be d
 
 > No skos:members found.
 
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| xx:placeholder | placeholder value |
 
 
 ## Confidence that substrate is parent material
@@ -2334,16 +2339,6 @@ Many surface soils have a characteristic appearance when dry. Because surface co
 | sp:surfacecondition-X | Surface flake |
 | sp:surfacecondition-Y | Cryptogam surface |
 | sp:surfacecondition-Z | Saline (surface condition) |
-
-
-## To Be Defined
-
-Placeholder for enumerations yet to be created.
-
-| ID/JSON Value | Preferred Label |
-| ---------- | --------------- |
-| xx:a | value a |
-| xx:b | value b |
 
 
 ## Water repellence
