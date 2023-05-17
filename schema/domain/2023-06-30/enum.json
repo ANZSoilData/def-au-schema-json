@@ -190,7 +190,13 @@
             "title": "ASC Classifier - code",
             "description": "Australian Soil Classification Classifier - code.",
             "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string"
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "ASC_DepthCode": {
             "$anchor": "depth-code",
@@ -198,7 +204,13 @@
             "title": "ASC Depth - code",
             "description": "Australian Soil Classification Depth - code.",
             "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string"
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "ASC_GravelCode": {
             "$anchor": "gravel-code",
@@ -206,7 +218,13 @@
             "title": "ASC Gravel - code",
             "description": "Australian Soil Classification Gravel - code.",
             "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string"
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "ASC_OrderCode": {
             "$anchor": "order-code",
@@ -214,7 +232,13 @@
             "title": "ASC Order - code",
             "description": "Australian Soil Classification Order - code.",
             "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string"
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "ASC_TextureCode": {
             "$anchor": "texture-code",
@@ -222,7 +246,13 @@
             "title": "ASC Texture - code",
             "description": "Australian Soil Classification Texture - code.",
             "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string"
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "ASC_ThicknessCode": {
             "$anchor": "thickness-code",
@@ -230,7 +260,13 @@
             "title": "ASC Thickness - code",
             "description": "Australian Soil Classification Thickness - code.",
             "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string"
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "BoundaryDistinctness": {
             "$anchor": "boundary-distinctness",
@@ -3416,13 +3452,6 @@
                 }
             ]
         },
-        "LocationInToposequence": {
-            "$anchor": "location-in-toposequence",
-            "@id": "lf:Location-in-toposequence",
-            "title": "Location within the landform toposequence",
-            "description": "No vocabulary found.",
-            "type": "string"
-        },
         "MaterialStrength": {
             "$anchor": "material-strength",
             "@id": "subst:Material-strength",
@@ -4175,13 +4204,6 @@
                     "description": "Soil pit"
                 }
             ]
-        },
-        "ProfileType": {
-            "$anchor": "profile-type",
-            "@id": "unknown",
-            "title": "Type of soil profile",
-            "description": "No vocabulary found.",
-            "type": "string"
         },
         "RockOutcropAbundance": {
             "$anchor": "rock-outcrop-abundance",
@@ -4996,7 +5018,13 @@
             "title": "Compound pedality",
             "description": "Compound pedality occurs where large peds part along natural planes of weakness to form smaller peds, which may again part to smaller peds, and so on to the smallest or primary peds.\r\nPrimary peds are the simplest peds occurring in soil material; they cannot be divided into smaller peds, but may be packed together to form compound peds of a higher level of organisation (Brewer 1964).\r\nThe order of peds and relationship of one to the other is important and may be described as the larger peds parting to the smaller and further where necessary. For example, 'strong 50-100 mm columnar, parting to moderate 20-50 mm prismatic, parting to moderate\r\n10-20 mm angular blocky'. The word 'parting' and not 'breaking' is used. The term 'breaking' is used when soil is fractured along planes other than natural planes of weakness.\r\n1\tLargest peds (in the type of soil observation described), parting to\r\n2\tNext size peds, parting to\r\n3\tNext size peds, ... and further, if required, to the primary ped.",
             "type": "string",
-            "$comment": "No skos:members found."
+            "$comment": "No skos:members found.",
+            "oneOf": [
+                {
+                    "const": "xx:placeholder",
+                    "description": "placeholder value"
+                }
+            ]
         },
         "SubstrateConfidence": {
             "$anchor": "substrate-confidence",
@@ -5184,22 +5212,6 @@
                 {
                     "const": "sp:surfacecondition-Z",
                     "description": "Saline (surface condition)"
-                }
-            ]
-        },
-        "ToBeDefined": {
-            "$anchor": "tobedefined",
-            "title": "To Be Defined",
-            "description": "Placeholder for enumerations yet to be created.",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:a",
-                    "description": "value a"
-                },
-                {
-                    "const": "xx:b",
-                    "description": "value b"
                 }
             ]
         },

@@ -3,7 +3,6 @@
     "$id": "base.json",
     "title": "ANSIS JSON Base Schema",
     "description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
-    "$comment": "Linked Data properties as per https://www.w3.org/TR/json-ld.",
     "type": "null",
     "$defs": {
         "curiPrefix": {
@@ -41,7 +40,7 @@
             "range@type": "xs:anyURI",
             "title": "JSON Object Type",
             "description": "A compact URI uniquely identifying the type of the object using IDs from the OWL/RDF domain model.",
-            "$comment": "After: https://jsonapi.org/format/#document-resource-objects",
+            "$comment": "After: https://jsonapi.org/format/#document-resource-objects and https://www.w3.org/TR/json-ld/#specifying-the-type.",
             "type": "string",
             "format": "iri"
         },
@@ -74,7 +73,7 @@
             "$anchor": "scopedIdentifier",
             "range@type": "base:ScopedIdentifier",
             "title": "scoped identifier",
-            "description": "An identifier for a site or sample scoped to the authority that assigned the identifier.",
+            "description": "An identifier for a site, sample or other entity scoped to the authority that assigned the identifier.",
             "$ref": "#ScopedIdentifier"
         },
         "source": {

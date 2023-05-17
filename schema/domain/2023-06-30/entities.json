@@ -565,7 +565,6 @@
                     "items": {"$ref": "./properties.json#hasOutcrop"}
                 },
                 "locationInElement": {"$ref": "./properties.json#location-in-element"},
-                "locationInToposequence": {"$ref": "./properties.json#location-in-toposequence"},
                 "relatedLandsurveySite": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}

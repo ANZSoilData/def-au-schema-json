@@ -10,10 +10,3 @@ Example JSON objects that conform to the ANSIS JSON Schema defined [here](../sch
 | [soil-profile.json](soil-profile.json)                     | An example of an `ansis:SoilProfile`.                                                                                      |
 | [dsm-soil-sample.json](dsm-soil-sample.json)               | An example of an `ansis:SoilSample` with an `sosa:Observation`, constrained for use in DSM applications.                   |
 | [dsm-soil-sample-sample.json](dsm-soil-sample-simple.json) | An example of an `ansis:SoilSample` and `sosa:Observation` combined into a simple JSON object for use in DSM applications. |
-
-## Notes
-
-- `@id` values in these examples are URLs linking to these files, rather than true
-Linked Data URIs (see 'Linked Data Alignment' in the [design principles](../docs/design-principles.md)).
-This is for convenience so that examples can be linked together without the overhead of setting up
-sLinked Data URIs and redirects.

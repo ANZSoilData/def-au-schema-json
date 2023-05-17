@@ -1969,17 +1969,16 @@
             "@id": "ansis:location-in-toposequence",
             "range@type": [
                 "sosa:ObservableProperty",
-                "skos:Concept"
+                "skos:QuantityValue"
             ],
             "title": "location in toposequence",
             "description": "Location within a toposequence.",
-            "$comment": "No defined vocabulary. Landform vocabularies are incomplete.",
             "type": "object",
             "allOf": [
                 {
                     "required": ["hasResult"],
                     "properties": {
-                        "hasResult": {"$ref": "./enum.json#location-in-toposequence"}
+                        "hasResult": {"$ref": "./qudt.json#QuantityValue"}
                     }
                 },
                 {"$ref": "./sosa.json#ObservableProperty"}

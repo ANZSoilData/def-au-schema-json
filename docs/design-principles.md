@@ -59,36 +59,28 @@ domain ontology. As part of a schema definition they provide a non-standard keyw
 JSON schema object to its equivalent ANSIS Ontology definition. As the property of a JSON schema
 object they help identify and type objects.
 
-> It is possible, no promises, that the use of these keywords could mean standard ANSIS output could
-be converted to RDF by a JSON-LD parser. (This will be tested in the [JSON-LD Playground](https://json-ld.org/playground/).)
-Linked Data RDF support will be a bonus and will be discarded if it causes issues defining coherent
-JSON schema.
-
-The `@id` keyword ([definition](https://www.w3.org/TR/json-ld/#node-identifiers)) has two uses:
-- In a schema object definition it is a non-standard keyword that binds the JSON schema definition
-to the OWL/RDF definition. In both cases it is the id of the entity, property, vocabulary (enum) or
-concept (enum item). The form is an expanded HTTP URI. E.g. https://anzsoil.org/def/au/domain/SoilSite.
-The schema `@id` will match the object's `@type` property value.
-- As a property of a JSON object it is the Linked Data identifier of the object. Dereferencing the
-URI will return a JSON object (initial default behaviour, in the future: content negotiation). The
-form is an expanded HTTP URI. E.g. https://data.ansis.net/id/example/soilsite/042.
+The `@id` keyword ([definition](https://www.w3.org/TR/json-ld/#node-identifiers)) in a schema object
+definition it is a non-standard keyword that binds the JSON schema definition to the OWL/RDF
+definition. In both cases it is the id of the entity, property, vocabulary (enum) or concept (enum
+item). The form is an expanded HTTP URI. E.g. https://anzsoil.org/def/au/domain/SoilSite. The schema
+`@id` will match the object's `@type` property value.
 
 > The use of expanded URIs allows quick access to the domain ontology by ... clicking on the link.
 
-The `@type` keyword ([definition](https://www.w3.org/TR/json-ld/#specifying-the-type)) is a property
-of an object that specifies its type according to both the ANSIS ontology and the JSON schema - each
-ontology entity will have a schema object. The value will be a constant for each schema object. The
-form will be a compact URI ([CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216/)). E.g.
-`ansis:SoilSite`. The `@type` value, when expanded to a full URI, will match the object's schema
+The `type` keyword  - adapted from the JSON-LD `@type` key ([definition](https://www.w3.org/TR/json-ld/#specifying-the-type)) -
+is a property of an object that specifies its type according to both the ANSIS ontology and the JSON
+schema - each ontology entity will have a schema object. The value will be a constant for each
+schema object. The form will be a compact URI ([CURIE](https://www.w3.org/TR/2010/NOTE-curie-20101216/)).
+E.g. `ansis:SoilSite`. The `type` value, when expanded to a full URI, will match the object's schema
 `@id` value.
 
 > The use of compact URIs helps minimise the size of the object/document/response.
 
-The `@context` keyword ([definition](https://www.w3.org/TR/json-ld/#the-context)) is a property of
-an object that will bind The form will be a URL linking to an authoritative ANSIS context document.
-The context JSON keys and @type values on to the HTTP URIs identifying them in the ANSIS ontology.
+The `curiPrefix` keyword - adapted from the JSON-LD `@context` key ([definition](https://www.w3.org/TR/json-ld/#the-context)) -
+is a property of an schema that will bind the curi prefix to the ful URI. This XML namespaces.
+The form will be a URL linking to an authoritative ANSIS context document.
 
-> The bare minimum initial use will be to declare the namespaces used in `@type` CURIES.
+> The bare minimum initial use will be to declare the namespaces used in `id` and `type` CURIES.
 
 ## Dirty hacks
 

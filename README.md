@@ -1,4 +1,4 @@
-# ANSIS JSON(-LD) Schema
+# ANSIS JSON Schema
 
 > Documentation of the ANSIS JSON Schema, including tables summarising each schema object is here:
 > - https://anzsoildata.github.io/def-au-schema-json/docs/ansis-schema
@@ -8,15 +8,14 @@
 
 ## Overview
 
-This repository holds JSON (with a JSON-LD flavour) Schema developed for the Australian National
-Soil Information System ([ANSIS](https://ansis.net/)). The authoritative ANSIS information model has
-been developed as an OWL/RDF ontology, also published in this GitHub organisation at
-[`ANZSoilData/def-au-domain`][def-au-domain]. These schema are a representation of that ontology.
-They do not introduce new domain entities or properties, and all definitions are copied verbatim
-from `def-au-domain`. They are created to support JSON representations of data suitable for use in
-'typical' web APIs and for processing by widely used programming libraries. As such they remove some
-OWL/RDF artefacts necessary for the definition of a robust ontology* but not commonly required for
-JSON objects.
+This repository holds JSON Schema developed for the Australian National Soil Information System
+([ANSIS](https://ansis.net/)). The authoritative ANSIS information model has been developed as an
+OWL/RDF ontology, also published in this GitHub organisation at [`ANZSoilData/def-au-domain`][def-au-domain]*.
+These schema are a representation of that ontology. They do not introduce new domain entities or
+properties, and all definitions are copied verbatim from `def-au-domain`. They are created to
+support JSON representations of data suitable for use in 'typical' web APIs and for processing by
+widely used programming libraries. As such they remove some OWL/RDF artefacts necessary for the
+definition of a robust ontology* but not commonly required for JSON objects.
 
 > \* These artefacts reflect the fundamental importance of set theory and reasoning to OWL/RDF. We
 > anticipate that future versions ANSIS will provide Semantic Web APIs that support reasoning and
