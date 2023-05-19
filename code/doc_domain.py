@@ -372,7 +372,11 @@ def process_enum_definitions (enum_key, enum_value, lines, enum_root, header_lev
                 "| ---------- | --------------- |")
 
             for item in enum_value["oneOf"]:
-                lines.append("| " + item["const"] + " | " + item["description"] + " |")
+                if "$comment" in item and isinstance(item["$comment"], str) and item["$comment"] != "":
+                    enum_value_comment = (r" \[ _" +  item["$comment"] + r"_ \]")
+                else:
+                    enum_value_comment = ""
+                lines.append("| " + item["const"] + " | " + item["description"] + enum_value_comment + " |")
 
         lines.append("\n")
 
