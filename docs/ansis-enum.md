@@ -1685,6 +1685,23 @@ The type of mottle can suggest the origin of the mottles.
 | sp:mottle-type-Z | Mottle type Z |
 
 
+## Nil - values
+
+**ANSIS Vocabulary Location:** http://www.opengis.net/def/nil/OGC/0/
+
+Nil values with reason for absence.
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| nil:AboveDetectionRange | above detection range \[ _Value was above the detection range of the instrument used to estimate it._ \] |
+| nil:BelowDetectionRange | below detection range \[ _Value was below the detection range of the instrument used to estimate it._ \] |
+| nil:inapplicable | inapplicable \[ _There is no value._ \] |
+| nil:missing | missing \[ _The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist._ \] |
+| nil:template | template \[ _The value will be available later._ \] |
+| nil:unknown | unknown \[ _The correct value is not known to, or not computable by, the sender of this data. However, the correct value probably exists._ \] |
+| nil:withheld | withheld \[ _The value is not divulged._ \] |
+
+
 ## Cementation of pan
 
 **ANSIS Vocabulary Location:** sp:Pans-cementation

@@ -12,6 +12,7 @@
             "asls": "https://anzsoil.org/def/au/domain/asls-code/",
             "lf": "http://anzsoil.org/def/au/asls/landform/",
             "ls": "http://anzsoil.org/def/au/asls/land-surface/",
+            "nil": "http://www.opengis.net/def/nil/OGC/0/",
             "prop": "https://anzsoil.org/def/au/property/",
             "sp": "http://anzsoil.org/def/au/asls/soil-profile/",
             "subst": "http://anzsoil.org/def/au/asls/substrate/",
@@ -3874,6 +3875,54 @@
                 }
             ]
         },
+        
+        
+        "NilValues": {
+            "$anchor": "nil-values",
+            "@id": "http://www.opengis.net/def/nil/OGC/0/",
+            "title": "Nil - values",
+            "description": "Nil values with reason for absence.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "nil:AboveDetectionRange",
+                    "description": "above detection range",
+                    "$comment": "Value was above the detection range of the instrument used to estimate it."
+                },
+                {
+                    "const": "nil:BelowDetectionRange",
+                    "description": "below detection range",
+                    "$comment": "Value was below the detection range of the instrument used to estimate it."
+                },
+                {
+                    "const": "nil:inapplicable",
+                    "description": "inapplicable",
+                    "$comment": "There is no value."
+                },
+                {
+                    "const": "nil:missing",
+                    "description": "missing",
+                    "$comment": "The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist."
+                },
+                {
+                    "const": "nil:template",
+                    "description": "template",
+                    "$comment": "The value will be available later."
+                },
+                {
+                    "const": "nil:unknown",
+                    "description": "unknown",
+                    "$comment": "The correct value is not known to, or not computable by, the sender of this data. However, the correct value probably exists."
+                },
+                {
+                    "const": "nil:withheld",
+                    "description": "withheld",
+                    "$comment": "The value is not divulged."
+                }
+            ]
+        },
+        
+        
         "PansCementation": {
             "$anchor": "pans-cementation",
             "@id": "sp:Pans-cementation",
