@@ -10,6 +10,7 @@
             "ansis": "https://anzsoil.org/def/au/domain/",
             "asc": "http://anzsoil.org/def/au/asc/",
             "asls": "https://anzsoil.org/def/au/domain/asls-code/",
+            "doi": "https://doi.org/",
             "lf": "http://anzsoil.org/def/au/asls/landform/",
             "ls": "http://anzsoil.org/def/au/asls/land-surface/",
             "nil": "http://www.opengis.net/def/nil/OGC/0/",
@@ -210,6 +211,27 @@
                 {
                     "const": "xx:placeholder",
                     "description": "placeholder value"
+                }
+            ]
+        },
+        "ASC_Edition": {
+            "$anchor": "asc-edition",
+            "title": "ASC Edition",
+            "description": "Australian Soil Classification edition.",
+            "$comment": "Informal vocabulary.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "x:asc-ed-1",
+                    "description": "Australian Soil Classification, first edition"
+                },
+                {
+                    "const": "doi:10.1071/9781486304646",
+                    "description": "Australian Soil Classification, second edition"
+                },
+                {
+                    "const": "doi:10.1071/9781486314782",
+                    "description": "Australian Soil Classification, third edition"
                 }
             ]
         },
@@ -721,6 +743,33 @@
                 {
                     "const": "sp:colour-stat-M",
                     "description": "Moist"
+                }
+            ]
+        },
+        "ColourModel": {
+            "$anchor": "colour-model",
+            "title": "Colour Model",
+            "description": "Colour models used to establish and record soil colour values.",
+            "$comment": "Informal vocabulary.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "x:colour-munsell",
+                    "description": "Munsell Colour System"
+                },
+                {
+                    "const": "x:colour-jis",
+                    "description": "Japanese Industrial Standards - Colour",
+                    "$comment": "Correct interpretation of 'Japanese Munsell'?"
+                },
+                {
+                    "const": "x:colour-rgb",
+                    "description": "RGB Colour"
+                },
+                {
+                    "const": "x:colour-term",
+                    "description": "Colour Term",
+                    "$comment": "E.g. 'brown', 'light brown' or 'dark brown'."
                 }
             ]
         },

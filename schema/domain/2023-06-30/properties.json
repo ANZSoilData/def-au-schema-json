@@ -596,6 +596,13 @@
                 }
             }
         },
+        "colourModel": {
+        	"$anchor": "colour-model",
+        	"range@type": "xs:string",
+        	"title": "colourModel",
+        	"description": "The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term.",
+        	"$ref": "./enum.json#colour-model"
+        },
         "component": {
             "@id": "ansis:component",
             "range@type": [
