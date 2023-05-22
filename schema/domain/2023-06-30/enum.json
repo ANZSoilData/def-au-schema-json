@@ -756,7 +756,7 @@
                 {
                     "const": "x:colour-munsell",
                     "description": "Munsell Soil Colour",
-                    "$comment": "Munsell Color (Firm). (2010). Munsell soil color charts: with genuine Munsell color chips. Grand Rapids, MI :Munsell Color,"
+                    "$comment": "Munsell Colour Company (2000). Munsell Soil Color Charts. Munsell Color Co.: Baltimore, MD"
                 },
                 {
                     "const": "x:colour-japan",
