@@ -602,6 +602,7 @@ JSON Schema definitions of the complete list of entities (features in GIS speak)
 | type | 1..1 |  | [xs:anyURI](https://www.w3.org/TR/xmlschema-2/#anyURI) |  | A compact URI uniquely identifying the type of the object using IDs from the OWL/RDF domain model.\[ _After: https://jsonapi.org/format/#document-resource-objects and https://www.w3.org/TR/json-ld/#specifying-the-type._ \] |
 | moistureStatus | 1..1 |  | [skos:Concept](./ansis-skos#skosconcept); [sosa:ObservableProperty](./ansis-sosa#sosaobservableproperty) | [Moisture status for colour description](./ansis-enum#moisture-status-for-colour-description) | Moisture state of material while property evaluation is carried out. Soil colour. |
 | value | 1..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |  | Simple literal value. String. |
+| colourModel | 1..1 |  | [xs:string](https://www.w3.org/TR/xmlschema-2/#string) | [Colour Model](./ansis-enum#colour-model) | The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term. |
 
 
 ### ansis:SoilPlasticity

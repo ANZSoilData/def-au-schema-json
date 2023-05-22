@@ -103,6 +103,19 @@ Australian Soil Classification Depth - code.
 | xx:placeholder | placeholder value |
 
 
+## ASC Edition
+
+Australian Soil Classification edition.
+
+> Informal vocabulary.
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| x:asc-ed-1 | Australian Soil Classification, first edition |
+| doi:10.1071/9781486304646 | Australian Soil Classification, second edition |
+| doi:10.1071/9781486314782 | Australian Soil Classification, third edition |
+
+
 ## ASC Gravel - code
 
 **ANSIS Vocabulary Location:** asc:Gravel-code
@@ -387,6 +400,20 @@ Moisture status for colour description
 | ---------- | --------------- |
 | sp:colour-stat-D | Dry (colour status) |
 | sp:colour-stat-M | Moist |
+
+
+## Colour Model
+
+Colour models used to establish and record soil colour values.
+
+> Informal vocabulary.
+
+| ID/JSON Value | Preferred Label |
+| ---------- | --------------- |
+| x:colour-munsell | Munsell Colour System |
+| x:colour-jis | Japanese Industrial Standards - Colour \[ _Correct interpretation of 'Japanese Munsell'?_ \] |
+| x:colour-rgb | RGB Colour |
+| x:colour-term | Colour Term \[ _E.g. 'brown', 'light brown' or 'dark brown'._ \] |
 
 
 ## Plasticity Degree
