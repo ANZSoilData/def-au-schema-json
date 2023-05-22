@@ -755,12 +755,13 @@
             "oneOf": [
                 {
                     "const": "x:colour-munsell",
-                    "description": "Munsell Colour System"
+                    "description": "Munsell Colour System",
+                    "$comment": "Munsell Color (Firm). (2010). Munsell soil color charts: with genuine Munsell color chips. Grand Rapids, MI :Munsell Color,"
                 },
                 {
-                    "const": "x:colour-jis",
-                    "description": "Japanese Industrial Standards - Colour",
-                    "$comment": "Correct interpretation of 'Japanese Munsell'?"
+                    "const": "x:colour-japan",
+                    "description": "Japanese Soil Color Charts",
+                    "$comment": "Takehara, H., Oyama, M. (1970). Standard Soil Color Charts. Japan: Japanese Ministry of Agriculture and Forestry, Research Council for Agriculture, Forestry and Fisheries."
                 },
                 {
                     "const": "x:colour-rgb",
