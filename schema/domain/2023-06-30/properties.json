@@ -2089,20 +2089,17 @@
             "$defs": {
                 "colour": {
                     "$anchor": "moisture-status-colour",
-                    "type": "object",
+					"range@type": "skos:Concept",
+                    "type": "string",
                     "description": "Soil colour.",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./enum.json#colour-moisture-status"}
-                            }
-                        },
-                        {"$ref": "./sosa.json#ObservableProperty"}
-                    ]
+                    "$ref": "./enum.json#colour-moisture-status"
                 },
                 "soil": {
                     "$anchor": "moisture-status-soil-water-status",
+					"range@type": [
+						"sosa:ObservableProperty",
+						"skos:Concept"
+					],
                     "type": "object",
                     "description": "Soil water.",
                     "allOf": [
