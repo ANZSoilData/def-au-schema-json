@@ -410,8 +410,8 @@ Colour models used to establish and record soil colour values.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
-| x:colour-munsell | Munsell Colour System |
-| x:colour-jis | Japanese Industrial Standards - Colour \[ _Correct interpretation of 'Japanese Munsell'?_ \] |
+| x:colour-munsell | Munsell Soil Colour \[ _Munsell Color (Firm). (2010). Munsell soil color charts: with genuine Munsell color chips. Grand Rapids, MI :Munsell Color,_ \] |
+| x:colour-japan | Japanese Soil Color \[ _Takehara, H., Oyama, M. (1970). Standard Soil Color Charts. Japan: Japanese Ministry of Agriculture and Forestry, Research Council for Agriculture, Forestry and Fisheries._ \] |
 | x:colour-rgb | RGB Colour |
 | x:colour-term | Colour Term \[ _E.g. 'brown', 'light brown' or 'dark brown'._ \] |
 
