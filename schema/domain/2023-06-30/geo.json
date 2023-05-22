@@ -37,12 +37,12 @@
             "range@type": "xs:string",
             "title": "WKT Literal",
             "description": "A Well-known Text serialization of a geometry object.",
-            "$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA 2020 (EPSG:7844)?",
+            "$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA94 (EPSG:4283).",
             "type": "string",
             "examples": [
-                "SRID=7844;POINT(-42 24)",
-                "SRID=7844;LINESTRING(-42 24, -42 42)",
-                "SRID=7844;POLYGON(-42 24, -42 42, -45 42, -42 24)"
+                "SRID=4283;POINT(-42 24)",
+                "SRID=4283;LINESTRING(-42 24, -42 42)",
+                "SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
             ],
             "properties": {}
         }
