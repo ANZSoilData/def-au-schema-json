@@ -37,7 +37,7 @@
             "range@type": "xs:string",
             "title": "WKT Literal",
             "description": "A Well-known Text serialization of a geometry object.",
-            "$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS. Restrict to GDA94 (EPSG:4283).",
+            "$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS, e.g. SRID=4283;POINT(-42 24). Restrict to GDA94 (EPSG code 4283).",
             "type": "string",
             "examples": [
                 "SRID=4283;POINT(-42 24)",
