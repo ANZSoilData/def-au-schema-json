@@ -1,0 +1,34 @@
+{
+	"type": "ansis:SoilChemicalObservations",
+	"acidNeutralisingCapacity": [
+		{
+			"hasResult": {
+				"value": 1,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:20H1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		},
+		{
+			"hasResult": {
+				"value": 2,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:20H1",
+			"resultTime": "2001-12-17T09:31:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"cationExchangeCapacity": [
+		{
+			"hasResult": {
+				"value": 1,
+				"unit": "unit:CentiMOL-PER-KiloGM"
+			},
+			"usedProcedure": "scm:15B1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	]
+}
