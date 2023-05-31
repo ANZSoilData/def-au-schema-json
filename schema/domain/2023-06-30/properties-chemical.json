@@ -5,7 +5,9 @@
 	"description": "JSON Schema definitions of the complete list of soil chemical properties defined in the ANSIS Domain Ontology.",
 	"$comment": "Derived from Soil Chemical Methods – Australasia. (The 'Green Book'.)",
 	"type": "object",
-	"required": ["type"],
+	"required": [
+		"type"
+	],
 	"minProperties": 2,
 	"additionalProperties": false,
 	"properties": {
@@ -65,9 +67,9 @@
 				"resultTime": {
 					"$ref": "./sosa.json#resultTime"
 				},
-                "qualityOfObservation": {
-                	"$ref": "./sosa.json#qualityOfObservation"
-                }
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
 			}
 		},
 		"cationExchangeCapacity": {
@@ -124,9 +126,9 @@
 				"resultTime": {
 					"$ref": "./sosa.json#resultTime"
 				},
-                "qualityOfObservation": {
-                	"$ref": "./sosa.json#qualityOfObservation"
-                }
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
 			}
 		}
 	}
