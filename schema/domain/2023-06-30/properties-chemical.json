@@ -55,7 +55,9 @@
 						},
 						"unit": {
 							"$ref": "./qudt.json#unit",
-							"const": "unit:PERCENT"
+							"enum": [
+								"unit:PERCENT"
+							]
 						}
 					}
 				},
@@ -98,7 +100,9 @@
 						},
 						"unit": {
 							"$ref": "./qudt.json#unit",
-							"const": "unit:CentiMOL-PER-KiloGM"
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
 						}
 					}
 				},
