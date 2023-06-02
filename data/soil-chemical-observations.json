@@ -1,32 +1,129 @@
 {
 	"type": "ansis:SoilChemicalObservations",
-	"acidNeutralisingCapacity": [
+	"cationExchangeCapacity": [
 		{
 			"hasResult": {
-				"value": 1,
-				"unit": "unit:PERCENT"
+				"value": 0.1,
+				"unit": "unit:CentiMOL-PER-KiloGM"
 			},
-			"usedProcedure": "scm:20H1",
+			"usedProcedure": "scm:15B1",
 			"resultTime": "2001-12-17T09:30:47.0",
 			"qualityOfObservation": null
 		},
 		{
 			"hasResult": {
-				"value": 2,
-				"unit": "unit:PERCENT"
+				"value": 0.1,
+				"unit": "unit:CentiMOL-PER-KiloGM"
 			},
-			"usedProcedure": "scm:20H1",
-			"resultTime": "2001-12-17T09:31:47.0",
+			"usedProcedure": "scm:15E1",
+			"resultTime": "2001-12-17T09:30:47.0",
 			"qualityOfObservation": null
 		}
 	],
-	"cationExchangeCapacity": [
+	"effectiveCationExchangeCapacity": [
 		{
 			"hasResult": {
-				"value": 1,
+				"value": 0.1,
 				"unit": "unit:CentiMOL-PER-KiloGM"
 			},
-			"usedProcedure": "scm:15B1",
+			"usedProcedure": "scm:15J1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"electricalConductivity": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:DeciS-PER-M"
+			},
+			"usedProcedure": "scm:14B1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"organicCarbon": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:6A1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"pH": [
+		{
+			"hasResult": {
+				"unit": "unit:MOL-PER-M3",
+				"value": 0.1
+			},
+			"resultTime": "2001-12-17T09:30:47.0",
+			"usedProcedure": "scm:20K1",
+			"qualityOfObservation": null
+		},
+		{
+			"hasResult": {
+				"unit": "unit:UNITLESS",
+				"value": 0.1
+			},
+			"resultTime": "2001-12-17T09:30:47.0",
+			"usedProcedure": "scm:4C3",
+			"qualityOfObservation": null
+		}
+	],
+	"totalNitrogen": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:7A1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"totalOrganicCarbon": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:6B1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"totalPhosphorus": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:9A1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"totalPotassium": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:PERCENT"
+			},
+			"usedProcedure": "scm:17A1",
+			"resultTime": "2001-12-17T09:30:47.0",
+			"qualityOfObservation": null
+		}
+	],
+	"ratioTotalOrganicCarbonToTotalSoilNitrogen": [
+		{
+			"hasResult": {
+				"value": 0.1,
+				"unit": "unit:UNITLESS"
+			},
+			"usedProcedure": "scm:8A1",
 			"resultTime": "2001-12-17T09:30:47.0",
 			"qualityOfObservation": null
 		}

@@ -15,70 +15,73 @@
 			"$ref": "./base.json#type",
 			"const": "ansis:SoilChemicalObservations"
 		},
-		"acidNeutralisingCapacity": {
-			"type": "array",
-			"items": {
-				"$ref": "#acidNeutralisingCapacity"
-			}
-		},
 		"cationExchangeCapacity": {
 			"type": "array",
 			"items": {
 				"$ref": "#cationExchangeCapacity"
 			}
+		},
+		"effectiveCationExchangeCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#effectiveCationExchangeCapacity"
+			}
+		},
+		"electricalConductivity": {
+			"type": "array",
+			"items": {
+				"$ref": "#electricalConductivity"
+			}
+		},
+		"organicCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#organicCarbon"
+			}
+		},
+		"pH": {
+			"type": "array",
+			"items": {
+				"$ref": "#pH"
+			}
+		},
+		"totalNitrogen": {
+			"type": "array",
+			"items": {
+				"$ref": "#totalNitrogen"
+			}
+		},
+		"totalOrganicCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#totalOrganicCarbon"
+			}
+		},
+		"totalPhosphorus": {
+			"type": "array",
+			"items": {
+				"$ref": "#totalPhosphorus"
+			}
+		},
+		"totalPotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#totalPotassium"
+			}
+		},
+		"ratioTotalOrganicCarbonToTotalSoilNitrogen": {
+			"type": "array",
+			"items": {
+				"$ref": "#ratioTotalOrganicCarbonToTotalSoilNitrogen"
+			}
 		}
 	},
 	"$defs": {
-		"acidNeutralisingCapacity": {
-			"$anchor": "acidNeutralisingCapacity",
-			"@id": "ansis:acidNeutralisingCapacity",
-			"title": "Acid neutralising capacity",
-			"description": "Acid neutralising capacity (ANC BT) (CaCO3 equivalent)",
-			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"required": [
-				"hasResult",
-				"usedProcedure"
-			],
-			"properties": {
-				"hasResult": {
-					"required": [
-						"value",
-						"unit"
-					],
-					"properties": {
-						"value": {
-							"$ref": "./qudt.json#value"
-						},
-						"unit": {
-							"$ref": "./qudt.json#unit",
-							"enum": [
-								"unit:PERCENT"
-							]
-						}
-					}
-				},
-				"usedProcedure": {
-					"enum": [
-						"scm:20H1"
-					]
-				},
-				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
-				},
-				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
-				}
-			}
-		},
 		"cationExchangeCapacity": {
 			"$anchor": "cationExchangeCapacity",
-			"@id": "ansis:cationExchangeCapacity",
-			"title": "Cation exchange capacity (CEC).",
-			"description": "",
+			"@id": "nil:template",
+			"title": "cation exchange capacity",
+			"description": "Cation exchange capacity (CEC).",
 			"type": "object",
 			"range@type": [
 				"sosa:ObservableProperty",
@@ -90,6 +93,7 @@
 			],
 			"properties": {
 				"hasResult": {
+					"type": "object",
 					"required": [
 						"value",
 						"unit"
@@ -125,6 +129,487 @@
 						"scm:15I3",
 						"scm:15I4",
 						"scm:15K1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"effectiveCationExchangeCapacity": {
+			"$anchor": "effectiveCationExchangeCapacity",
+			"@id": "nil:template",
+			"title": "effective cation exchange capacity",
+			"description": "Effective cation exchange capacity (ECEC).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:15J1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"electricalConductivity": {
+			"$anchor": "electricalConductivity",
+			"@id": "nil:template",
+			"title": "electrical conductivity",
+			"description": "Electrical conductivity (EC).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:DeciS-PER-M"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:14B1",
+						"scm:3A1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"organicCarbon": {
+			"$anchor": "organicCarbon",
+			"@id": "nil:template",
+			"title": "concentration of organic carbon",
+			"description": "Concentration of organic carbon.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:PERCENT"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:6A1",
+						"scm:6G1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"pH": {
+			"$anchor": "pH",
+			"@id": "nil:template",
+			"title": "pH",
+			"description": "pH.",
+			"$comment": "Note different units for method scm:20K1 (Quick field approximations of ASS presence and associated lime requirement for drain-spoil). Experimenting with schema conditionals to manage this: https://json-schema.org/understanding-json-schema/reference/conditionals.html#if-then-else .",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:UNITLESS",
+								"unit:MOL-PER-M3"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:14C1",
+						"scm:20K1",
+						"scm:4A1",
+						"scm:4A2",
+						"scm:4A3",
+						"scm:4B1",
+						"scm:4B2",
+						"scm:4B3",
+						"scm:4B4",
+						"scm:4B5",
+						"scm:4C1",
+						"scm:4C2",
+						"scm:4C3",
+						"scm:4C4",
+						"scm:4D1",
+						"scm:4E1",
+						"scm:4G1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			},
+			"if": {
+				"properties": {
+					"usedProcedure": {
+						"const": "scm:20K1"
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"hasResult": {
+						"properties": {
+							"unit": {
+								"const": "unit:MOL-PER-M3"
+							}
+						}
+					}
+				}
+			},
+			"else": {
+				"properties": {
+					"hasResult": {
+						"properties": {
+							"unit": {
+								"const": "unit:UNITLESS"
+							}
+						}
+					}
+				}
+			}
+		},
+		"totalNitrogen": {
+			"$anchor": "totalNitrogen",
+			"@id": "nil:template",
+			"title": "concentration of total nitrogen",
+			"description": "Concentration of total Nitrogen.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:PERCENT"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:7A1",
+						"scm:7A2",
+						"scm:7A2a",
+						"scm:7A2b",
+						"scm:7A3",
+						"scm:7A4",
+						"scm:7A5",
+						"scm:7A6a",
+						"scm:7A6b"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"totalOrganicCarbon": {
+			"$anchor": "totalOrganicCarbon",
+			"@id": "nil:template",
+			"title": "concentration of total organic carbon",
+			"description": "Concentration of total Organic Carbon .",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:PERCENT"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:6B1",
+						"scm:6B2",
+						"scm:6B2a",
+						"scm:6B2b",
+						"scm:6B3",
+						"scm:6B4a",
+						"scm:6B4b"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"totalPhosphorus": {
+			"$anchor": "totalPhosphorus",
+			"@id": "nil:template",
+			"title": "concentration of total phosphorus",
+			"description": "Concentration of total Phosphorus (P).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:PERCENT"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:9A1",
+						"scm:9A2"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"totalPotassium": {
+			"$anchor": "totalPotassium",
+			"@id": "nil:template",
+			"title": "concentration of total potassium",
+			"description": "Concentration of total Potassium (K).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:PERCENT",
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:17A1",
+						"scm:17A2"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"ratioTotalOrganicCarbonToTotalSoilNitrogen": {
+			"$anchor": "ratioTotalOrganicCarbonToTotalSoilNitrogen",
+			"@id": "nil:template",
+			"title": "concentration ratio of total organic carbon to total soil nitrogen",
+			"description": "Concentration ratio of total organic carbon (TOC) to total soil nitrogen (TSN).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:UNITLESS"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:8A1",
+						"scm:8B1"
 					]
 				},
 				"resultTime": {
