@@ -1002,6 +1002,35 @@
                 }
             ]
         },
+        "DispersionInWater": {
+            "$anchor": "dispersion-in-water",
+            "@id": "nil:template",
+            "title": "Classification of soil based on its dispersion in water",
+            "description": "A classification of soil based on its dispersion in water (Emerson 1991).",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:dispersion-0",
+                    "description": "No dispersion"
+                },
+                {
+                    "const": "xx:dispersion-1",
+                    "description": "Slight dispersion"
+                },
+                {
+                    "const": "xx:dispersion-2",
+                    "description": "Moderate dispersion"
+                },
+                {
+                    "const": "xx:dispersion-3",
+                    "description": "Strong dispersion"
+                },
+                {
+                    "const": "xx:dispersion-4",
+                    "description": "Complete dispersion"
+                }
+            ]
+        },
         "DisturbanceOfSite": {
             "$anchor": "disturbance-of-site",
             "@id": "ls:Disturbance-of-site",
