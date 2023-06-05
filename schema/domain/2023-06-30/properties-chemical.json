@@ -221,7 +221,7 @@
 				"usedProcedure": {
 					"enum": [
 						"scm:14B1",
-						"scm:3A1"
+						"scm:03A1"
 					]
 				},
 				"resultTime": {
@@ -267,8 +267,8 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:6A1",
-						"scm:6G1"
+						"scm:06A1",
+						"scm:06G1"
 					]
 				},
 				"resultTime": {
@@ -318,21 +318,21 @@
 					"enum": [
 						"scm:14C1",
 						"scm:20K1",
-						"scm:4A1",
-						"scm:4A2",
-						"scm:4A3",
-						"scm:4B1",
-						"scm:4B2",
-						"scm:4B3",
-						"scm:4B4",
-						"scm:4B5",
-						"scm:4C1",
-						"scm:4C2",
-						"scm:4C3",
-						"scm:4C4",
-						"scm:4D1",
-						"scm:4E1",
-						"scm:4G1"
+						"scm:04A1",
+						"scm:04A2",
+						"scm:04A3",
+						"scm:04B1",
+						"scm:04B2",
+						"scm:04B3",
+						"scm:04B4",
+						"scm:04B5",
+						"scm:04C1",
+						"scm:04C2",
+						"scm:04C3",
+						"scm:04C4",
+						"scm:04D1",
+						"scm:04E1",
+						"scm:04G1"
 					]
 				},
 				"resultTime": {
@@ -407,15 +407,15 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:7A1",
-						"scm:7A2",
-						"scm:7A2a",
-						"scm:7A2b",
-						"scm:7A3",
-						"scm:7A4",
-						"scm:7A5",
-						"scm:7A6a",
-						"scm:7A6b"
+						"scm:07A1",
+						"scm:07A2",
+						"scm:07A2a",
+						"scm:07A2b",
+						"scm:07A3",
+						"scm:07A4",
+						"scm:07A5",
+						"scm:07A6a",
+						"scm:07A6b"
 					]
 				},
 				"resultTime": {
@@ -461,13 +461,13 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:6B1",
-						"scm:6B2",
-						"scm:6B2a",
-						"scm:6B2b",
-						"scm:6B3",
-						"scm:6B4a",
-						"scm:6B4b"
+						"scm:06B1",
+						"scm:06B2",
+						"scm:06B2a",
+						"scm:06B2b",
+						"scm:06B3",
+						"scm:06B4a",
+						"scm:06B4b"
 					]
 				},
 				"resultTime": {
@@ -513,8 +513,8 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:9A1",
-						"scm:9A2"
+						"scm:09A1",
+						"scm:09A2"
 					]
 				},
 				"resultTime": {
@@ -608,8 +608,8 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:8A1",
-						"scm:8B1"
+						"scm:08A1",
+						"scm:08B1"
 					]
 				},
 				"resultTime": {
