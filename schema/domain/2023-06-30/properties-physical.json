@@ -265,7 +265,7 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"spmile:516.01","spmile:517.02","spmile:517.03","spmile:517.04","spmile:517.05","spmile:517.06","spmile:517.07","spmile:517.08","spmile:517.09","spmile:517.10","spmile:517.11","spmile:517.12"
+						"spmile:516.01","spmile:517.02","spmile:517.03","spmile:517.04","spmile:517.05","spmile:517.06","spmile:517.07","spmile:517.08","spmile:517.09","spmile:517.10","spmile:517.11","spmile:517.12","spmile:517.13","spmile:517.14","spmile:517.15","spmile:517.16"
 					]
 				},
 				"resultTime": {
@@ -311,7 +311,7 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"spmile:516.01","spmile:517.02","spmile:517.03","spmile:517.04","spmile:517.05","spmile:517.06","spmile:517.07","spmile:517.08","spmile:517.09","spmile:517.10","spmile:517.11","spmile:517.12","spmile:517.13"
+						"spmile:516.01","spmile:517.02","spmile:517.03","spmile:517.04","spmile:517.05","spmile:517.06","spmile:517.07","spmile:517.08","spmile:517.09","spmile:517.10","spmile:517.11","spmile:517.12","spmile:517.13","spmile:517.14","spmile:517.15","spmile:517.16"
 					]
 				},
 				"resultTime": {
@@ -357,7 +357,7 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"spmile:516.01","spmile:517.02","spmile:517.03","spmile:517.04","spmile:517.05","spmile:517.06","spmile:517.07","spmile:517.08","spmile:517.09","spmile:517.10","spmile:517.11","spmile:517.12","spmile:517.13"
+						"spmile:516.01","spmile:517.02","spmile:517.03","spmile:517.04","spmile:517.05","spmile:517.06","spmile:517.07","spmile:517.08","spmile:517.09","spmile:517.10","spmile:517.11","spmile:517.12","spmile:517.13","spmile:517.14","spmile:517.15","spmile:517.16"
 					]
 				},
 				"resultTime": {
