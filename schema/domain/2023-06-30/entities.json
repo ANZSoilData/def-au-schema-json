@@ -885,7 +885,13 @@
                 "relativeInclination": {"$ref": "./properties.json#relative-inclination"},
                 "slope": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#slope-class"}
+                    "items": {
+                    	"oneOf": [
+							{"$ref": "./properties.json#slope-class"},
+							{"$ref": "./properties.json#slope-quantity"}
+						]
+                    },
+                    "maxItems": 2
                 },
                 "width": {"$ref": "./properties.json#width-quantity"}
             },

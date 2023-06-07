@@ -1002,6 +1002,35 @@
                 }
             ]
         },
+        "DispersionInWater": {
+            "$anchor": "dispersion-in-water",
+            "@id": "nil:template",
+            "title": "Classification of soil based on its dispersion in water",
+            "description": "A classification of soil based on its dispersion in water (Emerson 1991).",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "xx:dispersion-0",
+                    "description": "No dispersion"
+                },
+                {
+                    "const": "xx:dispersion-1",
+                    "description": "Slight dispersion"
+                },
+                {
+                    "const": "xx:dispersion-2",
+                    "description": "Moderate dispersion"
+                },
+                {
+                    "const": "xx:dispersion-3",
+                    "description": "Strong dispersion"
+                },
+                {
+                    "const": "xx:dispersion-4",
+                    "description": "Complete dispersion"
+                }
+            ]
+        },
         "DisturbanceOfSite": {
             "$anchor": "disturbance-of-site",
             "@id": "ls:Disturbance-of-site",
@@ -4982,24 +5011,36 @@
             "type": "string",
             "oneOf": [
                 {
-                    "const": "lf:relief-class-H",
-                    "description": "High"
+                    "const": "lf:slope-class-CL",
+                    "description": "Cliffed"
                 },
                 {
-                    "const": "lf:relief-class-L",
-                    "description": "Low"
+                    "const": "lf:slope-class-GE",
+                    "description": "Gently inclined"
                 },
                 {
-                    "const": "lf:relief-class-M",
-                    "description": "Very high"
+                    "const": "lf:slope-class-LE",
+                    "description": "level"
                 },
                 {
-                    "const": "lf:relief-class-P",
-                    "description": "Extremely low"
+                    "const": "lf:slope-class-MO",
+                    "description": "Moderately inclined"
                 },
                 {
-                    "const": "lf:relief-class-R",
-                    "description": "Very low"
+                    "const": "lf:slope-class-PR",
+                    "description": "Precipitous"
+                },
+                {
+                    "const": "lf:slope-class-ST",
+                    "description": "Steep"
+                },
+                {
+                    "const": "lf:slope-class-VG",
+                    "description": "Very gently inclined"
+                },
+                {
+                    "const": "lf:slope-class-VS",
+                    "description": "Very steep"
                 }
             ]
         },
