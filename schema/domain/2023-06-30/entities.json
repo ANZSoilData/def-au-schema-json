@@ -493,8 +493,15 @@
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
                 "hasGeometry": {"$ref": "./geo.json#hasGeometry"},
                 "hasResult": {
-                    "type": "array",
-                    "items": {"$ref": "./sosa.json#hasResult-Observation"}
+                    "type": "object",
+                    "properties": {
+						"chemical": {
+							"$ref": "./properties-chemical.json#chemical-observations"
+						},
+						"physical": {
+							"$ref": "./properties-physical.json#physical-observations"
+						}
+                    }
                 },
                 "isSampleOf": {
                     "type": "array",
