@@ -1,6 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "properties-physical.json",
+	"$anchor": "physical-observations",
 	"title": "ANSIS Soil Physical Property Schema",
 	"description": "JSON Schema definitions of the complete list of soil physical properties defined in the ANSIS Domain Ontology.",
 	"$comment": "Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.)",

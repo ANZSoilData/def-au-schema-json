@@ -1,6 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "properties-chemical.json",
+	"$anchor": "chemical-observations",
 	"title": "ANSIS Soil Chemical Property Schema",
 	"description": "JSON Schema definitions of the complete list of soil chemical properties defined in the ANSIS Domain Ontology.",
 	"$comment": "Derived from Soil Chemical Methods – Australasia. (The 'Green Book'.)",
