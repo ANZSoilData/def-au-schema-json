@@ -1,8 +1,8 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "ansis.json",
-	"title": "ANSIS Soil Domain Entity Collection Schema",
-	"description": "Collections of entities - e.g. for service responses.",
+	"title": "ANSIS Root Entity Schema",
+	"description": "Identifies root elements currently served by ANSIS.",
 	"$comment": "Inching towards a JSON API structure ... ",
 	"type": "object",
 	"properties": {
