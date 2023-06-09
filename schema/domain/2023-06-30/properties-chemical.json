@@ -16,6 +16,12 @@
 			"$ref": "./base.json#type",
 			"const": "ansis:SoilChemicalObservations"
 		},
+		"ammoniumN": {
+			"type": "array",
+			"items": {
+				"$ref": "#ammoniumN"
+			}
+		},
 		"cationExchangeCapacity": {
 			"type": "array",
 			"items": {
@@ -34,10 +40,100 @@
 				"$ref": "#electricalConductivity"
 			}
 		},
+		"exchangableAluminium": {
+			"type": "array",
+			"items": {
+				"$ref": "#exchangableAluminium"
+			}
+		},
+		"exchangableCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#exchangableCalcium"
+			}
+		},
+		"exchangableMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#exchangableMagnesium"
+			}
+		},
+		"exchangablePotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#exchangablePotassium"
+			}
+		},
+		"exchangableSodium": {
+			"type": "array",
+			"items": {
+				"$ref": "#exchangableSodium"
+			}
+		},
+		"extractableBoron": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractableBoron"
+			}
+		},
+		"extractableCopper": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractableCopper"
+			}
+		},
+		"extractableIron": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractableIron"
+			}
+		},
+		"extractablePhosphorus": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractablePhosphorus"
+			}
+		},
+		"extractablePotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractablePotassium"
+			}
+		},
+		"extractableSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractableSulfur"
+			}
+		},
+		"extractableZinc": {
+			"type": "array",
+			"items": {
+				"$ref": "#extractableZinc"
+			}
+		},
+		"nitrateN": {
+			"type": "array",
+			"items": {
+				"$ref": "#nitrateN"
+			}
+		},
+		"nitriteN": {
+			"type": "array",
+			"items": {
+				"$ref": "#nitriteN"
+			}
+		},
 		"organicCarbon": {
 			"type": "array",
 			"items": {
 				"$ref": "#organicCarbon"
+			}
+		},
+		"pBufferIndex": {
+			"type": "array",
+			"items": {
+				"$ref": "#pBufferIndex"
 			}
 		},
 		"pH": {
@@ -78,6 +174,52 @@
 		}
 	},
 	"$defs": {
+		"ammoniumN": {
+			"$anchor": "ammoniumN",
+			"@id": "nil:template",
+			"title": "Concentration of ammonium-N",
+			"description": "Concentration of ammonium-N (NH4-N).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:7C1a"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
 		"cationExchangeCapacity": {
 			"$anchor": "cationExchangeCapacity",
 			"@id": "nil:template",
@@ -233,6 +375,787 @@
 				}
 			}
 		},
+		"exchangableAluminium": {
+			"$anchor": "exchangableAluminium",
+			"@id": "nil:template",
+			"title": "Concentration of exchangable Aluminium",
+			"description": "Concentration of exchangable Aluminium (Al3+).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:15F2"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"exchangableCalcium": {
+			"$anchor": "exchangableCalcium",
+			"@id": "nil:template",
+			"title": "Concentration of exchangable Calcium",
+			"description": "Concentration of exchangable Calcium (Ca2+).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15C2","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"exchangableMagnesium": {
+			"$anchor": "exchangableMagnesium",
+			"@id": "nil:template",
+			"title": "Concentration of exchangable Magnesium",
+			"description": "Concentration of exchangable Magnesium (Mg2+).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15C2","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"exchangablePotassium": {
+			"$anchor": "exchangablePotassium",
+			"@id": "nil:template",
+			"title": "Concentration of exchangable Potassium",
+			"description": "Concentration of exchangable Potassium (K+).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"exchangableSodium": {
+			"$anchor": "exchangableSodium",
+			"@id": "nil:template",
+			"title": "Concentration of exchangable Sodium",
+			"description": "Concentration of exchangable Sodium (Na+).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"extractableBoron": {
+			"$anchor": "extractableBoron",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Boron",
+			"description": "Concentration of extractable Boron (B).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:12C1","scm:12C2","scm:18F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"extractableCopper": {
+			"$anchor": "extractableCopper",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Copper",
+			"description": "Concentration of extractable Copper (Cu).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:12A1","scm:12B1","scm:12D1","scm:18F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"extractableIron": {
+			"$anchor": "extractableIron",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Iron",
+			"description": "Concentration of extractable Iron (Fe).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM",
+								"unit:PERCENT"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:12A1","scm:12D1","scm:13A1","scm:13B1","scm:13C1","scm:18F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			},
+			"if": {
+				"properties": {
+					"usedProcedure": {
+						"enum": [
+							"scm:12A1","scm:12D1","scm:18F1"
+						]
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"hasResult": {
+						"properties": {
+							"unit": {
+								"const": "unit:MilliGM-PER-KiloGM"
+							}
+						}
+					}
+				}
+			},
+			"else": {
+				"properties": {
+					"hasResult": {
+						"properties": {
+							"unit": {
+								"const": "unit:PERCENT"
+							}
+						}
+					}
+				}
+			}
+		},
+		"extractablePhosphorus": {
+			"$anchor": "extractablePhosphorus",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Phosphorus",
+			"description": "Concentration of extractable Phosphorus (P).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MicroGM-PER-KiloGM",
+								"unit:MilliGM-PER-KiloGM",
+								"unit:PERCENT"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:18F1","scm:18F2","scm:9A3a","scm:9A3b","scm:9B1","scm:9B2","scm:9C1","scm:9C2","scm:9C2a","scm:9C2b","scm:9D1","scm:9E1","scm:9E2","scm:9F1","scm:9F2","scm:9G1","scm:9G2"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			},
+			"allOf": [
+				{
+					"if": {
+						"properties": {
+							"usedProcedure": {
+								"enum": [
+									"scm:9A3a","scm:9A3b"
+								]
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"hasResult": {
+								"properties": {
+									"unit": {
+										"const": "unit:PERCENT"
+									}
+								}
+							}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"usedProcedure": {
+								"enum": [
+									"scm:9F1","scm:9F2"
+								]
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"hasResult": {
+								"properties": {
+									"unit": {
+										"const": "unit:MicroGM-PER-KiloGM"
+									}
+								}
+							}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"usedProcedure": {
+								"enum": [
+									"scm:18F1","scm:18F2","scm:9B1","scm:9B2","scm:9C1","scm:9C2","scm:9C2a","scm:9C2b","scm:9D1","scm:9E1","scm:9E2","scm:9G1","scm:9G2"
+								]
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"hasResult": {
+								"properties": {
+									"unit": {
+										"const": "unit:MilliGM-PER-KiloGM"
+									}
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		"extractablePotassium": {
+			"$anchor": "extractablePotassium",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Potassium",
+			"description": "Concentration of extractable Potassium (K+).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:CentiMOL-PER-KiloGM",
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:18A1","scm:18B1","scm:18C1","scm:18F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			},
+			"if": {
+				"properties": {
+					"usedProcedure": {
+						"const": "scm:18F1"
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"hasResult": {
+						"properties": {
+							"unit": {
+								"enum": [
+									"unit:MilliGM-PER-KiloGM"
+								]
+							}
+						}
+					}
+				}
+			},
+			"else": {
+				"properties": {
+					"hasResult": {
+						"properties": {
+							"unit": {
+								"enum": [
+									"unit:CentiMOL-PER-KiloGM",
+									"unit:MilliGM-PER-KiloGM"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"extractableSulfur": {
+			"$anchor": "extractableSulfur",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Sulfur",
+			"description": "Concentration of extractable Sulfur (S).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:10B1","scm:10B2","scm:10B3","scm:10B4","scm:10C1","scm:10D1","scm:18F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"extractableZinc": {
+			"$anchor": "extractableZinc",
+			"@id": "nil:template",
+			"title": "Concentration of extractable Zinc",
+			"description": "Concentration of extractable Zinc (Zn).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:12A1","scm:12B1","scm:12D1","scm:18F1"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"nitrateN": {
+			"$anchor": "nitrateN",
+			"@id": "nil:template",
+			"title": "Concentration of nitrate-N",
+			"description": "Concentration of nitrate-N (NO3-N).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:7C1e","scm:7C1f"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"nitriteN": {
+			"$anchor": "nitriteN",
+			"@id": "nil:template",
+			"title": "Concentration of nitrite-N",
+			"description": "Concentration of nitrite-N (NO2-N).",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:MilliGM-PER-KiloGM"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:7C1h"
+					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
 		"organicCarbon": {
 			"$anchor": "organicCarbon",
 			"@id": "nil:template",
@@ -271,6 +1194,51 @@
 						"scm:6A1",
 						"scm:6G1"
 					]
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#resultTime"
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#qualityOfObservation"
+				}
+			}
+		},
+		"pBufferIndex": {
+			"$anchor": "pBufferIndex",
+			"@id": "nil:template",
+			"title": "P buffer index",
+			"description": "P buffer index (PBI)",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"required": [
+				"hasResult",
+				"usedProcedure"
+			],
+			"properties": {
+				"hasResult": {
+					"type": "object",
+					"required": [
+						"value",
+						"unit"
+					],
+					"properties": {
+						"value": {
+							"$ref": "./qudt.json#value"
+						},
+						"unit": {
+							"$ref": "./qudt.json#unit",
+							"enum": [
+								"unit:UNITLESS"
+							]
+						}
+					}
+				},
+				"usedProcedure": {
+					"enum": [
+						"scm:9I2a","scm:9I2b","scm:9I2c","scm:9I3a","scm:9I3b","scm:9I3c","scm:9I4a","scm:9I4b","scm:9I4c"					]
 				},
 				"resultTime": {
 					"$ref": "./sosa.json#resultTime"
