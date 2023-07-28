@@ -19,6 +19,7 @@
 					}
 				},
 				{
+				    "type": "object",
 					"$ref": "./entities.json#SoilSite"
 				}
 			]

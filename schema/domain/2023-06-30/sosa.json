@@ -372,8 +372,8 @@
                 "Concept": {
                     "$anchor": "usedProcedure",
                     "type": "object",
-                    "description": "skos:Concept Link.",
-                    "$ref": "./base.json#Entity_Link"
+                    "description": "skos:Concept id (compact URI).",
+                    "type": "string"
                 },
                 "SoilProfile": {
                     "$anchor": "usedProcedure-ProfileConstruction",
