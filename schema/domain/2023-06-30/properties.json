@@ -441,18 +441,11 @@
                     "title": "pH",
                     "description": "Alkalinity of material.",
                     "type": "object",
-                    "allOf": [
-                        {
-                            "required": ["hasResult"],
-                            "properties": {
-                                "hasResult": {"$ref": "./qudt.json#QuantityValue"}
-                            }
-                        },
-                        {
-                            "required": ["usedProcedure"],
-                            "$ref": "./sosa.json#ObservableProperty"
-                        }
-                    ]
+					"required": ["hasResult","usedProcedure"],
+					"properties": {
+						"hasResult": {"$ref": "./qudt.json#QuantityValue"},
+						"usedProcedure": {"type": "string"}
+					}
                 }
             }
         },

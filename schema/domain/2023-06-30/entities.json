@@ -26,7 +26,6 @@
                 "hasLandform",
                 "hasLandSurface",
                 "purpose",
-                "relatedProject",
                 "relatedSoilSurface"
             ],
             "properties": {
@@ -105,7 +104,7 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedSite-link"}
                 },
-                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-object"},
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
                 "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-object"},
                 "scopedIdentifier": {
                     "type": "array",
@@ -165,7 +164,7 @@
                 },
                 "relatedSample": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedSample-object"}
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
                 },
                 "relatedSite": {
                     "type": "array",
@@ -958,7 +957,7 @@
                 "component": {"$ref": "./properties.json#component-microrelief-sampled"},
                 "hasMicrorelief_biotic": {"$ref": "./properties.json#hasMicrorelief-biotic"},
                 "hasMicrorelief_gilgai": {"$ref": "./properties.json#hasMicrorelief-gilgai"},
-                "hasMicrorelief_hummocky": {"$ref": "./properties.json#hasMicrorelief-hummocky"},
+                "hasMicrorelief_gilgai": {"$ref": "./properties.json#hasMicrorelief-hummocky"},
                 "hasMicrorelief_other": {"$ref": "./properties.json#hasMicrorelief-other"},
                 "height": {"$ref": "./properties.json#height"},
                 "length": {"$ref": "./properties.json#length"}
