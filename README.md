@@ -3,7 +3,7 @@
 > Documentation of the ANSIS JSON Schema, including tables summarising each schema object is here:
 > - https://anzsoildata.github.io/def-au-schema-json/docs/ansis-schema
 
-> Active development of ANSIS Schema is in the branch version-0.0. Switch to that branch for the
+> Active development of ANSIS Schema is in the branch version-1.0-rc1. Switch to that branch for the
 > latest, but not necessarily stable, versions of the schema.
 
 ## Overview
@@ -17,7 +17,7 @@ support JSON representations of data suitable for use in 'typical' web APIs and 
 widely used programming libraries. As such they remove some OWL/RDF artefacts necessary for the
 definition of a robust ontology* but not commonly required for JSON objects.
 
-> \* These artefacts reflect the fundamental importance of set theory and reasoning to OWL/RDF. We
+> \* These artifacts reflect the fundamental importance of set theory and reasoning to OWL/RDF. We
 > anticipate that future versions ANSIS will provide Semantic Web APIs that support reasoning and
 > inferencing. The JSON schema and RDF approaches should therefore be considered complimentary.
 
@@ -34,7 +34,9 @@ The principles guiding the design of the schema are documented [here](./docs/des
 
 ## Contributing
 
-Please raise any issues in MS Teams in the ANSIS *1.3.2 Data Standards Project* team chat.
+Please raise any bugs this repository's [Issues](https://github.com/ANZSoilData/def-au-schema-json/issues)
+log. If you are not sure it is a real issue you can raise your concerns in the 
+[Discussions](https://github.com/ANZSoilData/def-au-schema-json/discussions) log.
 
 Non-ANSIS project members can contact [Peter Wilson](mailto:peter.wilson@csiro.au).
 
@@ -49,7 +51,7 @@ We urge contributors to be familiar with the [domain ontology][def-au-domain],
 [JSON Schema](https://json-schema.org/) and the
 [JSON Schema Specification](https://json-schema.org/specification.html).
 
-> This work currently uses `draft/2020-12` of the specification.
+> This work currently uses `draft/2020-12` of the JSON Schema specification.
 
 
 ## Navigating this repository

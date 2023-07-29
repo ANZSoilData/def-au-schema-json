@@ -1,5 +1,7 @@
 # ANSIS Python Hacks
 
+> These will require refactoring to support new schema patterns adopted for version 1.0-rc1.
+
 ## doc_domain
 
 Generates markdown documents containing rtables for each object in schema in the ANSIS Domain JSON
