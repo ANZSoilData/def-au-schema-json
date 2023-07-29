@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "ansis.json",
+    "title": "ANSIS Root Entity Schema",
+    "description": "Identifies root elements currently served by ANSIS.",
+    "$comment": "Based on, but not fully compliant with, the top-level objects defined in the [JSON API](https://jsonapi.org/format/#document-top-level) Specification.",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "description": "The identifier of this JSON Schema. Allows instance documents to be linked to this schema for validation.",
+            "type": "string",
+            "const": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json"
+        },
+        "data": {
+        	"description": "An array containing the document’s target resource (an ANSIS Landscape Survey/Soil Site).",
+            "type": "array",
+            "items": {
+                "$ref": "./entities.json#AnsisSite"
+            }
+        },
+        "included": {
+        	"description": "An array of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in this array will be accessed via JSON pointers in the source objects.",
+            "type": "array",
+            "items": {
+            	"anyOf": [
+            		{
+						"$ref": "./entities.json#AnsisSite"
+            		},
+            		{
+						"$ref": "./proj.json#Project"
+            		}
+            	]
+            }
+        },
+        "meta": {
+        	"description": "Non-ANSIS response metadata summarising the contents of the document.",
+            "type": "object",
+            "properties": {
+            	"timeStamp": {
+                    "description": "The data and time this document was created.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "numberReturned": {
+                    "description": "Number of objects in the 'data' array.",
+                    "type": "integer"
+                },
+                "numberMatched": {
+                    "description": "Number of objects the matched the filter used when generating this document.",
+                    "type": "integer"
+                },
+                "numberWithheld": {
+                    "description": "Number of objects the matched the filter used when generating this document but we not returned due to user access restrictions.",
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
