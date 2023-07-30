@@ -1660,11 +1660,22 @@
         "landUse": {
             "$anchor": "landUse",
             "@id": "ansis:hasLandUse",
-            "range@type": "ansis:Classification",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:Classification"
+            ],
             "title": "land use",
             "description": "A description of land use.",
             "type": "object",
-            "$ref": "./entities.json#Classification"
+            "allOf": [
+                {
+                    "required": ["result"],
+                    "properties": {
+                        "result": {"$ref": "./entities.json#Classification"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
         },
         "landform": {
             "$anchor": "landform",
