@@ -1184,7 +1184,14 @@
 					"$ref": "./properties.json#abundance-mottles"
 				},
 				"colour": {
-					"$ref": "./properties.json#colour-mottle"
+					"oneOf": [
+						{
+							"$ref": "./properties.json#colour-mottle"
+						},
+						{
+							"$ref": "./properties.json#colour-soil"
+						}
+					]
 				},
 				"contrast": {
 					"$ref": "./properties.json#contrast"
@@ -1448,11 +1455,11 @@
 			"type": "object",
 			"required": [
 				"type",
-				"moistureStatus",
-				"value",
+				"colourValue",
 				"colourModel"
 			],
 			"ansisPreferred": [
+				"moistureStatus"
 			],
 			"properties": {
 				"id": {
@@ -1465,7 +1472,7 @@
 				"moistureStatus": {
 					"$ref": "./properties.json#moisture-status-colour"
 				},
-				"value": {
+				"colourValue": {
 					"$ref": "./properties.json#value-string"
 				},
 				"colourModel": {
