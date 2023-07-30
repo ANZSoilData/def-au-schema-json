@@ -153,6 +153,256 @@
             },
             "additionalProperties": false
         },
+        
+		"SoilProfile": {
+            "$anchor": "SoilProfile",
+            "@id": "ansis:SoilProfile",
+            "title": "ANSIS Soil Profile",
+            "description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
+            "type": "object",
+            "required": [
+                "type",
+                "depth",
+                "depthReason",
+                "geometry",
+                "purpose",
+                "relatedSite",
+                "usedProcedure"
+            ],
+            "ansisPreferred": ["drainage"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilProfile"
+                },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-soil-profile"}
+                },
+                "classification": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#classification"}
+                },
+                "depth": {"$ref": "./properties.json#depth-quantity"},
+                "depthReason": {"$ref": "./properties.json#depth-reason"},
+                "depthRHorizon": {"$ref": "./properties.json#depth-r-horizon"},
+                "drainage": {"$ref": "./properties.json#drainage"},
+                "geometry": {"$ref": "./geo.json#geometry"},
+                "roots": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#roots"}
+                },
+                "substrate": {"$ref": "./properties.json#substrate"},
+                "purpose": {"$ref": "./properties.json#purpose"},
+                "relatedHorizon": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedHorizon-object"}
+                },
+                "relatedLayer": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedLayer-object"}
+                },
+                "relatedSample": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
+                },
+                "relatedSite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSite-link"}
+                },
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-link"},
+                "usedProcedure": {"$ref": "./sosa.json#usedProcedure-ProfileConstruction"}
+            },
+            "additionalProperties": false
+        },
+                
+        "SoilHorizon": {
+            "$anchor": "SoilHorizon",
+            "@id": "ansis:SoilHorizon",
+            "title": "ANSIS Soil Horizon",
+            "description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+            "type": "object",
+            "required": [
+                "type",
+                "depthLower",
+                "depthUpper",
+                "designation"
+            ],
+            "ansisPreferred": [
+                "biological",
+                "carbon",
+                "carbonateEffervescence",
+                "colour",
+                "coarseFragments",
+                "mottles",
+                "strength",
+                "structure",
+                "pH",
+                "physical",
+                "permeability",
+                "texture"
+            ],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilHorizon"
+                },
+                "carbon": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#chemistry-carbon"}
+                },
+                "carbonateEffervescence": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#chemistry-carbonate-effervescence"}
+                },
+                "colour": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#colour-soil"}
+                },
+                "density": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#density"}
+                },
+                "depthLower": {"$ref": "./properties.json#depth-lower"},
+                "depthUpper": {"$ref": "./properties.json#depth-upper"},
+                "designation": {"$ref": "./properties.json#designation"},
+                "distinctness": {"$ref": "./properties.json#distinctness-boundary"},
+                "coarseFragments": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#coarseFragments"}
+                },
+                "cracks": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#cracks"}
+                },
+                "cutans": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#cutans"}
+                },
+                "mottles": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#mottles"}
+                },
+                "pans": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#pans"}
+                },
+                "pores": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#pores"}
+                },
+                "roots": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#roots"}
+                },
+                "segregations": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#segregations"}
+                },
+                "permeability": {"$ref": "./properties.json#permeability-soil"},
+                "pH": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#chemistry-ph"}
+                },
+                "physical": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#physical"}
+                },
+                "plasticity": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#degree-consistence-plasticity"}
+                },
+                "relatedSample": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
+                },
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "shape": {"$ref": "./properties.json#shape-boundary"},
+                "strength": {"$ref": "./properties.json#strength-soil"},
+                "structure": {"$ref": "./properties.json#structure"},
+                "texture": {"$ref": "./properties.json#texture-soil"},
+                "waterRepellence": {"$ref": "./properties.json#waterRepellence"}
+            },
+            "additionalProperties": false
+        },
+        
+		"SoilSurface": {
+            "$anchor": "SoilSurface",
+            "@id": "ansis:SoilSurface",
+            "title": "ANSIS Soil Surface",
+            "description": "The surface of the soil body.",
+            "type": "object",
+            "required": ["type"],
+            "ansisPreferred": ["conditionWhenDry"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilSurface"
+                },
+                "conditionWhenDry": {"$ref": "./properties.json#condition-when-dry"},
+                "coarseFragments": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#coarseFragments"}
+                },
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "waterRepellence": {"$ref": "./properties.json#waterRepellence"}
+            },
+            "additionalProperties": false
+        },
+        "Substrate": {
+            "$anchor": "Substrate",
+            "@id": "ansis:Substrate",
+            "title": "ANSIS Substrate",
+            "description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
+            "type": "object",
+            "required": [
+                "type",
+                "depth",
+                "distance",
+                "relatedSoilBody",
+                "texture"
+            ],
+            "ansisPreferred": ["confidence"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Substrate"
+                },
+                "alteration": {"$ref": "./properties.json#alteration"},
+                "ansisType": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./properties.json#ansis-type-substrate"
+                    }
+                },
+                "confidence": {"$ref": "./properties.json#confidence"},
+                "depth": {"$ref": "./properties.json#depth-quantity"},
+                "distance": {"$ref": "./properties.json#distance"},
+                "genesis": {"$ref": "./properties.json#genesis"},
+                "grainSize": {"$ref": "./properties.json#grain-size"},
+                "lithology": {"$ref": "./properties.json#lithology"},
+                "porosity": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#porosity"}
+                },
+                "relatedSample": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
+                },
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "spacing": {"$ref": "./properties.json#spacing-substrate-discontinuity"},
+                "strength": {"$ref": "./properties.json#strength-soil"},
+                "texture": {"$ref": "./properties.json#texture-substrate"},
+                "usedProcedure": {"$ref": "./sosa.json#usedProcedure-ProfileConstruction"}
+            },
+            "additionalProperties": false
+        },        
+        
         "SoilSample": {
             "$anchor": "SoilSample",
             "@id": "ansis:SoilSample",
@@ -182,7 +432,7 @@
                 },
                 "depthLower": {"$ref": "./properties.json#depth-upper"},
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
-                "hasGeometry": {"$ref": "./geo.json#geometry"},
+                "geometry": {"$ref": "./geo.json#geometry"},
                 "result": {
                     "type": "object",
                     "properties": {
@@ -209,6 +459,558 @@
             },
             "additionalProperties": false
         },
+        
+        
+		"CoarseFragments": {
+            "$anchor": "CoarseFragments",
+            "@id": "ansis:CoarseFragments",
+            "title": "ANSIS Coarse Fragments",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance"
+            ],
+            "ansisPreferred": ["shape"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:CoarseFragments"
+                },
+                "abundance": {"$ref": "./properties.json#abundance-coarse-fragments"},
+                "distribution": {"$ref": "./properties.json#distribution"},
+                "lithology": {"$ref": "./properties.json#lithology-coarse-fragments"},
+                "shape": {"$ref": "./properties.json#shape-coarse-fragments"},
+                "size": {"$ref": "./properties.json#size-coarse-fragments"},
+                "strength": {"$ref": "./properties.json#strength-material"}
+            },
+            "additionalProperties": false
+        },
+        "Cracks": {
+            "$anchor": "Cracks",
+            "@id": "ansis:Cracks",
+            "title": "ANSIS Cracks",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "width"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Cracks"
+                },
+                "width": {"$ref": "./properties.json#width-cracks"}
+            },
+            "additionalProperties": false
+        },
+        "Cutans": {
+            "$anchor": "Cutans",
+            "@id": "ansis:Cutans",
+            "title": "ANSIS Cutans",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Cutans"
+                },
+                "abundance": {"$ref": "./properties.json#abundance-cutans"},
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-cutans"}
+                },
+                "distinctness": {"$ref": "./properties.json#distinctness-cutans"}
+            },
+            "additionalProperties": false
+        },
+        "Erosion": {
+            "$anchor": "Erosion",
+            "@id": "ansis:Erosion",
+            "title": "ANSIS Erosion",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType"
+            ],
+            "ansisPreferred": ["degree"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Erosion"
+                },
+                "ansisType": {"$ref": "./properties.json#ansis-type-erosion"},
+                "degree": {"$ref": "./properties.json#degree-erosion"},
+                "depthGully": {"$ref": "./properties.json#depth-gully-concept"},
+                "height": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#height"}
+                },
+                "state": {"$ref": "./properties.json#state"}
+            },
+            "additionalProperties": false
+        },
+        "Inundation": {
+            "$anchor": "Inundation",
+            "@id": "ansis:Inundation",
+            "title": "ANSIS Inundation",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "frequency",
+                "velocity"
+            ],
+            "ansisPreferred": ["duration"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Inundation"
+                },
+                "depth": {"$ref": "./properties.json#depth-inundation"},
+                "duration": {"$ref": "./properties.json#duration-inundation"},
+                "frequency": {"$ref": "./properties.json#frequency-inundation"},
+                "velocity": {"$ref": "./properties.json#velocity"}
+            },
+            "additionalProperties": false
+        },
+        "LandSurface": {
+            "$anchor": "LandSurface",
+            "@id": "ansis:LandSurface",
+            "title": "ANSIS Land Surface",
+            "description": "Surface landscape features of a site.",
+            "type": "object",
+            "required": [
+                "type",
+                "aspect",
+                "elevation",
+                "erosion",
+                "microrelief"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:LandSurface"
+                },
+                "aggradation": {"$ref": "./properties.json#aggradation"},
+                "aspect": {"$ref": "./properties.json#aspect"},
+                "elevation": {"$ref": "./properties.json#elevation"},
+                "coarseFragments": {"$ref": "./properties.json#coarseFragments"},
+                "erosion": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#erosion"}
+                },
+                "inundation": {"$ref": "./properties.json#inundation"},
+                "outcrop": {"$ref": "./properties.json#outcrop"},
+                "microrelief": {"$ref": "./properties.json#microrelief"},
+                "heightDrainage": {"$ref": "./properties.json#height-drainage"},
+                "runoff": {"$ref": "./properties.json#runoff"}
+            },
+            "additionalProperties": false
+        },
+        "Landform": {
+            "$anchor": "Landform",
+            "@id": "ansis:Landform",
+            "title": "ANSIS Landform",
+            "description": "Landscape features within which the site is located",
+            "type": "object",
+            "required": ["type"],
+            "ansisPreferred": [
+                "landformElement",
+                "landformPattern"
+            ],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Landform"
+                },
+                "landformElement": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#landformElement"}
+                },
+                "landformPattern": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#landformPattern"}
+                }
+            },
+            "additionalProperties": false
+        },
+        "LandformElement": {
+            "$anchor": "LandformElement",
+            "@id": "ansis:LandformElement",
+            "title": "ANSIS Landform Element",
+            "description": "Landform element (~40m).",
+            "type": "object",
+            "required": [
+                "type",
+                "morphologicalType",
+                "slope"
+            ],
+            "ansisPreferred": ["ansisType"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:LandformElement"
+                },
+                "agent": {"$ref": "./properties.json#agent-geomorphology"},
+                "ansisType": {"$ref": "./properties.json#ansis-type-landform-element-name"},
+                "geomorphologyMode": {"$ref": "./properties.json#geomorphology-mode"},
+                "height": {"$ref": "./properties.json#height"},
+                "length": {"$ref": "./properties.json#length"},
+                "morphologicalType": {"$ref": "./properties.json#morphological-type"},
+                "relativeInclination": {"$ref": "./properties.json#relative-inclination"},
+                "slope": {
+                    "type": "array",
+                    "items": {
+                    	"oneOf": [
+							{"$ref": "./properties.json#slope-class"},
+							{"$ref": "./properties.json#slope-quantity"}
+						]
+                    },
+                    "maxItems": 2
+                },
+                "width": {"$ref": "./properties.json#width-quantity"}
+            },
+            "additionalProperties": false
+        },
+        "LandformPattern": {
+            "$anchor": "LandformPattern",
+            "@id": "ansis:LandformPattern",
+            "title": "ANSIS Landform Pattern",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "relief",
+                "slope"
+            ],
+            "ansisPreferred": ["ansisType"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:LandformPattern"
+                },
+                "agent": {"$ref": "./properties.json#agent-geomorphology"},
+                "ansisType": {
+                    "oneOf": [
+                        {"$ref": "./properties.json#ansis-type-landform-pattern-name"},
+                        {"$ref": "./properties.json#ansis-type-landform-pattern-erosional"}
+                    ]
+                },
+                "geomorphologyMode": {"$ref": "./properties.json#geomorphology-mode"},
+                "geomorphologyStatus": {"$ref": "./properties.json#geomorphology-status"},
+                "landformElement": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#landformElement"}
+                },
+                "streamChannel": {"$ref": "./properties.json#streamChannel"},
+                "relief": {"$ref": "./properties.json#relief"},
+                "slope": {"$ref": "./properties.json#slope-modal"}
+            },
+            "additionalProperties": false
+        },
+        "Microrelief": {
+            "$anchor": "Microrelief",
+            "@id": "ansis:Microrelief",
+            "title": "ANSIS Microrelief",
+            "description": "Undefined.",
+            "type": "object",
+            "required": ["type"],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Microrelief"
+                },
+                "component": {"$ref": "./properties.json#component-microrelief-sampled"},
+                "microrelief_biotic": {"$ref": "./properties.json#microrelief-biotic"},
+                "microrelief_gilgai": {"$ref": "./properties.json#microrelief-gilgai"},
+                "microrelief_hummocky": {"$ref": "./properties.json#microrelief-hummocky"},
+                "microrelief_other": {"$ref": "./properties.json#microrelief-other"},
+                "height": {"$ref": "./properties.json#height"},
+                "length": {"$ref": "./properties.json#length"}
+            },
+            "additionalProperties": false
+        },
+        "Microrelief_biotic": {
+            "$anchor": "Microrelief_biotic",
+            "@id": "ansis:Microrelief-biotic",
+            "title": "ANSIS Microrelief - Biotic",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "agent"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Microrelief-biotic"
+                },
+                "agent": {"$ref": "./properties.json#agent-microrelief-biotic"},
+                "component": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#component-microrelief-biotic"}
+                }
+            },
+            "additionalProperties": false
+        },
+        "Microrelief_gilgai": {
+            "$anchor": "Microrelief_gilgai",
+            "@id": "ansis:Microrelief-gilgai",
+            "title": "ANSIS Microrelief - Gilgai",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Microrelief-gilgai"
+                },
+                "ansisType": {"$ref": "./properties.json#ansis-type-microrelief-gilgai"},
+                "proportions": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#proportions"}
+                }
+            },
+            "additionalProperties": false
+        },
+        "Microrelief_hummocky": {
+            "$anchor": "Microrelief_hummocky",
+            "@id": "ansis:Microrelief-hummocky",
+            "title": "ANSIS Microrelief - Hummocky",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Microrelief-hummocky"
+                },
+                "ansisType": {"$ref": "./properties.json#ansis-type-microrelief-hummocky"}
+            },
+            "additionalProperties": false
+        },
+        "Microrelief_other": {
+            "$anchor": "Microrelief_other",
+            "@id": "ansis:Microrelief-other",
+            "title": "ANSIS Microrelief - Other",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Microrelief-other"
+                },
+                "ansisType": {"$ref": "./properties.json#ansis-type-microrelief-other"}
+            },
+            "additionalProperties": false
+        },
+        "Mottles": {
+            "$anchor": "Mottles",
+            "@id": "ansis:Mottles",
+            "title": "ANSIS Mottles",
+            "description": "Mottles and other colour patterns.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance"
+            ],
+            "ansisPreferred": [
+                "ansisType",
+                "colour"
+            ],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Mottles"
+                },
+                "ansisType": {"$ref": "./properties.json#ansis-type-mottle"},
+                "abundance": {"$ref": "./properties.json#abundance-mottles"},
+                "colour": {"$ref": "./properties.json#colour-mottle"},
+                "contrast": {"$ref": "./properties.json#contrast"},
+                "distinctness": {"$ref": "./properties.json#distinctness-mottles"},
+                "size": {"$ref": "./properties.json#size-mottles"}
+            },
+            "additionalProperties": false
+        },
+        "Outcrop": {
+            "$anchor": "Outcrop",
+            "@id": "ansis:Outcrop",
+            "title": "ANSIS Outcrop",
+            "description": "Rock outcrop.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance",
+                "lithology"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Outcrop"
+                },
+                "abundance": {"$ref": "./properties.json#abundance-rock-outcrop"},
+                "grainSize": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#grain-size"}
+                },
+                "lithology": {"$ref": "./properties.json#lithology-outcrop"},
+                "relatedLandsurveySite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
+                },
+                "relatedSample": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSample-link"}
+                },
+                "relatedSite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSite-link"}
+                }
+            },
+            "additionalProperties": false
+        },
+        "Pans": {
+            "$anchor": "Pans",
+            "@id": "ansis:Pans",
+            "title": "ANSIS Pans",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType"
+            ],
+            "ansisPreferred": ["cementation"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Pans"
+                },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-pans"}
+                },
+                "cementation": {"$ref": "./properties.json#cementation"},
+                "continuity": {"$ref": "./properties.json#continuity"},
+                "structure": {"$ref": "./properties.json#structure"}
+            },
+            "additionalProperties": false
+        },
+        "Pores": {
+            "$anchor": "Pores",
+            "@id": "ansis:Pores",
+            "title": "ANSIS Pores",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Pores"
+                },
+                "abundance": {"$ref": "./properties.json#abundance-pores"},
+                "diameter": {"$ref": "./properties.json#diameter-pores"}
+            },
+            "additionalProperties": false
+        },
+        "Roots": {
+            "$anchor": "Roots",
+            "@id": "ansis:Roots",
+            "title": "ANSIS Roots",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Roots"
+                },
+                "abundance": {"$ref": "./properties.json#abundance-roots"},
+                "diameter": {"$ref": "./properties.json#diameter-roots"}
+            },
+            "additionalProperties": false
+        },
+        "Segregations": {
+            "$anchor": "Segregations",
+            "@id": "ansis:Segregations",
+            "title": "ANSIS Segregations",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "abundance",
+                "material"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Segregations"
+                },
+                "abundance": {"$ref": "./properties.json#abundance-segregations"},
+                "magneticAttributes": {"$ref": "./properties.json#magnetic-attributes"},
+                "material": {"$ref": "./properties.json#material-segregations"},
+                "shape": {"$ref": "./properties.json#shape-segregations"},
+                "size": {"$ref": "./properties.json#size-segregations"},
+                "strength": {"$ref": "./properties.json#strength-segregations"}
+            },
+            "additionalProperties": false
+        },        
+        
+        
         "Classification": {
             "$anchor": "Classification",
             "@id": "ansis:SoilClassification",
@@ -287,6 +1089,113 @@
                 "colourModel": {"$ref": "./properties.json#colour-model"}
             },
             "additionalProperties": false
-        }
+        },
+        
+        
+		"SoilPlasticity": {
+            "$anchor": "SoilPlasticity",
+            "@id": "ansis:SoilPlasticity",
+            "title": "ANSIS Soil Plasticity",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilPlasticity"
+                },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-soil-plasticity"}
+                },
+                "degree": {"$ref": "./properties.json#degree-consistence-plasticity"}
+            },
+            "additionalProperties": false
+        },
+        "SoilStrength": {
+            "$anchor": "SoilStrength",
+            "@id": "ansis:SoilStrength",
+            "title": "ANSIS Soil Strength",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "moistureStatus",
+                "strength"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilStrength"
+                },
+                "moistureStatus": {"$ref": "./properties.json#moisture-status-soil-water-status"},
+                "strength": {"$ref": "./properties.json#strength-consistence"}
+            },
+            "additionalProperties": false
+        },
+        "SoilStructure": {
+            "$anchor": "SoilStructure",
+            "@id": "ansis:SoilStructure",
+            "title": "ANSIS Soil Structure",
+            "description": "Soil structure or pedality.",
+            "type": "object",
+            "required": [
+                "type",
+                "ansisType",
+                "grade",
+                "size"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilStructure"
+                },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-pedality"}
+                },
+                "compoundPedality": {"$ref": "./properties.json#compound-pedality"},
+                "grade": {"$ref": "./properties.json#grade"},
+                "size": {"$ref": "./properties.json#size-soil-structure"}
+            },
+            "additionalProperties": false
+        },    
+        "StreamChannel": {
+            "$anchor": "StreamChannel",
+            "@id": "ansis:StreamChannel",
+            "title": "ANSIS Stream Channel",
+            "description": "Stream channel details.",
+            "type": "object",
+            "required": [
+                "type",
+                "development"
+            ],
+            "ansisPreferred": ["pattern"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:StreamChannel"
+                },
+                "depthWidthRatio": {"$ref": "./properties.json#depth-width-ratio-stream-channel"},
+                "development": {"$ref": "./properties.json#development"},
+                "directionality": {"$ref": "./properties.json#directionality"},
+                "integration": {"$ref": "./properties.json#integration"},
+                "migrationRate": {"$ref": "./properties.json#migration-rate"},
+                "pattern": {"$ref": "./properties.json#pattern"},
+                "spacing": {"$ref": "./properties.json#spacing-channel"}
+            },
+            "additionalProperties": false
+        }    
+        
     }
 }
