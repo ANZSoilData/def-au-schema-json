@@ -71,7 +71,10 @@
                 "geometry": {
                 	"$ref": "./geo.json#geometry"
                 },
-                "landCover": {"$ref": "./properties.json#landCover"},
+                "landCover": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#landCover"}
+                },
                 "landManagement": {"$ref": "./properties.json#landManagement"},
                 "landSurface": {"$ref": "./properties.json#landSurface"},
                 "landUse": {"$ref": "./properties.json#landUse"},
