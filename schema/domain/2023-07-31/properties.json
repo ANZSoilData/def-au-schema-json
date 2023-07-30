@@ -1611,20 +1611,42 @@
         "landCover": {
             "$anchor": "landCover",
             "@id": "ansis:hasLandCover",
-            "range@type": "ansis:Classification",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:Classification"
+            ],
             "title": "land cover",
             "description": "A description of land cover.",
             "type": "object",
-            "$ref": "./entities.json#Classification"
+            "allOf": [
+                {
+                    "required": ["result"],
+                    "properties": {
+                        "result": {"$ref": "./entities.json#Classification"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
         },
         "landManagement": {
             "$anchor": "landManagement",
             "@id": "ansis:hasLandManagement",
-            "range@type": "ansis:Classification",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "ansis:Classification"
+            ],
             "title": "land management",
             "description": "A description of land management.",
             "type": "object",
-            "$ref": "./entities.json#Classification"
+            "allOf": [
+                {
+                    "required": ["result"],
+                    "properties": {
+                        "result": {"$ref": "./entities.json#Classification"}
+                    }
+                },
+                {"$ref": "./sosa.json#ObservableProperty"}
+            ]
         },
         "landSurface": {
             "$anchor": "landSurface",
