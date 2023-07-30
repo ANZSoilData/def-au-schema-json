@@ -782,13 +782,11 @@
 			"description": "Surface landscape features of a site.",
 			"type": "object",
 			"required": [
-				"type",
-				"aspect",
-				"elevation",
-				"erosion",
-				"microrelief"
+				"type"
 			],
 			"ansisPreferred": [
+				"aspect",
+				"elevation"
 			],
 			"properties": {
 				"id": {
@@ -808,7 +806,10 @@
 					"$ref": "./properties.json#elevation"
 				},
 				"coarseFragments": {
-					"$ref": "./properties.json#coarseFragments"
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#coarseFragments"
+					}
 				},
 				"erosion": {
 					"type": "array",
@@ -817,10 +818,16 @@
 					}
 				},
 				"inundation": {
-					"$ref": "./properties.json#inundation"
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#inundation"
+					}
 				},
 				"outcrop": {
-					"$ref": "./properties.json#outcrop"
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#outcrop"
+					}
 				},
 				"microrelief": {
 					"$ref": "./properties.json#microrelief"
