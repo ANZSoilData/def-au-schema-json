@@ -25,13 +25,11 @@
 			],
 			"ansisPreferred": [
 				"designSite",
-				"designSurvey",
 				"drainage",
 				"landUse",
 				"landform",
 				"landSurface",
-				"purpose",
-				"relatedSoilSurface"
+				"purpose"
 			],
 			"properties": {
 				"id": {
@@ -96,20 +94,11 @@
 						"$ref": "./properties.json#landManagement"
 					}
 				},
-				"landSurface": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#landSurface"
-					}
-				},
 				"landUse": {
 					"type": "array",
 					"items": {
 						"$ref": "./properties.json#landUse"
 					}
-				},
-				"landform": {
-					"$ref": "./properties.json#landform"
 				},
 				"heightDrainage": {
 					"type": "array",
@@ -181,6 +170,15 @@
 				},
 				"purpose": {
 					"$ref": "./properties.json#purpose"
+				},
+				"landform": {
+					"$ref": "./properties.json#landform"
+				},
+				"landSurface": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#landSurface"
+					}
 				},
 				"soilProfile": {
 					"type": "array",
