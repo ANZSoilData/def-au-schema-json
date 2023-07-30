@@ -1255,10 +1255,7 @@
 					"const": "ansis:Pans"
 				},
 				"ansisType": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#ansis-type-pans"
-					}
+					"$ref": "./properties.json#ansis-type-pans"
 				},
 				"cementation": {
 					"$ref": "./properties.json#cementation"
@@ -1266,8 +1263,8 @@
 				"continuity": {
 					"$ref": "./properties.json#continuity"
 				},
-				"structure": {
-					"$ref": "./properties.json#structure"
+				"panStructure": {
+					"$ref": "./properties.json#panStructure"
 				}
 			},
 			"additionalProperties": false

@@ -4000,8 +4000,6 @@
                 }
             ]
         },
-        
-        
         "PansCementation": {
             "$anchor": "pans-cementation",
             "@id": "sp:Pans-cementation",
@@ -4049,6 +4047,39 @@
                 {
                     "const": "sp:pans-continuity-D",
                     "description": "Discontinuous (pans continuity)"
+                }
+            ]
+        },
+        "PansStructure": {
+            "$anchor": "pans-structure",
+            "@id": "sp:Pans-structure",
+            "title": "Structure of pan",
+            "description": "Structure of pan.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "const": "sp:pans-structure-C",
+                    "description": "Concretionary"
+                },
+                {
+                    "const": "sp:pans-structure-L",
+                    "description": "Platy"
+                },
+                {
+                    "const": "sp:pans-structure-N",
+                    "description": "Nodular"
+                },
+                {
+                    "const": "sp:pans-structure-R",
+                    "description": "Vermicular"
+                },
+                {
+                    "const": "sp:pans-structure-S",
+                    "description": "Vesicular"
+                },
+                {
+                    "const": "sp:pans-structure-V",
+                    "description": "Massive"
                 }
             ]
         },

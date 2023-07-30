@@ -1698,15 +1698,6 @@
             "type": "object",
             "$ref": "./entities.json#LandformPattern"
         },
-        "microrelief": {
-            "$anchor": "microrelief",
-            "@id": "ansis:hasMicrorelief",
-            "range@type": "ansis:Microrelief",
-            "title": "microrelief",
-            "description": "A description of microrelief at the site.",
-            "type": "object",
-            "$ref": "./entities.json#Microrelief"
-        },
         "microrelief_biotic": {
             "$anchor": "microrelief-biotic",
             "@id": "ansis:hasMicrorelief-biotic",
@@ -2905,6 +2896,18 @@
                 {"$ref": "./sosa.json#ObservableProperty"},
                 {"$ref": "./entities.json#SoilStructure"}
             ]
+        },
+        "panStructure": {
+            "$anchor": "panStructure",
+            "@id": "ansis:structure",
+            "range@type": [
+                "sosa:ObservableProperty",
+                "skos:Concept"
+            ],
+            "title": "pan structure",
+            "description": "internal arrangement of elements of the material or entity.",
+            "type": "object",
+            "$ref": "./enum.json#pans-structure"
         },
         "texture": {
             "@id": "ansis:texture",
