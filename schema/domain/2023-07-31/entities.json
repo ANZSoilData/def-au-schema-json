@@ -88,14 +88,6 @@
                     "items": {"$ref": "./properties.json#landUse"}
                 },
                 "landform": {"$ref": "./properties.json#landform"},
-                "microrelief": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#microrelief"}
-                },
-                "outcrop": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#outcrop"}
-                },
                 "heightDrainage": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#height-drainage"}
