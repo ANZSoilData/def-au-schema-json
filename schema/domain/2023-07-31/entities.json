@@ -678,7 +678,8 @@
 			"type": "object",
 			"required": [
 				"type",
-				"abundance"
+				"abundance",
+				"ansisType"
 			],
 			"ansisPreferred": [
 			],
@@ -694,10 +695,7 @@
 					"$ref": "./properties.json#abundance-cutans"
 				},
 				"ansisType": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#ansis-type-cutans"
-					}
+					"$ref": "./properties.json#ansis-type-cutans"
 				},
 				"distinctness": {
 					"$ref": "./properties.json#distinctness-cutans"
