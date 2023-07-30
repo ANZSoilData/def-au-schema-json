@@ -1277,7 +1277,8 @@
 			"type": "object",
 			"required": [
 				"type",
-				"abundance"
+				"abundance",
+				"diameter"
 			],
 			"ansisPreferred": [
 			],
