@@ -58,6 +58,21 @@
             "description": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.",
             "type": "string"
         },
+        "ObservableProperty": {
+            "$anchor": "ObservableProperty",
+            "title": "Observable Property",
+            "description": "A collection SOSA properties for an observable property value.",
+            "$comment": "Equavalent to a sosa:Observation but the observedProperty is a key in a JSON object and the feature of interest is that object.",
+            "type": "object",
+            "properties": {
+                "qualityOfObservation": {"$ref": "./sosa.json#qualityOfObservation"},
+                "usedProcedure": {"$ref": "./sosa.json#usedProcedure"},
+                "madeBySensor": {"$ref": "./sosa.json#madeBySensor"},
+                "phenomenonTime": {"$ref": "./sosa.json#phenomenonTime"},
+                "resultTime": {"$ref": "./sosa.json#resultTime"},
+                "sample": {"$ref": "./sosa.json#sample"}
+            }
+        },
         "ScopedIdentifier": {
             "$anchor": "ScopedIdentifier",
             "title": "ANSIS Scoped Identifier",
