@@ -246,6 +246,9 @@
 				"drainage": {
 					"$ref": "./properties.json#drainage"
 				},
+				"microreliefComponent": {
+					"$ref": "./properties.json#component-microrelief-sampled"
+				},
 				"permeability": {
 					"$ref": "./properties.json#permeability-soil"
 				},
@@ -829,8 +832,26 @@
 						"$ref": "./properties.json#outcrop"
 					}
 				},
-				"microrelief": {
-					"$ref": "./properties.json#microrelief"
+				"microrelief_biotic": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#microrelief-biotic"
+					}
+				},
+				"microrelief_gilgai": {
+					"$ref": "./properties.json#microrelief-gilgai"
+				},
+				"microrelief_hummocky": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#microrelief-hummocky"
+					}
+				},
+				"microrelief_other": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#microrelief-other"
+					}
 				},
 				"heightDrainage": {
 					"$ref": "./properties.json#height-drainage"
@@ -999,49 +1020,6 @@
 			},
 			"additionalProperties": false
 		},
-		"Microrelief": {
-			"$anchor": "Microrelief",
-			"@id": "ansis:Microrelief",
-			"title": "ANSIS Microrelief",
-			"description": "Undefined.",
-			"type": "object",
-			"required": [
-				"type"
-			],
-			"ansisPreferred": [
-			],
-			"properties": {
-				"id": {
-					"$ref": "./base.json#id"
-				},
-				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Microrelief"
-				},
-				"component": {
-					"$ref": "./properties.json#component-microrelief-sampled"
-				},
-				"microrelief_biotic": {
-					"$ref": "./properties.json#microrelief-biotic"
-				},
-				"microrelief_gilgai": {
-					"$ref": "./properties.json#microrelief-gilgai"
-				},
-				"microrelief_hummocky": {
-					"$ref": "./properties.json#microrelief-hummocky"
-				},
-				"microrelief_other": {
-					"$ref": "./properties.json#microrelief-other"
-				},
-				"height": {
-					"$ref": "./properties.json#height"
-				},
-				"length": {
-					"$ref": "./properties.json#length"
-				}
-			},
-			"additionalProperties": false
-		},
 		"Microrelief_biotic": {
 			"$anchor": "Microrelief_biotic",
 			"@id": "ansis:Microrelief-biotic",
@@ -1050,7 +1028,8 @@
 			"type": "object",
 			"required": [
 				"type",
-				"agent"
+				"agent",
+				"component"
 			],
 			"ansisPreferred": [
 			],
@@ -1066,10 +1045,13 @@
 					"$ref": "./properties.json#agent-microrelief-biotic"
 				},
 				"component": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#component-microrelief-biotic"
-					}
+					"$ref": "./properties.json#component-microrelief-biotic"
+				},
+				"height": {
+					"$ref": "./properties.json#height"
+				},
+				"length": {
+					"$ref": "./properties.json#length"
 				}
 			},
 			"additionalProperties": false
@@ -1098,10 +1080,13 @@
 					"$ref": "./properties.json#ansis-type-microrelief-gilgai"
 				},
 				"proportions": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#proportions"
-					}
+					"$ref": "./properties.json#proportions"
+				},
+				"height": {
+					"$ref": "./properties.json#height"
+				},
+				"length": {
+					"$ref": "./properties.json#length"
 				}
 			},
 			"additionalProperties": false
@@ -1128,6 +1113,12 @@
 				},
 				"ansisType": {
 					"$ref": "./properties.json#ansis-type-microrelief-hummocky"
+				},
+				"height": {
+					"$ref": "./properties.json#height"
+				},
+				"length": {
+					"$ref": "./properties.json#length"
 				}
 			},
 			"additionalProperties": false
@@ -1154,6 +1145,12 @@
 				},
 				"ansisType": {
 					"$ref": "./properties.json#ansis-type-microrelief-other"
+				},
+				"height": {
+					"$ref": "./properties.json#height"
+				},
+				"length": {
+					"$ref": "./properties.json#length"
 				}
 			},
 			"additionalProperties": false
