@@ -62,16 +62,14 @@
                 },
                 "drainage": {"$ref": "./properties.json#drainage"},
                 "elevation": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#elevation"}
+                    "$ref": "./properties.json#elevation"
                 },
                 "erosion": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#erosion"}
                 },
                 "geometry": {
-                    "type": "array",
-                    "items": {"$ref": "./geo.json#geometry"}
+                	"$ref": "./geo.json#geometry"
                 },
                 "landCover": {"$ref": "./properties.json#landCover"},
                 "landManagement": {"$ref": "./properties.json#landManagement"},
