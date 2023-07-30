@@ -261,12 +261,6 @@
 				"geometry": {
 					"$ref": "./geo.json#geometry"
 				},
-				"roots": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#roots"
-					}
-				},
 				"substrate": {
 					"$ref": "./properties.json#substrate"
 				},
