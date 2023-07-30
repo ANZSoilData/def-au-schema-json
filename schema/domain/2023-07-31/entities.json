@@ -112,16 +112,10 @@
 				"purpose": {
 					"$ref": "./properties.json#purpose"
 				},
-				"relatedActivity": {
+				"siteVisit": {
 					"type": "array",
 					"items": {
 						"$ref": "./properties.json#relatedActivity-siteVisit"
-					}
-				},
-				"relatedLandSurveySite": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedLandSurveySite-link"
 					}
 				},
 				"relatedProject": {
@@ -130,7 +124,7 @@
 				"relatedSite": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#relatedSite-link"
+						"$ref": "./properties.json#relatedSite-pointer"
 					}
 				},
 				"scopedIdentifier": {
@@ -151,9 +145,9 @@
 			"required": [
 				"type",
 				"endedAtTime",
-				"relatedActivity",
 				"relatedProject",
-				"startedAtTime"
+				"startedAtTime",
+				"visitor"
 			],
 			"ansisPreferred": [
 			],
@@ -164,6 +158,9 @@
 				"type": {
 					"$ref": "./base.json#type",
 					"const": "ansis:SiteVisit"
+				},
+				"startedAtTime": {
+					"$ref": "./prov.json#startedAtTime"
 				},
 				"endedAtTime": {
 					"$ref": "./prov.json#endedAtTime"
@@ -187,13 +184,13 @@
 					}
 				},
 				"relatedProject": {
-					"$ref": "./properties.json#relatedProject-link"
-				},
-				"startedAtTime": {
-					"$ref": "./prov.json#startedAtTime"
+					"$ref": "./properties.json#relatedProject-pointer"
 				},
 				"visitor": {
-					"$ref": "./properties.json#visitor"
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#visitor"
+					}
 				}
 			},
 			"additionalProperties": false

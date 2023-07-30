@@ -2397,7 +2397,7 @@
             "description": "Link to project that supported this activity, either establishing a Land Survey or Soil Site, or requiring a Site Visit.",
             "$defs": {
                 "object": {
-                    "$anchor": "relatedProject-object",
+                    "$anchor": "relatedProject",
                     "$ref": "./prov.json#Project"
                 },
                 "link": {
