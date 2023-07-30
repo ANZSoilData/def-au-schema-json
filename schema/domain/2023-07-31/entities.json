@@ -747,8 +747,7 @@
 			"type": "object",
 			"required": [
 				"type",
-				"frequency",
-				"velocity"
+				"frequency"
 			],
 			"ansisPreferred": [
 				"duration"
