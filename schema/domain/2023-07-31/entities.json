@@ -1,0 +1,208 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "entities.json",
+    "title": "ANSIS Soil Domain Entity Schema",
+    "description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
+    "$comment": "Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.",
+    "type": "null",
+    "$defs": {
+        "curiPrefix": {"ansis": "https://anzsoil.org/def/au/domain/"},
+        "AnsisSite": {
+            "$anchor": "AnsisSite",
+            "@id": [
+                "ansis:LandsurveySite",
+                "ansis:SoilSite"
+            ],
+            "title": "ANSIS Site",
+            "description": "A site where samples and observations of the landscape (ansis:LandsurveySite) and soil (ansis:SoilSite) are carried out.",
+            "type": "object",
+            "required": [
+                "type",
+                "geometry",
+                "relatedProject"
+            ],
+            "ansisPreferred": [
+                "designSite",
+                "designSurvey",
+                "drainage",
+                "landUse",
+                "landform",
+                "landSurface",
+                "purpose",
+                "relatedSoilSurface"
+            ],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "type": "array",
+                    "items": {
+                    	"oneOf": [
+							{"const": "ansis:LandsurveySite"}
+                    	],
+                    	"anyOf": [
+							{"const": "ansis:SoilSite"}
+                    	]
+                    },
+                    "maxItems": 2
+                },
+                "ansisType": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#ansis-type-site"}
+                },
+                "aspect": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#aspect"}
+                },
+                "depthFreeWater": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#depth-free-water"}
+                },
+                "designSite": {"$ref": "./properties.json#design-site"},
+                "designSurvey": {"$ref": "./properties.json#design-survey"},
+                "disturbance": {"$ref": "./properties.json#disturbance"},
+                "drainage": {"$ref": "./properties.json#drainage"},
+                "elevation": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#elevation"}
+                },
+                "erosion": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#erosion"}
+                },
+                "geometry": {
+                    "type": "array",
+                    "items": {"$ref": "./geo.json#geometry"}
+                },
+                "landCover": {"$ref": "./properties.json#landCover"},
+                "landManagement": {"$ref": "./properties.json#landManagement"},
+                "landSurface": {"$ref": "./properties.json#landSurface"},
+                "landUse": {"$ref": "./properties.json#landUse"},
+                "landform": {"$ref": "./properties.json#landform"},
+                "microrelief": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#microrelief"}
+                },
+                "outcrop": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#outcrop"}
+                },
+                "heightDrainage": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#height-drainage"}
+                },
+                "locationInElement": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#location-in-element"}
+                },
+                "purpose": {"$ref": "./properties.json#purpose"},
+                "relatedActivity": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedActivity-siteVisit"}
+                },
+                "relatedLandSurveySite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
+                },
+                "relatedProfile": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedProfile-object"}
+                },
+                "relatedProject": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedProject-object"}
+                },
+                "relatedSite": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#relatedSite-link"}
+                },
+                "relatedSoilBody": {"$ref": "./properties.json#relatedSoilBody-link"},
+                "relatedSoilSurface": {"$ref": "./properties.json#relatedSoilSurface-object"},
+                "scopedIdentifier": {
+                    "type": "array",
+                    "items": {"$ref": "./base.json#scopedIdentifier"}
+                }
+            },
+            "additionalProperties": false
+        },
+        "Classification": {
+            "$anchor": "Classification",
+            "@id": "ansis:SoilClassification",
+            "title": "ANSIS Classification",
+            "description": "The classifier for an entity - used when an ANSIS vocabulary is not available but a formal vocabulary (the `source`) does, or should, exist.",
+            "$comment": "Expands scope of ansis:SoilClassification to support the classification of other entity types.",
+            "type": "object",
+            "required": [
+                "type",
+                "value",
+                "source"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:Classification"
+                },
+                "value": {
+                    "$ref": "./properties.json#value-string",
+                    "type": "string"
+                },
+                "source": {"$ref": "./base.json#source"}
+            }
+        },
+        "HorizonDesignation": {
+            "$anchor": "HorizonDesignation",
+            "@id": "ansis:HorizonDesignation",
+            "title": "ANSIS Soil Horizon Designation",
+            "description": "Soil horizon designation. ",
+            "type": "object",
+            "required": [
+                "type",
+                "designationMaster"
+            ],
+            "ansisPreferred": [
+                "designationPrefix",
+                "designationSubdivision",
+                "designationSuffix"
+            ],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:HorizonDesignation"
+                },
+                "designationPrefix": {"$ref": "./properties.json#designation-prefix"},
+                "designationSubdivision": {"$ref": "./properties.json#designation-subdivision"},
+                "designationSuffix": {"$ref": "./properties.json#designation-suffix"},
+                "designationMaster": {"$ref": "./properties.json#designation-master"}
+            },
+            "additionalProperties": false
+        },
+        "SoilColour": {
+            "$anchor": "SoilColour",
+            "@id": "ansis:SoilColour",
+            "title": "ANSIS Soil Colour",
+            "description": "Undefined.",
+            "type": "object",
+            "required": [
+                "type",
+                "moistureStatus",
+                "value",
+                "colourModel"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SoilColour"
+                },
+                "moistureStatus": {"$ref": "./properties.json#moisture-status-colour"},
+                "value": {"$ref": "./properties.json#value-string"},
+                "colourModel": {"$ref": "./properties.json#colour-model"}
+            },
+            "additionalProperties": false
+        }
+    }
+}

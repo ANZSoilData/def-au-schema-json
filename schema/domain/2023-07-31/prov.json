@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "prov.json",
+    "title": "PROV Entity Schema",
+    "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
+    "type": "object",
+    "$defs": {
+        "curiPrefix": {
+            "prov": "http://www.w3.org/ns/prov#",
+            "proj": "https://linked.data.gov.au/def/project#"
+        },
+        "Organization": {
+            "$anchor": "Organization",
+            "@id": "prov:Organization",
+            "title": "PROV Organization",
+            "description": "An organization is a social or legal institution such as a company, society, etc.",
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "prov:Agent"
+                },
+                "name": {"$ref": "./base.json#name"}
+            },
+            "additionalProperties": false
+        },
+        "Person": {
+            "$anchor": "Person",
+            "@id": "prov:Person",
+            "title": "PROV Person",
+            "description": "Person agents are people.",
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "prov:Person"
+                },
+                "name": {"$ref": "./base.json#name"}
+            },
+            "additionalProperties": false
+        },
+        "endedAtTime": {
+            "$anchor": "endedAtTime",
+            "@id": "prov:endedAtTime",
+            "range@type": "xs:dateTime",
+            "title": "Ended at Time",
+            "description": "The time at which an activity ended.",
+            "$comment": "See also startedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
+        },
+        "startedAtTime": {
+            "$anchor": "startedAtTime",
+            "@id": "prov:startedAtTime",
+            "range@type": "xs:dateTime",
+            "title": "Started at Time",
+            "description": "The time at which an activity started.",
+            "$comment": "See also endedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
+        }
+    }
+}

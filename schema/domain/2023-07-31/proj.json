@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "proj.json",
+    "title": "PROJ Entity Schema",
+    "description": "JSON Schema definitions of the PROJ Ontology entities used by ANSIS.",
+    "type": "object",
+    "$defs": {
+        "curiPrefix": {
+            "proj": "https://linked.data.gov.au/def/project#"
+        },
+        "Project": {
+            "$anchor": "Project",
+            "@id": "proj:Project",
+            "title": "PROJ Project",
+            "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "id": {
+                	"$ref": "./base.json#id"
+                },
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "proj:Project"
+                },
+                "leader": {"$ref": "./prov.json#Organization"},
+                "sponsor": {
+                    "type": "array",
+                    "items": {"$ref": "./prov.json#Organization"}
+                },
+                "name": {"$ref": "./base.json#name"},
+                "label": {"$ref": "./base.json#label"},
+                "scopedIdentifier": {"$ref": "./base.json#scopedIdentifier"}
+            },
+            "additionalProperties": false
+        }
+    }
+}
