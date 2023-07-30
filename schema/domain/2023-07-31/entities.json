@@ -64,10 +64,6 @@
                 "elevation": {
                     "$ref": "./properties.json#elevation"
                 },
-                "erosion": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#erosion"}
-                },
                 "geometry": {
                 	"$ref": "./geo.json#geometry"
                 },
