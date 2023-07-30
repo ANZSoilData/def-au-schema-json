@@ -1552,10 +1552,10 @@
 			"required": [
 				"type",
 				"ansisType",
-				"grade",
-				"size"
+				"grade"
 			],
 			"ansisPreferred": [
+				"size"
 			],
 			"properties": {
 				"id": {
@@ -1566,10 +1566,7 @@
 					"const": "ansis:SoilStructure"
 				},
 				"ansisType": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#ansis-type-pedality"
-					}
+					"$ref": "./properties.json#ansis-type-pedality"
 				},
 				"compoundPedality": {
 					"$ref": "./properties.json#compound-pedality"
