@@ -675,7 +675,7 @@
             "@id": "ansis:confidence",
             "range@type": "skos:Concept",
             "title": "confidence",
-            "description": "Confidence in assessment.",
+            "description": "Confidence that substrate is parent material.",
             "type": "string",
             "$ref": "./enum.json#substrate-confidence"
         },
@@ -1448,14 +1448,14 @@
                 }
             }
         },
-        "genesis": {
-            "$anchor": "genesis",
+        "geneticType": {
+            "$anchor": "geneticType",
             "@id": "ansis:genesis",
             "range@type": [
                 "sosa:ObservableProperty",
                 "skos:Concept"
             ],
-            "title": "genesis",
+            "title": "genetic type",
             "description": "Formation process for material.",
             "type": "object",
             "allOf": [
