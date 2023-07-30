@@ -733,12 +733,6 @@
 				"depthGully": {
 					"$ref": "./properties.json#depth-gully-concept"
 				},
-				"height": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#height"
-					}
-				},
 				"state": {
 					"$ref": "./properties.json#state"
 				}
