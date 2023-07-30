@@ -144,9 +144,6 @@
 						"$ref": "./properties.json#relatedSite-link"
 					}
 				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody-link"
-				},
 				"scopedIdentifier": {
 					"type": "array",
 					"items": {
@@ -275,11 +272,8 @@
 						"$ref": "./properties.json#relatedLayer-object"
 					}
 				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody-link"
-				},
-				"relatedSoilSurface": {
-					"$ref": "./properties.json#relatedSoilSurface-link"
+				"soilSurface": {
+					"$ref": "./properties.json#soilSurface"
 				},
 				"sampling": {
 					"type": "array",
