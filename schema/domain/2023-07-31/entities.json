@@ -89,8 +89,7 @@
                     "items": {"$ref": "./properties.json#height-drainage"}
                 },
                 "locationInElement": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#location-in-element"}
+                	"$ref": "./properties.json#location-in-element"
                 },
                 "purpose": {"$ref": "./properties.json#purpose"},
                 "relatedActivity": {
