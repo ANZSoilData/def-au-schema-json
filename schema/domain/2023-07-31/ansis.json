@@ -15,7 +15,7 @@
         	"description": "An array containing the document’s target resource (an ANSIS Landscape Survey/Soil Site).",
             "type": "array",
             "items": {
-                "$ref": "./entities.json#AnsisSite"
+                "$ref": "./entities.json#Site"
             }
         },
         "included": {
@@ -24,7 +24,7 @@
             "items": {
             	"anyOf": [
             		{
-						"$ref": "./entities.json#AnsisSite"
+						"$ref": "./entities.json#Site"
             		},
             		{
 						"$ref": "./proj.json#Project"
