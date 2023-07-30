@@ -56,7 +56,10 @@
                 },
                 "designSite": {"$ref": "./properties.json#design-site"},
                 "designSurvey": {"$ref": "./properties.json#design-survey"},
-                "disturbance": {"$ref": "./properties.json#disturbance"},
+                "disturbance":  {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#disturbance"}
+                },
                 "drainage": {"$ref": "./properties.json#drainage"},
                 "elevation": {
                     "type": "array",
