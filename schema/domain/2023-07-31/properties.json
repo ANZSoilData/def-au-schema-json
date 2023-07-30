@@ -2327,7 +2327,7 @@
                     "$ref": "./base.json#Entity_Link"
                 },
                 "sampling": {
-                    "$anchor": "relatedActivity-sampling",
+                    "$anchor": "sampling",
                     "range@type": "sosa:Sampling",
                     "description": "Sampling.",
                     "$ref": "./sosa.json#Sampling"

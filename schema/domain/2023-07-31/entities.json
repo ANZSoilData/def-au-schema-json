@@ -185,12 +185,6 @@
 				"purpose": {
 					"$ref": "./properties.json#purpose"
 				},
-				"relatedActivity": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedActivity-sampling"
-					}
-				},
 				"soilProfile": {
 					"type": "array",
 					"items": {
@@ -281,17 +275,17 @@
 						"$ref": "./properties.json#relatedLayer-object"
 					}
 				},
-				"relatedSite": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedSite-link"
-					}
-				},
 				"relatedSoilBody": {
 					"$ref": "./properties.json#relatedSoilBody-link"
 				},
 				"relatedSoilSurface": {
 					"$ref": "./properties.json#relatedSoilSurface-link"
+				},
+				"sampling": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#sampling"
+					}
 				},
 				"usedProcedure": {
 					"$ref": "./sosa.json#usedProcedure-ProfileConstruction"
