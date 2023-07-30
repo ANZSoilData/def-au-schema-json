@@ -50,10 +50,6 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#ansis-type-site"}
                 },
-                "aspect": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#aspect"}
-                },
                 "depthFreeWater": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#depth-free-water"}
