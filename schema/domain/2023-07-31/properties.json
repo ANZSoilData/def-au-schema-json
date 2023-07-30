@@ -321,12 +321,6 @@
                     "description": "Site.",
                     "$ref": "./entities.json#Classification"
                 },
-                "soilSample": {
-                    "$anchor": "ansis-type-sample",
-                    "range@type": "ansis:Classification",
-                    "description": "Soil Sample.",
-                    "$ref": "./entities.json#Classification"
-                },
                 "soilProfile": {
                     "$anchor": "ansis-type-soil-profile",
                     "range@type": "ansis:Classification",
