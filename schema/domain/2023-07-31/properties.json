@@ -2295,7 +2295,7 @@
             "@id": "ansis:purpose",
             "range@type": "ansis:Classification",
             "title": "purpose",
-            "description": "Purpose of or reason for activity.",
+            "description": "Purpose of or reason for a site or activity. For example, why a Land Survey or Soil Site was established; why a profile was created; or why a site was visited.",
 			"type": "object",
 			"$ref": "./entities.json#Classification"
         },
