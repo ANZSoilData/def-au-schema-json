@@ -248,6 +248,9 @@
 				"drainage": {
 					"$ref": "./properties.json#drainage"
 				},
+				"permeability": {
+					"$ref": "./properties.json#permeability-soil"
+				},
 				"geometry": {
 					"$ref": "./geo.json#geometry"
 				},
@@ -310,7 +313,6 @@
 				"structure",
 				"pH",
 				"physical",
-				"permeability",
 				"texture"
 			],
 			"properties": {
@@ -404,9 +406,6 @@
 					"items": {
 						"$ref": "./properties.json#segregations"
 					}
-				},
-				"permeability": {
-					"$ref": "./properties.json#permeability-soil"
 				},
 				"pH": {
 					"type": "array",
