@@ -1310,6 +1310,7 @@
 				"abundance"
 			],
 			"ansisPreferred": [
+				"diameter"
 			],
 			"properties": {
 				"id": {
