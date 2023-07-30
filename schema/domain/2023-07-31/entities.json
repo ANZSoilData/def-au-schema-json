@@ -431,9 +431,6 @@
 						"$ref": "./properties.json#relatedSample-link"
 					}
 				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody-link"
-				},
 				"shape": {
 					"$ref": "./properties.json#shape-boundary"
 				},
@@ -456,7 +453,7 @@
 			"$anchor": "SoilSurface",
 			"@id": "ansis:SoilSurface",
 			"title": "ANSIS Soil Surface",
-			"description": "The surface of the soil body.",
+			"description": "The surface of the soil body or profile.",
 			"type": "object",
 			"required": [
 				"type"
@@ -481,9 +478,6 @@
 						"$ref": "./properties.json#coarseFragments"
 					}
 				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody-link"
-				},
 				"waterRepellence": {
 					"$ref": "./properties.json#waterRepellence"
 				}
@@ -500,7 +494,6 @@
 				"type",
 				"depth",
 				"distance",
-				"relatedSoilBody",
 				"texture"
 			],
 			"ansisPreferred": [
@@ -552,9 +545,6 @@
 					"items": {
 						"$ref": "./properties.json#relatedSample-link"
 					}
-				},
-				"relatedSoilBody": {
-					"$ref": "./properties.json#relatedSoilBody-link"
 				},
 				"spacing": {
 					"$ref": "./properties.json#spacing-substrate-discontinuity"
