@@ -1,0 +1,196 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "sosa.json",
+    "title": "SOSA Entity Schema",
+    "description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
+    "type": "object",
+    "$defs": {
+        "curiPrefix": {
+            "sosa": "http://www.w3.org/ns/sosa/",
+            "xs": "https://www.w3.org/TR/xmlschema-2/#",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "skos": "http://www.w3.org/2004/02/skos/core#",
+            "qudt": "http://qudt.org/schema/qudt/"
+        },
+        "Sampling": {
+            "$anchor": "Sampling",
+            "@id": "sosa:Sampling",
+            "title": "SOSA Sampling",
+            "description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples. E.g. digging a pit through a soil sequence; dividing a field site into quadrants; sieving a powder to separate the subset finer than 100-mesh.",
+            "type": "object",
+            "required": [
+                "type",
+                "result"
+            ],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "sosa:Sampling"
+                },
+                "result": {
+                    "type": "array",
+                    "items": {"$ref": "#result-SoilSample"}
+                },
+                "madeBySampler": {
+                    "type": "array",
+                    "items": {"$ref": "#madeBySampler"}
+                },
+                "resultTime": {"$ref": "#resultTime"},
+                "usedProcedure": {"$ref": "#usedProcedure"}
+            },
+            "additionalProperties": false
+        },
+        "Sensor": {
+            "$anchor": "Sensor",
+            "@id": "sosa:Sensor",
+            "title": "SOSA Sensor",
+            "description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "sosa:Sensor"
+                },
+                "relatedActivity": {"$ref": "./properties.json#relatedActivity-link"}
+            },
+            "additionalProperties": false
+        },
+        "sampleOf": {
+            "$anchor": "sampleOf",
+            "@id": "sosa:isSampleOf",
+            "range@type": [
+                "ansis:SoilProfile",
+                "ansis:SoilBody",
+                "ansis:SoilLayer",
+                "ansis:SoilHorizon",
+                "ansis:SoilSurface",
+                "ansis:Substrate"
+            ],
+            "title": "sample of",
+            "description": "Generic link to an ANSIS soil entity that the sample has been taken from.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "result": {
+            "@id": "sosa:hasResult",
+            "range@type": [
+                "qudt:QuantityValue",
+                "ansis:SoilSample"
+            ],
+            "title": "result",
+            "description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
+            "$defs": {
+                "QuantityValue": {
+                    "$anchor": "result-QuantityValue",
+                    "range@type": "qudt:QuantityValue",
+                    "@id": "sosa:hasSimpleResult",
+                    "$ref": "./qudt.json#QuantityValue"
+                },
+                "SoilSample": {
+                    "$anchor": "result-SoilSample",
+                    "range@type": "ansis:SoilSample",
+                    "$ref": "./entities.json#SoilSample"
+                }
+            }
+        },
+        "sample": {
+            "$anchor": "sample",
+            "@id": "sosa:hasSample",
+            "range@type": "sosa:Sample",
+            "title": "sample",
+            "description": "Link to the representative sample from which the observed property was measured.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "madeBySampler": {
+            "$anchor": "madeBySampler",
+            "@id": "sosa:madeBySampler",
+            "range@type": "sosa:Sampler",
+            "title": "Made by Sampler",
+            "description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+            "$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "madeBySensor": {
+            "$anchor": "madeBySensor",
+            "@id": "sosa:madeBySensor",
+            "range@type": "sosa:Sensor",
+            "title": "Made by Sensor",
+            "description": "Relation between an Observation and the Sensor which made the Observations.",
+            "$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "phenomenonTime": {
+            "$anchor": "phenomenonTime",
+            "@id": "sosa:phenomenonTime",
+            "range@type": "xs:dateTime",
+            "title": "Phenomenon Time",
+            "description": "The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time].",
+            "$comment": "Initially restricting to date-time",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
+        },
+        "resultTime": {
+            "$anchor": "resultTime",
+            "@id": "sosa:resultTime",
+            "range@type": "xs:dateTime",
+            "title": "Result Time",
+            "description": "The result time is the instant of time when the Observation activity was completed.",
+            "$comment": "Initially restricting to date-time",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+				{"format": "date-time"},
+				{"format": "date"}
+            ]
+        },
+        "usedProcedure": {
+            "@id": "sosa:usedProcedure",
+            "range@type": "skos:Concept",
+            "title": "Used Procedure",
+            "description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+            "$defs": {
+                "Concept": {
+                    "$anchor": "usedProcedure",
+                    "type": "object",
+                    "description": "skos:Concept id (compact URI).",
+                    "type": "string"
+                },
+                "SoilProfile": {
+                    "$anchor": "usedProcedure-ProfileConstruction",
+                    "$ref": "./enum.json#profile-construction"
+                }
+            }
+        },
+        "qualityOfObservation": {
+            "$anchor": "qualityOfObservation",
+            "@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+            "range@type": "skos:Concept",
+            "title": "Quality of Observation",
+            "description": "The adjudged quality of the Result.",
+            "$comment": "To be expanded - using skos:Concept for qualitative descriptions of quality.",
+            "type": "null"
+        }
+    }
+}
