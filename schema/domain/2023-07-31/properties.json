@@ -2409,16 +2409,16 @@
             "@id": "ansis:relatedProject",
             "range@type": "proj:Project",
             "title": "related project",
-            "description": "Link to project that supported this activity.",
+            "description": "Link to project that supported this activity, either establishing a Land Survey or Soil Site, or requiring a Site Visit.",
             "$defs": {
                 "object": {
                     "$anchor": "relatedProject-object",
                     "$ref": "./prov.json#Project"
                 },
                 "link": {
-                    "$anchor": "relatedProject-link",
-                    "description": "Link.",
-                    "$ref": "./base.json#Entity_Link"
+                    "$anchor": "relatedProject-pointer",
+                    "description": "Pointer.",
+                    "$ref": "./base.json#pointer"
                 }
             }
         },
