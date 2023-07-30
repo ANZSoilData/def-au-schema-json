@@ -2389,20 +2389,19 @@
                 }
             }
         },
-        "relatedProfile": {
+        "soilProfile": {
             "@id": "ansis:relatedProfile",
             "range@type": "ansis:SoilProfile",
-            "title": "Related Profile",
-            "description": "Link to a soil profile related to this context.",
+            "title": "Soil Profile",
+            "description": "The soil profile related to this context.",
             "$defs": {
                 "object": {
-                    "$anchor": "relatedProfile-object",
+                    "$anchor": "soilProfile",
                     "$ref": "./entities.json#SoilProfile"
                 },
-                "link": {
-                    "$anchor": "relatedProfile-link",
-                    "description": "Link.",
-                    "$ref": "./base.json#Entity_Link"
+                "pointer": {
+                    "$anchor": "relatedSoilProfile",
+                    "$ref": "./base.json#pointer"
                 }
             }
         },

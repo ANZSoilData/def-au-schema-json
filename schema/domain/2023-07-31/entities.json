@@ -99,10 +99,6 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedLandSurveySite-link"}
                 },
-                "relatedProfile": {
-                    "type": "array",
-                    "items": {"$ref": "./properties.json#relatedProfile-object"}
-                },
                 "relatedProject": {
                     "type": "array",
                     "items": {"$ref": "./properties.json#relatedProject-object"}
@@ -150,7 +146,7 @@
                 "depthLower": {"$ref": "./properties.json#depth-upper"},
                 "depthUpper": {"$ref": "./properties.json#depth-lower"},
                 "hasGeometry": {"$ref": "./geo.json#geometry"},
-                "hasResult": {
+                "result": {
                     "type": "object",
                     "properties": {
 						"chemical": {
@@ -161,18 +157,56 @@
 						}
                     }
                 },
-                "isSampleOf": {
+                "sampleOf": {
                     "type": "array",
-                    "items": {"$ref": "./sosa.json#isSampleOf"}
+                    "items": {"$ref": "./sosa.json#sampleOf"}
                 },
-                "relatedProfile": {
+                "relatedSoilProfile": {
                     "type": "array",
-                    "items": {"$ref": "./properties.json#relatedProfile-link"}
+                    "items": {"$ref": "./properties.json#relatedSoilProfile"}
                 },
                 "scopedIdentifier": {
                     "type": "array",
                     "items": {"$ref": "./base.json#scopedIdentifier"}
                 }
+            },
+            "additionalProperties": false
+        },
+        "SiteVisit": {
+            "$anchor": "SiteVisit",
+            "@id": "ansis:SiteVisit",
+            "title": "ANSIS Site Visit",
+            "description": "A visit to a designated site, for the purpose of taking samples, making observations, and other activities.",
+            "type": "object",
+            "required": [
+                "type",
+                "endedAtTime",
+                "relatedActivity",
+                "relatedProject",
+                "startedAtTime"
+            ],
+            "ansisPreferred": [],
+            "properties": {
+                "id": {"$ref": "./base.json#id"},
+                "type": {
+                    "$ref": "./base.json#type",
+                    "const": "ansis:SiteVisit"
+                },
+                "endedAtTime": {"$ref": "./prov.json#endedAtTime"},
+                "purpose": {"$ref": "./properties.json#purpose"},
+                "relatedActivity": {
+                    "type": "array",
+                    "items": {
+                    	"$ref": "./properties.json#relatedActivity-sampling"
+                    }
+                },
+                "soilProfile": {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#soilProfile"}
+                },
+                "relatedProject": {"$ref": "./properties.json#relatedProject-link"},
+                "startedAtTime": {"$ref": "./prov.json#startedAtTime"},
+                "visitor": {"$ref": "./properties.json#visitor"}
             },
             "additionalProperties": false
         },

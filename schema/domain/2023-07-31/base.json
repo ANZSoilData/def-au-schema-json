@@ -43,6 +43,13 @@
             "description": "A name for some thing.",
             "type": "string"
         },
+        "pointer": {
+            "$anchor": "pointer",
+            "range@Type": "xs:string",
+            "title": "JSON Pointer",
+            "description": "A JSON pointer to an object elsewhere in the document.",
+            "type": "string"
+        },
         "scopedIdentifier": {
             "$anchor": "scopedIdentifier",
             "range@type": "base:ScopedIdentifier",
