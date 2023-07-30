@@ -281,12 +281,6 @@
 						"$ref": "./properties.json#relatedLayer-object"
 					}
 				},
-				"relatedSample": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedSample-link"
-					}
-				},
 				"relatedSite": {
 					"type": "array",
 					"items": {
