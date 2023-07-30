@@ -1209,8 +1209,7 @@
 			"type": "object",
 			"required": [
 				"type",
-				"abundance",
-				"lithology"
+				"abundance"
 			],
 			"ansisPreferred": [
 			],
@@ -1233,24 +1232,6 @@
 				},
 				"lithology": {
 					"$ref": "./properties.json#lithology-outcrop"
-				},
-				"relatedLandsurveySite": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedLandSurveySite-link"
-					}
-				},
-				"relatedSample": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedSample-link"
-					}
-				},
-				"relatedSite": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedSite-link"
-					}
 				}
 			},
 			"additionalProperties": false
