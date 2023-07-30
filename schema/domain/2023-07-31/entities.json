@@ -219,7 +219,6 @@
 				"type",
 				"depth",
 				"geometry",
-				"purpose",
 				"relatedSite",
 				"usedProcedure"
 			],
@@ -265,7 +264,10 @@
 					"$ref": "./properties.json#substrate"
 				},
 				"purpose": {
-					"$ref": "./properties.json#purpose"
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#purpose"
+					}
 				},
 				"relatedHorizon": {
 					"type": "array",
