@@ -79,7 +79,10 @@
                     "type": "array",
                     "items": {"$ref": "./properties.json#landManagement"}
                 },
-                "landSurface": {"$ref": "./properties.json#landSurface"},
+                "landSurface":  {
+                    "type": "array",
+                    "items": {"$ref": "./properties.json#landSurface"}
+                },
                 "landUse": {"$ref": "./properties.json#landUse"},
                 "landform": {"$ref": "./properties.json#landform"},
                 "microrelief": {
