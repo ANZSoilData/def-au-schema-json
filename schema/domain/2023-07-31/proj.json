@@ -28,6 +28,7 @@
                     "type": "array",
                     "items": {"$ref": "./prov.json#Organization"}
                 },
+                "designSurvey": {"$ref": "./properties.json#design-survey"},
                 "name": {"$ref": "./base.json#name"},
                 "label": {"$ref": "./base.json#label"},
                 "scopedIdentifier": {"$ref": "./base.json#scopedIdentifier"}

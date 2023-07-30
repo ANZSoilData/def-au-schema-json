@@ -55,7 +55,6 @@
                     "items": {"$ref": "./properties.json#depth-free-water"}
                 },
                 "designSite": {"$ref": "./properties.json#design-site"},
-                "designSurvey": {"$ref": "./properties.json#design-survey"},
                 "disturbance":  {
                     "type": "array",
                     "items": {"$ref": "./properties.json#disturbance"}

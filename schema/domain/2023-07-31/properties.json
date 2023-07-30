@@ -2314,7 +2314,6 @@
                 "object": {
                     "$anchor": "relatedActivity-object",
                     "oneOf": [
-                        {"$ref": "./base.json#Entity_Link"},
                         {"$ref": "./prov.json#Activity"},
                         {"$ref": "./sosa.json#Actuation"},
                         {"$ref": "./sosa.json#Observation"},
