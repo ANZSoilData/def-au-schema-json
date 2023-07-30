@@ -218,7 +218,6 @@
 			"required": [
 				"type",
 				"depth",
-				"depthReason",
 				"geometry",
 				"purpose",
 				"relatedSite",
