@@ -1542,7 +1542,10 @@
 					"$ref": "./properties.json#/$defs/designationSubdivision"
 				},
 				"designationSuffix": {
-					"$ref": "./properties.json#/$defs/designationSuffix"
+                    "type": "array",
+                    "items": {
+					    "$ref": "./properties.json#/$defs/designationSuffix"
+                    }
 				},
 				"designationMaster": {
 					"$ref": "./properties.json#/$defs/designationMaster"
