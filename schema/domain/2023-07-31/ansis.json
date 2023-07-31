@@ -22,7 +22,7 @@
             }
         },
         "included": {
-        	"description": "Arrays of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in thess arrays will be accessed via JSON pointers in the source objects.",
+        	"description": "Arrays of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in these arrays will be accessed via JSON pointers in the source objects.",
             "type": "object",
             "properties": {
             	"projects": {
