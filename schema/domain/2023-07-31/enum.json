@@ -186,34 +186,6 @@
                 }
             ]
         },
-        "ASC_ClassifierCode": {
-            "$anchor": "classifier-code",
-            "@id": "asc:Classifier-code",
-            "title": "ASC Classifier - code",
-            "description": "Australian Soil Classification Classifier - code.",
-            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:placeholder",
-                    "description": "placeholder value"
-                }
-            ]
-        },
-        "ASC_DepthCode": {
-            "$anchor": "depth-code",
-            "@id": "asc:Depth-code",
-            "title": "ASC Depth - code",
-            "description": "Australian Soil Classification Depth - code.",
-            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:placeholder",
-                    "description": "placeholder value"
-                }
-            ]
-        },
         "ASC_Edition": {
             "$anchor": "asc-edition",
             "title": "ASC Edition",
@@ -232,62 +204,6 @@
                 {
                     "const": "doi:10.1071/9781486314782",
                     "description": "Australian Soil Classification, third edition"
-                }
-            ]
-        },
-        "ASC_GravelCode": {
-            "$anchor": "gravel-code",
-            "@id": "asc:Gravel-code",
-            "title": "ASC Gravel - code",
-            "description": "Australian Soil Classification Gravel - code.",
-            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:placeholder",
-                    "description": "placeholder value"
-                }
-            ]
-        },
-        "ASC_OrderCode": {
-            "$anchor": "order-code",
-            "@id": "asc:Order-code",
-            "title": "ASC Order - code",
-            "description": "Australian Soil Classification Order - code.",
-            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:placeholder",
-                    "description": "placeholder value"
-                }
-            ]
-        },
-        "ASC_TextureCode": {
-            "$anchor": "texture-code",
-            "@id": "asc:Texture-code",
-            "title": "ASC Texture - code",
-            "description": "Australian Soil Classification Texture - code.",
-            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:placeholder",
-                    "description": "placeholder value"
-                }
-            ]
-        },
-        "ASC_ThicknessCode": {
-            "$anchor": "thickness-code",
-            "@id": "asc:Thickness-code",
-            "title": "ASC Thickness - code",
-            "description": "Australian Soil Classification Thickness - code.",
-            "$comment": "ASC ontology/vocabulary is not yet complete. https://github.com/ANZSoilData/def-au-asc/tree/master",
-            "type": "string",
-            "oneOf": [
-                {
-                    "const": "xx:placeholder",
-                    "description": "placeholder value"
                 }
             ]
         },
