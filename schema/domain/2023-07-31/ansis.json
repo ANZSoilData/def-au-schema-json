@@ -9,28 +9,36 @@
         "$schema": {
             "description": "The identifier of this JSON Schema. Allows instance documents to be linked to this schema for validation.",
             "type": "string",
-            "const": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json"
+            "enum": [
+                "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json",
+                "../schema/domain/2023-07-31/ansis.json"
+            ]
         },
         "data": {
         	"description": "An array containing the document’s target resource (an ANSIS Landscape Survey/Soil Site).",
             "type": "array",
             "items": {
-                "$ref": "./entities.json#Site"
+                "$ref": "./entities.json#/$defs/Site"
             }
         },
         "included": {
-        	"description": "An array of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in this array will be accessed via JSON pointers in the source objects.",
-            "type": "array",
-            "items": {
-            	"anyOf": [
-            		{
-						"$ref": "./entities.json#Site"
-            		},
-            		{
-						"$ref": "./proj.json#Project"
-            		}
-            	]
-            }
+        	"description": "Arrays of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in thess arrays will be accessed via JSON pointers in the source objects.",
+            "type": "object",
+            "properties": {
+            	"projects": {
+					"type": "array",
+					"items": {
+						"$ref": "./proj.json#/$defs/Project"
+					}
+				},
+            	"sites": {
+					"type": "array",
+					"items": {
+						"$ref": "./entities.json#/$defs/Site"
+					}
+				}
+            },
+            "minProperties": 1
         },
         "meta": {
         	"description": "Non-ANSIS response metadata summarising the contents of the document.",
