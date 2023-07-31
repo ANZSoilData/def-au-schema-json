@@ -61,7 +61,7 @@
 		"ObservableProperty": {
 			"title": "Observable Property",
 			"description": "A collection SOSA properties for an observable property value.",
-			"$comment": "Equavalent to a sosa:Observation but the observedProperty is a key in a JSON object and the feature of interest is that object.",
+			"$comment": "Equivalent to a sosa:Observation but the observedProperty is a key in a JSON object and the feature of interest is that object.",
 			"type": "object",
 			"properties": {
 				"qualityOfObservation": {

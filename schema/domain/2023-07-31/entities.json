@@ -713,7 +713,7 @@
 					"const": "ansis:SoilSample"
 				},
 				"component": {
-					"$comment": "No defintion of component type beyond 'owl:Class'."
+					"$comment": "No definition of component type beyond 'owl:Class'."
 				},
 				"depthLower": {
 					"$ref": "./properties.json#/$defs/depthLower"

@@ -2561,7 +2561,7 @@
 				"ansis:SoilPlasticity"
 			],
 			"title": "plasticity",
-			"description": "Capability of being formed or molded.",
+			"description": "Capability of being formed or moulded.",
 			"type": "object",
 			"$ref": "./entities.json#/$defs/SoilPlasticity"
 		},
