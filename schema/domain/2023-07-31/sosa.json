@@ -151,7 +151,6 @@
             "$defs": {
                 "Concept": {
                     "$anchor": "usedProcedure",
-                    "type": "object",
                     "description": "skos:Concept id (compact URI).",
                     "type": "string"
                 },
