@@ -236,7 +236,7 @@
 					}
 				},
 				"depth": {
-					"$ref": "./properties.json#/$defs/depth-quantity"
+					"$ref": "./properties.json#/$defs/depth/$defs/quantity"
 				},
 				"depthReason": {
 					"$ref": "./properties.json#/$defs/depthReason"
@@ -652,7 +652,7 @@
 					"$ref": "./properties.json#/$defs/confidence"
 				},
 				"depth": {
-					"$ref": "./properties.json#/$defs/depth-quantity"
+					"$ref": "./properties.json#/$defs/depth/$defs/quantity"
 				},
 				"distance": {
 					"$ref": "./properties.json#/$defs/distance"
@@ -898,7 +898,7 @@
 					"const": "ansis:Inundation"
 				},
 				"depth": {
-					"$ref": "./properties.json#/$defs/depth-inundation"
+					"$ref": "./properties.json#/$defs/depth/$defs/inundation"
 				},
 				"duration": {
 					"$ref": "./properties.json#/$defs/duration/$defs/inundation"

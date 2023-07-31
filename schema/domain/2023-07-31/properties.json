@@ -34,12 +34,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#coarse-fragments-abundance"
+									"$ref": "./enum.json#/$defs/CoarseFragmentsAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -54,12 +54,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#cutans-abundance"
+									"$ref": "./enum.json#/$defs/CutansAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -74,12 +74,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#mottle-abundance"
+									"$ref": "./enum.json#/$defs/MottleAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -94,12 +94,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#rock-outcrop-abundance"
+									"$ref": "./enum.json#/$defs/RockOutcropAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -114,12 +114,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#pore-abundance"
+									"$ref": "./enum.json#/$defs/PoreAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -134,12 +134,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#root-abundance"
+									"$ref": "./enum.json#/$defs/RootAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -154,12 +154,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#segregations-abundance"
+									"$ref": "./enum.json#/$defs/SegregationsAbundance"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -185,12 +185,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#microrelief-agent-biotic"
+									"$ref": "./enum.json#/$defs/MicroreliefAgentBiotic"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -207,38 +207,38 @@
 								"result": {
 									"oneOf": [
 										{
-											"$ref": "./enum.json#geomorphology-agent-bio"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentBio"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-extra"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentExtra"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-gravity"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentGravity"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-ice"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentIce"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-internal"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentInternal"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-precipitation"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentPrecipitation"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-stand"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentStand"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-streamflow"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentStreamflow"
 										},
 										{
-											"$ref": "./enum.json#geomorphology-agent-wind"
+											"$ref": "./enum.json#/$defs/GeomorphologyAgentWind"
 										}
 									]
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -261,12 +261,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#aggradation"
+							"$ref": "./enum.json#/$defs/Aggradation"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -287,12 +287,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#rock-alteration"
+							"$ref": "./enum.json#/$defs/RockAlteration"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -311,67 +311,67 @@
 					"$anchor": "ansis-type-cutan",
 					"range@type": "skos:Concept",
 					"description": "Cutan.",
-					"$ref": "./enum.json#cutans-type"
+					"$ref": "./enum.json#/$defs/CutansType"
 				},
 				"erosion": {
 					"$anchor": "ansis-type-erosion",
 					"range@type": "skos:Concept",
 					"description": "Erosion.",
-					"$ref": "./enum.json#erosion-type"
+					"$ref": "./enum.json#/$defs/ErosionType"
 				},
 				"fabric": {
 					"$anchor": "ansis-type-fabric",
 					"range@type": "skos:Concept",
 					"description": "Fabric.",
-					"$ref": "./enum.json#fabric-type"
+					"$ref": "./enum.json#/$defs/FabricType"
 				},
 				"landformElement": {
 					"$anchor": "ansis-type-landform-element",
 					"range@type": "skos:Concept",
 					"description": "Landform element.",
-					"$ref": "./enum.json#landform-element-name"
+					"$ref": "./enum.json#/$defs/LandformElementName"
 				},
 				"landformPattern": {
 					"$anchor": "ansis-type-landform-pattern",
 					"range@type": "skos:Concept",
 					"description": "Landform pattern.",
-					"$ref": "./enum.json#landform-pattern-name"
+					"$ref": "./enum.json#/$defs/LandformPatternName"
 				},
 				"landformPattern_erosional": {
 					"$anchor": "ansis-type-landform-pattern-erosional",
 					"range@type": "skos:Concept",
 					"description": "Landform pattern - erosional.",
-					"$ref": "./enum.json#landform-pattern-erosional"
+					"$ref": "./enum.json#/$defs/LandformPatternErosional"
 				},
 				"microrelief_gilgai": {
 					"$anchor": "ansis-type-microrelief-gilgai",
 					"range@type": "skos:Concept",
 					"description": "Microrelief - Gilgai.",
-					"$ref": "./enum.json#microrelief-type-gilgai"
+					"$ref": "./enum.json#/$defs/MicroreliefTypeGilgai"
 				},
 				"microrelief_hummocky": {
 					"$anchor": "ansis-type-microrelief-hummocky",
 					"range@type": "skos:Concept",
 					"description": "Microrelief - Hummocky.",
-					"$ref": "./enum.json#microrelief-type-hummocky"
+					"$ref": "./enum.json#/$defs/MicroreliefTypeHummocky"
 				},
 				"microrelief_other": {
 					"$anchor": "ansis-type-microrelief-other",
 					"range@type": "skos:Concept",
 					"description": "Microrelief - Other.",
-					"$ref": "./enum.json#microrelief-type-other"
+					"$ref": "./enum.json#/$defs/MicroreliefTypeOther"
 				},
 				"mottle": {
 					"$anchor": "ansis-type-mottle",
 					"range@type": "skos:Concept",
 					"description": "Mottle.",
-					"$ref": "./enum.json#mottle-type"
+					"$ref": "./enum.json#/$defs/MottleType"
 				},
 				"pan": {
 					"$anchor": "ansis-type-pan",
 					"range@type": "skos:Concept",
 					"description": "Pan.",
-					"$ref": "./enum.json#pans-type"
+					"$ref": "./enum.json#/$defs/PansType"
 				},
 				"pedality": {
 					"$anchor": "ansis-type-pedality",
@@ -379,10 +379,10 @@
 					"description": "Pedality.",
 					"oneOf": [
 						{
-							"$ref": "./enum.json#artificial-aggregates-structure"
+							"$ref": "./enum.json#/$defs/ArtificialAggregatesStructure"
 						},
 						{
-							"$ref": "./enum.json#pedality-type"
+							"$ref": "./enum.json#/$defs/PedalityType"
 						}
 					]
 				},
@@ -390,25 +390,25 @@
 					"$anchor": "ansis-type-plasticity",
 					"range@type": "skos:Concept",
 					"description": "Plasticity.",
-					"$ref": "./enum.json#consistence-plasticity-type"
+					"$ref": "./enum.json#/$defs/ConsistencePlasticityType"
 				},
 				"site": {
 					"$anchor": "ansis-type-site",
 					"range@type": "ansis:Classification",
 					"description": "Site.",
-					"$ref": "./entities.json#Classification"
+					"$ref": "./entities.json#/$defs/Classification"
 				},
 				"soilProfile": {
 					"$anchor": "ansis-type-soil-profile",
 					"range@type": "ansis:Classification",
 					"description": "Soil Profile.",
-					"$ref": "./entities.json#Classification"
+					"$ref": "./entities.json#/$defs/Classification"
 				},
 				"substrate": {
 					"$anchor": "ansis-type-substrate",
 					"range@type": "ansis:Classification",
 					"description": "Substrate.",
-					"$ref": "./entities.json#Classification"
+					"$ref": "./entities.json#/$defs/Classification"
 				}
 			}
 		},
@@ -429,12 +429,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -450,12 +450,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#boundary-distinctness"
+							"$ref": "./enum.json#/$defs/BoundaryDistinctness"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -471,12 +471,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#boundary-shape"
+							"$ref": "./enum.json#/$defs/BoundaryShape"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -497,12 +497,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#pans-cementation"
+							"$ref": "./enum.json#/$defs/PansCementation"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -523,12 +523,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -549,12 +549,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#carbonate-effervescence"
+							"$ref": "./enum.json#/$defs/CarbonateEffervescence"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -574,7 +574,7 @@
 			],
 			"properties": {
 				"result": {
-					"$ref": "./qudt.json#QuantityValue"
+					"$ref": "./qudt.json#/$defs/QuantityValue"
 				},
 				"usedProcedure": {
 					"type": "string"
@@ -598,12 +598,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#Classification"
+							"$ref": "./entities.json#/$defs/Classification"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -632,12 +632,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#mottle-colour"
+									"$ref": "./enum.json#/$defs/MottleColour"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -656,12 +656,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./entities.json#SoilColour"
+									"$ref": "./entities.json#/$defs/SoilColour"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -672,7 +672,7 @@
 			"range@type": "xs:string",
 			"title": "colourModel",
 			"description": "The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term.",
-			"$ref": "./enum.json#colour-model"
+			"$ref": "./enum.json#/$defs/ColourModel"
 		},
 		"component": {
 			"@id": "ansis:component",
@@ -694,12 +694,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#microrelief-component-biotic"
+									"$ref": "./enum.json#/$defs/MicroreliefComponentBiotic"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -714,12 +714,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#microrelief-component-sampled"
+									"$ref": "./enum.json#/$defs/MicroreliefComponentSampled"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -743,12 +743,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#structure-pedality-compound"
+							"$ref": "./enum.json#/$defs/StructurePedalityCompound"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -769,12 +769,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#surface-condition"
+							"$ref": "./enum.json#/$defs/SurfaceCondition"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -785,7 +785,7 @@
 			"title": "confidence",
 			"description": "Confidence that substrate is parent material.",
 			"type": "string",
-			"$ref": "./enum.json#substrate-confidence"
+			"$ref": "./enum.json#/$defs/SubstrateConfidence"
 		},
 		"continuity": {
 			"$anchor": "continuity",
@@ -804,12 +804,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#pans-continuity"
+							"$ref": "./enum.json#/$defs/PansContinuity"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -830,12 +830,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#mottle-contrast"
+							"$ref": "./enum.json#/$defs/MottleContrast"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -861,38 +861,38 @@
 								"result": {
 									"oneOf": [
 										{
-											"$ref": "./enum.json#erosion-severity-gully"
+											"$ref": "./enum.json#/$defs/ErosionSeverityGully"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-mass-movement"
+											"$ref": "./enum.json#/$defs/ErosionSeverityMassMovement"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-rill"
+											"$ref": "./enum.json#/$defs/ErosionSeverityRill"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-scald"
+											"$ref": "./enum.json#/$defs/ErosionSeverityScald"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-sheet"
+											"$ref": "./enum.json#/$defs/ErosionSeveritySheet"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-stream-bank"
+											"$ref": "./enum.json#/$defs/ErosionSeverityStreamBank"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-tunnel"
+											"$ref": "./enum.json#/$defs/ErosionSeverityTunnel"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-wave"
+											"$ref": "./enum.json#/$defs/ErosionSeverityWave"
 										},
 										{
-											"$ref": "./enum.json#erosion-severity-wind"
+											"$ref": "./enum.json#/$defs/ErosionSeverityWind"
 										}
 									]
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -907,12 +907,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#consistence-plasticity-degree"
+									"$ref": "./enum.json#/$defs/ConsistencePlasticityDegree"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -935,12 +935,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -954,7 +954,7 @@
 			"title": "depth",
 			"description": "Depth from local surface of entity.",
 			"$defs": {
-				"depth-quantity": {
+				"quantity": {
 					"$anchor": "depth-quantity",
 					"range@type": [
 						"sosa:ObservableProperty",
@@ -969,16 +969,16 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
-				"depth-inundation": {
+				"inundation": {
 					"$anchor": "depth-inundation",
 					"range@type": [
 						"sosa:ObservableProperty",
@@ -993,12 +993,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#inundation-depth"
+									"$ref": "./enum.json#/$defs/InundationDepth"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1021,12 +1021,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1055,12 +1055,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -1079,12 +1079,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#erosion-depth-gully"
+									"$ref": "./enum.json#/$defs/ErosionDepthGully"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1107,12 +1107,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1133,12 +1133,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1167,12 +1167,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1201,12 +1201,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -1225,12 +1225,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#channel-depth-width"
+									"$ref": "./enum.json#/$defs/ChannelDepthWidth"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1243,7 +1243,7 @@
 			"title": "site design",
 			"description": "Overall design of sampling at the site e.g. ASLS, grid, transect.",
 			"type": "object",
-			"$ref": "./entities.json#Classification"
+			"$ref": "./entities.json#/$defs/Classification"
 		},
 		"designSurvey": {
 			"$anchor": "design-survey",
@@ -1252,7 +1252,7 @@
 			"title": "survey design",
 			"description": "Overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous.",
 			"type": "object",
-			"$ref": "./entities.json#Classification"
+			"$ref": "./entities.json#/$defs/Classification"
 		},
 		"designation": {
 			"$anchor": "designation",
@@ -1271,12 +1271,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#HorizonDesignation"
+							"$ref": "./entities.json#/$defs/HorizonDesignation"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1286,7 +1286,7 @@
 			"range@type": "skos:Concept",
 			"title": "designation master",
 			"description": "Soil horizon designation master.",
-			"$ref": "./enum.json#horizon-code"
+			"$ref": "./enum.json#/$defs/HorizonCode"
 		},
 		"designationPrefix": {
 			"$anchor": "designation-prefix",
@@ -1310,7 +1310,7 @@
 			"range@type": "skos:Concept",
 			"title": "designation subdivision",
 			"description": "Soil horizon designation subdivision.",
-			"$ref": "./enum.json#horizon-suffix"
+			"$ref": "./enum.json#/$defs/HorizonSuffix"
 		},
 		"development": {
 			"$anchor": "development",
@@ -1329,12 +1329,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#channel-development"
+							"$ref": "./enum.json#/$defs/ChannelDevelopment"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1359,12 +1359,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#pore-diameter"
+									"$ref": "./enum.json#/$defs/PoreDiameter"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -1380,12 +1380,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#root-size"
+									"$ref": "./enum.json#/$defs/RootSize"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1408,12 +1408,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#channel-directionality"
+							"$ref": "./enum.json#/$defs/ChannelDirectionality"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1434,12 +1434,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1463,12 +1463,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#cutans-distinctness"
+									"$ref": "./enum.json#/$defs/CutansDistinctness"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -1483,12 +1483,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#mottle-distinctness"
+									"$ref": "./enum.json#/$defs/MottleDistinctness"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1511,12 +1511,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#coarse-fragments-distribution"
+							"$ref": "./enum.json#/$defs/CoarseFragmentsDistribution"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1537,12 +1537,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#disturbance-of-site"
+							"$ref": "./enum.json#/$defs/DisturbanceOfSite"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1563,12 +1563,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#soilwaterdrainage"
+							"$ref": "./enum.json#/$defs/SoilWaterDrainage"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1597,12 +1597,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -1621,12 +1621,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#inundation-duration"
+									"$ref": "./enum.json#/$defs/InundationDuration"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1648,23 +1648,23 @@
 			],
 			"properties": {
 				"result": {
-					"$ref": "./qudt.json#QuantityValue"
+					"$ref": "./qudt.json#/$defs/QuantityValue"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				},
 				"usedProcedure": {
 					"$comment": "replaces ansis:methodElevation",
-					"$ref": "./enum.json#elevation-evaluation-means"
+					"$ref": "./enum.json#/$defs/ElevationEvaluationMeans"
 				},
 				"madeBySensor": {
-					"$ref": "./sosa.json#madeBySensor"
+					"$ref": "./sosa.json#/$defs/madeBySensor"
 				},
 				"phenomenonTime": {
-					"$ref": "./sosa.json#phenomenonTime"
+					"$ref": "./sosa.json#/$defs/phenomenonTime"
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				}
 			}
 		},
@@ -1685,12 +1685,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#fabric-type"
+							"$ref": "./enum.json#/$defs/FabricType"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1719,12 +1719,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -1743,12 +1743,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#inundation-frequency"
+									"$ref": "./enum.json#/$defs/InundationFrequency"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -1773,29 +1773,29 @@
 						"result": {
 							"oneOf": [
 								{
-									"$ref": "./enum.json#rock-genesis-hardened-artificial"
+									"$ref": "./enum.json#/$defs/RockGenesisHardenedArtificial"
 								},
 								{
-									"$ref": "./enum.json#rock-genesis-hardened-chemical"
+									"$ref": "./enum.json#/$defs/RockGenesisHardenedChemical"
 								},
 								{
-									"$ref": "./enum.json#rock-genesis-hardened-evaporite"
+									"$ref": "./enum.json#/$defs/RockGenesisHardenedEvaporite"
 								},
 								{
-									"$ref": "./enum.json#rock-genesis-sediments"
+									"$ref": "./enum.json#/$defs/RockGenesisSediments"
 								},
 								{
-									"$ref": "./enum.json#rock-genesis-unweathered"
+									"$ref": "./enum.json#/$defs/RockGenesisUnweathered"
 								},
 								{
-									"$ref": "./enum.json#rock-genesis-weathered"
+									"$ref": "./enum.json#/$defs/RockGenesisWeathered"
 								}
 							]
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1816,12 +1816,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#geomorphology-mode"
+							"$ref": "./enum.json#/$defs/GeomorphologyMode"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1842,12 +1842,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#geomorphology-status"
+							"$ref": "./enum.json#/$defs/GeomorphologyStatus"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1868,12 +1868,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#pedality-grade"
+							"$ref": "./enum.json#/$defs/PedalityGrade"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1894,12 +1894,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#substrate-grain-size"
+							"$ref": "./enum.json#/$defs/SubstrateGrainSize"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1910,7 +1910,7 @@
 			"title": "coarse fragments",
 			"description": "A description of coarse fragments.",
 			"type": "object",
-			"$ref": "./entities.json#CoarseFragment"
+			"$ref": "./entities.json#/$defs/CoarseFragment"
 		},
 		"cracks": {
 			"$anchor": "cracks",
@@ -1919,7 +1919,7 @@
 			"title": "cracks",
 			"description": "A description of cracks.",
 			"type": "object",
-			"$ref": "./entities.json#Crack"
+			"$ref": "./entities.json#/$defs/Crack"
 		},
 		"cutans": {
 			"$anchor": "cutans",
@@ -1928,7 +1928,7 @@
 			"title": "cutans",
 			"description": "A description of cutans.",
 			"type": "object",
-			"$ref": "./entities.json#Cutan"
+			"$ref": "./entities.json#/$defs/Cutan"
 		},
 		"erosion": {
 			"$anchor": "erosion",
@@ -1937,7 +1937,7 @@
 			"title": "erosion",
 			"description": "A description of erosion",
 			"type": "object",
-			"$ref": "./entities.json#Erosion"
+			"$ref": "./entities.json#/$defs/Erosion"
 		},
 		"inundation": {
 			"$anchor": "inundation",
@@ -1946,7 +1946,7 @@
 			"title": "inundation",
 			"description": "A description of inundation.",
 			"type": "object",
-			"$ref": "./entities.json#Inundation"
+			"$ref": "./entities.json#/$defs/Inundation"
 		},
 		"landCover": {
 			"$anchor": "landCover",
@@ -1965,12 +1965,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#Classification"
+							"$ref": "./entities.json#/$defs/Classification"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -1991,12 +1991,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#Classification"
+							"$ref": "./entities.json#/$defs/Classification"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2007,7 +2007,7 @@
 			"title": "land surface",
 			"description": "A description of land surface.",
 			"type": "object",
-			"$ref": "./entities.json#LandSurface"
+			"$ref": "./entities.json#/$defs/LandSurface"
 		},
 		"landUse": {
 			"$anchor": "landUse",
@@ -2026,12 +2026,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#Classification"
+							"$ref": "./entities.json#/$defs/Classification"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2042,7 +2042,7 @@
 			"title": "landform",
 			"description": "A description of landform.",
 			"type": "object",
-			"$ref": "./entities.json#Landform"
+			"$ref": "./entities.json#/$defs/Landform"
 		},
 		"landformElement": {
 			"$anchor": "landformElement",
@@ -2051,7 +2051,7 @@
 			"title": "landform element",
 			"description": "A description of landform element.",
 			"type": "object",
-			"$ref": "./entities.json#LandformElement"
+			"$ref": "./entities.json#/$defs/LandformElement"
 		},
 		"landformPattern": {
 			"$anchor": "landformPattern",
@@ -2060,7 +2060,7 @@
 			"title": "landform pattern",
 			"description": "A description of landform pattern.",
 			"type": "object",
-			"$ref": "./entities.json#LandformPattern"
+			"$ref": "./entities.json#/$defs/LandformPattern"
 		},
 		"microrelief_biotic": {
 			"$anchor": "microrelief-biotic",
@@ -2069,7 +2069,7 @@
 			"title": "microrelief - biotic",
 			"description": "A description of biotic microrelief at the site.",
 			"type": "object",
-			"$ref": "./entities.json#Microrelief_biotic"
+			"$ref": "./entities.json#/$defs/Microrelief_biotic"
 		},
 		"microrelief_gilgai": {
 			"$anchor": "microrelief-gilgai",
@@ -2078,7 +2078,7 @@
 			"title": "microrelief - gilgai",
 			"description": "A description of gilgai microrelief at the site.",
 			"type": "object",
-			"$ref": "./entities.json#Microrelief_gilgai"
+			"$ref": "./entities.json#/$defs/Microrelief_gilgai"
 		},
 		"microrelief_hummocky": {
 			"$anchor": "microrelief-hummocky",
@@ -2087,7 +2087,7 @@
 			"title": "microrelief - hummocky",
 			"description": "A description of hummocky microrelief at the site.",
 			"type": "object",
-			"$ref": "./entities.json#Microrelief_hummocky"
+			"$ref": "./entities.json#/$defs/Microrelief_hummocky"
 		},
 		"microrelief_other": {
 			"$anchor": "microrelief-other",
@@ -2096,7 +2096,7 @@
 			"title": "microrelief - other",
 			"description": "A description of other microrelief at the site.",
 			"type": "object",
-			"$ref": "./entities.json#Microrelief_other"
+			"$ref": "./entities.json#/$defs/Microrelief_other"
 		},
 		"mottles": {
 			"$anchor": "mottles",
@@ -2105,7 +2105,7 @@
 			"title": "mottles",
 			"description": "A description of mottles and other colour patterns.",
 			"type": "object",
-			"$ref": "./entities.json#Mottles"
+			"$ref": "./entities.json#/$defs/Mottle"
 		},
 		"outcrop": {
 			"$anchor": "outcrop",
@@ -2114,7 +2114,7 @@
 			"title": "outcrop",
 			"description": "A description of rock outcrop at this entity.",
 			"type": "object",
-			"$ref": "./entities.json#Outcrop"
+			"$ref": "./entities.json#/$defs/Outcrop"
 		},
 		"pans": {
 			"$anchor": "pans",
@@ -2123,7 +2123,7 @@
 			"title": "pans",
 			"description": "A description of pans.",
 			"type": "object",
-			"$ref": "./entities.json#Pan"
+			"$ref": "./entities.json#/$defs/Pan"
 		},
 		"pores": {
 			"$anchor": "pores",
@@ -2132,7 +2132,7 @@
 			"title": "macropores",
 			"description": "A description of macropores.",
 			"type": "object",
-			"$ref": "./entities.json#Pore"
+			"$ref": "./entities.json#/$defs/Pore"
 		},
 		"roots": {
 			"$anchor": "roots",
@@ -2141,7 +2141,7 @@
 			"title": "roots",
 			"description": "A description of roots.",
 			"type": "object",
-			"$ref": "./entities.json#Root"
+			"$ref": "./entities.json#/$defs/Root"
 		},
 		"segregations": {
 			"$anchor": "segregations",
@@ -2150,7 +2150,7 @@
 			"title": "segregations",
 			"description": "A description of segregations.",
 			"type": "object",
-			"$ref": "./entities.json#Segregation"
+			"$ref": "./entities.json#/$defs/Segregation"
 		},
 		"streamChannel": {
 			"$anchor": "streamChannel",
@@ -2159,7 +2159,7 @@
 			"title": "stream channel",
 			"description": "A description of stream channel occurrence.",
 			"type": "object",
-			"$ref": "./entities.json#StreamChannel"
+			"$ref": "./entities.json#/$defs/StreamChannel"
 		},
 		"consistence": {
 			"$anchor": "consistence",
@@ -2168,7 +2168,7 @@
 			"title": "consistence",
 			"description": "A description of consistence",
 			"type": "object",
-			"$ref": "./entities.json#Consistence"
+			"$ref": "./entities.json#/$defs/Consistence"
 		},
 		"structures": {
 			"$anchor": "structures",
@@ -2177,7 +2177,7 @@
 			"range@type": "ansis:SoilStructure",
 			"description": "A description of structure.",
 			"type": "object",
-			"$ref": "./entities.json#SoilStructure"
+			"$ref": "./entities.json#/$defs/SoilStructure"
 		},
 		"substrate": {
 			"$anchor": "substrate",
@@ -2186,7 +2186,7 @@
 			"title": "substrate",
 			"description": "A description of substrate.",
 			"type": "object",
-			"$ref": "./entities.json#Substrate"
+			"$ref": "./entities.json#/$defs/Substrate"
 		},
 		"height": {
 			"$anchor": "height",
@@ -2205,12 +2205,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2231,12 +2231,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2257,12 +2257,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#channel-integration"
+							"$ref": "./enum.json#/$defs/ChannelIntegration"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2283,12 +2283,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2312,12 +2312,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#lithology-rock-outcrop"
+									"$ref": "./enum.json#/$defs/LithologyRockOutcrop"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -2332,12 +2332,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#lithology-coarse-fragments"
+									"$ref": "./enum.json#/$defs/LithologyCoarseFragments"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -2354,17 +2354,17 @@
 								"result": {
 									"oneOf": [
 										{
-											"$ref": "./enum.json#lithology-rock"
+											"$ref": "./enum.json#/$defs/LithologyRock"
 										},
 										{
-											"$ref": "./enum.json#lithology-unconsolidated"
+											"$ref": "./enum.json#/$defs/LithologyUnconsolidated"
 										}
 									]
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -2387,12 +2387,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#location-in-element"
+							"$ref": "./enum.json#/$defs/LocationInElement"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2413,12 +2413,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2439,12 +2439,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#segregations-magnetic-attributes"
+							"$ref": "./enum.json#/$defs/SegregationsMagneticAttributes"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2476,12 +2476,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#segregations-nature"
+									"$ref": "./enum.json#/$defs/SegregationsNature"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -2496,12 +2496,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#substrate-mineral-composition"
+									"$ref": "./enum.json#/$defs/SubstrateMineralComposition"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -2524,12 +2524,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#channel-migration"
+							"$ref": "./enum.json#/$defs/ChannelMigration"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2547,7 +2547,7 @@
 					"range@type": "skos:Concept",
 					"type": "string",
 					"description": "Soil colour.",
-					"$ref": "./enum.json#colour-moisture-status"
+					"$ref": "./enum.json#/$defs/ColourMoistureStatus"
 				},
 				"soil": {
 					"$anchor": "moisture-status-soil-water-status",
@@ -2564,12 +2564,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#soil-water-status"
+									"$ref": "./enum.json#/$defs/SoilWaterStatus"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -2592,12 +2592,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#landform-element-type"
+							"$ref": "./enum.json#/$defs/LandformElementType"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2618,12 +2618,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#channel-pattern"
+							"$ref": "./enum.json#/$defs/ChannelPattern"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2652,12 +2652,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -2676,12 +2676,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#soil-permeability"
+									"$ref": "./enum.json#/$defs/SoilPermeability"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -2697,7 +2697,7 @@
 			"title": "plasticity",
 			"description": "Capability of being formed or molded.",
 			"type": "object",
-			"$ref": "./entities.json#SoilPlasticity"
+			"$ref": "./entities.json#/$defs/SoilPlasticity"
 		},
 		"porosity": {
 			"$anchor": "porosity",
@@ -2716,12 +2716,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2742,12 +2742,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#microrelief-proportions-gilgai"
+							"$ref": "./enum.json#/$defs/MicroreliefProportionsGilgai"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2758,14 +2758,14 @@
 			"title": "purpose",
 			"description": "Purpose of or reason for a site or activity. For example, why a Land Survey or Soil Site was established; why a profile was created; or why a site was visited.",
 			"type": "object",
-			"$ref": "./entities.json#Classification"
+			"$ref": "./entities.json#/$defs/Classification"
 		},
 		"sampling": {
 			"$anchor": "sampling",
 			"@id": "ansis:relatedActivity",
 			"range@type": "sosa:Sampling",
 			"description": "Sampling.",
-			"$ref": "./sosa.json#Sampling"
+			"$ref": "./sosa.json#/$defs/Sampling"
 		},
 		"siteVisit": {
 			"$anchor": "siteVisit",
@@ -2773,7 +2773,7 @@
 			"range@type": "ansis:SiteVisit",
 			"description": "Site Visit.",
 			"type": "object",
-			"$ref": "./entities.json#SiteVisit"
+			"$ref": "./entities.json#/$defs/SiteVisit"
 		},
 		"soilHorizon": {
 			"$anchor": "soilHorizon",
@@ -2781,7 +2781,7 @@
 			"range@type": "ansis:SoilHorizon",
 			"title": "related soil horizon",
 			"description": "Related soil horizon within a soil body or sample, or associated with a contact.",
-			"$ref": "./entities.json#SoilHorizon"
+			"$ref": "./entities.json#/$defs/SoilHorizon"
 		},
 		"soilLayer": {
 			"$anchor": "soilLayer",
@@ -2789,7 +2789,7 @@
 			"range@type": "ansis:SoilLayer",
 			"title": "related soil layer",
 			"description": "Related soil layer within a soil body or profile.",
-			"$ref": "./entities.json#SoilLayer"
+			"$ref": "./entities.json#/$defs/SoilLayer"
 		},
 		"soilProfile": {
 			"$anchor": "soilProfile",
@@ -2797,7 +2797,7 @@
 			"range@type": "ansis:SoilProfile",
 			"title": "Soil Profile",
 			"description": "The soil profile related to this context.",
-			"$ref": "./entities.json#SoilProfile"
+			"$ref": "./entities.json#/$defs/SoilProfile"
 		},
 		"soilSurface": {
 			"$anchor": "soilSurface",
@@ -2805,7 +2805,7 @@
 			"range@type": "ansis:SoilSurface",
 			"title": "related soil surface",
 			"description": "Soil surface of this entity.",
-			"$ref": "./base.json#pointer"
+			"$ref": "./base.json#/$defs/pointer"
 		},
 		"relatedProject": {
 			"$anchor": "relatedProject",
@@ -2813,7 +2813,7 @@
 			"range@type": "proj:Project",
 			"title": "related project",
 			"description": "Link to project that supported this activity, either establishing a Land Survey or Soil Site, or requiring a Site Visit.",
-			"$ref": "./base.json#pointer"
+			"$ref": "./base.json#/$defs/pointer"
 		},
 		"relatedSample": {
 			"$anchor": "relatedSample",
@@ -2821,7 +2821,7 @@
 			"range@type": "ansis:SoilSample",
 			"title": "related sample",
 			"description": "Link to a sample related to this context.",
-			"$ref": "./base.json#pointer"
+			"$ref": "./base.json#/$defs/pointer"
 		},
 		"relatedSite": {
 			"$anchor": "relatedSite",
@@ -2835,7 +2835,7 @@
 			],
 			"title": "related site",
 			"description": "Link to a land survey or soil site related to this context.",
-			"$ref": "./base.json#pointer"
+			"$ref": "./base.json#/$defs/pointer"
 		},
 		"relativeInclination": {
 			"$anchor": "relative-inclination",
@@ -2854,12 +2854,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#relative-inclination"
+							"$ref": "./enum.json#/$defs/RelativeInclination"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2880,12 +2880,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#relief"
+							"$ref": "./enum.json#/$defs/Relief"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2906,12 +2906,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#runoff"
+							"$ref": "./enum.json#/$defs/Runoff"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -2935,12 +2935,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#coarse-fragments-shape"
+									"$ref": "./enum.json#/$defs/CoarseFragmentsShape"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -2955,12 +2955,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#segregations-form"
+									"$ref": "./enum.json#/$defs/SegregationsForm"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -2986,12 +2986,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#coarse-fragments-size"
+									"$ref": "./enum.json#/$defs/CoarseFragmentsSize"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3006,12 +3006,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#mottle-size"
+									"$ref": "./enum.json#/$defs/MottleSize"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3026,12 +3026,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#pedality-size"
+									"$ref": "./enum.json#/$defs/PedalitySize"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3046,12 +3046,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#segregations-size"
+									"$ref": "./enum.json#/$defs/SegregationsSize"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -3077,23 +3077,23 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						},
 						"qualityOfObservation": {
-							"$ref": "./sosa.json#qualityOfObservation"
+							"$ref": "./sosa.json#/$defs/qualityOfObservation"
 						},
 						"usedProcedure": {
 							"$comment": "replaces ansis:methodSlope",
-							"$ref": "./enum.json#slope-procedure"
+							"$ref": "./enum.json#/$defs/SlopeProcedure"
 						},
 						"madeBySensor": {
-							"$ref": "./sosa.json#madeBySensor"
+							"$ref": "./sosa.json#/$defs/madeBySensor"
 						},
 						"phenomenonTime": {
-							"$ref": "./sosa.json#phenomenonTime"
+							"$ref": "./sosa.json#/$defs/phenomenonTime"
 						},
 						"resultTime": {
-							"$ref": "./sosa.json#resultTime"
+							"$ref": "./sosa.json#/$defs/resultTime"
 						}
 					}
 				},
@@ -3112,12 +3112,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#slope-class"
+									"$ref": "./enum.json#/$defs/SlopeClass"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3132,12 +3132,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#slope-modal"
+									"$ref": "./enum.json#/$defs/SlopeModal"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -3163,12 +3163,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#channel-spacing"
+									"$ref": "./enum.json#/$defs/ChannelSpacing"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3183,12 +3183,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#substrate-discontinuity-spacing"
+									"$ref": "./enum.json#/$defs/SubstrateDiscontinuitySpacing"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -3211,12 +3211,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#erosion-state"
+							"$ref": "./enum.json#/$defs/ErosionState"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -3237,12 +3237,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#consistence-stickiness"
+							"$ref": "./enum.json#/$defs/ConsistenceStickiness"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -3271,12 +3271,12 @@
 						{
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#consistence-strength"
+									"$ref": "./enum.json#/$defs/ConsistenceStrength"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3295,12 +3295,12 @@
 						{
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#material-strength"
+									"$ref": "./enum.json#/$defs/MaterialStrength"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3319,12 +3319,12 @@
 						{
 							"properties": {
 								"result": {
-									"$ref": "./entities.json#Consistence"
+									"$ref": "./entities.json#/$defs/Consistence"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3343,12 +3343,12 @@
 						{
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#segregations-strength"
+									"$ref": "./enum.json#/$defs/SegregationsStrength"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -3366,10 +3366,10 @@
 			"type": "object",
 			"oneOf": [
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				},
 				{
-					"$ref": "./entities.json#SoilStructure"
+					"$ref": "./entities.json#/$defs/SoilStructure"
 				}
 			]
 		},
@@ -3383,7 +3383,7 @@
 			"title": "pan structure",
 			"description": "internal arrangement of elements of the material or entity.",
 			"type": "object",
-			"$ref": "./enum.json#pans-structure"
+			"$ref": "./enum.json#/$defs/PansStructure"
 		},
 		"texture": {
 			"@id": "ansis:texture",
@@ -3407,17 +3407,17 @@
 								"result": {
 									"oneOf": [
 										{
-											"$ref": "./enum.json#field-texture-mineral"
+											"$ref": "./enum.json#/$defs/FieldTextureMineral"
 										},
 										{
-											"$ref": "./enum.json#field-texture-organic"
+											"$ref": "./enum.json#/$defs/FieldTextureOrganic"
 										}
 									]
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3432,12 +3432,12 @@
 						{
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#field-texture"
+									"$ref": "./enum.json#/$defs/FieldTexture"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
@@ -3460,12 +3460,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#lithology-rock"
+							"$ref": "./enum.json#/$defs/LithologyRock"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -3538,12 +3538,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./qudt.json#QuantityValue"
+							"$ref": "./qudt.json#/$defs/QuantityValue"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -3554,7 +3554,7 @@
 			"title": "visitor",
 			"description": "Site visitor, for the purpose of sampling or observation.",
 			"type": "object",
-			"$ref": "./prov.json#Person"
+			"$ref": "./prov.json#/$defs/Person"
 		},
 		"waterRepellence": {
 			"$anchor": "waterRepellence",
@@ -3573,12 +3573,12 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./enum.json#water-repellence"
+							"$ref": "./enum.json#/$defs/WaterRepellence"
 						}
 					}
 				},
 				{
-					"$ref": "./base.json#ObservableProperty"
+					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
 		},
@@ -3607,12 +3607,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./qudt.json#QuantityValue"
+									"$ref": "./qudt.json#/$defs/QuantityValue"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				},
@@ -3631,12 +3631,12 @@
 							],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#cracks-width"
+									"$ref": "./enum.json#/$defs/CracksWidth"
 								}
 							}
 						},
 						{
-							"$ref": "./base.json#ObservableProperty"
+							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
 				}
