@@ -23,7 +23,7 @@
 			"title": "abundance",
 			"description": "Abundance of items.",
 			"$defs": {
-				"CoarseFragment": {
+				"CoarseFragments": {
 					"description": "Coarse fragments.",
 					"type": "object",
 					"allOf": [
@@ -534,18 +534,25 @@
 			"title": "pH",
 			"description": "Alkalinity of material.",
 			"type": "object",
-			"required": [
-				"result",
-				"usedProcedure"
-			],
-			"properties": {
-				"result": {
-					"$ref": "./qudt.json#/$defs/QuantityValue"
-				},
-				"usedProcedure": {
-					"type": "string"
-				}
-			}
+            "allOf": [
+                {
+                    "required": [
+                        "result",
+                        "usedProcedure"
+                    ],
+                    "properties": {
+                        "result": {
+                            "$ref": "./qudt.json#/$defs/QuantityValue"
+                        },
+                        "usedProcedure": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "./base.json#/$defs/ObservableProperty"
+                }
+            ]
 		},
 		"classification": {
 			"@id": "ansis:classification",
@@ -741,7 +748,6 @@
 			"range@type": "skos:Concept",
 			"title": "confidence",
 			"description": "Confidence that substrate is parent material.",
-			"type": "string",
 			"$ref": "./enum.json#/$defs/SubstrateConfidence"
 		},
 		"continuity": {
@@ -1282,7 +1288,7 @@
 			"$defs": {
 				"Pores": {
 					"title": "pore diameter",
-					"description": "Pore.",
+					"description": "Pores.",
 					"type": "object",
 					"allOf": [
 						{
@@ -1302,7 +1308,7 @@
 				},
 				"Roots": {
 					"title": "root size",
-					"description": "Root.",
+					"description": "Roots.",
 					"type": "object",
 					"allOf": [
 						{
@@ -1563,31 +1569,26 @@
 			"title": "elevation",
 			"description": "Elevation of element above a datum (usually MSL).",
 			"type": "object",
-			"required": [
-				"result",
-				"usedProcedure"
-			],
-			"properties": {
-				"result": {
-					"$ref": "./qudt.json#/$defs/QuantityValue"
-				},
-				"qualityOfObservation": {
-					"$ref": "./sosa.json#/$defs/qualityOfObservation"
-				},
-				"usedProcedure": {
-					"$comment": "replaces ansis:methodElevation",
-					"$ref": "./enum.json#/$defs/ElevationEvaluationMeans"
-				},
-				"madeBySensor": {
-					"$ref": "./sosa.json#/$defs/madeBySensor"
-				},
-				"phenomenonTime": {
-					"$ref": "./sosa.json#/$defs/phenomenonTime"
-				},
-				"resultTime": {
-					"$ref": "./sosa.json#/$defs/resultTime"
-				}
-			}
+            "allOf": [
+                {
+                    "required": [
+                        "result",
+                        "usedProcedure"
+                    ],
+                    "properties": {
+                        "result": {
+                            "$ref": "./qudt.json#/$defs/QuantityValue"
+                        },
+                        "usedProcedure": {
+                            "$comment": "replaces ansis:methodElevation",
+                            "$ref": "./enum.json#/$defs/ElevationEvaluationMeans"
+                        }
+                    }
+                },
+                {
+                    "$ref": "./base.json#/$defs/ObservableProperty"
+                }
+            ]
 		},
 		"fabric": {
 			"@id": "ansis:fabric",
@@ -1822,7 +1823,7 @@
 			"title": "coarse fragments",
 			"description": "A description of coarse fragments.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/CoarseFragment"
+			"$ref": "./entities.json#/$defs/CoarseFragments"
 		},
 		"cracks": {
 			"@id": "ansis:hasCracks",
@@ -2047,7 +2048,7 @@
 			"@id": "ansis:hasStreamChannel",
 			"range@type": "ansis:StreamChannel",
 			"title": "stream channel",
-			"description": "A description of stream channel occurrence.",
+			"description": "A description of a stream channel occurrence.",
 			"type": "object",
 			"$ref": "./entities.json#/$defs/StreamChannel"
 		},
@@ -2203,7 +2204,7 @@
 						}
 					]
 				},
-				"CoarseFragment": {
+				"CoarseFragments": {
 					"type": "object",
 					"description": "Coarse Fragments.",
 					"allOf": [
@@ -2557,7 +2558,6 @@
 		"plasticity": {
 			"@id": "ansis:plasticity",
 			"range@type": [
-				"sosa:ObservableProperty",
 				"ansis:SoilPlasticity"
 			],
 			"title": "plasticity",
@@ -2775,7 +2775,7 @@
 			"title": "shape",
 			"description": "Geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary.",
 			"$defs": {
-				"CoarseFragment": {
+				"CoarseFragments": {
 					"description": "Coarse fragments.",
 					"type": "object",
 					"allOf": [
@@ -2824,7 +2824,7 @@
 			"title": "size",
 			"description": "Geometric scale and extent of element.",
 			"$defs": {
-				"CoarseFragment": {
+				"CoarseFragments": {
 					"description": "Coarse fragments.",
 					"type": "object",
 					"allOf": [
@@ -2914,32 +2914,30 @@
 				"Quantity": {
 					"description": "Quantity.",
 					"type": "object",
-					"range@type": "qudt:QuantityValue",
-					"required": [
-						"result",
-						"usedProcedure"
-					],
-					"properties": {
-						"result": {
-							"$ref": "./qudt.json#/$defs/QuantityValue"
-						},
-						"qualityOfObservation": {
-							"$ref": "./sosa.json#/$defs/qualityOfObservation"
-						},
-						"usedProcedure": {
-							"$comment": "replaces ansis:methodSlope",
-							"$ref": "./enum.json#/$defs/SlopeProcedure"
-						},
-						"madeBySensor": {
-							"$ref": "./sosa.json#/$defs/madeBySensor"
-						},
-						"phenomenonTime": {
-							"$ref": "./sosa.json#/$defs/phenomenonTime"
-						},
-						"resultTime": {
-							"$ref": "./sosa.json#/$defs/resultTime"
-						}
-					}
+					"range@type": [
+                        "sosa:ObservableProperty",
+                        "qudt:QuantityValue"
+                    ],
+					"allOf": [
+						{
+                            "required": [
+                                "result",
+                                "usedProcedure"
+                            ],
+                            "properties": {
+                                "result": {
+                                    "$ref": "./qudt.json#/$defs/QuantityValue"
+                                },
+                                "usedProcedure": {
+                                    "$comment": "replaces ansis:methodSlope",
+                                    "$ref": "./enum.json#/$defs/SlopeProcedure"
+                                }
+                            }
+                        },
+                        {
+                            "$ref": "./base.json#/$defs/ObservableProperty"
+                        }
+                    ]
 				},
 				"Class": {
 					"range@type": [
@@ -3101,11 +3099,11 @@
 					],
 					"description": "Consistence.",
 					"type": "object",
-					"required": [
-						"result"
-					],
 					"allOf": [
 						{
+                            "required": [
+                                "result"
+                            ],
 							"properties": {
 								"result": {
 									"$ref": "./enum.json#/$defs/ConsistenceStrength"
@@ -3124,11 +3122,11 @@
 					],
 					"description": "Material.",
 					"type": "object",
-					"required": [
-						"result"
-					],
 					"allOf": [
 						{
+                            "required": [
+                                "result"
+                            ],
 							"properties": {
 								"result": {
 									"$ref": "./enum.json#/$defs/MaterialStrength"
@@ -3147,11 +3145,11 @@
 					],
 					"description": "Soil.",
 					"type": "object",
-					"required": [
-						"result"
-					],
 					"allOf": [
 						{
+                            "required": [
+                                "result"
+                            ],
 							"properties": {
 								"result": {
 									"$ref": "./entities.json#/$defs/Consistence"
@@ -3170,11 +3168,11 @@
 					],
 					"description": "Segregations.",
 					"type": "object",
-					"required": [
-						"result"
-					],
 					"allOf": [
 						{
+                            "required": [
+                                "result"
+                            ],
 							"properties": {
 								"result": {
 									"$ref": "./enum.json#/$defs/SegregationsStrength"
@@ -3197,7 +3195,21 @@
 			"title": "pan structure",
 			"description": "internal arrangement of elements of the material or entity.",
 			"type": "object",
-			"$ref": "./enum.json#/$defs/PansStructure"
+            "allOf": [
+                {
+                    "required": [
+                        "result"
+                    ],
+                    "properties": {
+                        "result": {
+                            "$ref": "./enum.json#/$defs/PansStructure"
+                        }
+                    }
+                },
+                {
+                    "$ref": "./base.json#/$defs/ObservableProperty"
+                }
+            ]
 		},
 		"texture": {
 			"@id": "ansis:texture",
@@ -3211,11 +3223,11 @@
 				"Soil": {
 					"description": "Soil.",
 					"type": "object",
-					"required": [
-						"result"
-					],
 					"allOf": [
 						{
+                            "required": [
+                                "result"
+                            ],
 							"properties": {
 								"result": {
 									"oneOf": [
@@ -3237,11 +3249,11 @@
 				"Substrate": {
 					"description": "Substrate.",
 					"type": "object",
-					"required": [
-						"result"
-					],
 					"allOf": [
 						{
+                            "required": [
+                                "result"
+                            ],
 							"properties": {
 								"result": {
 									"$ref": "./enum.json#/$defs/FieldTexture"
