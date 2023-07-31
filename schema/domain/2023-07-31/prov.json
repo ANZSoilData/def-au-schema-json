@@ -17,12 +17,12 @@
             "type": "object",
             "required": ["type"],
             "properties": {
-                "id": {"$ref": "./base.json#id"},
+                "id": {"$ref": "./base.json#/$defs/id"},
                 "type": {
-                    "$ref": "./base.json#type",
+                    "$ref": "./base.json#/$defs/type",
                     "const": "prov:Agent"
                 },
-                "name": {"$ref": "./base.json#name"}
+                "name": {"$ref": "./base.json#/$defs/name"}
             },
             "additionalProperties": false
         },
@@ -34,12 +34,12 @@
             "type": "object",
             "required": ["type"],
             "properties": {
-                "id": {"$ref": "./base.json#id"},
+                "id": {"$ref": "./base.json#/$defs/id"},
                 "type": {
-                    "$ref": "./base.json#type",
+                    "$ref": "./base.json#/$defs/type",
                     "const": "prov:Person"
                 },
-                "name": {"$ref": "./base.json#name"}
+                "name": {"$ref": "./base.json#/$defs/name"}
             },
             "additionalProperties": false
         },

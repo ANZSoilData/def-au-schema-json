@@ -192,10 +192,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -208,10 +208,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -238,10 +238,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -270,10 +270,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -300,10 +300,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -316,10 +316,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -346,10 +346,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:DeciS-PER-M"
 							]
@@ -363,10 +363,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -393,10 +393,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -409,10 +409,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -439,10 +439,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -455,10 +455,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -485,10 +485,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -501,10 +501,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -531,10 +531,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -547,10 +547,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -577,10 +577,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM"
 							]
@@ -593,10 +593,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -623,10 +623,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -639,10 +639,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -669,10 +669,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -685,10 +685,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -715,10 +715,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM",
 								"unit:PERCENT"
@@ -732,10 +732,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			},
 			"if": {
@@ -793,10 +793,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MicroGM-PER-KiloGM",
 								"unit:MilliGM-PER-KiloGM",
@@ -811,10 +811,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			},
 			"allOf": [
@@ -909,10 +909,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:CentiMOL-PER-KiloGM",
 								"unit:MilliGM-PER-KiloGM"
@@ -926,10 +926,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			},
 			"if": {
@@ -990,10 +990,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -1006,10 +1006,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1036,10 +1036,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -1052,10 +1052,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1082,10 +1082,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -1098,10 +1098,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1128,10 +1128,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-KiloGM"
 							]
@@ -1144,10 +1144,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1174,10 +1174,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -1191,10 +1191,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1221,10 +1221,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:UNITLESS"
 							]
@@ -1236,10 +1236,10 @@
 						"scm:9I2a","scm:9I2b","scm:9I2c","scm:9I3a","scm:9I3b","scm:9I3c","scm:9I4a","scm:9I4b","scm:9I4c"					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1267,10 +1267,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:UNITLESS",
 								"unit:MOL-PER-M3"
@@ -1300,10 +1300,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			},
 			"if": {
@@ -1359,10 +1359,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -1383,10 +1383,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1413,10 +1413,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -1435,10 +1435,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1465,10 +1465,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -1482,10 +1482,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1512,10 +1512,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT",
 								"unit:MilliGM-PER-KiloGM"
@@ -1530,10 +1530,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -1560,10 +1560,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:UNITLESS"
 							]
@@ -1577,10 +1577,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		}

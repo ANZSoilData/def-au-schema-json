@@ -23,9 +23,9 @@
                 "result"
             ],
             "properties": {
-                "id": {"$ref": "./base.json#id"},
+                "id": {"$ref": "./base.json#/$defs/id"},
                 "type": {
-                    "$ref": "./base.json#type",
+                    "$ref": "./base.json#/$defs/type",
                     "const": "sosa:Sampling"
                 },
                 "result": {
@@ -52,7 +52,7 @@
             ],
             "title": "sample of",
             "description": "Generic link to an ANSIS soil entity that the sample has been taken from.",
-            "$ref": "./base.json#pointer"
+            "$ref": "./base.json#/$defs/pointer"
         },
         "result": {
             "@id": "sosa:hasResult",
@@ -67,12 +67,12 @@
                     "$anchor": "result-QuantityValue",
                     "range@type": "qudt:QuantityValue",
                     "@id": "sosa:hasSimpleResult",
-                    "$ref": "./qudt.json#QuantityValue"
+                    "$ref": "./qudt.json#/$defs/QuantityValue"
                 },
                 "SoilSample": {
                     "$anchor": "result-SoilSample",
                     "range@type": "ansis:SoilSample",
-                    "$ref": "./entities.json#SoilSample"
+                    "$ref": "./entities.json#/$defs/SoilSample"
                 }
             }
         },
@@ -157,7 +157,7 @@
                 },
                 "SoilProfile": {
                     "$anchor": "usedProcedure-ProfileConstruction",
-                    "$ref": "./enum.json#profile-construction"
+                    "$ref": "./enum.json#/$defs/ProfileConstruction"
                 }
             }
         },

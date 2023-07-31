@@ -78,10 +78,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-M3"
 							]
@@ -94,10 +94,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -124,10 +124,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-M3",
 								"unit:PERCENT"
@@ -141,10 +141,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -171,10 +171,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:MilliGM-PER-M3",
 								"unit:PERCENT"
@@ -188,10 +188,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -211,7 +211,7 @@
 			],
 			"properties": {
 				"result": {
-					"$ref": "./enum.json#dispersion-in-water"
+					"$ref": "./enum.json#/$defs/DispersionInWater"
 				},
 				"usedProcedure": {
 					"enum": [
@@ -219,10 +219,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -249,10 +249,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -265,10 +265,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -295,10 +295,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -311,10 +311,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		},
@@ -341,10 +341,10 @@
 					],
 					"properties": {
 						"value": {
-							"$ref": "./qudt.json#value"
+							"$ref": "./qudt.json#/$defs/value"
 						},
 						"unit": {
-							"$ref": "./qudt.json#unit",
+							"$ref": "./qudt.json#/$defs/unit",
 							"enum": [
 								"unit:PERCENT"
 							]
@@ -357,10 +357,10 @@
 					]
 				},
 				"resultTime": {
-					"$ref": "./sosa.json#resultTime"
+					"$ref": "./sosa.json#/$defs/resultTime"
 				},
 				"qualityOfObservation": {
-					"$ref": "./sosa.json#qualityOfObservation"
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				}
 			}
 		}

@@ -20,32 +20,32 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "proj:Project"
 				},
 				"leader": {
-					"$ref": "./prov.json#Organization"
+					"$ref": "./prov.json#/$defs/Organization"
 				},
 				"sponsor": {
 					"type": "array",
 					"items": {
-						"$ref": "./prov.json#Organization"
+						"$ref": "./prov.json#/$defs/Organization"
 					}
 				},
 				"designSurvey": {
-					"$ref": "./properties.json#design-survey"
+					"$ref": "./properties.json#/$defs/designSurvey"
 				},
 				"name": {
-					"$ref": "./base.json#name"
+					"$ref": "./base.json#/$defs/name"
 				},
 				"label": {
-					"$ref": "./base.json#label"
+					"$ref": "./base.json#/$defs/label"
 				},
 				"scopedIdentifier": {
-					"$ref": "./base.json#scopedIdentifier"
+					"$ref": "./base.json#/$defs/scopedIdentifier"
 				}
 			},
 			"additionalProperties": false
