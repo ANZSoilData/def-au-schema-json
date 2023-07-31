@@ -736,7 +736,7 @@
 			},
 			"additionalProperties": false
 		},
-		"CoarseFragment": {
+		"CoarseFragments": {
 			"@id": "ansis:CoarseFragments",
 			"title": "ANSIS Coarse Fragment",
 			"description": "Undefined.",
@@ -754,22 +754,22 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:CoarseFragment"
+					"const": "ansis:CoarseFragments"
 				},
 				"abundance": {
-					"$ref": "./properties.json#/$defs/abundance/$defs/CoarseFragment"
+					"$ref": "./properties.json#/$defs/abundance/$defs/CoarseFragments"
 				},
 				"distribution": {
 					"$ref": "./properties.json#/$defs/distribution"
 				},
 				"lithology": {
-					"$ref": "./properties.json#/$defs/lithology/$defs/CoarseFragment"
+					"$ref": "./properties.json#/$defs/lithology/$defs/CoarseFragments"
 				},
 				"shape": {
-					"$ref": "./properties.json#/$defs/shape/$defs/CoarseFragment"
+					"$ref": "./properties.json#/$defs/shape/$defs/CoarseFragments"
 				},
 				"size": {
-					"$ref": "./properties.json#/$defs/size/$defs/CoarseFragment"
+					"$ref": "./properties.json#/$defs/size/$defs/CoarseFragments"
 				},
 				"strength": {
 					"$ref": "./properties.json#/$defs/strength/$defs/Material"
