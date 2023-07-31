@@ -27,110 +27,112 @@
 				"designSite",
 				"drainage",
 				"landUse",
-				"landform",
-				"landSurface",
 				"purpose"
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"type": "array",
-					"items": {
-						"oneOf": [
-							{
-								"const": "ansis:LandsurveySite"
-							}
-						],
-						"anyOf": [
-							{
-								"const": "ansis:SoilSite"
-							}
-						]
-					},
-					"maxItems": 2
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"enum": ["ansis:LandsurveySite"]
+							},
+							"minItems": 1,
+							"maxItems": 1
+						},
+						{
+							"type": "array",
+							"items": {
+								"enum": ["ansis:LandsurveySite","ansis:SoilSite"]
+							},
+							"minItems": 2,
+							"maxItems": 2,
+							"uniqueItems": true
+						}
+					]
 				},
 				"ansisType": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#ansis-type-site"
+						"$ref": "./properties.json#/$defs/ansisType/$defs/site"
 					}
 				},
 				"depthFreeWater": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#depth-free-water"
+						"$ref": "./properties.json#/$defs/depthFreeWater"
 					}
 				},
 				"designSite": {
-					"$ref": "./properties.json#design-site"
+					"$ref": "./properties.json#/$defs/designSite"
 				},
 				"disturbance": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#disturbance"
+						"$ref": "./properties.json#/$defs/disturbance"
 					}
 				},
 				"drainage": {
-					"$ref": "./properties.json#drainage"
+					"$ref": "./properties.json#/$defs/drainage"
 				},
 				"elevation": {
-					"$ref": "./properties.json#elevation"
+					"$ref": "./properties.json#/$defs/elevation"
 				},
 				"geometry": {
-					"$ref": "./geo.json#geometry"
+					"$ref": "./geo.json#/$defs/geometry"
+				},
+				"heightDrainage": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/heightDrainage"
+					}
 				},
 				"landCover": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landCover"
+						"$ref": "./properties.json#/$defs/landCover"
 					}
 				},
 				"landManagement": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landManagement"
+						"$ref": "./properties.json#/$defs/landManagement"
 					}
 				},
 				"landUse": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landUse"
-					}
-				},
-				"heightDrainage": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#height-drainage"
+						"$ref": "./properties.json#/$defs/landUse"
 					}
 				},
 				"locationInElement": {
-					"$ref": "./properties.json#location-in-element"
+					"$ref": "./properties.json#/$defs/locationInElement"
 				},
 				"purpose": {
-					"$ref": "./properties.json#purpose"
-				},
-				"siteVisit": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedActivity-siteVisit"
-					}
+					"$ref": "./properties.json#/$defs/purpose"
 				},
 				"relatedProject": {
-					"$ref": "./properties.json#relatedProject-pointer"
+					"$ref": "./properties.json#/$defs/relatedProject"
 				},
 				"relatedSite": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#relatedSite-pointer"
+						"$ref": "./properties.json#/$defs/relatedSite"
 					}
 				},
 				"scopedIdentifier": {
 					"type": "array",
 					"items": {
-						"$ref": "./base.json#scopedIdentifier"
+						"$ref": "./base.json#/$defs/scopedIdentifier"
+					}
+				},
+				"siteVisit": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/siteVisit"
 					}
 				}
 			},
@@ -153,43 +155,46 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SiteVisit"
 				},
-				"startedAtTime": {
-					"$ref": "./prov.json#startedAtTime"
-				},
 				"endedAtTime": {
-					"$ref": "./prov.json#endedAtTime"
-				},
-				"purpose": {
-					"$ref": "./properties.json#purpose"
+					"$ref": "./prov.json#/$defs/endedAtTime"
 				},
 				"landform": {
-					"$ref": "./properties.json#landform"
+					"$ref": "./properties.json#/$defs/landform"
 				},
 				"landSurface": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landSurface"
+						"$ref": "./properties.json#/$defs/landSurface"
+					}
+				},
+				"purpose": {
+					"$ref": "./properties.json#/$defs/purpose"
+				},
+				"relatedProject": {
+					"type": "array",
+					"items": {
+						"$ref": "./base.json#/$defs/pointer"
 					}
 				},
 				"soilProfile": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#soilProfile"
+						"$ref": "./properties.json#/$defs/soilProfile"
 					}
 				},
-				"relatedProject": {
-					"$ref": "./properties.json#relatedProject-pointer"
+				"startedAtTime": {
+					"$ref": "./prov.json#/$defs/startedAtTime"
 				},
 				"visitor": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#visitor"
+						"$ref": "./properties.json#/$defs/visitor"
 					}
 				}
 			},
@@ -205,7 +210,6 @@
 				"type",
 				"depth",
 				"geometry",
-				"relatedSite",
 				"usedProcedure"
 			],
 			"ansisPreferred": [
@@ -213,77 +217,77 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilProfile"
 				},
 				"ansisType": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#ansis-type-soil-profile"
+						"$ref": "./properties.json#/$defs/ansisType/$defs/soilProfile"
 					}
 				},
 				"classification": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#classification"
+						"$ref": "./properties.json#/$defs/classification"
 					}
 				},
 				"depth": {
-					"$ref": "./properties.json#depth-quantity"
+					"$ref": "./properties.json#/$defs/depth-quantity"
 				},
 				"depthReason": {
-					"$ref": "./properties.json#depth-reason"
+					"$ref": "./properties.json#/$defs/depthReason"
 				},
 				"depthRHorizon": {
-					"$ref": "./properties.json#depth-r-horizon"
+					"$ref": "./properties.json#/$defs/depthRHorizon"
 				},
 				"drainage": {
-					"$ref": "./properties.json#drainage"
+					"$ref": "./properties.json#/$defs/drainage"
 				},
 				"microreliefComponent": {
-					"$ref": "./properties.json#component-microrelief-sampled"
+					"$ref": "./properties.json#/$defs/component/$defs/microrelief_sampled"
 				},
 				"permeability": {
-					"$ref": "./properties.json#permeability-soil"
+					"$ref": "./properties.json#/$defs/permeability/$defs/soil"
 				},
 				"geometry": {
-					"$ref": "./geo.json#geometry"
-				},
-				"substrate": {
-					"$ref": "./properties.json#substrate"
+					"$ref": "./geo.json#/$defs/geometry"
 				},
 				"purpose": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#purpose"
+						"$ref": "./properties.json#/$defs/purpose"
 					}
-				},
-				"relatedHorizon": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedHorizon-object"
-					}
-				},
-				"relatedLayer": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#relatedLayer-object"
-					}
-				},
-				"soilSurface": {
-					"$ref": "./properties.json#soilSurface"
 				},
 				"sampling": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#sampling"
+						"$ref": "./properties.json#/$defs/sampling"
 					}
 				},
+				"soilHorizon": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/soilHorizon"
+					}
+				},
+				"soilLayer": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/soilLayer"
+					}
+				},
+				"soilSurface": {
+					"$ref": "./properties.json#/$defs/soilSurface"
+				},
+				"substrate": {
+					"$ref": "./properties.json#/$defs/substrate"
+				},
 				"usedProcedure": {
-					"$ref": "./sosa.json#usedProcedure-ProfileConstruction"
+					"$ref": "./sosa.json#/$defs/usedProcedure/$defs/SoilProfile"
 				}
 			},
 			"additionalProperties": false
@@ -301,148 +305,282 @@
 				"designation"
 			],
 			"ansisPreferred": [
+				"carbon",
+				"carbonateEffervescence",
+				"colour",
+				"coarseFragments",
+				"mottles",
+				"consistence",
+				"structures",
+				"pH",
+				"texture"
+			],
+			"properties": {
+				"id": {
+					"$ref": "./base.json#/$defs/id"
+				},
+				"type": {
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:SoilHorizon"
+				},
+				"boundaryDistinctness": {
+					"$ref": "./properties.json#/$defs/boundaryDistinctness"
+				},
+				"boundaryShape": {
+					"$ref": "./properties.json#/$defs/boundaryShape"
+				},
+				"carbon": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/carbon"
+					}
+				},
+				"carbonateEffervescence": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/carbonateEffervescence"
+					}
+				},
+				"colour": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/colour/$defs/soil"
+					}
+				},
+				"density": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/density"
+					}
+				},
+				"depthLower": {
+					"$ref": "./properties.json#/$defs/depthLower"
+				},
+				"depthUpper": {
+					"$ref": "./properties.json#/$defs/depthUpper"
+				},
+				"designation": {
+					"$ref": "./properties.json#/$defs/designation"
+				},
+				"coarseFragments": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/coarseFragments"
+					}
+				},
+				"cracks": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/cracks"
+					}
+				},
+				"cutans": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/cutans"
+					}
+				},
+				"mottles": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/mottles"
+					}
+				},
+				"pans": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/pans"
+					}
+				},
+				"pores": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/pores"
+					}
+				},
+				"roots": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/roots"
+					}
+				},
+				"segregations": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/segregations"
+					}
+				},
+				"pH": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/pH"
+					}
+				},
+				"relatedSample": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/relatedSample"
+					}
+				},
+				"consistence": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/consistence"
+					}
+				},
+				"structures": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/structures"
+					}
+				},
+				"texture": {
+					"$ref": "./properties.json#/$defs/texture/$defs/soil"
+				},
+				"waterRepellence": {
+					"$ref": "./properties.json#/$defs/waterRepellence"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SoilLayer": {
+			"$anchor": "SoilLayer",
+			"@id": "ansis:SoilLayer",
+			"title": "ANSIS Soil Layer",
+			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+			"type": "object",
+			"required": [
+				"type",
+				"depthLower",
+				"depthUpper"
+			],
+			"ansisPreferred": [
 				"biological",
 				"carbon",
 				"carbonateEffervescence",
 				"colour",
 				"coarseFragments",
 				"mottles",
-				"strength",
-				"structure",
+				"consistence",
+				"structures",
 				"pH",
-				"physical",
 				"texture"
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:SoilHorizon"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:SoilLayer"
 				},
 				"carbon": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#chemistry-carbon"
+						"$ref": "./properties.json#/$defs/carbon"
 					}
 				},
 				"carbonateEffervescence": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#chemistry-carbonate-effervescence"
+						"$ref": "./properties.json#/$defs/carbonateEffervescence"
 					}
 				},
 				"colour": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#colour-soil"
+						"$ref": "./properties.json#/$defs/colour/$defs/soil"
 					}
 				},
 				"density": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#density"
+						"$ref": "./properties.json#/$defs/density"
 					}
 				},
 				"depthLower": {
-					"$ref": "./properties.json#depth-lower"
+					"$ref": "./properties.json#/$defs/depthLower"
 				},
 				"depthUpper": {
-					"$ref": "./properties.json#depth-upper"
-				},
-				"designation": {
-					"$ref": "./properties.json#designation"
-				},
-				"distinctness": {
-					"$ref": "./properties.json#distinctness-boundary"
+					"$ref": "./properties.json#/$defs/depthUpper"
 				},
 				"coarseFragments": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#coarseFragments"
+						"$ref": "./properties.json#/$defs/coarseFragments"
 					}
 				},
 				"cracks": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#cracks"
+						"$ref": "./properties.json#/$defs/cracks"
 					}
 				},
 				"cutans": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#cutans"
+						"$ref": "./properties.json#/$defs/cutans"
 					}
 				},
 				"mottles": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#mottles"
+						"$ref": "./properties.json#/$defs/mottles"
 					}
 				},
 				"pans": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#pans"
+						"$ref": "./properties.json#/$defs/pans"
 					}
 				},
 				"pores": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#pores"
+						"$ref": "./properties.json#/$defs/pores"
 					}
 				},
 				"roots": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#roots"
+						"$ref": "./properties.json#/$defs/roots"
 					}
 				},
 				"segregations": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#segregations"
+						"$ref": "./properties.json#/$defs/segregations"
 					}
 				},
 				"pH": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#chemistry-ph"
-					}
-				},
-				"physical": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#physical"
-					}
-				},
-				"plasticity": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#degree-consistence-plasticity"
+						"$ref": "./properties.json#/$defs/pH"
 					}
 				},
 				"relatedSample": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#relatedSample-link"
+						"$ref": "./properties.json#/$defs/relatedSample"
 					}
 				},
-				"shape": {
-					"$ref": "./properties.json#shape-boundary"
+				"consistence": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/consistence"
+					}
 				},
-				"strength": {
-					"$ref": "./properties.json#strength-soil"
-				},
-				"structure": {
-					"$ref": "./properties.json#structure"
+				"structures": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/structures"
+					}
 				},
 				"texture": {
-					"$ref": "./properties.json#texture-soil"
+					"$ref": "./properties.json#/$defs/texture/$defs/soil"
 				},
 				"waterRepellence": {
-					"$ref": "./properties.json#waterRepellence"
+					"$ref": "./properties.json#/$defs/waterRepellence"
 				}
 			},
 			"additionalProperties": false
@@ -461,23 +599,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilSurface"
 				},
 				"conditionWhenDry": {
-					"$ref": "./properties.json#condition-when-dry"
+					"$ref": "./properties.json#/$defs/conditionWhenDry"
 				},
 				"coarseFragments": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#coarseFragments"
+						"$ref": "./properties.json#/$defs/coarseFragments"
 					}
 				},
 				"waterRepellence": {
-					"$ref": "./properties.json#waterRepellence"
+					"$ref": "./properties.json#/$defs/waterRepellence"
 				}
 			},
 			"additionalProperties": false
@@ -495,62 +633,62 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Substrate"
 				},
 				"alteration": {
-					"$ref": "./properties.json#alteration"
+					"$ref": "./properties.json#/$defs/alteration"
 				},
 				"ansisType": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#ansis-type-substrate"
+						"$ref": "./properties.json#/$defs/ansisType/$defs/substrate"
 					}
 				},
 				"confidence": {
-					"$ref": "./properties.json#confidence"
+					"$ref": "./properties.json#/$defs/confidence"
 				},
 				"depth": {
-					"$ref": "./properties.json#depth-quantity"
+					"$ref": "./properties.json#/$defs/depth-quantity"
 				},
 				"distance": {
-					"$ref": "./properties.json#distance"
+					"$ref": "./properties.json#/$defs/distance"
 				},
 				"geneticType": {
-					"$ref": "./properties.json#geneticType"
+					"$ref": "./properties.json#/$defs/geneticType"
 				},
 				"grainSize": {
-					"$ref": "./properties.json#grain-size"
+					"$ref": "./properties.json#/$defs/grainSize"
 				},
 				"lithology": {
-					"$ref": "./properties.json#lithology"
+					"$ref": "./properties.json#/$defs/lithology"
 				},
 				"porosity": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#porosity"
+						"$ref": "./properties.json#/$defs/porosity"
 					}
 				},
 				"relatedSample": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#relatedSample-link"
+						"$ref": "./properties.json#/$defs/relatedSample"
 					}
 				},
 				"spacing": {
-					"$ref": "./properties.json#spacing-substrate-discontinuity"
+					"$ref": "./properties.json#/$defs/spacing/$defs/substrate_discontinuity"
 				},
 				"materialStrength": {
-					"$ref": "./properties.json#strength-material"
+					"$ref": "./properties.json#/$defs/strength/$defs/material"
 				},
 				"texture": {
-					"$ref": "./properties.json#texture-substrate"
+					"$ref": "./properties.json#/$defs/texture/$defs/substrate"
 				},
 				"usedProcedure": {
-					"$ref": "./sosa.json#usedProcedure-ProfileConstruction"
+					"$ref": "./sosa.json#/$defs/usedProcedure/$defs/Concept"
 				}
 			},
 			"additionalProperties": false
@@ -571,40 +709,40 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilSample"
 				},
 				"component": {
 					"$comment": "No defintion of component type beyond 'owl:Class'."
 				},
 				"depthLower": {
-					"$ref": "./properties.json#depth-lower"
+					"$ref": "./properties.json#/$defs/depthLower"
 				},
 				"depthUpper": {
-					"$ref": "./properties.json#depth-upper"
+					"$ref": "./properties.json#/$defs/depthUpper"
 				},
 				"sampleOf": {
 					"type": "array",
 					"items": {
-						"$ref": "./sosa.json#sampleOf"
+						"$ref": "./sosa.json#/$defs/sampleOf"
 					}
 				},
 				"scopedIdentifier": {
 					"type": "array",
 					"items": {
-						"$ref": "./base.json#scopedIdentifier"
+						"$ref": "./base.json#/$defs/scopedIdentifier"
 					}
 				}
 			},
 			"additionalProperties": false
 		},
-		"CoarseFragments": {
-			"$anchor": "CoarseFragments",
+		"CoarseFragment": {
+			"$anchor": "CoarseFragment",
 			"@id": "ansis:CoarseFragments",
-			"title": "ANSIS Coarse Fragments",
+			"title": "ANSIS Coarse Fragment",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -616,38 +754,37 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:CoarseFragments"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:CoarseFragment"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-coarse-fragments"
+					"$ref": "./properties.json#/$defs/abundance/$defs/coarseFragments"
 				},
 				"distribution": {
-					"$ref": "./properties.json#distribution"
+					"$ref": "./properties.json#/$defs/distribution"
 				},
 				"lithology": {
-					"$ref": "./properties.json#lithology-coarse-fragments"
+					"$ref": "./properties.json#/$defs/lithology/$defs/coarseFragments"
 				},
 				"shape": {
-					"$ref": "./properties.json#shape-coarse-fragments"
+					"$ref": "./properties.json#/$defs/shape/$defs/coarseFragments"
 				},
 				"size": {
-					"$ref": "./properties.json#size-coarse-fragments"
+					"$ref": "./properties.json#/$defs/size/$defs/coarseFragments"
 				},
 				"strength": {
-					"$ref": "./properties.json#strength-material"
+					"$ref": "./properties.json#/$defs/strength/$defs/material"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Cracks": {
-			"$anchor": "Cracks",
+		"Crack": {
+			"$anchor": "Crack",
 			"@id": "ansis:Cracks",
-			"title": "ANSIS Cracks",
-			"description": "Undefined.",
+			"title": "ANSIS Crack",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -658,22 +795,22 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Cracks"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Crack"
 				},
 				"width": {
-					"$ref": "./properties.json#width-cracks"
+					"$ref": "./properties.json#/$defs/width/$defs/cracks"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Cutans": {
-			"$anchor": "Cutans",
+		"Cutan": {
+			"$anchor": "Cutan",
 			"@id": "ansis:Cutans",
-			"title": "ANSIS Cutans",
+			"title": "ANSIS Cutan",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -685,20 +822,20 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Cutans"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Cutan"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-cutans"
+					"$ref": "./properties.json#/$defs/abundance/$defs/cutans"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-cutans"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/cutan"
 				},
 				"distinctness": {
-					"$ref": "./properties.json#distinctness-cutans"
+					"$ref": "./properties.json#/$defs/distinctness/$defs/cutans"
 				}
 			},
 			"additionalProperties": false
@@ -718,23 +855,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Erosion"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-erosion"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/erosion"
 				},
 				"degree": {
-					"$ref": "./properties.json#degree-erosion"
+					"$ref": "./properties.json#/$defs/degree/$defs/erosion"
 				},
 				"depthGully": {
-					"$ref": "./properties.json#depth-gully-concept"
+					"$ref": "./properties.json#/$defs/depthGully/$defs/concept"
 				},
 				"state": {
-					"$ref": "./properties.json#state"
+					"$ref": "./properties.json#/$defs/state"
 				}
 			},
 			"additionalProperties": false
@@ -754,23 +891,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Inundation"
 				},
 				"depth": {
-					"$ref": "./properties.json#depth-inundation"
+					"$ref": "./properties.json#/$defs/depth-inundation"
 				},
 				"duration": {
-					"$ref": "./properties.json#duration-inundation"
+					"$ref": "./properties.json#/$defs/duration/$defs/inundation"
 				},
 				"frequency": {
-					"$ref": "./properties.json#frequency-inundation"
+					"$ref": "./properties.json#/$defs/frequency/$defs/inundation"
 				},
 				"velocity": {
-					"$ref": "./properties.json#velocity"
+					"$ref": "./properties.json#/$defs/velocity"
 				}
 			},
 			"additionalProperties": false
@@ -790,71 +927,71 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:LandSurface"
 				},
 				"aggradation": {
-					"$ref": "./properties.json#aggradation"
+					"$ref": "./properties.json#/$defs/aggradation"
 				},
 				"aspect": {
-					"$ref": "./properties.json#aspect"
-				},
-				"elevation": {
-					"$ref": "./properties.json#elevation"
+					"$ref": "./properties.json#/$defs/aspect"
 				},
 				"coarseFragments": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#coarseFragments"
+						"$ref": "./properties.json#/$defs/coarseFragments"
 					}
+				},
+				"elevation": {
+					"$ref": "./properties.json#/$defs/elevation"
 				},
 				"erosion": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#erosion"
+						"$ref": "./properties.json#/$defs/erosion"
 					}
+				},
+				"heightDrainage": {
+					"$ref": "./properties.json#/$defs/heightDrainage"
 				},
 				"inundation": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#inundation"
-					}
-				},
-				"outcrop": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#outcrop"
+						"$ref": "./properties.json#/$defs/inundation"
 					}
 				},
 				"microrelief_biotic": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#microrelief-biotic"
+						"$ref": "./properties.json#/$defs/microrelief_biotic"
 					}
 				},
 				"microrelief_gilgai": {
-					"$ref": "./properties.json#microrelief-gilgai"
+					"$ref": "./properties.json#/$defs/microrelief_gilgai"
 				},
 				"microrelief_hummocky": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#microrelief-hummocky"
+						"$ref": "./properties.json#/$defs/microrelief_hummocky"
 					}
 				},
 				"microrelief_other": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#microrelief-other"
+						"$ref": "./properties.json#/$defs/microrelief_other"
 					}
 				},
-				"heightDrainage": {
-					"$ref": "./properties.json#height-drainage"
+				"outcrop": {
+					"type": "array",
+					"items": {
+						"$ref": "./properties.json#/$defs/outcrop"
+					}
 				},
 				"runoff": {
-					"$ref": "./properties.json#runoff"
+					"$ref": "./properties.json#/$defs/runoff"
 				}
 			},
 			"additionalProperties": false
@@ -874,22 +1011,22 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Landform"
 				},
 				"landformElement": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landformElement"
+						"$ref": "./properties.json#/$defs/landformElement"
 					}
 				},
 				"landformPattern": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landformPattern"
+						"$ref": "./properties.json#/$defs/landformPattern"
 					}
 				}
 			},
@@ -911,49 +1048,49 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:LandformElement"
 				},
 				"agent": {
-					"$ref": "./properties.json#agent-geomorphology"
+					"$ref": "./properties.json#/$defs/agent/$defs/geomorphology"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-landform-element-name"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/landformElement"
 				},
 				"geomorphologyMode": {
-					"$ref": "./properties.json#geomorphology-mode"
+					"$ref": "./properties.json#/$defs/geomorphologyMode"
 				},
 				"height": {
-					"$ref": "./properties.json#height"
+					"$ref": "./properties.json#/$defs/height"
 				},
 				"length": {
-					"$ref": "./properties.json#length"
+					"$ref": "./properties.json#/$defs/length"
 				},
 				"morphologicalType": {
-					"$ref": "./properties.json#morphological-type"
+					"$ref": "./properties.json#/$defs/morphologicalType"
 				},
 				"relativeInclination": {
-					"$ref": "./properties.json#relative-inclination"
+					"$ref": "./properties.json#/$defs/relativeInclination"
 				},
 				"slope": {
 					"type": "array",
 					"items": {
 						"oneOf": [
 							{
-								"$ref": "./properties.json#slope-class"
+								"$ref": "./properties.json#/$defs/slope/$defs/class"
 							},
 							{
-								"$ref": "./properties.json#slope-quantity"
+								"$ref": "./properties.json#/$defs/slope/$defs/quantity"
 							}
 						]
 					},
 					"maxItems": 2
 				},
 				"width": {
-					"$ref": "./properties.json#width-quantity"
+					"$ref": "./properties.json#/$defs/width/$defs/quantity"
 				}
 			},
 			"additionalProperties": false
@@ -974,45 +1111,45 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:LandformPattern"
 				},
 				"agent": {
-					"$ref": "./properties.json#agent-geomorphology"
+					"$ref": "./properties.json#/$defs/agent/$defs/geomorphology"
 				},
 				"ansisType": {
 					"oneOf": [
 						{
-							"$ref": "./properties.json#ansis-type-landform-pattern-name"
+							"$ref": "./properties.json#/$defs/ansisType/$defs/landformPattern"
 						},
 						{
-							"$ref": "./properties.json#ansis-type-landform-pattern-erosional"
+							"$ref": "./properties.json#/$defs/ansisType/$defs/landformPattern_erosional"
 						}
 					]
 				},
 				"geomorphologyMode": {
-					"$ref": "./properties.json#geomorphology-mode"
+					"$ref": "./properties.json#/$defs/geomorphologyMode"
 				},
 				"geomorphologyStatus": {
-					"$ref": "./properties.json#geomorphology-status"
+					"$ref": "./properties.json#/$defs/geomorphologyStatus"
 				},
 				"landformElement": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#landformElement"
+						"$ref": "./properties.json#/$defs/landformElement"
 					}
 				},
 				"streamChannel": {
-					"$ref": "./properties.json#streamChannel"
+					"$ref": "./properties.json#/$defs/streamChannel"
 				},
 				"relief": {
-					"$ref": "./properties.json#relief"
+					"$ref": "./properties.json#/$defs/relief"
 				},
 				"slope": {
-					"$ref": "./properties.json#slope-modal"
+					"$ref": "./properties.json#/$defs/slope/$defs/modal"
 				}
 			},
 			"additionalProperties": false
@@ -1032,23 +1169,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Microrelief-biotic"
 				},
 				"agent": {
-					"$ref": "./properties.json#agent-microrelief-biotic"
+					"$ref": "./properties.json#/$defs/agent/$defs/microrelief_biotic"
 				},
 				"component": {
-					"$ref": "./properties.json#component-microrelief-biotic"
+					"$ref": "./properties.json#/$defs/component/$defs/microrelief_biotic"
 				},
 				"height": {
-					"$ref": "./properties.json#height"
+					"$ref": "./properties.json#/$defs/height"
 				},
 				"length": {
-					"$ref": "./properties.json#length"
+					"$ref": "./properties.json#/$defs/length"
 				}
 			},
 			"additionalProperties": false
@@ -1067,23 +1204,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Microrelief-gilgai"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-microrelief-gilgai"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/microrelief_gilgai"
 				},
 				"proportions": {
-					"$ref": "./properties.json#proportions"
+					"$ref": "./properties.json#/$defs/proportions"
 				},
 				"height": {
-					"$ref": "./properties.json#height"
+					"$ref": "./properties.json#/$defs/height"
 				},
 				"length": {
-					"$ref": "./properties.json#length"
+					"$ref": "./properties.json#/$defs/length"
 				}
 			},
 			"additionalProperties": false
@@ -1102,20 +1239,20 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Microrelief-hummocky"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-microrelief-hummocky"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/microrelief_hummocky"
 				},
 				"height": {
-					"$ref": "./properties.json#height"
+					"$ref": "./properties.json#/$defs/height"
 				},
 				"length": {
-					"$ref": "./properties.json#length"
+					"$ref": "./properties.json#/$defs/length"
 				}
 			},
 			"additionalProperties": false
@@ -1134,28 +1271,28 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Microrelief-other"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-microrelief-other"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/microrelief_other"
 				},
 				"height": {
-					"$ref": "./properties.json#height"
+					"$ref": "./properties.json#/$defs/height"
 				},
 				"length": {
-					"$ref": "./properties.json#length"
+					"$ref": "./properties.json#/$defs/length"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Mottles": {
-			"$anchor": "Mottles",
+		"Mottle": {
+			"$anchor": "Mottle",
 			"@id": "ansis:Mottles",
-			"title": "ANSIS Mottles",
+			"title": "ANSIS Mottle",
 			"description": "Mottles and other colour patterns.",
 			"type": "object",
 			"required": [
@@ -1168,36 +1305,29 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Mottles"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Mottle"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-mottle"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/mottle"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-mottles"
+					"$ref": "./properties.json#/$defs/abundance/$defs/mottles"
 				},
 				"colour": {
-					"oneOf": [
-						{
-							"$ref": "./properties.json#colour-mottle"
-						},
-						{
-							"$ref": "./properties.json#colour-soil"
-						}
-					]
+					"$ref": "./properties.json#/$defs/colour/$defs/soil"
 				},
 				"contrast": {
-					"$ref": "./properties.json#contrast"
+					"$ref": "./properties.json#/$defs/contrast"
 				},
 				"distinctness": {
-					"$ref": "./properties.json#distinctness-mottles"
+					"$ref": "./properties.json#/$defs/distinctness/$defs/mottles"
 				},
 				"size": {
-					"$ref": "./properties.json#size-mottles"
+					"$ref": "./properties.json#/$defs/size/$defs/mottles"
 				}
 			},
 			"additionalProperties": false
@@ -1216,31 +1346,31 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Outcrop"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-rock-outcrop"
+					"$ref": "./properties.json#/$defs/abundance/$defs/outcrop"
 				},
 				"grainSize": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#grain-size"
+						"$ref": "./properties.json#/$defs/grainSize"
 					}
 				},
 				"lithology": {
-					"$ref": "./properties.json#lithology-outcrop"
+					"$ref": "./properties.json#/$defs/lithology/$defs/outcrop"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Pans": {
-			"$anchor": "Pans",
+		"Pan": {
+			"$anchor": "Pan",
 			"@id": "ansis:Pans",
-			"title": "ANSIS Pans",
+			"title": "ANSIS Pan",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1252,31 +1382,31 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Pans"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Pan"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-pans"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/pan"
 				},
 				"cementation": {
-					"$ref": "./properties.json#cementation"
+					"$ref": "./properties.json#/$defs/cementation"
 				},
 				"continuity": {
-					"$ref": "./properties.json#continuity"
+					"$ref": "./properties.json#/$defs/continuity"
 				},
 				"panStructure": {
-					"$ref": "./properties.json#panStructure"
+					"$ref": "./properties.json#/$defs/panStructure"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Pores": {
-			"$anchor": "Pores",
+		"Pore": {
+			"$anchor": "Pore",
 			"@id": "ansis:Pores",
-			"title": "ANSIS Pores",
+			"title": "ANSIS Pore",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1288,25 +1418,25 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Pores"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Pore"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-pores"
+					"$ref": "./properties.json#/$defs/abundance/$defs/pores"
 				},
 				"diameter": {
-					"$ref": "./properties.json#diameter-pores"
+					"$ref": "./properties.json#/$defs/diameter/$defs/pores"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Roots": {
-			"$anchor": "Roots",
+		"Root": {
+			"$anchor": "Root",
 			"@id": "ansis:Roots",
-			"title": "ANSIS Roots",
+			"title": "ANSIS Root",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1318,25 +1448,25 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Roots"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Root"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-roots"
+					"$ref": "./properties.json#/$defs/abundance/$defs/roots"
 				},
 				"diameter": {
-					"$ref": "./properties.json#diameter-roots"
+					"$ref": "./properties.json#/$defs/diameter/$defs/roots"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Segregations": {
-			"$anchor": "Segregations",
+		"Segregation": {
+			"$anchor": "Segregation",
 			"@id": "ansis:Segregations",
-			"title": "ANSIS Segregations",
+			"title": "ANSIS Segregation",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1348,29 +1478,29 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
-					"const": "ansis:Segregations"
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Segregation"
 				},
 				"abundance": {
-					"$ref": "./properties.json#abundance-segregations"
+					"$ref": "./properties.json#/$defs/abundance/$defs/segregations"
 				},
 				"magneticAttributes": {
-					"$ref": "./properties.json#magnetic-attributes"
+					"$ref": "./properties.json#/$defs/magneticAttributes"
 				},
 				"material": {
-					"$ref": "./properties.json#material-segregations"
+					"$ref": "./properties.json#/$defs/material/$defs/segregation"
 				},
 				"shape": {
-					"$ref": "./properties.json#shape-segregations"
+					"$ref": "./properties.json#/$defs/shape/$defs/segregations"
 				},
 				"size": {
-					"$ref": "./properties.json#size-segregations"
+					"$ref": "./properties.json#/$defs/size/$defs/segregations"
 				},
 				"strength": {
-					"$ref": "./properties.json#strength-segregations"
+					"$ref": "./properties.json#/$defs/strength/$defs/segregations"
 				}
 			},
 			"additionalProperties": false
@@ -1391,18 +1521,18 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:Classification"
 				},
 				"value": {
-					"$ref": "./properties.json#value-string",
+					"$ref": "./properties.json#/$defs/value/$defs/string",
 					"type": "string"
 				},
 				"source": {
-					"$ref": "./base.json#source"
+					"$ref": "./base.json#/$defs/source"
 				}
 			}
 		},
@@ -1423,23 +1553,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:HorizonDesignation"
 				},
 				"designationPrefix": {
-					"$ref": "./properties.json#designation-prefix"
+					"$ref": "./properties.json#/$defs/designationPrefix"
 				},
 				"designationSubdivision": {
-					"$ref": "./properties.json#designation-subdivision"
+					"$ref": "./properties.json#/$defs/designationSubdivision"
 				},
 				"designationSuffix": {
-					"$ref": "./properties.json#designation-suffix"
+					"$ref": "./properties.json#/$defs/designationSuffix"
 				},
 				"designationMaster": {
-					"$ref": "./properties.json#designation-master"
+					"$ref": "./properties.json#/$defs/designationMaster"
 				}
 			},
 			"additionalProperties": false
@@ -1460,20 +1590,20 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilColour"
 				},
 				"moistureStatus": {
-					"$ref": "./properties.json#moisture-status-colour"
+					"$ref": "./properties.json#/$defs/moistureStatus/$defs/colour"
 				},
 				"colourValue": {
-					"$ref": "./properties.json#value-string"
+					"$ref": "./properties.json#/$defs/value/$defs/string"
 				},
 				"colourModel": {
-					"$ref": "./properties.json#colour-model"
+					"$ref": "./properties.json#/$defs/colourModel"
 				}
 			},
 			"additionalProperties": false
@@ -1492,28 +1622,28 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilPlasticity"
 				},
 				"ansisType": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#ansis-type-soil-plasticity"
+						"$ref": "./properties.json#/$defs/ansisType/$defs/plasticity"
 					}
 				},
 				"degree": {
-					"$ref": "./properties.json#degree-consistence-plasticity"
+					"$ref": "./properties.json#/$defs/degree/$defs/consistence_plasticity"
 				}
 			},
 			"additionalProperties": false
 		},
-		"SoilStrength": {
-			"$anchor": "SoilStrength",
+		"Consistence": {
+			"$anchor": "Consistence",
 			"@id": "ansis:SoilStrength",
-			"title": "ANSIS Soil Strength",
+			"title": "ANSIS Consistence",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1525,17 +1655,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilStrength"
 				},
 				"moistureStatus": {
-					"$ref": "./properties.json#moisture-status-soil-water-status"
+					"$ref": "./properties.json#/$defs/moistureStatus/$defs/soil"
+				},
+				"plasticity": {
+					"$ref": "./properties.json#/$defs/plasticity"
+				},
+				"stickiness": {
+					"$ref": "./properties.json#/$defs/stickiness"
 				},
 				"strength": {
-					"$ref": "./properties.json#strength-consistence"
+					"$ref": "./properties.json#/$defs/strength/$defs/consistence"
 				}
 			},
 			"additionalProperties": false
@@ -1556,23 +1692,23 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilStructure"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#ansis-type-pedality"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/pedality"
 				},
 				"compoundPedality": {
-					"$ref": "./properties.json#compound-pedality"
+					"$ref": "./properties.json#/$defs/compoundPedality"
 				},
 				"grade": {
-					"$ref": "./properties.json#grade"
+					"$ref": "./properties.json#/$defs/grade"
 				},
 				"size": {
-					"$ref": "./properties.json#size-soil-structure"
+					"$ref": "./properties.json#/$defs/size/$defs/soilStructure"
 				}
 			},
 			"additionalProperties": false
@@ -1592,32 +1728,32 @@
 			],
 			"properties": {
 				"id": {
-					"$ref": "./base.json#id"
+					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"$ref": "./base.json#type",
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:StreamChannel"
 				},
 				"depthWidthRatio": {
-					"$ref": "./properties.json#depth-width-ratio-stream-channel"
+					"$ref": "./properties.json#/$defs/depthWidthRatio/$defs/streamChannel"
 				},
 				"development": {
-					"$ref": "./properties.json#development"
+					"$ref": "./properties.json#/$defs/development"
 				},
 				"directionality": {
-					"$ref": "./properties.json#directionality"
+					"$ref": "./properties.json#/$defs/directionality"
 				},
 				"integration": {
-					"$ref": "./properties.json#integration"
+					"$ref": "./properties.json#/$defs/integration"
 				},
 				"migrationRate": {
-					"$ref": "./properties.json#migration-rate"
+					"$ref": "./properties.json#/$defs/migrationRate"
 				},
 				"pattern": {
-					"$ref": "./properties.json#pattern"
+					"$ref": "./properties.json#/$defs/ansisPattern"
 				},
 				"spacing": {
-					"$ref": "./properties.json#spacing-channel"
+					"$ref": "./properties.json#/$defs/spacing/$defs/channel"
 				}
 			},
 			"additionalProperties": false
