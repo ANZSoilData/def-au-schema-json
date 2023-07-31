@@ -28,7 +28,7 @@
                         "result": {"$ref": "#wktLiteral"}
                     }
                 },
-                {"$ref": "./sosa.json#ObservableProperty"}
+                {"$ref": "./base.json#ObservableProperty"}
             ]
         },
         "wktLiteral": {

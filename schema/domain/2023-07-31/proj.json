@@ -3,7 +3,7 @@
 	"$id": "proj.json",
 	"title": "PROJ Entity Schema",
 	"description": "JSON Schema definitions of the PROJ Ontology entities used by ANSIS.",
-	"type": "object",
+	"type": "null",
 	"$defs": {
 		"curiPrefix": {
 			"proj": "https://linked.data.gov.au/def/project#"

@@ -7,15 +7,10 @@
 	"$comment": "Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.)",
 	"type": "object",
 	"required": [
-		"type"
 	],
-	"minProperties": 2,
+	"minProperties": 1,
 	"additionalProperties": false,
 	"properties": {
-		"type": {
-			"$ref": "./base.json#type",
-			"const": "ansis:SoilPhysicalObservations"
-		},
 		"bulkDensity": {
 			"type": "array",
 			"items": {

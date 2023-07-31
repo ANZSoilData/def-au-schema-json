@@ -3,7 +3,7 @@
     "$id": "prov.json",
     "title": "PROV Entity Schema",
     "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
-    "type": "object",
+	"type": "null",
     "$defs": {
         "curiPrefix": {
             "prov": "http://www.w3.org/ns/prov#",
