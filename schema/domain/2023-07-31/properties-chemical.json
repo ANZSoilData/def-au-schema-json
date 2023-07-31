@@ -1,7 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "properties-chemical.json",
-	"$anchor": "chemical-observations",
 	"title": "ANSIS Soil Chemical Property Schema",
 	"description": "JSON Schema definitions of the complete list of soil chemical properties defined in the ANSIS Domain Ontology.",
 	"$comment": "Derived from Soil Chemical Methods – Australasia. (The 'Green Book'.)",
@@ -170,7 +169,6 @@
 	},
 	"$defs": {
 		"ammoniumN": {
-			"$anchor": "ammoniumN",
 			"@id": "nil:template",
 			"title": "Concentration of ammonium-N",
 			"description": "Concentration of ammonium-N (NH4-N).",
@@ -216,7 +214,6 @@
 			}
 		},
 		"cationExchangeCapacity": {
-			"$anchor": "cationExchangeCapacity",
 			"@id": "nil:template",
 			"title": "cation exchange capacity",
 			"description": "Cation exchange capacity (CEC).",
@@ -278,7 +275,6 @@
 			}
 		},
 		"effectiveCationExchangeCapacity": {
-			"$anchor": "effectiveCationExchangeCapacity",
 			"@id": "nil:template",
 			"title": "effective cation exchange capacity",
 			"description": "Effective cation exchange capacity (ECEC).",
@@ -324,7 +320,6 @@
 			}
 		},
 		"electricalConductivity": {
-			"$anchor": "electricalConductivity",
 			"@id": "nil:template",
 			"title": "electrical conductivity",
 			"description": "Electrical conductivity (EC).",
@@ -371,7 +366,6 @@
 			}
 		},
 		"exchangableAluminium": {
-			"$anchor": "exchangableAluminium",
 			"@id": "nil:template",
 			"title": "Concentration of exchangable Aluminium",
 			"description": "Concentration of exchangable Aluminium (Al3+).",
@@ -417,7 +411,6 @@
 			}
 		},
 		"exchangableCalcium": {
-			"$anchor": "exchangableCalcium",
 			"@id": "nil:template",
 			"title": "Concentration of exchangable Calcium",
 			"description": "Concentration of exchangable Calcium (Ca2+).",
@@ -451,7 +444,21 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15C2","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+						"scm:15A1",
+						"scm:15A2",
+						"scm:15A3",
+						"scm:15B1",
+						"scm:15B2",
+						"scm:15B3",
+						"scm:15C1",
+						"scm:15C2",
+						"scm:15D1",
+						"scm:15D2",
+						"scm:15D3",
+						"scm:15E1",
+						"scm:15E2",
+						"scm:15E3",
+						"scm:15F1"
 					]
 				},
 				"resultTime": {
@@ -463,7 +470,6 @@
 			}
 		},
 		"exchangableMagnesium": {
-			"$anchor": "exchangableMagnesium",
 			"@id": "nil:template",
 			"title": "Concentration of exchangable Magnesium",
 			"description": "Concentration of exchangable Magnesium (Mg2+).",
@@ -497,7 +503,21 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15C2","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+						"scm:15A1",
+						"scm:15A2",
+						"scm:15A3",
+						"scm:15B1",
+						"scm:15B2",
+						"scm:15B3",
+						"scm:15C1",
+						"scm:15C2",
+						"scm:15D1",
+						"scm:15D2",
+						"scm:15D3",
+						"scm:15E1",
+						"scm:15E2",
+						"scm:15E3",
+						"scm:15F1"
 					]
 				},
 				"resultTime": {
@@ -509,7 +529,6 @@
 			}
 		},
 		"exchangablePotassium": {
-			"$anchor": "exchangablePotassium",
 			"@id": "nil:template",
 			"title": "Concentration of exchangable Potassium",
 			"description": "Concentration of exchangable Potassium (K+).",
@@ -543,7 +562,20 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+						"scm:15A1",
+						"scm:15A2",
+						"scm:15A3",
+						"scm:15B1",
+						"scm:15B2",
+						"scm:15B3",
+						"scm:15C1",
+						"scm:15D1",
+						"scm:15D2",
+						"scm:15D3",
+						"scm:15E1",
+						"scm:15E2",
+						"scm:15E3",
+						"scm:15F1"
 					]
 				},
 				"resultTime": {
@@ -555,7 +587,6 @@
 			}
 		},
 		"exchangableSodium": {
-			"$anchor": "exchangableSodium",
 			"@id": "nil:template",
 			"title": "Concentration of exchangable Sodium",
 			"description": "Concentration of exchangable Sodium (Na+).",
@@ -589,7 +620,20 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:15A1","scm:15A2","scm:15A3","scm:15B1","scm:15B2","scm:15B3","scm:15C1","scm:15D1","scm:15D2","scm:15D3","scm:15E1","scm:15E2","scm:15E3","scm:15F1"
+						"scm:15A1",
+						"scm:15A2",
+						"scm:15A3",
+						"scm:15B1",
+						"scm:15B2",
+						"scm:15B3",
+						"scm:15C1",
+						"scm:15D1",
+						"scm:15D2",
+						"scm:15D3",
+						"scm:15E1",
+						"scm:15E2",
+						"scm:15E3",
+						"scm:15F1"
 					]
 				},
 				"resultTime": {
@@ -601,7 +645,6 @@
 			}
 		},
 		"extractableBoron": {
-			"$anchor": "extractableBoron",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Boron",
 			"description": "Concentration of extractable Boron (B).",
@@ -635,7 +678,9 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:12C1","scm:12C2","scm:18F1"
+						"scm:12C1",
+						"scm:12C2",
+						"scm:18F1"
 					]
 				},
 				"resultTime": {
@@ -647,7 +692,6 @@
 			}
 		},
 		"extractableCopper": {
-			"$anchor": "extractableCopper",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Copper",
 			"description": "Concentration of extractable Copper (Cu).",
@@ -681,7 +725,10 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:12A1","scm:12B1","scm:12D1","scm:18F1"
+						"scm:12A1",
+						"scm:12B1",
+						"scm:12D1",
+						"scm:18F1"
 					]
 				},
 				"resultTime": {
@@ -693,7 +740,6 @@
 			}
 		},
 		"extractableIron": {
-			"$anchor": "extractableIron",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Iron",
 			"description": "Concentration of extractable Iron (Fe).",
@@ -728,7 +774,12 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:12A1","scm:12D1","scm:13A1","scm:13B1","scm:13C1","scm:18F1"
+						"scm:12A1",
+						"scm:12D1",
+						"scm:13A1",
+						"scm:13B1",
+						"scm:13C1",
+						"scm:18F1"
 					]
 				},
 				"resultTime": {
@@ -742,7 +793,9 @@
 				"properties": {
 					"usedProcedure": {
 						"enum": [
-							"scm:12A1","scm:12D1","scm:18F1"
+							"scm:12A1",
+							"scm:12D1",
+							"scm:18F1"
 						]
 					}
 				}
@@ -771,7 +824,6 @@
 			}
 		},
 		"extractablePhosphorus": {
-			"$anchor": "extractablePhosphorus",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Phosphorus",
 			"description": "Concentration of extractable Phosphorus (P).",
@@ -807,7 +859,23 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:18F1","scm:18F2","scm:9A3a","scm:9A3b","scm:9B1","scm:9B2","scm:9C1","scm:9C2","scm:9C2a","scm:9C2b","scm:9D1","scm:9E1","scm:9E2","scm:9F1","scm:9F2","scm:9G1","scm:9G2"
+						"scm:18F1",
+						"scm:18F2",
+						"scm:9A3a",
+						"scm:9A3b",
+						"scm:9B1",
+						"scm:9B2",
+						"scm:9C1",
+						"scm:9C2",
+						"scm:9C2a",
+						"scm:9C2b",
+						"scm:9D1",
+						"scm:9E1",
+						"scm:9E2",
+						"scm:9F1",
+						"scm:9F2",
+						"scm:9G1",
+						"scm:9G2"
 					]
 				},
 				"resultTime": {
@@ -823,7 +891,8 @@
 						"properties": {
 							"usedProcedure": {
 								"enum": [
-									"scm:9A3a","scm:9A3b"
+									"scm:9A3a",
+									"scm:9A3b"
 								]
 							}
 						}
@@ -845,7 +914,8 @@
 						"properties": {
 							"usedProcedure": {
 								"enum": [
-									"scm:9F1","scm:9F2"
+									"scm:9F1",
+									"scm:9F2"
 								]
 							}
 						}
@@ -867,7 +937,19 @@
 						"properties": {
 							"usedProcedure": {
 								"enum": [
-									"scm:18F1","scm:18F2","scm:9B1","scm:9B2","scm:9C1","scm:9C2","scm:9C2a","scm:9C2b","scm:9D1","scm:9E1","scm:9E2","scm:9G1","scm:9G2"
+									"scm:18F1",
+									"scm:18F2",
+									"scm:9B1",
+									"scm:9B2",
+									"scm:9C1",
+									"scm:9C2",
+									"scm:9C2a",
+									"scm:9C2b",
+									"scm:9D1",
+									"scm:9E1",
+									"scm:9E2",
+									"scm:9G1",
+									"scm:9G2"
 								]
 							}
 						}
@@ -887,7 +969,6 @@
 			]
 		},
 		"extractablePotassium": {
-			"$anchor": "extractablePotassium",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Potassium",
 			"description": "Concentration of extractable Potassium (K+).",
@@ -922,7 +1003,10 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:18A1","scm:18B1","scm:18C1","scm:18F1"
+						"scm:18A1",
+						"scm:18B1",
+						"scm:18C1",
+						"scm:18F1"
 					]
 				},
 				"resultTime": {
@@ -968,7 +1052,6 @@
 			}
 		},
 		"extractableSulfur": {
-			"$anchor": "extractableSulfur",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Sulfur",
 			"description": "Concentration of extractable Sulfur (S).",
@@ -1002,7 +1085,13 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:10B1","scm:10B2","scm:10B3","scm:10B4","scm:10C1","scm:10D1","scm:18F1"
+						"scm:10B1",
+						"scm:10B2",
+						"scm:10B3",
+						"scm:10B4",
+						"scm:10C1",
+						"scm:10D1",
+						"scm:18F1"
 					]
 				},
 				"resultTime": {
@@ -1014,7 +1103,6 @@
 			}
 		},
 		"extractableZinc": {
-			"$anchor": "extractableZinc",
 			"@id": "nil:template",
 			"title": "Concentration of extractable Zinc",
 			"description": "Concentration of extractable Zinc (Zn).",
@@ -1048,7 +1136,10 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:12A1","scm:12B1","scm:12D1","scm:18F1"
+						"scm:12A1",
+						"scm:12B1",
+						"scm:12D1",
+						"scm:18F1"
 					]
 				},
 				"resultTime": {
@@ -1060,7 +1151,6 @@
 			}
 		},
 		"nitrateN": {
-			"$anchor": "nitrateN",
 			"@id": "nil:template",
 			"title": "Concentration of nitrate-N",
 			"description": "Concentration of nitrate-N (NO3-N).",
@@ -1094,7 +1184,8 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:7C1e","scm:7C1f"
+						"scm:7C1e",
+						"scm:7C1f"
 					]
 				},
 				"resultTime": {
@@ -1106,7 +1197,6 @@
 			}
 		},
 		"nitriteN": {
-			"$anchor": "nitriteN",
 			"@id": "nil:template",
 			"title": "Concentration of nitrite-N",
 			"description": "Concentration of nitrite-N (NO2-N).",
@@ -1152,7 +1242,6 @@
 			}
 		},
 		"organicCarbon": {
-			"$anchor": "organicCarbon",
 			"@id": "nil:template",
 			"title": "concentration of organic carbon",
 			"description": "Concentration of organic carbon.",
@@ -1199,7 +1288,6 @@
 			}
 		},
 		"pBufferIndex": {
-			"$anchor": "pBufferIndex",
 			"@id": "nil:template",
 			"title": "P buffer index",
 			"description": "P buffer index (PBI)",
@@ -1233,7 +1321,16 @@
 				},
 				"usedProcedure": {
 					"enum": [
-						"scm:9I2a","scm:9I2b","scm:9I2c","scm:9I3a","scm:9I3b","scm:9I3c","scm:9I4a","scm:9I4b","scm:9I4c"					]
+						"scm:9I2a",
+						"scm:9I2b",
+						"scm:9I2c",
+						"scm:9I3a",
+						"scm:9I3b",
+						"scm:9I3c",
+						"scm:9I4a",
+						"scm:9I4b",
+						"scm:9I4c"
+					]
 				},
 				"resultTime": {
 					"$ref": "./sosa.json#/$defs/resultTime"
@@ -1244,7 +1341,6 @@
 			}
 		},
 		"pH": {
-			"$anchor": "pH",
 			"@id": "nil:template",
 			"title": "pH",
 			"description": "pH.",
@@ -1337,7 +1433,6 @@
 			}
 		},
 		"totalNitrogen": {
-			"$anchor": "totalNitrogen",
 			"@id": "nil:template",
 			"title": "concentration of total nitrogen",
 			"description": "Concentration of total Nitrogen.",
@@ -1391,7 +1486,6 @@
 			}
 		},
 		"totalOrganicCarbon": {
-			"$anchor": "totalOrganicCarbon",
 			"@id": "nil:template",
 			"title": "concentration of total organic carbon",
 			"description": "Concentration of total Organic Carbon .",
@@ -1443,7 +1537,6 @@
 			}
 		},
 		"totalPhosphorus": {
-			"$anchor": "totalPhosphorus",
 			"@id": "nil:template",
 			"title": "concentration of total phosphorus",
 			"description": "Concentration of total Phosphorus (P).",
@@ -1490,7 +1583,6 @@
 			}
 		},
 		"totalPotassium": {
-			"$anchor": "totalPotassium",
 			"@id": "nil:template",
 			"title": "concentration of total potassium",
 			"description": "Concentration of total Potassium (K).",
@@ -1538,7 +1630,6 @@
 			}
 		},
 		"ratioTotalOrganicCarbonToTotalSoilNitrogen": {
-			"$anchor": "ratioTotalOrganicCarbonToTotalSoilNitrogen",
 			"@id": "nil:template",
 			"title": "concentration ratio of total organic carbon to total soil nitrogen",
 			"description": "Concentration ratio of total organic carbon (TOC) to total soil nitrogen (TSN).",

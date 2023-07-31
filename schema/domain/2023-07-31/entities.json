@@ -10,7 +10,6 @@
 			"ansis": "https://anzsoil.org/def/au/domain/"
 		},
 		"Site": {
-			"$anchor": "Site",
 			"@id": [
 				"ansis:LandsurveySite",
 				"ansis:SoilSite"
@@ -38,7 +37,9 @@
 						{
 							"type": "array",
 							"items": {
-								"enum": ["ansis:LandsurveySite"]
+								"enum": [
+									"ansis:LandsurveySite"
+								]
 							},
 							"minItems": 1,
 							"maxItems": 1
@@ -46,7 +47,10 @@
 						{
 							"type": "array",
 							"items": {
-								"enum": ["ansis:LandsurveySite","ansis:SoilSite"]
+								"enum": [
+									"ansis:LandsurveySite",
+									"ansis:SoilSite"
+								]
 							},
 							"minItems": 2,
 							"maxItems": 2,
@@ -139,7 +143,6 @@
 			"additionalProperties": false
 		},
 		"SiteVisit": {
-			"$anchor": "SiteVisit",
 			"@id": "ansis:SiteVisit",
 			"title": "ANSIS Site Visit",
 			"description": "A visit to a designated site, for the purpose of taking samples, making observations, and other activities.",
@@ -201,7 +204,6 @@
 			"additionalProperties": false
 		},
 		"SoilProfile": {
-			"$anchor": "SoilProfile",
 			"@id": "ansis:SoilProfile",
 			"title": "ANSIS Soil Profile",
 			"description": "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material.",
@@ -293,7 +295,6 @@
 			"additionalProperties": false
 		},
 		"SoilHorizon": {
-			"$anchor": "SoilHorizon",
 			"@id": "ansis:SoilHorizon",
 			"title": "ANSIS Soil Horizon",
 			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
@@ -444,7 +445,6 @@
 			"additionalProperties": false
 		},
 		"SoilLayer": {
-			"$anchor": "SoilLayer",
 			"@id": "ansis:SoilLayer",
 			"title": "ANSIS Soil Layer",
 			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
@@ -586,7 +586,6 @@
 			"additionalProperties": false
 		},
 		"SoilSurface": {
-			"$anchor": "SoilSurface",
 			"@id": "ansis:SoilSurface",
 			"title": "ANSIS Soil Surface",
 			"description": "The surface of the soil body or profile.",
@@ -621,7 +620,6 @@
 			"additionalProperties": false
 		},
 		"Substrate": {
-			"$anchor": "Substrate",
 			"@id": "ansis:Substrate",
 			"title": "ANSIS Substrate",
 			"description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
@@ -694,7 +692,6 @@
 			"additionalProperties": false
 		},
 		"SoilSample": {
-			"$anchor": "SoilSample",
 			"@id": "ansis:SoilSample",
 			"title": "ANSIS Soil Sample",
 			"description": "Sample of soil or soil entity. Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: - `sosa:isSampleOf` to indicate the entity that this sample represents; - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles; - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location); - `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken.",
@@ -740,7 +737,6 @@
 			"additionalProperties": false
 		},
 		"CoarseFragment": {
-			"$anchor": "CoarseFragment",
 			"@id": "ansis:CoarseFragments",
 			"title": "ANSIS Coarse Fragment",
 			"description": "Undefined.",
@@ -782,7 +778,6 @@
 			"additionalProperties": false
 		},
 		"Crack": {
-			"$anchor": "Crack",
 			"@id": "ansis:Cracks",
 			"title": "ANSIS Crack",
 			"description": "Undefined.",
@@ -808,7 +803,6 @@
 			"additionalProperties": false
 		},
 		"Cutan": {
-			"$anchor": "Cutan",
 			"@id": "ansis:Cutans",
 			"title": "ANSIS Cutan",
 			"description": "Undefined.",
@@ -841,7 +835,6 @@
 			"additionalProperties": false
 		},
 		"Erosion": {
-			"$anchor": "Erosion",
 			"@id": "ansis:Erosion",
 			"title": "ANSIS Erosion",
 			"description": "Undefined.",
@@ -877,7 +870,6 @@
 			"additionalProperties": false
 		},
 		"Inundation": {
-			"$anchor": "Inundation",
 			"@id": "ansis:Inundation",
 			"title": "ANSIS Inundation",
 			"description": "Undefined.",
@@ -913,7 +905,6 @@
 			"additionalProperties": false
 		},
 		"LandSurface": {
-			"$anchor": "LandSurface",
 			"@id": "ansis:LandSurface",
 			"title": "ANSIS Land Surface",
 			"description": "Surface landscape features of a site.",
@@ -997,7 +988,6 @@
 			"additionalProperties": false
 		},
 		"Landform": {
-			"$anchor": "Landform",
 			"@id": "ansis:Landform",
 			"title": "ANSIS Landform",
 			"description": "Landscape features within which the site is located",
@@ -1033,7 +1023,6 @@
 			"additionalProperties": false
 		},
 		"LandformElement": {
-			"$anchor": "LandformElement",
 			"@id": "ansis:LandformElement",
 			"title": "ANSIS Landform Element",
 			"description": "Landform element (~40m).",
@@ -1096,7 +1085,6 @@
 			"additionalProperties": false
 		},
 		"LandformPattern": {
-			"$anchor": "LandformPattern",
 			"@id": "ansis:LandformPattern",
 			"title": "ANSIS Landform Pattern",
 			"description": "Undefined.",
@@ -1155,7 +1143,6 @@
 			"additionalProperties": false
 		},
 		"Microrelief_biotic": {
-			"$anchor": "Microrelief_biotic",
 			"@id": "ansis:Microrelief-biotic",
 			"title": "ANSIS Microrelief - Biotic",
 			"description": "Undefined.",
@@ -1191,7 +1178,6 @@
 			"additionalProperties": false
 		},
 		"Microrelief_gilgai": {
-			"$anchor": "Microrelief_gilgai",
 			"@id": "ansis:Microrelief-gilgai",
 			"title": "ANSIS Microrelief - Gilgai",
 			"description": "Undefined.",
@@ -1226,7 +1212,6 @@
 			"additionalProperties": false
 		},
 		"Microrelief_hummocky": {
-			"$anchor": "Microrelief_hummocky",
 			"@id": "ansis:Microrelief-hummocky",
 			"title": "ANSIS Microrelief - Hummocky",
 			"description": "Undefined.",
@@ -1258,7 +1243,6 @@
 			"additionalProperties": false
 		},
 		"Microrelief_other": {
-			"$anchor": "Microrelief_other",
 			"@id": "ansis:Microrelief-other",
 			"title": "ANSIS Microrelief - Other",
 			"description": "Undefined.",
@@ -1290,7 +1274,6 @@
 			"additionalProperties": false
 		},
 		"Mottle": {
-			"$anchor": "Mottle",
 			"@id": "ansis:Mottles",
 			"title": "ANSIS Mottle",
 			"description": "Mottles and other colour patterns.",
@@ -1333,7 +1316,6 @@
 			"additionalProperties": false
 		},
 		"Outcrop": {
-			"$anchor": "Outcrop",
 			"@id": "ansis:Outcrop",
 			"title": "ANSIS Outcrop",
 			"description": "Rock outcrop.",
@@ -1368,7 +1350,6 @@
 			"additionalProperties": false
 		},
 		"Pan": {
-			"$anchor": "Pan",
 			"@id": "ansis:Pans",
 			"title": "ANSIS Pan",
 			"description": "Undefined.",
@@ -1404,7 +1385,6 @@
 			"additionalProperties": false
 		},
 		"Pore": {
-			"$anchor": "Pore",
 			"@id": "ansis:Pores",
 			"title": "ANSIS Pore",
 			"description": "Undefined.",
@@ -1434,7 +1414,6 @@
 			"additionalProperties": false
 		},
 		"Root": {
-			"$anchor": "Root",
 			"@id": "ansis:Roots",
 			"title": "ANSIS Root",
 			"description": "Undefined.",
@@ -1464,7 +1443,6 @@
 			"additionalProperties": false
 		},
 		"Segregation": {
-			"$anchor": "Segregation",
 			"@id": "ansis:Segregations",
 			"title": "ANSIS Segregation",
 			"description": "Undefined.",
@@ -1506,7 +1484,6 @@
 			"additionalProperties": false
 		},
 		"Classification": {
-			"$anchor": "Classification",
 			"@id": "ansis:SoilClassification",
 			"title": "ANSIS Classification",
 			"description": "The classifier for an entity - used when an ANSIS vocabulary is not available but a formal vocabulary (the `source`) does, or should, exist.",
@@ -1537,7 +1514,6 @@
 			}
 		},
 		"HorizonDesignation": {
-			"$anchor": "HorizonDesignation",
 			"@id": "ansis:HorizonDesignation",
 			"title": "ANSIS Soil Horizon Designation",
 			"description": "Soil horizon designation. ",
@@ -1575,7 +1551,6 @@
 			"additionalProperties": false
 		},
 		"SoilColour": {
-			"$anchor": "SoilColour",
 			"@id": "ansis:SoilColour",
 			"title": "ANSIS Soil Colour",
 			"description": "Undefined.",
@@ -1609,7 +1584,6 @@
 			"additionalProperties": false
 		},
 		"SoilPlasticity": {
-			"$anchor": "SoilPlasticity",
 			"@id": "ansis:SoilPlasticity",
 			"title": "ANSIS Soil Plasticity",
 			"description": "Undefined.",
@@ -1641,7 +1615,6 @@
 			"additionalProperties": false
 		},
 		"Consistence": {
-			"$anchor": "Consistence",
 			"@id": "ansis:SoilStrength",
 			"title": "ANSIS Consistence",
 			"description": "Undefined.",
@@ -1677,7 +1650,6 @@
 			"additionalProperties": false
 		},
 		"SoilStructure": {
-			"$anchor": "SoilStructure",
 			"@id": "ansis:SoilStructure",
 			"title": "ANSIS Soil Structure",
 			"description": "Soil structure or pedality.",
@@ -1714,7 +1686,6 @@
 			"additionalProperties": false
 		},
 		"StreamChannel": {
-			"$anchor": "StreamChannel",
 			"@id": "ansis:StreamChannel",
 			"title": "ANSIS Stream Channel",
 			"description": "Stream channel details.",

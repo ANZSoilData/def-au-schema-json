@@ -1,73 +1,73 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "qudt.json",
-    "title": "QUDT JSON Objects",
-    "description": "Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
-    "type": "null",
-    "$defs": {
-        "curiPrefix": {
-        	"qudt": "http://qudt.org/schema/qudt/",
-            "unit": "https://qudt.org/2.1/vocab/unit/"
-        },
-        "QuantityValue": {
-            "$anchor": "QuantityValue",
-            "@id": "qudt:QuantityValue",
-            "title": "QUDT QuantityValue",
-            "description": "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit.",
-            "type": "object",
-            "required": [
-                "value",
-                "unit"
-            ],
-            "properties": {
-                "value": {"$ref": "#/$defs/value"},
-                "unit": {"$ref": "#/$defs/unit"}
-            }
-        },
-        "value": {
-            "$anchor": "value",
-            "@id": "qudt:value",
-            "range@type": [
-                "xs:decimal",
-                "xs:integer"
-            ],
-            "title": "Value",
-            "description": "The numerical value.",
-            "type": "number"
-        },
-        "unit": {
-            "$anchor": "unit",
-            "@id": "qudt:unit",
-            "range@type": "xs:anyURI",
-            "title": "Unit",
-            "description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
-            "$comment": "Restricted to the QUDT vocabulary as a compact URI.",
-            "type": "string",
-            "format": "iri",
-            "pattern": "^unit:.*$"
-        },
-        "vocabUnit": {
-            "$anchor": "vocab-unit",
-            "@id": "https://qudt.org/2.1/vocab/unit",
-            "title": "Unit",
-            "description": "Units of measure as defined by QUDT.",
-            "$comment": "A JSON Schema labelled enumeration.",
-            "type": "string",
-            "format": "iri",
-            "oneOf": [
-                {
-                    "const": "unit:DEG",
-                    "description": "degree (angle)"
-                },
-                {
-                    "const": "unit:M",
-                    "description": "meter"
-                },
-                {
-                    "const": "unit:PERCENT",
-                    "description": "percent"
-                }
-            ]
-        }
-    }
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "qudt.json",
+	"title": "QUDT JSON Objects",
+	"description": "Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
+	"type": "null",
+	"$defs": {
+		"curiPrefix": {
+			"qudt": "http://qudt.org/schema/qudt/",
+			"unit": "https://qudt.org/2.1/vocab/unit/"
+		},
+		"QuantityValue": {
+			"@id": "qudt:QuantityValue",
+			"title": "QUDT QuantityValue",
+			"description": "A Quantity Value expresses the magnitude and kind of a quantity and is given by the product of a numerical value n and a unit of measure U. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit.",
+			"type": "object",
+			"required": [
+				"value",
+				"unit"
+			],
+			"properties": {
+				"value": {
+					"$ref": "#/$defs/value"
+				},
+				"unit": {
+					"$ref": "#/$defs/unit"
+				}
+			}
+		},
+		"value": {
+			"@id": "qudt:value",
+			"range@type": [
+				"xs:decimal",
+				"xs:integer"
+			],
+			"title": "Value",
+			"description": "The numerical value.",
+			"type": "number"
+		},
+		"unit": {
+			"@id": "qudt:unit",
+			"range@type": "xs:anyURI",
+			"title": "Unit",
+			"description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
+			"$comment": "Restricted to the QUDT vocabulary as a compact URI.",
+			"type": "string",
+			"format": "iri",
+			"pattern": "^unit:.*$"
+		},
+		"vocabUnit": {
+			"@id": "https://qudt.org/2.1/vocab/unit",
+			"title": "Unit",
+			"description": "Units of measure as defined by QUDT.",
+			"$comment": "A JSON Schema labelled enumeration.",
+			"type": "string",
+			"format": "iri",
+			"oneOf": [
+				{
+					"const": "unit:DEG",
+					"description": "degree (angle)"
+				},
+				{
+					"const": "unit:M",
+					"description": "meter"
+				},
+				{
+					"const": "unit:PERCENT",
+					"description": "percent"
+				}
+			]
+		}
+	}
 }

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "properties-physical.json",
-	"$anchor": "physical-observations",
+	
 	"title": "ANSIS Soil Physical Property Schema",
 	"description": "JSON Schema definitions of the complete list of soil physical properties defined in the ANSIS Domain Ontology.",
 	"$comment": "Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.)",
@@ -56,7 +56,7 @@
 	},
 	"$defs": {
 		"bulkDensity": {
-			"$anchor": "bulkDensity",
+			
 			"@id": "nil:template",
 			"title": "bulk density",
 			"description": "Bulk density.",
@@ -102,7 +102,7 @@
 			}
 		},
 		"coarseFragmentContent": {
-			"$anchor": "coarseFragmentContent",
+			
 			"@id": "nil:template",
 			"title": "coarse fragment content",
 			"description": " Volumetric coarse fragment content.",
@@ -149,7 +149,7 @@
 			}
 		},
 		"coarseFragments": {
-			"$anchor": "coarseFragments",
+			
 			"@id": "nil:template",
 			"title": "volume of coarse fragments",
 			"description": "Volume of coarse fragments",
@@ -196,7 +196,7 @@
 			}
 		},
 		"dispersion": {
-			"$anchor": "dispersion",
+			
 			"@id": "nil:template",
 			"title": "dispersion",
 			"description": "Dispersion.",
@@ -227,7 +227,7 @@
 			}
 		},
 		"clay": {
-			"$anchor": "clay",
+			
 			"@id": "nil:template",
 			"title": "proportion of clay",
 			"description": "Proportion of clay - particle sizes < 0.002 mm.",
@@ -273,7 +273,7 @@
 			}
 		},
 		"sand": {
-			"$anchor": "sand",
+			
 			"@id": "nil:template",
 			"title": "proportion of sand",
 			"description": "Proportion of sand - particle sizes < 0.2 mm.",
@@ -319,7 +319,7 @@
 			}
 		},
 		"silt": {
-			"$anchor": "silt",
+			
 			"@id": "nil:template",
 			"title": "proportion of silt",
 			"description": "Proportion of silt - particle sizes < 0.02 mm.",

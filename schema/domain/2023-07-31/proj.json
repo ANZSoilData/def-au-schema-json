@@ -9,7 +9,6 @@
 			"proj": "https://linked.data.gov.au/def/project#"
 		},
 		"Project": {
-			"$anchor": "Project",
 			"@id": "proj:Project",
 			"title": "PROJ Project",
 			"description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
