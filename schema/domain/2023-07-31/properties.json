@@ -42,7 +42,7 @@
 						}
 					]
 				},
-				"Cutan": {
+				"Cutans": {
 					"description": "Cutans.",
 					"type": "object",
 					"allOf": [
@@ -61,7 +61,7 @@
 						}
 					]
 				},
-				"Mottle": {
+				"Mottles": {
 					"description": "Mottles.",
 					"type": "object",
 					"allOf": [
@@ -99,7 +99,7 @@
 						}
 					]
 				},
-				"Pore": {
+				"Pores": {
 					"description": "Pores.",
 					"type": "object",
 					"allOf": [
@@ -118,7 +118,7 @@
 						}
 					]
 				},
-				"Root": {
+				"Roots": {
 					"description": "Roots.",
 					"type": "object",
 					"allOf": [
@@ -137,7 +137,7 @@
 						}
 					]
 				},
-				"Segregation": {
+				"Segregations": {
 					"description": "Segregations",
 					"type": "object",
 					"allOf": [
@@ -296,7 +296,7 @@
 			"description": "Type of ansis soil entity.",
 			"$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword.",
 			"$defs": {
-				"Cutan": {
+				"Cutans": {
 					"range@type": "skos:Concept",
 					"description": "Cutan.",
 					"$ref": "./enum.json#/$defs/CutansType"
@@ -341,12 +341,12 @@
 					"description": "Microrelief - Other.",
 					"$ref": "./enum.json#/$defs/MicroreliefTypeOther"
 				},
-				"Mottle": {
+				"Mottles": {
 					"range@type": "skos:Concept",
 					"description": "Mottle.",
 					"$ref": "./enum.json#/$defs/MottleType"
 				},
-				"Pan": {
+				"Pans": {
 					"range@type": "skos:Concept",
 					"description": "Pan.",
 					"$ref": "./enum.json#/$defs/PansType"
@@ -582,7 +582,7 @@
 			"title": "colour",
 			"description": "A description of colour.",
 			"$defs": {
-				"Mottle": {
+				"Mottles": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -1280,7 +1280,7 @@
 			"title": "diameter",
 			"description": "Thickness or width of round object.",
 			"$defs": {
-				"Pore": {
+				"Pores": {
 					"title": "pore diameter",
 					"description": "Pore.",
 					"type": "object",
@@ -1300,7 +1300,7 @@
 						}
 					]
 				},
-				"Root": {
+				"Roots": {
 					"title": "root size",
 					"description": "Root.",
 					"type": "object",
@@ -1381,7 +1381,7 @@
 			"title": "distinctness",
 			"description": "Distinctness of boundary.",
 			"$defs": {
-				"Cutan": {
+				"Cutans": {
 					"description": "Cutans.",
 					"type": "object",
 					"allOf": [
@@ -1400,7 +1400,7 @@
 						}
 					]
 				},
-				"Mottle": {
+				"Mottles": {
 					"description": "Mottles.",
 					"type": "object",
 					"allOf": [
@@ -1830,7 +1830,7 @@
 			"title": "cracks",
 			"description": "A description of cracks.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Crack"
+			"$ref": "./entities.json#/$defs/Cracks"
 		},
 		"cutans": {
 			"@id": "ansis:hasCutans",
@@ -1838,7 +1838,7 @@
 			"title": "cutans",
 			"description": "A description of cutans.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Cutan"
+			"$ref": "./entities.json#/$defs/Cutans"
 		},
 		"erosion": {
 			"@id": "ansis:hasErosion",
@@ -1997,11 +1997,11 @@
 		},
 		"mottles": {
 			"@id": "ansis:hasMottles",
-			"range@type": "ansis:Mottle",
+			"range@type": "ansis:Mottles",
 			"title": "mottles",
 			"description": "A description of mottles and other colour patterns.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Mottle"
+			"$ref": "./entities.json#/$defs/Mottles"
 		},
 		"outcrop": {
 			"@id": "ansis:hasOutcrop",
@@ -2017,7 +2017,7 @@
 			"title": "pans",
 			"description": "A description of pans.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Pan"
+			"$ref": "./entities.json#/$defs/Pans"
 		},
 		"pores": {
 			"@id": "ansis:hasPores",
@@ -2025,7 +2025,7 @@
 			"title": "macropores",
 			"description": "A description of macropores.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Pore"
+			"$ref": "./entities.json#/$defs/Pores"
 		},
 		"roots": {
 			"@id": "ansis:hasRoots",
@@ -2033,7 +2033,7 @@
 			"title": "roots",
 			"description": "A description of roots.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Root"
+			"$ref": "./entities.json#/$defs/Roots"
 		},
 		"segregations": {
 			"@id": "ansis:hasSegregations",
@@ -2041,7 +2041,7 @@
 			"title": "segregations",
 			"description": "A description of segregations.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Segregation"
+			"$ref": "./entities.json#/$defs/Segregations"
 		},
 		"streamChannel": {
 			"@id": "ansis:hasStreamChannel",
@@ -2062,10 +2062,10 @@
 		"structures": {
 			"@id": "ansis:hasStructure",
 			"title": "structure",
-			"range@type": "ansis:SoilStructure",
+			"range@type": "ansis:SoilStructures",
 			"description": "A description of structure.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/SoilStructure"
+			"$ref": "./entities.json#/$defs/SoilStructures"
 		},
 		"substrate": {
 			"@id": "ansis:hasSubstrate",
@@ -2341,7 +2341,7 @@
 			"title": "material",
 			"description": "Material or composition of entity or element.",
 			"$defs": {
-				"Segregation": {
+				"Segregations": {
 					"description": "Segregations.",
 					"type": "object",
 					"allOf": [
@@ -2794,7 +2794,7 @@
 						}
 					]
 				},
-				"Segregation": {
+				"Segregations": {
 					"description": "Segregations.",
 					"type": "object",
 					"allOf": [
@@ -2843,7 +2843,7 @@
 						}
 					]
 				},
-				"Mottle": {
+				"Mottles": {
 					"description": "Mottles.",
 					"type": "object",
 					"allOf": [
@@ -2862,7 +2862,7 @@
 						}
 					]
 				},
-				"SoilStructure": {
+				"SoilStructures": {
 					"description": "Soil structures.",
 					"type": "object",
 					"allOf": [
@@ -2881,7 +2881,7 @@
 						}
 					]
 				},
-				"Segregation": {
+				"Segregations": {
 					"description": "Segregations.",
 					"type": "object",
 					"allOf": [
@@ -3163,7 +3163,7 @@
 						}
 					]
 				},
-				"Segregation": {
+				"Segregations": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -3418,7 +3418,7 @@
 						}
 					]
 				},
-				"Crack": {
+				"Cracks": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"

@@ -777,9 +777,9 @@
 			},
 			"additionalProperties": false
 		},
-		"Crack": {
+		"Cracks": {
 			"@id": "ansis:Cracks",
-			"title": "ANSIS Crack",
+			"title": "ANSIS Cracks",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -794,17 +794,17 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Crack"
+					"const": "ansis:Cracks"
 				},
 				"width": {
-					"$ref": "./properties.json#/$defs/width/$defs/Crack"
+					"$ref": "./properties.json#/$defs/width/$defs/Cracks"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Cutan": {
+		"Cutans": {
 			"@id": "ansis:Cutans",
-			"title": "ANSIS Cutan",
+			"title": "ANSIS Cutans",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -820,16 +820,16 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Cutan"
+					"const": "ansis:Cutans"
 				},
 				"abundance": {
-					"$ref": "./properties.json#/$defs/abundance/$defs/Cutan"
+					"$ref": "./properties.json#/$defs/abundance/$defs/Cutans"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#/$defs/ansisType/$defs/Cutan"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/Cutans"
 				},
 				"distinctness": {
-					"$ref": "./properties.json#/$defs/distinctness/$defs/Cutan"
+					"$ref": "./properties.json#/$defs/distinctness/$defs/Cutans"
 				}
 			},
 			"additionalProperties": false
@@ -1273,9 +1273,9 @@
 			},
 			"additionalProperties": false
 		},
-		"Mottle": {
+		"Mottles": {
 			"@id": "ansis:Mottles",
-			"title": "ANSIS Mottle",
+			"title": "ANSIS Mottles",
 			"description": "Mottles and other colour patterns.",
 			"type": "object",
 			"required": [
@@ -1292,13 +1292,13 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Mottle"
+					"const": "ansis:Mottles"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#/$defs/ansisType/$defs/Mottle"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/Mottles"
 				},
 				"abundance": {
-					"$ref": "./properties.json#/$defs/abundance/$defs/Mottle"
+					"$ref": "./properties.json#/$defs/abundance/$defs/Mottles"
 				},
 				"colour": {
 					"$ref": "./properties.json#/$defs/colour/$defs/Soil"
@@ -1307,10 +1307,10 @@
 					"$ref": "./properties.json#/$defs/contrast"
 				},
 				"distinctness": {
-					"$ref": "./properties.json#/$defs/distinctness/$defs/Mottle"
+					"$ref": "./properties.json#/$defs/distinctness/$defs/Mottles"
 				},
 				"size": {
-					"$ref": "./properties.json#/$defs/size/$defs/Mottle"
+					"$ref": "./properties.json#/$defs/size/$defs/Mottles"
 				}
 			},
 			"additionalProperties": false
@@ -1349,9 +1349,9 @@
 			},
 			"additionalProperties": false
 		},
-		"Pan": {
+		"Pans": {
 			"@id": "ansis:Pans",
-			"title": "ANSIS Pan",
+			"title": "ANSIS Pans",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1367,10 +1367,10 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Pan"
+					"const": "ansis:Pans"
 				},
 				"ansisType": {
-					"$ref": "./properties.json#/$defs/ansisType/$defs/Pan"
+					"$ref": "./properties.json#/$defs/ansisType/$defs/Pans"
 				},
 				"cementation": {
 					"$ref": "./properties.json#/$defs/cementation"
@@ -1384,9 +1384,9 @@
 			},
 			"additionalProperties": false
 		},
-		"Pore": {
+		"Pores": {
 			"@id": "ansis:Pores",
-			"title": "ANSIS Pore",
+			"title": "ANSIS Pores",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1402,20 +1402,20 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Pore"
+					"const": "ansis:Pores"
 				},
 				"abundance": {
-					"$ref": "./properties.json#/$defs/abundance/$defs/Pore"
+					"$ref": "./properties.json#/$defs/abundance/$defs/Pores"
 				},
 				"diameter": {
-					"$ref": "./properties.json#/$defs/diameter/$defs/Pore"
+					"$ref": "./properties.json#/$defs/diameter/$defs/Pores"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Root": {
+		"Roots": {
 			"@id": "ansis:Roots",
-			"title": "ANSIS Root",
+			"title": "ANSIS Roots",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1431,20 +1431,20 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Root"
+					"const": "ansis:Roots"
 				},
 				"abundance": {
-					"$ref": "./properties.json#/$defs/abundance/$defs/Root"
+					"$ref": "./properties.json#/$defs/abundance/$defs/Roots"
 				},
 				"diameter": {
-					"$ref": "./properties.json#/$defs/diameter/$defs/Root"
+					"$ref": "./properties.json#/$defs/diameter/$defs/Roots"
 				}
 			},
 			"additionalProperties": false
 		},
-		"Segregation": {
+		"Segregations": {
 			"@id": "ansis:Segregations",
-			"title": "ANSIS Segregation",
+			"title": "ANSIS Segregations",
 			"description": "Undefined.",
 			"type": "object",
 			"required": [
@@ -1460,25 +1460,25 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:Segregation"
+					"const": "ansis:Segregations"
 				},
 				"abundance": {
-					"$ref": "./properties.json#/$defs/abundance/$defs/Segregation"
+					"$ref": "./properties.json#/$defs/abundance/$defs/Segregations"
 				},
 				"magneticAttributes": {
 					"$ref": "./properties.json#/$defs/magneticAttributes"
 				},
 				"material": {
-					"$ref": "./properties.json#/$defs/material/$defs/Segregation"
+					"$ref": "./properties.json#/$defs/material/$defs/Segregations"
 				},
 				"shape": {
-					"$ref": "./properties.json#/$defs/shape/$defs/Segregation"
+					"$ref": "./properties.json#/$defs/shape/$defs/Segregations"
 				},
 				"size": {
-					"$ref": "./properties.json#/$defs/size/$defs/Segregation"
+					"$ref": "./properties.json#/$defs/size/$defs/Segregations"
 				},
 				"strength": {
-					"$ref": "./properties.json#/$defs/strength/$defs/Segregation"
+					"$ref": "./properties.json#/$defs/strength/$defs/Segregations"
 				}
 			},
 			"additionalProperties": false
@@ -1649,8 +1649,8 @@
 			},
 			"additionalProperties": false
 		},
-		"SoilStructure": {
-			"@id": "ansis:SoilStructure",
+		"SoilStructures": {
+			"@id": "ansis:SoilStructures",
 			"title": "ANSIS Soil Structure",
 			"description": "Soil structure or pedality.",
 			"type": "object",
@@ -1668,7 +1668,7 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:SoilStructure"
+					"const": "ansis:SoilStructures"
 				},
 				"ansisType": {
 					"$ref": "./properties.json#/$defs/ansisType/$defs/Pedality"
@@ -1680,7 +1680,7 @@
 					"$ref": "./properties.json#/$defs/grade"
 				},
 				"size": {
-					"$ref": "./properties.json#/$defs/size/$defs/SoilStructure"
+					"$ref": "./properties.json#/$defs/size/$defs/SoilStructures"
 				}
 			},
 			"additionalProperties": false
