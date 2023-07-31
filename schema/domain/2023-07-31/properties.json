@@ -23,7 +23,7 @@
 			"title": "abundance",
 			"description": "Abundance of items.",
 			"$defs": {
-				"coarseFragments": {
+				"CoarseFragment": {
 					"description": "Coarse fragments.",
 					"type": "object",
 					"allOf": [
@@ -42,7 +42,7 @@
 						}
 					]
 				},
-				"cutans": {
+				"Cutan": {
 					"description": "Cutans.",
 					"type": "object",
 					"allOf": [
@@ -61,7 +61,7 @@
 						}
 					]
 				},
-				"mottles": {
+				"Mottle": {
 					"description": "Mottles.",
 					"type": "object",
 					"allOf": [
@@ -80,7 +80,7 @@
 						}
 					]
 				},
-				"outcrop": {
+				"Outcrop": {
 					"description": "Outcrops.",
 					"type": "object",
 					"allOf": [
@@ -99,7 +99,7 @@
 						}
 					]
 				},
-				"pores": {
+				"Pore": {
 					"description": "Pores.",
 					"type": "object",
 					"allOf": [
@@ -118,7 +118,7 @@
 						}
 					]
 				},
-				"roots": {
+				"Root": {
 					"description": "Roots.",
 					"type": "object",
 					"allOf": [
@@ -137,7 +137,7 @@
 						}
 					]
 				},
-				"segregations": {
+				"Segregation": {
 					"description": "Segregations",
 					"type": "object",
 					"allOf": [
@@ -167,7 +167,7 @@
 			"title": "agent",
 			"description": "Agent of geomorphological or biotic activity.",
 			"$defs": {
-				"microrelief_biotic": {
+				"Microrelief_biotic": {
 					"description": "Biotic.",
 					"type": "object",
 					"allOf": [
@@ -186,7 +186,7 @@
 						}
 					]
 				},
-				"geomorphology": {
+				"Geomorphology": {
 					"description": "Geomorphology.",
 					"type": "object",
 					"allOf": [
@@ -296,62 +296,62 @@
 			"description": "Type of ansis soil entity.",
 			"$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword.",
 			"$defs": {
-				"cutan": {
+				"Cutan": {
 					"range@type": "skos:Concept",
 					"description": "Cutan.",
 					"$ref": "./enum.json#/$defs/CutansType"
 				},
-				"erosion": {
+				"Erosion": {
 					"range@type": "skos:Concept",
 					"description": "Erosion.",
 					"$ref": "./enum.json#/$defs/ErosionType"
 				},
-				"fabric": {
+				"Fabric": {
 					"range@type": "skos:Concept",
 					"description": "Fabric.",
 					"$ref": "./enum.json#/$defs/FabricType"
 				},
-				"landformElement": {
+				"LandformElement": {
 					"range@type": "skos:Concept",
 					"description": "Landform element.",
 					"$ref": "./enum.json#/$defs/LandformElementName"
 				},
-				"landformPattern": {
+				"LandformPattern": {
 					"range@type": "skos:Concept",
 					"description": "Landform pattern.",
 					"$ref": "./enum.json#/$defs/LandformPatternName"
 				},
-				"landformPattern_erosional": {
+				"LandformPattern_erosional": {
 					"range@type": "skos:Concept",
 					"description": "Landform pattern - erosional.",
 					"$ref": "./enum.json#/$defs/LandformPatternErosional"
 				},
-				"microrelief_gilgai": {
+				"Microrelief_gilgai": {
 					"range@type": "skos:Concept",
 					"description": "Microrelief - Gilgai.",
 					"$ref": "./enum.json#/$defs/MicroreliefTypeGilgai"
 				},
-				"microrelief_hummocky": {
+				"Microrelief_hummocky": {
 					"range@type": "skos:Concept",
 					"description": "Microrelief - Hummocky.",
 					"$ref": "./enum.json#/$defs/MicroreliefTypeHummocky"
 				},
-				"microrelief_other": {
+				"Microrelief_other": {
 					"range@type": "skos:Concept",
 					"description": "Microrelief - Other.",
 					"$ref": "./enum.json#/$defs/MicroreliefTypeOther"
 				},
-				"mottle": {
+				"Mottle": {
 					"range@type": "skos:Concept",
 					"description": "Mottle.",
 					"$ref": "./enum.json#/$defs/MottleType"
 				},
-				"pan": {
+				"Pan": {
 					"range@type": "skos:Concept",
 					"description": "Pan.",
 					"$ref": "./enum.json#/$defs/PansType"
 				},
-				"pedality": {
+				"Pedality": {
 					"range@type": "skos:Concept",
 					"description": "Pedality.",
 					"oneOf": [
@@ -363,22 +363,22 @@
 						}
 					]
 				},
-				"plasticity": {
+				"Plasticity": {
 					"range@type": "skos:Concept",
 					"description": "Plasticity.",
 					"$ref": "./enum.json#/$defs/ConsistencePlasticityType"
 				},
-				"site": {
+				"Site": {
 					"range@type": "ansis:Classification",
 					"description": "Site.",
 					"$ref": "./entities.json#/$defs/Classification"
 				},
-				"soilProfile": {
+				"SoilProfile": {
 					"range@type": "ansis:Classification",
 					"description": "Soil Profile.",
 					"$ref": "./entities.json#/$defs/Classification"
 				},
-				"substrate": {
+				"Substrate": {
 					"range@type": "ansis:Classification",
 					"description": "Substrate.",
 					"$ref": "./entities.json#/$defs/Classification"
@@ -412,7 +412,7 @@
 		},
 		"boundaryDistinctness": {
 			"@id": "ansis:distinctness",
-			"description": "Horizon - lower boundary.",
+			"description": "Distinctness of the Horizon's lower boundary.",
 			"type": "object",
 			"allOf": [
 				{
@@ -432,7 +432,7 @@
 		},
 		"boundaryShape": {
 			"@id": "ansis:shape",
-			"description": "Lower horizon boundary.",
+			"description": "Shape of the Horizon's lower boundary.",
 			"type": "object",
 			"allOf": [
 				{
@@ -582,7 +582,7 @@
 			"title": "colour",
 			"description": "A description of colour.",
 			"$defs": {
-				"mottle": {
+				"Mottle": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -605,7 +605,7 @@
 						}
 					]
 				},
-				"soil": {
+				"Soil": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"ansis:SoilColour"
@@ -645,7 +645,7 @@
 			"title": "component",
 			"description": "Type of component element.",
 			"$defs": {
-				"microrelief_biotic": {
+				"Microrelief_biotic": {
 					"description": "Microrelief - biotic.",
 					"type": "object",
 					"allOf": [
@@ -664,7 +664,7 @@
 						}
 					]
 				},
-				"microrelief_sampled": {
+				"Microrelief_sampled": {
 					"description": "Microrelief - sampled",
 					"type": "object",
 					"allOf": [
@@ -803,7 +803,7 @@
 			"title": "degree or intensity",
 			"description": "Degree or severity or intensity of phenomenon.",
 			"$defs": {
-				"erosion": {
+				"Erosion": {
 					"description": "Erosion.",
 					"type": "object",
 					"allOf": [
@@ -850,7 +850,7 @@
 						}
 					]
 				},
-				"consistence_plasticity": {
+				"Plasticity": {
 					"description": "Consistence - plasticity.",
 					"type": "object",
 					"allOf": [
@@ -906,7 +906,7 @@
 			"title": "depth",
 			"description": "Depth from local surface of entity.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -929,7 +929,7 @@
 						}
 					]
 				},
-				"inundation": {
+				"Inundation": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -989,7 +989,7 @@
 			"title": "gully depth",
 			"description": "Depth from local surface to the base of the gully.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -1012,7 +1012,7 @@
 						}
 					]
 				},
-				"concept": {
+				"Concept": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -1129,7 +1129,7 @@
 			"title": "depth width ratio",
 			"description": "Depth to width ratio of entity; ratio of depth to width of the element.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -1152,7 +1152,7 @@
 						}
 					]
 				},
-				"streamChannel": {
+				"StreamChannel": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -1280,7 +1280,7 @@
 			"title": "diameter",
 			"description": "Thickness or width of round object.",
 			"$defs": {
-				"pores": {
+				"Pore": {
 					"title": "pore diameter",
 					"description": "Pore.",
 					"type": "object",
@@ -1300,7 +1300,7 @@
 						}
 					]
 				},
-				"roots": {
+				"Root": {
 					"title": "root size",
 					"description": "Root.",
 					"type": "object",
@@ -1381,7 +1381,7 @@
 			"title": "distinctness",
 			"description": "Distinctness of boundary.",
 			"$defs": {
-				"cutans": {
+				"Cutan": {
 					"description": "Cutans.",
 					"type": "object",
 					"allOf": [
@@ -1400,7 +1400,7 @@
 						}
 					]
 				},
-				"mottles": {
+				"Mottle": {
 					"description": "Mottles.",
 					"type": "object",
 					"allOf": [
@@ -1506,7 +1506,7 @@
 			"title": "duration",
 			"description": "Temporal extent of event or phenomenon.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -1529,7 +1529,7 @@
 						}
 					]
 				},
-				"inundation": {
+				"Inundation": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -1624,7 +1624,7 @@
 			"title": "frequency",
 			"description": "Temporal frequency of event or phenomenon.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -1647,7 +1647,7 @@
 						}
 					]
 				},
-				"inundation": {
+				"Inundation": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -2184,7 +2184,7 @@
 			"title": "lithology",
 			"description": "Lithological type of material.",
 			"$defs": {
-				"outcrop": {
+				"Outcrop": {
 					"type": "object",
 					"description": "Outcrop.",
 					"allOf": [
@@ -2203,7 +2203,7 @@
 						}
 					]
 				},
-				"coarseFragments": {
+				"CoarseFragment": {
 					"type": "object",
 					"description": "Coarse Fragments.",
 					"allOf": [
@@ -2222,7 +2222,7 @@
 						}
 					]
 				},
-				"lithology": {
+				"Lithology": {
 					"type": "object",
 					"description": "Rock/unconsolidated.",
 					"allOf": [
@@ -2341,7 +2341,7 @@
 			"title": "material",
 			"description": "Material or composition of entity or element.",
 			"$defs": {
-				"segregation": {
+				"Segregation": {
 					"description": "Segregations.",
 					"type": "object",
 					"allOf": [
@@ -2360,7 +2360,7 @@
 						}
 					]
 				},
-				"substrate_mineral_composition": {
+				"Substrate_mineralComposition": {
 					"description": "Substrate minerals.",
 					"type": "object",
 					"allOf": [
@@ -2415,13 +2415,13 @@
 			"title": "moisture status",
 			"description": "Moisture state of material while property evaluation is carried out.",
 			"$defs": {
-				"colour": {
+				"SoilColour": {
 					"range@type": "skos:Concept",
 					"type": "string",
 					"description": "Soil colour.",
 					"$ref": "./enum.json#/$defs/ColourMoistureStatus"
 				},
-				"soil": {
+				"Soil": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -2506,7 +2506,7 @@
 			"title": "permeability",
 			"description": "Rate of flow of liquid through the material.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -2529,7 +2529,7 @@
 						}
 					]
 				},
-				"soil": {
+				"Soil": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -2775,7 +2775,7 @@
 			"title": "shape",
 			"description": "Geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary.",
 			"$defs": {
-				"coarseFragments": {
+				"CoarseFragment": {
 					"description": "Coarse fragments.",
 					"type": "object",
 					"allOf": [
@@ -2794,7 +2794,7 @@
 						}
 					]
 				},
-				"segregations": {
+				"Segregation": {
 					"description": "Segregations.",
 					"type": "object",
 					"allOf": [
@@ -2824,7 +2824,7 @@
 			"title": "size",
 			"description": "Geometric scale and extent of element.",
 			"$defs": {
-				"coarseFragments": {
+				"CoarseFragment": {
 					"description": "Coarse fragments.",
 					"type": "object",
 					"allOf": [
@@ -2843,7 +2843,7 @@
 						}
 					]
 				},
-				"mottles": {
+				"Mottle": {
 					"description": "Mottles.",
 					"type": "object",
 					"allOf": [
@@ -2862,7 +2862,7 @@
 						}
 					]
 				},
-				"soilStructure": {
+				"SoilStructure": {
 					"description": "Soil structures.",
 					"type": "object",
 					"allOf": [
@@ -2881,7 +2881,7 @@
 						}
 					]
 				},
-				"segregations": {
+				"Segregation": {
 					"description": "Segregations.",
 					"type": "object",
 					"allOf": [
@@ -2911,7 +2911,7 @@
 			"title": "slope",
 			"description": "Divergence of surface from horizontal.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"description": "Quantity.",
 					"type": "object",
 					"range@type": "qudt:QuantityValue",
@@ -2941,7 +2941,7 @@
 						}
 					}
 				},
-				"class": {
+				"Class": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -2964,7 +2964,7 @@
 						}
 					]
 				},
-				"modal": {
+				"Modal": {
 					"description": "Modal.",
 					"type": "object",
 					"allOf": [
@@ -2994,8 +2994,8 @@
 			"title": "spacing",
 			"description": "Lateral separation of elements.",
 			"$defs": {
-				"channel": {
-					"description": "Channels.",
+				"StreamChannel": {
+					"description": "Stream channels.",
 					"type": "object",
 					"allOf": [
 						{
@@ -3013,7 +3013,7 @@
 						}
 					]
 				},
-				"substrate_discontinuity": {
+				"Substrate_discontinuity": {
 					"description": "Substrate - spacing of discontinuities.",
 					"type": "object",
 					"allOf": [
@@ -3094,7 +3094,7 @@
 			"title": "strength",
 			"description": "Strength of material.",
 			"$defs": {
-				"consistence": {
+				"Consistence": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -3117,7 +3117,7 @@
 						}
 					]
 				},
-				"material": {
+				"Material": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -3140,7 +3140,7 @@
 						}
 					]
 				},
-				"soil": {
+				"Soil": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"ansis:Consistence"
@@ -3163,7 +3163,7 @@
 						}
 					]
 				},
-				"segregations": {
+				"Segregation": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
@@ -3188,24 +3188,6 @@
 				}
 			}
 		},
-		"structure": {
-			"@id": "ansis:structure",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"ansis:SoilStructure"
-			],
-			"title": "structure",
-			"description": "internal arrangement of elements of the material or entity.",
-			"type": "object",
-			"oneOf": [
-				{
-					"$ref": "./base.json#/$defs/ObservableProperty"
-				},
-				{
-					"$ref": "./entities.json#/$defs/SoilStructure"
-				}
-			]
-		},
 		"panStructure": {
 			"@id": "ansis:structure",
 			"range@type": [
@@ -3226,7 +3208,7 @@
 			"title": "texture",
 			"description": "material (organic or mineral) texture, in terms of particle size distribution and component materials",
 			"$defs": {
-				"soil": {
+				"Soil": {
 					"description": "Soil.",
 					"type": "object",
 					"required": [
@@ -3252,7 +3234,7 @@
 						}
 					]
 				},
-				"substrate": {
+				"Substrate": {
 					"description": "Substrate.",
 					"type": "object",
 					"required": [
@@ -3310,12 +3292,12 @@
 			"title": "value",
 			"description": "Simple literal value.",
 			"$defs": {
-				"boolean": {
+				"Boolean": {
 					"range@type": "xs:boolean",
 					"type": "boolean",
 					"description": "Boolean."
 				},
-				"datetime": {
+				"DateTime": {
 					"range@type": "xs:boolean",
 					"type": "string",
 					"oneOf": [
@@ -3328,17 +3310,17 @@
 					],
 					"description": "Time and/or date."
 				},
-				"integer": {
+				"Integer": {
 					"range@type": "xs:integer",
 					"type": "integer",
 					"description": "Integer."
 				},
-				"number": {
+				"Number": {
 					"range@type": "xs:decimal",
 					"type": "number",
 					"description": "Number."
 				},
-				"string": {
+				"String": {
 					"range@type": "xs:string",
 					"type": "string",
 					"description": "String."
@@ -3413,7 +3395,7 @@
 			"title": "width",
 			"description": "Linear extent - smaller dimension.",
 			"$defs": {
-				"quantity": {
+				"Quantity": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"qudt:QuantityValue"
@@ -3436,7 +3418,7 @@
 						}
 					]
 				},
-				"cracks": {
+				"Crack": {
 					"range@type": [
 						"sosa:ObservableProperty",
 						"skos:Concept"
