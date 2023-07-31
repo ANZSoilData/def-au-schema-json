@@ -20,8 +20,8 @@
                 "unit"
             ],
             "properties": {
-                "value": {"$ref": "#value"},
-                "unit": {"$ref": "#unit"}
+                "value": {"$ref": "#/$defs/value"},
+                "unit": {"$ref": "#/$defs/unit"}
             }
         },
         "value": {

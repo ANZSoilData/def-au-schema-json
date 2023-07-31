@@ -30,14 +30,14 @@
                 },
                 "result": {
                     "type": "array",
-                    "items": {"$ref": "#result-SoilSample"}
+                    "items": {"$ref": "#/$defs/result/$defs/SoilSample"}
                 },
                 "madeBySampler": {
                     "type": "array",
-                    "items": {"$ref": "#madeBySampler"}
+                    "items": {"$ref": "#/$defs/madeBySampler"}
                 },
-                "resultTime": {"$ref": "#resultTime"},
-                "usedProcedure": {"$ref": "#usedProcedure"}
+                "resultTime": {"$ref": "#/$defs/resultTime"},
+                "usedProcedure": {"$ref": "#/$defs/usedProcedure"}
             },
             "additionalProperties": false
         },

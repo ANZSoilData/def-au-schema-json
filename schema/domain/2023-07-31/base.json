@@ -55,7 +55,7 @@
             "range@type": "base:ScopedIdentifier",
             "title": "scoped identifier",
             "description": "An identifier for a site, sample or other entity scoped to the authority that assigned the identifier.",
-            "$ref": "#ScopedIdentifier"
+            "$ref": "#/$defs/ScopedIdentifier"
         },
         "source": {
             "$anchor": "source",
@@ -88,9 +88,9 @@
             "type": "object",
             "required": ["name"],
             "properties": {
-                "name": {"$ref": "#name"},
+                "name": {"$ref": "#/$defs/name"},
                 "authority": {
-                    "$ref": "#name",
+                    "$ref": "#/$defs/name",
                     "$comment": "The ID of the provider (suggestion)."
                 }
             }

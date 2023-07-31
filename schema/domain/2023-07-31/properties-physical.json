@@ -14,43 +14,43 @@
 		"bulkDensity": {
 			"type": "array",
 			"items": {
-				"$ref": "#bulkDensity"
+				"$ref": "#/$defs/bulkDensity"
 			}
 		},
 		"coarseFragmentContent": {
 			"type": "array",
 			"items": {
-				"$ref": "#coarseFragmentContent"
+				"$ref": "#/$defs/coarseFragmentContent"
 			}
 		},
 		"coarseFragments": {
 			"type": "array",
 			"items": {
-				"$ref": "#coarseFragments"
+				"$ref": "#/$defs/coarseFragments"
 			}
 		},
 		"dispersion": {
 			"type": "array",
 			"items": {
-				"$ref": "#dispersion"
+				"$ref": "#/$defs/dispersion"
 			}
 		},
 		"clay": {
 			"type": "array",
 			"items": {
-				"$ref": "#clay"
+				"$ref": "#/$defs/clay"
 			}
 		},
 		"sand": {
 			"type": "array",
 			"items": {
-				"$ref": "#sand"
+				"$ref": "#/$defs/sand"
 			}
 		},
 		"silt": {
 			"type": "array",
 			"items": {
-				"$ref": "#silt"
+				"$ref": "#/$defs/silt"
 			}
 		}
 	},

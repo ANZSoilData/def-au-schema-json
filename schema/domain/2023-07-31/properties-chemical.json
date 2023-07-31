@@ -14,157 +14,157 @@
 		"ammoniumN": {
 			"type": "array",
 			"items": {
-				"$ref": "#ammoniumN"
+				"$ref": "#/$defs/ammoniumN"
 			}
 		},
 		"cationExchangeCapacity": {
 			"type": "array",
 			"items": {
-				"$ref": "#cationExchangeCapacity"
+				"$ref": "#/$defs/cationExchangeCapacity"
 			}
 		},
 		"effectiveCationExchangeCapacity": {
 			"type": "array",
 			"items": {
-				"$ref": "#effectiveCationExchangeCapacity"
+				"$ref": "#/$defs/effectiveCationExchangeCapacity"
 			}
 		},
 		"electricalConductivity": {
 			"type": "array",
 			"items": {
-				"$ref": "#electricalConductivity"
+				"$ref": "#/$defs/electricalConductivity"
 			}
 		},
 		"exchangableAluminium": {
 			"type": "array",
 			"items": {
-				"$ref": "#exchangableAluminium"
+				"$ref": "#/$defs/exchangableAluminium"
 			}
 		},
 		"exchangableCalcium": {
 			"type": "array",
 			"items": {
-				"$ref": "#exchangableCalcium"
+				"$ref": "#/$defs/exchangableCalcium"
 			}
 		},
 		"exchangableMagnesium": {
 			"type": "array",
 			"items": {
-				"$ref": "#exchangableMagnesium"
+				"$ref": "#/$defs/exchangableMagnesium"
 			}
 		},
 		"exchangablePotassium": {
 			"type": "array",
 			"items": {
-				"$ref": "#exchangablePotassium"
+				"$ref": "#/$defs/exchangablePotassium"
 			}
 		},
 		"exchangableSodium": {
 			"type": "array",
 			"items": {
-				"$ref": "#exchangableSodium"
+				"$ref": "#/$defs/exchangableSodium"
 			}
 		},
 		"extractableBoron": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractableBoron"
+				"$ref": "#/$defs/extractableBoron"
 			}
 		},
 		"extractableCopper": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractableCopper"
+				"$ref": "#/$defs/extractableCopper"
 			}
 		},
 		"extractableIron": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractableIron"
+				"$ref": "#/$defs/extractableIron"
 			}
 		},
 		"extractablePhosphorus": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractablePhosphorus"
+				"$ref": "#/$defs/extractablePhosphorus"
 			}
 		},
 		"extractablePotassium": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractablePotassium"
+				"$ref": "#/$defs/extractablePotassium"
 			}
 		},
 		"extractableSulfur": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractableSulfur"
+				"$ref": "#/$defs/extractableSulfur"
 			}
 		},
 		"extractableZinc": {
 			"type": "array",
 			"items": {
-				"$ref": "#extractableZinc"
+				"$ref": "#/$defs/extractableZinc"
 			}
 		},
 		"nitrateN": {
 			"type": "array",
 			"items": {
-				"$ref": "#nitrateN"
+				"$ref": "#/$defs/nitrateN"
 			}
 		},
 		"nitriteN": {
 			"type": "array",
 			"items": {
-				"$ref": "#nitriteN"
+				"$ref": "#/$defs/nitriteN"
 			}
 		},
 		"organicCarbon": {
 			"type": "array",
 			"items": {
-				"$ref": "#organicCarbon"
+				"$ref": "#/$defs/organicCarbon"
 			}
 		},
 		"pBufferIndex": {
 			"type": "array",
 			"items": {
-				"$ref": "#pBufferIndex"
+				"$ref": "#/$defs/pBufferIndex"
 			}
 		},
 		"pH": {
 			"type": "array",
 			"items": {
-				"$ref": "#pH"
+				"$ref": "#/$defs/pH"
 			}
 		},
 		"totalNitrogen": {
 			"type": "array",
 			"items": {
-				"$ref": "#totalNitrogen"
+				"$ref": "#/$defs/totalNitrogen"
 			}
 		},
 		"totalOrganicCarbon": {
 			"type": "array",
 			"items": {
-				"$ref": "#totalOrganicCarbon"
+				"$ref": "#/$defs/totalOrganicCarbon"
 			}
 		},
 		"totalPhosphorus": {
 			"type": "array",
 			"items": {
-				"$ref": "#totalPhosphorus"
+				"$ref": "#/$defs/totalPhosphorus"
 			}
 		},
 		"totalPotassium": {
 			"type": "array",
 			"items": {
-				"$ref": "#totalPotassium"
+				"$ref": "#/$defs/totalPotassium"
 			}
 		},
 		"ratioTotalOrganicCarbonToTotalSoilNitrogen": {
 			"type": "array",
 			"items": {
-				"$ref": "#ratioTotalOrganicCarbonToTotalSoilNitrogen"
+				"$ref": "#/$defs/ratioTotalOrganicCarbonToTotalSoilNitrogen"
 			}
 		}
 	},

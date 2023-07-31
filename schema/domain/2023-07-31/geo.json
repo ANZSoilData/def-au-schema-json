@@ -25,7 +25,7 @@
                 {
                     "required": ["result"],
                     "properties": {
-                        "result": {"$ref": "#wktLiteral"}
+                        "result": {"$ref": "#/$defs/wktLiteral"}
                     }
                 },
                 {"$ref": "./base.json#/$defs/ObservableProperty"}
