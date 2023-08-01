@@ -1,4 +1,95 @@
 {
-	"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json",
-	"data": {}
+	"$schema": "../schema/domain/2023-07-31/ansis.json",
+    "meta": {
+		"timeStamp": "2023-07-31T15:29:00+12:00",
+		"numberReturned": 2
+	},
+	"data": [
+		{
+			"id": "site-01",
+			"type": [
+				"ansis:LandsurveySite"
+			],
+			"geometry": {
+				"result": "SRID=4283;LINESTRING(-42 24, -42 42)"
+			},
+			"relatedProject": "#/included/projects/0"
+		},
+		{
+			"id": "site-02",
+			"type": [
+				"ansis:LandsurveySite","ansis:SoilSite"
+			],
+			"geometry": {
+				"result": "SRID=4283;LINESTRING(-42 24, -42 42)"
+			},
+			"siteVisit": [
+				{
+					"id": "site-visit-01",
+					"type": "ansis:SiteVisit",
+					"startedAtTime": "2023-07-01",
+					"endedAtTime": "2023-07-02",
+					"visitor": [
+                        {
+                            "type": "prov:Person",
+                            "name": "Peter the Great"
+                        }
+                    ],
+                    "soilProfile": [
+                        {
+                            "type": "ansis:SoilProfile",
+                            "sampling": [
+                                {
+                                    "type": "sosa:Sampling",
+                                    "result": [
+                                        {
+                                            "id": "soil-sample-01",
+                                            "type": "ansis:SoilSample",
+                                            "depthUpper": {
+                                                "result": {
+                                                    "value": 0,
+                                                    "unit": "unit:M"
+                                                }
+                                            },
+                                            "depthLower": {
+                                                "result": {
+                                                    "value": 0.1,
+                                                    "unit": "unit:M"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+					"relatedProject": [
+						"#/included/projects/0",
+						"#/included/projects/1"
+					]
+				}
+			],
+			"relatedProject": "#/included/projects/0"
+		}
+	],
+	"included": {
+		"projects": [
+			{
+				"id": "project-01",
+				"type": "proj:Project",
+				"leader": {
+					"type": "prov:Agent",
+					"name": "Peter the Great"
+				}
+			},
+			{
+				"id": "project-02",
+				"type": "proj:Project",
+				"leader": {
+					"type": "prov:Agent",
+					"name": "Gerard the Terrible"
+				}
+			}
+		]
+	}
 }
