@@ -164,6 +164,9 @@
 				},
 				"SoilProfile": {
 					"$ref": "./enum.json#/$defs/ProfileConstruction"
+				},
+				"Substrate": {
+					"$ref": "./enum.json#/$defs/TypeOfSubstrateObservation"
 				}
 			}
 		},

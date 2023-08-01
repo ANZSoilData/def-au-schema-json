@@ -1367,29 +1367,6 @@
 				}
 			]
 		},
-		"FieldTexture": {
-			"@id": "subst:Field-texture",
-			"title": "Texture",
-			"type": "string",
-			"oneOf": [
-				{
-					"const": "subst:texture-A",
-					"description": "Amorphous"
-				},
-				{
-					"const": "subst:texture-F",
-					"description": "Fragmental"
-				},
-				{
-					"const": "subst:texture-P",
-					"description": "Porphyritic"
-				},
-				{
-					"const": "subst:texture-X",
-					"description": "Crystalline (non-porphyritic)"
-				}
-			]
-		},
 		"FieldTextureMineral": {
 			"@id": "sp:Field-texture-mineral",
 			"title": "Mineral soils field texture grade",
@@ -5053,6 +5030,68 @@
 				}
 			]
 		},
+		"SubstrateTexture": {
+			"@id": "subst:Field-texture",
+			"title": "Substrate Texture",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "subst:texture-A",
+					"description": "Amorphous"
+				},
+				{
+					"const": "subst:texture-F",
+					"description": "Fragmental"
+				},
+				{
+					"const": "subst:texture-P",
+					"description": "Porphyritic"
+				},
+				{
+					"const": "subst:texture-X",
+					"description": "Crystalline (non-porphyritic)"
+				}
+			]
+		},
+		"SubstrateStructure": {
+			"@id": "subst:Substrate-structure",
+			"title": "Substrate Structure",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "subst:material-structure-B",
+					"description": "Bedded"
+				},
+				{
+					"const": "subst:material-structure-C",
+					"description": "Concretionary"
+				},
+				{
+					"const": "subst:material-structure-F",
+					"description": "Fissile"
+				},
+				{
+					"const": "subst:material-structure-L",
+					"description": "Foliated"
+				},
+				{
+					"const": "subst:material-structure-P",
+					"description": "Platy"
+				},
+				{
+					"const": "subst:material-structure-R",
+					"description": "Vermicular"
+				},
+				{
+					"const": "subst:material-structure-S",
+					"description": "Vesicular"
+				},
+				{
+					"const": "subst:material-structure-V",
+					"description": "Massive"
+				}
+			]
+		},
 		"SurfaceCondition": {
 			"@id": "sp:Surface-condition",
 			"title": "Condition of surface soil when dry",
@@ -5114,6 +5153,34 @@
 				{
 					"const": "sp:surfacecondition-Z",
 					"description": "Saline (surface condition)"
+				}
+			]
+		},
+		"TypeOfSubstrateObservation": {
+			"@id": "subst:type-of-substrate-observation",
+			"title": "Type of substrate observation",
+			"description": "The substrate may be described using several types of observation.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "subst:observation-type-A",
+					"description": "Auger boring"
+				},
+				{
+					"const": "subst:observation-type-C",
+					"description": "Relatively undisturbed soil core"
+				},
+				{
+					"const": "subst:observation-type-E",
+					"description": "Existing vertical exposure"
+				},
+				{
+					"const": "subst:observation-type-P",
+					"description": "Soil pit"
+				},
+				{
+					"const": "subst:observation-type-O",
+					"description": "Outcrop, where presumed continuous with substrate"
 				}
 			]
 		},

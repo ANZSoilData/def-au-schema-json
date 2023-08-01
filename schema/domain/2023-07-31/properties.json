@@ -3221,7 +3221,7 @@
 				}
 			}
 		},
-		"panStructure": {
+		"structure": {
 			"@id": "ansis:structure",
 			"range@type": [
 				"sosa:ObservableProperty",
@@ -3229,22 +3229,46 @@
 			],
 			"title": "pan structure",
 			"description": "internal arrangement of elements of the material or entity.",
-			"type": "object",
-            "allOf": [
-                {
-                    "required": [
-                        "result"
-                    ],
-                    "properties": {
-                        "result": {
-                            "$ref": "./enum.json#/$defs/PansStructure"
-                        }
-                    }
-                },
-                {
-                    "$ref": "./base.json#/$defs/ObservableProperty"
-                }
-            ]
+			"$defs": {
+				"Pans": {
+					"description": "Pans.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/PansStructure"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"Substrate": {
+					"description": "Substrate.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/SubstrateStructure"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				}
+			}
 		},
 		"texture": {
 			"@id": "ansis:texture",
@@ -3291,7 +3315,7 @@
                             ],
 							"properties": {
 								"result": {
-									"$ref": "./enum.json#/$defs/FieldTexture"
+									"$ref": "./enum.json#/$defs/SubstrateTexture"
 								}
 							}
 						},
