@@ -5,7 +5,7 @@
 	"description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
 	"type": "null",
 	"$defs": {
-		"curiPrefix": {
+		"_curiPrefix": {
 			"sosa": "http://www.w3.org/ns/sosa/",
 			"xs": "https://www.w3.org/TR/xmlschema-2/#",
 			"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",

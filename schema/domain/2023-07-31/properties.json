@@ -6,7 +6,7 @@
 	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
 	"type": "null",
 	"$defs": {
-		"curiPrefix": {
+		"_curiPrefix": {
 			"ansis": "https://anzsoil.org/def/au/domain/",
 			"sosa": "http://www.w3.org/ns/sosa/",
 			"xs": "https://www.w3.org/TR/xmlschema-2/#",
@@ -371,17 +371,17 @@
 				"Site": {
 					"range@type": "ansis:Classification",
 					"description": "Site.",
-					"$ref": "./entities.json#/$defs/Classification"
+					"$ref": "./base.json#/$defs/Classification"
 				},
 				"SoilProfile": {
 					"range@type": "ansis:Classification",
 					"description": "Soil Profile.",
-					"$ref": "./entities.json#/$defs/Classification"
+					"$ref": "./base.json#/$defs/Classification"
 				},
 				"Substrate": {
 					"range@type": "ansis:Classification",
 					"description": "Substrate.",
-					"$ref": "./entities.json#/$defs/Classification"
+					"$ref": "./base.json#/$defs/Classification"
 				}
 			}
 		},
@@ -570,7 +570,7 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#/$defs/Classification"
+							"$ref": "./base.json#/$defs/Classification"
 						}
 					}
 				},
@@ -747,6 +747,11 @@
 							"$ref": "./base.json#/$defs/ObservableProperty"
 						}
 					]
+				},
+				"SoilSample": {
+					"description": "Soil Sample",
+					"type": "string",
+					"$ref": "./enum.json#/$defs/SoilSample_component"
 				}
 			}
 		},
@@ -1247,7 +1252,7 @@
 			"title": "site design",
 			"description": "Overall design of sampling at the site e.g. ASLS, grid, transect.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Classification"
+			"$ref": "./base.json#/$defs/Classification"
 		},
 		"designSurvey": {
 			"@id": "ansis:design-survey",
@@ -1255,7 +1260,7 @@
 			"title": "survey design",
 			"description": "Overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Classification"
+			"$ref": "./base.json#/$defs/Classification"
 		},
 		"designation": {
 			"@id": "ansis:designation",
@@ -1273,7 +1278,7 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#/$defs/Classification"
+							"$ref": "./base.json#/$defs/Classification"
 						}
 					}
 				},
@@ -1903,7 +1908,7 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#/$defs/Classification"
+							"$ref": "./base.json#/$defs/Classification"
 						}
 					}
 				},
@@ -1928,7 +1933,7 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#/$defs/Classification"
+							"$ref": "./base.json#/$defs/Classification"
 						}
 					}
 				},
@@ -1961,7 +1966,7 @@
 					],
 					"properties": {
 						"result": {
-							"$ref": "./entities.json#/$defs/Classification"
+							"$ref": "./base.json#/$defs/Classification"
 						}
 					}
 				},
@@ -2651,7 +2656,7 @@
 			"title": "purpose",
 			"description": "Purpose of or reason for a site or activity. For example, why a Land Survey or Soil Site was established; why a profile was created; or why a site was visited.",
 			"type": "object",
-			"$ref": "./entities.json#/$defs/Classification"
+			"$ref": "./base.json#/$defs/Classification"
 		},
 		"sampling": {
 			"@id": "ansis:relatedActivity",

@@ -6,7 +6,7 @@
 	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl and http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf.",
 	"type": "null",
 	"$defs": {
-		"curiPrefix": {
+		"_curiPrefix": {
 			"sosa": "http://www.w3.org/ns/sosa/",
 			"xs": "https://www.w3.org/TR/xmlschema-2/#",
 			"geo": "http://www.opengis.net/ont/geosparql#"

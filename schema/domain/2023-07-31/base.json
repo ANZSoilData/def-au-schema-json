@@ -5,7 +5,7 @@
 	"description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
 	"type": "null",
 	"$defs": {
-		"curiPrefix": {
+		"_curiPrefix": {
 			"xs": "https://www.w3.org/TR/xmlschema-2/#",
 			"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
 			"foaf": "http://xmlns.com/foaf/0.1/#"
@@ -57,6 +57,36 @@
 			"title": "Dublin Core Source",
 			"description": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.",
 			"type": "string"
+		},
+		"Classification": {
+			"@id": "ansis:SoilClassification",
+			"title": "ANSIS Classification",
+			"description": "The classifier for an entity - used when an ANSIS vocabulary is not available but a formal vocabulary (the `source`) does, or should, exist.",
+			"$comment": "Expands scope of ansis:SoilClassification to support the classification of other entity types.",
+			"type": "object",
+			"required": [
+				"type",
+				"value",
+				"source"
+			],
+			"_preferred": [
+			],
+			"properties": {
+				"id": {
+					"$ref": "./base.json#/$defs/id"
+				},
+				"type": {
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:Classification"
+				},
+				"value": {
+					"$ref": "./properties.json#/$defs/value/$defs/String",
+					"type": "string"
+				},
+				"source": {
+					"$ref": "./base.json#/$defs/source"
+				}
+			}
 		},
 		"ObservableProperty": {
 			"title": "Observable Property",
