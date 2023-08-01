@@ -6,7 +6,7 @@
 	"$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
 	"type": "null",
 	"$defs": {
-		"curiPrefix": {
+		"_curiPrefix": {
 			"ansis": "https://anzsoil.org/def/au/domain/",
 			"asc": "http://anzsoil.org/def/au/asc/",
 			"asls": "https://anzsoil.org/def/au/domain/asls-code/",
@@ -4817,6 +4817,50 @@
 				{
 					"const": "sp:soil-water-permeability-4",
 					"description": "Highly permeable"
+				}
+			]
+		},
+		"SoilPermeability": {
+			"@id": "sp:Soil-permeability",
+			"title": "Permeability",
+			"description": "Permeability is independent of climate and drainage, and – as applied to a soil – is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink–swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "sp:soil-water-permeability-1",
+					"description": "Very slowly permeable"
+				},
+				{
+					"const": "sp:soil-water-permeability-2",
+					"description": "Slowly permeable"
+				},
+				{
+					"const": "sp:soil-water-permeability-3",
+					"description": "Moderately permeable"
+				},
+				{
+					"const": "sp:soil-water-permeability-4",
+					"description": "Highly permeable"
+				}
+			]
+		},
+		"SoilSample_component": {
+			"title": "Soil Sample - component",
+			"description": "The component of the soil - soil particle size fraction - represented by the sample.",
+			"$comment": "Informal vocabulary.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "x:CF",
+					"description": "coarse fragments, >2mm"
+				},
+				{
+					"const": "x:FE",
+					"description": "fine earth, <2mm"
+				},
+				{
+					"const": "x:WS",
+					"description": "whole soil, including fine earth, coarse fragments and organic matter"
 				}
 			]
 		},
