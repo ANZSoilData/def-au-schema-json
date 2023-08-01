@@ -1301,7 +1301,7 @@
 					"$ref": "./properties.json#/$defs/abundance/$defs/Mottles"
 				},
 				"colour": {
-					"$ref": "./properties.json#/$defs/colour/$defs/Soil"
+					"$ref": "./properties.json#/$defs/colour/$defs/Mottles"
 				},
 				"contrast": {
 					"$ref": "./properties.json#/$defs/contrast"
@@ -1513,46 +1513,6 @@
 				}
 			}
 		},
-		"HorizonDesignation": {
-			"@id": "ansis:HorizonDesignation",
-			"title": "ANSIS Soil Horizon Designation",
-			"description": "Soil horizon designation. ",
-			"type": "object",
-			"required": [
-				"type",
-				"designationMaster"
-			],
-			"ansisPreferred": [
-				"designationPrefix",
-				"designationSubdivision",
-				"designationSuffix"
-			],
-			"properties": {
-				"id": {
-					"$ref": "./base.json#/$defs/id"
-				},
-				"type": {
-					"$ref": "./base.json#/$defs/type",
-					"const": "ansis:HorizonDesignation"
-				},
-				"designationPrefix": {
-					"$ref": "./properties.json#/$defs/designationPrefix"
-				},
-				"designationSubdivision": {
-					"$ref": "./properties.json#/$defs/designationSubdivision"
-				},
-				"designationSuffix": {
-                    "type": "array",
-                    "items": {
-					    "$ref": "./properties.json#/$defs/designationSuffix"
-                    }
-				},
-				"designationMaster": {
-					"$ref": "./properties.json#/$defs/designationMaster"
-				}
-			},
-			"additionalProperties": false
-		},
 		"SoilColour": {
 			"@id": "ansis:SoilColour",
 			"title": "ANSIS Soil Colour",
@@ -1577,13 +1537,128 @@
 				"moistureStatus": {
 					"$ref": "./properties.json#/$defs/moistureStatus/$defs/SoilColour"
 				},
-				"colourValue": {
-					"$ref": "./properties.json#/$defs/value/$defs/String"
-				},
 				"colourModel": {
-					"$ref": "./properties.json#/$defs/colourModel"
+					"$ref": "./properties.json#/$defs/colourModel/$defs/Soil"
 				}
 			},
+			"allOf": [
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-munsell"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-japan"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-rgb"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/RGB"
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-term"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Term"
+					}
+				}
+			],
+			"additionalProperties": false
+		},
+		"MottleColour": {
+			"@id": "ansis:SoilColour",
+			"title": "ANSIS Soil Colour",
+			"description": "Undefined.",
+			"type": "object",
+			"required": [
+				"type",
+				"colourValue",
+				"colourModel"
+			],
+			"ansisPreferred": [
+				"moistureStatus"
+			],
+			"properties": {
+				"id": {
+					"$ref": "./base.json#/$defs/id"
+				},
+				"type": {
+					"$ref": "./base.json#/$defs/type",
+					"const": "ansis:MottleColour"
+				},
+				"moistureStatus": {
+					"$ref": "./properties.json#/$defs/moistureStatus/$defs/SoilColour"
+				},
+				"colourModel": {
+					"$ref": "./properties.json#/$defs/colourModel/$defs/Mottles"
+				}
+			},
+			"allOf": [
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-munsell"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-japan"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"colourModel": {
+								"const": "x:colour-mottle"
+							}
+						}
+					},
+					"then": {
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Mottles"
+					}
+				}
+			],
 			"additionalProperties": false
 		},
 		"SoilPlasticity": {

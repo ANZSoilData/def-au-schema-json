@@ -669,6 +669,29 @@
 				}
 			]
 		},
+		"ColourModel_Mottles": {
+			"title": "Colour Model (Mottles)",
+			"description": "Colour models used to establish and record soil colour values for mottles.",
+			"$comment": "Informal vocabulary.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "x:colour-munsell",
+					"description": "Munsell Soil Colour",
+					"$comment": "Munsell Colour Company (2000). Munsell Soil Color Charts. Munsell Color Co.: Baltimore, MD"
+				},
+				{
+					"const": "x:colour-japan",
+					"description": "Japanese Soil Color",
+					"$comment": "Takehara, H., Oyama, M. (1970). Standard Soil Color Charts. Japan: Japanese Ministry of Agriculture and Forestry, Research Council for Agriculture, Forestry and Fisheries."
+				},
+				{
+					"const": "x:colour-mottle",
+					"description": "Colour Term",
+					"$comment": "E.g. 'brown', 'gley' or 'dark'."
+				}
+			]
+		},
 		"ConsistencePlasticityDegree": {
 			"@id": "sp:Consistence-plasticity-degree",
 			"title": "Plasticity Degree",
@@ -1671,126 +1694,6 @@
 				{
 					"const": "lf:status-of-geomorphological-activity-U",
 					"description": "Unspecified"
-				}
-			]
-		},
-		"HorizonCode": {
-			"@id": "sp:Horizon-code",
-			"title": "Type of soil horizon",
-			"description": "A soil horizon is a layer of soil, approximately parallel to the land surface, with morphological properties different from layers below and/or above it. Tongues of material from one horizon may penetrate into adjacent horizons. Give horizon notation as described below.\r\n\r\nAs horizon notation is deduced from the profile description data (Northcote 1979) and in some instances laboratory data, record it after the profile is described. Horizons may be difficult to name, but should be named in the field. Opinions formed at the time of description are useful for later reference.\r\n\r\nWith regard to horizon notation, the long-established usage in horizon designation is adopted. Emphasis is on factual objective notation rather than assumed genesis, as genetic implications are often uncertain and difficult to establish. Thus the notation E indicating eluvial horizon (International Society of Soil Science 1967) has not been used, even though this has been adopted by a number of overseas organisations, for example Hodgson (1974), Soil Survey Staff (1990).",
-			"type": "string",
-			"oneOf": [
-				{
-					"const": "sp:horizons-A",
-					"description": "A horizons"
-				},
-				{
-					"const": "sp:horizons-B",
-					"description": "B horizons"
-				},
-				{
-					"const": "sp:horizons-C",
-					"description": "C horizons"
-				},
-				{
-					"const": "sp:horizons-D",
-					"description": "D horizons"
-				},
-				{
-					"const": "sp:horizons-O",
-					"description": "O horizons"
-				},
-				{
-					"const": "sp:horizons-P",
-					"description": "P horizons"
-				},
-				{
-					"const": "sp:horizons-R",
-					"description": "R horizons"
-				}
-			]
-		},
-		"HorizonSuffix": {
-			"@id": "sp:Horizon-suffix",
-			"title": "Horizon suffixes",
-			"description": "The horizon's alphabetic suffix is used to further define the horizon. It always comes after the numeric subdivision except for suffix p, where the number always follows the letter (e.g. Ap2).",
-			"type": "string",
-			"oneOf": [
-				{
-					"const": "sp:horizon-suffix-b",
-					"description": "Horizon suffix b"
-				},
-				{
-					"const": "sp:horizon-suffix-c",
-					"description": "Horizon suffix c"
-				},
-				{
-					"const": "sp:horizon-suffix-d",
-					"description": "Horizon suffix d"
-				},
-				{
-					"const": "sp:horizon-suffix-e",
-					"description": "Horizon suffix e"
-				},
-				{
-					"const": "sp:horizon-suffix-f",
-					"description": "Horizon suffix f"
-				},
-				{
-					"const": "sp:horizon-suffix-g",
-					"description": "Horizon suffix g"
-				},
-				{
-					"const": "sp:horizon-suffix-h",
-					"description": "Horizon suffix h"
-				},
-				{
-					"const": "sp:horizon-suffix-j",
-					"description": "Horizon suffix j"
-				},
-				{
-					"const": "sp:horizon-suffix-k",
-					"description": "Horizon suffix k"
-				},
-				{
-					"const": "sp:horizon-suffix-m",
-					"description": "Horizon suffix m"
-				},
-				{
-					"const": "sp:horizon-suffix-p",
-					"description": "Horizon suffix p"
-				},
-				{
-					"const": "sp:horizon-suffix-q",
-					"description": "Horizon suffix q"
-				},
-				{
-					"const": "sp:horizon-suffix-r",
-					"description": "Horizon suffix r"
-				},
-				{
-					"const": "sp:horizon-suffix-s",
-					"description": "Horizon suffix s"
-				},
-				{
-					"const": "sp:horizon-suffix-t",
-					"description": "Horizon suffix t"
-				},
-				{
-					"const": "sp:horizon-suffix-w",
-					"description": "Horizon suffix w"
-				},
-				{
-					"const": "sp:horizon-suffix-x",
-					"description": "Horizon suffix x"
-				},
-				{
-					"const": "sp:horizon-suffix-y",
-					"description": "Horizon suffix y"
-				},
-				{
-					"const": "sp:horizon-suffix-z",
-					"description": "Horizon suffix z"
 				}
 			]
 		},
