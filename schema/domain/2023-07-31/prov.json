@@ -4,11 +4,11 @@
 	"title": "PROV Entity Schema",
 	"description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
 	"type": "null",
+	"_curiPrefix": {
+		"prov": "http://www.w3.org/ns/prov#",
+		"proj": "https://linked.data.gov.au/def/project#"
+	},
 	"$defs": {
-		"_curiPrefix": {
-			"prov": "http://www.w3.org/ns/prov#",
-			"proj": "https://linked.data.gov.au/def/project#"
-		},
 		"Organization": {
 			"@id": "prov:Organization",
 			"title": "PROV Organization",

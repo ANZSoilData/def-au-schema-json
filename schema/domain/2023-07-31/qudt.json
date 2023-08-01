@@ -4,11 +4,11 @@
 	"title": "QUDT JSON Objects",
 	"description": "Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair.",
 	"type": "null",
+	"_curiPrefix": {
+		"qudt": "http://qudt.org/schema/qudt/",
+		"unit": "https://qudt.org/2.1/vocab/unit/"
+	},
 	"$defs": {
-		"_curiPrefix": {
-			"qudt": "http://qudt.org/schema/qudt/",
-			"unit": "https://qudt.org/2.1/vocab/unit/"
-		},
 		"QuantityValue": {
 			"@id": "qudt:QuantityValue",
 			"title": "QUDT QuantityValue",

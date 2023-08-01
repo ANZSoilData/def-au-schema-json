@@ -5,6 +5,13 @@
     "description": "JSON Schema definitions of the complete list of soil physical properties defined in the ANSIS Domain Ontology.",
     "$comment": "Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.)",
     "type": "object",
+	"_curiPrefix": {
+		"nil": "http://www.opengis.net/def/nil/OGC/0/",
+		"qudt": "http://qudt.org/schema/qudt/",
+		"spmile": "http://anzsoil.org/def/au/spm/spmile/",
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"unit": "https://qudt.org/2.1/vocab/unit/"
+	},
     "required": [],
     "minProperties": 1,
     "additionalProperties": false,

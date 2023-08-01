@@ -5,10 +5,10 @@
 	"description": "JSON Schema definitions of the complete list of entities (features in GIS speak) defined in or imported by the ANSIS Domain Ontology.",
 	"$comment": "Instances of entities can be created/validated using the entity-instance and entity-instance-collection schema.",
 	"type": "null",
+	"_curiPrefix": {
+		"ansis": "https://anzsoil.org/def/au/domain/"
+	},
 	"$defs": {
-		"_curiPrefix": {
-			"ansis": "https://anzsoil.org/def/au/domain/"
-		},
 		"Site": {
 			"@id": [
 				"ansis:LandsurveySite",

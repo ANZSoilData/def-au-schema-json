@@ -5,15 +5,15 @@
 	"description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
 	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
 	"type": "null",
+	"_curiPrefix": {
+		"ansis": "https://anzsoil.org/def/au/domain/",
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
 	"$defs": {
-		"_curiPrefix": {
-			"ansis": "https://anzsoil.org/def/au/domain/",
-			"sosa": "http://www.w3.org/ns/sosa/",
-			"xs": "https://www.w3.org/TR/xmlschema-2/#",
-			"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-			"skos": "http://www.w3.org/2004/02/skos/core#",
-			"qudt": "http://qudt.org/schema/qudt/"
-		},
 		"abundance": {
 			"@id": "ansis:abundance",
 			"range@type": [

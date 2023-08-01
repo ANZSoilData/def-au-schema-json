@@ -4,12 +4,12 @@
 	"title": "ANSIS JSON Base Schema",
 	"description": "Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective.",
 	"type": "null",
+	"_curiPrefix": {
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"foaf": "http://xmlns.com/foaf/0.1/#"
+	},
 	"$defs": {
-		"_curiPrefix": {
-			"xs": "https://www.w3.org/TR/xmlschema-2/#",
-			"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-			"foaf": "http://xmlns.com/foaf/0.1/#"
-		},
 		"id": {
 			"range@type": "xs:string",
 			"title": "ANSIS Object Identifier",
