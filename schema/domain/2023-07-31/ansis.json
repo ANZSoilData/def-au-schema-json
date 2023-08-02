@@ -31,7 +31,7 @@
 						"$ref": "./prov.json#/$defs/Organization"
 					}
 				},
-            	"people": {
+            	"persons": {
 					"type": "array",
 					"items": {
 						"$ref": "./prov.json#/$defs/Person"
