@@ -88,11 +88,8 @@
                                     },
                                     "colour": [
                                         {
-                                            "result": {
-                                                "type": "ansis:SoilColour",
-                                                "colourModel": "x:colour-munsell",
-                                                "colourValue": "10Y 5/5"
-                                            }
+                                            "colourModel": "x:colour-munsell",
+                                            "result": "10Y 5/5"
                                         }
                                     ],
                                     "ammoniumN": [
@@ -112,11 +109,8 @@
                                                 "result": "sp:mottle-abundance-1"
                                             },
                                             "colour": {
-                                                "result": {
-                                                    "type": "ansis:MottleColour",
-                                                    "colourModel": "x:colour-mottle",
-                                                    "colourValue": "sp:mottle-colour-D"
-                                                }
+                                                "colourModel": "x:colour-mottle",
+                                                "result": "sp:mottle-colour-D"
                                             }
                                         }
                                     ]
