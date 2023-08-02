@@ -14,7 +14,6 @@
 	},
     "required": [],
     "minProperties": 1,
-    "additionalProperties": false,
     "properties": {
         "bulkDensity": {
             "type": "array",

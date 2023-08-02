@@ -14,7 +14,6 @@
 	},
 	"required": [
 	],
-	"additionalProperties": false,
 	"properties": {
 		"ammoniumN": {
 			"type": "array",
