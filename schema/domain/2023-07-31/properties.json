@@ -2648,10 +2648,7 @@
 			"_refType": "ansis:SoilSample"
 		},
 		"relatedSite": {
-			"@id": [
-				"ansis:relatedLandsurveySite",
-				"ansis:relatedSite"
-			],
+			"@id": "ansis:relatedSite",
 			"range@type": [
 				"ansis:SoilSite"
 			],

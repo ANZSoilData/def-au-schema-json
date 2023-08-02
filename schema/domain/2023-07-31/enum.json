@@ -29,14 +29,6 @@
 			"type": "string",
 			"oneOf": [
 				{
-					"const": "ansis:LandSurveySite",
-					"description": "Land Survey Site"
-				},
-				{
-					"const": "ansis:SoilBody",
-					"description": "Soil Body"
-				},
-				{
 					"const": "ansis:SoilHorizon",
 					"description": "Soil Horizon"
 				},
@@ -63,10 +55,6 @@
 				{
 					"const": "ansis:Substrate",
 					"description": "Substrate"
-				},
-				{
-					"const": "ansis:Treatment",
-					"description": "Treatment"
 				}
 			]
 		},
