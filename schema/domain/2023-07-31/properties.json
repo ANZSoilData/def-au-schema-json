@@ -603,14 +603,15 @@
 			"description": "Colour values with regular expression patterns to ensure the structure of the value conforms to a given colour model: RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term.",
 			"$defs": {
 				"Munsell": {
-					"type": "string",
-					"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\\/$)"
+					"properties": {
+						"colourValue": {
+							"type": "string",
+							"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\\/$)"
+						}
+					}
 				},
 				"RGB": {
-					"required": [
-						"colourValue"
-					],
-					"properties": { 
+					"properties": {
 						"colourValue": {
 							"type": "string",
 							"pattern": "(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b\\)$)|(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%\\)$)"
@@ -618,10 +619,7 @@
 					}
 				},
 				"Mottles": {
-					"required": [
-						"colourValue"
-					],
-					"properties": { 
+					"properties": {
 						"colourValue": {
 							"type": "string",
 							"$ref": "./enum.json#/$defs/MottleColour"
@@ -629,10 +627,7 @@
 					}
 				},
 				"Term": {
-					"required": [
-						"colourValue"
-					],
-					"properties": { 
+					"properties": {
 						"colourValue": {
 							"type": "string"
 						}

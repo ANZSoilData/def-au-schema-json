@@ -450,7 +450,7 @@
 					"$ref": "./properties-physical.json"
 				}
 			],
-			"additionalProperties": false
+			"additionalProperties": true
 		},
 		"SoilHorizon": {
 			"@id": "ansis:SoilHorizon",
@@ -1579,8 +1579,8 @@
 			"type": "object",
 			"required": [
 				"type",
-				"colourValue",
-				"colourModel"
+				"colourModel",
+                "colourValue"
 			],
 			"_preferred": [
 				"moistureStatus"
@@ -1598,7 +1598,8 @@
 				},
 				"colourModel": {
 					"$ref": "./properties.json#/$defs/colourModel/$defs/Mottles"
-				}
+				},
+                "colourValue": true
 			},
 			"allOf": [
 				{
@@ -1647,7 +1648,8 @@
 			"type": "object",
 			"required": [
 				"type",
-				"colourModel"
+				"colourModel",
+                "colourValue"
 			],
 			"_preferred": [
 				"moistureStatus"
@@ -1665,7 +1667,8 @@
 				},
 				"colourModel": {
 					"$ref": "./properties.json#/$defs/colourModel/$defs/Soil"
-				}
+				},
+                "colourValue": true
 			},
 			"allOf": [
 				{
@@ -1677,14 +1680,7 @@
 						}
 					},
 					"then": {
-						"required": [
-							"colourValue"
-						],
-						"properties": {
-							"colourValue": {
-								"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
-							}
-						}
+						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
 					}
 				},
 				{
@@ -1696,15 +1692,8 @@
 						}
 					},
 					"then": {
-						"required": [
-							"colourValue"
-						],
-						"properties": {
-							"colourValue": {
-								"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
-							}
-						}
-					}
+                        "$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+                    }
 				},
 				{
 					"if": {
@@ -1715,15 +1704,8 @@
 						}
 					},
 					"then": {
-						"required": [
-							"colourValue"
-						],
-						"properties": {
-							"colourValue": {
-								"$ref": "./properties.json#/$defs/colourValue/$defs/RGB"
-							}
-						}
-					}
+                        "$ref": "./properties.json#/$defs/colourValue/$defs/RGB"
+                    }
 				},
 				{
 					"if": {
@@ -1734,15 +1716,8 @@
 						}
 					},
 					"then": {
-						"required": [
-							"colourValue"
-						],
-						"properties": {
-							"colourValue": {
-								"$ref": "./properties.json#/$defs/colourValue/$defs/Term"
-							}
-						}
-					}
+                        "$ref": "./properties.json#/$defs/colourValue/$defs/Term"
+                    }
 				}
 			],
 			"additionalProperties": false
