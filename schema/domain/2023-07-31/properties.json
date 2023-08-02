@@ -2631,21 +2631,21 @@
 			"range@type": "ansis:SoilSurface",
 			"title": "related soil surface",
 			"description": "Soil surface of this entity.",
-			"$ref": "./base.json#/$defs/pointer"
+			"$ref": "./entities.json#/$defs/SoilSurface"
 		},
 		"relatedProject": {
 			"@id": "ansis:relatedProject",
-			"range@type": "proj:Project",
 			"title": "related project",
 			"description": "Link to project that supported this activity, either establishing a Land Survey or Soil Site, or requiring a Site Visit.",
-			"$ref": "./base.json#/$defs/pointer"
+			"$ref": "./base.json#/$defs/pointer",
+			"_refType": "proj:Project"
 		},
 		"relatedSample": {
 			"@id": "ansis:relatedSample",
-			"range@type": "ansis:SoilSample",
 			"title": "related sample",
 			"description": "Link to a sample related to this context.",
-			"$ref": "./base.json#/$defs/pointer"
+			"$ref": "./base.json#/$defs/pointer",
+			"_refType": "ansis:SoilSample"
 		},
 		"relatedSite": {
 			"@id": [
@@ -2653,12 +2653,12 @@
 				"ansis:relatedSite"
 			],
 			"range@type": [
-				"ansis:LandsurveySite",
 				"ansis:SoilSite"
 			],
 			"title": "related site",
 			"description": "Link to a land survey or soil site related to this context.",
-			"$ref": "./base.json#/$defs/pointer"
+			"$ref": "./base.json#/$defs/pointer",
+			"_refType": "ansis:SoilSite"
 		},
 		"relativeInclination": {
 			"@id": "ansis:relative-inclination",
@@ -3359,11 +3359,11 @@
 		},
 		"visitor": {
 			"@id": "ansis:visitor",
-			"range@type": "prov:Person",
 			"title": "visitor",
 			"description": "Site visitor, for the purpose of sampling or observation.",
 			"type": "object",
-			"$ref": "./prov.json#/$defs/Person"
+			"$ref": "./base.json#/$defs/pointer",
+			"_refType": "prov:Person"
 		},
 		"waterRepellence": {
 			"@id": "ansis:waterRepellence",

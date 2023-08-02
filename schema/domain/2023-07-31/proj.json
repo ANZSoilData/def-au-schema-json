@@ -26,12 +26,14 @@
 					"const": "proj:Project"
 				},
 				"leader": {
-					"$ref": "./prov.json#/$defs/Organization"
+					"$ref": "./base.json#/$defs/pointer",
+					"_refType": "prov:Organization"
 				},
 				"sponsor": {
 					"type": "array",
 					"items": {
-						"$ref": "./prov.json#/$defs/Organization"
+						"$ref": "./base.json#/$defs/pointer",
+						"_refType": "prov:Organization"
 					}
 				},
 				"designSurvey": {
