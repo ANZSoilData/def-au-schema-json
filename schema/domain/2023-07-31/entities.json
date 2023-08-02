@@ -353,7 +353,6 @@
 					],
 					"_preferred": [
 						"biological",
-						"carbon",
 						"carbonateEffervescence",
 						"colour",
 						"coarseFragments",
@@ -370,12 +369,6 @@
 						"type": {
 							"$ref": "./base.json#/$defs/type",
 							"const": "ansis:SoilLayer"
-						},
-						"carbon": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/carbon"
-							}
 						},
 						"carbonateEffervescence": {
 							"type": "array",
@@ -504,7 +497,6 @@
 						"designation"
 					],
 					"_preferred": [
-						"carbon",
 						"carbonateEffervescence",
 						"colour",
 						"coarseFragments",
@@ -527,12 +519,6 @@
 						},
 						"boundaryShape": {
 							"$ref": "./properties.json#/$defs/boundaryShape"
-						},
-						"carbon": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/carbon"
-							}
 						},
 						"carbonateEffervescence": {
 							"type": "array",
@@ -1730,7 +1716,11 @@
 						}
 					},
 					"then": {
-						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+						"properties": {
+							"colourValue": {
+								"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+							}
+						}
 					}
 				},
 				{

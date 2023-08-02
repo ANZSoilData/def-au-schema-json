@@ -475,31 +475,6 @@
 				}
 			]
 		},
-		"carbon": {
-			"@id": "ansis:carbon",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "carbon",
-			"description": "Soil carbon.",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"result"
-					],
-					"properties": {
-						"result": {
-							"$ref": "./qudt.json#/$defs/QuantityValue"
-						}
-					}
-				},
-				{
-					"$ref": "./base.json#/$defs/ObservableProperty"
-				}
-			]
-		},
 		"carbonateEffervescence": {
 			"@id": "ansis:carbonate-effervescence",
 			"range@type": [
@@ -657,15 +632,8 @@
 			"description": "Colour values with regular expression patterns to ensure the structure of the value conforms to a given colour model: RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term.",
 			"$defs": {
 				"Munsell": {
-					"required": [
-						"colourValue"
-					],
-					"properties": { 
-						"colourValue": {
-							"type": "string",
-							"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\\/$)"
-						}
-					}
+					"type": "string",
+					"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\\/$)"
 				},
 				"RGB": {
 					"required": [
