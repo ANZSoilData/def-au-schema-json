@@ -25,7 +25,21 @@
 			"type": "string",
 			"format": "iri"
 		},
-		"label": {
+		"colourModel": {
+			"range@type": "xs:string",
+			"title": "colour model",
+			"description": "The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term.",
+			"$defs": {
+				"Mottles": {
+					"$ref": "./enum.json#/$defs/ColourModel_Mottles"
+				},
+				"Soil": {
+					"$ref": "./enum.json#/$defs/ColourModel"
+				}
+			}
+			
+		},
+        "label": {
 			"@id": "rdfs:label",
 			"range@Type": "xs:string",
 			"title": "RDF Schema Label",
@@ -58,6 +72,53 @@
 			"description": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.",
 			"type": "string"
 		},
+        "value": {
+            "@id": "ansis:value",
+            "range@type": [
+                "xs:boolean",
+                "xs:dateTime",
+                "xs:decimal",
+                "xs:integer",
+                "xs:string"
+            ],
+            "title": "value",
+            "description": "Simple literal value.",
+            "$defs": {
+                "Boolean": {
+                    "range@type": "xs:boolean",
+                    "type": "boolean",
+                    "description": "Boolean."
+                },
+                "DateTime": {
+                    "range@type": "xs:boolean",
+                    "type": "string",
+                    "oneOf": [
+                        {
+                            "format": "date"
+                        },
+                        {
+                            "format": "date-time"
+                        }
+                    ],
+                    "description": "Time and/or date."
+                },
+                "Integer": {
+                    "range@type": "xs:integer",
+                    "type": "integer",
+                    "description": "Integer."
+                },
+                "Number": {
+                    "range@type": "xs:decimal",
+                    "type": "number",
+                    "description": "Number."
+                },
+                "String": {
+                    "range@type": "xs:string",
+                    "type": "string",
+                    "description": "String."
+                }
+            }
+        },
 		"Classification": {
 			"@id": "ansis:SoilClassification",
 			"title": "ANSIS Classification",
@@ -80,7 +141,7 @@
 					"const": "ansis:Classification"
 				},
 				"value": {
-					"$ref": "./properties.json#/$defs/value/$defs/String",
+					"$ref": "./base.json#/$defs/value/$defs/String",
 					"type": "string"
 				},
 				"source": {
@@ -88,12 +149,42 @@
 				}
 			}
 		},
+		"Colour": {
+			"@id": "ansis:SoilColour",
+			"title": "ANSIS Soil Colour",
+			"description": "Undefined.",
+			"type": "object",
+			"required": [
+				"colourModel",
+                "result"
+			],
+			"_preferred": [
+				"moistureStatus"
+			],
+			"properties": {
+				"moistureStatus": {
+					"$ref": "./properties.json#/$defs/ast/$defs/moistureStatus/$defs/Colour"
+				},
+				"colourModel": {
+					"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
+				},
+                "result": {
+					"$ref": "./sosa.json#/$defs/result",
+					"$comment": "Colour result value rules are set for each indidual colour model."
+				}
+			},
+			"additionalProperties": false
+		},
 		"ObservableProperty": {
 			"title": "Observable Property",
 			"description": "A collection SOSA properties for an observable property value.",
 			"$comment": "Equivalent to a sosa:Observation but the observedProperty is a key in a JSON object and the feature of interest is that object.",
 			"type": "object",
 			"properties": {
+				"result": {
+					"$ref": "./sosa.json#/$defs/result",
+					"$comment": "Observation result value rules are set for each indidual property."
+				},
 				"qualityOfObservation": {
 					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				},
