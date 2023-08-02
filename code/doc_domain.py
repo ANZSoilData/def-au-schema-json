@@ -87,7 +87,7 @@ def json_schema_to_markdown(json_schema_path, json_schema_file, json_schema_inst
         if def_lines != []:
             lines.append("## Entities\n")
             lines.append("\n".join(def_lines))
-    
+
     if contains_enum:
         lines.append("## Enumerations\n")
         for enum_key, enum_value in schema_definitions.items():
@@ -121,7 +121,7 @@ def json_enum_to_markdown(json_schema_path, json_enum_file, include_header=True)
 
         if "$comment" in enum_root and isinstance(enum_root["$comment"], str):
             lines.append("> " + enum_root["$comment"] + "\n")
-        
+
         header_level = 1
     else:
         lines.append("## Enumerations")
@@ -193,9 +193,9 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                 target_property_preferred = "Y"
             else:
                 target_property_preferred = ""
-                
+
             target_reference = []
-            
+
             if "$ref" in prop_value and isinstance(prop_value["$ref"], str):
                 target_reference.append(prop_value)
                 ref_count = ""
@@ -218,7 +218,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
 
                 target_property_dict = open_json_property(
                     json_schema_path, json_schema_file, target_reference)
-                
+
                 target_property = target_property_dict["value"]
                 nested_property = target_property_dict["nestedValue"]
                 target_range = target_property_dict["range@type"]
@@ -251,7 +251,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                     final_property_type = nested_property_type
                 else:
                     final_property_type = target_property_type
-                            
+
                 if "$comment" in nested_property and isinstance(nested_property["$comment"], str) and nested_property["$comment"] != "":
                     nested_property_comment = " " + nested_property["$comment"]
 
@@ -274,7 +274,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                 nested_property_enum_ref_string = dpath.get(nested_property, "/$ref", default="")
                 if isinstance(nested_property_enum_ref_string,str) and "enum" in nested_property_enum_ref_string:
                     target_property_enum_ref.append(nested_property_enum_ref_string)
-                
+
                 target_property_enum_ref_string = dpath.get(target_property, "/allOf/*/properties/hasResult/$ref", default="")
                 if isinstance(target_property_enum_ref_string,str) and "enum" in target_property_enum_ref_string:
                     target_property_enum_ref.append(target_property_enum_ref_string)
@@ -296,7 +296,7 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_path, json
                         nested_property_enum_ref_string = dpath.get(item, "/$ref", default="")
                         if isinstance(nested_property_enum_ref_string,str) and "enum" in nested_property_enum_ref_string:
                             target_property_enum_ref.append(nested_property_enum_ref_string)
-                
+
                 if target_property_enum_ref != []:
                     for item in target_property_enum_ref:
                         target_property_enum = open_json_enum(
@@ -354,7 +354,7 @@ def process_enum_definitions (enum_key, enum_value, lines, enum_root, header_lev
                     enum_location = "[" + item + "](" + enum_root["@context"].get(enum_uri_prefix) + item.split(":")[1] + ")"
                 else:
                     enum_location = item
-                
+
                 enum_locations.append(enum_location)
 
             lines.append("**ANSIS Vocabulary Location:** " + "; ".join(enum_locations) + "\n")
@@ -451,7 +451,7 @@ def open_json_property(json_schema_path, json_schema_file, json_pointer):
     for rangeType in json_pointer:
         rangeType_list = rangeType["$ref"].split("#")
         rangeType_anchor = rangeType_list[1]
-        for def_key, def_value in schema_definitions.items():                
+        for def_key, def_value in schema_definitions.items():
             if def_value["$anchor"] == rangeType_anchor:
                 range_list_value = dpath.get(def_value, "/range@type", default = [])
                 break
@@ -510,18 +510,18 @@ def open_json_enum(json_schema_path, json_schema_file, json_pointer):
 
     return def_dict
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "base.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "base.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "entities.json", "entity-instance.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "entities.json", "entity-instance.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "geo.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "geo.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "prov.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "prov.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "qudt.json", "", True)
+# json_schema_to_markdown("schema/domain/2023-07-31/", "qudt.json", "", True)
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "skos.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "skos.json")
 
-json_schema_to_markdown("schema/domain/2023-06-30/", "sosa.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "sosa.json")
 
-json_enum_to_markdown("schema/domain/2023-06-30/", "enum.json")
+json_enum_to_markdown("schema/domain/2023-07-31/", "enum.json")
