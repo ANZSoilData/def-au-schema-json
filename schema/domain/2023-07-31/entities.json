@@ -335,7 +335,6 @@
 						"mottles",
 						"consistence",
 						"structures",
-						"pH",
 						"texture"
 					],
 					"properties": {
@@ -418,12 +417,6 @@
 								"$ref": "./properties.json#/$defs/segregations"
 							}
 						},
-						"pH": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/pH"
-							}
-						},
 						"relatedSample": {
 							"type": "array",
 							"items": {
@@ -479,7 +472,6 @@
 						"mottles",
 						"consistence",
 						"structures",
-						"pH",
 						"texture"
 					],
 					"properties": {
@@ -569,12 +561,6 @@
 							"type": "array",
 							"items": {
 								"$ref": "./properties.json#/$defs/segregations"
-							}
-						},
-						"pH": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/pH"
 							}
 						},
 						"relatedSample": {

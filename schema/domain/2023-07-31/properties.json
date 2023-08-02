@@ -368,9 +368,9 @@
 					"description": "Plasticity.",
 					"$ref": "./enum.json#/$defs/ConsistencePlasticityType"
 				},
-				"Site": {
+				"SoilSite": {
 					"range@type": "ansis:Classification",
-					"description": "Site.",
+					"description": "Soil Site.",
 					"$ref": "./base.json#/$defs/Classification"
 				},
 				"SoilProfile": {
@@ -499,35 +499,6 @@
 					"$ref": "./base.json#/$defs/ObservableProperty"
 				}
 			]
-		},
-		"pH": {
-			"@id": "ansis:pH",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
-			"title": "pH",
-			"description": "Alkalinity of material.",
-			"type": "object",
-            "allOf": [
-                {
-                    "required": [
-                        "result",
-                        "usedProcedure"
-                    ],
-                    "properties": {
-                        "result": {
-                            "$ref": "./qudt.json#/$defs/QuantityValue"
-                        },
-                        "usedProcedure": {
-                            "type": "string"
-                        }
-                    }
-                },
-                {
-                    "$ref": "./base.json#/$defs/ObservableProperty"
-                }
-            ]
 		},
 		"classification": {
 			"@id": "ansis:classification",
