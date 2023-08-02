@@ -2829,335 +2829,335 @@
 			"type": "string",
 			"oneOf": [
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AC",
+					"const": "subst:lithology-AC",
 					"description": "Alcrete"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AD",
+					"const": "subst:lithology-AD",
 					"description": "Adamellite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AF",
+					"const": "subst:lithology-AF",
 					"description": "Volcanic ash (fine)"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AG",
+					"const": "subst:lithology-AG",
 					"description": "Agglomerate"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AH",
+					"const": "subst:lithology-AH",
 					"description": "Anhydrite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AM",
+					"const": "subst:lithology-AM",
 					"description": "Amphibolite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AN",
+					"const": "subst:lithology-AN",
 					"description": "Andesite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AP",
+					"const": "subst:lithology-AP",
 					"description": "Aplite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AR",
+					"const": "subst:lithology-AR",
 					"description": "Arkose"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-AS",
+					"const": "subst:lithology-AS",
 					"description": "Volcanic ash (sandy)"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-BA",
+					"const": "subst:lithology-BA",
 					"description": "Basalt"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-BB",
+					"const": "subst:lithology-BB",
 					"description": "Bombs (or blocks)"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-BR",
+					"const": "subst:lithology-BR",
 					"description": "Breccia"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-C",
+					"const": "subst:lithology-C",
 					"description": "Clay"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-CG",
+					"const": "subst:lithology-CG",
 					"description": "Conglomerate"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-CH",
+					"const": "subst:lithology-CH",
 					"description": "Chert"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-CO",
+					"const": "subst:lithology-CO",
 					"description": "Coal"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-CU",
+					"const": "subst:lithology-CU",
 					"description": "Consolidated rock"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-DI",
+					"const": "subst:lithology-DI",
 					"description": "Diorite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-DM",
+					"const": "subst:lithology-DM",
 					"description": "Dolomite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-DR",
+					"const": "subst:lithology-DR",
 					"description": "Dolerite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-FC",
+					"const": "subst:lithology-FC",
 					"description": "Ferricrete"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GA",
+					"const": "subst:lithology-GA",
 					"description": "Gabbro"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GD",
+					"const": "subst:lithology-GD",
 					"description": "Granodiorite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GE",
+					"const": "subst:lithology-GE",
 					"description": "Greenstone"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GN",
+					"const": "subst:lithology-GN",
 					"description": "Granite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GR",
+					"const": "subst:lithology-GR",
 					"description": "Granulite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GS",
+					"const": "subst:lithology-GS",
 					"description": "Gneiss"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GV",
+					"const": "subst:lithology-GV",
 					"description": "Gravel"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GW",
+					"const": "subst:lithology-GW",
 					"description": "Graywacke"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-GY",
+					"const": "subst:lithology-GY",
 					"description": "Gypsum"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-HA",
+					"const": "subst:lithology-HA",
 					"description": "Halite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-HO",
+					"const": "subst:lithology-HO",
 					"description": "Hornfels"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-IG",
+					"const": "subst:lithology-IG",
 					"description": "Igneous rock"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-JA",
+					"const": "subst:lithology-JA",
 					"description": "Jasper"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-KA",
+					"const": "subst:lithology-KA",
 					"description": "Calcarenite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-KC",
+					"const": "subst:lithology-KC",
 					"description": "Calcrete"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-KL",
+					"const": "subst:lithology-KL",
 					"description": "Calcilutite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-KM",
+					"const": "subst:lithology-KM",
 					"description": "Calcareous mudstone"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-KR",
+					"const": "subst:lithology-KR",
 					"description": "Calcirudite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-KS",
+					"const": "subst:lithology-KS",
 					"description": "Calcareous sand"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-LC",
+					"const": "subst:lithology-LC",
 					"description": "Silcrete"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-LI",
+					"const": "subst:lithology-LI",
 					"description": "Limestone"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-M",
+					"const": "subst:lithology-M",
 					"description": "Same as substrate material"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MB",
+					"const": "subst:lithology-MB",
 					"description": "Marble"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MD",
+					"const": "subst:lithology-MD",
 					"description": "Microdiorite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-ME",
+					"const": "subst:lithology-ME",
 					"description": "Metamorphic rock"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MG",
+					"const": "subst:lithology-MG",
 					"description": "Microgranite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MI",
+					"const": "subst:lithology-MI",
 					"description": "Migmatite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-ML",
+					"const": "subst:lithology-ML",
 					"description": "Marl"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MS",
+					"const": "subst:lithology-MS",
 					"description": "Microsyenite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MU",
+					"const": "subst:lithology-MU",
 					"description": "Mudstone"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-MY",
+					"const": "subst:lithology-MY",
 					"description": "Mylonite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PC",
+					"const": "subst:lithology-PC",
 					"description": "Porcellanite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PE",
+					"const": "subst:lithology-PE",
 					"description": "Peridotite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PG",
+					"const": "subst:lithology-PG",
 					"description": "Pegmatite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PH",
+					"const": "subst:lithology-PH",
 					"description": "Phyllite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PL",
+					"const": "subst:lithology-PL",
 					"description": "Phonolite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PO",
+					"const": "subst:lithology-PO",
 					"description": "Porphyry"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-PY",
+					"const": "subst:lithology-PY",
 					"description": "Pyroxenite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-QP",
+					"const": "subst:lithology-QP",
 					"description": "Quartz porphyry"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-QS",
+					"const": "subst:lithology-QS",
 					"description": "Quartz sandstone"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-QU",
+					"const": "subst:lithology-QU",
 					"description": "Quartzite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-QZ",
+					"const": "subst:lithology-QZ",
 					"description": "Quartz"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-R",
+					"const": "subst:lithology-R",
 					"description": "Same as rock outcrop"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-RB",
+					"const": "subst:lithology-RB",
 					"description": "Red-brown hardpan"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-RH",
+					"const": "subst:lithology-RH",
 					"description": "Rhyolite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-S",
+					"const": "subst:lithology-S",
 					"description": "Sand"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SA",
+					"const": "subst:lithology-SA",
 					"description": "Sandstone"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SD",
+					"const": "subst:lithology-SD",
 					"description": "Detrital sedimentary rock"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SH",
+					"const": "subst:lithology-SH",
 					"description": "Shale"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SK",
+					"const": "subst:lithology-SK",
 					"description": "Scoria"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SL",
+					"const": "subst:lithology-SL",
 					"description": "Slate"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SR",
+					"const": "subst:lithology-SR",
 					"description": "Serpentinite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-ST",
+					"const": "subst:lithology-ST",
 					"description": "Schist"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-SY",
+					"const": "subst:lithology-SY",
 					"description": "Syenite"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-TR",
+					"const": "subst:lithology-TR",
 					"description": "Trachyte"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-TU",
+					"const": "subst:lithology-TU",
 					"description": "Tuff"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-UC",
+					"const": "subst:lithology-UC",
 					"description": "Unconsolidated material"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-VB",
+					"const": "subst:lithology-VB",
 					"description": "Volcanic breccia"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-VG",
+					"const": "subst:lithology-VG",
 					"description": "Volcanic glass"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-Z",
+					"const": "subst:lithology-Z",
 					"description": "Silt"
 				},
 				{
-					"const": "http://anzsoil.org/def/au/asls/substrate/lithology-ZS",
+					"const": "subst:lithology-ZS",
 					"description": "Siltstone"
 				}
 			]
