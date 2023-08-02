@@ -6,23 +6,26 @@
 	},
 	"data": [
 		{
-			"id": "site-01",
-			"type": [
-				"ansis:LandsurveySite"
-			],
+			"id": "site-00",
+			"type": "ansis:SoilSite",
 			"geometry": {
-				"result": "SRID=4283;LINESTRING(-42 24, -42 42)"
+				"result": "SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
 			},
 			"relatedProject": "#/included/projects/0"
 		},
 		{
-			"id": "site-02",
-			"type": [
-				"ansis:LandsurveySite","ansis:SoilSite"
-			],
+			"id": "site-01",
+			"type": "ansis:SoilSite",
 			"geometry": {
-				"result": "SRID=4283;LINESTRING(-42 24, -42 42)"
+				"result": "SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
 			},
+            "elevation": {
+                "result": {
+                    "value": 10,
+                    "unit": "unit:M"
+                },
+                "usedProcedure": "ls:elevation-evaluation-means-A"
+            },
 			"siteVisit": [
 				{
 					"id": "site-visit-01",
@@ -30,14 +33,21 @@
 					"startedAtTime": "2023-07-01",
 					"endedAtTime": "2023-07-02",
 					"visitor": [
-                        {
-                            "type": "prov:Person",
-                            "name": "Peter the Great"
-                        }
+                        "#/included/persons/0"
                     ],
                     "soilProfile": [
                         {
                             "type": "ansis:SoilProfile",
+                            "geometry": {
+                                "result": "SRID=4283;POINT(-42 24)"
+                            },
+                            "usedProcedure": "sp:observation-type-A",
+                            "depth": {
+                                "result": {
+                                    "value": 2,
+                                    "unit": "unit:M"
+                                }
+                            },
                             "sampling": [
                                 {
                                     "type": "sosa:Sampling",
@@ -60,6 +70,57 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "soilLayer": [
+                                {
+                                    "type": "ansis:SoilLayer",
+                                    "depthUpper": {
+                                        "result": {
+                                            "value": 0,
+                                            "unit": "unit:M"
+                                        }
+                                    },
+                                    "depthLower": {
+                                        "result": {
+                                            "value": 10,
+                                            "unit": "unit:M"
+                                        }
+                                    },
+                                    "colour": [
+                                        {
+                                            "result": {
+                                                "type": "ansis:SoilColour",
+                                                "colourModel": "x:colour-munsell",
+                                                "colourValue": "10Y 5/5"
+                                            }
+                                        }
+                                    ],
+                                    "ammoniumN": [
+                                        {
+                                            "result": {
+                                                "value": 12,
+                                                "unit": "unit:MilliGM-PER-KiloGM"
+                                            },
+                                            "usedProcedure": "scm:7C1a",
+                                            "sample": "#/data/1/siteVisit/0/soilProfile/0/sampling/0/result/0"
+                                        }
+                                    ],
+                                    "mottles": [
+                                        {
+                                            "type": "ansis:Mottles",
+                                            "abundance": {
+                                                "result": "sp:mottle-abundance-1"
+                                            },
+                                            "colour": {
+                                                "result": {
+                                                    "type": "ansis:MottleColour",
+                                                    "colourModel": "x:colour-mottle",
+                                                    "colourValue": "sp:mottle-colour-D"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
                             ]
                         }
                     ],
@@ -73,22 +134,36 @@
 		}
 	],
 	"included": {
+        "organizations": [
+            {
+                "type": "prov:Organization",
+                "name": "CSIRO"
+            },
+            {
+                "type": "prov:Organization",
+                "name": "DAFF"
+            }
+        ],
+        "persons": [
+            {
+                "type": "prov:Person",
+                "name": "Peter the Great"
+            }
+        ],
 		"projects": [
+			{
+				"id": "project-00",
+				"type": "proj:Project",
+				"leader": "#/included/organizations/0",
+				"sponsor": [
+                    "#/included/organizations/0",
+                    "#/included/organizations/1"
+                ]
+			},
 			{
 				"id": "project-01",
 				"type": "proj:Project",
-				"leader": {
-					"type": "prov:Agent",
-					"name": "Peter the Great"
-				}
-			},
-			{
-				"id": "project-02",
-				"type": "proj:Project",
-				"leader": {
-					"type": "prov:Agent",
-					"name": "Gerard the Terrible"
-				}
+				"leader": "#/included/organizations/1"
 			}
 		]
 	}
