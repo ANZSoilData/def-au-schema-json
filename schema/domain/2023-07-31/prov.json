@@ -9,6 +9,28 @@
 		"proj": "https://linked.data.gov.au/def/project#"
 	},
 	"$defs": {
+		"Agent": {
+			"@id": "prov:Agent",
+			"title": "PROV Agent",
+			"description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
+			"type": "object",
+			"required": [
+				"type"
+			],
+			"properties": {
+				"id": {
+					"$ref": "./base.json#/$defs/id"
+				},
+				"type": {
+					"$ref": "./base.json#/$defs/type",
+					"const": "prov:Agent"
+				},
+				"name": {
+					"$ref": "./base.json#/$defs/name"
+				}
+			},
+			"additionalProperties": false
+		},
 		"Organization": {
 			"@id": "prov:Organization",
 			"title": "PROV Organization",
@@ -23,7 +45,7 @@
 				},
 				"type": {
 					"$ref": "./base.json#/$defs/type",
-					"const": "prov:Agent"
+					"const": "prov:Organization"
 				},
 				"name": {
 					"$ref": "./base.json#/$defs/name"
