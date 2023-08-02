@@ -9,13 +9,12 @@
 		"ansis": "https://anzsoil.org/def/au/domain/"
 	},
 	"$defs": {
-		"Site": {
+		"SoilSite": {
 			"@id": [
-				"ansis:LandsurveySite",
 				"ansis:SoilSite"
 			],
-			"title": "ANSIS Site",
-			"description": "A site where samples and observations of the landscape (ansis:LandsurveySite) and soil (ansis:SoilSite) are carried out.",
+			"title": "ANSIS SoilSite",
+			"description": "A site where samples and observations of the landscape and soil are carried out.",
 			"type": "object",
 			"required": [
 				"type",
@@ -33,35 +32,12 @@
 					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
-					"oneOf": [
-						{
-							"type": "array",
-							"items": {
-								"enum": [
-									"ansis:LandsurveySite"
-								]
-							},
-							"minItems": 1,
-							"maxItems": 1
-						},
-						{
-							"type": "array",
-							"items": {
-								"enum": [
-									"ansis:LandsurveySite",
-									"ansis:SoilSite"
-								]
-							},
-							"minItems": 2,
-							"maxItems": 2,
-							"uniqueItems": true
-						}
-					]
+					"const": "ansis:SoilSite"
 				},
 				"ansisType": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#/$defs/ansisType/$defs/Site"
+						"$ref": "./properties.json#/$defs/ansisType/$defs/SoilSite"
 					}
 				},
 				"depthFreeWater": {
@@ -1685,7 +1661,6 @@
 			"type": "object",
 			"required": [
 				"type",
-				"colourValue",
 				"colourModel"
 			],
 			"_preferred": [
@@ -1716,6 +1691,9 @@
 						}
 					},
 					"then": {
+						"required": [
+							"colourValue"
+						],
 						"properties": {
 							"colourValue": {
 								"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
@@ -1732,7 +1710,14 @@
 						}
 					},
 					"then": {
-						"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+						"required": [
+							"colourValue"
+						],
+						"properties": {
+							"colourValue": {
+								"$ref": "./properties.json#/$defs/colourValue/$defs/Munsell"
+							}
+						}
 					}
 				},
 				{
@@ -1744,7 +1729,14 @@
 						}
 					},
 					"then": {
-						"$ref": "./properties.json#/$defs/colourValue/$defs/RGB"
+						"required": [
+							"colourValue"
+						],
+						"properties": {
+							"colourValue": {
+								"$ref": "./properties.json#/$defs/colourValue/$defs/RGB"
+							}
+						}
 					}
 				},
 				{
@@ -1756,7 +1748,14 @@
 						}
 					},
 					"then": {
-						"$ref": "./properties.json#/$defs/colourValue/$defs/Term"
+						"required": [
+							"colourValue"
+						],
+						"properties": {
+							"colourValue": {
+								"$ref": "./properties.json#/$defs/colourValue/$defs/Term"
+							}
+						}
 					}
 				}
 			],
