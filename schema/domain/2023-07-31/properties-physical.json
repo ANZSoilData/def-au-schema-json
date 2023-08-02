@@ -1,10 +1,10 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "properties-physical.json",
-    "title": "ANSIS Soil Physical Property Schema",
-    "description": "JSON Schema definitions of the complete list of soil physical properties defined in the ANSIS Domain Ontology.",
-    "$comment": "Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.)",
-    "type": "object",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "properties-physical.json",
+	"title": "ANSIS Soil Physical Property Schema",
+	"description": "JSON Schema definitions of the complete list of soil physical properties defined in the ANSIS Domain Ontology.",
+	"$comment": "Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.)",
+	"type": "object",
 	"_curiPrefix": {
 		"nil": "http://www.opengis.net/def/nil/OGC/0/",
 		"qudt": "http://qudt.org/schema/qudt/",
@@ -12,403 +12,411 @@
 		"sosa": "http://www.w3.org/ns/sosa/",
 		"unit": "https://qudt.org/2.1/vocab/unit/"
 	},
-    "required": [],
-    "minProperties": 1,
-    "properties": {
-        "bulkDensity": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/bulkDensity"
-            }
-        },
-        "coarseFragmentContent": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/coarseFragmentContent"
-            }
-        },
-        "coarseFragments": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/coarseFragments"
-            }
-        },
-        "dispersion": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/dispersion"
-            }
-        },
-        "clay": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/clay"
-            }
-        },
-        "sand": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/sand"
-            }
-        },
-        "silt": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/silt"
-            }
-        }
-    },
-    "$defs": {
-        "bulkDensity": {
-            "@id": "nil:template",
-            "title": "bulk density",
-            "description": "Bulk density.",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "qudt:QuantityValue"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "type": "object",
-                    "required": [
-                        "value",
-                        "unit"
-                    ],
-                    "properties": {
-                        "value": {
-                            "$ref": "./qudt.json#/$defs/value"
-                        },
-                        "unit": {
-                            "$ref": "./qudt.json#/$defs/unit",
-                            "enum": [
-                                "unit:MilliGM-PER-M3"
-                            ]
-                        }
-                    }
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:503.01",
-                        "spmile:503.02",
-                        "spmile:503.03",
-                        "spmile:503.04",
-                        "spmile:503.08"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        },
-        "coarseFragmentContent": {
-            "@id": "nil:template",
-            "title": "coarse fragment content",
-            "description": " Volumetric coarse fragment content.",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "skos:Concept"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "type": "object",
-                    "required": [
-                        "value",
-                        "unit"
-                    ],
-                    "properties": {
-                        "value": {
-                            "$ref": "./qudt.json#/$defs/value"
-                        },
-                        "unit": {
-                            "$ref": "./qudt.json#/$defs/unit",
-                            "enum": [
-                                "unit:MilliGM-PER-M3",
-                                "unit:PERCENT"
-                            ]
-                        }
-                    }
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:503.06"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        },
-        "coarseFragments": {
-            "@id": "nil:template",
-            "title": "volume of coarse fragments",
-            "description": "Volume of coarse fragments",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "skos:Concept"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "type": "object",
-                    "required": [
-                        "value",
-                        "unit"
-                    ],
-                    "properties": {
-                        "value": {
-                            "$ref": "./qudt.json#/$defs/value"
-                        },
-                        "unit": {
-                            "$ref": "./qudt.json#/$defs/unit",
-                            "enum": [
-                                "unit:MilliGM-PER-M3",
-                                "unit:PERCENT"
-                            ]
-                        }
-                    }
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:503.07"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        },
-        "dispersion": {
-            "@id": "nil:template",
-            "title": "dispersion",
-            "description": "Dispersion.",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "skos:Concept"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "$ref": "./enum.json#/$defs/DispersionInWater"
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:513.01"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        },
-        "clay": {
-            "@id": "nil:template",
-            "title": "proportion of clay",
-            "description": "Proportion of clay - particle sizes < 0.002 mm.",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "skos:Concept"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "type": "object",
-                    "required": [
-                        "value",
-                        "unit"
-                    ],
-                    "properties": {
-                        "value": {
-                            "$ref": "./qudt.json#/$defs/value"
-                        },
-                        "unit": {
-                            "$ref": "./qudt.json#/$defs/unit",
-                            "enum": [
-                                "unit:PERCENT"
-                            ]
-                        }
-                    }
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:516.01",
-                        "spmile:517.02",
-                        "spmile:517.03",
-                        "spmile:517.04",
-                        "spmile:517.05",
-                        "spmile:517.06",
-                        "spmile:517.07",
-                        "spmile:517.08",
-                        "spmile:517.09",
-                        "spmile:517.10",
-                        "spmile:517.11",
-                        "spmile:517.12",
-                        "spmile:517.13",
-                        "spmile:517.14",
-                        "spmile:517.15",
-                        "spmile:517.16"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        },
-        "sand": {
-            "@id": "nil:template",
-            "title": "proportion of sand",
-            "description": "Proportion of sand - particle sizes < 0.2 mm.",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "skos:Concept"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "type": "object",
-                    "required": [
-                        "value",
-                        "unit"
-                    ],
-                    "properties": {
-                        "value": {
-                            "$ref": "./qudt.json#/$defs/value"
-                        },
-                        "unit": {
-                            "$ref": "./qudt.json#/$defs/unit",
-                            "enum": [
-                                "unit:PERCENT"
-                            ]
-                        }
-                    }
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:516.01",
-                        "spmile:517.02",
-                        "spmile:517.03",
-                        "spmile:517.04",
-                        "spmile:517.05",
-                        "spmile:517.06",
-                        "spmile:517.07",
-                        "spmile:517.08",
-                        "spmile:517.09",
-                        "spmile:517.10",
-                        "spmile:517.11",
-                        "spmile:517.12",
-                        "spmile:517.13",
-                        "spmile:517.14",
-                        "spmile:517.15",
-                        "spmile:517.16"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        },
-        "silt": {
-            "@id": "nil:template",
-            "title": "proportion of silt",
-            "description": "Proportion of silt - particle sizes < 0.02 mm.",
-            "type": "object",
-            "range@type": [
-                "sosa:ObservableProperty",
-                "skos:Concept"
-            ],
-            "required": [
-                "result",
-                "usedProcedure"
-            ],
-            "properties": {
-                "result": {
-                    "type": "object",
-                    "required": [
-                        "value",
-                        "unit"
-                    ],
-                    "properties": {
-                        "value": {
-                            "$ref": "./qudt.json#/$defs/value"
-                        },
-                        "unit": {
-                            "$ref": "./qudt.json#/$defs/unit",
-                            "enum": [
-                                "unit:PERCENT"
-                            ]
-                        }
-                    }
-                },
-                "usedProcedure": {
-                    "enum": [
-                        "spmile:516.01",
-                        "spmile:517.02",
-                        "spmile:517.03",
-                        "spmile:517.04",
-                        "spmile:517.05",
-                        "spmile:517.06",
-                        "spmile:517.07",
-                        "spmile:517.08",
-                        "spmile:517.09",
-                        "spmile:517.10",
-                        "spmile:517.11",
-                        "spmile:517.12",
-                        "spmile:517.13",
-                        "spmile:517.14",
-                        "spmile:517.15",
-                        "spmile:517.16"
-                    ]
-                },
-                "resultTime": {
-                    "$ref": "./sosa.json#/$defs/resultTime"
-                },
-                "qualityOfObservation": {
-                    "$ref": "./sosa.json#/$defs/qualityOfObservation"
-                }
-            }
-        }
-    }
+	"required": [
+	],
+	"minProperties": 1,
+	"properties": {
+		"bulkDensity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/bulkDensity"
+			}
+		},
+		"coarseFragmentContent": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/coarseFragmentContent"
+			}
+		},
+		"coarseFragments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/coarseFragments"
+			}
+		},
+		"dispersion": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/dispersion"
+			}
+		},
+		"clay": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/clay"
+			}
+		},
+		"sand": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/sand"
+			}
+		},
+		"silt": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/silt"
+			}
+		}
+	},
+	"$defs": {
+		"bulkDensity": {
+			"@id": "nil:template",
+			"title": "bulk density",
+			"description": "Bulk density.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"qudt:QuantityValue"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "object",
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-M3"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:503.01",
+								"spmile:503.02",
+								"spmile:503.03",
+								"spmile:503.04",
+								"spmile:503.08"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"coarseFragmentContent": {
+			"@id": "nil:template",
+			"title": "coarse fragment content",
+			"description": " Volumetric coarse fragment content.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "object",
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-M3",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:503.06"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"coarseFragments": {
+			"@id": "nil:template",
+			"title": "volume of coarse fragments",
+			"description": "Volume of coarse fragments",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "object",
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-M3",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:503.07"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"dispersion": {
+			"@id": "nil:template",
+			"title": "dispersion",
+			"description": "Dispersion.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"$ref": "./enum.json#/$defs/DispersionInWater"
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:513.01"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"clay": {
+			"@id": "nil:template",
+			"title": "proportion of clay",
+			"description": "Proportion of clay - particle sizes < 0.002 mm.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "object",
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:516.01",
+								"spmile:517.02",
+								"spmile:517.03",
+								"spmile:517.04",
+								"spmile:517.05",
+								"spmile:517.06",
+								"spmile:517.07",
+								"spmile:517.08",
+								"spmile:517.09",
+								"spmile:517.10",
+								"spmile:517.11",
+								"spmile:517.12",
+								"spmile:517.13",
+								"spmile:517.14",
+								"spmile:517.15",
+								"spmile:517.16"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"sand": {
+			"@id": "nil:template",
+			"title": "proportion of sand",
+			"description": "Proportion of sand - particle sizes < 0.2 mm.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "object",
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:516.01",
+								"spmile:517.02",
+								"spmile:517.03",
+								"spmile:517.04",
+								"spmile:517.05",
+								"spmile:517.06",
+								"spmile:517.07",
+								"spmile:517.08",
+								"spmile:517.09",
+								"spmile:517.10",
+								"spmile:517.11",
+								"spmile:517.12",
+								"spmile:517.13",
+								"spmile:517.14",
+								"spmile:517.15",
+								"spmile:517.16"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"silt": {
+			"@id": "nil:template",
+			"title": "proportion of silt",
+			"description": "Proportion of silt - particle sizes < 0.02 mm.",
+			"type": "object",
+			"range@type": [
+				"sosa:ObservableProperty",
+				"skos:Concept"
+			],
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "object",
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"spmile:516.01",
+								"spmile:517.02",
+								"spmile:517.03",
+								"spmile:517.04",
+								"spmile:517.05",
+								"spmile:517.06",
+								"spmile:517.07",
+								"spmile:517.08",
+								"spmile:517.09",
+								"spmile:517.10",
+								"spmile:517.11",
+								"spmile:517.12",
+								"spmile:517.13",
+								"spmile:517.14",
+								"spmile:517.15",
+								"spmile:517.16"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		}
+	}
 }
