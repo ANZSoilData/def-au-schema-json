@@ -32,6 +32,7 @@
 					"$ref": "./base.json#/$defs/id"
 				},
 				"type": {
+					"$ref": "./base.json#/$defs/type",
 					"const": "ansis:SoilSite"
 				},
 				"ansisType": {
