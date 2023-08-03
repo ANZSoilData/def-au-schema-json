@@ -247,12 +247,6 @@
 						"$ref": "./properties.json#/$defs/rel/$defs/sampling"
 					}
 				},
-				"soilHorizon": {
-					"type": "array",
-					"items": {
-						"$ref": "./properties.json#/$defs/rel/$defs/soilHorizon"
-					}
-				},
 				"soilLayer": {
 					"type": "array",
 					"items": {

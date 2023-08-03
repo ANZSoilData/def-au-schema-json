@@ -3407,19 +3407,22 @@
                     "type": "object",
                     "$ref": "./entities.json#/$defs/SiteVisit"
                 },
-                "soilHorizon": {
-                    "@id": "ansis:relatedHorizon",
-                    "range@type": "ansis:SoilHorizon",
-                    "title": "related soil horizon",
-                    "description": "Related soil horizon within a soil body or sample, or associated with a contact.",
-                    "$ref": "./entities.json#/$defs/SoilHorizon"
-                },
                 "soilLayer": {
-                    "@id": "ansis:relatedLayer",
+                    "@id": [
+                        "ansis:relatedLayer",
+                        "ansis:relatedHorizon"
+                    ],
                     "range@type": "ansis:SoilLayer",
-                    "title": "related soil layer",
-                    "description": "Related soil layer within a soil body or profile.",
-                    "$ref": "./entities.json#/$defs/SoilLayer"
+                    "title": "related soil layer or horizon",
+                    "description": "Related soil layer or horizon within a soil body or profile.",
+                    "oneOf": [
+                        {
+                            "$ref": "./entities.json#/$defs/SoilLayer"
+                        },
+                        {
+                            "$ref": "./entities.json#/$defs/SoilHorizon"
+                        }
+                    ]
                 },
                 "soilProfile": {
                     "@id": "ansis:relatedProfile",
