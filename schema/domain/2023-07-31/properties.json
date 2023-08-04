@@ -14,7 +14,7 @@
 		"qudt": "http://qudt.org/schema/qudt/"
 	},
 	"$defs": {
-        "ast": {
+        "_astd": {
             "title": "asserted properties",
             "description": "Properties whose value has been asserted - e.g. a name. Asserted properties may be a value of an object that is itself a result of an observable property.",
             "$comment": "Distinct from observable properties where the value cannot be known until it is estimated using some sort of procedure.",
@@ -182,7 +182,7 @@
                 }
             }
         },
-        "obs": {
+        "_obs": {
             "title": "observable properties",
             "description": "Properties whose value has been estimated using some sort of procedure.",
             "$comment": "Values are an object with a mandatory 'result' property and additional metadata description the procedure, sampling, quality and temporal characteristics.",
@@ -638,7 +638,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/Munsell"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
 									}
 								},
 								{
@@ -650,7 +650,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/Munsell"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
 									}
 								},
 								{
@@ -662,7 +662,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/MottleColour"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/MottleColour"
 									}
 								},
                                 {
@@ -702,7 +702,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/Munsell"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
 									}
 								},
 								{
@@ -714,7 +714,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/Munsell"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
 									}
 								},
 								{
@@ -726,7 +726,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/RGB"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/RGB"
 									}
 								},
 								{
@@ -738,7 +738,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/obs/$defs/colour/$defs/Term"
+										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Term"
 									}
 								},
                                 {
@@ -3195,7 +3195,7 @@
                 }
             }
         },
-        "rel": {
+        "_rel": {
             "title": "relationship properties",
             "description": "Properties whose value is a nested object or JSON pointer to an object.",
             "type": "null",

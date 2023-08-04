@@ -28,7 +28,7 @@
 		"colourModel": {
 			"range@type": "xs:string",
 			"title": "colour model",
-			"description": "The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), or a colour term.",
+			"description": "The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), a value from the ASLS Mottle Colours vocabulary (Mottles only), or a colour term.",
 			"$defs": {
 				"Mottles": {
 					"$ref": "./enum.json#/$defs/ColourModel_Mottles"
@@ -163,7 +163,7 @@
 			],
 			"properties": {
 				"moistureStatus": {
-					"$ref": "./properties.json#/$defs/ast/$defs/moistureStatus/$defs/Colour"
+					"$ref": "./properties.json#/$defs/_astd/$defs/moistureStatus/$defs/Colour"
 				},
 				"colourModel": {
 					"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"

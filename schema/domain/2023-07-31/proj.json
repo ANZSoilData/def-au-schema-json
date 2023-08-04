@@ -37,7 +37,7 @@
 					}
 				},
 				"designSurvey": {
-					"$ref": "./properties.json#/$defs/ast/$defs/designSurvey"
+					"$ref": "./properties.json#/$defs/_astd/$defs/designSurvey"
 				},
 				"name": {
 					"$ref": "./base.json#/$defs/name"

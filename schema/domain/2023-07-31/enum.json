@@ -563,8 +563,8 @@
 				},
 				{
 					"const": "x:colour-mottle",
-					"description": "Colour Term",
-					"$comment": "E.g. 'brown', 'gley' or 'dark'."
+					"description": "Mottle Colour",
+					"$comment": "Values from the Australian Soil and Land Survey Handbook Mottle CoSlour vocababulary."
 				}
 			]
 		},
