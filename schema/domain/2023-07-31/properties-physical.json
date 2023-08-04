@@ -28,10 +28,10 @@
 				"$ref": "#/$defs/coarseFragmentContent"
 			}
 		},
-		"coarseFragments": {
+		"coarseFragmentsVolume": {
 			"type": "array",
 			"items": {
-				"$ref": "#/$defs/coarseFragments"
+				"$ref": "#/$defs/coarseFragmentsVolume"
 			}
 		},
 		"dispersion": {
@@ -157,7 +157,7 @@
 				}
 			]
 		},
-		"coarseFragments": {
+		"coarseFragmentsVolume": {
 			"@id": "nil:template",
 			"title": "volume of coarse fragments",
 			"description": "Volume of coarse fragments",
