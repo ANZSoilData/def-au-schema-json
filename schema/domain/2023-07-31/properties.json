@@ -3443,14 +3443,14 @@
                     "title": "related project",
                     "description": "Link to project that supported this activity, either establishing a Land Survey or Soil Site, or requiring a Site Visit.",
                     "$ref": "./base.json#/$defs/pointer",
-                    "_refType": "proj:Project"
+                    "_refType": "./proj.json#/$defs/Project"
                 },
                 "relatedSample": {
                     "@id": "ansis:relatedSample",
                     "title": "related sample",
                     "description": "Link to a sample related to this context.",
                     "$ref": "./base.json#/$defs/pointer",
-                    "_refType": "ansis:SoilSample"
+                    "_refType": "./entities.json#/$defs/SoilSample"
                 },
                 "relatedSite": {
                     "@id": "ansis:relatedSite",
@@ -3460,14 +3460,14 @@
                     "title": "related site",
                     "description": "Link to a land survey or soil site related to this context.",
                     "$ref": "./base.json#/$defs/pointer",
-                    "_refType": "ansis:SoilSite"
+                    "_refType": "./entities.json#/$defs/SoilSite"
                 },
                 "visitor": {
                     "@id": "ansis:visitor",
                     "title": "visitor",
                     "description": "Site visitor, for the purpose of sampling or observation.",
                     "$ref": "./base.json#/$defs/pointer",
-                    "_refType": "prov:Person"
+                    "_refType": "./entities.json#/$defs/Person"
                 }
             }
         }
