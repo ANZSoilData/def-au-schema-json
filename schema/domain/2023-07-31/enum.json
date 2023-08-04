@@ -1331,38 +1331,6 @@
                     "description": "Light clay loam, coarse sandy"
                 },
                 {
-                    "const": "sp:field-texture-CLFS-A",
-                    "description": "Sapric clay loam, fine sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLKS-A",
-                    "description": "Sapric clay loam, coarse sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLFS-I",
-                    "description": "Fibric clay loam, fine sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLKS-I",
-                    "description": "Fibric clay loam, coarse sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLFS-heavy",
-                    "description": "Heavy clay loam, fine sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLKS-heavy",
-                    "description": "Heavy clay loam, coarse sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLFS-light",
-                    "description": "Light clay loam, fine sandy"
-                },
-                {
-                    "const": "sp:field-texture-CLKS-light",
-                    "description": "Light clay loam, coarse sandy"
-                },
-                {
                     "const": "sp:field-texture-CS",
                     "description": "Clayey sand"
                 },
@@ -1393,22 +1361,6 @@
                 {
                     "const": "sp:field-texture-CKS-heavy",
                     "description": "Heavy clayey coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-CKS-light",
-                    "description": "Light clayey coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-CFS-heavy",
-                    "description": "Heavy clayey fine sand"
-                },
-                {
-                    "const": "sp:field-texture-CKS-heavy",
-                    "description": "Heavy clayey coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-CFS-light",
-                    "description": "Light clayey fine sand"
                 },
                 {
                     "const": "sp:field-texture-CKS-light",
@@ -1451,10 +1403,6 @@
                     "description": "Fibric fine sandy heavy clay"
                 },
                 {
-                    "const": "sp:field-texture-FSHC-A",
-                    "description": "Sapric fine sandy heavy clay"
-                },
-                {
                     "const": "sp:field-texture-KSHC-A",
                     "description": "Sapric coarse sandy heavy clay"
                 },
@@ -1467,40 +1415,12 @@
                     "description": "Sapric silty heavy clay"
                 },
                 {
-                    "const": "sp:field-texture-FSHC-I",
-                    "description": "Fibric fine sandy heavy clay"
-                },
-                {
                     "const": "sp:field-texture-KSHC-I",
                     "description": "Fibric coarse sandy heavy clay"
                 },
                 {
                     "const": "sp:field-texture-SHC-I",
                     "description": "Fibric sandy heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-ZHC-I",
-                    "description": "Fibric silty heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-KSHC-A",
-                    "description": "Sapric coarse sandy heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-KSHC-I",
-                    "description": "Fibric coarse sandy heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-SHC-A",
-                    "description": "Sapric sandy heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-SHC-I",
-                    "description": "Fibric sandy heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-ZHC-A",
-                    "description": "Sapric silty heavy clay"
                 },
                 {
                     "const": "sp:field-texture-ZHC-I",
@@ -1563,14 +1483,6 @@
                     "description": "Fibric coarse sandy light clay"
                 },
                 {
-                    "const": "sp:field-texture-FSLC-A",
-                    "description": "Sapric fine sandy light clay"
-                },
-                {
-                    "const": "sp:field-texture-KSLC-A",
-                    "description": "Sapric coarse sandy light clay"
-                },
-                {
                     "const": "sp:field-texture-SLC-A",
                     "description": "Sapric sandy light clay"
                 },
@@ -1579,32 +1491,8 @@
                     "description": "Sapric silty light clay"
                 },
                 {
-                    "const": "sp:field-texture-FSLC-I",
-                    "description": "Fibric fine sandy light clay"
-                },
-                {
-                    "const": "sp:field-texture-KSLC-I",
-                    "description": "Fibric coarse sandy light clay"
-                },
-                {
                     "const": "sp:field-texture-SLC-I",
                     "description": "Fibric sandy light clay"
-                },
-                {
-                    "const": "sp:field-texture-ZLC-I",
-                    "description": "Fibric silty light clay"
-                },
-                {
-                    "const": "sp:field-texture-SLC-A",
-                    "description": "Sapric sandy light clay"
-                },
-                {
-                    "const": "sp:field-texture-SLC-I",
-                    "description": "Fibric sandy light clay"
-                },
-                {
-                    "const": "sp:field-texture-ZLC-A",
-                    "description": "Sapric silty light clay"
                 },
                 {
                     "const": "sp:field-texture-ZLC-I",
@@ -1655,14 +1543,6 @@
                     "description": "Fibric coarse sandy light medium clay"
                 },
                 {
-                    "const": "sp:field-texture-FSLMC-A",
-                    "description": "Sapric fine sandy light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-KSLMC-A",
-                    "description": "Sapric coarse sandy light medium clay"
-                },
-                {
                     "const": "sp:field-texture-SLMC-A",
                     "description": "Sapric sandy light medium clay"
                 },
@@ -1671,32 +1551,8 @@
                     "description": "Sapric silty light medium clay"
                 },
                 {
-                    "const": "sp:field-texture-FSLMC-I",
-                    "description": "Fibric fine sandy light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-KSLMC-I",
-                    "description": "Fibric coarse sandy light medium clay"
-                },
-                {
                     "const": "sp:field-texture-SLMC-I",
                     "description": "Fibric sandy light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-ZLMC-I",
-                    "description": "Fibric silty light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-SLMC-A",
-                    "description": "Sapric sandy light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-SLMC-I",
-                    "description": "Fibric sandy light medium clay"
-                },
-                {
-                    "const": "sp:field-texture-ZLMC-A",
-                    "description": "Sapric silty light medium clay"
                 },
                 {
                     "const": "sp:field-texture-ZLMC-I",
@@ -1733,22 +1589,6 @@
                 {
                     "const": "sp:field-texture-LKS-A",
                     "description": "Sapric loamy coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-LKS-I",
-                    "description": "Fibric loamy coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-LFS-A",
-                    "description": "Sapric loamy fine sand"
-                },
-                {
-                    "const": "sp:field-texture-LKS-A",
-                    "description": "Sapric loamy coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-LFS-I",
-                    "description": "Fibric loamy fine sand"
                 },
                 {
                     "const": "sp:field-texture-LKS-I",
@@ -1799,14 +1639,6 @@
                     "description": "Fibric coarse sandy medium clay"
                 },
                 {
-                    "const": "sp:field-texture-FSMC-A",
-                    "description": "Sapric fine sandy medium clay"
-                },
-                {
-                    "const": "sp:field-texture-KSMC-A",
-                    "description": "Sapric coarse sandy medium clay"
-                },
-                {
                     "const": "sp:field-texture-SMC-A",
                     "description": "Sapric sandy medium clay"
                 },
@@ -1815,32 +1647,8 @@
                     "description": "Sapric silty medium clay"
                 },
                 {
-                    "const": "sp:field-texture-FSMC-I",
-                    "description": "Fibric fine sandy medium clay"
-                },
-                {
-                    "const": "sp:field-texture-KSMC-I",
-                    "description": "Fibric coarse sandy medium clay"
-                },
-                {
                     "const": "sp:field-texture-SMC-I",
                     "description": "Fibric sandy medium clay"
-                },
-                {
-                    "const": "sp:field-texture-ZMC-I",
-                    "description": "Fibric silty medium clay"
-                },
-                {
-                    "const": "sp:field-texture-SMC-A",
-                    "description": "Sapric sandy medium clay"
-                },
-                {
-                    "const": "sp:field-texture-SMC-I",
-                    "description": "Fibric sandy medium clay"
-                },
-                {
-                    "const": "sp:field-texture-ZMC-A",
-                    "description": "Sapric silty medium clay"
                 },
                 {
                     "const": "sp:field-texture-ZMC-I",
@@ -1891,14 +1699,6 @@
                     "description": "Fibric coarse sandy medium heavy clay"
                 },
                 {
-                    "const": "sp:field-texture-FSMHC-A",
-                    "description": "Sapric fine sandy medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-KSMHC-A",
-                    "description": "Sapric coarse sandy medium heavy clay"
-                },
-                {
                     "const": "sp:field-texture-SMHC-A",
                     "description": "Sapric sandy medium heavy clay"
                 },
@@ -1907,32 +1707,8 @@
                     "description": "Sapric silty medium heavy clay"
                 },
                 {
-                    "const": "sp:field-texture-FSMHC-I",
-                    "description": "Fibric fine sandy medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-KSMHC-I",
-                    "description": "Fibric coarse sandy medium heavy clay"
-                },
-                {
                     "const": "sp:field-texture-SMHC-I",
                     "description": "Fibric sandy medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-ZMHC-I",
-                    "description": "Fibric silty medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-SMHC-A",
-                    "description": "Sapric sandy medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-SMHC-I",
-                    "description": "Fibric sandy medium heavy clay"
-                },
-                {
-                    "const": "sp:field-texture-ZMHC-A",
-                    "description": "Sapric silty medium heavy clay"
                 },
                 {
                     "const": "sp:field-texture-ZMHC-I",
@@ -1969,22 +1745,6 @@
                 {
                     "const": "sp:field-texture-KS-A",
                     "description": "Sapric coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-KS-I",
-                    "description": "Fibric coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-FS-A",
-                    "description": "Sapric fine sand"
-                },
-                {
-                    "const": "sp:field-texture-KS-A",
-                    "description": "Sapric coarse sand"
-                },
-                {
-                    "const": "sp:field-texture-FS-I",
-                    "description": "Fibric fine sand"
                 },
                 {
                     "const": "sp:field-texture-KS-I",
@@ -2051,38 +1811,6 @@
                     "description": "Light coarse sandy clay loam"
                 },
                 {
-                    "const": "sp:field-texture-FSCL-A",
-                    "description": "Sapric fine sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-KSCL-A",
-                    "description": "Sapric coarse sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-FSCL-I",
-                    "description": "Fibric fine sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-KSCL-I",
-                    "description": "Fibric coarse sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-FSCL-heavy",
-                    "description": "Heavy fine sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-KSCL-heavy",
-                    "description": "Heavy coarse sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-FSCL-light",
-                    "description": "Light fine sandy clay loam"
-                },
-                {
-                    "const": "sp:field-texture-KSCL-light",
-                    "description": "Light coarse sandy clay loam"
-                },
-                {
                     "const": "sp:field-texture-SL",
                     "description": "Sandy loam"
                 },
@@ -2113,22 +1841,6 @@
                 {
                     "const": "sp:field-texture-KSL-A",
                     "description": "Sapric coarse sandy loam"
-                },
-                {
-                    "const": "sp:field-texture-KSL-I",
-                    "description": "Fibric coarse sandy loam"
-                },
-                {
-                    "const": "sp:field-texture-FSL-A",
-                    "description": "Sapric fine sandy loam"
-                },
-                {
-                    "const": "sp:field-texture-KSL-A",
-                    "description": "Sapric coarse sandy loam"
-                },
-                {
-                    "const": "sp:field-texture-FSL-I",
-                    "description": "Fibric fine sandy loam"
                 },
                 {
                     "const": "sp:field-texture-KSL-I",

@@ -711,14 +711,6 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-CLKS-I | Fibric clay loam, coarse sandy |
 | sp:field-texture-CLKS-heavy | Heavy clay loam, coarse sandy |
 | sp:field-texture-CLKS-light | Light clay loam, coarse sandy |
-| sp:field-texture-CLFS-A | Sapric clay loam, fine sandy |
-| sp:field-texture-CLKS-A | Sapric clay loam, coarse sandy |
-| sp:field-texture-CLFS-I | Fibric clay loam, fine sandy |
-| sp:field-texture-CLKS-I | Fibric clay loam, coarse sandy |
-| sp:field-texture-CLFS-heavy | Heavy clay loam, fine sandy |
-| sp:field-texture-CLKS-heavy | Heavy clay loam, coarse sandy |
-| sp:field-texture-CLFS-light | Light clay loam, fine sandy |
-| sp:field-texture-CLKS-light | Light clay loam, coarse sandy |
 | sp:field-texture-CS | Clayey sand |
 | sp:field-texture-CFS | Clayey fine sand |
 | sp:field-texture-CKS | Clayey coarse sand |
@@ -727,10 +719,6 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-CFS-heavy | Heavy clayey fine sand |
 | sp:field-texture-CFS-light | Light clayey fine sand |
 | sp:field-texture-CKS-heavy | Heavy clayey coarse sand |
-| sp:field-texture-CKS-light | Light clayey coarse sand |
-| sp:field-texture-CFS-heavy | Heavy clayey fine sand |
-| sp:field-texture-CKS-heavy | Heavy clayey coarse sand |
-| sp:field-texture-CFS-light | Light clayey fine sand |
 | sp:field-texture-CKS-light | Light clayey coarse sand |
 | sp:field-texture-HC | Heavy clay |
 | sp:field-texture-FSHC | Fine sandy heavy clay |
@@ -741,19 +729,11 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-ZHC | Silty heavy clay |
 | sp:field-texture-FSHC-A | Sapric fine sandy heavy clay |
 | sp:field-texture-FSHC-I | Fibric fine sandy heavy clay |
-| sp:field-texture-FSHC-A | Sapric fine sandy heavy clay |
 | sp:field-texture-KSHC-A | Sapric coarse sandy heavy clay |
 | sp:field-texture-SHC-A | Sapric sandy heavy clay |
 | sp:field-texture-ZHC-A | Sapric silty heavy clay |
-| sp:field-texture-FSHC-I | Fibric fine sandy heavy clay |
 | sp:field-texture-KSHC-I | Fibric coarse sandy heavy clay |
 | sp:field-texture-SHC-I | Fibric sandy heavy clay |
-| sp:field-texture-ZHC-I | Fibric silty heavy clay |
-| sp:field-texture-KSHC-A | Sapric coarse sandy heavy clay |
-| sp:field-texture-KSHC-I | Fibric coarse sandy heavy clay |
-| sp:field-texture-SHC-A | Sapric sandy heavy clay |
-| sp:field-texture-SHC-I | Fibric sandy heavy clay |
-| sp:field-texture-ZHC-A | Sapric silty heavy clay |
 | sp:field-texture-ZHC-I | Fibric silty heavy clay |
 | sp:field-texture-L | Loam |
 | sp:field-texture-L-A | Sapric loam |
@@ -769,17 +749,9 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-FSLC-I | Fibric fine sandy light clay |
 | sp:field-texture-KSLC-A | Sapric coarse sandy light clay |
 | sp:field-texture-KSLC-I | Fibric coarse sandy light clay |
-| sp:field-texture-FSLC-A | Sapric fine sandy light clay |
-| sp:field-texture-KSLC-A | Sapric coarse sandy light clay |
 | sp:field-texture-SLC-A | Sapric sandy light clay |
 | sp:field-texture-ZLC-A | Sapric silty light clay |
-| sp:field-texture-FSLC-I | Fibric fine sandy light clay |
-| sp:field-texture-KSLC-I | Fibric coarse sandy light clay |
 | sp:field-texture-SLC-I | Fibric sandy light clay |
-| sp:field-texture-ZLC-I | Fibric silty light clay |
-| sp:field-texture-SLC-A | Sapric sandy light clay |
-| sp:field-texture-SLC-I | Fibric sandy light clay |
-| sp:field-texture-ZLC-A | Sapric silty light clay |
 | sp:field-texture-ZLC-I | Fibric silty light clay |
 | sp:field-texture-LMC | Light medium clay |
 | sp:field-texture-FSLMC | Fine sandy light medium clay |
@@ -792,17 +764,9 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-FSLMC-I | Fibric fine sandy light medium clay |
 | sp:field-texture-KSLMC-A | Sapric coarse sandy light medium clay |
 | sp:field-texture-KSLMC-I | Fibric coarse sandy light medium clay |
-| sp:field-texture-FSLMC-A | Sapric fine sandy light medium clay |
-| sp:field-texture-KSLMC-A | Sapric coarse sandy light medium clay |
 | sp:field-texture-SLMC-A | Sapric sandy light medium clay |
 | sp:field-texture-ZLMC-A | Sapric silty light medium clay |
-| sp:field-texture-FSLMC-I | Fibric fine sandy light medium clay |
-| sp:field-texture-KSLMC-I | Fibric coarse sandy light medium clay |
 | sp:field-texture-SLMC-I | Fibric sandy light medium clay |
-| sp:field-texture-ZLMC-I | Fibric silty light medium clay |
-| sp:field-texture-SLMC-A | Sapric sandy light medium clay |
-| sp:field-texture-SLMC-I | Fibric sandy light medium clay |
-| sp:field-texture-ZLMC-A | Sapric silty light medium clay |
 | sp:field-texture-ZLMC-I | Fibric silty light medium clay |
 | sp:field-texture-LS | Loamy sand |
 | sp:field-texture-LFS | Loamy fine sand |
@@ -812,10 +776,6 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-LFS-A | Sapric loamy fine sand |
 | sp:field-texture-LFS-I | Fibric loamy fine sand |
 | sp:field-texture-LKS-A | Sapric loamy coarse sand |
-| sp:field-texture-LKS-I | Fibric loamy coarse sand |
-| sp:field-texture-LFS-A | Sapric loamy fine sand |
-| sp:field-texture-LKS-A | Sapric loamy coarse sand |
-| sp:field-texture-LFS-I | Fibric loamy fine sand |
 | sp:field-texture-LKS-I | Fibric loamy coarse sand |
 | sp:field-texture-MC | Medium clay |
 | sp:field-texture-FSMC | Fine sandy medium clay |
@@ -828,17 +788,9 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-FSMC-I | Fibric fine sandy medium clay |
 | sp:field-texture-KSMC-A | Sapric coarse sandy medium clay |
 | sp:field-texture-KSMC-I | Fibric coarse sandy medium clay |
-| sp:field-texture-FSMC-A | Sapric fine sandy medium clay |
-| sp:field-texture-KSMC-A | Sapric coarse sandy medium clay |
 | sp:field-texture-SMC-A | Sapric sandy medium clay |
 | sp:field-texture-ZMC-A | Sapric silty medium clay |
-| sp:field-texture-FSMC-I | Fibric fine sandy medium clay |
-| sp:field-texture-KSMC-I | Fibric coarse sandy medium clay |
 | sp:field-texture-SMC-I | Fibric sandy medium clay |
-| sp:field-texture-ZMC-I | Fibric silty medium clay |
-| sp:field-texture-SMC-A | Sapric sandy medium clay |
-| sp:field-texture-SMC-I | Fibric sandy medium clay |
-| sp:field-texture-ZMC-A | Sapric silty medium clay |
 | sp:field-texture-ZMC-I | Fibric silty medium clay |
 | sp:field-texture-MHC | Medium heavy clay |
 | sp:field-texture-FSMHC | Fine sandy medium heavy clay |
@@ -851,17 +803,9 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-FSMHC-I | Fibric fine sandy medium heavy clay |
 | sp:field-texture-KSMHC-A | Sapric coarse sandy medium heavy clay |
 | sp:field-texture-KSMHC-I | Fibric coarse sandy medium heavy clay |
-| sp:field-texture-FSMHC-A | Sapric fine sandy medium heavy clay |
-| sp:field-texture-KSMHC-A | Sapric coarse sandy medium heavy clay |
 | sp:field-texture-SMHC-A | Sapric sandy medium heavy clay |
 | sp:field-texture-ZMHC-A | Sapric silty medium heavy clay |
-| sp:field-texture-FSMHC-I | Fibric fine sandy medium heavy clay |
-| sp:field-texture-KSMHC-I | Fibric coarse sandy medium heavy clay |
 | sp:field-texture-SMHC-I | Fibric sandy medium heavy clay |
-| sp:field-texture-ZMHC-I | Fibric silty medium heavy clay |
-| sp:field-texture-SMHC-A | Sapric sandy medium heavy clay |
-| sp:field-texture-SMHC-I | Fibric sandy medium heavy clay |
-| sp:field-texture-ZMHC-A | Sapric silty medium heavy clay |
 | sp:field-texture-ZMHC-I | Fibric silty medium heavy clay |
 | sp:field-texture-S | Sand (field texture) |
 | sp:field-texture-FS | Fine sand (field texture) |
@@ -871,10 +815,6 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-FS-A | Sapric fine sand |
 | sp:field-texture-FS-I | Fibric fine sand |
 | sp:field-texture-KS-A | Sapric coarse sand |
-| sp:field-texture-KS-I | Fibric coarse sand |
-| sp:field-texture-FS-A | Sapric fine sand |
-| sp:field-texture-KS-A | Sapric coarse sand |
-| sp:field-texture-FS-I | Fibric fine sand |
 | sp:field-texture-KS-I | Fibric coarse sand |
 | sp:field-texture-SCL | Sandy clay loam |
 | sp:field-texture-FSCL | Fine sandy clay loam |
@@ -891,14 +831,6 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-KSCL-I | Fibric coarse sandy clay loam |
 | sp:field-texture-KSCL-heavy | Heavy coarse sandy clay loam |
 | sp:field-texture-KSCL-light | Light coarse sandy clay loam |
-| sp:field-texture-FSCL-A | Sapric fine sandy clay loam |
-| sp:field-texture-KSCL-A | Sapric coarse sandy clay loam |
-| sp:field-texture-FSCL-I | Fibric fine sandy clay loam |
-| sp:field-texture-KSCL-I | Fibric coarse sandy clay loam |
-| sp:field-texture-FSCL-heavy | Heavy fine sandy clay loam |
-| sp:field-texture-KSCL-heavy | Heavy coarse sandy clay loam |
-| sp:field-texture-FSCL-light | Light fine sandy clay loam |
-| sp:field-texture-KSCL-light | Light coarse sandy clay loam |
 | sp:field-texture-SL | Sandy loam |
 | sp:field-texture-FSL | Fine sandy loam |
 | sp:field-texture-KSL | Coarse sandy loam |
@@ -907,10 +839,6 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-FSL-A | Sapric fine sandy loam |
 | sp:field-texture-FSL-I | Fibric fine sandy loam |
 | sp:field-texture-KSL-A | Sapric coarse sandy loam |
-| sp:field-texture-KSL-I | Fibric coarse sandy loam |
-| sp:field-texture-FSL-A | Sapric fine sandy loam |
-| sp:field-texture-KSL-A | Sapric coarse sandy loam |
-| sp:field-texture-FSL-I | Fibric fine sandy loam |
 | sp:field-texture-KSL-I | Fibric coarse sandy loam |
 | sp:field-texture-ZCL | Silty clay loam |
 | sp:field-texture-ZCL-A | Sapric silty clay loam |
