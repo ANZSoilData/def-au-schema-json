@@ -29,17 +29,14 @@
 		},
 		"value": {
 			"@id": "qudt:value",
-			"range@type": [
-				"xs:decimal",
-				"xs:integer"
-			],
+			
 			"title": "Value",
 			"description": "The numerical value.",
 			"type": "number"
 		},
 		"unit": {
 			"@id": "qudt:unit",
-			"range@type": "xs:anyURI",
+			
 			"title": "Unit",
 			"description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
 			"$comment": "Restricted to the QUDT vocabulary as a compact URI.",

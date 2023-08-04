@@ -77,7 +77,6 @@
 		},
 		"endedAtTime": {
 			"@id": "prov:endedAtTime",
-			"range@type": "xs:dateTime",
 			"title": "Ended at Time",
 			"description": "The time at which an activity ended.",
 			"$comment": "See also startedAtTime.",
@@ -96,7 +95,6 @@
 		},
 		"startedAtTime": {
 			"@id": "prov:startedAtTime",
-			"range@type": "xs:dateTime",
 			"title": "Started at Time",
 			"description": "The time at which an activity started.",
 			"$comment": "See also endedAtTime.",

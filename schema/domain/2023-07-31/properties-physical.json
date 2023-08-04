@@ -65,10 +65,6 @@
 			"title": "bulk density",
 			"description": "Bulk density.",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"qudt:QuantityValue"
-			],
 			"allOf": [
 				{
 					"required": [
@@ -115,10 +111,6 @@
 			"title": "coarse fragment content",
 			"description": " Volumetric coarse fragment content.",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
 			"allOf": [
 				{
 					"required": [
@@ -162,10 +154,6 @@
 			"title": "volume of coarse fragments",
 			"description": "Volume of coarse fragments",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
 			"allOf": [
 				{
 					"required": [
@@ -209,10 +197,6 @@
 			"title": "dispersion",
 			"description": "Dispersion.",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
 			"allOf": [
 				{
 					"required": [
@@ -240,10 +224,6 @@
 			"title": "proportion of clay",
 			"description": "Proportion of clay - particle sizes < 0.002 mm.",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
 			"allOf": [
 				{
 					"required": [
@@ -301,10 +281,6 @@
 			"title": "proportion of sand",
 			"description": "Proportion of sand - particle sizes < 0.2 mm.",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
 			"allOf": [
 				{
 					"required": [
@@ -362,10 +338,6 @@
 			"title": "proportion of silt",
 			"description": "Proportion of silt - particle sizes < 0.02 mm.",
 			"type": "object",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"skos:Concept"
-			],
 			"allOf": [
 				{
 					"required": [

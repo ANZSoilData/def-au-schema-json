@@ -13,10 +13,6 @@
 	"$defs": {
 		"geometry": {
 			"@id": "geo:hasGeometry",
-			"range@type": [
-				"sosa:ObservableProperty",
-				"geo:wktLiteral"
-			],
 			"title": "geometry",
 			"description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
 			"type": "object",
@@ -38,7 +34,6 @@
 		},
 		"wktLiteral": {
 			"@id": "geo:wktLiteral",
-			"range@type": "xs:string",
 			"title": "WKT Literal",
 			"description": "A Well-known Text serialization of a geometry object.",
 			"$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS, e.g. SRID=4283;POINT(-42 24). Restrict to GDA94 (EPSG code 4283).",

@@ -52,39 +52,26 @@
 		},
 		"sampleOf": {
 			"@id": "sosa:isSampleOf",
-			"range@type": [
-				"ansis:SoilLayer",
-				"ansis:SoilHorizon",
-				"ansis:SoilSurface",
-				"ansis:Substrate"
-			],
 			"title": "sample of",
 			"description": "Generic link to an ANSIS soil entity that the sample has been taken from.",
 			"$ref": "./base.json#/$defs/pointer"
 		},
 		"result": {
 			"@id": "sosa:hasResult",
-			"range@type": [
-				"qudt:QuantityValue",
-				"ansis:SoilSample"
-			],
 			"title": "result",
 			"description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
 			"$defs": {
 				"QuantityValue": {
-					"range@type": "qudt:QuantityValue",
 					"@id": "sosa:hasSimpleResult",
 					"$ref": "./qudt.json#/$defs/QuantityValue"
 				},
 				"SoilSample": {
-					"range@type": "ansis:SoilSample",
 					"$ref": "./entities.json#/$defs/SoilSample"
 				}
 			}
 		},
 		"sample": {
 			"@id": "sosa:hasSample",
-			"range@type": "sosa:Sample",
 			"title": "sample",
 			"description": "Link to the representative sample from which the observed property was measured.",
 			"type": [
@@ -94,7 +81,6 @@
 		},
 		"madeBySampler": {
 			"@id": "sosa:madeBySampler",
-			"range@type": "sosa:Sampler",
 			"title": "Made by Sampler",
 			"description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
 			"$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
@@ -105,7 +91,6 @@
 		},
 		"madeBySensor": {
 			"@id": "sosa:madeBySensor",
-			"range@type": "sosa:Sensor",
 			"title": "Made by Sensor",
 			"description": "Relation between an Observation and the Sensor which made the Observations.",
 			"$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
@@ -116,7 +101,6 @@
 		},
 		"phenomenonTime": {
 			"@id": "sosa:phenomenonTime",
-			"range@type": "xs:dateTime",
 			"title": "Phenomenon Time",
 			"description": "The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time].",
 			"$comment": "Initially restricting to date-time",
@@ -135,7 +119,6 @@
 		},
 		"resultTime": {
 			"@id": "sosa:resultTime",
-			"range@type": "xs:dateTime",
 			"title": "Result Time",
 			"description": "The result time is the instant of time when the Observation activity was completed.",
 			"$comment": "Initially restricting to date-time",
@@ -154,7 +137,6 @@
 		},
 		"usedProcedure": {
 			"@id": "sosa:usedProcedure",
-			"range@type": "skos:Concept",
 			"title": "Used Procedure",
 			"description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
 			"$defs": {
@@ -172,7 +154,6 @@
 		},
 		"qualityOfObservation": {
 			"@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
-			"range@type": "skos:Concept",
 			"title": "Quality of Observation",
 			"description": "The adjudged quality of the Result.",
 			"$comment": "To be expanded - using skos:Concept for qualitative descriptions of quality.",
