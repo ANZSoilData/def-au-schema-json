@@ -551,7 +551,7 @@
 										"colourModel"
 									],
 									"properties": {
-										"result": true,
+										"result": "./base.json#/$defs/value/$defs/String",
 										"colourModel": {
 											"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
 										}
@@ -611,7 +611,7 @@
 										"colourModel"
 									],
 									"properties": {
-										"result": true,
+										"result": "./base.json#/$defs/value/$defs/String",
 										"colourModel": {
 											"$ref": "./base.json#/$defs/colourModel/$defs/Soil"
 										}
