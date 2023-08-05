@@ -551,7 +551,9 @@
 										"colourModel"
 									],
 									"properties": {
-										"result": "./base.json#/$defs/value/$defs/String",
+										"result": {
+											"$ref": "./base.json#/$defs/value/$defs/String"
+										},
 										"colourModel": {
 											"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
 										}
@@ -611,7 +613,9 @@
 										"colourModel"
 									],
 									"properties": {
-										"result": "./base.json#/$defs/value/$defs/String",
+										"result": {
+											"$ref": "./base.json#/$defs/value/$defs/String"
+										},
 										"colourModel": {
 											"$ref": "./base.json#/$defs/colourModel/$defs/Soil"
 										}
@@ -1844,7 +1848,7 @@
 								}
 							]
 						},
-						"Lithology": {
+						"Substrate": {
 							"type": "object",
 							"description": "Rock/unconsolidated.",
 							"allOf": [

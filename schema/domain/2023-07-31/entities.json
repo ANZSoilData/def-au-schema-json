@@ -669,7 +669,7 @@
 					"$ref": "./properties.json#/$defs/_obs/$defs/grainSize"
 				},
 				"lithology": {
-					"$ref": "./properties.json#/$defs/_obs/$defs/lithology"
+					"$ref": "./properties.json#/$defs/_obs/$defs/lithology/$defs/Substrate"
 				},
 				"porosity": {
 					"type": "array",
