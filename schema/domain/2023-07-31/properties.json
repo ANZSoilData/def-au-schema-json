@@ -44,11 +44,14 @@
 						},
 						"LandformPattern": {
 							"description": "Landform pattern.",
-							"$ref": "./enum.json#/$defs/LandformPatternName"
-						},
-						"LandformPattern_erosional": {
-							"description": "Landform pattern - erosional.",
-							"$ref": "./enum.json#/$defs/LandformPatternErosional"
+                            "oneOf": [
+                                {
+                                    "$ref": "./enum.json#/$defs/LandformPatternName"
+                                },
+                                {
+                                    "$ref": "./enum.json#/$defs/LandformPatternErosional"
+                                }
+                            ]
 						},
 						"Microrelief_gilgai": {
 							"description": "Microrelief - Gilgai.",

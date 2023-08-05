@@ -1533,14 +1533,7 @@
 					"$ref": "./properties.json#/$defs/_obs/$defs/agent/$defs/Geomorphology"
 				},
 				"ansisType": {
-					"oneOf": [
-						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/LandformPattern"
-						},
-						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/LandformPattern_erosional"
-						}
-					]
+                    "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/LandformPattern"
 				},
 				"geomorphologyMode": {
 					"$ref": "./properties.json#/$defs/_obs/$defs/geomorphologyMode"
