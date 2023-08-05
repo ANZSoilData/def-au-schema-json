@@ -44,14 +44,14 @@
 						},
 						"LandformPattern": {
 							"description": "Landform pattern.",
-                            "oneOf": [
-                                {
-                                    "$ref": "./enum.json#/$defs/LandformPatternName"
-                                },
-                                {
-                                    "$ref": "./enum.json#/$defs/LandformPatternErosional"
-                                }
-                            ]
+							"oneOf": [
+								{
+									"$ref": "./enum.json#/$defs/LandformPatternName"
+								},
+								{
+									"$ref": "./enum.json#/$defs/LandformPatternErosional"
+								}
+							]
 						},
 						"Microrelief_gilgai": {
 							"description": "Microrelief - Gilgai.",
@@ -2333,50 +2333,55 @@
 					"title": "slope",
 					"description": "Divergence of surface from horizontal.",
 					"$defs": {
-						"Quantity": {
-							"description": "Quantity.",
-							"type": "object",
-							"allOf": [
+						"LandformElement": {
+							"description": "Landform Element.",
+							"oneOf": [
 								{
-									"required": [
-										"result",
-										"usedProcedure"
-									],
-									"properties": {
-										"result": {
-											"$ref": "./qudt.json#/$defs/QuantityValue"
+									"description": "Quantity.",
+									"type": "object",
+									"allOf": [
+										{
+											"required": [
+												"result",
+												"usedProcedure"
+											],
+											"properties": {
+												"result": {
+													"$ref": "./qudt.json#/$defs/QuantityValue"
+												},
+												"usedProcedure": {
+													"$comment": "replaces ansis:methodSlope",
+													"$ref": "./enum.json#/$defs/SlopeProcedure"
+												}
+											}
 										},
-										"usedProcedure": {
-											"$comment": "replaces ansis:methodSlope",
-											"$ref": "./enum.json#/$defs/SlopeProcedure"
+										{
+											"$ref": "./base.json#/$defs/ObservableProperty"
 										}
-									}
+									]
 								},
 								{
-									"$ref": "./base.json#/$defs/ObservableProperty"
+									"description": "Slope class.",
+									"type": "object",
+									"allOf": [
+										{
+											"required": [
+												"result"
+											],
+											"properties": {
+												"result": {
+													"$ref": "./enum.json#/$defs/SlopeClass"
+												}
+											}
+										},
+										{
+											"$ref": "./base.json#/$defs/ObservableProperty"
+										}
+									]
 								}
 							]
 						},
-						"Class": {
-							"description": "Slope class.",
-							"type": "object",
-							"allOf": [
-								{
-									"required": [
-										"result"
-									],
-									"properties": {
-										"result": {
-											"$ref": "./enum.json#/$defs/SlopeClass"
-										}
-									}
-								},
-								{
-									"$ref": "./base.json#/$defs/ObservableProperty"
-								}
-							]
-						},
-						"Modal": {
+						"LandformPattern": {
 							"description": "Modal.",
 							"type": "object",
 							"allOf": [

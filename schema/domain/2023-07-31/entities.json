@@ -1491,14 +1491,7 @@
 				"slope": {
 					"type": "array",
 					"items": {
-						"oneOf": [
-							{
-								"$ref": "./properties.json#/$defs/_obs/$defs/slope/$defs/Class"
-							},
-							{
-								"$ref": "./properties.json#/$defs/_obs/$defs/slope/$defs/Quantity"
-							}
-						]
+                        "$ref": "./properties.json#/$defs/_obs/$defs/slope/$defs/LandformElement"
 					},
 					"maxItems": 2
 				},
@@ -1554,7 +1547,7 @@
 					"$ref": "./properties.json#/$defs/_obs/$defs/relief"
 				},
 				"slope": {
-					"$ref": "./properties.json#/$defs/_obs/$defs/slope/$defs/Modal"
+					"$ref": "./properties.json#/$defs/_obs/$defs/slope/$defs/LandformPattern"
 				}
 			},
 			"additionalProperties": false
