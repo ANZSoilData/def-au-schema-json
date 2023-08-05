@@ -3,7 +3,7 @@
 	"$id": "enum.json",
 	"title": "ANSIS Soil Domain Enumerations",
 	"description": "ANSIS controlled vocabularies converted to JSON schema enumerations. Follow the link under the vocabulary's title for full definitions.",
-	"$comment": "Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57",
+	"$comment": "Enumerations defined according to the pattern recommended here (and supported by most tools): https://github.com/json-schema-org/json-schema-spec/issues/57",
 	"type": "null",
 	"_curiPrefix": {
 		"ansis": "https://anzsoil.org/def/au/domain/",
