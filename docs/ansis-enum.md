@@ -7,6 +7,8 @@ ANSIS controlled vocabularies converted to JSON schema enumerations. Follow the 
 
 ## Aggradation
 
+**ANSIS Vocabulary Title:** Aggradation
+
 **ANSIS Vocabulary Location:** ls:Aggradation
 
 This refers to the presence of material deposited on a pre-existing surface as a result of wind and/or water erosion.
@@ -18,7 +20,9 @@ This refers to the presence of material deposited on a pre-existing surface as a
 | ls:aggradation-X | Not apparent |
 
 
-## Structure of artificial aggregates
+## ArtificialAggregatesStructure
+
+**ANSIS Vocabulary Title:** Structure of artificial aggregates
 
 **ANSIS Vocabulary Location:** sp:Artificial-aggregates-structure
 
@@ -30,7 +34,9 @@ Cultivated horizons (Ap horizons) often consist of artificial aggregates formed 
 | sp:structure-artificial-FR | Fragment |
 
 
-## ASC Edition
+## ASC_Edition
+
+**ANSIS Vocabulary Title:** ASC Edition
 
 Australian Soil Classification edition.
 
@@ -43,7 +49,9 @@ Australian Soil Classification edition.
 | doi:10.1071/9781486314782 | Australian Soil Classification, third edition |
 
 
-## Boundary distinctness
+## BoundaryDistinctness
+
+**ANSIS Vocabulary Title:** Boundary distinctness
 
 **ANSIS Vocabulary Location:** sp:Boundary-distinctness
 
@@ -58,7 +66,9 @@ Distinctness of the boundaries between horizons
 | sp:horizon-boundary-distinctness-S | Sharp (horizon boundary distinctness) |
 
 
-## Boundary shape
+## BoundaryShape
+
+**ANSIS Vocabulary Title:** Boundary shape
 
 **ANSIS Vocabulary Location:** sp:Boundary-shape
 
@@ -73,7 +83,9 @@ Shape of boundary between horizons
 | sp:horizon-boundary-shape-W | Wavy |
 
 
-## Effervescence of carbonate in fine earth
+## CarbonateEffervescence
+
+**ANSIS Vocabulary Title:** Effervescence of carbonate in fine earth
 
 **ANSIS Vocabulary Location:** sp:Carbonate-effervescence
 
@@ -88,7 +100,9 @@ Effervescence of carbonate in fine earth using two or three drops of 1-molar HCl
 | sp:effervescence-V | Very highly calcareous |
 
 
-## Stream channel depth relative to width
+## ChannelDepthWidth
+
+**ANSIS Vocabulary Title:** Stream channel depth relative to width
 
 **ANSIS Vocabulary Location:** lf:Channel-depth-width
 
@@ -108,7 +122,9 @@ For detailed studies, keep records of width and depth measurements. In other sur
 | lf:stream-channel-relative-depth-width-V | Very shallow |
 
 
-## Stream channel development
+## ChannelDevelopment
+
+**ANSIS Vocabulary Title:** Stream channel development
 
 **ANSIS Vocabulary Location:** lf:Channel-development
 
@@ -122,7 +138,9 @@ The degree of development of stream channels.
 | lf:stream-channel-development-O | Absent |
 
 
-## Stream channel network directionality
+## ChannelDirectionality
+
+**ANSIS Vocabulary Title:** Stream channel network directionality
 
 **ANSIS Vocabulary Location:** lf:Channel-directionality
 
@@ -139,7 +157,9 @@ This attribute combines two simpler attributes: the degree of lineation, that is
 | lf:stream-channel-network-directionality-U | Unidirectional |
 
 
-## Stream channel network integration
+## ChannelIntegration
+
+**ANSIS Vocabulary Title:** Stream channel network integration
 
 **ANSIS Vocabulary Location:** lf:Channel-integration
 
@@ -152,7 +172,9 @@ In an integrated channel network, one can traverse from any point on a stream ch
 | lf:stream-channel-network-integration-P | Interrupted (partial integration) |
 
 
-## Stream channel migration
+## ChannelMigration
+
+**ANSIS Vocabulary Title:** Stream channel migration
 
 **ANSIS Vocabulary Location:** lf:Channel-migration
 
@@ -165,7 +187,9 @@ The presence of relict channel landforms or unvegetated, newly formed channel ma
 | lf:stream-channel-migration-S | Slowly migrating |
 
 
-## Stream-wise channel pattern
+## ChannelPattern
+
+**ANSIS Vocabulary Title:** Stream-wise channel pattern
 
 **ANSIS Vocabulary Location:** lf:Channel-pattern
 
@@ -179,7 +203,9 @@ In a traverse downstream, it may happen that tributaries enter the stream at fre
 | lf:streamwise-channel-pattern-T | Tributary |
 
 
-## Stream channel spacing
+## ChannelSpacing
+
+**ANSIS Vocabulary Title:** Stream channel spacing
 
 **ANSIS Vocabulary Location:** lf:Channel-spacing
 
@@ -199,7 +225,9 @@ A convenient tool for estimating channel spacing is a circle, with a circumferen
 | lf:stream-channel-spacing-WS | Widely spaced |
 
 
-## Abundance of coarse fragments
+## CoarseFragmentsAbundance
+
+**ANSIS Vocabulary Title:** Abundance of coarse fragments
 
 **ANSIS Vocabulary Location:** ls:Coarse-fragments-abundance
 
@@ -216,7 +244,9 @@ The percentage of coarse fragments.
 | ls:coarse-fragments-abundance-6 | Extremely or very abundant |
 
 
-## Distribution of coarse fragments
+## CoarseFragmentsDistribution
+
+**ANSIS Vocabulary Title:** Distribution of coarse fragments
 
 **ANSIS Vocabulary Location:** sp:Coarse-fragments-distribution
 
@@ -230,7 +260,9 @@ Coarse fragments may occur throughout the profile.
 | sp:coarse-fragments-distribution-U | Undisturbed |
 
 
-## Shape of coarse fragments
+## CoarseFragmentsShape
+
+**ANSIS Vocabulary Title:** Shape of coarse fragments
 
 **ANSIS Vocabulary Location:** ls:Coarse-fragments-shape
 
@@ -252,11 +284,13 @@ The shape of coarse fragments is determined by referencing the chart that captur
 | ls:coarse-fragments-shape-UT | Subrounded tabular |
 
 
-## Size of coarse fragments
+## CoarseFragmentsSize
+
+**ANSIS Vocabulary Title:** Size of coarse fragments
 
 **ANSIS Vocabulary Location:** ls:Coarse-fragments-size
 
-The scale adopted employs class boundaries at (2 x 10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials.
+The scale adopted employs class boundaries at (2  10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -269,7 +303,9 @@ The scale adopted employs class boundaries at (2 x 10n/2) mm, where n is an inte
 | ls:coarse-fragments-size-7 | Large boulders |
 
 
-## Moisture status for colour description
+## ColourMoistureStatus
+
+**ANSIS Vocabulary Title:** Moisture status for colour description
 
 **ANSIS Vocabulary Location:** sp:Colour-moisture-status
 
@@ -281,7 +317,9 @@ Moisture status for colour description
 | sp:colour-stat-M | Moist |
 
 
-## Colour Model
+## ColourModel
+
+**ANSIS Vocabulary Title:** Colour Model
 
 Colour models used to establish and record soil colour values.
 
@@ -295,7 +333,9 @@ Colour models used to establish and record soil colour values.
 | x:colour-term | Colour Term \[ _E.g. 'brown', 'light brown' or 'dark brown'._ \] |
 
 
-## Colour Model (Mottles)
+## ColourModel_Mottles
+
+**ANSIS Vocabulary Title:** Colour Model (Mottles)
 
 Colour models used to establish and record soil colour values for mottles.
 
@@ -308,7 +348,9 @@ Colour models used to establish and record soil colour values for mottles.
 | x:colour-mottle | Mottle Colour \[ _Values from the Australian Soil and Land Survey Handbook Mottle CoSlour vocababulary._ \] |
 
 
-## Plasticity Degree
+## ConsistencePlasticityDegree
+
+**ANSIS Vocabulary Title:** Plasticity Degree
 
 **ANSIS Vocabulary Location:** sp:Consistence-plasticity-degree
 
@@ -322,7 +364,9 @@ Plasticity is the ability to change shape and retain the new shape after the str
 | sp:consistence-plasticity-degree-3 | Very plastic |
 
 
-## Plasticity Type
+## ConsistencePlasticityType
+
+**ANSIS Vocabulary Title:** Plasticity Type
 
 **ANSIS Vocabulary Location:** sp:Consistence-plasticity-type
 
@@ -336,7 +380,9 @@ The type of plasticity refers to the degree to which either the consistence, fie
 | sp:consistence-plasticity-type-U | Subplastic |
 
 
-## Stickiness
+## ConsistenceStickiness
+
+**ANSIS Vocabulary Title:** Stickiness
 
 **ANSIS Vocabulary Location:** sp:Consistence-stickiness
 
@@ -350,7 +396,9 @@ Stickiness is determined on wet soil by pressing the wet sample between thumb an
 | sp:consistence-stickiness-3 | Very sticky |
 
 
-## Strength
+## ConsistenceStrength
+
+**ANSIS Vocabulary Title:** Strength
 
 **ANSIS Vocabulary Location:** sp:Consistence-strength
 
@@ -358,7 +406,7 @@ Strength of soil is the resistance to breaking or deformation. Strength is deter
 
 
 
-Forces 0 to 5 are equivalent to the following dry consistence classes in the 'USDA Soil Survey Manual' (Soil Survey Staff 1951):
+Forces 0 to 5 are equivalent to the following dry consistence classes in the USDA Soil Survey Manual (Soil Survey Staff 1951):
 
 0	Loose
 
@@ -384,7 +432,9 @@ Forces 0 to 5 are equivalent to the following dry consistence classes in the 'US
 | sp:consistence-strength-7 | Rigid (consistence strength) |
 
 
-## Width of cracks
+## CracksWidth
+
+**ANSIS Vocabulary Title:** Width of cracks
 
 **ANSIS Vocabulary Location:** sp:Cracks-width
 
@@ -399,7 +449,9 @@ Width of planar voids
 | sp:voids-cracks-5 | Extremely coarse (voids cracks) |
 
 
-## Abundance of cutans
+## CutansAbundance
+
+**ANSIS Vocabulary Title:** Abundance of cutans
 
 **ANSIS Vocabulary Location:** sp:Cutans-abundance
 
@@ -413,7 +465,9 @@ Abundance of cutans
 | sp:cutans-abundance-3 | Many (cutans abundance) |
 
 
-## Distinctness of cutans
+## CutansDistinctness
+
+**ANSIS Vocabulary Title:** Distinctness of cutans
 
 **ANSIS Vocabulary Location:** sp:Cutans-distinctness
 
@@ -426,7 +480,9 @@ This refers to the ease and certainty with which a cutan is identified. Distinct
 | sp:cutans-distinctness-P | Prominent (cutans distinctness) |
 
 
-## Types of cutans
+## CutansType
+
+**ANSIS Vocabulary Title:** Types of cutans
 
 **ANSIS Vocabulary Location:** sp:Cutans-type
 
@@ -443,7 +499,9 @@ Types of cutans
 | sp:cutans-type-Z | Zero or no cutans |
 
 
-## Classification of soil based on its dispersion in water
+## DispersionInWater
+
+**ANSIS Vocabulary Title:** Classification of soil based on its dispersion in water
 
 **ANSIS Vocabulary Location:** nil:template
 
@@ -458,7 +516,9 @@ A classification of soil based on its dispersion in water (Emerson 1991).
 | xx:dispersion-4 | Complete dispersion |
 
 
-## Disturbance of site
+## DisturbanceOfSite
+
+**ANSIS Vocabulary Title:** Disturbance of site
 
 **ANSIS Vocabulary Location:** ls:Disturbance-of-site
 
@@ -477,7 +537,9 @@ These are broad categories of disturbance. Users may subdivide where considered 
 | ls:disturbance-of-site-8 | Highly disturbed |
 
 
-## Means of evaluation of elevation
+## ElevationEvaluationMeans
+
+**ANSIS Vocabulary Title:** Means of evaluation of elevation
 
 **ANSIS Vocabulary Location:** ls:Elevation-evaluation-means
 
@@ -491,7 +553,9 @@ Means of evaluation of elevation
 | ls:elevation-evaluation-means-M | Interpolated from contour map |
 
 
-## Gully depth
+## ErosionDepthGully
+
+**ANSIS Vocabulary Title:** Gully depth
 
 **ANSIS Vocabulary Location:** ls:Erosion-depth-gully
 
@@ -504,7 +568,9 @@ This gives the maximum depth within the site.
 | ls:erosion-G-depth-3 | Gully depth >3 m |
 
 
-## Erosion severity
+## ErosionSeverity
+
+**ANSIS Vocabulary Title:** Erosion severity
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity
 
@@ -521,7 +587,9 @@ This gives the maximum depth within the site.
 | ls:Erosion-severity-wind | Wind erosion |
 
 
-## Gully erosion
+## ErosionSeverityGully
+
+**ANSIS Vocabulary Title:** Gully erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-gully
 
@@ -535,7 +603,9 @@ A gully is a channel more than 0.3 m deep.
 | ls:erosion-G-3 | Severe gully erosion |
 
 
-## Mass movement
+## ErosionSeverityMassMovement
+
+**ANSIS Vocabulary Title:** Mass movement
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-mass-movement
 
@@ -547,7 +617,9 @@ This includes all relatively large downslope movement of soil, rock or mixture o
 | ls:erosion-M-1 | Present |
 
 
-## Rill erosion
+## ErosionSeverityRill
+
+**ANSIS Vocabulary Title:** Rill erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-rill
 
@@ -561,7 +633,9 @@ A rill is a small channel up to 0.3 m deep, which can be largely obliterated by 
 | ls:erosion-R-3 | Severe |
 
 
-## Scald erosion
+## ErosionSeverityScald
+
+**ANSIS Vocabulary Title:** Scald erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-scald
 
@@ -575,7 +649,9 @@ This is the removal of surface soil by water and/or wind, often exposing a more 
 | ls:erosion-C-3 | Severe scalding |
 
 
-## Sheet erosion
+## ErosionSeveritySheet
+
+**ANSIS Vocabulary Title:** Sheet erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-sheet
 
@@ -590,7 +666,9 @@ This is the relatively uniform removal of soil from an area without the developm
 | ls:erosion-S-X | Not apparent |
 
 
-## Stream bank erosion
+## ErosionSeverityStreamBank
+
+**ANSIS Vocabulary Title:** Stream bank erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-stream-bank
 
@@ -603,7 +681,9 @@ This is the removal of soil from a stream bank, typically during periods of high
 | ls:erosion-B-X | Not apparent |
 
 
-## Tunnel erosion
+## ErosionSeverityTunnel
+
+**ANSIS Vocabulary Title:** Tunnel erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-tunnel
 
@@ -616,7 +696,9 @@ This is the removal of subsoil by water while the surface soil remains relativel
 | ls:erosion-T-X | Not apparent |
 
 
-## Wave erosion
+## ErosionSeverityWave
+
+**ANSIS Vocabulary Title:** Wave erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-wave
 
@@ -629,7 +711,9 @@ Erosion of beaches, beach ridges and/or dunes. This is the removal of sand or so
 | ls:erosion-V-X | Not apparent |
 
 
-## Wind erosion
+## ErosionSeverityWind
+
+**ANSIS Vocabulary Title:** Wind erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-severity-wind
 
@@ -645,7 +729,9 @@ Give presence/absence or extent of accelerated erosion.
 | ls:erosion-W-X | Not apparent |
 
 
-## State of erosion
+## ErosionState
+
+**ANSIS Vocabulary Title:** State of erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-state
 
@@ -658,7 +744,9 @@ State of erosion
 | ls:erosion-state-S | Stabilised |
 
 
-## Type of erosion
+## ErosionType
+
+**ANSIS Vocabulary Title:** Type of erosion
 
 **ANSIS Vocabulary Location:** ls:Erosion-type
 
@@ -677,13 +765,15 @@ Type of erosion
 | ls:erosion-type-W | Wind |
 
 
-## Fabric
+## FabricType
+
+**ANSIS Vocabulary Title:** Fabric
 
 **ANSIS Vocabulary Location:** sp:Fabric-type
 
 The definition of soil fabric in Australia is incomplete. The following description is adapted from Northcote (1979).
 
-Fabric describes the appearance of the soil material (under x10 hand lens). Differences in fabric are associated with the presence or absence of peds, the lustre or lack of lustre of the ped surfaces, and the presence, size and arrangement of pores (voids) in the soil mass. The descriptions given below apply primarily to B horizons.
+Fabric describes the appearance of the soil material (under 10 hand lens). Differences in fabric are associated with the presence or absence of peds, the lustre or lack of lustre of the ped surfaces, and the presence, size and arrangement of pores (voids) in the soil mass. The descriptions given below apply primarily to B horizons.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -693,7 +783,9 @@ Fabric describes the appearance of the soil material (under x10 hand lens). Diff
 | sp:fabric-S | Smooth-ped |
 
 
-## Mineral soils field texture grade - enumeration
+## FieldTextureMineral
+
+**ANSIS Vocabulary Title:** Mineral soils field texture grade - enumeration
 
 **ANSIS Vocabulary Location:** sp:Field-texture-mineral
 
@@ -701,7 +793,7 @@ The following description of determination of field texture is adapted from Nort
 
 Field texture is a measure of the behaviour of a small handful of soil when moistened and kneaded into a ball and then pressed out between thumb and forefinger.
 
-Take a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 1-2 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.
+Take a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 12 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.
 
 The recommended field texture grades as characterised by the behaviour of the moist bolus are described. The approximate percentage content of clay (particles less than 0.002 mm in diameter) and silt (particles between 0.02 and 0.002 mm in diameter) are given as a guide. These percentages must not be used to determine a field texture, that is, do not use them to convert a laboratory particle size value to a field texture grade. Similarly, do not adjust a field texture grade when laboratory particle size data become available.
 
@@ -866,7 +958,9 @@ The recommended field texture grades as characterised by the behaviour of the mo
 | sp:field-texture-ZL-I | Fibric silty loam |
 
 
-## Organic soils field texture
+## FieldTextureOrganic
+
+**ANSIS Vocabulary Title:** Organic soils field texture
 
 **ANSIS Vocabulary Location:** sp:Field-texture-organic
 
@@ -883,7 +977,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | sp:field-texture-SP | Sandy peat |
 
 
-## Geomorphological agents - biological agents
+## GeomorphologyAgentBio
+
+**ANSIS Vocabulary Title:** Geomorphological agents - biological agents
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-bio
 
@@ -893,7 +989,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-HU | Human agents |
 
 
-## Geomorphological agents - extraterrestrial agents
+## GeomorphologyAgentExtra
+
+**ANSIS Vocabulary Title:** Geomorphological agents - extraterrestrial agents
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-extra
 
@@ -902,7 +1000,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-IM | Impact by meteors |
 
 
-## Geomorphological agents - gravity
+## GeomorphologyAgentGravity
+
+**ANSIS Vocabulary Title:** Geomorphological agents - gravity
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-gravity
 
@@ -911,7 +1011,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-GR | Gravity |
 
 
-## Geomorphological agents - ice
+## GeomorphologyAgentIce
+
+**ANSIS Vocabulary Title:** Geomorphological agents - ice
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-ice
 
@@ -921,7 +1023,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-GL | Glacier flow |
 
 
-## Geomorphological agents - internal forces
+## GeomorphologyAgentInternal
+
+**ANSIS Vocabulary Title:** Geomorphological agents - internal forces
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-internal
 
@@ -931,7 +1035,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-VO | Volcanism |
 
 
-## Geomorphological agents - precipitation
+## GeomorphologyAgentPrecipitation
+
+**ANSIS Vocabulary Title:** Geomorphological agents - precipitation
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-precipitation
 
@@ -943,7 +1049,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-WM | Water-aided mass movements |
 
 
-## Geomorphological agents - standing water
+## GeomorphologyAgentStand
+
+**ANSIS Vocabulary Title:** Geomorphological agents - standing water
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-stand
 
@@ -954,7 +1062,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-WA | Waves |
 
 
-## Geomorphological agents - stream flow
+## GeomorphologyAgentStreamflow
+
+**ANSIS Vocabulary Title:** Geomorphological agents - stream flow
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-streamflow
 
@@ -964,7 +1074,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-OV | Overbank stream flow, unchannelled |
 
 
-## Geomorphological agents - wind
+## GeomorphologyAgentWind
+
+**ANSIS Vocabulary Title:** Geomorphological agents - wind
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-agent-wind
 
@@ -973,7 +1085,9 @@ Organic soils do not have textural grades, as soil texture is determined by the 
 | lf:geomorphological-agent-WI | Wind |
 
 
-## Mode of geomorphological activity
+## GeomorphologyMode
+
+**ANSIS Vocabulary Title:** Mode of geomorphological activity
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-mode
 
@@ -990,7 +1104,9 @@ Various modes of geomorphological activity may be distinguished (Figure 3).
 | lf:mode-of-geomorphological-activity-SU | Subsided or depressed |
 
 
-## Status of geomorphological activity
+## GeomorphologyStatus
+
+**ANSIS Vocabulary Title:** Status of geomorphological activity
 
 **ANSIS Vocabulary Location:** lf:Geomorphology-status
 
@@ -1006,7 +1122,9 @@ Status of geomorphological activity
 | lf:status-of-geomorphological-activity-U | Unspecified |
 
 
-## Depth of inundation (annual)
+## InundationDepth
+
+**ANSIS Vocabulary Title:** Depth of inundation (annual)
 
 **ANSIS Vocabulary Location:** ls:Inundation-depth
 
@@ -1021,7 +1139,9 @@ Give likely maximum depth of water in an inundation event (mm).
 | ls:inundation-depth-5 | Inundation depth >1000 mm |
 
 
-## Duration (annual) of inundation
+## InundationDuration
+
+**ANSIS Vocabulary Title:** Duration (annual) of inundation
 
 **ANSIS Vocabulary Location:** ls:Inundation-duration
 
@@ -1035,7 +1155,9 @@ Give likely duration of an inundation event.
 | ls:inundation-duration-4 | More than 120 days |
 
 
-## Frequency of inundation
+## InundationFrequency
+
+**ANSIS Vocabulary Title:** Frequency of inundation
 
 **ANSIS Vocabulary Location:** ls:Inundation-frequency
 
@@ -1051,7 +1173,9 @@ Give long-term average of inundation. Among alluvial plains, flood plains typica
 | ls:inundation-frequency-5 | More than one occurrence per year |
 
 
-## Glossary of landform elements
+## LandformElementName
+
+**ANSIS Vocabulary Title:** Glossary of landform elements
 
 **ANSIS Vocabulary Location:** lf:Landform-element-name
 
@@ -1141,7 +1265,9 @@ The landform element glossary aims to provide an adequate, concise set of names 
 | lf:landform-element-VLF | Valley flat |
 
 
-## Morphological type
+## LandformElementType
+
+**ANSIS Vocabulary Title:** Morphological type
 
 **ANSIS Vocabulary Location:** lf:Landform-element-type
 
@@ -1175,7 +1301,9 @@ Landform elements fall into morphological types as sketched in Figure 1. Ten typ
 | lf:morphological-type-V | Open depression (vale) |
 
 
-## Simple erosional landform patterns
+## LandformPatternErosional
+
+**ANSIS Vocabulary Title:** Simple erosional landform patterns
 
 **ANSIS Vocabulary Location:** lf:Landform-pattern-erosional
 
@@ -1207,7 +1335,9 @@ Simple erosional landform patterns are based on relief and modal slope.
 | lf:simple-erosional-landform-pattern-VM | Very steep mountains |
 
 
-## Glossary of landform patterns
+## LandformPatternName
+
+**ANSIS Vocabulary Title:** Glossary of landform patterns
 
 **ANSIS Vocabulary Location:** lf:Landform-pattern-name
 
@@ -1257,7 +1387,9 @@ The definitions in this glossary refer explicitly to the attributes of landform 
 | lf:landform-pattern-VOL | Volcano |
 
 
-## Lithology of coarse fragments
+## LithologyCoarseFragments
+
+**ANSIS Vocabulary Title:** Lithology of coarse fragments
 
 **ANSIS Vocabulary Location:** ls:Lithology-coarse-fragments
 
@@ -1275,7 +1407,9 @@ The lithology of the coarse fragments is usually identified as coming from the s
 | ls:lithology-SS | Shells |
 
 
-## Lithological type- rock
+## LithologyRock
+
+**ANSIS Vocabulary Title:** Lithological type- rock
 
 **ANSIS Vocabulary Location:** subst:Lithology-rock
 
@@ -1368,7 +1502,9 @@ Lithological type - rock.
 | subst:lithology-ZS | Siltstone |
 
 
-## Lithology of rock outcrop
+## LithologyRockOutcrop
+
+**ANSIS Vocabulary Title:** Lithology of rock outcrop
 
 **ANSIS Vocabulary Location:** ls:Lithology-rock-outcrop
 
@@ -1461,7 +1597,9 @@ Where the lithology of the rock outcrop is different from that of the substrate 
 | subst:lithology-ZS | Siltstone |
 
 
-## Lithological type- unconsolidated material
+## LithologyUnconsolidated
+
+**ANSIS Vocabulary Title:** Lithological type- unconsolidated material
 
 **ANSIS Vocabulary Location:** subst:Lithology-unconsolidated
 
@@ -1484,7 +1622,9 @@ Lithological type - unconsoldiated material.
 | subst:lithology-Z | Silt |
 
 
-## Location within the landform element
+## LocationInElement
+
+**ANSIS Vocabulary Title:** Location within the landform element
 
 **ANSIS Vocabulary Location:** lf:Location-in-element
 
@@ -1497,7 +1637,9 @@ A site chosen to represent a landform element will often be placed centrally wit
 | lf:location-within-the-landform-element-T | Top |
 
 
-## Strength of substrate material
+## MaterialStrength
+
+**ANSIS Vocabulary Title:** Strength of substrate material
 
 **ANSIS Vocabulary Location:** subst:Material-strength
 
@@ -1512,7 +1654,9 @@ The strength of a specimen of soil substrate material may be crudely estimated i
 | subst:material-strength-W | Weak rock |
 
 
-## Biotic microrelief agents
+## MicroreliefAgentBiotic
+
+**ANSIS Vocabulary Title:** Biotic microrelief agents
 
 **ANSIS Vocabulary Location:** ls:Microrelief-agent-biotic
 
@@ -1529,7 +1673,9 @@ The biotic agents causing the relief.
 | ls:biotic-microrelief-agent-V | Vegetation |
 
 
-## Component of biotic relief
+## MicroreliefComponentBiotic
+
+**ANSIS Vocabulary Title:** Component of biotic relief
 
 **ANSIS Vocabulary Location:** ls:Microrelief-component-biotic
 
@@ -1546,7 +1692,9 @@ The component of the biotic relief.
 | ls:biotic-microrelief-component-T | Terrace |
 
 
-## Component of microrelief sampled
+## MicroreliefComponentSampled
+
+**ANSIS Vocabulary Title:** Component of microrelief sampled
 
 **ANSIS Vocabulary Location:** ls:Microrelief-component-sampled
 
@@ -1563,7 +1711,9 @@ Give the component of the microrelief in which the described soil profile is loc
 | ls:microrelief-component-S | Shelf |
 
 
-## Proportions of gilgai components
+## MicroreliefProportionsGilgai
+
+**ANSIS Vocabulary Title:** Proportions of gilgai components
 
 **ANSIS Vocabulary Location:** ls:Microrelief-proportions-gilgai
 
@@ -1577,11 +1727,13 @@ Give the proportions of gilgai components within the site, thus:
 | ls:gilgai-microrelief-proportions-D | Mound, shelf and depressions; shelf forms prominent part of gilgai |
 
 
-## Type of gilgai microrelief
+## MicroreliefTypeGilgai
+
+**ANSIS Vocabulary Title:** Type of gilgai microrelief
 
 **ANSIS Vocabulary Location:** ls:Microrelief-type-gilgai
 
-Gilgai is surface microrelief associated with soils containing shrink-swell clays. It does not include microrelief that apparently results from repeated freezing and thawing, solifluxion or faunal activity. Gilgai consist of mounds and depressions showing varying degrees of order, sometimes separated by a subplanar or slightly undulating surface.
+Gilgai is surface microrelief associated with soils containing shrinkswell clays. It does not include microrelief that apparently results from repeated freezing and thawing, solifluxion or faunal activity. Gilgai consist of mounds and depressions showing varying degrees of order, sometimes separated by a subplanar or slightly undulating surface.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -1593,11 +1745,13 @@ Gilgai is surface microrelief associated with soils containing shrink-swell clay
 | ls:microrelief-N | Normal gilgai |
 
 
-## Type of hummocky microrelief
+## MicroreliefTypeHummocky
+
+**ANSIS Vocabulary Title:** Type of hummocky microrelief
 
 **ANSIS Vocabulary Location:** ls:Microrelief-type-hummocky
 
-Hummocky microrelief is not thought to be associated with the shrink-swell process involved in gilgai microrelief.
+Hummocky microrelief is not thought to be associated with the shrinkswell process involved in gilgai microrelief.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -1605,7 +1759,9 @@ Hummocky microrelief is not thought to be associated with the shrink-swell proce
 | ls:microrelief-W | Swamp hummock |
 
 
-## Type of other microrelief
+## MicroreliefTypeOther
+
+**ANSIS Vocabulary Title:** Type of other microrelief
 
 **ANSIS Vocabulary Location:** ls:Microrelief-type-other
 
@@ -1624,7 +1780,9 @@ Type of other microrelief
 | ls:microrelief-U | Mound/depression microrelief |
 
 
-## Mottle abundance
+## MottleAbundance
+
+**ANSIS Vocabulary Title:** Mottle abundance
 
 **ANSIS Vocabulary Location:** sp:Mottle-abundance
 
@@ -1639,7 +1797,9 @@ The percentage of mottles is estimated by eye using the chart in Figure 11 (ASLS
 | sp:mottle-abundance-4 | Many (mottle abundance) |
 
 
-## Mottle colour
+## MottleColour
+
+**ANSIS Vocabulary Title:** Mottle colour
 
 **ANSIS Vocabulary Location:** sp:Mottle-colour
 
@@ -1657,7 +1817,9 @@ This should be described in terms of Munsell or Revised Standard Soil colours, b
 | sp:mottle-colour-Y | Yellow |
 
 
-## Mottle contrast
+## MottleContrast
+
+**ANSIS Vocabulary Title:** Mottle contrast
 
 **ANSIS Vocabulary Location:** sp:Mottle-contrast
 
@@ -1670,7 +1832,9 @@ Mottle contrast
 | sp:mottle-contrast-P | Prominent (mottle contrast) |
 
 
-## Mottle distinctness of boundaries
+## MottleDistinctness
+
+**ANSIS Vocabulary Title:** Mottle distinctness of boundaries
 
 **ANSIS Vocabulary Location:** sp:Mottle-distinctness
 
@@ -1683,7 +1847,9 @@ Mottle distinctness of boundaries
 | sp:mottle-boundary-S | Sharp (mottle boundary) |
 
 
-## Mottle size
+## MottleSize
+
+**ANSIS Vocabulary Title:** Mottle size
 
 **ANSIS Vocabulary Location:** sp:Mottle-size
 
@@ -1697,7 +1863,9 @@ Measure mottle size (mm) along the greatest dimension, except in streaks or line
 | sp:mottle-size-4 | Very coarse (mottle size) |
 
 
-## Mottle or colour pattern type
+## MottleType
+
+**ANSIS Vocabulary Title:** Mottle or colour pattern type
 
 **ANSIS Vocabulary Location:** sp:Mottle-type
 
@@ -1711,7 +1879,9 @@ The type of mottle can suggest the origin of the mottles.
 | sp:mottle-type-Z | Mottle type Z |
 
 
-## Nil - values
+## NilValues
+
+**ANSIS Vocabulary Title:** Nil - values
 
 **ANSIS Vocabulary Location:** http://www.opengis.net/def/nil/OGC/0/
 
@@ -1728,7 +1898,9 @@ Nil values with reason for absence.
 | nil:withheld | withheld \[ _The value is not divulged._ \] |
 
 
-## Cementation of pan
+## PansCementation
+
+**ANSIS Vocabulary Title:** Cementation of pan
 
 **ANSIS Vocabulary Location:** sp:Pans-cementation
 
@@ -1743,7 +1915,9 @@ Place a 30 mm diameter piece of the pan in water for 1 hour. If it slakes, it is
 | sp:pans-cementation-4 | Very strongly cemented |
 
 
-## Continuity of pan
+## PansContinuity
+
+**ANSIS Vocabulary Title:** Continuity of pan
 
 **ANSIS Vocabulary Location:** sp:Pans-continuity
 
@@ -1756,7 +1930,9 @@ Continuity of pan
 | sp:pans-continuity-D | Discontinuous (pans continuity) |
 
 
-## Structure of pan
+## PansStructure
+
+**ANSIS Vocabulary Title:** Structure of pan
 
 **ANSIS Vocabulary Location:** sp:Pans-structure
 
@@ -1772,7 +1948,9 @@ Structure of pan.
 | sp:pans-structure-V | Massive |
 
 
-## Type of pan
+## PansType
+
+**ANSIS Vocabulary Title:** Type of pan
 
 **ANSIS Vocabulary Location:** sp:Pans-type
 
@@ -1797,7 +1975,9 @@ Type of pan
 | sp:pans-type-Z | Zero or no pan |
 
 
-## Pedal soil grades
+## PedalityGrade
+
+**ANSIS Vocabulary Title:** Pedal soil grades
 
 **ANSIS Vocabulary Location:** sp:Pedality-grade-pedal; sp:Pedality-grade-apedal
 
@@ -1812,7 +1992,9 @@ Pedal soils have observable peds and are divided into: sp:structure-pedality-gra
 | sp:structure-pedality-grade-V | Massive (structure pedality grade) |
 
 
-## Size of peds
+## PedalitySize
+
+**ANSIS Vocabulary Title:** Size of peds
 
 **ANSIS Vocabulary Location:** sp:Pedality-size
 
@@ -1831,7 +2013,9 @@ The average least dimension of peds is used to determine the class interval. Use
 | sp:structure-pedality-size-9 | > 500 mm |
 
 
-## Type of pedality
+## PedalityType
+
+**ANSIS Vocabulary Title:** Type of pedality
 
 **ANSIS Vocabulary Location:** sp:Pedality-type
 
@@ -1850,7 +2034,9 @@ The types of structure are illustrated in diagrammatic form. See figure 17.
 | sp:structure-pedality-type-SB | Subangular blocky |
 
 
-## Abundance of very fine, fine, medium and coarse macropores
+## PoreAbundance
+
+**ANSIS Vocabulary Title:** Abundance of very fine, fine, medium and coarse macropores
 
 **ANSIS Vocabulary Location:** sp:Pore-abundance-fine; sp:Pore-abundance-coarse
 
@@ -1867,7 +2053,9 @@ Abundance of very fine and fine macropores (less than 2mm diameter), and medium 
 | sp:voids-macropores-abundance-6 | Many medium or coarse macropores |
 
 
-## Diameter of macropores
+## PoreDiameter
+
+**ANSIS Vocabulary Title:** Diameter of macropores
 
 **ANSIS Vocabulary Location:** sp:Pore-diameter
 
@@ -1881,7 +2069,9 @@ Diameter of macropores Use Figure 18 as a guide to average diameter
 | sp:voids-macropores-diameter-4 | Coarse (voids macropores) |
 
 
-## Type of soil observation
+## ProfileConstruction
+
+**ANSIS Vocabulary Title:** Type of soil observation
 
 **ANSIS Vocabulary Location:** sp:Profile-construction
 
@@ -1895,7 +2085,9 @@ The soil profile may be described using several types of observation.
 | sp:observation-type-P | Soil pit |
 
 
-## Abundance of rock outcrop
+## RockOutcropAbundance
+
+**ANSIS Vocabulary Title:** Abundance of rock outcrop
 
 **ANSIS Vocabulary Location:** ls:Rock-outcrop-abundance
 
@@ -1911,7 +2103,9 @@ Abundance of rock outcrop.
 | ls:rock-outcrop-abundance-5 | Rockland |
 
 
-## Relative inclination of slope elements
+## RelativeInclination
+
+**ANSIS Vocabulary Title:** Relative inclination of slope elements
 
 **ANSIS Vocabulary Location:** lf:Relative-inclination
 
@@ -1927,11 +2121,13 @@ Although lower slopes are often gentler than upper slopes, they need not be so (
 
 ## Relief
 
+**ANSIS Vocabulary Title:** Relief
+
 **ANSIS Vocabulary Location:** lf:Relief
 
 Relief is defined as the difference in elevation between the high and low points of a land surface. Its estimation will be made easier by visualising two surfaces of accordance that are planar or gently curved, one touching the major crests of a landform pattern, and the other passing through the major depressions. The average vertical separation of the two surfaces is a measure of the relief. Make this estimation at a field site, either visually or by using a map, and express it in metres.
 
-Relief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Loffler (1974), and are broadly compatible with those of Loffler and Ruxton (1969).
+Relief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Löffler (1974), and are broadly compatible with those of Löffler and Ruxton (1969).
 
 Table 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics.
 
@@ -1944,7 +2140,9 @@ Table 6 lists types of landform pattern defined in the glossary according to the
 | lf:relief-class-R | Very low |
 
 
-## Alteration
+## RockAlteration
+
+**ANSIS Vocabulary Title:** Alteration
 
 **ANSIS Vocabulary Location:** subst:Rock-alteration
 
@@ -1959,7 +2157,9 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:alteration-S | Silicified |
 
 
-## Artificially hardened materials
+## RockGenesisHardenedArtificial
+
+**ANSIS Vocabulary Title:** Artificially hardened materials
 
 **ANSIS Vocabulary Location:** subst:Rock-genesis-hardened-artificial
 
@@ -1970,7 +2170,9 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:genesis-ST | Stabilised soil |
 
 
-## Chemically hardened materials
+## RockGenesisHardenedChemical
+
+**ANSIS Vocabulary Title:** Chemically hardened materials
 
 **ANSIS Vocabulary Location:** subst:Rock-genesis-hardened-chemical
 
@@ -1984,7 +2186,9 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:genesis-RB | Red-brown hardpan |
 
 
-## Evaporites
+## RockGenesisHardenedEvaporite
+
+**ANSIS Vocabulary Title:** Evaporites
 
 **ANSIS Vocabulary Location:** subst:Rock-genesis-hardened-evaporite
 
@@ -1995,7 +2199,9 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:genesis-HA | Halite (rock salt) |
 
 
-## Sediments (unconsolidated)
+## RockGenesisSediments
+
+**ANSIS Vocabulary Title:** Sediments (unconsolidated)
 
 **ANSIS Vocabulary Location:** subst:Rock-genesis-sediments
 
@@ -2021,7 +2227,9 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:genesis-VA | Volcanic ash |
 
 
-## Unweathered rocks of the bedrock zone
+## RockGenesisUnweathered
+
+**ANSIS Vocabulary Title:** Unweathered rocks of the bedrock zone
 
 **ANSIS Vocabulary Location:** subst:Rock-genesis-unweathered
 
@@ -2039,7 +2247,9 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:genesis-VO | Volcanic rocks |
 
 
-## Weathered rocks
+## RockGenesisWeathered
+
+**ANSIS Vocabulary Title:** Weathered rocks
 
 **ANSIS Vocabulary Location:** subst:Rock-genesis-weathered
 
@@ -2050,11 +2260,13 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 | subst:genesis-SA | Saprolite |
 
 
-## Root abundance
+## RootAbundance
+
+**ANSIS Vocabulary Title:** Root abundance
 
 **ANSIS Vocabulary Location:** sp:Root-abundance
 
-Number of roots per 0.01 m2 (100 mm x 100 mm)
+Number of roots per 0.01 m2 (100 mm  100 mm)
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -2065,7 +2277,9 @@ Number of roots per 0.01 m2 (100 mm x 100 mm)
 | sp:roots-abundance-4 | Abundant (roots abundance) |
 
 
-## Root size
+## RootSize
+
+**ANSIS Vocabulary Title:** Root size
 
 **ANSIS Vocabulary Location:** sp:Root-size
 
@@ -2081,6 +2295,8 @@ The size (diameter) of roots observed in the horizon in mm
 
 ## Runoff
 
+**ANSIS Vocabulary Title:** Runoff
+
 **ANSIS Vocabulary Location:** ls:Runoff
 
 Runoff is the relative rate at which water runs off the soil surface. It is largely determined by slope, surface cover and soil infiltration rate. 
@@ -2095,7 +2311,9 @@ Runoff is the relative rate at which water runs off the soil surface. It is larg
 | ls:runoff-5 | Very rapid |
 
 
-## Abundance of segregations
+## SegregationsAbundance
+
+**ANSIS Vocabulary Title:** Abundance of segregations
 
 **ANSIS Vocabulary Location:** sp:Segregations-abundance
 
@@ -2111,7 +2329,9 @@ Abundance of segregations. Use figure 11 as a guide.
 | sp:segregations-abundance-5 | Very many (segregations abundance) |
 
 
-## Form of segregations
+## SegregationsForm
+
+**ANSIS Vocabulary Title:** Form of segregations
 
 **ANSIS Vocabulary Location:** sp:Segregations-form
 
@@ -2130,7 +2350,9 @@ Form of segregations
 | sp:segregations-form-X | Crystals |
 
 
-## Magnetic attributes of segregations
+## SegregationsMagneticAttributes
+
+**ANSIS Vocabulary Title:** Magnetic attributes of segregations
 
 **ANSIS Vocabulary Location:** sp:Segregations-magnetic-attributes
 
@@ -2142,7 +2364,9 @@ attraction to surface of hand-held magnet
 | sp:segregations-magnetic-N | Non-magnetic |
 
 
-## Nature of segregations
+## SegregationsNature
+
+**ANSIS Vocabulary Title:** Nature of segregations
 
 **ANSIS Vocabulary Location:** sp:Segregations-nature
 
@@ -2153,7 +2377,7 @@ Nature of segregations
 | sp:segregations-nature-A | Aluminous |
 | sp:segregations-nature-E | Earthy |
 | sp:segregations-nature-F | Ferruginous |
-| sp:segregations-nature-G | Ferruginous-organic |
+| sp:segregations-nature-G | Ferruginousorganic |
 | sp:segregations-nature-H | Organic |
 | sp:segregations-nature-K | Calcareous |
 | sp:segregations-nature-L | Argillaceous |
@@ -2166,7 +2390,9 @@ Nature of segregations
 | sp:segregations-nature-Z | Saline (segregations nature) |
 
 
-## Size of segregations
+## SegregationsSize
+
+**ANSIS Vocabulary Title:** Size of segregations
 
 **ANSIS Vocabulary Location:** sp:Segregations-size
 
@@ -2181,7 +2407,9 @@ Approximately equidimensional segregations (concretions, nodules) are measured i
 | sp:segregations-size-5 | Extremely coarse (segregations size) |
 
 
-## Strength of segregations
+## SegregationsStrength
+
+**ANSIS Vocabulary Title:** Strength of segregations
 
 **ANSIS Vocabulary Location:** sp:Segregations-strength
 
@@ -2193,15 +2421,17 @@ Strength may be recorded where appropriate
 | sp:segregations-strength-2 | Strong (segregations strength) |
 
 
-## Class of slope
+## SlopeClass
+
+**ANSIS Vocabulary Title:** Class of slope
 
 **ANSIS Vocabulary Location:** lf:Slope-class
 
-Slope classes are defined in Table 2. The optional word 'inclined' is used to distinguish slope from other attributes, for example 'gently inclined footslope' from 'gently undulating rises', and 'moderately inclined hillslope' from 'moderately spaced streams'.
+Slope classes are defined in Table 2. The optional word inclined is used to distinguish slope from other attributes, for example gently inclined footslope from gently undulating rises, and moderately inclined hillslope from moderately spaced streams.
 
 The class boundaries given in Table 2, and repeated in Table 4, are simply boundaries separating slope terms in common use, adjusted to regular logarithmic intervals. They do not refer to observed natural clustering of slope values, since such clustering has not been shown to occur; nor do they relate precisely to boundary criteria for land use, which vary arbitrarily between organisations and which may change with advancing technology.
 
-It may sometimes be advantageous to split each of the classes 'very gently inclined', 'gently inclined' and 'moderately inclined' into two levels, the appropriate boundary values being 1.8%, 5.6% and 18%.
+It may sometimes be advantageous to split each of the classes very gently inclined, gently inclined and moderately inclined into two levels, the appropriate boundary values being 1.8%, 5.6% and 18%.
 
 There may also be compelling reasons for using other schemes of slope classes. However, schemes that do not have constant class widths from low to high slope values can lead to problems in subsequent statistical work.
 
@@ -2217,13 +2447,15 @@ There may also be compelling reasons for using other schemes of slope classes. H
 | lf:slope-class-VS | Very steep |
 
 
-## Modal slope
+## SlopeModal
+
+**ANSIS Vocabulary Title:** Modal slope
 
 **ANSIS Vocabulary Location:** lf:Slope-modal
 
 Modal slope is defined as the most common class of slope occurring in a landform pattern. Where slope classes have been obtained by systematic sampling, define the classes using equal increments on a scale of the logarithm of the slope tangent, a procedure intended to normalise frequency distributions of observed slope (Speight 1971). Where the most common slope class is estimated by direct observation, it is thought that the estimate will compare with that calculated using the log-normal model.
 
-Modal slope class determines the use of certain adjectives applied to landform patterns that are characterised by alternating crests and depressions. These are: rolling for moderate modal slopes (10-32%); undulating for gentle slopes (3-10%); and gently undulating for very gentle slopes (1-3%) (compare with Soil Survey Staff 1951, pages 161-165). The other slope classes, precipitous, very steep, steep and level, are to be applied as they stand. The terminology for simple erosional landform patterns based on relief and modal slope is given in Table 5.
+Modal slope class determines the use of certain adjectives applied to landform patterns that are characterised by alternating crests and depressions. These are: rolling for moderate modal slopes (1032%); undulating for gentle slopes (310%); and gently undulating for very gentle slopes (13%) (compare with Soil Survey Staff 1951, pages 161165). The other slope classes, precipitous, very steep, steep and level, are to be applied as they stand. The terminology for simple erosional landform patterns based on relief and modal slope is given in Table 5.
 
 Table 5 defines the category badlands by various combinations of high slope values and low relief values. These combinations imply extremely close spacing of streams or valleys. Specifically, if one assumes a sawtooth terrain profile, the valley spacing implied is less than 100 m in areas with 50 m relief and less than 30 m in areas with 5 m relief; these values appear to accord with usage.
 
@@ -2241,7 +2473,9 @@ Table 7 lists types of landform pattern in order of their typical class of modal
 | lf:slope-class-VS | Very steep |
 
 
-## Means of evaluation of slope
+## SlopeProcedure
+
+**ANSIS Vocabulary Title:** Means of evaluation of slope
 
 **ANSIS Vocabulary Location:** lf:Slope-procedure
 
@@ -2255,11 +2489,13 @@ Means of evaluation of slope
 | lf:slope-evaluation-T | Tripod-mounted instrument and staff |
 
 
-## Permeability
+## SoilPermeability
+
+**ANSIS Vocabulary Title:** Permeability
 
 **ANSIS Vocabulary Location:** sp:Soil-permeability
 
-Permeability is independent of climate and drainage, and - as applied to a soil - is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink-swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).
+Permeability is independent of climate and drainage, and  as applied to a soil  is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrinkswell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -2269,7 +2505,9 @@ Permeability is independent of climate and drainage, and - as applied to a soil 
 | sp:soil-water-permeability-4 | Highly permeable |
 
 
-## Soil Sample - component
+## SoilSample_component
+
+**ANSIS Vocabulary Title:** Soil Sample - component
 
 The component of the soil - soil particle size fraction - represented by the sample.
 
@@ -2282,7 +2520,9 @@ The component of the soil - soil particle size fraction - represented by the sam
 | x:WS | whole soil, including fine earth, coarse fragments and organic matter |
 
 
-## Soil Water Drainage
+## SoilWaterDrainage
+
+**ANSIS Vocabulary Title:** Soil Water Drainage
 
 **ANSIS Vocabulary Location:** sp:Site-drainage
 
@@ -2298,7 +2538,9 @@ Drainage is a useful term to summarise local soil wetness conditions, that is, i
 | sp:soil-water-drainage-6 | rapidly drained |
 
 
-## Soil water status
+## SoilWaterStatus
+
+**ANSIS Vocabulary Title:** Soil water status
 
 **ANSIS Vocabulary Location:** sp:Soil-water-status
 
@@ -2326,7 +2568,9 @@ Wet is at, or exceeding, field capacity. Will wet and/or stick to fingers when m
 | sp:soil-water-status-W | Wet (soil water status) |
 
 
-## Compound pedality
+## StructurePedalityCompound
+
+**ANSIS Vocabulary Title:** Compound pedality
 
 **ANSIS Vocabulary Location:** sp:structure-pedality-compound
 
@@ -2351,7 +2595,9 @@ The order of peds and relationship of one to the other is important and may be d
 | xx:placeholder | placeholder value |
 
 
-## Confidence that substrate is parent material
+## SubstrateConfidence
+
+**ANSIS Vocabulary Title:** Confidence that substrate is parent material
 
 **ANSIS Vocabulary Location:** subst:Confidence
 
@@ -2365,7 +2611,9 @@ The observer should state the degree of confidence that the observed substrate m
 | subst:confidence-not-parent | not-parent |
 
 
-## Spacing of discontinuities
+## SubstrateDiscontinuitySpacing
+
+**ANSIS Vocabulary Title:** Spacing of discontinuities
 
 **ANSIS Vocabulary Location:** subst:Substrate-discontinuity-spacing
 
@@ -2380,7 +2628,9 @@ Physical weathering opens up fissures or joints that reduce the strength of the 
 | subst:discontinuity-spacing-S | solid; virtually unjointed |
 
 
-## Grain size
+## SubstrateGrainSize
+
+**ANSIS Vocabulary Title:** Grain size
 
 **ANSIS Vocabulary Location:** subst:Substrate-grain-size
 
@@ -2393,7 +2643,9 @@ It is informative to estimate the size of the most common particles of a substra
 | subst:grain-size-3 | >2 mm |
 
 
-## Mineral composition
+## SubstrateMineralComposition
+
+**ANSIS Vocabulary Title:** Mineral composition
 
 **ANSIS Vocabulary Location:** subst:Substrate-mineral-composition
 
@@ -2413,7 +2665,9 @@ Make provision for recording one dominant mineral and one or two minor minerals,
 | subst:mineral-composition-Y | Gypsum |
 
 
-## Substrate Texture
+## SubstrateTexture
+
+**ANSIS Vocabulary Title:** Substrate Texture
 
 **ANSIS Vocabulary Location:** subst:Field-texture
 
@@ -2425,7 +2679,9 @@ Make provision for recording one dominant mineral and one or two minor minerals,
 | subst:texture-X | Crystalline (non-porphyritic) |
 
 
-## Substrate Structure
+## SubstrateStructure
+
+**ANSIS Vocabulary Title:** Substrate Structure
 
 **ANSIS Vocabulary Location:** subst:Substrate-structure
 
@@ -2441,7 +2697,9 @@ Make provision for recording one dominant mineral and one or two minor minerals,
 | subst:material-structure-V | Massive |
 
 
-## Condition of surface soil when dry
+## SurfaceCondition
+
+**ANSIS Vocabulary Title:** Condition of surface soil when dry
 
 **ANSIS Vocabulary Location:** sp:Surface-condition
 
@@ -2465,7 +2723,9 @@ Many surface soils have a characteristic appearance when dry. Because surface co
 | sp:surfacecondition-Z | Saline (surface condition) |
 
 
-## Type of substrate observation
+## TypeOfSubstrateObservation
+
+**ANSIS Vocabulary Title:** Type of substrate observation
 
 **ANSIS Vocabulary Location:** subst:type-of-substrate-observation
 
@@ -2480,11 +2740,13 @@ The substrate may be described using several types of observation.
 | subst:observation-type-O | Outcrop, where presumed continuous with substrate |
 
 
-## Water repellence
+## WaterRepellence
+
+**ANSIS Vocabulary Title:** Water repellence
 
 **ANSIS Vocabulary Location:** sp:Water-repellence
 
-Water repellence of some soils, usually sandy, is caused by a series of long-chain polymethylene waxes, made up of acids, alcohols and esters, attached to the sand grains (Ma'shum et al. 1988). These soils occur Australia-wide but are more widespread in southern Australia (Wetherby 1984, McGhie and Posner 1980). Degree of repellence is assessed by determining the concentration of ethanol required to wet the sand in 10 seconds (King 1981). An abbreviated form of this method is recommended for routine field situations.
+Water repellence of some soils, usually sandy, is caused by a series of long-chain polymethylene waxes, made up of acids, alcohols and esters, attached to the sand grains (Mashum et al. 1988). These soils occur Australia-wide but are more widespread in southern Australia (Wetherby 1984, McGhie and Posner 1980). Degree of repellence is assessed by determining the concentration of ethanol required to wet the sand in 10 seconds (King 1981). An abbreviated form of this method is recommended for routine field situations.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |

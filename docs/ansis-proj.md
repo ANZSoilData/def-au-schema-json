@@ -15,8 +15,8 @@ Type: *proj:Project*. PROJ Project. A Project is a planned activity with a budge
 | type | 1..1 |  | [JSON string \(iri\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats) |  | A compact URI uniquely identifying the type of the object using IDs from the OWL/RDF domain model. \[ _After: https://jsonapi.org/format/#document-resource-objects and https://www.w3.org/TR/json-ld/#specifying-the-type._ \] |
 | leader | 1..1 |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A JSON pointer to an object elsewhere in the document. |
 | sponsor | 0..* |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A JSON pointer to an object elsewhere in the document. |
-| designSurvey | 0..1 |  | [Classification](./ansis-base.md#Classification) |  | Overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous. |
+| designSurvey | 0..1 |  | [Classification](./ansis-base.md#classification) |  | Overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous. |
 | name | 0..1 |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A name for some thing. |
 | label | 0..1 |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A human-readable name for the object. |
-| scopedIdentifier | 0..1 |  | [ScopedIdentifier](#ScopedIdentifier) |  | An identifier for a site, sample or other entity scoped to the authority that assigned the identifier. |
+| scopedIdentifier | 0..1 |  | [ScopedIdentifier](#scopedidentifier) |  | An identifier for a site, sample or other entity scoped to the authority that assigned the identifier. |
 

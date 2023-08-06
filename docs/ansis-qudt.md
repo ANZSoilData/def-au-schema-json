@@ -17,7 +17,9 @@ Type: *qudt:QuantityValue*. QUDT QuantityValue. A Quantity Value expresses the m
 
 ## Enumerations
 
-### Unit
+### vocabUnit
+
+**ANSIS Vocabulary Title:** Unit
 
 **ANSIS Vocabulary Location:** https://qudt.org/2.1/vocab/unit
 

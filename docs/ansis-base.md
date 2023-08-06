@@ -25,7 +25,7 @@ Type: *ansis-base:Colour*. ANSIS Soil Colour. Undefined.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
-| moistureStatus | 0..1 | Y | Enumeration | [ColourMoistureStatus](./ansis-enum.md#ColourMoistureStatus) | Moisture state of material while property evaluation is carried out. Soil or Mottle colour. |
+| moistureStatus | 0..1 | Y | Enumeration | [ColourMoistureStatus](./ansis-enum.md#colourmoisturestatus) | Moisture state of material while property evaluation is carried out. Soil or Mottle colour. |
 | colourModel | 1..1 |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), a value from the ASLS Mottle Colours vocabulary (Mottles only), or a colour term. |
 | result | 1..1 |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A colour value structured according to the colourModel. |
 
@@ -44,7 +44,7 @@ Type: *ansis-base:ObservableProperty*. Observable Property. A collection SOSA pr
 | madeBySensor | 0..1 |  | [JSON string \(iri\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats) |  | Relation between an Observation and the Sensor which made the Observations. \[ _Forcing a URI on assumption of a sensor registry somewhere else._ \] |
 | phenomenonTime | 0..1 |  | [JSON string \(date-time\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats); [JSON string \(date\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats) |  | The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time]. \[ _Initially restricting to date-time_ \] |
 | resultTime | 0..1 |  | [JSON string \(date-time\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats); [JSON string \(date\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats) |  | The result time is the instant of time when the Observation activity was completed. \[ _Initially restricting to date-time_ \] |
-| sample | 0..1 |  | Pointer; [SoilSample](./ansis-entities.md#SoilSample) |  | Link to the representative sample from which the observed property was measured. |
+| sample | 0..1 |  | Pointer; [SoilSample](./ansis-entities.md#soilsample) |  | Link to the representative sample from which the observed property was measured. |
 
 
 ### ScopedIdentifier
