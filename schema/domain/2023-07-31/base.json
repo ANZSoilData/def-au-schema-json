@@ -64,39 +64,9 @@
 			"type": "string"
 		},
 		"value": {
-			"@id": "ansis:value",
-			"title": "value",
-			"description": "Simple literal value.",
-			"$defs": {
-				"Boolean": {
-					"type": "boolean",
-					"description": "Boolean."
-				},
-				"DateTime": {
-					"type": "string",
-					"oneOf": [
-						{
-							"format": "date"
-						},
-						{
-							"format": "date-time"
-						}
-					],
-					"description": "Time and/or date."
-				},
-				"Integer": {
-					"type": "integer",
-					"description": "Integer."
-				},
-				"Number": {
-					"type": "number",
-					"description": "Number."
-				},
-				"String": {
-					"type": "string",
-					"description": "String."
-				}
-			}
+			"title": "Value",
+			"description": "The value of a classification.",
+			"type": "string"
 		},
 		"Classification": {
 			"@id": "ansis:SoilClassification",
@@ -120,8 +90,7 @@
 					"const": "ansis:Classification"
 				},
 				"value": {
-					"$ref": "./base.json#/$defs/value/$defs/String",
-					"type": "string"
+					"$ref": "#/$defs/value"
 				},
 				"source": {
 					"$ref": "./base.json#/$defs/source"

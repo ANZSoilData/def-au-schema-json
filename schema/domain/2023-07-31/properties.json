@@ -555,7 +555,7 @@
 									],
 									"properties": {
 										"result": {
-											"$ref": "./base.json#/$defs/value/$defs/String"
+											"type": "string"
 										},
 										"colourModel": {
 											"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
@@ -617,7 +617,7 @@
 									],
 									"properties": {
 										"result": {
-											"$ref": "./base.json#/$defs/value/$defs/String"
+											"type": "string"
 										},
 										"colourModel": {
 											"$ref": "./base.json#/$defs/colourModel/$defs/Soil"
