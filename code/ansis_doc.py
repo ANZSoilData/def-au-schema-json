@@ -54,6 +54,45 @@ def json_schema_to_markdown(json_schema_file_path, json_schema_file_name, contai
 
     md_file.close()
 
+
+def json_enum_to_markdown(json_schema_path, json_enum_file, include_header=True):
+    '''Takes a JSON Enumeration Schema and turns it into a table in a mark-down document.'''
+
+    md_file_name = "docs/ansis-" + json_enum_file.split(".")[0] + ".md"
+
+    enum_file = open(json_schema_path + json_enum_file, "r", encoding="utf8")
+    md_file = open(md_file_name, "w", encoding="utf8")
+
+    enum_root = json.loads(enum_file.read())
+
+    lines = []
+
+    if include_header:
+        lines.append("# " + enum_root["title"])
+
+        lines.append("**JSON Schema Location:** " + enum_root["$id"] + "\n")
+
+        lines.append(enum_root["description"] + "\n")
+
+        if "$comment" in enum_root and isinstance(enum_root["$comment"], str):
+            lines.append("> " + enum_root["$comment"] + "\n")
+
+        header_level = 1
+    else:
+        lines.append("## Enumerations")
+        header_level = 2
+
+    enum_definitions = enum_root["$defs"]
+
+    for enum_key, enum_value in enum_definitions.items():
+        lines = process_enum_definitions (enum_key, enum_value, lines, enum_root, header_level)
+
+    md_file.write("\n".join(lines))
+
+    enum_file.close()
+    md_file.close()
+
+
 def process_enum_definitions (enum_key, enum_value, lines, enum_root, header_level=1):
     '''Process each individual definition entry.'''
 
@@ -165,8 +204,6 @@ def process_schema_definitions(def_key, def_value, lines, json_schema_file_path,
 
         if "$comment" in def_value and isinstance(def_value["$comment"], str):
             lines.append("> " + def_value["$comment"] + "\n")
-
-        # schema_properties = base_properties #pandas.DataFrame(def_value["properties"])
 
         # if def_value["properties"] != {}:
         lines.append(
@@ -420,11 +457,13 @@ def build_range_type_link(schema_namespace, range_type):
 
     return range_type_link
 
+json_enum_to_markdown("schema/domain/2023-07-31/", "enum.json")
+
 # json_schema_to_markdown("schema/domain/2023-07-31/", "base.json")
 
 # json_schema_to_markdown("schema/domain/2023-07-31/", "entities.json")
 
-json_schema_to_markdown("schema/domain/2023-07-31/", "geo.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "geo.json")
 
 # json_schema_to_markdown("schema/domain/2023-07-31/", "proj.json")
 
