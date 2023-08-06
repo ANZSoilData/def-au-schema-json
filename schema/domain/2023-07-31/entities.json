@@ -314,6 +314,7 @@
 			"@id": "ansis:SoilLayer",
 			"title": "ANSIS Soil Layer",
 			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+			"$comment": "Properties from the schema [properties-chemical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json) and [properties-physical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-physical.json) can be provided on a SoilLayer.",
 			"type": "object",
 			"allOf": [
 				{
@@ -450,6 +451,7 @@
 			"@id": "ansis:SoilHorizon",
 			"title": "ANSIS Soil Horizon",
 			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+			"$comment": "Properties from the schema [properties-chemical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json) and [properties-physical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-physical.json) can be provided on a SoilHorizon.",
 			"type": "object",
 			"allOf": [
 				{
