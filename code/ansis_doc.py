@@ -353,7 +353,8 @@ def process_pointer(pointer, json_schema_file_name, property_def=None):
         property_def["type"] = property_type
         property_def["enumeration"] =  property_enum
     elif "properties" in pointer and isinstance(pointer["properties"],dict):
-        property_def = process_pointer(pointer["properties"]["result"], json_schema_file_name, property_def)
+        if "result" in pointer["properties"] and isinstance(pointer["properties"]["result"],dict):
+            property_def = process_pointer(pointer["properties"]["result"], json_schema_file_name, property_def)
     elif "allOf" in pointer and isinstance(pointer["allOf"],list):
         for each in pointer["allOf"]:
             allof = process_pointer(each, json_schema_file_name, property_def)
@@ -421,9 +422,9 @@ def build_range_type_link(schema_namespace, range_type):
 
 # json_schema_to_markdown("schema/domain/2023-07-31/", "base.json")
 
-json_schema_to_markdown("schema/domain/2023-07-31/", "entities.json")
+# json_schema_to_markdown("schema/domain/2023-07-31/", "entities.json")
 
-# json_schema_to_markdown("schema/domain/2023-07-31/", "geo.json")
+json_schema_to_markdown("schema/domain/2023-07-31/", "geo.json")
 
 # json_schema_to_markdown("schema/domain/2023-07-31/", "proj.json")
 
