@@ -119,10 +119,9 @@
 				},
 				"result": {
 					"$ref": "./sosa.json#/$defs/result/$defs/Colour",
-					"$comment": "Colour result value rules are set for each indidual colour model."
+					"$comment": "Colour result value rules are set for each individual colour model."
 				}
-			},
-			"additionalProperties": false
+			}
 		},
 		"ObservableProperty": {
 			"title": "Observable Property",
