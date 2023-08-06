@@ -54,7 +54,7 @@ related definitions or summaries of the relevant ANSIS vocabularies.
 | [ANSIS Base Properties (ansis-base.md)](./ansis-base.md) | Reusable properties for identifiers, labels, links and so on. |
 
 ## ANSIS Information Model for Soil - Brief Summary
-> The full description of the ANSIS Information is published here:
+> The full conceptual description of the ANSIS Information is published here:
 > [link to ANSIS Information Model v1.5]().
 
 The initial model for ANSIS is primarily an interpretation of The Australian Soil and Land Survey
@@ -62,10 +62,16 @@ The initial model for ANSIS is primarily an interpretation of The Australian Soi
 adapted for ANSIS. As such it focusses on the description of Soil Profiles at Soil Sites. These are
 the fundamental data to be served by ANSIS.
 
-![ansis - overview](../figs/ansis-overview-noatts.png)
+![ansis - overview](../figs/ansis-overview.png)
 
 *Figure 1. Summary diagram showing the main entity types-(classes) for soil observations.*
 
 ANSIS will provide data for Soil and Land Survey Sites and the Soil Profiles described at those
 sites. Within each site will be nested data, or links to other data, describing the soil, horizons,
 constituents of horizons (e.g. mottles), samples and laboratory observations.
+
+## ANSIS JSON Schema - Summary
+
+![ansis - soil site](../figs/ansis-soil-site.png)
+
+*Figure 2. Summary diagram of the main objects in the ANSIS JSON Schema.*
