@@ -42,9 +42,7 @@
 				"SRID=4283;POINT(-42 24)",
 				"SRID=4283;LINESTRING(-42 24, -42 42)",
 				"SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
-			],
-			"properties": {
-			}
+			]
 		}
 	}
 }
