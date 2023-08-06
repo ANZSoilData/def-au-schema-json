@@ -26,6 +26,7 @@
 		"colourModel": {
 			"title": "colour model",
 			"description": "The colour model used for the value. E.g. RGB , the Munsell system, Japanese Industrial Standards colours (using Munsell notation), a value from the ASLS Mottle Colours vocabulary (Mottles only), or a colour term.",
+			"type": "string",
 			"$defs": {
 				"Mottles": {
 					"$ref": "./enum.json#/$defs/ColourModel_Mottles"
@@ -65,7 +66,7 @@
 		},
 		"value": {
 			"title": "Value",
-			"description": "The value of a classification.",
+			"description": "The value.",
 			"type": "string"
 		},
 		"Classification": {
@@ -114,7 +115,7 @@
 					"$ref": "./properties.json#/$defs/_astd/$defs/moistureStatus/$defs/Colour"
 				},
 				"colourModel": {
-					"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
+					"$ref": "./base.json#/$defs/colourModel"
 				},
 				"result": {
 					"$ref": "./sosa.json#/$defs/result/$defs/Colour",
@@ -154,15 +155,15 @@
 		},
 		"ScopedIdentifier": {
 			"title": "ANSIS Scoped Identifier",
-			"description": "A simple object holding an identifier as assigned by a provider/agency. The provider/agency may, optionally, be specified by the authority property.",
+			"description": "A simple object holding an identifier as assigned by a provider/agency. The name of the provider/agency may, optionally, be specified by the authority property.",
 			"$comment": "Based on the GML identifier (scoped name - code with with authority).",
 			"type": "object",
 			"required": [
 				"name"
 			],
 			"properties": {
-				"name": {
-					"$ref": "#/$defs/name"
+				"value": {
+					"$ref": "#/$defs/value"
 				},
 				"authority": {
 					"$ref": "#/$defs/name",
