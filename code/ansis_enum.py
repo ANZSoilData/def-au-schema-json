@@ -32,7 +32,7 @@ def get_concept_narrower_concepts(uri):
     concept_request = requests.get(
         uri,
         headers = {"Accept": "application/json"})
-    
+
     narrower_concepts = []
 
     if concept_request.status_code == 404:
@@ -103,7 +103,15 @@ def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name=
                         enum_object_value["const"] = const
                         enum_object_value["description"] = get_concept_preflabel(member_uri)
                         enum_object_oneof.append(enum_object_value)
-            enum_object["oneOf"] = enum_object_oneof
+            # remove duplicate members
+            enum_object_oneof_added = set()
+            enum_object_oneof_list = []
+            for obj in enum_object_oneof:
+                enum_object_oneof_tuple = tuple(obj.items())
+                if enum_object_oneof_tuple not in enum_object_oneof_added:
+                    enum_object_oneof_added.add(enum_object_oneof_tuple)
+                    enum_object_oneof_list.append(obj)
+            enum_object["oneOf"] = enum_object_oneof_list
         else:
             enum_object["$comment"] = "No skos:members found."
 
@@ -127,7 +135,7 @@ def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name=
 
     working_file.close()
 
-get_ansis_enum("Disturbance-of-site", "http://anzsoil.org/def/au/asls/land-surface/", "ls")
+# get_ansis_enum("Disturbance-of-site", "http://anzsoil.org/def/au/asls/land-surface/", "ls")
 
 # get_ansis_enum("Soil-permeability", "http://anzsoil.org/def/au/asls/soil-profile/", "sp")
 
