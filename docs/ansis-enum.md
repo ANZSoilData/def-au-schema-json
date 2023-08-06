@@ -3,7 +3,7 @@
 
 ANSIS controlled vocabularies converted to JSON schema enumerations. Follow the link under the vocabulary's title for full definitions.
 
-> Enumerations defined according to the pattern recommended here: https://github.com/json-schema-org/json-schema-spec/issues/57
+> Enumerations defined according to the pattern recommended here (and supported by most tools): https://github.com/json-schema-org/json-schema-spec/issues/57
 
 ## Aggradation
 
@@ -92,9 +92,12 @@ Effervescence of carbonate in fine earth using two or three drops of 1-molar HCl
 
 **ANSIS Vocabulary Location:** lf:Channel-depth-width
 
-Channel depth and width refer to the dimensions of a landform that is dominated by channelled stream flow. The limit of channelled stream flow dominance must be identified before width or depth can be estimated. Depth is taken from the top of the stream bank down to the average height of the line following the deepest part of the channel.
-The distinction between stream bank and hillslope or scarp according to dominant process requires particular care where streams are incised, especially if they are cut into terraces that could be mistaken for flood plains.
- 
+Channel depth and width refer to the dimensions of a landform that is dominated by channelled stream flow. The limit of channelled stream flow dominance must be identified before width or depth can be estimated. Depth is taken from the top of the stream bank down to the average height of the line following the deepest part of the channel.
+
+The distinction between stream bank and hillslope or scarp according to dominant process requires particular care where streams are incised, especially if they are cut into terraces that could be mistaken for flood plains.
+
+ 
+
 For detailed studies, keep records of width and depth measurements. In other surveys, use the following classes of relative depth.
 
 | ID/JSON Value | Preferred Label |
@@ -180,7 +183,8 @@ In a traverse downstream, it may happen that tributaries enter the stream at fre
 
 **ANSIS Vocabulary Location:** lf:Channel-spacing
 
-The average spacing of stream channels, L/N, is determined by counting the number, N, of their intersections with an arbitrary line of length L.*
+The average spacing of stream channels, L/N, is determined by counting the number, N, of their intersections with an arbitrary line of length L.*
+
 A convenient tool for estimating channel spacing is a circle, with a circumference of 2 km at map or photo scale, drawn on transparent material.
 
 | ID/JSON Value | Preferred Label |
@@ -252,7 +256,7 @@ The shape of coarse fragments is determined by referencing the chart that captur
 
 **ANSIS Vocabulary Location:** ls:Coarse-fragments-size
 
-The scale adopted employs class boundaries at (2 × 10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials.
+The scale adopted employs class boundaries at (2 x 10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -301,7 +305,7 @@ Colour models used to establish and record soil colour values for mottles.
 | ---------- | --------------- |
 | x:colour-munsell | Munsell Soil Colour \[ _Munsell Colour Company (2000). Munsell Soil Color Charts. Munsell Color Co.: Baltimore, MD_ \] |
 | x:colour-japan | Japanese Soil Color \[ _Takehara, H., Oyama, M. (1970). Standard Soil Color Charts. Japan: Japanese Ministry of Agriculture and Forestry, Research Council for Agriculture, Forestry and Fisheries._ \] |
-| x:colour-mottle | Colour Term \[ _E.g. 'brown', 'gley' or 'dark'._ \] |
+| x:colour-mottle | Mottle Colour \[ _Values from the Australian Soil and Land Survey Handbook Mottle CoSlour vocababulary._ \] |
 
 
 ## Plasticity Degree
@@ -350,14 +354,22 @@ Stickiness is determined on wet soil by pressing the wet sample between thumb an
 
 **ANSIS Vocabulary Location:** sp:Consistence-strength
 
-Strength of soil is the resistance to breaking or deformation. Strength is determined by the force just sufficient to break or deform a 20 mm diameter piece of soil when a compressive shearing force is applied between thumb and forefinger. The 20 mm piece of soil may be a ped, part of a ped, a compound ped or a fragment.
-
-Forces 0 to 5 are equivalent to the following dry consistence classes in the ‘USDA Soil Survey Manual’ (Soil Survey Staff 1951):
-0	Loose
-1	Soft
-2	Slightly hard
-3	Hard
-4	Very hard
+Strength of soil is the resistance to breaking or deformation. Strength is determined by the force just sufficient to break or deform a 20 mm diameter piece of soil when a compressive shearing force is applied between thumb and forefinger. The 20 mm piece of soil may be a ped, part of a ped, a compound ped or a fragment.
+
+
+
+Forces 0 to 5 are equivalent to the following dry consistence classes in the 'USDA Soil Survey Manual' (Soil Survey Staff 1951):
+
+0	Loose
+
+1	Soft
+
+2	Slightly hard
+
+3	Hard
+
+4	Very hard
+
 5	Extremely hard
 
 | ID/JSON Value | Preferred Label |
@@ -669,8 +681,9 @@ Type of erosion
 
 **ANSIS Vocabulary Location:** sp:Fabric-type
 
-The definition of soil fabric in Australia is incomplete. The following description is adapted from Northcote (1979).
-Fabric describes the appearance of the soil material (under ×10 hand lens). Differences in fabric are associated with the presence or absence of peds, the lustre or lack of lustre of the ped surfaces, and the presence, size and arrangement of pores (voids) in the soil mass. The descriptions given below apply primarily to B horizons.
+The definition of soil fabric in Australia is incomplete. The following description is adapted from Northcote (1979).
+
+Fabric describes the appearance of the soil material (under x10 hand lens). Differences in fabric are associated with the presence or absence of peds, the lustre or lack of lustre of the ped surfaces, and the presence, size and arrangement of pores (voids) in the soil mass. The descriptions given below apply primarily to B horizons.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -684,9 +697,12 @@ Fabric describes the appearance of the soil material (under ×10 hand lens). Dif
 
 **ANSIS Vocabulary Location:** sp:Field-texture-mineral
 
-The following description of determination of field texture is adapted from Northcote (1979).
-Field texture is a measure of the behaviour of a small handful of soil when moistened and kneaded into a ball and then pressed out between thumb and forefinger.
-Take a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 1�2 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.
+The following description of determination of field texture is adapted from Northcote (1979).
+
+Field texture is a measure of the behaviour of a small handful of soil when moistened and kneaded into a ball and then pressed out between thumb and forefinger.
+
+Take a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 1-2 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.
+
 The recommended field texture grades as characterised by the behaviour of the moist bolus are described. The approximate percentage content of clay (particles less than 0.002 mm in diameter) and silt (particles between 0.02 and 0.002 mm in diameter) are given as a guide. These percentages must not be used to determine a field texture, that is, do not use them to convert a laboratory particle size value to a field texture grade. Similarly, do not adjust a field texture grade when laboratory particle size data become available.
 
 | ID/JSON Value | Preferred Label |
@@ -1565,7 +1581,7 @@ Give the proportions of gilgai components within the site, thus:
 
 **ANSIS Vocabulary Location:** ls:Microrelief-type-gilgai
 
-Gilgai is surface microrelief associated with soils containing shrink–swell clays. It does not include microrelief that apparently results from repeated freezing and thawing, solifluxion or faunal activity. Gilgai consist of mounds and depressions showing varying degrees of order, sometimes separated by a subplanar or slightly undulating surface.
+Gilgai is surface microrelief associated with soils containing shrink-swell clays. It does not include microrelief that apparently results from repeated freezing and thawing, solifluxion or faunal activity. Gilgai consist of mounds and depressions showing varying degrees of order, sometimes separated by a subplanar or slightly undulating surface.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -1581,7 +1597,7 @@ Gilgai is surface microrelief associated with soils containing shrink–swell cl
 
 **ANSIS Vocabulary Location:** ls:Microrelief-type-hummocky
 
-Hummocky microrelief is not thought to be associated with the shrink–swell process involved in gilgai microrelief.
+Hummocky microrelief is not thought to be associated with the shrink-swell process involved in gilgai microrelief.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -1913,8 +1929,10 @@ Although lower slopes are often gentler than upper slopes, they need not be so (
 
 **ANSIS Vocabulary Location:** lf:Relief
 
-Relief is defined as the difference in elevation between the high and low points of a land surface. Its estimation will be made easier by visualising two surfaces of accordance that are planar or gently curved, one touching the major crests of a landform pattern, and the other passing through the major depressions. The average vertical separation of the two surfaces is a measure of the relief. Make this estimation at a field site, either visually or by using a map, and express it in metres.
-Relief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Löffler (1974), and are broadly compatible with those of Löffler and Ruxton (1969).
+Relief is defined as the difference in elevation between the high and low points of a land surface. Its estimation will be made easier by visualising two surfaces of accordance that are planar or gently curved, one touching the major crests of a landform pattern, and the other passing through the major depressions. The average vertical separation of the two surfaces is a measure of the relief. Make this estimation at a field site, either visually or by using a map, and express it in metres.
+
+Relief is the definitive characteristic for the terms mountains, hills, low hills, rises and plains when used as types of erosional landform pattern (Table 5). The class boundaries, shown in Tables 5 and 6, are set at 300 m, 90 m, 30 m and 9 m. These class limits and the class names are similar to those used by Loffler (1974), and are broadly compatible with those of Loffler and Ruxton (1969).
+
 Table 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics.
 
 | ID/JSON Value | Preferred Label |
@@ -2036,7 +2054,7 @@ Substrate materials may be so extensively altered (as in deep weathering profile
 
 **ANSIS Vocabulary Location:** sp:Root-abundance
 
-Number of roots per 0.01 m2 (100 mm × 100 mm)
+Number of roots per 0.01 m2 (100 mm x 100 mm)
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -2135,7 +2153,7 @@ Nature of segregations
 | sp:segregations-nature-A | Aluminous |
 | sp:segregations-nature-E | Earthy |
 | sp:segregations-nature-F | Ferruginous |
-| sp:segregations-nature-G | Ferruginous–organic |
+| sp:segregations-nature-G | Ferruginous-organic |
 | sp:segregations-nature-H | Organic |
 | sp:segregations-nature-K | Calcareous |
 | sp:segregations-nature-L | Argillaceous |
@@ -2179,9 +2197,12 @@ Strength may be recorded where appropriate
 
 **ANSIS Vocabulary Location:** lf:Slope-class
 
-Slope classes are defined in Table 2. The optional word ‘inclined’ is used to distinguish slope from other attributes, for example ‘gently inclined footslope’ from ‘gently undulating rises’, and ‘moderately inclined hillslope’ from ‘moderately spaced streams’.
-The class boundaries given in Table 2, and repeated in Table 4, are simply boundaries separating slope terms in common use, adjusted to regular logarithmic intervals. They do not refer to observed natural clustering of slope values, since such clustering has not been shown to occur; nor do they relate precisely to boundary criteria for land use, which vary arbitrarily between organisations and which may change with advancing technology.
-It may sometimes be advantageous to split each of the classes ‘very gently inclined’, ‘gently inclined’ and ‘moderately inclined’ into two levels, the appropriate boundary values being 1.8%, 5.6% and 18%.
+Slope classes are defined in Table 2. The optional word 'inclined' is used to distinguish slope from other attributes, for example 'gently inclined footslope' from 'gently undulating rises', and 'moderately inclined hillslope' from 'moderately spaced streams'.
+
+The class boundaries given in Table 2, and repeated in Table 4, are simply boundaries separating slope terms in common use, adjusted to regular logarithmic intervals. They do not refer to observed natural clustering of slope values, since such clustering has not been shown to occur; nor do they relate precisely to boundary criteria for land use, which vary arbitrarily between organisations and which may change with advancing technology.
+
+It may sometimes be advantageous to split each of the classes 'very gently inclined', 'gently inclined' and 'moderately inclined' into two levels, the appropriate boundary values being 1.8%, 5.6% and 18%.
+
 There may also be compelling reasons for using other schemes of slope classes. However, schemes that do not have constant class widths from low to high slope values can lead to problems in subsequent statistical work.
 
 | ID/JSON Value | Preferred Label |
@@ -2200,9 +2221,12 @@ There may also be compelling reasons for using other schemes of slope classes. H
 
 **ANSIS Vocabulary Location:** lf:Slope-modal
 
-Modal slope is defined as the most common class of slope occurring in a landform pattern. Where slope classes have been obtained by systematic sampling, define the classes using equal increments on a scale of the logarithm of the slope tangent, a procedure intended to normalise frequency distributions of observed slope (Speight 1971). Where the most common slope class is estimated by direct observation, it is thought that the estimate will compare with that calculated using the log-normal model.
-Modal slope class determines the use of certain adjectives applied to landform patterns that are characterised by alternating crests and depressions. These are: rolling for moderate modal slopes (10–32%); undulating for gentle slopes (3–10%); and gently undulating for very gentle slopes (1–3%) (compare with Soil Survey Staff 1951, pages 161–165). The other slope classes, precipitous, very steep, steep and level, are to be applied as they stand. The terminology for simple erosional landform patterns based on relief and modal slope is given in Table 5.
-Table 5 defines the category badlands by various combinations of high slope values and low relief values. These combinations imply extremely close spacing of streams or valleys. Specifically, if one assumes a sawtooth terrain profile, the valley spacing implied is less than 100 m in areas with 50 m relief and less than 30 m in areas with 5 m relief; these values appear to accord with usage.
+Modal slope is defined as the most common class of slope occurring in a landform pattern. Where slope classes have been obtained by systematic sampling, define the classes using equal increments on a scale of the logarithm of the slope tangent, a procedure intended to normalise frequency distributions of observed slope (Speight 1971). Where the most common slope class is estimated by direct observation, it is thought that the estimate will compare with that calculated using the log-normal model.
+
+Modal slope class determines the use of certain adjectives applied to landform patterns that are characterised by alternating crests and depressions. These are: rolling for moderate modal slopes (10-32%); undulating for gentle slopes (3-10%); and gently undulating for very gentle slopes (1-3%) (compare with Soil Survey Staff 1951, pages 161-165). The other slope classes, precipitous, very steep, steep and level, are to be applied as they stand. The terminology for simple erosional landform patterns based on relief and modal slope is given in Table 5.
+
+Table 5 defines the category badlands by various combinations of high slope values and low relief values. These combinations imply extremely close spacing of streams or valleys. Specifically, if one assumes a sawtooth terrain profile, the valley spacing implied is less than 100 m in areas with 50 m relief and less than 30 m in areas with 5 m relief; these values appear to accord with usage.
+
 Table 7 lists types of landform pattern in order of their typical class of modal slope. This table should not be regarded as definitive, for slope within each type of landform pattern may vary widely.
 
 | ID/JSON Value | Preferred Label |
@@ -2235,7 +2259,7 @@ Means of evaluation of slope
 
 **ANSIS Vocabulary Location:** sp:Soil-permeability
 
-Permeability is independent of climate and drainage, and – as applied to a soil – is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink–swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).
+Permeability is independent of climate and drainage, and - as applied to a soil - is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink-swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982).
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
@@ -2278,13 +2302,20 @@ Drainage is a useful term to summarise local soil wetness conditions, that is, i
 
 **ANSIS Vocabulary Location:** sp:Soil-water-status
 
-Give soil water status of the soil at the time of description.
-It may also be relevant to note the weather conditions immediately prior to examination of the soil if these are known, for example a soil may be wet because of local rain or from seepage.
-The following guidelines may be used as a crude approximation of soil water status:
-
-Dry is below wilting point. Material becomes darker or has lower colour value when moistened.
-Moderately moist is the drier half of the available moisture range.
-Moist is the wetter half of the available moisture range.
+Give soil water status of the soil at the time of description.
+
+It may also be relevant to note the weather conditions immediately prior to examination of the soil if these are known, for example a soil may be wet because of local rain or from seepage.
+
+The following guidelines may be used as a crude approximation of soil water status:
+
+
+
+Dry is below wilting point. Material becomes darker or has lower colour value when moistened.
+
+Moderately moist is the drier half of the available moisture range.
+
+Moist is the wetter half of the available moisture range.
+
 Wet is at, or exceeding, field capacity. Will wet and/or stick to fingers when moulded.
 
 | ID/JSON Value | Preferred Label |
@@ -2299,12 +2330,18 @@ Wet is at, or exceeding, field capacity. Will wet and/or stick to fingers when m
 
 **ANSIS Vocabulary Location:** sp:structure-pedality-compound
 
-Compound pedality occurs where large peds part along natural planes of weakness to form smaller peds, which may again part to smaller peds, and so on to the smallest or primary peds.
-Primary peds are the simplest peds occurring in soil material; they cannot be divided into smaller peds, but may be packed together to form compound peds of a higher level of organisation (Brewer 1964).
-The order of peds and relationship of one to the other is important and may be described as the larger peds parting to the smaller and further where necessary. For example, 'strong 50-100 mm columnar, parting to moderate 20-50 mm prismatic, parting to moderate
-10-20 mm angular blocky'. The word 'parting' and not 'breaking' is used. The term 'breaking' is used when soil is fractured along planes other than natural planes of weakness.
-1	Largest peds (in the type of soil observation described), parting to
-2	Next size peds, parting to
+Compound pedality occurs where large peds part along natural planes of weakness to form smaller peds, which may again part to smaller peds, and so on to the smallest or primary peds.
+
+Primary peds are the simplest peds occurring in soil material; they cannot be divided into smaller peds, but may be packed together to form compound peds of a higher level of organisation (Brewer 1964).
+
+The order of peds and relationship of one to the other is important and may be described as the larger peds parting to the smaller and further where necessary. For example, 'strong 50-100 mm columnar, parting to moderate 20-50 mm prismatic, parting to moderate
+
+10-20 mm angular blocky'. The word 'parting' and not 'breaking' is used. The term 'breaking' is used when soil is fractured along planes other than natural planes of weakness.
+
+1	Largest peds (in the type of soil observation described), parting to
+
+2	Next size peds, parting to
+
 3	Next size peds, ... and further, if required, to the primary ped.
 
 > No skos:members found.
@@ -2447,7 +2484,7 @@ The substrate may be described using several types of observation.
 
 **ANSIS Vocabulary Location:** sp:Water-repellence
 
-Water repellence of some soils, usually sandy, is caused by a series of long-chain polymethylene waxes, made up of acids, alcohols and esters, attached to the sand grains (Ma’shum et al. 1988). These soils occur Australia-wide but are more widespread in southern Australia (Wetherby 1984, McGhie and Posner 1980). Degree of repellence is assessed by determining the concentration of ethanol required to wet the sand in 10 seconds (King 1981). An abbreviated form of this method is recommended for routine field situations.
+Water repellence of some soils, usually sandy, is caused by a series of long-chain polymethylene waxes, made up of acids, alcohols and esters, attached to the sand grains (Ma'shum et al. 1988). These soils occur Australia-wide but are more widespread in southern Australia (Wetherby 1984, McGhie and Posner 1980). Degree of repellence is assessed by determining the concentration of ethanol required to wet the sand in 10 seconds (King 1981). An abbreviated form of this method is recommended for routine field situations.
 
 | ID/JSON Value | Preferred Label |
 | ---------- | --------------- |
