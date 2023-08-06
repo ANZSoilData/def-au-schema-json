@@ -45,7 +45,7 @@
 					"$ref": "#/$defs/resultTime"
 				},
 				"usedProcedure": {
-					"$ref": "#/$defs/usedProcedure"
+					"$ref": "#/$defs/usedProcedure/$defs/Enumeration"
 				}
 			},
 			"additionalProperties": false
@@ -59,13 +59,52 @@
 		"result": {
 			"@id": "sosa:hasResult",
 			"title": "result",
-			"description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample. The simple value of an Observation or Actuation or act of Sampling.",
 			"$defs": {
-				"QuantityValue": {
+				"Colour": {
 					"@id": "sosa:hasSimpleResult",
-					"$ref": "./qudt.json#/$defs/QuantityValue"
+					"description": "A colour value structured according to the colourModel.",
+					"type": "string",
+					"$defs": {
+						"Munsell": {
+							"properties": {
+								"result": {
+									"type": "string",
+									"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\/$)"
+								}
+							}
+						},
+						"RGB": {
+							"properties": {
+								"result": {
+									"type": "string",
+									"pattern": "(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b\\)$)|(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%\\)$)"
+								}
+							}
+						},
+						"MottleColour": {
+							"properties": {
+								"result": {
+									"type": "string",
+									"$ref": "./enum.json#/$defs/MottleColour"
+								}
+							}
+						},
+						"Term": {
+							"properties": {
+								"result": {
+									"type": "string"
+								}
+							}
+						}	
+					}
+				},
+				"ObservableProperty": {
+					"@id": "sosa:hasSimpleResult",
+					"description": "The simple value of an Observation. May be a quantity, values from and enumeration or a simple string.",
+					"$comment": "Observation result value rules are set for each indidual property."
 				},
 				"SoilSample": {
+					"description": "Relation linking an act of Sampling to a Sample.",
 					"$ref": "./entities.json#/$defs/SoilSample"
 				}
 			}
@@ -74,40 +113,31 @@
 			"@id": "sosa:hasSample",
 			"title": "sample",
 			"description": "Link to the representative sample from which the observed property was measured.",
-			"type": [
-				"string",
-				"null"
-			]
+			"$ref": "./base.json#/$defs/pointer",
+			"_refType": "./entities.json#/$defs/SoilSample"
 		},
 		"madeBySampler": {
 			"@id": "sosa:madeBySampler",
 			"title": "Made by Sampler",
 			"description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
-			"$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
-			"type": [
-				"string",
-				"null"
-			]
+			"$comment": "Forcing a URI on assumption of a sampler registry somewhere else.",
+			"type": "string",
+			"format": "iri"
 		},
 		"madeBySensor": {
 			"@id": "sosa:madeBySensor",
 			"title": "Made by Sensor",
 			"description": "Relation between an Observation and the Sensor which made the Observations.",
 			"$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
-			"type": [
-				"string",
-				"null"
-			]
+			"type": "string",
+			"format": "iri"
 		},
 		"phenomenonTime": {
 			"@id": "sosa:phenomenonTime",
 			"title": "Phenomenon Time",
 			"description": "The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time].",
 			"$comment": "Initially restricting to date-time",
-			"type": [
-				"string",
-				"null"
-			],
+			"type": "string",
 			"oneOf": [
 				{
 					"format": "date-time"
@@ -122,10 +152,7 @@
 			"title": "Result Time",
 			"description": "The result time is the instant of time when the Observation activity was completed.",
 			"$comment": "Initially restricting to date-time",
-			"type": [
-				"string",
-				"null"
-			],
+			"type": "string",
 			"oneOf": [
 				{
 					"format": "date-time"
@@ -140,14 +167,17 @@
 			"title": "Used Procedure",
 			"description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
 			"$defs": {
-				"Concept": {
-					"description": "skos:Concept id (compact URI).",
-					"type": "string"
+				"Enumeration": {
+					"description": "Defined method (compact URI).",
+					"type": "string",
+					"format": "iri"
 				},
 				"SoilProfile": {
+					"description": "SoilProfile.",
 					"$ref": "./enum.json#/$defs/ProfileConstruction"
 				},
 				"Substrate": {
+					"description": "Substrate.",
 					"$ref": "./enum.json#/$defs/TypeOfSubstrateObservation"
 				}
 			}
@@ -156,8 +186,8 @@
 			"@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
 			"title": "Quality of Observation",
 			"description": "The adjudged quality of the Result.",
-			"$comment": "To be expanded - using skos:Concept for qualitative descriptions of quality.",
-			"type": "null"
+			"$comment": "To be expanded - may be an enumeration or quantification of uncertainty.",
+			"type": "string"
 		}
 	}
 }

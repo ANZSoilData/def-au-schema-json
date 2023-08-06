@@ -571,7 +571,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
 									}
 								},
 								{
@@ -583,7 +583,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
 									}
 								},
 								{
@@ -595,7 +595,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/MottleColour"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/MottleColour"
 									}
 								},
 								{
@@ -633,7 +633,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
 									}
 								},
 								{
@@ -645,7 +645,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Munsell"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
 									}
 								},
 								{
@@ -657,7 +657,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/RGB"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/RGB"
 									}
 								},
 								{
@@ -669,7 +669,7 @@
 										}
 									},
 									"then": {
-										"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Term"
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Term"
 									}
 								},
 								{
@@ -679,37 +679,6 @@
 									"$ref": "./base.json#/$defs/ObservableProperty"
 								}
 							]
-						},
-						"Munsell": {
-							"properties": {
-								"result": {
-									"type": "string",
-									"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\/$)"
-								}
-							}
-						},
-						"RGB": {
-							"properties": {
-								"result": {
-									"type": "string",
-									"pattern": "(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b\\)$)|(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%\\)$)"
-								}
-							}
-						},
-						"MottleColour": {
-							"properties": {
-								"result": {
-									"type": "string",
-									"$ref": "./enum.json#/$defs/MottleColour"
-								}
-							}
-						},
-						"Term": {
-							"properties": {
-								"result": {
-									"type": "string"
-								}
-							}
 						}
 					}
 				},

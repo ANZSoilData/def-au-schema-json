@@ -148,7 +148,7 @@
 					"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
 				},
 				"result": {
-					"$ref": "./sosa.json#/$defs/result",
+					"$ref": "./sosa.json#/$defs/result/$defs/Colour",
 					"$comment": "Colour result value rules are set for each indidual colour model."
 				}
 			},
@@ -161,14 +161,13 @@
 			"type": "object",
 			"properties": {
 				"result": {
-					"$ref": "./sosa.json#/$defs/result",
-					"$comment": "Observation result value rules are set for each indidual property."
+					"$ref": "./sosa.json#/$defs/result/$defs/ObservableProperty"
 				},
 				"qualityOfObservation": {
 					"$ref": "./sosa.json#/$defs/qualityOfObservation"
 				},
 				"usedProcedure": {
-					"$ref": "./sosa.json#/$defs/usedProcedure"
+					"$ref": "./sosa.json#/$defs/usedProcedure/$defs/Enumeration"
 				},
 				"madeBySensor": {
 					"$ref": "./sosa.json#/$defs/madeBySensor"
