@@ -104,7 +104,9 @@ def process_enum_definitions (enum_key, enum_value, lines, enum_root, header_lev
 
         print("Processing enum", enum_key, "...")
 
-        lines.append("#" * (header_level + 1) + " " + enum_value["title"] + "\n")
+        lines.append("#" * (header_level + 1) + " " + enum_key + "\n")
+
+        lines.append("**ANSIS Vocabulary Title:** " + enum_value["title"] + "\n")
 
         if "@id" in enum_value and isinstance(enum_value["@id"], str):
 
@@ -428,34 +430,12 @@ def build_md_link_from_ref(ref_string, json_schema_file_name):
         ref_path = ref_path.replace(".json", ".md")
         ref_path = ref_path.replace("/$defs/", "")
 
+    ref_path = ref_path.lower().replace(" ", "-")
+
     md_link = "[" + ref_label + "](" + ref_path + ")"
 
     return md_link
 
-
-def build_range_type_link(schema_namespace, range_type):
-    '''Builds a link to an anchor for the definition of the type.'''
-
-    range_type_anchor = range_type.lower().replace(":", "")
-    target_namespace = range_type.split(":")[0]
-    target_file = target_namespace.replace("ansis","entities")
-    target_name = range_type.split(":")[1]
-
-    range_type_link = range_type
-
-    if target_namespace == "xs":
-        range_type_link = "[" + range_type + \
-            "](https://www.w3.org/TR/xmlschema-2/#" + target_name + ")"
-    else:
-        if target_namespace == schema_namespace:
-            range_type_link = "[" + range_type + \
-                "](#" + range_type_anchor + ")"
-        else:
-            range_type_link = "[" + range_type + \
-                "](./ansis-" + target_file + "#" + \
-                range_type_anchor + ")"
-
-    return range_type_link
 
 json_enum_to_markdown("schema/domain/2023-07-31/", "enum.json")
 
