@@ -94,7 +94,7 @@ Type: *ansis:SoilSample*. ANSIS Soil Sample. Sample of soil or soil entity. Samp
 
 ### SoilLayer
 
-Type: *ansis:SoilLayer*. ANSIS Soil Layer. Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.
+Type: *ansis:SoilLayer*. ANSIS Soil Layer. Region within a soil body usually observed as a specified depth interval within a profile.
 
 > Properties from the schema [properties-chemical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json) and [properties-physical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-physical.json) can be provided on a SoilLayer.
 

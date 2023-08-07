@@ -313,7 +313,7 @@
 		"SoilLayer": {
 			"@id": "ansis:SoilLayer",
 			"title": "ANSIS Soil Layer",
-			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
+			"description": "Region within a soil body usually observed as a specified depth interval within a profile.",
 			"$comment": "Properties from the schema [properties-chemical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json) and [properties-physical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-physical.json) can be provided on a SoilLayer.",
 			"type": "object",
 			"allOf": [
