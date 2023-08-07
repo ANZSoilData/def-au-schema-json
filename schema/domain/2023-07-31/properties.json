@@ -2986,7 +2986,7 @@
 					"title": "visitor",
 					"description": "Site visitor, for the purpose of sampling or observation.",
 					"$ref": "./base.json#/$defs/pointer",
-					"_refType": "./entities.json#/$defs/Person"
+					"_refType": "./prov.json#/$defs/Person"
 				}
 			}
 		}
