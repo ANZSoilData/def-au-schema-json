@@ -49,7 +49,7 @@ Type: *ansis:SiteVisit*. ANSIS Site Visit. A visit to a designated site, for the
 | relatedProject | 1..* |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A JSON pointer to an object elsewhere in the document. |
 | soilProfile | 0..* |  | [SoilProfile](#soilprofile) |  | The soil profile related to this context. |
 | startedAtTime | 1..1 |  | [JSON string \(date-time\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats); [JSON string \(date\)](https://json-schema.org/understanding-json-schema/reference/string.html#built-in-formats) |  | The time at which an activity started. \[ _See also endedAtTime._ \] |
-| visitor | 1..* |  | Pointer; [Person](#person) |  | Site visitor, for the purpose of sampling or observation. |
+| visitor | 1..* |  | Pointer; [Person](./ansis-prov.md#person) |  | Site visitor, for the purpose of sampling or observation. |
 
 
 ### SoilProfile
