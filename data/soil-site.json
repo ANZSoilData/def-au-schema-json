@@ -32,7 +32,7 @@
 					"type": "ansis:SiteVisit",
 					"startedAtTime": "2023-07-01",
 					"endedAtTime": "2023-07-02",
-					"visitor": [
+					"relatedVisitor": [
                         "#/included/persons/0"
                     ],
                     "soilProfile": [

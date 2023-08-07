@@ -129,7 +129,7 @@
 				"endedAtTime",
 				"relatedProject",
 				"startedAtTime",
-				"visitor"
+				"relatedVisitor"
 			],
 			"_preferred": [
 			],
@@ -171,10 +171,10 @@
 				"startedAtTime": {
 					"$ref": "./prov.json#/$defs/startedAtTime"
 				},
-				"visitor": {
+				"relatedVisitor": {
 					"type": "array",
 					"items": {
-						"$ref": "./properties.json#/$defs/_rel/$defs/visitor"
+						"$ref": "./properties.json#/$defs/_rel/$defs/relatedVisitor"
 					}
 				}
 			},

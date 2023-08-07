@@ -2981,7 +2981,7 @@
 					"$ref": "./base.json#/$defs/pointer",
 					"_refType": "./entities.json#/$defs/SoilSite"
 				},
-				"visitor": {
+				"relatedVisitor": {
 					"@id": "ansis:visitor",
 					"title": "visitor",
 					"description": "Site visitor, for the purpose of sampling or observation.",
