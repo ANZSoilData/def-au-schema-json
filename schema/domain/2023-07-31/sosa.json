@@ -69,7 +69,7 @@
 							"properties": {
 								"result": {
 									"type": "string",
-									"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\/([0-9]|10)$)|(^N\\s([0-9]|10)\\/$)"
+									"pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\/([0-9])(\\.[0-9])?$)|(^N\\s([0-9]|10)\\/$)"
 								}
 							}
 						},
@@ -95,13 +95,13 @@
 									"type": "string"
 								}
 							}
-						}	
+						}
 					}
 				},
 				"ObservableProperty": {
 					"@id": "sosa:hasSimpleResult",
 					"description": "The simple value of an Observation. May be a quantity, values from and enumeration or a simple string.",
-					"$comment": "Observation result value rules are set for each indidual property."
+					"$comment": "Observation result value rules are set for each individual property."
 				},
 				"SoilSample": {
 					"description": "Relation linking an act of Sampling to a Sample.",
