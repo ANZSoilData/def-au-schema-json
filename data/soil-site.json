@@ -1,5 +1,5 @@
 {
-	"$schema": "../schema/domain/2023-07-31/ansis.json",
+	"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json",
     "meta": {
 		"timeStamp": "2023-07-31T15:29:00+12:00",
 		"numberReturned": 2
@@ -48,6 +48,9 @@
                                     "unit": "unit:M"
                                 }
                             },
+                            "permeability": {
+                                "result": "sp:soil-water-permeability-3"
+                            },
                             "sampling": [
                                 {
                                     "type": "sosa:Sampling",
@@ -89,7 +92,7 @@
                                     "colour": [
                                         {
                                             "colourModel": "x:colour-munsell",
-                                            "result": "10Y 5/5"
+                                            "result": "10Y 5/8.5"
                                         }
                                     ],
                                     "ammoniumN": [
