@@ -15,48 +15,48 @@
             ]
         },
         "data": {
-        	"description": "An array containing the document’s target resource (an ANSIS Landscape Survey/Soil Site).",
+            "description": "An array containing the document’s target resource (an ANSIS Landscape Survey/Soil Site).",
             "type": "array",
             "items": {
                 "$ref": "./entities.json#/$defs/SoilSite"
             }
         },
         "included": {
-        	"description": "Arrays of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in these arrays will be accessed via JSON pointers in the source objects.",
+            "description": "Arrays of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in these arrays will be accessed via JSON pointers in the source objects.",
             "type": "object",
             "properties": {
-            	"organizations": {
-					"type": "array",
-					"items": {
-						"$ref": "./prov.json#/$defs/Organization"
-					}
-				},
-            	"persons": {
-					"type": "array",
-					"items": {
-						"$ref": "./prov.json#/$defs/Person"
-					}
-				},
-            	"projects": {
-					"type": "array",
-					"items": {
-						"$ref": "./proj.json#/$defs/Project"
-					}
-				},
-            	"soilSites": {
-					"type": "array",
-					"items": {
-						"$ref": "./entities.json#/$defs/SoilSite"
-					}
-				}
+                "organizations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./prov.json#/$defs/Organization"
+                    }
+                },
+                "persons": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./prov.json#/$defs/Person"
+                    }
+                },
+                "projects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./proj.json#/$defs/Project"
+                    }
+                },
+                "soilSites": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./entities.json#/$defs/SoilSite"
+                    }
+                }
             },
             "minProperties": 1
         },
         "meta": {
-        	"description": "Non-ANSIS response metadata summarising the contents of the document.",
+            "description": "Non-ANSIS response metadata summarising the contents of the document.",
             "type": "object",
             "properties": {
-            	"timeStamp": {
+                "timeStamp": {
                     "description": "The data and time this document was created.",
                     "type": "string",
                     "format": "date-time"
@@ -72,6 +72,87 @@
                 "numberWithheld": {
                     "description": "Number of objects the matched the filter used when generating this document but we not returned due to user access restrictions.",
                     "type": "integer"
+                },
+                "curiPrefix": {
+                    "description": "",
+                    "type": "object",
+                    "required": [
+                        "ansis"
+                    ],
+                    "properties": {
+                        "ansis": {
+                            "type": "string",
+                            "const": "https://anzsoil.org/def/au/domain/"
+                        },
+                        "asc": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/asc/"
+                        },
+                        "asls": {
+                            "type": "string",
+                            "const": "https://anzsoil.org/def/au/domain/asls-code/"
+                        },
+                        "doi": {
+                            "type": "string",
+                            "const": "https://doi.org/"
+                        },
+                        "geo": {
+                            "type": "string",
+                            "const": "http://www.opengis.net/ont/geosparql#"
+                        },
+                        "lf": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/asls/landform/"
+                        },
+                        "ls": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/asls/land-surface/"
+                        },
+                        "nil": {
+                            "type": "string",
+                            "const": "http://www.opengis.net/def/nil/OGC/0/"
+                        },
+                        "prop": {
+                            "type": "string",
+                            "const": "https://anzsoil.org/def/au/property/"
+                        },
+                        "prov": {
+                            "type": "string",
+                            "const": "http://www.w3.org/ns/prov#"
+                        },
+                        "proj": {
+                            "type": "string",
+                            "const": "https://linked.data.gov.au/def/project#"
+                        },
+                        "scm": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/scm/"
+                        },
+                        "sosa": {
+                            "type": "string",
+                            "const": "http://www.w3.org/ns/sosa/"
+                        },
+                        "sp": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/asls/soil-profile/"
+                        },
+                        "subst": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/asls/substrate/"
+                        },
+                        "qudt": {
+                            "type": "string",
+                            "const": "http://qudt.org/schema/qudt/"
+                        },
+                        "spmile": {
+                            "type": "string",
+                            "const": "http://anzsoil.org/def/au/spm/spmile/"
+                        },
+                        "unit": {
+                            "type": "string",
+                            "const": "https://qudt.org/2.1/vocab/unit/"
+                        }
+                    }
                 }
             }
         }
