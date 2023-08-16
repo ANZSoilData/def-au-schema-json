@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "proj.json",
+	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/proj.json",
 	"title": "PROJ Entity Schema",
 	"description": "JSON Schema definitions of the PROJ Ontology entities used by ANSIS.",
 	"type": "null",

@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "ansis.json",
+    "$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json",
     "title": "ANSIS Root Entity Schema",
     "description": "Identifies root elements currently served by ANSIS.",
     "$comment": "Based on, but not fully compliant with, the top-level objects defined in the [JSON API](https://jsonapi.org/format/#document-top-level) Specification.",
