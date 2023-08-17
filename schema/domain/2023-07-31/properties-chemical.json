@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json",
+	"$id": "properties-chemical.json",
 	"title": "ANSIS Soil Chemical Property Schema",
 	"description": "JSON Schema definitions of the complete list of observvable soil chemical properties defined in the ANSIS Domain Ontology.",
 	"$comment": "Derived from Soil Chemical Methods – Australasia. (The 'Green Book'.)",

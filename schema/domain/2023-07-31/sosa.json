@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/sosa.json",
+	"$id": "sosa.json",
 	"title": "SOSA Entity Schema",
 	"description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
 	"type": "null",
