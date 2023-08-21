@@ -311,9 +311,12 @@
 			"additionalProperties": false
 		},
 		"SoilLayer": {
-			"@id": "ansis:SoilLayer",
-			"title": "ANSIS Soil Layer",
-			"description": "Region within a soil body usually observed as a specified depth interval within a profile.",
+			"@id": [
+                "ansis:SoilLayer",
+                "ansis:SoilHorizon"
+            ],
+			"title": "ANSIS Soil Layer/Horizon",
+			"description": "Region within a soil body usually observed as a specified depth interval within a profile (ansis:SoilLayer), or is compositionally and/or structurally homogeneous, delineated by pedological boundaries (ansis:SoilHorizon).",
 			"$comment": "Properties from the schema [properties-chemical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json) and [properties-physical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-physical.json) can be provided on a SoilLayer.",
 			"type": "object",
 			"allOf": [
@@ -337,8 +340,11 @@
 							"$ref": "./base.json#/$defs/id"
 						},
 						"type": {
-							"$ref": "./base.json#/$defs/type",
-							"const": "ansis:SoilLayer"
+                            "$ref": "./base.json#/$defs/type",
+                            "enum": [
+                                "ansis:SoilLayer",
+                                "ansis:SoilHorizon"
+                            ]
 						},
 						"carbonateEffervescence": {
 							"type": "array",
@@ -438,6 +444,31 @@
 						}
 					}
 				},
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "ansis:SoilHorizon"
+                            }
+                        }
+                    },
+                    "then":{
+                        "required": [
+                            "designation"
+                        ],
+                        "properties": {
+                            "boundaryDistinctness": {
+                                "$ref": "./properties.json#/$defs/_obs/$defs/boundaryDistinctness"
+                            },
+                            "boundaryShape": {
+                                "$ref": "./properties.json#/$defs/_obs/$defs/boundaryShape"
+                            },
+                            "designation": {
+                                "$ref": "./properties.json#/$defs/_obs/$defs/designation"
+                            }
+                        }
+                    }
+                },
 				{
 					"$ref": "./properties-chemical.json"
 				},
@@ -445,154 +476,7 @@
 					"$ref": "./properties-physical.json"
 				}
 			],
-			"additionalProperties": true
-		},
-		"SoilHorizon": {
-			"@id": "ansis:SoilHorizon",
-			"title": "ANSIS Soil Horizon",
-			"description": "Soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries.",
-			"$comment": "Properties from the schema [properties-chemical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-chemical.json) and [properties-physical.json](https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/properties-physical.json) can be provided on a SoilHorizon.",
-			"type": "object",
-			"allOf": [
-				{
-					"required": [
-						"type",
-						"depthLower",
-						"depthUpper",
-						"designation"
-					],
-					"_preferred": [
-						"carbonateEffervescence",
-						"colour",
-						"coarseFragments",
-						"mottles",
-						"consistence",
-						"structures",
-						"texture"
-					],
-					"properties": {
-						"id": {
-							"$ref": "./base.json#/$defs/id"
-						},
-						"type": {
-							"$ref": "./base.json#/$defs/type",
-							"const": "ansis:SoilHorizon"
-						},
-						"boundaryDistinctness": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/boundaryDistinctness"
-						},
-						"boundaryShape": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/boundaryShape"
-						},
-						"carbonateEffervescence": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_obs/$defs/carbonateEffervescence"
-							}
-						},
-						"colour": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_obs/$defs/colour/$defs/Soil"
-							}
-						},
-						"density": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_obs/$defs/density"
-							}
-						},
-						"depthLower": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/depthLower"
-						},
-						"depthUpper": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/depthUpper"
-						},
-						"designation": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/designation"
-						},
-						"coarseFragments": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/coarseFragments"
-							}
-						},
-						"cracks": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/cracks"
-							}
-						},
-						"cutans": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/cutans"
-							}
-						},
-						"mottles": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/mottles"
-							}
-						},
-						"pans": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/pans"
-							}
-						},
-						"pores": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/pores"
-							}
-						},
-						"roots": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/roots"
-							}
-						},
-						"segregations": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/segregations"
-							}
-						},
-						"relatedSample": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/relatedSample"
-							}
-						},
-						"consistence": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/consistence"
-							}
-						},
-						"structures": {
-							"type": "array",
-							"items": {
-								"$ref": "./properties.json#/$defs/_rel/$defs/structures"
-							}
-						},
-						"texture": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/texture/$defs/Soil"
-						},
-						"waterRepellence": {
-							"$ref": "./properties.json#/$defs/_obs/$defs/waterRepellence"
-						}
-					}
-				},
-				{
-					"$ref": "./properties-chemical.json"
-				},
-				{
-					"$ref": "./properties-physical.json"
-				}
-			],
-			"additionalProperties": false
+			"unevaluatedProperties": false
 		},
 		"SoilSurface": {
 			"@id": "ansis:SoilSurface",
