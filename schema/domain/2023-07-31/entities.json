@@ -445,7 +445,7 @@
 					"$ref": "./properties-physical.json"
 				}
 			],
-			"additionalProperties": true
+			"unevaluatedProperties": false
 		},
 		"SoilHorizon": {
 			"@id": "ansis:SoilHorizon",
@@ -592,7 +592,7 @@
 					"$ref": "./properties-physical.json"
 				}
 			],
-			"additionalProperties": false
+			"unevaluatedProperties": false
 		},
 		"SoilSurface": {
 			"@id": "ansis:SoilSurface",
