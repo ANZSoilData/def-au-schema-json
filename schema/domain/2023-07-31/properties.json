@@ -1811,7 +1811,17 @@
 									],
 									"properties": {
 										"result": {
-											"$ref": "./enum.json#/$defs/LithologyCoarseFragments"
+											"oneOf": [
+												{
+													"$ref": "./enum.json#/$defs/LithologyCoarseFragments"
+												},
+												{
+													"$ref": "./enum.json#/$defs/LithologyRock"
+												},
+												{
+													"$ref": "./enum.json#/$defs/LithologyUnconsolidated"
+												}
+											]
 										}
 									}
 								},
