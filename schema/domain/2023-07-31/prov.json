@@ -1,115 +1,112 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "prov.json",
-	"title": "PROV Entity Schema",
-	"description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
-	"type": "null",
-	"_curiPrefix": {
-		"prov": "http://www.w3.org/ns/prov#",
-		"proj": "https://linked.data.gov.au/def/project#"
-	},
-	"$defs": {
-		"Agent": {
-			"@id": "prov:Agent",
-			"title": "PROV Agent",
-			"description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
-			"type": "object",
-			"required": [
-				"type"
-			],
-			"properties": {
-				"id": {
-					"$ref": "./base.json#/$defs/id"
-				},
-				"type": {
-					"$ref": "./base.json#/$defs/type",
-					"const": "prov:Agent"
-				},
-				"name": {
-					"$ref": "./base.json#/$defs/name"
-				}
-			},
-			"additionalProperties": false
-		},
-		"Organization": {
-			"@id": "prov:Organization",
-			"title": "PROV Organization",
-			"description": "An organization is a social or legal institution such as a company, society, etc.",
-			"type": "object",
-			"required": [
-				"type"
-			],
-			"properties": {
-				"id": {
-					"$ref": "./base.json#/$defs/id"
-				},
-				"type": {
-					"$ref": "./base.json#/$defs/type",
-					"const": "prov:Organization"
-				},
-				"name": {
-					"$ref": "./base.json#/$defs/name"
-				}
-			},
-			"additionalProperties": false
-		},
-		"Person": {
-			"@id": "prov:Person",
-			"title": "PROV Person",
-			"description": "Person agents are people.",
-			"type": "object",
-			"required": [
-				"type"
-			],
-			"properties": {
-				"id": {
-					"$ref": "./base.json#/$defs/id"
-				},
-				"type": {
-					"$ref": "./base.json#/$defs/type",
-					"const": "prov:Person"
-				},
-				"name": {
-					"$ref": "./base.json#/$defs/name"
-				}
-			},
-			"additionalProperties": false
-		},
-		"endedAtTime": {
-			"@id": "prov:endedAtTime",
-			"title": "Ended at Time",
-			"description": "The time at which an activity ended.",
-			"$comment": "See also startedAtTime.",
-			"type": [
-				"string",
-				"null"
-			],
-			"oneOf": [
-				{
-					"format": "date-time"
-				},
-				{
-					"format": "date"
-				}
-			]
-		},
-		"startedAtTime": {
-			"@id": "prov:startedAtTime",
-			"title": "Started at Time",
-			"description": "The time at which an activity started.",
-			"$comment": "See also endedAtTime.",
-			"type": [
-				"string",
-				"null"
-			],
-			"oneOf": [
-				{
-					"format": "date-time"
-				},
-				{
-					"format": "date"
-				}
-			]
-		}
-	}
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "prov.json",
+    "title": "PROV Entity Schema",
+    "description": "JSON Schema definitions of the PROV Ontology entities used by ANSIS.",
+    "type": "null",
+    "_curiPrefix": {
+        "prov": "http://www.w3.org/ns/prov#",
+        "proj": "https://linked.data.gov.au/def/project#"
+    },
+    "$defs": {
+        "Agent": {
+            "@id": "prov:Agent",
+            "title": "PROV Agent",
+            "description": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.",
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "./base.json#/$defs/id"
+                },
+                "type": {
+                    "$ref": "./base.json#/$defs/type",
+                    "const": "prov:Agent"
+                },
+                "name": {
+                    "$ref": "./base.json#/$defs/name"
+                }
+            }
+        },
+        "Organization": {
+            "@id": "prov:Organization",
+            "title": "PROV Organization",
+            "description": "An organization is a social or legal institution such as a company, society, etc.",
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "./base.json#/$defs/id"
+                },
+                "type": {
+                    "$ref": "./base.json#/$defs/type",
+                    "const": "prov:Organization"
+                },
+                "name": {
+                    "$ref": "./base.json#/$defs/name"
+                }
+            }
+        },
+        "Person": {
+            "@id": "prov:Person",
+            "title": "PROV Person",
+            "description": "Person agents are people.",
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "./base.json#/$defs/id"
+                },
+                "type": {
+                    "$ref": "./base.json#/$defs/type",
+                    "const": "prov:Person"
+                },
+                "name": {
+                    "$ref": "./base.json#/$defs/name"
+                }
+            }
+        },
+        "endedAtTime": {
+            "@id": "prov:endedAtTime",
+            "title": "Ended at Time",
+            "description": "The time at which an activity ended.",
+            "$comment": "See also startedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+                {
+                    "format": "date-time"
+                },
+                {
+                    "format": "date"
+                }
+            ]
+        },
+        "startedAtTime": {
+            "@id": "prov:startedAtTime",
+            "title": "Started at Time",
+            "description": "The time at which an activity started.",
+            "$comment": "See also endedAtTime.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "oneOf": [
+                {
+                    "format": "date-time"
+                },
+                {
+                    "format": "date"
+                }
+            ]
+        }
+    }
 }

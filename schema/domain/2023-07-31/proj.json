@@ -1,55 +1,54 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "proj.json",
-	"title": "PROJ Entity Schema",
-	"description": "JSON Schema definitions of the PROJ Ontology entities used by ANSIS.",
-	"type": "null",
-	"_curiPrefix": {
-		"proj": "https://linked.data.gov.au/def/project#"
-	},
-	"$defs": {
-		"Project": {
-			"@id": "proj:Project",
-			"title": "PROJ Project",
-			"description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
-			"type": "object",
-			"required": [
-				"type",
-				"leader"
-			],
-			"properties": {
-				"id": {
-					"$ref": "./base.json#/$defs/id"
-				},
-				"type": {
-					"$ref": "./base.json#/$defs/type",
-					"const": "proj:Project"
-				},
-				"leader": {
-					"$ref": "./base.json#/$defs/pointer",
-					"_refType": "prov:Organization"
-				},
-				"sponsor": {
-					"type": "array",
-					"items": {
-						"$ref": "./base.json#/$defs/pointer",
-						"_refType": "prov:Organization"
-					}
-				},
-				"designSurvey": {
-					"$ref": "./properties.json#/$defs/_astd/$defs/designSurvey"
-				},
-				"name": {
-					"$ref": "./base.json#/$defs/name"
-				},
-				"label": {
-					"$ref": "./base.json#/$defs/label"
-				},
-				"scopedIdentifier": {
-					"$ref": "./base.json#/$defs/scopedIdentifier"
-				}
-			},
-			"additionalProperties": false
-		}
-	}
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "proj.json",
+    "title": "PROJ Entity Schema",
+    "description": "JSON Schema definitions of the PROJ Ontology entities used by ANSIS.",
+    "type": "null",
+    "_curiPrefix": {
+        "proj": "https://linked.data.gov.au/def/project#"
+    },
+    "$defs": {
+        "Project": {
+            "@id": "proj:Project",
+            "title": "PROJ Project",
+            "description": "A Project is a planned activity with a budget, a sponsor, and a leader.",
+            "type": "object",
+            "required": [
+                "type",
+                "leader"
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "./base.json#/$defs/id"
+                },
+                "type": {
+                    "$ref": "./base.json#/$defs/type",
+                    "const": "proj:Project"
+                },
+                "leader": {
+                    "$ref": "./base.json#/$defs/pointer",
+                    "_refType": "prov:Organization"
+                },
+                "sponsor": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./base.json#/$defs/pointer",
+                        "_refType": "prov:Organization"
+                    }
+                },
+                "designSurvey": {
+                    "$ref": "./properties.json#/$defs/_astd/$defs/designSurvey"
+                },
+                "name": {
+                    "$ref": "./base.json#/$defs/name"
+                },
+                "label": {
+                    "$ref": "./base.json#/$defs/label"
+                },
+                "scopedIdentifier": {
+                    "$ref": "./base.json#/$defs/scopedIdentifier"
+                }
+            }
+        }
+    }
 }

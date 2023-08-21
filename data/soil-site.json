@@ -1,5 +1,5 @@
 {
-	"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json",
+	"$schema": "../schema/domain/2023-07-31/ansis.json",
     "meta": {
 		"timeStamp": "2023-07-31T15:29:00+12:00",
 		"numberReturned": 2
@@ -19,6 +19,7 @@
 			"geometry": {
 				"result": "SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
 			},
+            "ansisTypes": [],
             "elevation": {
                 "result": {
                     "value": 10,
@@ -86,13 +87,15 @@
                                     "depthLower": {
                                         "result": {
                                             "value": 10,
-                                            "unit": "unit:M"
+                                            "unit": "unit:M",
+                                            "$comment": null
                                         }
                                     },
                                     "colour": [
                                         {
                                             "colourModel": "x:colour-munsell",
-                                            "result": "10Y 5/8.5"
+                                            "result": "10Y 5/8.5",
+                                            "madeBySensors": ""
                                         }
                                     ],
                                     "ammoniumN": [
@@ -155,7 +158,8 @@
 				"sponsor": [
                     "#/included/organizations/0",
                     "#/included/organizations/1"
-                ]
+                ],
+                "labels": ""
 			},
 			{
 				"id": "project-01",
