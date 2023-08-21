@@ -634,6 +634,7 @@
 			"description": "Observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.",
 			"type": "object",
 			"required": [
+				"type"
 			],
 			"_preferred": [
 				"confidence"
