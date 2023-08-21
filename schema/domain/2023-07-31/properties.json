@@ -2939,7 +2939,14 @@
 					],
 					"title": "related soil layer or horizon",
 					"description": "Related soil layer or horizon within a soil body or profile.",
-					"$ref": "./entities.json#/$defs/SoilLayer"
+					"oneOf": [
+						{
+							"$ref": "./entities.json#/$defs/SoilLayer"
+						},
+						{
+							"$ref": "./entities.json#/$defs/SoilHorizon"
+						}
+					]
 				},
 				"soilProfile": {
 					"@id": "ansis:relatedProfile",

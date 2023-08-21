@@ -1,16 +1,8 @@
 {
-	"$schema": "../schema/domain/2023-07-31/ansis.json",
+	"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-07-31/ansis.json",
     "meta": {
 		"timeStamp": "2023-07-31T15:29:00+12:00",
-		"numberReturned": 2,
-        "curiPrefix": {
-            "ansis": "https://anzsoil.org/def/au/domain/",
-            "proj": "https://linked.data.gov.au/def/project#",
-            "prov": "http://www.w3.org/ns/prov#",
-            "scm": "http://anzsoil.org/def/au/scm/",
-            "sp": "http://anzsoil.org/def/au/asls/soil-profile/",
-            "unit": "https://qudt.org/2.1/vocab/unit/"
-        }
+		"numberReturned": 2
 	},
 	"data": [
 		{
@@ -84,14 +76,7 @@
                             ],
                             "soilLayer": [
                                 {
-                                    "type": "ansis:SoilHorizon",
-                                    "designation": {
-                                        "result": {
-                                            "type": "ansis:Classification",
-                                            "value": "A",
-                                            "source": "ASLSH"
-                                        }
-                                    },
+                                    "type": "ansis:SoilLayer",
                                     "depthUpper": {
                                         "result": {
                                             "value": 0,
@@ -107,7 +92,7 @@
                                     "colour": [
                                         {
                                             "colourModel": "x:colour-munsell",
-                                            "result": "N 5/"
+                                            "result": "10Y 5/8.5"
                                         }
                                     ],
                                     "ammoniumN": [
