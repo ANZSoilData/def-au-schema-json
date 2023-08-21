@@ -7,6 +7,7 @@
     "type": "object",
     "properties": {
         "$schema": {
+            "title": "JSON Schema URI",
             "description": "The identifier of this JSON Schema. Allows instance documents to be linked to this schema for validation.",
             "type": "string",
             "enum": [
@@ -15,6 +16,7 @@
             ]
         },
         "data": {
+            "title": "Primary Data",
             "description": "An array containing the document’s target resource (an ANSIS Landscape Survey/Soil Site).",
             "type": "array",
             "items": {
@@ -22,6 +24,7 @@
             }
         },
         "included": {
+            "title": "Included Resources",
             "description": "Arrays of objects that are related to the primary data and/or each other (“included resources”) - e.g. a Project. Objects in these arrays will be accessed via JSON pointers in the source objects.",
             "type": "object",
             "properties": {
@@ -50,10 +53,13 @@
                     }
                 }
             },
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": false
         },
         "meta": {
+            "title": "Document Metadata",
             "description": "Non-ANSIS response metadata summarising the contents of the document.",
+            "$comment": "Extra (non-ANSIS) metadata properties may be included provided they begin with the prefix 'x_'.",
             "type": "object",
             "properties": {
                 "timeStamp": {
@@ -154,7 +160,12 @@
                         }
                     }
                 }
-            }
+            },
+            "patternProperties": {
+                "description": "Allows additional, non-ANSIS properties, e.g. 'x_hostName'.",
+                "^x_": true
+            },
+            "additionalProperties": false
         }
     },
     "additionalProperties": false
