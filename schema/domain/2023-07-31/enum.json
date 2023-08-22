@@ -4114,16 +4114,6 @@
 			"type": "string",
 			"oneOf": [
 				{
-					"const": "nil:AboveDetectionRange",
-					"description": "above detection range",
-					"$comment": "Value was above the detection range of the instrument used to estimate it."
-				},
-				{
-					"const": "nil:BelowDetectionRange",
-					"description": "below detection range",
-					"$comment": "Value was below the detection range of the instrument used to estimate it."
-				},
-				{
 					"const": "nil:inapplicable",
 					"description": "inapplicable",
 					"$comment": "There is no value."
@@ -4147,6 +4137,24 @@
 					"const": "nil:withheld",
 					"description": "withheld",
 					"$comment": "The value is not divulged."
+				}
+			]
+		},
+		"NilResults": {
+			"@id": "http://www.opengis.net/def/nil/OGC/0/",
+			"title": "Nil - results",
+			"description": "Nil values for measurements where values fell outside an instrument's detection range.",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "nil:AboveDetectionRange",
+					"description": "above detection range",
+					"$comment": "Value was above the detection range of the instrument used to estimate it."
+				},
+				{
+					"const": "nil:BelowDetectionRange",
+					"description": "below detection range",
+					"$comment": "Value was below the detection range of the instrument used to estimate it."
 				}
 			]
 		},
