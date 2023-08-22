@@ -97,7 +97,7 @@
                         }
                     }
                 },
-                "ObservableProperty": {
+                "Simple": {
                     "@id": "sosa:hasSimpleResult",
                     "description": "The simple value of an Observation. May be a quantity, values from and enumeration or a simple string.",
                     "$comment": "Observation result value rules are set for each individual property."
@@ -119,17 +119,13 @@
             "@id": "sosa:madeBySampler",
             "title": "Made by Sampler",
             "description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
-            "$comment": "Forcing a URI on assumption of a sampler registry somewhere else.",
-            "type": "string",
-            "format": "iri"
+            "$comment": "Untyped in the absence of a Sampler model."
         },
         "madeBySensor": {
             "@id": "sosa:madeBySensor",
             "title": "Made by Sensor",
             "description": "Relation between an Observation and the Sensor which made the Observations.",
-            "$comment": "Forcing a URI on assumption of a sensor registry somewhere else.",
-            "type": "string",
-            "format": "iri"
+            "$comment": "Untyped in the absence of a Sensor model."
         },
         "phenomenonTime": {
             "@id": "sosa:phenomenonTime",
@@ -168,6 +164,7 @@
             "$defs": {
                 "Enumeration": {
                     "description": "Defined method (compact URI).",
+                    "$comment": "The default data type of a procedure.",
                     "type": "string",
                     "format": "iri"
                 },

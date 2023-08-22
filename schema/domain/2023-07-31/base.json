@@ -115,22 +115,21 @@
 					"$ref": "./properties.json#/$defs/_astd/$defs/moistureStatus/$defs/Colour"
 				},
 				"colourModel": {
-					"$ref": "./base.json#/$defs/colourModel"
+					"$comment": "Colour model rules are set for each individual object type - e.g. soil matrix or mottles."
 				},
 				"result": {
-					"$ref": "./sosa.json#/$defs/result/$defs/Colour",
 					"$comment": "Colour result value rules are set for each individual colour model."
 				}
 			}
 		},
 		"ObservableProperty": {
-			"title": "Observable Property",
+			"title": "Observable Property Value",
 			"description": "A collection SOSA properties for an observable property value.",
 			"$comment": "Equivalent to a sosa:Observation but the observedProperty is a key in a JSON object and the feature of interest is that object.",
 			"type": "object",
 			"properties": {
 				"result": {
-					"$ref": "./sosa.json#/$defs/result/$defs/ObservableProperty"
+					"$ref": "./sosa.json#/$defs/result/$defs/Simple"
 				},
 				"qualityOfObservation": {
 					"$ref": "./sosa.json#/$defs/qualityOfObservation"
