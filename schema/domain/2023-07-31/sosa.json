@@ -47,7 +47,8 @@
                 "usedProcedure": {
                     "$ref": "#/$defs/usedProcedure/$defs/Enumeration"
                 }
-            }
+            },
+            "additionalProperties": false
         },
         "sampleOf": {
             "@id": "sosa:isSampleOf",

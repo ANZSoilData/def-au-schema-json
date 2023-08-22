@@ -25,7 +25,8 @@
                 "unit": {
                     "$ref": "#/$defs/unit"
                 }
-            }
+            },
+            "additionalProperties": false
         },
         "value": {
             "@id": "qudt:value",

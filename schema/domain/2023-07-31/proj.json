@@ -48,7 +48,8 @@
                 "scopedIdentifier": {
                     "$ref": "./base.json#/$defs/scopedIdentifier"
                 }
-            }
+            },
+            "additionalProperties": false
         }
     }
 }

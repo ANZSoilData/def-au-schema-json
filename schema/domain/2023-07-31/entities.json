@@ -130,7 +130,8 @@
                         "$ref": "./properties.json#/$defs/_rel/$defs/siteVisit"
                     }
                 }
-            }
+            },
+            "additionalProperties": false
         },
         "SiteVisit": {
             "@id": "ansis:SiteVisit",
@@ -217,7 +218,8 @@
                         }
                     ]
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "SoilProfile": {
             "@id": "ansis:SoilProfile",
@@ -322,7 +324,8 @@
                         }
                     ]
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "SoilSample": {
             "@id": "ansis:SoilSample",
@@ -366,7 +369,8 @@
                         "$ref": "./base.json#/$defs/scopedIdentifier"
                     }
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "SoilLayer": {
             "@id": "ansis:SoilLayer",
@@ -516,7 +520,8 @@
                 {
                     "$ref": "./properties-physical.json"
                 }
-            ]
+            ],
+            "unevaluatedProperties": false
         },
         "SoilHorizon": {
             "@id": "ansis:SoilHorizon",
@@ -683,7 +688,8 @@
                 {
                     "$ref": "./properties-physical.json"
                 }
-            ]
+            ],
+            "unevaluatedProperties": false
         },
         "SoilSurface": {
             "@id": "ansis:SoilSurface",
@@ -716,7 +722,8 @@
                 "waterRepellence": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/waterRepellence"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Substrate": {
             "@id": "ansis:Substrate",
@@ -794,7 +801,8 @@
                 "usedProcedure": {
                     "$ref": "./sosa.json#/$defs/usedProcedure/$defs/Substrate"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Outcrop": {
             "@id": "ansis:Outcrop",
@@ -833,7 +841,8 @@
                 "lithology": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/lithology/$defs/Outcrop"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "CoarseFragments": {
             "@id": "ansis:CoarseFragments",
@@ -880,7 +889,8 @@
                 "strength": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/strength/$defs/Material"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Cracks": {
             "@id": "ansis:Cracks",
@@ -910,7 +920,8 @@
 						}
                     ]
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Cutans": {
             "@id": "ansis:Cutans",
@@ -954,7 +965,8 @@
                 "distinctness": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/distinctness/$defs/Cutans"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Mottles": {
             "@id": "ansis:Mottles",
@@ -1002,7 +1014,8 @@
                 "size": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/size/$defs/Mottles"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Pans": {
             "@id": "ansis:Pans",
@@ -1043,7 +1056,8 @@
                 "structure": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/structure/$defs/Pans"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Pores": {
             "@id": "ansis:Pores",
@@ -1084,7 +1098,8 @@
 						}
                     ]
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Roots": {
             "@id": "ansis:Roots",
@@ -1119,7 +1134,8 @@
                 "diameter": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/diameter/$defs/Roots"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Segregations": {
             "@id": "ansis:Segregations",
@@ -1172,7 +1188,8 @@
                 "strength": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/strength/$defs/Segregations"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "SoilStructures": {
             "@id": "ansis:SoilStructures",
@@ -1221,7 +1238,8 @@
                 "size": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/size/$defs/SoilStructures"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Erosion": {
             "@id": "ansis:Erosion",
@@ -1262,7 +1280,8 @@
                 "state": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/state"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Inundation": {
             "@id": "ansis:Inundation",
@@ -1303,7 +1322,8 @@
                 "velocity": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/velocity"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "LandSurface": {
             "@id": "ansis:LandSurface",
@@ -1385,7 +1405,8 @@
                 "runoff": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/runoff"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "StreamChannel": {
             "@id": "ansis:StreamChannel",
@@ -1435,7 +1456,8 @@
                 "spacing": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/spacing/$defs/StreamChannel"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Microrelief_biotic": {
             "@id": "ansis:Microrelief-biotic",
@@ -1482,7 +1504,8 @@
                 "length": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/length"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Microrelief_gilgai": {
             "@id": "ansis:Microrelief-gilgai",
@@ -1521,7 +1544,8 @@
                 "length": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/length"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Microrelief_hummocky": {
             "@id": "ansis:Microrelief-hummocky",
@@ -1557,7 +1581,8 @@
                 "length": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/length"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Microrelief_other": {
             "@id": "ansis:Microrelief-other",
@@ -1593,7 +1618,8 @@
                 "length": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/length"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Consistence": {
             "@id": "ansis:SoilStrength",
@@ -1640,7 +1666,8 @@
 						}
                     ]
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "Landform": {
             "@id": "ansis:Landform",
@@ -1674,7 +1701,8 @@
                         "$ref": "./properties.json#/$defs/_rel/$defs/landformPattern"
                     }
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "LandformElement": {
             "@id": "ansis:LandformElement",
@@ -1742,7 +1770,8 @@
                 "width": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/width/$defs/Quantity"
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "LandformPattern": {
             "@id": "ansis:LandformPattern",
@@ -1806,7 +1835,8 @@
 						}
                     ]
                 }
-            }
+            },
+			"additionalProperties": false
         },
         "SoilPlasticity": {
             "@id": "ansis:SoilPlasticity",
@@ -1842,7 +1872,8 @@
                 "degree": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/degree/$defs/Plasticity"
                 }
-            }
+            },
+			"additionalProperties": false
         }
     }
 }

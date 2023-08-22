@@ -96,12 +96,14 @@
 				"source": {
 					"$ref": "./base.json#/$defs/source"
 				}
-			}
+			},
+			"additionalProperties": false
 		},
 		"Colour": {
 			"@id": "ansis:SoilColour",
 			"title": "ANSIS Soil Colour",
 			"description": "Undefined.",
+			"$comment": "Extends an Observable Property value to allow colour specific metadata (moisture status and colour model).",
 			"type": "object",
 			"required": [
 				"colourModel",
@@ -119,8 +121,27 @@
 				},
 				"result": {
 					"$comment": "Colour result value rules are set for each individual colour model."
+				},
+				"qualityOfObservation": {
+					"$ref": "./sosa.json#/$defs/qualityOfObservation"
+				},
+				"usedProcedure": {
+					"$ref": "./sosa.json#/$defs/usedProcedure/$defs/Enumeration"
+				},
+				"madeBySensor": {
+					"$ref": "./sosa.json#/$defs/madeBySensor"
+				},
+				"phenomenonTime": {
+					"$ref": "./sosa.json#/$defs/phenomenonTime"
+				},
+				"resultTime": {
+					"$ref": "./sosa.json#/$defs/resultTime"
+				},
+				"sample": {
+					"$ref": "./sosa.json#/$defs/sample"
 				}
-			}
+			},
+			"additionalProperties": false
 		},
 		"ObservableProperty": {
 			"title": "Observable Property Value",
@@ -149,7 +170,8 @@
 				"sample": {
 					"$ref": "./sosa.json#/$defs/sample"
 				}
-			}
+			},
+			"additionalProperties": false
 		},
 		"ScopedIdentifier": {
 			"title": "ANSIS Scoped Identifier",
@@ -167,7 +189,8 @@
 					"$ref": "#/$defs/name",
 					"$comment": "The ID of the provider (suggestion)."
 				}
-			}
+			},
+			"additionalProperties": false
 		}
 	}
 }
