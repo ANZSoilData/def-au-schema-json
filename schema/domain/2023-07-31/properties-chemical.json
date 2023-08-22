@@ -14,7 +14,6 @@
     },
     "required": [],
     "properties": {
-        "$schema": true,
         "ammoniumN": {
             "type": "array",
             "items": {

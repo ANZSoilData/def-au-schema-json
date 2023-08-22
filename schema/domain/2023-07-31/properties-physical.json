@@ -15,7 +15,6 @@
     "required": [],
     "minProperties": 1,
     "properties": {
-        "$schema": true,
         "bulkDensity": {
             "type": "array",
             "items": {
