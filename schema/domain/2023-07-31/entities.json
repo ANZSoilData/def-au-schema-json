@@ -168,10 +168,7 @@
                     "$ref": "./properties.json#/$defs/_rel/$defs/landform"
                 },
                 "landSurface": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "./properties.json#/$defs/_rel/$defs/landSurface"
-                    }
+                    "$ref": "./properties.json#/$defs/_rel/$defs/landSurface"
                 },
                 "purpose": {
                     "$ref": "./properties.json#/$defs/_astd/$defs/purpose"
