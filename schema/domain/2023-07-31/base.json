@@ -179,7 +179,7 @@
 			"$comment": "Based on the GML identifier (scoped name - code with with authority).",
 			"type": "object",
 			"required": [
-				"name"
+				"value"
 			],
 			"properties": {
 				"value": {
