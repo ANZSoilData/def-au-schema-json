@@ -162,8 +162,9 @@
                 }
             },
             "patternProperties": {
-                "description": "Allows additional, non-ANSIS properties, e.g. 'x_hostName'.",
-                "^x_": true
+                "^x_": {
+                    "description": "Allows additional, non-ANSIS properties, e.g. 'x_hostName'."
+                }
             },
             "additionalProperties": false
         }
