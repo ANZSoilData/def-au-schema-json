@@ -676,6 +676,12 @@
                             "$ref": "./properties.json#/$defs/_obs/$defs/waterRepellence"
                         }
                     }
+                },
+                {
+                    "$ref": "./properties-chemical.json"
+                },
+                {
+                    "$ref": "./properties-physical.json"
                 }
             ]
         },
