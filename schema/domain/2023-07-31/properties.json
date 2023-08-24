@@ -14,10 +14,10 @@
 		"qudt": "http://qudt.org/schema/qudt/"
 	},
 	"$defs": {
-		"_astd": {
-			"title": "asserted properties",
-			"description": "Properties whose value has been asserted - e.g. a name. Asserted properties may be a value of an object that is itself a result of an observable property.",
-			"$comment": "Distinct from observable properties where the value cannot be known until it is estimated using some sort of procedure.",
+		"_att": {
+			"title": "attributes",
+			"description": "Simple attributes of an object, i.e. properties whose value has been asserted - e.g. a name. Attributes may be a value of an object that is itself a result of an observable property.",
+			"$comment": "Distinct from observations where the value cannot be known until it is estimated using some sort of procedure.",
 			"type": "null",
 			"$defs": {
 				"ansisType": {
@@ -156,7 +156,7 @@
 		},
 		"_obs": {
 			"title": "observable properties",
-			"description": "Properties whose value has been estimated using some sort of procedure.",
+			"description": "Properties whose value has been established by observation - an estimate made using some sort of procedure.",
 			"$comment": "Values are an object with a mandatory 'result' property and additional metadata description the procedure, sampling, quality and temporal characteristics.",
 			"type": "null",
 			"$defs": {

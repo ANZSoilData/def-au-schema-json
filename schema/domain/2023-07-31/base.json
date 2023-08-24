@@ -114,7 +114,7 @@
 			],
 			"properties": {
 				"moistureStatus": {
-					"$ref": "./properties.json#/$defs/_astd/$defs/moistureStatus/$defs/Colour"
+					"$ref": "./properties.json#/$defs/_att/$defs/moistureStatus/$defs/Colour"
 				},
 				"colourModel": {
 					"$comment": "Colour model rules are set for each individual object type - e.g. soil matrix or mottles."

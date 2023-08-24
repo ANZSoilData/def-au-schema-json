@@ -38,7 +38,7 @@
                 "ansisType": {
                     "type": "array",
                     "items": {
-                        "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/SoilSite"
+                        "$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/SoilSite"
                     }
                 },
                 "depthFreeWater": {
@@ -48,7 +48,7 @@
                     }
                 },
                 "designSite": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/designSite"
+                    "$ref": "./properties.json#/$defs/_att/$defs/designSite"
                 },
                 "disturbance": {
                     "type": "array",
@@ -100,7 +100,7 @@
                     "$ref": "./properties.json#/$defs/_obs/$defs/locationInElement"
                 },
                 "purpose": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/purpose"
+                    "$ref": "./properties.json#/$defs/_att/$defs/purpose"
                 },
                 "relatedProject": {
                     "oneOf": [
@@ -171,7 +171,7 @@
                     "$ref": "./properties.json#/$defs/_rel/$defs/landSurface"
                 },
                 "purpose": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/purpose"
+                    "$ref": "./properties.json#/$defs/_att/$defs/purpose"
                 },
                 "relatedProject": {
                     "oneOf": [
@@ -243,7 +243,7 @@
                 "ansisType": {
                     "type": "array",
                     "items": {
-                        "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/SoilProfile"
+                        "$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/SoilProfile"
                     }
                 },
                 "classification": {
@@ -263,7 +263,7 @@
                     ]
                 },
                 "depthReason": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/depthReason"
+                    "$ref": "./properties.json#/$defs/_att/$defs/depthReason"
                 },
                 "depthRHorizon": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/depthRHorizon"
@@ -290,7 +290,7 @@
                 "purpose": {
                     "type": "array",
                     "items": {
-                        "$ref": "./properties.json#/$defs/_astd/$defs/purpose"
+                        "$ref": "./properties.json#/$defs/_att/$defs/purpose"
                     }
                 },
                 "sampling": {
@@ -747,11 +747,11 @@
                 "ansisType": {
                     "type": "array",
                     "items": {
-                        "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Substrate"
+                        "$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Substrate"
                     }
                 },
                 "confidence": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/confidence"
+                    "$ref": "./properties.json#/$defs/_att/$defs/confidence"
                 },
                 "depth": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/depth/$defs/Quantity"
@@ -955,7 +955,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Cutans"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Cutans"
 						}
                     ]
                 },
@@ -987,7 +987,7 @@
                     "const": "ansis:Mottles"
                 },
                 "ansisType": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Mottles"
+                    "$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Mottles"
                 },
                 "abundance": {
                     "oneOf": [
@@ -1040,7 +1040,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Pans"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Pans"
 						}
                     ]
                 },
@@ -1215,7 +1215,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Pedality"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Pedality"
 						}
                     ]
                 },
@@ -1264,7 +1264,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Erosion"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Erosion"
 						}
                     ]
                 },
@@ -1528,7 +1528,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Microrelief_gilgai"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Microrelief_gilgai"
 						}
                     ]
                 },
@@ -1568,7 +1568,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Microrelief_hummocky"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Microrelief_hummocky"
 						}
                     ]
                 },
@@ -1605,7 +1605,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Microrelief_other"
+							"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Microrelief_other"
 						}
                     ]
                 },
@@ -1643,7 +1643,7 @@
 							"$ref": "./enum.json#/$defs/NilValues"
 						},
 						{
-							"$ref": "./properties.json#/$defs/_astd/$defs/moistureStatus/$defs/Soil"
+							"$ref": "./properties.json#/$defs/_att/$defs/moistureStatus/$defs/Soil"
 						}
                     ]
                 },
@@ -1726,7 +1726,7 @@
                     "$ref": "./properties.json#/$defs/_obs/$defs/agent/$defs/Geomorphology"
                 },
                 "ansisType": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/LandformElement"
+                    "$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/LandformElement"
                 },
                 "geomorphologyMode": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/geomorphologyMode"
@@ -1795,7 +1795,7 @@
                     "$ref": "./properties.json#/$defs/_obs/$defs/agent/$defs/Geomorphology"
                 },
                 "ansisType": {
-                    "$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/LandformPattern"
+                    "$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/LandformPattern"
                 },
                 "geomorphologyMode": {
                     "$ref": "./properties.json#/$defs/_obs/$defs/geomorphologyMode"
@@ -1861,7 +1861,7 @@
 						{
 							"type": "array",
 							"items": {
-								"$ref": "./properties.json#/$defs/_astd/$defs/ansisType/$defs/Plasticity"
+								"$ref": "./properties.json#/$defs/_att/$defs/ansisType/$defs/Plasticity"
 							}
 						}
                     ]
