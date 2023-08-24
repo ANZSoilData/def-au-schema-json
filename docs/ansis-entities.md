@@ -166,7 +166,7 @@ Type: *ansis:Substrate*. ANSIS Substrate. Observed or inferred materials and mas
 
 ### Outcrop
 
-Type: *ansis:Outcrop*. ANSIS Outcrop. Rock outcrop.
+Type: *ansis:Outcrop*. ANSIS Outcrop. Any exposed area of rock that is inferred to be continuous with underlying bedrock.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -179,7 +179,7 @@ Type: *ansis:Outcrop*. ANSIS Outcrop. Rock outcrop.
 
 ### CoarseFragments
 
-Type: *ansis:CoarseFragments*. ANSIS Coarse Fragment. Undefined.
+Type: *ansis:CoarseFragments*. ANSIS Coarse Fragment. Coarse fragments are particles coarser than 2mm. They include unattached rock fragments and other fragments such as charcoal and shells. Coarse fragments are distinguished from segregations of pedogenic origin in that they are not, or not considered to be, of pedogenic origin.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -195,7 +195,7 @@ Type: *ansis:CoarseFragments*. ANSIS Coarse Fragment. Undefined.
 
 ### Cracks
 
-Type: *ansis:Cracks*. ANSIS Cracks. Undefined.
+Type: *ansis:Cracks*. ANSIS Cracks. Planar voids in soils not occupied by solid mineral matter.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -206,7 +206,7 @@ Type: *ansis:Cracks*. ANSIS Cracks. Undefined.
 
 ### Cutans
 
-Type: *ansis:Cutans*. ANSIS Cutans. Undefined.
+Type: *ansis:Cutans*. ANSIS Cutans. A modification of the texture, structure or fabric at natural surfaces in soil materials; it arises from concentration of particular soil constituents or in situ modification of the plasma. Cutans compromise any of the component substances of the soil material.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -235,7 +235,7 @@ Type: *ansis:Mottles*. ANSIS Mottles. Mottles and other colour patterns.
 
 ### Pans
 
-Type: *ansis:Pans*. ANSIS Pans. Undefined.
+Type: *ansis:Pans*. ANSIS Pans. An indurated and/or cemented soil horizon.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -249,7 +249,7 @@ Type: *ansis:Pans*. ANSIS Pans. Undefined.
 
 ### Pores
 
-Type: *ansis:Pores*. ANSIS Pores. Undefined.
+Type: *ansis:Pores*. ANSIS Pores. Voids in soils not occupied by solid mineral matter which are approximately circular in cross-section.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -261,7 +261,7 @@ Type: *ansis:Pores*. ANSIS Pores. Undefined.
 
 ### Roots
 
-Type: *ansis:Roots*. ANSIS Roots. Undefined.
+Type: *ansis:Roots*. ANSIS Roots. The presence of roots observed in each horizon in areas 100mm square on a cleaned exposure face.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -273,7 +273,7 @@ Type: *ansis:Roots*. ANSIS Roots. Undefined.
 
 ### Segregations
 
-Type: *ansis:Segregations*. ANSIS Segregations. Undefined.
+Type: *ansis:Segregations*. ANSIS Segregations. Segregations or pedogenic origin that have accumulated in the soil because of the concentration of some constituent, usually by chemical or biological action. Segregations may be relict or formed in site by current pedogenic processes.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -303,7 +303,7 @@ Type: *ansis:SoilStructures*. ANSIS Soil Structure. Soil structure or pedality.
 
 ### Erosion
 
-Type: *ansis:Erosion*. ANSIS Erosion. Undefined.
+Type: *ansis:Erosion*. ANSIS Erosion. Accelerated, as distinct from natural, erosion. The rapid erosion that follows the destruction or loss of protective cover often resulting from people's influence on the soil, vegetation or landform.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -317,7 +317,7 @@ Type: *ansis:Erosion*. ANSIS Erosion. Undefined.
 
 ### Inundation
 
-Type: *ansis:Inundation*. ANSIS Inundation. Undefined.
+Type: *ansis:Inundation*. ANSIS Inundation. Inundation includes flooding from overbank flow, inundation from local runon and overland flow.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -371,7 +371,7 @@ Type: *ansis:StreamChannel*. ANSIS Stream Channel. Stream channel details.
 
 ### Microrelief_biotic
 
-Type: *ansis:Microrelief_biotic*. ANSIS Microrelief - Biotic. Undefined.
+Type: *ansis:Microrelief_biotic*. ANSIS Microrelief - Biotic. Relief up to a few metres about the plane of the land surface caused by biotic agents (e.g. termite mounds, rabbit warrens, wombat burrows, pig wallows, constructed terraces, stump holes, vegetation mounds).
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -385,7 +385,7 @@ Type: *ansis:Microrelief_biotic*. ANSIS Microrelief - Biotic. Undefined.
 
 ### Microrelief_gilgai
 
-Type: *ansis:Microrelief_gilgai*. ANSIS Microrelief - Gilgai. Undefined.
+Type: *ansis:Microrelief_gilgai*. ANSIS Microrelief - Gilgai. Surface relief up to a few metres about the plane of the land surface associated with soils containing shrink-swell clays.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -399,7 +399,7 @@ Type: *ansis:Microrelief_gilgai*. ANSIS Microrelief - Gilgai. Undefined.
 
 ### Microrelief_hummocky
 
-Type: *ansis:Microrelief_hummocky*. ANSIS Microrelief - Hummocky. Undefined.
+Type: *ansis:Microrelief_hummocky*. ANSIS Microrelief - Hummocky. Hummocky relief up to a few metres about the plane of the land surface that is not thought to be associated with the shrink-swell process involved in gilgai microrelief.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -412,7 +412,7 @@ Type: *ansis:Microrelief_hummocky*. ANSIS Microrelief - Hummocky. Undefined.
 
 ### Microrelief_other
 
-Type: *ansis:Microrelief_other*. ANSIS Microrelief - Other. Undefined.
+Type: *ansis:Microrelief_other*. ANSIS Microrelief - Other. Relief up to a few metres about the plane of the land surface forms by other processes.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -425,7 +425,7 @@ Type: *ansis:Microrelief_other*. ANSIS Microrelief - Other. Undefined.
 
 ### Consistence
 
-Type: *ansis:Consistence*. ANSIS Consistence. Undefined.
+Type: *ansis:Consistence*. ANSIS Consistence. The strength of cohesion and adhesion in soil. Strength will vary according to water status. Soil water status must be recorded with strength.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -439,7 +439,7 @@ Type: *ansis:Consistence*. ANSIS Consistence. Undefined.
 
 ### Landform
 
-Type: *ansis:Landform*. ANSIS Landform. Landscape features within which the site is located
+Type: *ansis:Landform*. ANSIS Landform. Landscape features within which the site is located.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -470,7 +470,7 @@ Type: *ansis:LandformElement*. ANSIS Landform Element. Landform element (~40m).
 
 ### LandformPattern
 
-Type: *ansis:LandformPattern*. ANSIS Landform Pattern. Undefined.
+Type: *ansis:LandformPattern*. ANSIS Landform Pattern. Landform pattern (~600m).
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
@@ -488,7 +488,7 @@ Type: *ansis:LandformPattern*. ANSIS Landform Pattern. Undefined.
 
 ### SoilPlasticity
 
-Type: *ansis:SoilPlasticity*. ANSIS Soil Plasticity. Undefined.
+Type: *ansis:SoilPlasticity*. ANSIS Soil Plasticity. The ability to change shape and retain the new shape after the stress is removed.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |

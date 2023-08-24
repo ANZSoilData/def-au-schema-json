@@ -654,7 +654,7 @@
 		"Outcrop": {
 			"@id": "ansis:Outcrop",
 			"title": "ANSIS Outcrop",
-			"description": "Rock outcrop.",
+			"description": "Any exposed area of rock that is inferred to be continuous with underlying bedrock.",
 			"type": "object",
 			"required": [
 				"type",
@@ -695,7 +695,7 @@
 		"CoarseFragments": {
 			"@id": "ansis:CoarseFragments",
 			"title": "ANSIS Coarse Fragment",
-			"description": "Undefined.",
+			"description": "Coarse fragments are particles coarser than 2mm. They include unattached rock fragments and other fragments such as charcoal and shells. Coarse fragments are distinguished from segregations of pedogenic origin in that they are not, or not considered to be, of pedogenic origin.",
 			"type": "object",
 			"required": [
 				"type",
@@ -743,7 +743,7 @@
 		"Cracks": {
 			"@id": "ansis:Cracks",
 			"title": "ANSIS Cracks",
-			"description": "Undefined.",
+			"description": "Planar voids in soils not occupied by solid mineral matter.",
 			"type": "object",
 			"required": [
 				"type",
@@ -775,7 +775,7 @@
 		"Cutans": {
 			"@id": "ansis:Cutans",
 			"title": "ANSIS Cutans",
-			"description": "Undefined.",
+			"description": "A modification of the texture, structure or fabric at natural surfaces in soil materials; it arises from concentration of particular soil constituents or in situ modification of the plasma. Cutans compromise any of the component substances of the soil material.",
 			"type": "object",
 			"required": [
 				"type",
@@ -870,7 +870,7 @@
 		"Pans": {
 			"@id": "ansis:Pans",
 			"title": "ANSIS Pans",
-			"description": "Undefined.",
+			"description": "An indurated and/or cemented soil horizon.",
 			"type": "object",
 			"required": [
 				"type",
@@ -912,7 +912,7 @@
 		"Pores": {
 			"@id": "ansis:Pores",
 			"title": "ANSIS Pores",
-			"description": "Undefined.",
+			"description": "Voids in soils not occupied by solid mineral matter which are approximately circular in cross-section.",
 			"type": "object",
 			"required": [
 				"type",
@@ -955,7 +955,7 @@
 		"Roots": {
 			"@id": "ansis:Roots",
 			"title": "ANSIS Roots",
-			"description": "Undefined.",
+			"description": "The presence of roots observed in each horizon in areas 100mm square on a cleaned exposure face.",
 			"type": "object",
 			"required": [
 				"type",
@@ -991,7 +991,7 @@
 		"Segregations": {
 			"@id": "ansis:Segregations",
 			"title": "ANSIS Segregations",
-			"description": "Undefined.",
+			"description": "Segregations or pedogenic origin that have accumulated in the soil because of the concentration of some constituent, usually by chemical or biological action. Segregations may be relict or formed in site by current pedogenic processes.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1096,7 +1096,7 @@
 		"Erosion": {
 			"@id": "ansis:Erosion",
 			"title": "ANSIS Erosion",
-			"description": "Undefined.",
+			"description": "Accelerated, as distinct from natural, erosion. The rapid erosion that follows the destruction or loss of protective cover often resulting from people's influence on the soil, vegetation or landform.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1138,7 +1138,7 @@
 		"Inundation": {
 			"@id": "ansis:Inundation",
 			"title": "ANSIS Inundation",
-			"description": "Undefined.",
+			"description": "Inundation includes flooding from overbank flow, inundation from local runon and overland flow.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1314,7 +1314,7 @@
 		"Microrelief_biotic": {
 			"@id": "ansis:Microrelief-biotic",
 			"title": "ANSIS Microrelief - Biotic",
-			"description": "Undefined.",
+			"description": "Relief up to a few metres about the plane of the land surface caused by biotic agents (e.g. termite mounds, rabbit warrens, wombat burrows, pig wallows, constructed terraces, stump holes, vegetation mounds).",
 			"type": "object",
 			"required": [
 				"type",
@@ -1363,7 +1363,7 @@
 		"Microrelief_gilgai": {
 			"@id": "ansis:Microrelief-gilgai",
 			"title": "ANSIS Microrelief - Gilgai",
-			"description": "Undefined.",
+			"description": "Surface relief up to a few metres about the plane of the land surface associated with soils containing shrink-swell clays.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1404,7 +1404,7 @@
 		"Microrelief_hummocky": {
 			"@id": "ansis:Microrelief-hummocky",
 			"title": "ANSIS Microrelief - Hummocky",
-			"description": "Undefined.",
+			"description": "Hummocky relief up to a few metres about the plane of the land surface that is not thought to be associated with the shrink-swell process involved in gilgai microrelief.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1442,7 +1442,7 @@
 		"Microrelief_other": {
 			"@id": "ansis:Microrelief-other",
 			"title": "ANSIS Microrelief - Other",
-			"description": "Undefined.",
+			"description": "Relief up to a few metres about the plane of the land surface forms by other processes.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1480,7 +1480,7 @@
 		"Consistence": {
 			"@id": "ansis:SoilStrength",
 			"title": "ANSIS Consistence",
-			"description": "Undefined.",
+			"description": "The strength of cohesion and adhesion in soil. Strength will vary according to water status. Soil water status must be recorded with strength.",
 			"type": "object",
 			"required": [
 				"type",
@@ -1633,7 +1633,7 @@
 		"LandformPattern": {
 			"@id": "ansis:LandformPattern",
 			"title": "ANSIS Landform Pattern",
-			"description": "Undefined.",
+			"description": "Landform pattern (~600m).",
 			"type": "object",
 			"required": [
 				"type",
@@ -1698,7 +1698,7 @@
 		"SoilPlasticity": {
 			"@id": "ansis:SoilPlasticity",
 			"title": "ANSIS Soil Plasticity",
-			"description": "Undefined.",
+			"description": "The ability to change shape and retain the new shape after the stress is removed.",
 			"type": "object",
 			"required": [
 				"type",

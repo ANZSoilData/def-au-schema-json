@@ -102,7 +102,7 @@
 		"Colour": {
 			"@id": "ansis:SoilColour",
 			"title": "ANSIS Soil Colour",
-			"description": "Undefined.",
+			"description": "The colour of the soil matrix or mottles.",
 			"$comment": "Extends an Observable Property value to allow colour specific metadata (moisture status and colour model).",
 			"type": "object",
 			"required": [

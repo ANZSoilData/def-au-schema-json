@@ -21,7 +21,7 @@ Type: *ansis-base:Classification*. ANSIS Classification. The classifier for an e
 
 ### Colour
 
-Type: *ansis-base:Colour*. ANSIS Soil Colour. Undefined.
+Type: *ansis-base:Colour*. ANSIS Soil Colour. The colour of the soil matrix or mottles.
 
 | Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
 | -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
