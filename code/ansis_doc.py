@@ -308,7 +308,7 @@ def get_property_def_attributes(schema_root, pointer_keys, json_schema_file_name
     property_description_comment = ""
     property_description = []
 
-    if pointer_keys[0] in ["_astd","_obs","_rel"]:
+    if pointer_keys[0] in ["_att","_obs","_rel"]:
         target_path_root = "/$defs/" + pointer_keys[0] + "/$defs/"
         pointer_keys.remove(pointer_keys[0])
     else:
