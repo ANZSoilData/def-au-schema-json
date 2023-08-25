@@ -4,6 +4,6 @@ Example JSON objects that conform to the ANSIS JSON Schema defined [here](../sch
 
 ## Contents
 
-| File                                                       | Description                                                                                                                |
-| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [soil-site.json](soil-site.json)                           | An example of an `ansis:SoilSite`. Contains links to other example files.                                                  |
+| File                                                       | Description                          |
+| ---------------------------------------------------------- | ------------------------------------ |
+| [soil-site.json](soil-site.json)                           | An example of an `ansis:SoilSite`.   |
