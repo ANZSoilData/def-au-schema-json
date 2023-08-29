@@ -38,34 +38,34 @@
                 "$ref": "#/$defs/electricalConductivity"
             }
         },
-        "exchangableAluminium": {
+        "exchangeableAluminium": {
             "type": "array",
             "items": {
-                "$ref": "#/$defs/exchangableAluminium"
+                "$ref": "#/$defs/exchangeableAluminium"
             }
         },
-        "exchangableCalcium": {
+        "exchangeableCalcium": {
             "type": "array",
             "items": {
-                "$ref": "#/$defs/exchangableCalcium"
+                "$ref": "#/$defs/exchangeableCalcium"
             }
         },
-        "exchangableMagnesium": {
+        "exchangeableMagnesium": {
             "type": "array",
             "items": {
-                "$ref": "#/$defs/exchangableMagnesium"
+                "$ref": "#/$defs/exchangeableMagnesium"
             }
         },
-        "exchangablePotassium": {
+        "exchangeablePotassium": {
             "type": "array",
             "items": {
-                "$ref": "#/$defs/exchangablePotassium"
+                "$ref": "#/$defs/exchangeablePotassium"
             }
         },
-        "exchangableSodium": {
+        "exchangeableSodium": {
             "type": "array",
             "items": {
-                "$ref": "#/$defs/exchangableSodium"
+                "$ref": "#/$defs/exchangeableSodium"
             }
         },
         "extractableBoron": {
@@ -357,10 +357,10 @@
                 }
             ]
         },
-        "exchangableAluminium": {
+        "exchangeableAluminium": {
             "@id": "nil:template",
-            "title": "Concentration of exchangable Aluminium",
-            "description": "Concentration of exchangable Aluminium (Al3+).",
+            "title": "Concentration of exchangeable Aluminium",
+            "description": "Concentration of exchangeable Aluminium (Al3+).",
             "type": "object",
                         "allOf": [
                 {
@@ -399,10 +399,10 @@
                 }
             ]
         },
-        "exchangableCalcium": {
+        "exchangeableCalcium": {
             "@id": "nil:template",
-            "title": "Concentration of exchangable Calcium",
-            "description": "Concentration of exchangable Calcium (Ca2+).",
+            "title": "Concentration of exchangeable Calcium",
+            "description": "Concentration of exchangeable Calcium (Ca2+).",
             "type": "object",
                         "allOf": [
                 {
@@ -455,10 +455,10 @@
                 }
             ]
         },
-        "exchangableMagnesium": {
+        "exchangeableMagnesium": {
             "@id": "nil:template",
-            "title": "Concentration of exchangable Magnesium",
-            "description": "Concentration of exchangable Magnesium (Mg2+).",
+            "title": "Concentration of exchangeable Magnesium",
+            "description": "Concentration of exchangeable Magnesium (Mg2+).",
             "type": "object",
                         "allOf": [
                 {
@@ -511,10 +511,10 @@
                 }
             ]
         },
-        "exchangablePotassium": {
+        "exchangeablePotassium": {
             "@id": "nil:template",
-            "title": "Concentration of exchangable Potassium",
-            "description": "Concentration of exchangable Potassium (K+).",
+            "title": "Concentration of exchangeable Potassium",
+            "description": "Concentration of exchangeable Potassium (K+).",
             "type": "object",
                         "allOf": [
                 {
@@ -566,10 +566,10 @@
                 }
             ]
         },
-        "exchangableSodium": {
+        "exchangeableSodium": {
             "@id": "nil:template",
-            "title": "Concentration of exchangable Sodium",
-            "description": "Concentration of exchangable Sodium (Na+).",
+            "title": "Concentration of exchangeable Sodium",
+            "description": "Concentration of exchangeable Sodium (Na+).",
             "type": "object",
                         "allOf": [
                 {
@@ -580,7 +580,7 @@
                     "properties": {
                         "result": {
                             "type": "object",
-                                                        "required": [
+                            "required": [
                                 "value",
                                 "unit"
                             ],
