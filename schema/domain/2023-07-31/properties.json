@@ -44,7 +44,7 @@
 						},
 						"LandformPattern": {
 							"description": "Landform pattern.",
-							"oneOf": [
+							"anyOf": [
 								{
 									"$ref": "./enum.json#/$defs/LandformPatternName"
 								},
@@ -75,7 +75,7 @@
 						},
 						"Pedality": {
 							"description": "Pedality.",
-							"oneOf": [
+							"anyOf": [
 								{
 									"$ref": "./enum.json#/$defs/ArtificialAggregatesStructure"
 								},
@@ -334,7 +334,7 @@
 									],
 									"properties": {
 										"result": {
-											"oneOf": [
+											"anyOf": [
 												{
 													"$ref": "./enum.json#/$defs/GeomorphologyAgentBio"
 												},
@@ -826,7 +826,7 @@
 									],
 									"properties": {
 										"result": {
-											"oneOf": [
+											"anyOf": [
 												{
 													"$ref": "./enum.json#/$defs/ErosionSeverityGully"
 												},
@@ -1512,7 +1512,7 @@
 							],
 							"properties": {
 								"result": {
-									"oneOf": [
+									"anyOf": [
 										{
 											"$ref": "./enum.json#/$defs/RockGenesisHardenedArtificial"
 										},
@@ -1805,7 +1805,7 @@
 									],
 									"properties": {
 										"result": {
-											"oneOf": [
+											"anyOf": [
 												{
 													"$ref": "./enum.json#/$defs/LithologyCoarseFragments"
 												},
@@ -1834,7 +1834,7 @@
 									],
 									"properties": {
 										"result": {
-											"oneOf": [
+											"anyOf": [
 												{
 													"$ref": "./enum.json#/$defs/LithologyRock"
 												},
@@ -2605,7 +2605,7 @@
 									],
 									"properties": {
 										"result": {
-											"oneOf": [
+											"anyOf": [
 												{
 													"$ref": "./enum.json#/$defs/FieldTextureMineral"
 												},
