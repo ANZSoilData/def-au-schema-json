@@ -1410,49 +1410,27 @@
 							"then": {
 								"properties": {
 									"result": {
-										"anyOf": [
+										"type": "string",
+										"oneOf": [
 											{
-												"type": "object",
-												"required": [
-													"value",
-													"unit"
-												],
-												"properties": {
-													"value": {
-														"$ref": "./qudt.json#/$defs/value"
-													},
-													"unit": {
-														"$ref": "./qudt.json#/$defs/unit",
-														"enum": [
-															"unit:PERCENT"
-														]
-													}
-												}
+												"const": "nil",
+												"description": "Non-effervescent"
 											},
 											{
-												"type": "string",
-												"oneOf": [
-													{
-														"const": "nil",
-														"description": "Non-effervescent"
-													},
-													{
-														"const": "low",
-														"description": "Very slightly effervescent"
-													},
-													{
-														"const": "medium",
-														"description": "Slightly effervescent"
-													},
-													{
-														"const": "high",
-														"description": "Strongly effervescent"
-													},
-													{
-														"const": "very high",
-														"description": "Violently effervescent"
-													}
-												]
+												"const": "low",
+												"description": "Very slightly effervescent"
+											},
+											{
+												"const": "medium",
+												"description": "Slightly effervescent"
+											},
+											{
+												"const": "high",
+												"description": "Strongly effervescent"
+											},
+											{
+												"const": "very high",
+												"description": "Violently effervescent"
 											}
 										]
 									}

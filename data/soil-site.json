@@ -115,15 +115,8 @@
                                             "usedProcedure": "scm:6G1"
                                         },
                                         {
-                                            "result": {
-                                                "unit": "unit:PERCENT",
-                                                "value": 0
-                                            },
-                                            "usedProcedure": "scm:19D1"
-                                        },
-                                        {
                                             "usedProcedure": "scm:19D1",
-                                            "result": "low"
+                                            "result": "high"
                                         }
                                     ],
                                     "exchangeableCalcium": [
