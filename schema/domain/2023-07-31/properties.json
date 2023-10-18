@@ -2688,16 +2688,22 @@
 					"@id": "ansis:waterRepellence",
 					"title": "water repellence",
 					"description": "Water repellence of material.",
+                    "$comment": "usedProcedure 'field-method' required to distinguish these values from laboratory measurements.",
 					"type": "object",
 					"allOf": [
 						{
 							"required": [
-								"result"
+								"result",
+                                "usedProcedure"
 							],
 							"properties": {
 								"result": {
 									"$ref": "./enum.json#/$defs/WaterRepellence"
-								}
+								},
+                                "usedProcedure": {
+                                    "type": "string",
+                                    "const": "field-method"
+                                }
 							}
 						},
 						{
