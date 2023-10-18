@@ -96,7 +96,7 @@
                                             "result": "10Y 5/8.5"
                                         }
                                     ],
-                                    "ammoniumN": [
+                                    "ammonium": [
                                         {
                                             "result": {
                                                 "value": 12,
@@ -104,6 +104,54 @@
                                             },
                                             "usedProcedure": "scm:7C1a",
                                             "sample": "#/data/1/siteVisit/0/soilProfile/0/sampling/0/result/0"
+                                        }
+                                    ],
+                                    "carbonates": [
+                                        {
+                                            "result": {
+                                                "unit": "unit:PERCENT",
+                                                "value": 0
+                                            },
+                                            "usedProcedure": "scm:6G1"
+                                        },
+                                        {
+                                            "result": {
+                                                "unit": "unit:PERCENT",
+                                                "value": 0
+                                            },
+                                            "usedProcedure": "scm:19D1"
+                                        },
+                                        {
+                                            "usedProcedure": "scm:19D1",
+                                            "result": "low"
+                                        }
+                                    ],
+                                    "exchangeableCalcium": [
+                                        {
+                                            "result": {
+                                                "unit": "unit:CentiMOL-PER-KiloGM",
+                                                "value": 0
+                                            },
+                                            "usedProcedure": "scm:15A1"
+                                        }
+                                    ],
+                                    "extractableAluminium": [
+                                        {
+                                            "result": {
+                                                "value": 0,
+                                                "unit": "unit:PERCENT"
+                                            },
+                                            "usedProcedure": "scm:13C1"
+                                        }
+                                    ],
+                                    "waterRepellence": [
+                                        {
+                                            "result": "sp:water-repellence-N",
+                                            "usedProcedure": "field-method"
+                                        },
+                                        {
+                                            "result": "11",
+                                            "usedProcedure": "spmile:505.01"
                                         }
                                     ],
                                     "mottles": [
