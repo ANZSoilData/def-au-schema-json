@@ -3469,7 +3469,7 @@
 								"unit": {
 									"$ref": "./qudt.json#/$defs/unit",
 									"enum": [
-										"KiloGM-PER-HA",
+										"unit:KiloGM-PER-HA",
 										"unit:TONNE-PER-HA"
 									]
 								}
