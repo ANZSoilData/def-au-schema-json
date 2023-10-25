@@ -1,4 +1,4 @@
-# ANSIS JSON Schema - 2023-07-37
+# ANSIS JSON Schema - 2023-07-31
 
 ## Overview
 JSON schema files for the ANSIS project, first version.
