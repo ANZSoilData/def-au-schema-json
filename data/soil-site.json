@@ -1,896 +1,208 @@
 {
-	"$schema": "https://anzsoildata.github.io/def-au-schema-json/schema/domain/2023-06-30/ansis.json",
-	"data": {
-		"id": "some-system-id",
-		"type": "ansis:SoilSite",
-		"ansisType": [
-			{
-				"type": "ansis:Classification",
-				"value": "unknown",
-				"source": "informal"
-			}
-		],
-		"aspect": [
-			{
-				"hasResult": {
-					"value": 45.1,
-					"unit": "unit:DEG"
-				}
+	"$schema": "../schema/domain/2023-07-31/ansis.json",
+    "meta": {
+		"timeStamp": "2023-07-31T15:29:00+12:00",
+		"numberReturned": 2
+	},
+	"data": [
+		{
+			"id": "site-00",
+			"type": "ansis:SoilSite",
+			"geometry": {
+				"result": "SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
 			},
-			{
-				"hasResult": {
-					"value": 45.2,
-					"unit": "unit:DEG"
-				}
-			}
-		],
-		"depthFreeWater": [
-			{
-				"hasResult": {
-					"value": 42.1,
-					"unit": "unit:M"
-				}
+			"relatedProject": "#/included/projects/0"
+		},
+		{
+			"id": "site-01",
+			"type": "ansis:SoilSite",
+			"geometry": {
+				"result": "SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
 			},
-			{
-				"hasResult": {
-					"value": 42.2,
-					"unit": "unit:M"
-				}
-			}
-		],
-		"designSite": {
-			"type": "ansis:Classification",
-			"value": "grid",
-			"source": "informal"
-		},
-		"designSurvey": {
-			"type": "ansis:Classification",
-			"value": "stratified",
-			"source": "informal"
-		},
-		"disturbance": {
-			"hasResult": "ls:disturbance-of-site-0"
-		},
-		"drainage": {
-			"hasResult": "sp:soil-water-drainage-1"
-		},
-		"elevation": [
-			{
-				"hasResult": {
-					"value": 42,
-					"unit": "unit:M"
-				},
-				"usedProcedure": "ls:elevation-evaluation-means-E"
-			}
-		],
-		"hasErosion": [
-			{
-				"id": "some-erosion-id",
-				"type": "ansis:Erosion",
-				"ansisType": "ls:erosion-type-B",
-				"degree": {
-					"hasResult": "ls:erosion-R-0"
-				},
-				"depthGully": {
-					"hasResult": "ls:erosion-G-depth-1"
-				},
-				"height": [
-					{
-						"hasResult": {
-							"value": 42.1,
-							"unit": "unit:M"
-						}
-					},
-					{
-						"hasResult": {
-							"value": 42.2,
-							"unit": "unit:M"
-						}
-					}
-				],
-				"state": {
-					"hasResult": "ls:erosion-state-P"
-				}
-			}
-		],
-		"hasGeometry": [
-			{
-				"hasResult": "SRID=4283;POINT(-42 24)"
-			}
-		],
-		"hasLandCover": {
-			"type": "ansis:Classification",
-			"value": "grassland",
-			"source": "informal"
-		},
-		"hasLandManagement": {
-			"type": "ansis:Classification",
-			"value": "irrigated",
-			"source": "informal"
-		},
-		"hasLandSurface": {
-			"id": "some-landsurface-id",
-			"type": "ansis:LandSurface",
-			"aggradation": {
-				"hasResult": "ls:aggradation-0"
-			},
-			"aspect": {
-				"hasResult": {
-					"value": 42,
-					"unit": "unit:DEG"
-				}
-			},
-			"elevation": {
-				"hasResult": {
-					"value": 42,
-					"unit": "unit:M"
-				},
-				"usedProcedure": "ls:elevation-evaluation-means-E"
-			},
-			"hasErosion": [
+            "ansisType": [],
+            "elevation": {
+                "result": {
+                    "value": 10,
+                    "unit": "unit:M"
+                },
+                "usedProcedure": "ls:elevation-evaluation-means-A"
+            },
+			"siteVisit": [
 				{
-					"id": "some-other-erosion-id",
-					"type": "ansis:Erosion",
-					"ansisType": "ls:erosion-type-B",
-					"degree": {
-						"hasResult": "ls:erosion-R-0"
-					},
-					"depthGully": {
-						"hasResult": "ls:erosion-G-depth-1"
-					},
-					"height": [
-						{
-							"hasResult": {
-								"value": 42.1,
-								"unit": "unit:M"
-							}
-						},
-						{
-							"hasResult": {
-								"value": 42.2,
-								"unit": "unit:M"
-							}
-						}
-					],
-					"state": {
-						"hasResult": "ls:erosion-state-P"
-					}
+					"id": "site-visit-01",
+					"type": "ansis:SiteVisit",
+					"startedAtTime": "2023-07-01",
+					"endedAtTime": "2023-07-02",
+					"relatedVisitor": [
+                        "#/included/persons/0"
+                    ],
+                    "soilProfile": [
+                        {
+                            "type": "ansis:SoilProfile",
+                            "geometry": {
+                                "result": "SRID=4283;POINT(-42 24)"
+                            },
+                            "usedProcedure": "sp:observation-type-A",
+                            "depth": {
+                                "result": {
+                                    "value": 2,
+                                    "unit": "unit:M"
+                                }
+                            },
+                            "permeability": {
+                                "result": "sp:soil-water-permeability-3"
+                            },
+                            "sampling": [
+                                {
+                                    "type": "sosa:Sampling",
+                                    "result": [
+                                        {
+                                            "id": "soil-sample-01",
+                                            "type": "ansis:SoilSample",
+                                            "depthUpper": {
+                                                "result": {
+                                                    "value": 0,
+                                                    "unit": "unit:M"
+                                                }
+                                            },
+                                            "depthLower": {
+                                                "result": {
+                                                    "value": 0.1,
+                                                    "unit": "unit:M"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "soilLayer": [
+                                {
+                                    "type": "ansis:SoilLayer",
+                                    "depthUpper": {
+                                        "result": {
+                                            "value": 0,
+                                            "unit": "unit:M"
+                                        }
+                                    },
+                                    "depthLower": {
+                                        "result": {
+                                            "value": 10,
+                                            "unit": "unit:M"
+                                        }
+                                    },
+                                    "colour": [
+                                        {
+                                            "colourModel": "x:colour-munsell",
+                                            "result": "10Y 5/8.5"
+                                        }
+                                    ],
+                                    "ammonium": [
+                                        {
+                                            "result": {
+                                                "value": 12,
+                                                "unit": "unit:MilliGM-PER-KiloGM"
+                                            },
+                                            "usedProcedure": "scm:7C1a",
+                                            "sample": "#/data/1/siteVisit/0/soilProfile/0/sampling/0/result/0"
+                                        }
+                                    ],
+                                    "carbonates": [
+                                        {
+                                            "result": {
+                                                "unit": "unit:PERCENT",
+                                                "value": 0
+                                            },
+                                            "usedProcedure": "scm:6G1"
+                                        },
+                                        {
+                                            "usedProcedure": "scm:19D1",
+                                            "result": "high"
+                                        }
+                                    ],
+                                    "exchangeableCalcium": [
+                                        {
+                                            "result": {
+                                                "unit": "unit:CentiMOL-PER-KiloGM",
+                                                "value": 0
+                                            },
+                                            "usedProcedure": "scm:15A1"
+                                        }
+                                    ],
+                                    "extractableAluminium": [
+                                        {
+                                            "result": {
+                                                "value": 0,
+                                                "unit": "unit:PERCENT"
+                                            },
+                                            "usedProcedure": "scm:13C1"
+                                        }
+                                    ],
+                                    "waterRepellence": [
+                                        {
+                                            "result": "sp:water-repellence-N",
+                                            "usedProcedure": "field-method"
+                                        },
+                                        {
+                                            "result": "11",
+                                            "usedProcedure": "spmile:505.01"
+                                        }
+                                    ],
+                                    "mottles": [
+                                        {
+                                            "type": "ansis:Mottles",
+                                            "abundance": {
+                                                "result": "sp:mottle-abundance-1"
+                                            },
+                                            "colour": {
+                                                "colourModel": "x:colour-mottle",
+                                                "result": "sp:mottle-colour-D"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+					"relatedProject": [
+						"#/included/projects/0",
+						"#/included/projects/1"
+					]
 				}
 			],
-			"hasMicrorelief": {
-				"id": "some-other-microrelief-id",
-				"type": "ansis:Microrelief",
-				"component": {
-					"hasResult": "ls:microrelief-component-D"
-				},
-				"hasMicrorelief_biotic": {
-					"id": "some-other-microrelief-biotic-id",
-					"type": "ansis:Microrelief-biotic",
-					"agent": {
-						"hasResult": "ls:biotic-microrelief-agent-A"
-					},
-					"component": [
-						{
-							"hasResult": "ls:biotic-microrelief-component-D"
-						}
-					]
-				},
-				"hasMicrorelief_gilgai": {
-					"id": "some-other-microrelief-gilgai-id",
-					"type": "ansis:Microrelief-gilgai",
-					"ansisType": "ls:microrelief-A",
-					"proportions": [
-						{
-							"hasResult": "ls:gilgai-microrelief-proportions-A"
-						},
-						{
-							"hasResult": "ls:gilgai-microrelief-proportions-B"
-						}
-					]
-				},
-				"hasMicrorelief_hummocky": {
-					"id": "some-other-microrelief-hummocky-id",
-					"type": "ansis:Microrelief-hummocky",
-					"ansisType": "ls:microrelief-D"
-				},
-				"hasMicrorelief_other": {
-					"id": "some-other-microrelief-other-id",
-					"type": "ansis:Microrelief-other",
-					"ansisType": "ls:microrelief-I"
-				},
-				"height": {
-					"hasResult": {
-						"value": 42,
-						"unit": "unit:M"
-					}
-				},
-				"length": {
-					"hasResult": {
-						"value": 42,
-						"unit": "unit:M"
-					}
-				}
-			},
-			"hasCoarseFragments": {
-				"id": "some-coarse-fragment-id",
-				"type": "ansis:CoarseFragments",
-				"abundance": {
-					"hasResult": "ls:coarse-fragments-abundance-1"
-				},
-				"distribution": {
-					"hasResult": "sp:coarse-fragments-distribution-D"
-				},
-				"lithology": {
-					"hasResult": "ls:lithology-IS"
-				},
-				"shape": {
-					"hasResult": "ls:coarse-fragments-shape-A"
-				},
-				"size": {
-					"hasResult": "ls:coarse-fragments-size-1"
-				},
-				"strength": {
-					"hasResult": "subst:material-strength-M"
-				}
-			},
-			"hasInundation": {
-				"id": "some-inundation-id",
-				"type": "ansis:Inundation",
-				"velocity": {
-					"hasResult": {
-						"value": 42,
-						"unit": "unit:tbd"
-					}
-				},
-				"depth": {
-					"hasResult": "ls:inundation-depth-1"
-				},
-				"duration": {
-					"hasResult": "ls:inundation-duration-1"
-				},
-				"frequency": {
-					"hasResult": "ls:inundation-frequency-1"
-				}
-			},
-			"hasOutcrop": {
-				"id": "some-other-inundation-id",
-				"type": "ansis:Outcrop",
-				"lithology": {
-					"hasResult": "http://anzsoil.org/def/au/asls/substrate/lithology-BA"
-				},
-				"abundance": {
-					"hasResult": "ls:rock-outcrop-abundance-5"
-				},
-				"grainSize": [
-					{
-						"hasResult": "subst:grain-size-3"
-					}
-				],
-				"relatedLandsurveySite": [
-					{
-						"id": "some-other-related-landsurveysite-id",
-						"type": "ansis:LandsurveySite"
-					}
-				],
-				"relatedSample": [
-					{
-						"id": "some-other-related-sample-id",
-						"type": "ansis:SoilSample"
-					}
-				],
-				"relatedSite": [
-					{
-						"id": "some-other-related-soilsite-id",
-						"type": "ansis:SoilSite"
-					}
-				]
-			},
-			"heightDrainage": {
-				"hasResult": {
-					"value": 42,
-					"unit": "unit:tbd"
-				}
-			},
-			"runoff": {
-				"hasResult": "ls:runoff-1"
-			}
-		},
-		"hasLandUse": {
-			"type": "ansis:Classification",
-			"value": "dry stock",
-			"source": "informal"
-		},
-		"hasLandform": {
-			"id": "some-landform-id",
-			"type": "ansis:Landform",
-			"hasLandformElement": [
-				{
-					"id": "some-landformelement-id",
-					"type": "ansis:LandformElement",
-					"morphologicalType": {
-						"hasResult": "lf:morphological-type-C"
-					},
-					"slope": [
-						{
-							"hasResult": "lf:slope-class-GE"
-						},
-						{
-							"hasResult": "lf:slope-class-MO"
-						}
-					],
-					"agent": {
-						"hasResult": "lf:geomorphological-agent-VO"
-					},
-					"ansisType": "lf:landform-element-SCA",
-					"geomorphologyMode": {
-						"hasResult": "lf:mode-of-geomorphological-activity-EA"
-					},
-					"height": {
-						"hasResult": {
-							"value": 42,
-							"unit": "unit:M"
-						}
-					},
-					"length": {
-						"hasResult": {
-							"value": 42,
-							"unit": "unit:M"
-						}
-					},
-					"relativeInclination": {
-						"hasResult": "lf:relative-inclination-of-slope-elements-N"
-					},
-					"width": {
-						"hasResult": {
-							"value": 42,
-							"unit": "unit:M"
-						}
-					}
-				}
-			],
-			"hasLandformPattern": [
-				{
-					"id": "some-landformpattern-id",
-					"type": "ansis:LandformPattern",
-					"relief": {
-						"hasResult": "lf:relief-class-L"
-					},
-					"agent": {
-						"hasResult": "lf:geomorphological-agent-VO"
-					},
-					"ansisType": "lf:simple-erosional-landform-pattern-LP",
-					"geomorphologyMode": {
-						"hasResult": "lf:mode-of-geomorphological-activity-AG"
-					},
-					"geomorphologyStatus": {
-						"hasResult": "lf:status-of-geomorphological-activity-C"
-					},
-					"hasLandformElement": [
-						{
-							"id": "another-landformelement-id",
-							"type": "ansis:LandformElement",
-							"morphologicalType": {
-								"hasResult": "lf:morphological-type-C"
-							},
-							"slope": [
-								{
-									"hasResult": "lf:slope-class-GE"
-								},
-								{
-									"hasResult": "lf:slope-class-MO"
-								}
-							],
-							"agent": {
-								"hasResult": "lf:geomorphological-agent-VO"
-							},
-							"ansisType": "lf:landform-element-SCA",
-							"geomorphologyMode": {
-								"hasResult": "lf:mode-of-geomorphological-activity-EA"
-							},
-							"height": {
-								"hasResult": {
-									"value": 42,
-									"unit": "unit:M"
-								}
-							},
-							"length": {
-								"hasResult": {
-									"value": 42,
-									"unit": "unit:M"
-								}
-							},
-							"relativeInclination": {
-								"hasResult": "lf:relative-inclination-of-slope-elements-N"
-							},
-							"width": {
-								"hasResult": {
-									"value": 42,
-									"unit": "unit:M"
-								}
-							}
-						}
-					],
-					"hasStreamChannel": {
-						"id": "some-streamchannel-id",
-						"type": "ansis:StreamChannel",
-						"development": {
-							"hasResult": "lf:stream-channel-development-A"
-						},
-						"depthWidthRatio": {
-							"hasResult": "lf:stream-channel-relative-depth-width-D"
-						},
-						"directionality": {
-							"hasResult": "lf:stream-channel-network-directionality-D"
-						},
-						"integration": {
-							"hasResult": "lf:stream-channel-network-integration-I"
-						},
-						"migrationRate": {
-							"hasResult": "lf:stream-channel-migration-R"
-						},
-						"pattern": {
-							"hasResult": "lf:streamwise-channel-pattern-N"
-						},
-						"spacing": {
-							"hasResult": "lf:stream-channel-spacing-MS"
-						}
-					},
-					"slope": {
-						"hasResult": "lf:relief-class-M"
-					}
-				}
-			]
-		},
-		"hasMicrorelief": [
+			"relatedProject": "#/included/projects/0"
+		}
+	],
+	"included": {
+        "organizations": [
+            {
+                "type": "prov:Organization",
+                "name": "CSIRO"
+            },
+            {
+                "type": "prov:Organization",
+                "name": "DAFF"
+            }
+        ],
+        "persons": [
+            {
+                "type": "prov:Person",
+                "name": "Peter the Great"
+            }
+        ],
+		"projects": [
 			{
-				"id": "some-microrelief-id",
-				"type": "ansis:Microrelief",
-				"component": {
-					"hasResult": "ls:microrelief-component-D"
-				},
-				"hasMicrorelief_biotic": {
-					"id": "some-microrelief-biotic-id",
-					"type": "ansis:Microrelief-biotic",
-					"agent": {
-						"hasResult": "ls:biotic-microrelief-agent-A"
-					},
-					"component": [
-						{
-							"hasResult": "ls:biotic-microrelief-component-D"
-						}
-					]
-				},
-				"hasMicrorelief_gilgai": {
-					"id": "some-microrelief-gilgai-id",
-					"type": "ansis:Microrelief-gilgai",
-					"ansisType": "ls:microrelief-A",
-					"proportions": [
-						{
-							"hasResult": "ls:gilgai-microrelief-proportions-A"
-						},
-						{
-							"hasResult": "ls:gilgai-microrelief-proportions-B"
-						}
-					]
-				},
-				"hasMicrorelief_hummocky": {
-					"id": "some-microrelief-hummocky-id",
-					"type": "ansis:Microrelief-hummocky",
-					"ansisType": "ls:microrelief-D"
-				},
-				"hasMicrorelief_other": {
-					"id": "some-microrelief-other-id",
-					"type": "ansis:Microrelief-other",
-					"ansisType": "ls:microrelief-I"
-				},
-				"height": {
-					"hasResult": {
-						"value": 42,
-						"unit": "unit:M"
-					}
-				},
-				"length": {
-					"hasResult": {
-						"value": 42,
-						"unit": "unit:M"
-					}
-				}
-			}
-		],
-		"hasOutcrop": [
-			{
-				"id": "some-outcrop-id",
-				"type": "ansis:Outcrop",
-				"lithology": {
-					"hasResult": "http://anzsoil.org/def/au/asls/substrate/lithology-BA"
-				},
-				"abundance": {
-					"hasResult": "ls:rock-outcrop-abundance-5"
-				},
-				"grainSize": [
-					{
-						"hasResult": "subst:grain-size-3"
-					}
-				],
-				"relatedLandsurveySite": [
-					{
-						"id": "some-related-landsurveysite-id",
-						"type": "ansis:LandsurveySite"
-					}
-				],
-				"relatedSample": [
-					{
-						"id": "some-related-sample-id",
-						"type": "ansis:SoilSample"
-					}
-				],
-				"relatedSite": [
-					{
-						"id": "some-system-id",
-						"type": "ansis:SoilSite",
-						"title": "SB10000"
-					}
-				]
-			}
-		],
-		"heightDrainage": [
-			{
-				"hasResult": {
-					"value": 42.1,
-					"unit": "unit:M"
-				}
-			},
-			{
-				"hasResult": {
-					"value": 42.2,
-					"unit": "unit:M"
-				}
-			}
-		],
-		"locationInElement": [
-			{
-				"hasResult": "lf:location-within-the-landform-element-B"
-			},
-			{
-				"hasResult": "lf:location-within-the-landform-element-T"
-			}
-		],
-		"purpose": {
-			"type": "ansis:Classification",
-			"value": "soil survey",
-			"source": "informal"
-		},
-		"relatedActivity": [
-			{
-				"id": "some-soilsitetype-id",
-				"type": "ansis:SiteVisit",
-				"startedAtTime": "2020-02-02",
-				"endedAtTime": "2020-02-02",
-				"relatedActivity": [
-					{
-						"id": "some-sampling-id",
-						"type": "sosa:Sampling",
-						"hasResult": [
-							{
-								"id": "some-soilsample-id",
-								"type": "ansis:SoilSample",
-								"isSampleOf": [
-									{
-										"id": "some-soilentity-id"
-									},
-									{
-										"id": "some-other-soilentity-id"
-									}
-								],
-								"relatedProfile": [
-									{
-										"id": "some-soilentity-id"
-									}
-								],
-								"ansisType": {
-									"type": "ansis:Classification",
-									"value": "composite",
-									"source": "fundament pluck"
-								},
-								"component": {
-									"id": "unknown",
-									"title": "no definition of property"
-								},
-								"depthLower": {
-									"hasResult": {
-										"value": 0.42,
-										"unit": "unit:M"
-									}
-								},
-								"depthUpper": {
-									"hasResult": {
-										"value": 0.24,
-										"unit": "unit:M"
-									}
-								},
-								"hasGeometry": {
-									"hasResult": "SRID=4283;POINT(-42.1 24.1)"
-								},
-								"hasResult": {
-									"chemical": {
-										"type": "ansis:SoilChemicalObservations",
-										"cationExchangeCapacity": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:CentiMOL-PER-KiloGM"
-												},
-												"usedProcedure": "scm:15B1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											},
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:CentiMOL-PER-KiloGM"
-												},
-												"usedProcedure": "scm:15E1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"effectiveCationExchangeCapacity": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:CentiMOL-PER-KiloGM"
-												},
-												"usedProcedure": "scm:15J1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"electricalConductivity": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:DeciS-PER-M"
-												},
-												"usedProcedure": "scm:14B1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"organicCarbon": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:PERCENT"
-												},
-												"usedProcedure": "scm:6A1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"pH": [
-											{
-												"hasResult": {
-													"unit": "unit:MOL-PER-M3",
-													"value": 0.1
-												},
-												"resultTime": "2001-12-17T09:30:47.0",
-												"usedProcedure": "scm:20K1",
-												"qualityOfObservation": null
-											},
-											{
-												"hasResult": {
-													"unit": "unit:UNITLESS",
-													"value": 0.1
-												},
-												"resultTime": "2001-12-17T09:30:47.0",
-												"usedProcedure": "scm:4C3",
-												"qualityOfObservation": null
-											}
-										],
-										"totalNitrogen": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:PERCENT"
-												},
-												"usedProcedure": "scm:7A1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"totalOrganicCarbon": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:PERCENT"
-												},
-												"usedProcedure": "scm:6B1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"totalPhosphorus": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:PERCENT"
-												},
-												"usedProcedure": "scm:9A1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"totalPotassium": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:PERCENT"
-												},
-												"usedProcedure": "scm:17A1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										],
-										"ratioTotalOrganicCarbonToTotalSoilNitrogen": [
-											{
-												"hasResult": {
-													"value": 0.1,
-													"unit": "unit:UNITLESS"
-												},
-												"usedProcedure": "scm:8A1",
-												"resultTime": "2001-12-17T09:30:47.0",
-												"qualityOfObservation": null
-											}
-										]
-									}
-								},
-								"scopedIdentifier": [
-								]
-							},
-							{
-								"id": "some-other-soilsample-id",
-								"type": "ansis:SoilSample",
-								"isSampleOf": [
-									{
-										"id": "some-soilentity-id"
-									},
-									{
-										"id": "some-other-soilentity-id"
-									}
-								],
-								"relatedProfile": [
-									{
-										"id": "some-soilentity-id"
-									}
-								],
-								"ansisType": {
-									"type": "ansis:Classification",
-									"value": "composite",
-									"source": "fundament pluck"
-								},
-								"component": {
-									"id": "unknown",
-									"title": "no definition of property"
-								},
-								"depthLower": {
-									"hasResult": {
-										"value": 0.84,
-										"unit": "unit:M"
-									}
-								},
-								"depthUpper": {
-									"hasResult": {
-										"value": 0.42,
-										"unit": "unit:M"
-									}
-								},
-								"hasGeometry": {
-									"hasResult": "SRID=7844;POINT(-42.1 24.1)"
-								},
-								"hasResult": [
-								],
-								"scopedIdentifier": [
-								]
-							}
-						],
-						"madeBySampler": [
-							{
-								"id": "some-sampler-id",
-								"type": "sosa:sampler"
-							}
-						],
-						"resultTime": "2020-02-02T09:17:15+10:00",
-						"usedProcedure": {
-							"href": "https://not.real/def/some-sampling-method-vocab/id",
-							"title": "crazed digging"
-						}
-					}
-				],
-				"purpose": {
-					"type": "ansis:Classification",
-					"value": "monitoring",
-					"source": "informal"
-				},
-				"relatedLandsurveySite": {
-					"href": "https://not.real/api/id/some-landsurveysite-id",
-					"type": "ansis:LandSurveySite",
-					"title": "LS00001"
-				},
-				"relatedProject": {
-					"id": "some-other-project-id",
-					"type": "proj:Project",
-					"title": "Taita Soil Survey Redux"
-				},
-				"relatedSite": {
-					"id": "some-system-id",
-					"type": "ansis:SoilSite",
-					"title": "SB10000"
-				},
-				"visitor": {
-					"id": "some-person-id",
-					"type": "prov:Person",
-					"name": "Peter Wilson"
-				}
-			}
-		],
-		"relatedLandSurveySite": [
-			{
-				"href": "https://not.real/api/id/some-landsurveysite-id",
-				"type": "ansis:LandSurveySite",
-				"title": "LS00001"
-			}
-		],
-		"relatedProfile": [
-		],
-		"relatedProject": [
-			{
-				"id": "some-project-id",
+				"id": "project-00",
 				"type": "proj:Project",
-				"scopedIdentifier": {
-					"name": "Taita Soil Survey",
-					"authority": "DSIR"
-				}
+				"leader": "#/included/organizations/0",
+				"sponsor": [
+                    "#/included/organizations/0",
+                    "#/included/organizations/1"
+                ]
 			},
 			{
-				"id": "some-other-project-id",
+				"id": "project-01",
 				"type": "proj:Project",
-				"scopedIdentifier": {
-					"name": "Taita Soil Survey Redux",
-					"authority": "MWLR"
-				}
-			}
-		],
-		"relatedSite": [
-			{
-				"href": "https://not.real/api/id/some-other-soilsite-id",
-				"type": "ansis:SoilSite",
-				"title": "SB10000.01"
-			}
-		],
-		"relatedSoilBody": {
-			"id": "out-of-scope",
-			"type": "ansis:SoilBody"
-		},
-		"relatedSoilSurface": {
-			"id": "some-soilsurface-id",
-			"type": "ansis:SoilSurface",
-			"conditionWhenDry": {
-				"hasResult": "sp:surfacecondition-H"
-			},
-			"hasCoarseFragments": [
-			],
-			"relatedSoilBody": {
-				"href": "https://not.real/id/some-soilbody-id",
-				"title": "Related soil body"
-			},
-			"waterRepellence": {
-				"hasResult": "sp:water-repellence-R"
-			}
-		},
-		"scopedIdentifier": [
-			{
-				"name": "SB10000",
-				"authority": "MWLR"
+				"leader": "#/included/organizations/1"
 			}
 		]
 	}

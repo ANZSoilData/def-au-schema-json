@@ -1,0 +1,190 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "sosa.json",
+    "title": "SOSA Entity Schema",
+    "description": "JSON Schema definitions of the SOSA entities used by ANSIS.",
+    "type": "null",
+    "_curiPrefix": {
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "xs": "https://www.w3.org/TR/xmlschema-2/#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "qudt": "http://qudt.org/schema/qudt/"
+    },
+    "$defs": {
+        "Sampling": {
+            "@id": "sosa:Sampling",
+            "title": "SOSA Sampling",
+            "description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples. E.g. digging a pit through a soil sequence; dividing a field site into quadrants; sieving a powder to separate the subset finer than 100-mesh.",
+            "type": "object",
+            "required": [
+                "type",
+                "result"
+            ],
+            "properties": {
+                "id": {
+                    "$ref": "./base.json#/$defs/id"
+                },
+                "type": {
+                    "$ref": "./base.json#/$defs/type",
+                    "const": "sosa:Sampling"
+                },
+                "result": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/result/$defs/SoilSample"
+                    }
+                },
+                "madeBySampler": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/madeBySampler"
+                    }
+                },
+                "resultTime": {
+                    "$ref": "#/$defs/resultTime"
+                },
+                "usedProcedure": {
+                    "$ref": "#/$defs/usedProcedure/$defs/Enumeration"
+                }
+            },
+            "additionalProperties": false
+        },
+        "sampleOf": {
+            "@id": "sosa:isSampleOf",
+            "title": "sample of",
+            "description": "Generic link to an ANSIS soil entity that the sample has been taken from.",
+            "$ref": "./base.json#/$defs/pointer"
+        },
+        "result": {
+            "@id": "sosa:hasResult",
+            "title": "result",
+            "$defs": {
+                "Colour": {
+                    "@id": "sosa:hasSimpleResult",
+                    "description": "A colour value structured according to the colourModel.",
+                    "type": "string",
+                    "$defs": {
+                        "Munsell": {
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "pattern": "(^(2\\.5|5|7\\.5|10)(R|YR|Y|GY|G|BG|B|PB|P|RP)\\s([0-9]|10)(\\.[0-9])?\\/([0-9])(\\.[0-9])?$)|(^N\\s([0-9]|10)\\/0?$)"
+                                }
+                            }
+                        },
+                        "RGB": {
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "pattern": "(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b,\\s?\\b([0-9]|[1-9][0-9]|[1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\\b\\)$)|(^(rgb|RGB)\\(\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%,\\s?\\b([0-9]|[1-9][0-9]|100)\\b\\%\\)$)"
+                                }
+                            }
+                        },
+                        "MottleColour": {
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "$ref": "./enum.json#/$defs/MottleColour"
+                                }
+                            }
+                        },
+                        "Term": {
+                            "properties": {
+                                "result": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "Simple": {
+                    "@id": "sosa:hasSimpleResult",
+                    "description": "The simple value of an Observation. May be a quantity, values from and enumeration or a simple string.",
+                    "$comment": "Observation result value rules are set for each individual property."
+                },
+                "SoilSample": {
+                    "description": "Relation linking an act of Sampling to a Sample.",
+                    "$ref": "./entities.json#/$defs/SoilSample"
+                }
+            }
+        },
+        "sample": {
+            "@id": "sosa:hasSample",
+            "title": "sample",
+            "description": "Link to the representative sample from which the observed property was measured.",
+            "$ref": "./base.json#/$defs/pointer",
+            "_refType": "./entities.json#/$defs/SoilSample"
+        },
+        "madeBySampler": {
+            "@id": "sosa:madeBySampler",
+            "title": "Made by Sampler",
+            "description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+            "$comment": "Untyped in the absence of a Sampler model."
+        },
+        "madeBySensor": {
+            "@id": "sosa:madeBySensor",
+            "title": "Made by Sensor",
+            "description": "Relation between an Observation and the Sensor which made the Observations.",
+            "$comment": "Untyped in the absence of a Sensor model."
+        },
+        "phenomenonTime": {
+            "@id": "sosa:phenomenonTime",
+            "title": "Phenomenon Time",
+            "description": "The time that the Result of an Observation, applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time].",
+            "$comment": "Initially restricting to date-time",
+            "type": "string",
+            "oneOf": [
+                {
+                    "format": "date-time"
+                },
+                {
+                    "format": "date"
+                }
+            ]
+        },
+        "resultTime": {
+            "@id": "sosa:resultTime",
+            "title": "Result Time",
+            "description": "The result time is the instant of time when the Observation activity was completed.",
+            "$comment": "Initially restricting to date-time",
+            "type": "string",
+            "oneOf": [
+                {
+                    "format": "date-time"
+                },
+                {
+                    "format": "date"
+                }
+            ]
+        },
+        "usedProcedure": {
+            "@id": "sosa:usedProcedure",
+            "title": "Used Procedure",
+            "description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+            "$defs": {
+                "Enumeration": {
+                    "description": "Defined method (compact URI).",
+                    "$comment": "The default data type of a procedure.",
+                    "type": "string",
+                    "format": "iri"
+                },
+                "SoilProfile": {
+                    "description": "SoilProfile.",
+                    "$ref": "./enum.json#/$defs/ProfileConstruction"
+                },
+                "Substrate": {
+                    "description": "Substrate.",
+                    "$ref": "./enum.json#/$defs/TypeOfSubstrateObservation"
+                }
+            }
+        },
+        "qualityOfObservation": {
+            "@id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
+            "title": "Quality of Observation",
+            "description": "The adjudged quality of the Result.",
+            "$comment": "To be expanded - may be an enumeration or quantification of uncertainty.",
+            "type": "string"
+        }
+    }
+}

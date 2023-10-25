@@ -26,6 +26,25 @@ def get_concept_preflabel(uri):
 
     return pref_label
 
+def get_concept_narrower_concepts(uri):
+    '''Gets a concept's narrower concepts.'''
+
+    concept_request = requests.get(
+        uri,
+        headers = {"Accept": "application/json"})
+
+    narrower_concepts = []
+
+    if concept_request.status_code == 404:
+        narrower_concepts = "Not Found"
+    else:
+        concept_response = json.loads(concept_request.text)
+        if "narrower" in concept_response["result"]["primaryTopic"] and isinstance(concept_response["result"]["primaryTopic"]["narrower"], list):
+            narrower_concepts = concept_response["result"]["primaryTopic"]["narrower"]
+            for concept in narrower_concepts:
+                narrower_concepts = narrower_concepts + get_concept_narrower_concepts(concept["_about"])
+
+    return narrower_concepts
 
 def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name="code/ansis-enum-working.json"):
     '''Convert an ANSIS SKOS Concept Scheme into a JSON Schema Enum.'''
@@ -71,8 +90,28 @@ def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name=
                 enum_object_value["const"] = const
                 enum_object_value["description"] = get_concept_preflabel(member_uri)
                 enum_object_oneof.append(enum_object_value)
-
-            enum_object["oneOf"] = enum_object_oneof
+                narrower_concepts = get_concept_narrower_concepts(member_uri)
+                if isinstance(narrower_concepts, list):
+                    for narrower in narrower_concepts:
+                        enum_object_value = {}
+                        if isinstance(narrower, dict):
+                            member_uri = narrower["_about"]
+                        if isinstance(narrower, str):
+                            member_uri = item
+                        const = get_compact_uri(member_uri, base_uri, prefix)
+                        print("    ... adding", const, "...")
+                        enum_object_value["const"] = const
+                        enum_object_value["description"] = get_concept_preflabel(member_uri)
+                        enum_object_oneof.append(enum_object_value)
+            # remove duplicate members
+            enum_object_oneof_added = set()
+            enum_object_oneof_list = []
+            for obj in enum_object_oneof:
+                enum_object_oneof_tuple = tuple(obj.items())
+                if enum_object_oneof_tuple not in enum_object_oneof_added:
+                    enum_object_oneof_added.add(enum_object_oneof_tuple)
+                    enum_object_oneof_list.append(obj)
+            enum_object["oneOf"] = enum_object_oneof_list
         else:
             enum_object["$comment"] = "No skos:members found."
 
@@ -359,3 +398,5 @@ def get_ansis_enum(concept_scheme_id_token, base_uri, prefix, working_file_name=
 # get_ansis_enum("Location-in-element", "http://anzsoil.org/def/au/asls/landform/", "lf")
 
 # get_ansis_enum("Location-in-toposequence", "http://anzsoil.org/def/au/asls/landform/", "lf") # 404
+
+# get_ansis_enum("structure-pedality-compound", "http://anzsoil.org/def/au/asls/soil-profile/", "sp")

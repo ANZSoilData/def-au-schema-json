@@ -1,5 +1,5 @@
 # OGC GeoSPARQL Property Schema
-**JSON Schema Location:** geo.json
+**JSON Schema Location:** [geo.json](geo.json)
 
 JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology.
 
@@ -7,10 +7,11 @@ JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ont
 
 ## Entities
 
-### geo:wktLiteral
+### geometry
 
-*WKT Literal*. A Well-known Text serialization of a geometry object.
+Type: *geo:geometry*. geometry. The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.
 
-> Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS, e.g. SRID=4283;POINT(-42 24). Restrict to GDA94 (EPSG code 4283).
-
+| Property | Value Count | ANSIS Preferred | Type | Vocabulary | Description \[ _Comment_ \] |
+| -------- | ----------- | --------------- | ---- | ---------- | ------------------------- |
+| result | 1..1 |  | [JSON string](https://json-schema.org/understanding-json-schema/reference/type.html) |  | A Well-known Text serialization of a geometry object. \[ _Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS, e.g. SRID=4283;POINT(-42 24). Restrict to GDA94 (EPSG code 4283)._ \] |
 

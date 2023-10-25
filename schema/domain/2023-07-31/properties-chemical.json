@@ -1,0 +1,7135 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "properties-chemical.json",
+	"title": "ANSIS Soil Chemical Property Schema",
+	"description": "JSON Schema definitions of the complete list of observable soil chemical properties defined in the ANSIS Domain Ontology.",
+	"$comment": "Derived from Soil Chemical Methods – Australasia. (The 'Green Book'.)",
+	"type": "object",
+	"_curiPrefix": {
+		"nil": "http://www.opengis.net/def/nil/OGC/0/",
+		"qudt": "http://qudt.org/schema/qudt/",
+		"scm": "http://anzsoil.org/def/au/scm/",
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"unit": "https://qudt.org/2.1/vocab/unit/"
+	},
+	"required": [
+	],
+	"properties": {
+		"acidNeutralisingCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/acidNeutralisingCapacity"
+			}
+		},
+		"aluminiumSaturation": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/aluminiumSaturation"
+			}
+		},
+		"ammonium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ammonium"
+			}
+		},
+		"ammoniumAndNitrate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ammoniumAndNitrate"
+			}
+		},
+		"ammoniumAndNitrateAndNitrite": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ammoniumAndNitrateAndNitrite"
+			}
+		},
+		"ammoniumAndNitrite": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ammoniumAndNitrite"
+			}
+		},
+		"anionExchangeCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/anionExchangeCapacity"
+			}
+		},
+		"anionStorageCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/anionStorageCapacity"
+			}
+		},
+		"baseSaturationPercentage": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/baseSaturationPercentage"
+			}
+		},
+		"bicarbonate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/bicarbonate"
+			}
+		},
+		"calciumCarbonate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/calciumCarbonate"
+			}
+		},
+		"calciumToMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/calciumToMagnesium"
+			}
+		},
+		"carbonate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/carbonate"
+			}
+		},
+		"carbonates": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/carbonates"
+			}
+		},
+		"presenceOrAbsenceOfCarbonates": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/presenceOrAbsenceOfCarbonates"
+			}
+		},
+		"cationExchangeCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/cationExchangeCapacity"
+			}
+		},
+		"charcoalCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/charcoalCarbon"
+			}
+		},
+		"chloride": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/chloride"
+			}
+		},
+		"dolomite": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/dolomite"
+			}
+		},
+		"effectiveCationExchangeCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/effectiveCationExchangeCapacity"
+			}
+		},
+		"electricalConductivity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/electricalConductivity"
+			}
+		},
+		"equilibriumPhosphorusConcentration": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/equilibriumPhosphorusConcentration"
+			}
+		},
+		"estimatedIonicStrength": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/estimatedIonicStrength"
+			}
+		},
+		"estimatedSolubleSalts": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/estimatedSolubleSalts"
+			}
+		},
+		"exchangeableAluminium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/exchangeableAluminium"
+			}
+		},
+		"exchangeableCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/exchangeableCalcium"
+			}
+		},
+		"exchangeableMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/exchangeableMagnesium"
+			}
+		},
+		"exchangeablePotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/exchangeablePotassium"
+			}
+		},
+		"exchangeableSodium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/exchangeableSodium"
+			}
+		},
+		"exchangeableSodiumPercentage": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/exchangeableSodiumPercentage"
+			}
+		},
+		"extractableAluminium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableAluminium"
+			}
+		},
+		"extractableBoron": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableBoron"
+			}
+		},
+		"extractableCadmium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableCadmium"
+			}
+		},
+		"extractableCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableCalcium"
+			}
+		},
+		"extractableCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableCarbon"
+			}
+		},
+		"extractableCopper": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableCopper"
+			}
+		},
+		"extractableIron": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableIron"
+			}
+		},
+		"extractableMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableMagnesium"
+			}
+		},
+		"extractableManganese": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableManganese"
+			}
+		},
+		"extractableMolybdenum": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableMolybdenum"
+			}
+		},
+		"extractablePhosphorus": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractablePhosphorus"
+			}
+		},
+		"extractablePotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractablePotassium"
+			}
+		},
+		"extractableSilicon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableSilicon"
+			}
+		},
+		"extractableSodium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableSodium"
+			}
+		},
+		"extractableSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableSulfur"
+			}
+		},
+		"extractableZinc": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/extractableZinc"
+			}
+		},
+		"fluoride": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/fluoride"
+			}
+		},
+		"hydrogenPlusAluminium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/hydrogenPlusAluminium"
+			}
+		},
+		"limeRequirement": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/limeRequirement"
+			}
+		},
+		"limeRequirementForDrainSpoil": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/limeRequirementForDrainSpoil"
+			}
+		},
+		"moistureContent": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/moistureContent"
+			}
+		},
+		"netExcessAcidNeutralisingCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/netExcessAcidNeutralisingCapacity"
+			}
+		},
+		"netPotentiallyMineralisableNitrogen": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/netPotentiallyMineralisableNitrogen"
+			}
+		},
+		"nitrate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/nitrate"
+			}
+		},
+		"nitrateAndNitrite": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/nitrateAndNitrite"
+			}
+		},
+		"nitrite": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/nitrite"
+			}
+		},
+		"organicCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/organicCarbon"
+			}
+		},
+		"oxidisableCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/oxidisableCarbon"
+			}
+		},
+		"particulateOrganicCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/particulateOrganicCarbon"
+			}
+		},
+		"pBufferIndex": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pBufferIndex"
+			}
+		},
+		"pConcentrationRatio": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pConcentrationRatio"
+			}
+		},
+		"ph": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/ph"
+			}
+		},
+		"phChange": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/phChange"
+			}
+		},
+		"phosphateSorptionIndex": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/phosphateSorptionIndex"
+			}
+		},
+		"phosphorusBufferingCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/phosphorusBufferingCapacity"
+			}
+		},
+		"phReactivityClass": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/phReactivityClass"
+			}
+		},
+		"potassiumToMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/potassiumToMagnesium"
+			}
+		},
+		"potassiumToSodium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/potassiumToSodium"
+			}
+		},
+		"potentiallyMineralisableNitrogen": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/potentiallyMineralisableNitrogen"
+			}
+		},
+		"pSaturationRatio": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pSaturationRatio"
+			}
+		},
+		"pseudoTotalAluminium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalAluminium"
+			}
+		},
+		"pseudoTotalCadmium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalCadmium"
+			}
+		},
+		"pseudoTotalCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalCalcium"
+			}
+		},
+		"pseudoTotalChromium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalChromium"
+			}
+		},
+		"pseudoTotalCobalt": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalCobalt"
+			}
+		},
+		"pseudoTotalCopper": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalCopper"
+			}
+		},
+		"pseudoTotalIron": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalIron"
+			}
+		},
+		"pseudoTotalLead": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalLead"
+			}
+		},
+		"pseudoTotalMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalMagnesium"
+			}
+		},
+		"pseudoTotalManganese": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalManganese"
+			}
+		},
+		"pseudoTotalMolybdenum": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalMolybdenum"
+			}
+		},
+		"pseudoTotalNickel": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalNickel"
+			}
+		},
+		"pseudoTotalPhosphorus": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalPhosphorus"
+			}
+		},
+		"pseudoTotalPotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalPotassium"
+			}
+		},
+		"pseudoTotalSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalSulfur"
+			}
+		},
+		"pseudoTotalZinc": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/pseudoTotalZinc"
+			}
+		},
+		"reactedCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/reactedCalcium"
+			}
+		},
+		"reactedMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/reactedMagnesium"
+			}
+		},
+		"redoxPotential": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/redoxPotential"
+			}
+		},
+		"reducibleSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/reducibleSulfur"
+			}
+		},
+		"residualQuickNeutralisingCapacity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/residualQuickNeutralisingCapacity"
+			}
+		},
+		"reverseSoilPotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/reverseSoilPotassium"
+			}
+		},
+		"solubleCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solubleCalcium"
+			}
+		},
+		"solubleChloride": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solubleChloride"
+			}
+		},
+		"solubleMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solubleMagnesium"
+			}
+		},
+		"solublePlusExchangeableCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solublePlusExchangeableCalcium"
+			}
+		},
+		"solublePlusExchangeableMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solublePlusExchangeableMagnesium"
+			}
+		},
+		"solublePlusExchangeableSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solublePlusExchangeableSulfur"
+			}
+		},
+		"solublePotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solublePotassium"
+			}
+		},
+		"solubleSodium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solubleSodium"
+			}
+		},
+		"solubleSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/solubleSulfur"
+			}
+		},
+		"sulfate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/sulfate"
+			}
+		},
+		"titratableActualAcidity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/titratableActualAcidity"
+			}
+		},
+		"titratablePeroxideAcidity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/titratablePeroxideAcidity"
+			}
+		},
+		"totalAluminium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalAluminium"
+			}
+		},
+		"totalArsenic": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalArsenic"
+			}
+		},
+		"totalCalcium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalCalcium"
+			}
+		},
+		"totalChromium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalChromium"
+			}
+		},
+		"totalCobalt": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalCobalt"
+			}
+		},
+		"totalCopper": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalCopper"
+			}
+		},
+		"totalGypsum": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalGypsum"
+			}
+		},
+		"totalIron": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalIron"
+			}
+		},
+		"totalLead": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalLead"
+			}
+		},
+		"totalMagnesium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalMagnesium"
+			}
+		},
+		"totalManganese": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalManganese"
+			}
+		},
+		"totalNickel": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalNickel"
+			}
+		},
+		"totalNitrogen": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalNitrogen"
+			}
+		},
+		"totalOrganicCarbon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalOrganicCarbon"
+			}
+		},
+		"totalOrganicCarbonToTotalSoilNitrogen": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalOrganicCarbonToTotalSoilNitrogen"
+			}
+		},
+		"totalOrganicMatter": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalOrganicMatter"
+			}
+		},
+		"totalPhosphorus": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalPhosphorus"
+			}
+		},
+		"totalPotassium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalPotassium"
+			}
+		},
+		"totalSilicon": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalSilicon"
+			}
+		},
+		"totalStrontium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalStrontium"
+			}
+		},
+		"totalSulfidicAcidity": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalSulfidicAcidity"
+			}
+		},
+		"totalSulfur": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalSulfur"
+			}
+		},
+		"totalTitanium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalTitanium"
+			}
+		},
+		"totalVanadium": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalVanadium"
+			}
+		},
+		"totalZinc": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/totalZinc"
+			}
+		},
+		"waterSolubleNitrate": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/waterSolubleNitrate"
+			}
+		}
+	},
+	"$defs": {
+		"acidNeutralisingCapacity": {
+			"@id": "nil:template",
+			"title": "Acid neutralising capacity",
+			"description": "Acid neutralising capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"aluminiumSaturation": {
+			"@id": "nil:template",
+			"title": "Aluminium saturation",
+			"description": "Aluminium saturation",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15O1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"ammonium": {
+			"@id": "nil:template",
+			"title": "Concentration of Ammonium",
+			"description": "Concentration of Ammonium (NH4)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1a"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"ammoniumAndNitrate": {
+			"@id": "nil:template",
+			"title": "Concentration of Ammonium and Nitrate",
+			"description": "Concentration of Ammonium and Nitrate (NH4 + NO3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1d",
+								"scm:7C1g",
+								"scm:7C2a",
+								"scm:7C2b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"ammoniumAndNitrateAndNitrite": {
+			"@id": "nil:template",
+			"title": "Concentration of Ammonium, Nitrate and Nitrite",
+			"description": "Concentration of Ammonium, Nitrate and Nitrite (NH4 + NO3 + NO2)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1c",
+								"scm:7C2",
+								"scm:7C2a",
+								"scm:7C2b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"ammoniumAndNitrite": {
+			"@id": "nil:template",
+			"title": "Concentration of Ammonium and Nitrite",
+			"description": "Concentration of Ammonium and Nitrite (NH4 + NO2)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1a"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"anionExchangeCapacity": {
+			"@id": "nil:template",
+			"title": "Anion Exchange Capacity",
+			"description": "Anion Exchange Capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15E1",
+								"scm:15E2",
+								"scm:15E3"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"anionStorageCapacity": {
+			"@id": "nil:template",
+			"title": "Anion storage capacity",
+			"description": "Anion storage capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"baseSaturationPercentage": {
+			"@id": "nil:template",
+			"title": "Base saturation percentage",
+			"description": "Base saturation percentage",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15L1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"bicarbonate": {
+			"@id": "nil:template",
+			"title": "Concentration of Bicarbonate",
+			"description": "Concentration of Bicarbonate (HCO3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14D1",
+								"scm:14D2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"calciumCarbonate": {
+			"@id": "nil:template",
+			"title": "Concentration of Calcium Carbonate",
+			"description": "Concentration of Calcium Carbonate (CaCo3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:19A1",
+								"scm:19B1",
+								"scm:19B2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"calciumToMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration ratio of Calcium to Magnesium",
+			"description": "Concentration ratio of Calcium to Magnesium",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit"
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15M1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"carbonate": {
+			"@id": "nil:template",
+			"title": "Concentration of Carbonate",
+			"description": "Concentration of Carbonate (CO3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14D1",
+								"scm:14D2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"carbonates": {
+			"@id": "nil:template",
+			"title": "Concentration of Carbonates",
+			"description": "Concentration of Carbonates (CaCo3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": true,
+						"usedProcedure": {
+							"enum": [
+								"scm:6G1",
+								"scm:19D1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:6G1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"type": "object",
+										"required": [
+											"value",
+											"unit"
+										],
+										"properties": {
+											"properties": {
+												"value": {
+													"$ref": "./qudt.json#/$defs/value"
+												},
+												"unit": {
+													"$ref": "./qudt.json#/$defs/unit",
+													"enum": [
+														"unit:PERCENT"
+													]
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:19D1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"type": "string",
+										"oneOf": [
+											{
+												"const": "nil",
+												"description": "Non-effervescent"
+											},
+											{
+												"const": "low",
+												"description": "Very slightly effervescent"
+											},
+											{
+												"const": "medium",
+												"description": "Slightly effervescent"
+											},
+											{
+												"const": "high",
+												"description": "Strongly effervescent"
+											},
+											{
+												"const": "very high",
+												"description": "Violently effervescent"
+											}
+										]
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"presenceOrAbsenceOfCarbonates": {
+			"@id": "nil:template",
+			"title": "Presence or absence of Carbonates",
+			"description": "Presence or absence of Carbonates",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "nil",
+									"description": "Non-effervescent"
+								},
+								{
+									"const": "low",
+									"description": "Very slightly effervescent"
+								},
+								{
+									"const": "medium",
+									"description": "Slightly effervescent"
+								},
+								{
+									"const": "high",
+									"description": "Strongly effervescent"
+								},
+								{
+									"const": "very high",
+									"description": "Violently effervescent"
+								}
+							]
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:19C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"cationExchangeCapacity": {
+			"@id": "nil:template",
+			"title": "Cation Exchange Capacity",
+			"description": "Cation Exchange Capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15B1",
+								"scm:15B2",
+								"scm:15B3",
+								"scm:15C1",
+								"scm:15C2",
+								"scm:15D1",
+								"scm:15D2",
+								"scm:15D3",
+								"scm:15E1",
+								"scm:15E2",
+								"scm:15E3",
+								"scm:15F1",
+								"scm:15F3",
+								"scm:15I1",
+								"scm:15I2",
+								"scm:15I3",
+								"scm:15I4",
+								"scm:15K1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"charcoalCarbon": {
+			"@id": "nil:template",
+			"title": "Concentration of charcoal Carbon",
+			"description": "Concentration of charcoal Carbon (C)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"chloride": {
+			"@id": "nil:template",
+			"title": "Concentration of Chloride",
+			"description": "Concentration of Chloride (Cl)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14E1",
+								"scm:14E2",
+								"scm:14E2a",
+								"scm:14E2b",
+								"scm:14E3"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"dolomite": {
+			"@id": "nil:template",
+			"title": "Concentration of Dolomite",
+			"description": "Concentration of Dolomite (CaCO3•MgCO3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:19B1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"effectiveCationExchangeCapacity": {
+			"@id": "nil:template",
+			"title": "Effective Cation Exchange Capacity",
+			"description": "Effective Cation Exchange Capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15J1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"electricalConductivity": {
+			"@id": "nil:template",
+			"title": "Electrical conductivity",
+			"description": "Electrical conductivity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:DeciS-PER-M"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14B1",
+								"scm:3A1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"equilibriumPhosphorusConcentration": {
+			"@id": "nil:template",
+			"title": "Concentration of Equilibrium phosphorus concentration",
+			"description": "Concentration of Equilibrium phosphorus concentration",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MicroGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9J1",
+								"scm:9J2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"estimatedIonicStrength": {
+			"@id": "nil:template",
+			"title": "estimated ionic strength",
+			"description": "estimated ionic strength",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliMOL"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:3C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"estimatedSolubleSalts": {
+			"@id": "nil:template",
+			"title": "estimated soluble salts",
+			"description": "estimated soluble salts",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:DeciS-PER-M"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:3B1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"exchangeableAluminium": {
+			"@id": "nil:template",
+			"title": "Concentration of exchangeable Aluminium",
+			"description": "Concentration of exchangeable Aluminium (Al3+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15F2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"exchangeableCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of exchangeable Calcium",
+			"description": "Concentration of exchangeable Calcium (Ca2+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15A1",
+								"scm:15A2",
+								"scm:15A3",
+								"scm:15B1",
+								"scm:15B2",
+								"scm:15B3",
+								"scm:15C1",
+								"scm:15C2",
+								"scm:15D1",
+								"scm:15D2",
+								"scm:15D3",
+								"scm:15E1",
+								"scm:15E2",
+								"scm:15E3",
+								"scm:15F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"exchangeableMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of exchangeable Magnesium",
+			"description": "Concentration of exchangeable Magnesium (Mg2+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15A1",
+								"scm:15A2",
+								"scm:15A3",
+								"scm:15B1",
+								"scm:15B2",
+								"scm:15B3",
+								"scm:15C1",
+								"scm:15C2",
+								"scm:15D1",
+								"scm:15D2",
+								"scm:15D3",
+								"scm:15E1",
+								"scm:15E2",
+								"scm:15E3",
+								"scm:15F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"exchangeablePotassium": {
+			"@id": "nil:template",
+			"title": "Concentration of exchangeable Potassium",
+			"description": "Concentration of exchangeable Potassium (K+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15A1",
+								"scm:15A2",
+								"scm:15A3",
+								"scm:15B1",
+								"scm:15B2",
+								"scm:15B3",
+								"scm:15C1",
+								"scm:15D1",
+								"scm:15D2",
+								"scm:15D3",
+								"scm:15E1",
+								"scm:15E2",
+								"scm:15E3",
+								"scm:15F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"exchangeableSodium": {
+			"@id": "nil:template",
+			"title": "Concentration of exchangeable Sodium",
+			"description": "Concentration of exchangeable Sodium (Na+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15A1",
+								"scm:15A2",
+								"scm:15A3",
+								"scm:15B1",
+								"scm:15B2",
+								"scm:15B3",
+								"scm:15C1",
+								"scm:15D1",
+								"scm:15D2",
+								"scm:15D3",
+								"scm:15E1",
+								"scm:15E2",
+								"scm:15E3",
+								"scm:15F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"exchangeableSodiumPercentage": {
+			"@id": "nil:template",
+			"title": "Exchangeable sodium percentage",
+			"description": "Exchangeable sodium percentage",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15N1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableAluminium": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Aluminium",
+			"description": "Concentration of extractable Aluminium (Al)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:13A1",
+								"scm:13B1",
+								"scm:13C1",
+								"scm:18F1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:18F1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:13A1",
+											"scm:13B1",
+											"scm:13C1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableBoron": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Boron",
+			"description": "Concentration of extractable Boron (B)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:12C1",
+								"scm:12C2",
+								"scm:18F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableCadmium": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Cadmium",
+			"description": "Concentration of extractable Cadmium (Cd)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18D1",
+								"scm:18E1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Calcium",
+			"description": "Concentration of extractable Calcium (Ca)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18F1",
+								"scm:20E1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:18F1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:20E1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableCarbon": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Carbon",
+			"description": "Concentration of extractable Carbon (C)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableCopper": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Copper",
+			"description": "Concentration of extractable Copper (Cu)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:12A1",
+								"scm:12B1",
+								"scm:12D1",
+								"scm:18F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableIron": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Iron",
+			"description": "Concentration of extractable Iron (Fe)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:12A1",
+								"scm:12D1",
+								"scm:13A1",
+								"scm:13B1",
+								"scm:13C1",
+								"scm:18F1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:12A1",
+											"scm:12D1",
+											"scm:18F1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:13A1",
+											"scm:13B1",
+											"scm:13C1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Magnesium",
+			"description": "Concentration of extractable Magnesium (Mg)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18F1",
+								"scm:20E1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:18F1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:20E1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableManganese": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Manganese",
+			"description": "Concentration of extractable Manganese (Mn)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:12A1",
+								"scm:12D1",
+								"scm:18F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableMolybdenum": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Molybdenum",
+			"description": "Concentration of extractable Molybdenum (Mo)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:12E1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractablePhosphorus": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Phosphorus",
+			"description": "Concentration of extractable Phosphorus (P)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MicroGM-PER-KiloGM",
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18F1",
+								"scm:18F2",
+								"scm:9A3a",
+								"scm:9A3b",
+								"scm:9B1",
+								"scm:9B2",
+								"scm:9C1",
+								"scm:9C2",
+								"scm:9C2a",
+								"scm:9C2b",
+								"scm:9D1",
+								"scm:9E1",
+								"scm:9E2",
+								"scm:9F1",
+								"scm:9F2",
+								"scm:9G1",
+								"scm:9G2"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:9F1",
+											"scm:9F2"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MicroGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:18F1",
+											"scm:18F2",
+											"scm:9B1",
+											"scm:9B2",
+											"scm:9C1",
+											"scm:9C2",
+											"scm:9C2a",
+											"scm:9C2b",
+											"scm:9D1",
+											"scm:9E1",
+											"scm:9E2",
+											"scm:9G1",
+											"scm:9G2"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:9A3a",
+											"scm:9A3b"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractablePotassium": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Potassium",
+			"description": "Concentration of extractable Potassium (K)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM",
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18A1",
+								"scm:18B1",
+								"scm:18C1",
+								"scm:18F1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:18A1",
+											"scm:18B1",
+											"scm:18C1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:CentiMOL-PER-KiloGM",
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:18F1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableSilicon": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Silicon",
+			"description": "Concentration of extractable Silicon (Si)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:13A1",
+								"scm:13D1",
+								"scm:13D2"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:13D1",
+											"scm:13D2"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:13A1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableSodium": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Sodium",
+			"description": "Concentration of extractable Sodium (Na)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableSulfur": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Sulfur",
+			"description": "Concentration of extractable Sulfur (S)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:10B1",
+								"scm:10B2",
+								"scm:10B3",
+								"scm:10B4",
+								"scm:10C1",
+								"scm:10D1",
+								"scm:18F1",
+								"scm:20E1",
+								"scm:20F1",
+								"scm:20F2"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:10B1",
+											"scm:10B2",
+											"scm:10B3",
+											"scm:10B4",
+											"scm:10C1",
+											"scm:10D1",
+											"scm:18F1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MilliGM-PER-KiloGM"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:20E1",
+											"scm:20F1",
+											"scm:20F2"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:PERCENT"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"extractableZinc": {
+			"@id": "nil:template",
+			"title": "Concentration of extractable Zinc",
+			"description": "Concentration of extractable Zinc (Zn)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:12A1",
+								"scm:12B1",
+								"scm:12D1",
+								"scm:18F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"fluoride": {
+			"@id": "nil:template",
+			"title": "Concentration of Fluoride",
+			"description": "Concentration of Fluoride (F-)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14G1",
+								"scm:14G2",
+								"scm:14G2a",
+								"scm:14G2b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"hydrogenPlusAluminium": {
+			"@id": "nil:template",
+			"title": "Concetration of Hydrogen + Aluminium",
+			"description": "Concetration of Hydrogen + Aluminium (H+ + Al3+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15G1",
+								"scm:15H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"limeRequirement": {
+			"@id": "nil:template",
+			"title": "Lime (CaCO3) requirement",
+			"description": "Lime (CaCO3) requirement",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:KiloGM-PER-HA",
+										"unit:TONNE-PER-HA"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:16A1",
+								"scm:16B1",
+								"scm:16C1",
+								"scm:16D1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:16A1",
+											"scm:16B1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:KiloGM-PER-HA"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:16C1",
+											"scm:16D1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:TONNE-PER-HA"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"limeRequirementForDrainSpoil": {
+			"@id": "nil:template",
+			"title": "Lime requirement for drain spoil",
+			"description": "Lime requirement for drain spoil",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:KiloGM-PER-M3"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20K1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"moistureContent": {
+			"@id": "nil:template",
+			"title": "Moisture content",
+			"description": "Moisture content",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:2A1",
+								"scm:2B1",
+								"scm:2C1",
+								"scm:2D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"netExcessAcidNeutralisingCapacity": {
+			"@id": "nil:template",
+			"title": "Net (excess) Acid Neutralising Capacity",
+			"description": "Net (excess) Acid Neutralising Capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MOL-PER-TONNE"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"netPotentiallyMineralisableNitrogen": {
+			"@id": "nil:template",
+			"title": "Concentration of net potentially mineralisable Nitrogen",
+			"description": "Concentration of net potentially mineralisable Nitrogen (N)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7D1b",
+								"scm:7D1c"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"nitrate": {
+			"@id": "nil:template",
+			"title": "Concentration of Nitrate",
+			"description": "Concentration of Nitrate (NO3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1e",
+								"scm:7C1f"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"nitrateAndNitrite": {
+			"@id": "nil:template",
+			"title": "Concentration of Nitrate and Nitrite",
+			"description": "Concentration of Nitrate and Nitrite (NO3 + NO2)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"nitrite": {
+			"@id": "nil:template",
+			"title": "Concentration of Nitrite",
+			"description": "Concentration of Nitrite (NO2)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7C1h"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"organicCarbon": {
+			"@id": "nil:template",
+			"title": "Concentration of organic Carbon",
+			"description": "Concentration of organic Carbon (C)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6A1",
+								"scm:6G1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"oxidisableCarbon": {
+			"@id": "nil:template",
+			"title": "Concentration of oxidisable Carbon",
+			"description": "Concentration of oxidisable Carbon (C)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:GM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6E1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"particulateOrganicCarbon": {
+			"@id": "nil:template",
+			"title": "Concentration of particulate organic Carbon",
+			"description": "Concentration of particulate organic Carbon (C)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pBufferIndex": {
+			"@id": "nil:template",
+			"title": "Index of P buffer index",
+			"description": "Index of P buffer index",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:UNITLESS"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9I2a",
+								"scm:9I2b",
+								"scm:9I2c",
+								"scm:9I3a",
+								"scm:9I3b",
+								"scm:9I3c",
+								"scm:9I4a",
+								"scm:9I4b",
+								"scm:9I4c"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pConcentrationRatio": {
+			"@id": "nil:template",
+			"title": "P concentration ratio",
+			"description": "P concentration ratio",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit"
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9K2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"ph": {
+			"@id": "nil:template",
+			"title": "pH",
+			"description": "pH",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MOL-PER-M3",
+										"unit:UNITLESS"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14C1",
+								"scm:20K1",
+								"scm:4A1",
+								"scm:4A2",
+								"scm:4A3",
+								"scm:4B1",
+								"scm:4B2",
+								"scm:4B3",
+								"scm:4B4",
+								"scm:4B5",
+								"scm:4C1",
+								"scm:4C2",
+								"scm:4C3",
+								"scm:4C4",
+								"scm:4D1",
+								"scm:4E1",
+								"scm:4G1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:20K1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MOL-PER-M3"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:4A1",
+											"scm:4A2",
+											"scm:4A3",
+											"scm:4B1",
+											"scm:4B2",
+											"scm:4B3",
+											"scm:4B4",
+											"scm:4B5",
+											"scm:4C1",
+											"scm:4C2",
+											"scm:4C3",
+											"scm:4C4",
+											"scm:4D1",
+											"scm:4E1",
+											"scm:4G1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:UNITLESS"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"phChange": {
+			"@id": "nil:template",
+			"title": "pH change",
+			"description": "pH change",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:UNITLESS"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:4F1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"phosphateSorptionIndex": {
+			"@id": "nil:template",
+			"title": "Index of Phosphate Sorption Index",
+			"description": "Index of Phosphate Sorption Index",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:UNITLESS"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9I1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"phosphorusBufferingCapacity": {
+			"@id": "nil:template",
+			"title": "Phosphorus buffering capacity",
+			"description": "Phosphorus buffering capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:UNITLESS"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9J1",
+								"scm:9J2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"phReactivityClass": {
+			"@id": "nil:template",
+			"title": "pH reactivity class",
+			"description": "pH reactivity class",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "0",
+									"description": "Non-reactive"
+								},
+								{
+									"const": "1",
+									"description": "Very weak"
+								},
+								{
+									"const": "2",
+									"description": "Weak"
+								},
+								{
+									"const": "3",
+									"description": "Moderate"
+								},
+								{
+									"const": "4",
+									"description": "Strong"
+								},
+								{
+									"const": "5",
+									"description": "Very strong"
+								}
+							]
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:4D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"potassiumToMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration ratio of Potassium to Magnesium",
+			"description": "Concentration ratio of Potassium to Magnesium",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit"
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15M1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"potassiumToSodium": {
+			"@id": "nil:template",
+			"title": "Concentration ratio of Potassium to Sodium",
+			"description": "Concentration ratio of Potassium to Sodium",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit"
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:15M1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"potentiallyMineralisableNitrogen": {
+			"@id": "nil:template",
+			"title": "Concentration of potentially mineralisable Nitrogen",
+			"description": "Concentration of potentially mineralisable Nitrogen (N)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7D1a",
+								"scm:7D2a",
+								"scm:7D2b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pSaturationRatio": {
+			"@id": "nil:template",
+			"title": "Estimate of P saturation ratio",
+			"description": "Estimate of P saturation ratio",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit"
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9K1a",
+								"scm:9K1b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalAluminium": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Aluminium",
+			"description": "Concentration of pseudo-total Aluminium (Al)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalCadmium": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Cadmium",
+			"description": "Concentration of pseudo-total Cadmium (Cd)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Calcium",
+			"description": "Concentration of pseudo-total Calcium (Ca)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalChromium": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Chromium",
+			"description": "Concentration of pseudo-total Chromium (Cr)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalCobalt": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Cobalt",
+			"description": "Concentration of pseudo-total Cobalt (Co)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalCopper": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Copper",
+			"description": "Concentration of pseudo-total Copper (Cu)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalIron": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Iron",
+			"description": "Concentration of pseudo-total Iron (Fe)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalLead": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Lead",
+			"description": "Concentration of pseudo-total Lead (Pb)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Magnesium",
+			"description": "Concentration of pseudo-total Magnesium (Mg)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalManganese": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Manganese",
+			"description": "Concentration of pseudo-total Manganese (Mn)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalMolybdenum": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Molybdenum",
+			"description": "Concentration of pseudo-total Molybdenum (Mo)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalNickel": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Nickel",
+			"description": "Concentration of pseudo-total Nickel (Ni)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalPhosphorus": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Phosphorus",
+			"description": "Concentration of pseudo-total Phosphorus (P)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalPotassium": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Potassium",
+			"description": "Concentration of pseudo-total Potassium (K)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalSulfur": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Sulfur",
+			"description": "Concentration of pseudo-total Sulfur (S)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"pseudoTotalZinc": {
+			"@id": "nil:template",
+			"title": "Concentration of pseudo-total Zinc",
+			"description": "Concentration of pseudo-total Zinc (Zn)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17B1",
+								"scm:17B2",
+								"scm:17C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"reactedCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of reacted Calcium",
+			"description": "Concentration of reacted Calcium (Ca)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20I1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"reactedMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of reacted Magnesium",
+			"description": "Concentration of reacted Magnesium (Mg)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20I1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"redoxPotential": {
+			"@id": "nil:template",
+			"title": "Redox potential",
+			"description": "Redox potential",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliV"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:3D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"reducibleSulfur": {
+			"@id": "nil:template",
+			"title": "Concentration of reducible Sulfur",
+			"description": "Concentration of reducible Sulfur (S)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20A1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"residualQuickNeutralisingCapacity": {
+			"@id": "nil:template",
+			"title": "Residual Quick Neutralising Capacity",
+			"description": "Residual Quick Neutralising Capacity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MOL-PER-M3"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20J1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"reverseSoilPotassium": {
+			"@id": "nil:template",
+			"title": "Concentration of reverse soil Potassium (K+)",
+			"description": "Concentration of reverse soil Potassium (K+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-KiloGM",
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:18G1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solubleCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble Calcium",
+			"description": "Concentration of soluble Calcium (Ca2+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solubleChloride": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble Chloride",
+			"description": "Concentration of soluble Chloride (Cl-)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:5A1",
+								"scm:5A2",
+								"scm:5A2a",
+								"scm:5A2b",
+								"scm:5A3a",
+								"scm:5A3b",
+								"scm:5A4"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solubleMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble Magnesium",
+			"description": "Concentration of soluble Magnesium (Mg2+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solublePlusExchangeableCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble + exchangeable Calcium",
+			"description": "Concentration of soluble + exchangeable Calcium (Ca)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solublePlusExchangeableMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble + exchangeable Magnesium",
+			"description": "Concentration of soluble + exchangeable Magnesium (Mg)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solublePlusExchangeableSulfur": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble + exchangeable Sulfur",
+			"description": "Concentration of soluble + exchangeable Sulfur (S)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20D1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solublePotassium": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble Potassium",
+			"description": "Concentration of soluble Potassium (K+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solubleSodium": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble Sodium",
+			"description": "Concentration of soluble Sodium (Na+)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14H1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"solubleSulfur": {
+			"@id": "nil:template",
+			"title": "Concentration of soluble Sulfur",
+			"description": "Concentration of soluble Sulfur (S)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20G1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"sulfate": {
+			"@id": "nil:template",
+			"title": "Concentration of Sulfate",
+			"description": "Concentration of Sulfate (SO4)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:CentiMOL-PER-L",
+										"unit:MilliGM-PER-L"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:14F1",
+								"scm:14F2",
+								"scm:14F3",
+								"scm:14F5",
+								"scm:14F5a",
+								"scm:14F5b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"titratableActualAcidity": {
+			"@id": "nil:template",
+			"title": "Titratable actual acidity",
+			"description": "Titratable actual acidity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MOL-PER-M3",
+										"unit:MOL-PER-TONNE"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20B1",
+								"scm:20J1"
+							]
+						}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:20J1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MOL-PER-M3"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:20B1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:MOL-PER-TONNE"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"titratablePeroxideAcidity": {
+			"@id": "nil:template",
+			"title": "Titratable peroxide acidity",
+			"description": "Titratable peroxide acidity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MOL-PER-TONNE"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20C1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalAluminium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Aluminium",
+			"description": "Concentration of total Aluminium (Al)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalArsenic": {
+			"@id": "nil:template",
+			"title": "Concentration of total Arsenic",
+			"description": "Concentration of total Arsenic (As)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalCalcium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Calcium",
+			"description": "Concentration of total Calcium (Ca)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalChromium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Chromium",
+			"description": "Concentration of total Chromium (Cr)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalCobalt": {
+			"@id": "nil:template",
+			"title": "Concentration of total Cobalt",
+			"description": "Concentration of total Cobalt (Co)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalCopper": {
+			"@id": "nil:template",
+			"title": "Concentration of total Copper",
+			"description": "Concentration of total Copper (Cu)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalGypsum": {
+			"@id": "nil:template",
+			"title": "Concentration of total Gypsum",
+			"description": "Concentration of total Gypsum (CaSO 4·2H2O)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:11A1",
+								"scm:11A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalIron": {
+			"@id": "nil:template",
+			"title": "Concentration of total Iron",
+			"description": "Concentration of total Iron (Fe)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalLead": {
+			"@id": "nil:template",
+			"title": "Concentration of total Lead",
+			"description": "Concentration of total Lead (Pb)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalMagnesium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Magnesium",
+			"description": "Concentration of total Magnesium (Mg)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalManganese": {
+			"@id": "nil:template",
+			"title": "Concentration of total Manganese",
+			"description": "Concentration of total Manganese (Mn)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalNickel": {
+			"@id": "nil:template",
+			"title": "Concentration of total Nickel",
+			"description": "Concentration of total Nickel (Ni)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalNitrogen": {
+			"@id": "nil:template",
+			"title": "Concentration of total Nitrogen",
+			"description": "Concentration of total Nitrogen (N)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7A1",
+								"scm:7A2",
+								"scm:7A2a",
+								"scm:7A2b",
+								"scm:7A3",
+								"scm:7A4",
+								"scm:7A5",
+								"scm:7A6a",
+								"scm:7A6b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalOrganicCarbon": {
+			"@id": "nil:template",
+			"title": "Concentration of total organic Carbon",
+			"description": "Concentration of total organic Carbon (C)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6B1",
+								"scm:6B2",
+								"scm:6B2a",
+								"scm:6B2b",
+								"scm:6B3",
+								"scm:6B4a",
+								"scm:6B4b"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalOrganicCarbonToTotalSoilNitrogen": {
+			"@id": "nil:template",
+			"title": "Concentration ratio of total organic Carbon to total soil Nitrogen",
+			"description": "Concentration ratio of total organic Carbon to total soil Nitrogen",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit"
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:8A1",
+								"scm:8B1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalOrganicMatter": {
+			"@id": "nil:template",
+			"title": "Concentration of total Organic Matter",
+			"description": "Concentration of total Organic Matter",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:6G1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalPhosphorus": {
+			"@id": "nil:template",
+			"title": "Concentration of total Phosphorus",
+			"description": "Concentration of total Phosphorus (P)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:9A1",
+								"scm:9A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalPotassium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Potassium",
+			"description": "Concentration of total Potassium (K)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalSilicon": {
+			"@id": "nil:template",
+			"title": "Concentration of total Silicon",
+			"description": "Concentration of total Silicon (Si)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalStrontium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Strontium",
+			"description": "Concentration of total Strontium (Sr)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalSulfidicAcidity": {
+			"@id": "nil:template",
+			"title": "Total Sulfidic Acidity",
+			"description": "Total Sulfidic Acidity",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MOL-PER-M3"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:20J1"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalSulfur": {
+			"@id": "nil:template",
+			"title": "Concentration of total Sulfur",
+			"description": "Concentration of total Sulfur (S)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:10A1",
+								"scm:10A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalTitanium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Titanium",
+			"description": "Concentration of total Titanium (Ti)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalVanadium": {
+			"@id": "nil:template",
+			"title": "Concentration of total Vanadium",
+			"description": "Concentration of total Vanadium (V)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"totalZinc": {
+			"@id": "nil:template",
+			"title": "Concentration of total Zinc",
+			"description": "Concentration of total Zinc (Zn)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM",
+										"unit:PERCENT"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:17A1",
+								"scm:17A2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"waterSolubleNitrate": {
+			"@id": "nil:template",
+			"title": "Concentration of water-soluble Nitrate",
+			"description": "Concentration of water-soluble Nitrate (NO3)",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result",
+						"usedProcedure"
+					],
+					"properties": {
+						"result": {
+							"required": [
+								"value",
+								"unit"
+							],
+							"properties": {
+								"value": {
+									"$ref": "./qudt.json#/$defs/value"
+								},
+								"unit": {
+									"$ref": "./qudt.json#/$defs/unit",
+									"enum": [
+										"unit:MilliGM-PER-KiloGM"
+									]
+								}
+							}
+						},
+						"usedProcedure": {
+							"enum": [
+								"scm:7B1",
+								"scm:7B1a",
+								"scm:7B1b",
+								"scm:7B2"
+							]
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		}
+	}
+}

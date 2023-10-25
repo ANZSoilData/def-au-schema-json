@@ -47,14 +47,14 @@ related definitions or summaries of the relevant ANSIS vocabularies.
 | [ANSIS Entities (ansis-entities.md)](./ansis-entities.md) | The core ANSIS soil information model. |
 | [ANSIS Enumerations (ansis-enum.md)](./ansis-enum.md) | The core ANSIS soil vocabularies (each vocabulary is known as an *enumeration* in JSON Schema.) |
 | [GeoSPARQL (ansis-geo.md)](./ansis-geo.md) | Geometry properties as defined by the *OGC GeoSPARQL* model. |
-| [PROV and PROJ Ontology (ansis-prov.md)](./ansis-prov.md) | Useful classes from the *PROV (provenance) Ontology*. These help describe activities and who undertakes them. |
+| [PROJ Ontology (ansis-proj.md)](./ansis-proj.md) | Useful classes from the *PROJ (projects) Ontology*. |
+| [PROV Ontology (ansis-prov.md)](./ansis-prov.md) | Useful classes from the *PROV (provenance) Ontology*. These help describe activities and who undertakes them. |
 | [QUDT (ansis-qudt.md)](./ansis-qudt.md) | Classes for quantity values and their units of measure. From the *Quantity, Unit, Dimension and Type Ontology*. |
-| [SKOS (ansis-skos.md)](./ansis-skos.md) | Classes from the *Simple Knowledge Organisation System*. Used to describe vocabulary entries (labels and definitions). |
 | [SOSA (ansis-sosa.md)](./ansis-sosa.md) | Classes from the *Sensor, Observation, Sample, and Actuator Ontology*. The basis for descriptions of samples, sampling activities, site visits, and observations and laboratory measurements. | 
 | [ANSIS Base Properties (ansis-base.md)](./ansis-base.md) | Reusable properties for identifiers, labels, links and so on. |
 
 ## ANSIS Information Model for Soil - Brief Summary
-> The full description of the ANSIS Information is published here:
+> The full conceptual description of the ANSIS Information is published here:
 > [link to ANSIS Information Model v1.5]().
 
 The initial model for ANSIS is primarily an interpretation of The Australian Soil and Land Survey
@@ -62,10 +62,16 @@ The initial model for ANSIS is primarily an interpretation of The Australian Soi
 adapted for ANSIS. As such it focusses on the description of Soil Profiles at Soil Sites. These are
 the fundamental data to be served by ANSIS.
 
-![ansis - overview](../figs/ansis-overview-noatts.png)
+![ansis - overview](../figs/ansis-overview.png)
 
 *Figure 1. Summary diagram showing the main entity types-(classes) for soil observations.*
 
 ANSIS will provide data for Soil and Land Survey Sites and the Soil Profiles described at those
 sites. Within each site will be nested data, or links to other data, describing the soil, horizons,
 constituents of horizons (e.g. mottles), samples and laboratory observations.
+
+## ANSIS JSON Schema - Summary
+
+![ansis - soil site](../figs/ansis-soil-site.png)
+
+*Figure 2. Summary diagram of the main objects in the ANSIS JSON Schema.*

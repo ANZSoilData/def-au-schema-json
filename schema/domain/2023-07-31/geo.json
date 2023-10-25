@@ -1,0 +1,48 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "geo.json",
+	"title": "OGC GeoSPARQL Property Schema",
+	"description": "JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology.",
+	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl and http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf.",
+	"type": "null",
+	"_curiPrefix": {
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"geo": "http://www.opengis.net/ont/geosparql#"
+	},
+	"$defs": {
+		"geometry": {
+			"@id": "geo:hasGeometry",
+			"title": "geometry",
+			"description": "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.",
+			"type": "object",
+			"allOf": [
+				{
+					"required": [
+						"result"
+					],
+					"properties": {
+						"result": {
+							"$ref": "#/$defs/wktLiteral"
+						}
+					}
+				},
+				{
+					"$ref": "./base.json#/$defs/ObservableProperty"
+				}
+			]
+		},
+		"wktLiteral": {
+			"@id": "geo:wktLiteral",
+			"title": "WKT Literal",
+			"description": "A Well-known Text serialization of a geometry object.",
+			"$comment": "Will use the PostGIS EWKT (Extended Well-known Text) form for ANSIS, e.g. SRID=4283;POINT(-42 24). Restrict to GDA94 (EPSG code 4283).",
+			"type": "string",
+			"examples": [
+				"SRID=4283;POINT(-42 24)",
+				"SRID=4283;LINESTRING(-42 24, -42 42)",
+				"SRID=4283;POLYGON(-42 24, -42 42, -45 42, -42 24)"
+			]
+		}
+	}
+}
