@@ -1157,7 +1157,7 @@
 								"unit": {
 									"$ref": "./qudt.json#/$defs/unit",
 									"enum": [
-										"unit:CentiMOL-PER-KiloGM"
+										"unit:PERCENT"
 									]
 								}
 							}
@@ -3469,7 +3469,8 @@
 								"unit": {
 									"$ref": "./qudt.json#/$defs/unit",
 									"enum": [
-										"unit:KiloGM-PER-HA"
+										"KiloGM-PER-HA",
+										"unit:TONNE-PER-HA"
 									]
 								}
 							}
@@ -3482,7 +3483,59 @@
 								"scm:16D1"
 							]
 						}
-					}
+					},
+					"allOf": [
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:16A1",
+											"scm:16B1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:KiloGM-PER-HA"
+												]
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if": {
+								"properties": {
+									"usedProcedure": {
+										"enum": [
+											"scm:16C1",
+											"scm:16D1"
+										]
+									}
+								}
+							},
+							"then": {
+								"properties": {
+									"result": {
+										"properties": {
+											"unit": {
+												"enum": [
+													"unit:TONNE-PER-HA"
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					]
 				},
 				{
 					"$ref": "./base.json#/$defs/ObservableProperty"
@@ -3598,7 +3651,7 @@
 								"unit": {
 									"$ref": "./qudt.json#/$defs/unit",
 									"enum": [
-										"unit:PERCENT"
+										"unit:MOL-PER-TONNE"
 									]
 								}
 							}
@@ -5300,7 +5353,7 @@
 								"unit": {
 									"$ref": "./qudt.json#/$defs/unit",
 									"enum": [
-										"unit:MOL-PER-TONNE"
+										"unit:PERCENT"
 									]
 								}
 							}
