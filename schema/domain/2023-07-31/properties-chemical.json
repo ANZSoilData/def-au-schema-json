@@ -10,7 +10,7 @@
 		"qudt": "http://qudt.org/schema/qudt/",
 		"scm": "http://anzsoil.org/def/au/scm/",
 		"sosa": "http://www.w3.org/ns/sosa/",
-		"unit": "https://qudt.org/2.1/vocab/unit/"
+		"unit": "https://qudt.org/vocab/unit/"
 	},
 	"required": [
 	],
