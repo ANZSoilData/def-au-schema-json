@@ -191,7 +191,7 @@
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
-                                        "unit:MilliGM-PER-M3"
+                                        "unit:MegaGM-PER-M3"
                                     ]
                                 }
                             }
@@ -235,7 +235,7 @@
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
-                                        "unit:MilliGM-PER-M3"
+                                        "unit:MegaGM-PER-M3"
                                     ]
                                 }
                             }
@@ -642,7 +642,7 @@
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
-                                        "unit:MilliGM-PER-M3"
+                                        "unit:MegaGM-PER-M3"
                                     ]
                                 }
                             }
