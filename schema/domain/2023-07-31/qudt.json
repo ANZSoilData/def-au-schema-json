@@ -6,7 +6,7 @@
     "type": "null",
     "_curiPrefix": {
         "qudt": "http://qudt.org/schema/qudt/",
-        "unit": "https://qudt.org/2.1/vocab/unit/"
+        "unit": "https://qudt.org/vocab/unit/"
     },
     "$defs": {
         "QuantityValue": {

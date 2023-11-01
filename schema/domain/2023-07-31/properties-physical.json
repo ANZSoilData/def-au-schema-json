@@ -10,7 +10,7 @@
         "qudt": "http://qudt.org/schema/qudt/",
         "spmile": "http://anzsoil.org/def/au/spm/spmile/",
         "sosa": "http://www.w3.org/ns/sosa/",
-        "unit": "https://qudt.org/2.1/vocab/unit/"
+        "unit": "https://qudt.org/vocab/unit/"
     },
     "required": [],
     "minProperties": 1,
