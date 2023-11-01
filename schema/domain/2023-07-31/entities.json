@@ -580,7 +580,7 @@
 				"materialStrength": {
 					"$ref": "./properties.json#/$defs/_obs/$defs/strength/$defs/Material"
 				},
-				"stucture": {
+				"structure": {
 					"$ref": "./properties.json#/$defs/_obs/$defs/structure/$defs/Substrate"
 				},
 				"texture": {
