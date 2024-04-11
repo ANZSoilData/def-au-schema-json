@@ -15,6 +15,7 @@ JSON schema files for the ANSIS project, first version.
 | [properties-physical.json](properties-physical.json) | ANSIS Soil Physical Property Schema | JSON Schema definitions of the complete list of soil physical properties defined in the ANSIS Domain Ontology. Derived from Soil Physical Measurement and Interpretation for Land Evaluation. (The 'Brown Book'.) |
 | [base.json](base.json) | ANSIS JSON Base Schema | Base properties and objects used to identify, type and link entities, bind them to schema, and otherwise describe objects from a system, rather than domain, perspective. |
 | [geo.json](geo.json) | OGC GeoSPARQL Property Schema | JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology. |
+| [proj.json](proj.json) | PROJ Entity Schema | JSON Schema definitions of the PROJ Ontology entities used by ANSIS. |
 | [prov.json](prov.json) | PROV Entity Schema | JSON Schema definitions of the PROV Ontology entities used by ANSIS. |
 | [qudt.json](qudt.json) | QUDT JSON Objects | Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair. |
 | [sosa.json](sosa.json) | SOSA Entity Schema | JSON Schema definitions of the [SOSA](https://www.w3.org/TR/vocab-ssn/) entities used by ANSIS. |
