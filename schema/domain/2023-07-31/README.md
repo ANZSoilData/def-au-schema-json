@@ -17,5 +17,4 @@ JSON schema files for the ANSIS project, first version.
 | [geo.json](geo.json) | OGC GeoSPARQL Property Schema | JSON Schema definitions of the GeoSPARQL properties used by the ANSIS Domain Ontology. |
 | [prov.json](prov.json) | PROV Entity Schema | JSON Schema definitions of the PROV Ontology entities used by ANSIS. |
 | [qudt.json](qudt.json) | QUDT JSON Objects | Reusable QUDT objects for structured property values - e.g. a QUDT quantity: a value/unit pair. |
-| [skos.json](skos.json) | SKOS JSON Objects | Reusable SKOS objects for vocabulary entries. Created to provide a definition for skos:Concept references elsewhere in the schema. Actually implemented with enumerations in JSON instances. |
 | [sosa.json](sosa.json) | SOSA Entity Schema | JSON Schema definitions of the [SOSA](https://www.w3.org/TR/vocab-ssn/) entities used by ANSIS. |
