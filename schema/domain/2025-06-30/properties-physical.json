@@ -13,7 +13,6 @@
         "unit": "https://qudt.org/vocab/unit/"
     },
     "required": [],
-    "minProperties": 1,
     "properties": {
         "bulkDensity": {
             "type": "array",
@@ -169,8 +168,6 @@
     "$defs": {
         "bulkDensity": {
             "@id": "nil:template",
-            "title": "Bulk density",
-            "description": "Bulk density",
             "type": "object",
             "allOf": [
                 {
@@ -185,23 +182,30 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:MegaGM-PER-M3"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:503.01",
-                                "spmile:503.02",
-                                "spmile:503.03",
-                                "spmile:503.04"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:503.01",
+                                        "spmile:503.02",
+                                        "spmile:503.03",
+                                        "spmile:503.04"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-bulkDensity-(?:503\\.01|503\\.02|503\\.03|503\\.04)$"
+                                }
                             ]
                         }
                     }
@@ -209,12 +213,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Bulk density",
+            "description": "Bulk density"
         },
         "bulkDensityOfFineEarth": {
             "@id": "nil:template",
-            "title": "Bulk density of fine earth",
-            "description": "Bulk density of fine earth",
             "type": "object",
             "allOf": [
                 {
@@ -229,20 +233,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:MegaGM-PER-M3"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:503.08"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:503.08"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-bulkDensityOfFineEarth-(?:503\\.08)$"
+                                }
                             ]
                         }
                     }
@@ -250,12 +261,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Bulk density of fine earth",
+            "description": "Bulk density of fine earth"
         },
         "clay": {
             "@id": "nil:template",
-            "title": "Proportion of clay",
-            "description": "Proportion of clay - particle sizes < 0.002 mm",
             "type": "object",
             "allOf": [
                 {
@@ -270,35 +281,42 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:516.01",
-                                "spmile:517.02",
-                                "spmile:517.03",
-                                "spmile:517.04",
-                                "spmile:517.05",
-                                "spmile:517.06",
-                                "spmile:517.07",
-                                "spmile:517.08",
-                                "spmile:517.09",
-                                "spmile:517.10",
-                                "spmile:517.11",
-                                "spmile:517.12",
-                                "spmile:517.13",
-                                "spmile:517.14",
-                                "spmile:517.15",
-                                "spmile:517.16"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:516.01",
+                                        "spmile:517.02",
+                                        "spmile:517.03",
+                                        "spmile:517.04",
+                                        "spmile:517.05",
+                                        "spmile:517.06",
+                                        "spmile:517.07",
+                                        "spmile:517.08",
+                                        "spmile:517.09",
+                                        "spmile:517.10",
+                                        "spmile:517.11",
+                                        "spmile:517.12",
+                                        "spmile:517.13",
+                                        "spmile:517.14",
+                                        "spmile:517.15",
+                                        "spmile:517.16"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-clay-(?:516\\.01|517\\.02|517\\.03|517\\.04|517\\.05|517\\.06|517\\.07|517\\.08|517\\.09|517\\.10|517\\.11|517\\.12|517\\.13|517\\.14|517\\.15|517\\.16)$"
+                                }
                             ]
                         }
                     }
@@ -306,12 +324,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Proportion of clay",
+            "description": "Proportion of clay - particle sizes < 0.002 mm"
         },
         "coarseFragments": {
             "@id": "nil:template",
-            "title": "Volume of coarse fragments",
-            "description": "Volume of coarse fragments",
             "type": "object",
             "allOf": [
                 {
@@ -326,21 +344,28 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:M3-PER-M3",
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:503.07"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:503.07"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-coarseFragments-(?:503\\.07)$"
+                                }
                             ]
                         }
                     }
@@ -348,12 +373,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Volume of coarse fragments",
+            "description": "Volume of coarse fragments"
         },
         "coefficientOfLinearExtensibilityOfSoil": {
             "@id": "nil:template",
-            "title": "Coefficient of linear extensibility of soil",
-            "description": "Coefficient of linear extensibility of soil",
             "type": "object",
             "allOf": [
                 {
@@ -368,20 +393,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:518.02"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:518.02"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-coefficientOfLinearExtensibilityOfSoil-(?:518\\.02)$"
+                                }
                             ]
                         }
                     }
@@ -389,12 +421,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Coefficient of linear extensibility of soil",
+            "description": "Coefficient of linear extensibility of soil"
         },
         "dispersedClay": {
             "@id": "nil:template",
-            "title": "Proportion of dispersed clay",
-            "description": "Proportion of dispersed clay",
             "type": "object",
             "allOf": [
                 {
@@ -409,21 +441,28 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:514.01",
-                                "spmile:514.02"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:514.01",
+                                        "spmile:514.02"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-dispersedClay-(?:514\\.01|514\\.02)$"
+                                }
                             ]
                         }
                     }
@@ -431,12 +470,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Proportion of dispersed clay",
+            "description": "Proportion of dispersed clay"
         },
         "dispersedClayAsTheRatioOfSarToTcc": {
             "@id": "nil:template",
-            "title": "Proportion of dispersed clay as the ratio of SAR:TCC",
-            "description": "Proportion of dispersed clay as the ratio of SAR:TCC",
             "type": "object",
             "allOf": [
                 {
@@ -451,21 +490,28 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:514.01",
-                                "spmile:514.02"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:514.01",
+                                        "spmile:514.02"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-dispersedClayAsTheRatioOfSarToTcc-(?:514\\.01|514\\.02)$"
+                                }
                             ]
                         }
                     }
@@ -473,12 +519,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Proportion of dispersed clay as the ratio of SAR:TCC",
+            "description": "Proportion of dispersed clay as the ratio of SAR:TCC"
         },
         "dispersionInWater": {
             "@id": "nil:template",
-            "title": "Dispersion in water",
-            "description": "Dispersion in water",
             "type": "object",
             "allOf": [
                 {
@@ -525,8 +571,15 @@
                             ]
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:513.01"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:513.01"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-dispersionInWater-(?:513\\.01)$"
+                                }
                             ]
                         }
                     }
@@ -534,12 +587,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Dispersion in water",
+            "description": "Dispersion in water"
         },
         "dispersivePotential": {
             "@id": "nil:template",
-            "title": "Dispersive potential",
-            "description": "Dispersive potential",
             "type": "object",
             "allOf": [
                 {
@@ -554,20 +607,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:KiloPA"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:514.03"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:514.03"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-dispersivePotential-(?:514\\.03)$"
+                                }
                             ]
                         }
                     }
@@ -575,12 +635,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Dispersive potential",
+            "description": "Dispersive potential"
         },
         "dryAggregates": {
             "@id": "nil:template",
-            "title": "Distribution of dry aggregates",
-            "description": "Distribution of dry aggregates",
             "type": "object",
             "allOf": [
                 {
@@ -595,20 +655,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:515.01"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:515.01"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-dryAggregates-(?:515\\.01)$"
+                                }
                             ]
                         }
                     }
@@ -616,12 +683,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Distribution of dry aggregates",
+            "description": "Distribution of dry aggregates"
         },
         "grossBulkDensity": {
             "@id": "nil:template",
-            "title": "Gross bulk density",
-            "description": "Gross bulk density",
             "type": "object",
             "allOf": [
                 {
@@ -636,20 +703,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:MegaGM-PER-M3"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:503.05"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:503.05"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-grossBulkDensity-(?:503\\.05)$"
+                                }
                             ]
                         }
                     }
@@ -657,12 +731,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Gross bulk density",
+            "description": "Gross bulk density"
         },
         "hydraulicConductivity": {
             "@id": "nil:template",
-            "title": "Hydraulic conductivity",
-            "description": "Hydraulic conductivity",
             "type": "object",
             "allOf": [
                 {
@@ -677,28 +751,35 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:MilliM-PER-HR",
                                         "unit:M-PER-HR"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:507.01",
-                                "spmile:508.01",
-                                "spmile:509.01",
-                                "spmile:510.01",
-                                "spmile:510.02",
-                                "spmile:510.03",
-                                "spmile:510.04",
-                                "spmile:510.05"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:507.01",
+                                        "spmile:508.01",
+                                        "spmile:509.01",
+                                        "spmile:510.01",
+                                        "spmile:510.02",
+                                        "spmile:510.03",
+                                        "spmile:510.04",
+                                        "spmile:510.05"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-hydraulicConductivity-(?:507\\.01|508\\.01|509\\.01|510\\.01|510\\.02|510\\.03|510\\.04|510\\.05)$"
+                                }
                             ]
                         }
                     }
@@ -706,12 +787,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Hydraulic conductivity",
+            "description": "Hydraulic conductivity"
         },
         "linearShrinkage": {
             "@id": "nil:template",
-            "title": "Linear shrinkage",
-            "description": "Linear shrinkage",
             "type": "object",
             "allOf": [
                 {
@@ -726,20 +807,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:518.01"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:518.01"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-linearShrinkage-(?:518\\.01)$"
+                                }
                             ]
                         }
                     }
@@ -747,12 +835,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Linear shrinkage",
+            "description": "Linear shrinkage"
         },
         "liquidLimit": {
             "@id": "nil:template",
-            "title": "Liquid limit",
-            "description": "Liquid limit",
             "type": "object",
             "allOf": [
                 {
@@ -767,22 +855,29 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:M3-PER-M3",
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:519.01",
-                                "spmile:519.02"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:519.01",
+                                        "spmile:519.02"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-liquidLimit-(?:519\\.01|519\\.02)$"
+                                }
                             ]
                         }
                     }
@@ -790,12 +885,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Liquid limit",
+            "description": "Liquid limit"
         },
         "mechanicalDispersivePotential": {
             "@id": "nil:template",
-            "title": "Mechanical Dispersive potential",
-            "description": "Mechanical Dispersive potential",
             "type": "object",
             "allOf": [
                 {
@@ -810,20 +905,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:KiloPA"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:514.04"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:514.04"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-mechanicalDispersivePotential-(?:514\\.04)$"
+                                }
                             ]
                         }
                     }
@@ -831,12 +933,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Mechanical Dispersive potential",
+            "description": "Mechanical Dispersive potential"
         },
         "modifiedLinearShrinkageOfSoil": {
             "@id": "nil:template",
-            "title": "Modified linear shrinkage of soil",
-            "description": "Modified linear shrinkage of soil",
             "type": "object",
             "allOf": [
                 {
@@ -851,20 +953,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:518.03"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:518.03"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-modifiedLinearShrinkageOfSoil-(?:518\\.03)$"
+                                }
                             ]
                         }
                     }
@@ -872,12 +981,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Modified linear shrinkage of soil",
+            "description": "Modified linear shrinkage of soil"
         },
         "modulusOfRupture": {
             "@id": "nil:template",
-            "title": "Modulus of rupture",
-            "description": "Modulus of rupture",
             "type": "object",
             "allOf": [
                 {
@@ -892,20 +1001,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:KiloPA"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:521.01"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:521.01"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-modulusOfRupture-(?:521\\.01)$"
+                                }
                             ]
                         }
                     }
@@ -913,12 +1029,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Modulus of rupture",
+            "description": "Modulus of rupture"
         },
         "plasticLimit": {
             "@id": "nil:template",
-            "title": "Plastic limit",
-            "description": "Plastic limit",
             "type": "object",
             "allOf": [
                 {
@@ -933,21 +1049,28 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:M3-PER-M3",
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:519.03"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:519.03"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-plasticLimit-(?:519\\.03)$"
+                                }
                             ]
                         }
                     }
@@ -955,12 +1078,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Plastic limit",
+            "description": "Plastic limit"
         },
         "sand": {
             "@id": "nil:template",
-            "title": "Proportion of sand",
-            "description": "Proportion of sand - particle sizes < 0.2 mm",
             "type": "object",
             "allOf": [
                 {
@@ -975,35 +1098,42 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:516.01",
-                                "spmile:517.02",
-                                "spmile:517.03",
-                                "spmile:517.04",
-                                "spmile:517.05",
-                                "spmile:517.06",
-                                "spmile:517.07",
-                                "spmile:517.08",
-                                "spmile:517.09",
-                                "spmile:517.10",
-                                "spmile:517.11",
-                                "spmile:517.12",
-                                "spmile:517.13",
-                                "spmile:517.14",
-                                "spmile:517.15",
-                                "spmile:517.16"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:516.01",
+                                        "spmile:517.02",
+                                        "spmile:517.03",
+                                        "spmile:517.04",
+                                        "spmile:517.05",
+                                        "spmile:517.06",
+                                        "spmile:517.07",
+                                        "spmile:517.08",
+                                        "spmile:517.09",
+                                        "spmile:517.10",
+                                        "spmile:517.11",
+                                        "spmile:517.12",
+                                        "spmile:517.13",
+                                        "spmile:517.14",
+                                        "spmile:517.15",
+                                        "spmile:517.16"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-sand-(?:516\\.01|517\\.02|517\\.03|517\\.04|517\\.05|517\\.06|517\\.07|517\\.08|517\\.09|517\\.10|517\\.11|517\\.12|517\\.13|517\\.14|517\\.15|517\\.16)$"
+                                }
                             ]
                         }
                     }
@@ -1011,12 +1141,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Proportion of sand",
+            "description": "Proportion of sand - particle sizes < 0.2 mm"
         },
         "silt": {
             "@id": "nil:template",
-            "title": "Proportion of silt",
-            "description": "Proportion of silt - particle sizes < 0.02 mm",
             "type": "object",
             "allOf": [
                 {
@@ -1031,35 +1161,42 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:516.01",
-                                "spmile:517.02",
-                                "spmile:517.03",
-                                "spmile:517.04",
-                                "spmile:517.05",
-                                "spmile:517.06",
-                                "spmile:517.07",
-                                "spmile:517.08",
-                                "spmile:517.09",
-                                "spmile:517.10",
-                                "spmile:517.11",
-                                "spmile:517.12",
-                                "spmile:517.13",
-                                "spmile:517.14",
-                                "spmile:517.15",
-                                "spmile:517.16"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:516.01",
+                                        "spmile:517.02",
+                                        "spmile:517.03",
+                                        "spmile:517.04",
+                                        "spmile:517.05",
+                                        "spmile:517.06",
+                                        "spmile:517.07",
+                                        "spmile:517.08",
+                                        "spmile:517.09",
+                                        "spmile:517.10",
+                                        "spmile:517.11",
+                                        "spmile:517.12",
+                                        "spmile:517.13",
+                                        "spmile:517.14",
+                                        "spmile:517.15",
+                                        "spmile:517.16"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-silt-(?:516\\.01|517\\.02|517\\.03|517\\.04|517\\.05|517\\.06|517\\.07|517\\.08|517\\.09|517\\.10|517\\.11|517\\.12|517\\.13|517\\.14|517\\.15|517\\.16)$"
+                                }
                             ]
                         }
                     }
@@ -1067,12 +1204,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Proportion of silt",
+            "description": "Proportion of silt - particle sizes < 0.02 mm"
         },
         "soilStrengthCharacteristic": {
             "@id": "nil:template",
-            "title": "Soil strength characteristic",
-            "description": "Soil strength characteristic",
             "type": "object",
             "allOf": [
                 {
@@ -1087,20 +1224,27 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:MegaPA"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:520.01"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:520.01"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-soilStrengthCharacteristic-(?:520\\.01)$"
+                                }
                             ]
                         }
                     }
@@ -1108,12 +1252,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Soil strength characteristic",
+            "description": "Soil strength characteristic"
         },
         "soilWaterCharacteristic": {
             "@id": "nil:template",
-            "title": "Soil water characteristic",
-            "description": "Soil water characteristic",
             "type": "object",
             "allOf": [
                 {
@@ -1128,23 +1272,30 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:GM-PER-GM",
                                         "unit:GM-PER-KiloGM"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:504.01",
-                                "spmile:504.02",
-                                "spmile:504.03"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:504.01",
+                                        "spmile:504.02",
+                                        "spmile:504.03"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-soilWaterCharacteristic-(?:504\\.01|504\\.02|504\\.03)$"
+                                }
                             ]
                         }
                     }
@@ -1152,12 +1303,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Soil water characteristic",
+            "description": "Soil water characteristic"
         },
         "totalPoreSpace": {
             "@id": "nil:template",
-            "title": "Total pore space",
-            "description": "Total pore space",
             "type": "object",
             "allOf": [
                 {
@@ -1172,21 +1323,28 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:M3-PER-M3",
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:503.09"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:503.09"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-totalPoreSpace-(?:503\\.09)$"
+                                }
                             ]
                         }
                     }
@@ -1194,12 +1352,12 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Total pore space",
+            "description": "Total pore space"
         },
         "volumetricCoarseFragmentContent": {
             "@id": "nil:template",
-            "title": "Volumetric coarse fragment content",
-            "description": "Volumetric coarse fragment content",
             "type": "object",
             "allOf": [
                 {
@@ -1214,21 +1372,28 @@
                                 "unit"
                             ],
                             "properties": {
-                                "value": {
-                                    "$ref": "./qudt.json#/$defs/value"
-                                },
                                 "unit": {
                                     "$ref": "./qudt.json#/$defs/unit",
                                     "enum": [
                                         "unit:M3-PER-M3",
                                         "unit:PERCENT"
                                     ]
+                                },
+                                "value": {
+                                    "$ref": "./qudt.json#/$defs/value"
                                 }
                             }
                         },
                         "usedProcedure": {
-                            "enum": [
-                                "spmile:503.06"
+                            "anyOf": [
+                                {
+                                    "enum": [
+                                        "spmile:503.06"
+                                    ]
+                                },
+                                {
+                                    "pattern": "^psp\\:(?:MIR|VNIR)-volumetricCoarseFragmentContent-(?:503\\.06)$"
+                                }
                             ]
                         }
                     }
@@ -1236,7 +1401,9 @@
                 {
                     "$ref": "./base.json#/$defs/ObservableProperty"
                 }
-            ]
+            ],
+            "title": "Volumetric coarse fragment content",
+            "description": "Volumetric coarse fragment content"
         },
         "waterRepellence": {
             "@id": "nil:template",
@@ -1245,7 +1412,7 @@
             "type": "object",
             "allOf": [
                 {
-					"$comment": "A choice between between the lab method, this schema, or the field method specified in the Yellow Book (properties.json schema).",
+                    "$comment": "A choice between between the lab method, this schema, or the field method specified in the Yellow Book (properties.json schema).",
                     "oneOf": [
                         {
                             "required": [
@@ -1307,8 +1474,15 @@
                                     ]
                                 },
                                 "usedProcedure": {
-                                    "enum": [
-                                        "spmile:505.01"
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "spmile:505.01"
+                                            ]
+                                        },
+                                        {
+                                            "pattern": "^psp\\:(?:MIR|VNIR)-waterRepellence-(?:505\\.01)$"
+                                        }
                                     ]
                                 }
                             }
