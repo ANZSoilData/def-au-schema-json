@@ -25,6 +25,15 @@
                     "$ref": "./base.json#/$defs/type",
                     "const": "proj:Project"
                 },
+                "name": {
+                    "$ref": "./base.json#/$defs/name"
+                },
+                "label": {
+                    "$ref": "./base.json#/$defs/label"
+                },
+                "scopedIdentifier": {
+                    "$ref": "./base.json#/$defs/scopedIdentifier"
+                },
                 "leader": {
                     "$ref": "./base.json#/$defs/pointer",
                     "_refType": "prov:Organization"
@@ -39,14 +48,8 @@
                 "designSurvey": {
                     "$ref": "./properties.json#/$defs/_att/$defs/designSurvey"
                 },
-                "name": {
-                    "$ref": "./base.json#/$defs/name"
-                },
-                "label": {
-                    "$ref": "./base.json#/$defs/label"
-                },
-                "scopedIdentifier": {
-                    "$ref": "./base.json#/$defs/scopedIdentifier"
+                "dataQuality": {
+                    "$ref": "./base.json#/$defs/dataQuality"
                 }
             },
             "additionalProperties": false

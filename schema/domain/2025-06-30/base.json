@@ -36,6 +36,11 @@
 				}
 			}
 		},
+		"dataQuality": {
+			"title": "data quality",
+			"description": "A categorisation of the quality of a data artefact (e.g. a project's dataset, or a site description). Based on the [NSW Standard for Data Quality Reporting v1.2](https://data.nsw.gov.au/sites/default/files/inline-files/NSW%20Standard%20for%20Data%20Quality%20Reporting%20v1.2%20FINAL_0.pdf).",
+			"$ref": "./enum.json#/$defs/DataQuality"
+		},
 		"label": {
 			"@id": "rdfs:label",
 			"title": "RDF Schema Label",
