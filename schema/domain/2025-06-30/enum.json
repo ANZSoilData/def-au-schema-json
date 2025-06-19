@@ -4512,6 +4512,34 @@
 				}
 			]
 		},
+		"DataQuality": {
+			"@id": "nil:template",
+			"title": "Data quality",
+			"description": "A catagorisation of the quality of a data artefact (e.g. a project's dataset, or a site description). Based on the [NSW Standard for Data Quality Reporting v1.2](https://data.nsw.gov.au/sites/default/files/inline-files/NSW%20Standard%20for%20Data%20Quality%20Reporting%20v1.2%20FINAL_0.pdf).",
+			"type": "string",
+			"oneOf": [
+				{
+					"const": "xx:QC1",
+					"description": "QC1 (minimum)",
+                    "$comment": "Data not absent, accessible – meets dimensions for accessibility."
+				},
+				{
+					"const": "xx:QC2",
+					"description": "QC2 (basic)",
+                    "$comment": "Data not invalid, accurate – meets QC1 and basic agency/supplier accuracy checks, i.e. location checked or values within appropriate ranges etc. Data supplier has a basic documented QC process."
+				},
+				{
+					"const": "xx:QC3",
+					"description": "QC3 (functional)",
+                    "$comment": "Data is consistent and coherent - meets QC2 and AI/other automatic business rule checks considering training/accreditation of data source, e.g. Certified Professional Soil Scientist, Lab is registered with accrediting body, such as NATA (Consistence), quality statements are available through the overall data-set."
+				},
+				{
+					"const": "xx:QC4",
+					"description": "QC4 (pperational)",
+                    "$comment": "Data is interpretable and meets institutional dimensions - meets QC3 and data has been accepted and approved by expert institutional moderation and/or lab is registered with accreditation body (e.g., NATA) for the tests. (Correctness); supplier has an accredited/recognised DQMS. Quality statements are available through the overall dataset and for the relevant datum."
+				}
+			]
+		},
 		"RockOutcropAbundance": {
 			"@id": "ls:Rock-outcrop-abundance",
 			"title": "Abundance of rock outcrop",
