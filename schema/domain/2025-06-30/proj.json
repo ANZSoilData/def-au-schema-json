@@ -50,6 +50,12 @@
                 },
                 "dataQuality": {
                     "$ref": "./base.json#/$defs/dataQuality"
+                },
+                "generated": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./prov.json#/$defs/generated"
+                    }
                 }
             },
             "additionalProperties": false
