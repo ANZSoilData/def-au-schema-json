@@ -59,9 +59,6 @@
 				"drainage": {
 					"$ref": "./properties.json#/$defs/_obs/$defs/drainage"
 				},
-				"elevation": {
-					"$ref": "./properties.json#/$defs/_obs/$defs/elevation"
-				},
 				"geometry": {
 					"$ref": "./geo.json#/$defs/geometry"
 				},
