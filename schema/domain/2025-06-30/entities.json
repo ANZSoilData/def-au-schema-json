@@ -71,6 +71,12 @@
 						"$ref": "./properties.json#/$defs/_obs/$defs/heightDrainage"
 					}
 				},
+				"landform": {
+					"$ref": "./properties.json#/$defs/_rel/$defs/landform"
+				},
+				"landSurface": {
+					"$ref": "./properties.json#/$defs/_rel/$defs/landSurface"
+				},
 				"landCover": {
 					"type": "array",
 					"items": {
@@ -143,12 +149,6 @@
 				},
 				"endedAtTime": {
 					"$ref": "./prov.json#/$defs/endedAtTime"
-				},
-				"landform": {
-					"$ref": "./properties.json#/$defs/_rel/$defs/landform"
-				},
-				"landSurface": {
-					"$ref": "./properties.json#/$defs/_rel/$defs/landSurface"
 				},
 				"purpose": {
 					"$ref": "./properties.json#/$defs/_att/$defs/purpose"
