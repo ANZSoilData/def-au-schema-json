@@ -1,0 +1,2997 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "properties.json",
+	"title": "ANSIS Soil Domain Property Schema",
+	"description": "JSON Schema definitions of the complete list of properties defined in the ANSIS Domain Ontology. These definitions are referenced by objects in feature/entity schema and may be referenced by multiple objects - i.e. the scope (domain) of a property is not restricted to a single object (entity).",
+	"$comment": "Derived from https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/rdf/domain.ttl.",
+	"type": "null",
+	"_curiPrefix": {
+		"ansis": "https://anzsoil.org/def/au/domain/",
+		"sosa": "http://www.w3.org/ns/sosa/",
+		"xs": "https://www.w3.org/TR/xmlschema-2/#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"qudt": "http://qudt.org/schema/qudt/"
+	},
+	"$defs": {
+		"_att": {
+			"title": "attributes",
+			"description": "Simple attributes of an object, i.e. properties whose value has been asserted - e.g. a name. Attributes may be a value of an object that is itself a result of an observable property.",
+			"$comment": "Distinct from observations where the value cannot be known until it is estimated using some sort of procedure.",
+			"type": "null",
+			"$defs": {
+				"ansisType": {
+					"@id": "ansis:type",
+					"title": "type",
+					"description": "Type of ansis soil entity.",
+					"$comment": "Renamed ansisType to avoid conflict with JSON schema standard keyword.",
+					"$defs": {
+						"Cutans": {
+							"description": "Cutan.",
+							"$ref": "./enum.json#/$defs/CutansType"
+						},
+						"Erosion": {
+							"description": "Erosion.",
+							"$ref": "./enum.json#/$defs/ErosionType"
+						},
+						"Fabric": {
+							"description": "Fabric.",
+							"$ref": "./enum.json#/$defs/FabricType"
+						},
+						"LandformElement": {
+							"description": "Landform element.",
+							"$ref": "./enum.json#/$defs/LandformElementName"
+						},
+						"LandformPattern": {
+							"description": "Landform pattern.",
+							"anyOf": [
+								{
+									"$ref": "./enum.json#/$defs/LandformPatternName"
+								},
+								{
+									"$ref": "./enum.json#/$defs/LandformPatternErosional"
+								}
+							]
+						},
+						"Microrelief_gilgai": {
+							"description": "Microrelief - Gilgai.",
+							"$ref": "./enum.json#/$defs/MicroreliefTypeGilgai"
+						},
+						"Microrelief_hummocky": {
+							"description": "Microrelief - Hummocky.",
+							"$ref": "./enum.json#/$defs/MicroreliefTypeHummocky"
+						},
+						"Microrelief_other": {
+							"description": "Microrelief - Other.",
+							"$ref": "./enum.json#/$defs/MicroreliefTypeOther"
+						},
+						"Mottles": {
+							"description": "Mottle.",
+							"$ref": "./enum.json#/$defs/MottleType"
+						},
+						"Pans": {
+							"description": "Pan.",
+							"$ref": "./enum.json#/$defs/PansType"
+						},
+						"Pedality": {
+							"description": "Pedality.",
+							"anyOf": [
+								{
+									"$ref": "./enum.json#/$defs/ArtificialAggregatesStructure"
+								},
+								{
+									"$ref": "./enum.json#/$defs/PedalityType"
+								}
+							]
+						},
+						"Plasticity": {
+							"description": "Plasticity.",
+							"$ref": "./enum.json#/$defs/ConsistencePlasticityType"
+						},
+						"SoilSite": {
+							"description": "Soil Site.",
+							"$ref": "./base.json#/$defs/Classification"
+						},
+						"SoilProfile": {
+							"description": "Soil Profile.",
+							"$ref": "./base.json#/$defs/Classification"
+						},
+						"Substrate": {
+							"description": "Substrate.",
+							"$ref": "./base.json#/$defs/Classification"
+						}
+					}
+				},
+				"confidence": {
+					"@id": "ansis:confidence",
+					"title": "confidence",
+					"description": "Confidence that substrate is parent material.",
+					"$ref": "./enum.json#/$defs/SubstrateConfidence"
+				},
+				"depthReason": {
+					"@id": "ansis:depth-reason",
+					"title": "reason for profile depth",
+					"description": "Reason for the specific depth of this profile e.g. length of auger, depth of interest, rock, too wet.",
+					"type": "string"
+				},
+				"designSite": {
+					"@id": "ansis:design-site",
+					"title": "site design",
+					"description": "Overall design of sampling at the site e.g. ASLS, grid, transect.",
+					"type": "object",
+					"$ref": "./base.json#/$defs/Classification"
+				},
+				"designSurvey": {
+					"@id": "ansis:design-survey",
+					"title": "survey design",
+					"description": "Overall design of soil or landscape survey e.g. free, grid, stratified, miscellaneous.",
+					"type": "object",
+					"$ref": "./base.json#/$defs/Classification"
+				},
+				"moistureStatus": {
+					"@id": "ansis:moisture-status",
+					"title": "moisture status",
+					"description": "Moisture state of material while property evaluation is carried out.",
+					"$defs": {
+						"Colour": {
+							"type": "string",
+							"description": "Soil or Mottle colour.",
+							"$ref": "./enum.json#/$defs/ColourMoistureStatus"
+						},
+						"Soil": {
+							"type": "string",
+							"description": "Soil water.",
+							"$ref": "./enum.json#/$defs/SoilWaterStatus"
+						}
+					}
+				},
+				"purpose": {
+					"@id": "ansis:purpose",
+					"title": "purpose",
+					"description": "Purpose of or reason for a site or activity. For example, why a Land Survey or Soil Site was established; why a profile was created; or why a site was visited.",
+					"type": "object",
+					"$ref": "./base.json#/$defs/Classification"
+				}
+			}
+		},
+		"_obs": {
+			"title": "observable properties",
+			"description": "Properties whose value has been established by observation - an estimate made using some sort of procedure.",
+			"$comment": "Values are an object with a mandatory 'result' property and additional metadata description the procedure, sampling, quality and temporal characteristics.",
+			"type": "null",
+			"$defs": {
+				"abundance": {
+					"@id": "ansis:abundance",
+					"title": "abundance",
+					"description": "Abundance of items.",
+					"$defs": {
+						"CoarseFragments": {
+							"description": "Coarse fragments.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/CoarseFragmentsAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Cutans": {
+							"description": "Cutans.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/CutansAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Mottles": {
+							"description": "Mottles.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MottleAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Outcrop": {
+							"description": "Outcrops.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/RockOutcropAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Pores": {
+							"description": "Pores.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/PoreAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Roots": {
+							"description": "Roots.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/RootAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Segregations": {
+							"description": "Segregations",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SegregationsAbundance"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"agent": {
+					"@id": "ansis:agent",
+					"title": "agent",
+					"description": "Agent of geomorphological or biotic activity.",
+					"$defs": {
+						"Microrelief_biotic": {
+							"description": "Biotic.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MicroreliefAgentBiotic"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Geomorphology": {
+							"description": "Geomorphology.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"anyOf": [
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentBio"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentExtra"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentGravity"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentIce"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentInternal"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentPrecipitation"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentStand"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentStreamflow"
+												},
+												{
+													"$ref": "./enum.json#/$defs/GeomorphologyAgentWind"
+												}
+											]
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"aggradation": {
+					"@id": "ansis:aggradation",
+					"title": "aggradation",
+					"description": "Aggradation presence.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/Aggradation"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"alteration": {
+					"@id": "ansis:alteration",
+					"title": "alteration",
+					"description": "Type of alteration.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/RockAlteration"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"aspect": {
+					"@id": "ansis:aspect",
+					"title": "aspect",
+					"description": "Direction or azimuth that a terrain surface faces.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"boundaryDistinctness": {
+					"@id": "ansis:distinctness",
+					"description": "Distinctness of the Horizon's lower boundary.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/BoundaryDistinctness"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"boundaryShape": {
+					"@id": "ansis:shape",
+					"description": "Shape of the Horizon's lower boundary.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/BoundaryShape"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"cementation": {
+					"@id": "ansis:cementation",
+					"title": "cementation",
+					"description": "Degree of cementation.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/PansCementation"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"carbonateEffervescence": {
+					"@id": "ansis:carbonate-effervescence",
+					"title": "effervescence of carbonate",
+					"description": "Effervescence of carbonate in fine earth.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/CarbonateEffervescence"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"classification": {
+					"@id": "ansis:classification",
+					"title": "Classification",
+					"description": "Classification of a soil body, profile or landscape entity.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./base.json#/$defs/Classification"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"colour": {
+					"@id": "ansis:colour",
+					"title": "colour",
+					"description": "A description of colour.",
+					"$defs": {
+						"Mottles": {
+							"description": "Mottle.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result",
+										"colourModel"
+									],
+									"properties": {
+										"result": {
+											"type": "string"
+										},
+										"colourModel": {
+											"$ref": "./base.json#/$defs/colourModel/$defs/Mottles"
+										}
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-munsell"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-japan"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-mottle"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/MottleColour"
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/Colour"
+								}
+							]
+						},
+						"Soil": {
+							"description": "Soil.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result",
+										"colourModel"
+									],
+									"properties": {
+										"result": {
+											"type": "string"
+										},
+										"colourModel": {
+											"$ref": "./base.json#/$defs/colourModel/$defs/Soil"
+										}
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-munsell"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-japan"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Munsell"
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-rgb"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/RGB"
+									}
+								},
+								{
+									"if": {
+										"properties": {
+											"colourModel": {
+												"const": "x:colour-term"
+											}
+										}
+									},
+									"then": {
+										"$ref": "./sosa.json#/$defs/result/$defs/Colour/$defs/Term"
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/Colour"
+								}
+							]
+						}
+					}
+				},
+				"component": {
+					"@id": "ansis:component",
+					"title": "component",
+					"description": "Type of component element.",
+					"$defs": {
+						"Microrelief_biotic": {
+							"description": "Microrelief - biotic.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MicroreliefComponentBiotic"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Microrelief_sampled": {
+							"description": "Microrelief - sampled",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MicroreliefComponentSampled"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"SoilSample": {
+							"description": "Soil Sample",
+							"type": "string",
+							"$ref": "./enum.json#/$defs/SoilSample_component"
+						}
+					}
+				},
+				"compoundPedality": {
+					"@id": "ansis:compoundPedality",
+					"title": "compound pedality",
+					"description": "Compound pedality.",
+					"$comment": "No defined vocabulary: sp:structure-pedality-compound?",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/StructurePedalityCompound"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"conditionWhenDry": {
+					"@id": "ansis:condition-when-dry",
+					"title": "condition when dry",
+					"description": "Surface condition when dry.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/SurfaceCondition"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"continuity": {
+					"@id": "ansis:continuity",
+					"title": "continuity",
+					"description": "Continuity of linear or planar elements.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/PansContinuity"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"contrast": {
+					"@id": "ansis:contrast",
+					"title": "contrast",
+					"description": "Degree of colour contrast.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/MottleContrast"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"degree": {
+					"@id": "ansis:degree",
+					"title": "degree or intensity",
+					"description": "Degree or severity or intensity of phenomenon.",
+					"$defs": {
+						"Erosion": {
+							"description": "Erosion.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"anyOf": [
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityGully"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityMassMovement"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityRill"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityScald"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeveritySheet"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityStreamBank"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityTunnel"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityWave"
+												},
+												{
+													"$ref": "./enum.json#/$defs/ErosionSeverityWind"
+												}
+											]
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Plasticity": {
+							"description": "Consistence - plasticity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/ConsistencePlasticityDegree"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"density": {
+					"@id": "ansis:density",
+					"title": "density",
+					"description": "Mass per unit volume of a substance.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"depth": {
+					"@id": "ansis:depth",
+					"title": "depth",
+					"description": "Depth from local surface of entity.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Inundation": {
+							"description": "Inundation.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/InundationDepth"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"depthFreeWater": {
+					"@id": "ansis:depth-free-water",
+					"title": "depth",
+					"description": "Depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation. Positive values indicate water above the soil surface. Negative values indicate water below the soil surface.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"depthGully": {
+					"@id": "ansis:depth-gully",
+					"title": "gully depth",
+					"description": "Depth from local surface to the base of the gully.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Concept": {
+							"description": "Concept.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/ErosionDepthGully"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"depthLower": {
+					"@id": "ansis:depth-lower",
+					"title": "lower depth",
+					"description": "depth from local surface to the base of the element",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"depthRHorizon": {
+					"@id": "ansis:depth-r-horizon",
+					"title": "depth to R-Horizon",
+					"description": "Depth from local surface to the top of the R-Horizon.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"depthUpper": {
+					"@id": "ansis:depth-upper",
+					"title": "upper depth",
+					"description": "Depth from local surface to the top of the element.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"depthWidthRatio": {
+					"@id": "ansis:depth-width-ratio",
+					"title": "depth width ratio",
+					"description": "Depth to width ratio of entity; ratio of depth to width of the element.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"StreamChannel": {
+							"description": "Stream channel.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/ChannelDepthWidth"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"designation": {
+					"@id": "ansis:designation",
+					"title": "horizon designation",
+					"description": "Designation of soil horizon with the sequence composing the Profile or Soil Body.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./base.json#/$defs/Classification"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"development": {
+					"@id": "ansis:development",
+					"title": "development",
+					"description": "Degree of development of element.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ChannelDevelopment"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"diameter": {
+					"@id": "ansis:diameter",
+					"title": "diameter",
+					"description": "Thickness or width of round object.",
+					"$defs": {
+						"Pores": {
+							"title": "pore diameter",
+							"description": "Pores.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/PoreDiameter"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Roots": {
+							"title": "root size",
+							"description": "Roots.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/RootSize"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"directionality": {
+					"@id": "ansis:directionality",
+					"title": "directionality",
+					"description": "Network directionality.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ChannelDirectionality"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"distance": {
+					"@id": "ansis:distance",
+					"title": "distance",
+					"description": "Spatial separation of objects.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"distinctness": {
+					"@id": "ansis:distinctness",
+					"title": "distinctness",
+					"description": "Distinctness of boundary.",
+					"$defs": {
+						"Cutans": {
+							"description": "Cutans.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/CutansDistinctness"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Mottles": {
+							"description": "Mottles.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MottleDistinctness"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"distribution": {
+					"@id": "ansis:distribution",
+					"title": "distribution",
+					"description": "Spatial arrangement of items.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/CoarseFragmentsDistribution"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"disturbance": {
+					"@id": "ansis:disturbance",
+					"title": "disturbance",
+					"description": "Disturbance of site.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/DisturbanceOfSite"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"drainage": {
+					"@id": "ansis:drainage",
+					"title": "drainage",
+					"description": "Drainage of site or profile.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/SoilWaterDrainage"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"duration": {
+					"@id": "ansis:duration",
+					"title": "duration",
+					"description": "Temporal extent of event or phenomenon.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Inundation": {
+							"description": "Inundation.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/InundationDuration"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"elevation": {
+					"@id": "ansis:elevation",
+					"title": "elevation",
+					"description": "Elevation of element above a datum (usually MSL).",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result",
+								"usedProcedure"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								},
+								"usedProcedure": {
+									"$comment": "replaces ansis:methodElevation",
+									"$ref": "./enum.json#/$defs/ElevationEvaluationMeans"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"fabric": {
+					"@id": "ansis:fabric",
+					"title": "fabric",
+					"description": "Fabric of soil element.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/FabricType"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"frequency": {
+					"@id": "ansis:frequency",
+					"title": "frequency",
+					"description": "Temporal frequency of event or phenomenon.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Inundation": {
+							"description": "Inundation.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/InundationFrequency"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"geneticType": {
+					"@id": "ansis:genesis",
+					"title": "genetic type",
+					"description": "Formation process for material.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"anyOf": [
+										{
+											"$ref": "./enum.json#/$defs/RockGenesisHardenedArtificial"
+										},
+										{
+											"$ref": "./enum.json#/$defs/RockGenesisHardenedChemical"
+										},
+										{
+											"$ref": "./enum.json#/$defs/RockGenesisHardenedEvaporite"
+										},
+										{
+											"$ref": "./enum.json#/$defs/RockGenesisSediments"
+										},
+										{
+											"$ref": "./enum.json#/$defs/RockGenesisUnweathered"
+										},
+										{
+											"$ref": "./enum.json#/$defs/RockGenesisWeathered"
+										}
+									]
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"geomorphologyMode": {
+					"@id": "ansis:geomorphologyMode",
+					"title": "geomorphology mode",
+					"description": "Mode of geomorphological activity.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/GeomorphologyMode"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"geomorphologyStatus": {
+					"@id": "ansis:geomorphologyStatus",
+					"title": "geomorphology status",
+					"description": "Status of geomorphological activity.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/GeomorphologyStatus"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"grade": {
+					"@id": "ansis:grade",
+					"title": "grade",
+					"description": "Grade or degree of development of structure.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/PedalityGrade"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"grainSize": {
+					"@id": "ansis:grain-size",
+					"title": "grain size",
+					"description": "Size of the most common particles of a material.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/SubstrateGrainSize"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"landCover": {
+					"@id": "ansis:hasLandCover",
+					"title": "land cover",
+					"description": "A description of land cover.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./base.json#/$defs/Classification"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"landManagement": {
+					"@id": "ansis:hasLandManagement",
+					"title": "land management",
+					"description": "A description of land management.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./base.json#/$defs/Classification"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"landUse": {
+					"@id": "ansis:hasLandUse",
+					"title": "land use",
+					"description": "A description of land use.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./base.json#/$defs/Classification"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"height": {
+					"@id": "ansis:height",
+					"title": "height",
+					"description": "Vertical extent of element.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"heightDrainage": {
+					"@id": "ansis:height-drainage",
+					"title": "drainage height",
+					"description": "Vertical extent of drainage.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"integration": {
+					"@id": "ansis:integration",
+					"title": "integration",
+					"description": "Integration of stream channel network.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ChannelIntegration"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"length": {
+					"@id": "ansis:length",
+					"title": "length",
+					"description": "Linear extent - larger dimension.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"lithology": {
+					"@id": "ansis:lithology",
+					"title": "lithology",
+					"description": "Lithological type of material.",
+					"$defs": {
+						"Outcrop": {
+							"type": "object",
+							"description": "Outcrop.",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/LithologyRockOutcrop"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"CoarseFragments": {
+							"type": "object",
+							"description": "Coarse Fragments.",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"anyOf": [
+												{
+													"$ref": "./enum.json#/$defs/LithologyCoarseFragments"
+												},
+												{
+													"$ref": "./enum.json#/$defs/LithologyRock"
+												},
+												{
+													"$ref": "./enum.json#/$defs/LithologyUnconsolidated"
+												}
+											]
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Substrate": {
+							"type": "object",
+							"description": "Rock/unconsolidated.",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"anyOf": [
+												{
+													"$ref": "./enum.json#/$defs/LithologyRock"
+												},
+												{
+													"$ref": "./enum.json#/$defs/LithologyUnconsolidated"
+												}
+											]
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"locationInElement": {
+					"@id": "ansis:location-in-element",
+					"title": "Location in landform element.",
+					"description": "location within landform element",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/LocationInElement"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"locationInToposequence": {
+					"@id": "ansis:location-in-toposequence",
+					"title": "location in toposequence",
+					"description": "Location within a toposequence.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"magneticAttributes": {
+					"@id": "ansis:magnetic-attributes",
+					"title": "magnetic attributes",
+					"description": "Magnetic attributes.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/SegregationsMagneticAttributes"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"material": {
+					"@id": "ansis:material",
+					"title": "material",
+					"description": "Material or composition of entity or element.",
+					"$defs": {
+						"Segregations": {
+							"description": "Segregations.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SegregationsNature"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Substrate_mineralComposition": {
+							"description": "Substrate minerals.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SubstrateMineralComposition"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"migrationRate": {
+					"@id": "ansis:migration-rate",
+					"title": "migration rate",
+					"description": "Migration rate.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ChannelMigration"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"morphologicalType": {
+					"@id": "ansis:morphological-type",
+					"title": "morphological type",
+					"description": "Morphological type of landform element.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/LandformElementType"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"ansisPattern": {
+					"@id": "ansis:pattern",
+					"title": "pattern",
+					"description": "Spatial pattern of channels or other linear element.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ChannelPattern"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"permeability": {
+					"@id": "ansis:permeability",
+					"title": "permeability",
+					"description": "Rate of flow of liquid through the material.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Soil": {
+							"description": "Soil.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SoilPermeability"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"porosity": {
+					"@id": "ansis:porosity",
+					"title": "porosity",
+					"description": "Proportion of void space in material.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"proportions": {
+					"@id": "ansis:proportions",
+					"title": "proportions",
+					"description": "Relative proportions of the components.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/MicroreliefProportionsGilgai"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"relativeInclination": {
+					"@id": "ansis:relative-inclination",
+					"title": "relative inclination",
+					"description": "Relative slope or inclination.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/RelativeInclination"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"relief": {
+					"@id": "ansis:relief",
+					"title": "relief",
+					"description": "Amount of vertical variation of the landform.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/Relief"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"runoff": {
+					"@id": "ansis:runoff",
+					"title": "runoff",
+					"description": "Degree of surface water runoff.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/Runoff"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"shape": {
+					"@id": "ansis:shape",
+					"title": "shape",
+					"description": "Geometry of entity or entity boundary - in the context of a soil horizon, this refers to the shape of the lower boundary.",
+					"$defs": {
+						"CoarseFragments": {
+							"description": "Coarse fragments.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/CoarseFragmentsShape"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Segregations": {
+							"description": "Segregations.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SegregationsForm"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"size": {
+					"@id": "ansis:size",
+					"title": "size",
+					"description": "Geometric scale and extent of element.",
+					"$defs": {
+						"CoarseFragments": {
+							"description": "Coarse fragments.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/CoarseFragmentsSize"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Mottles": {
+							"description": "Mottles.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MottleSize"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"SoilStructures": {
+							"description": "Soil structures.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/PedalitySize"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Segregations": {
+							"description": "Segregations.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SegregationsSize"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"slope": {
+					"@id": "ansis:slope",
+					"title": "slope",
+					"description": "Divergence of surface from horizontal.",
+					"$defs": {
+						"LandformElement": {
+							"description": "Landform Element.",
+							"oneOf": [
+								{
+									"description": "Quantity.",
+									"type": "object",
+									"allOf": [
+										{
+											"required": [
+												"result",
+												"usedProcedure"
+											],
+											"properties": {
+												"result": {
+													"$ref": "./qudt.json#/$defs/QuantityValue"
+												},
+												"usedProcedure": {
+													"$comment": "replaces ansis:methodSlope",
+													"$ref": "./enum.json#/$defs/SlopeProcedure"
+												}
+											}
+										},
+										{
+											"$ref": "./base.json#/$defs/ObservableProperty"
+										}
+									]
+								},
+								{
+									"description": "Slope class.",
+									"type": "object",
+									"allOf": [
+										{
+											"required": [
+												"result"
+											],
+											"properties": {
+												"result": {
+													"$ref": "./enum.json#/$defs/SlopeClass"
+												}
+											}
+										},
+										{
+											"$ref": "./base.json#/$defs/ObservableProperty"
+										}
+									]
+								}
+							]
+						},
+						"LandformPattern": {
+							"description": "Modal.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SlopeModal"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"spacing": {
+					"@id": "ansis:spacing",
+					"title": "spacing",
+					"description": "Lateral separation of elements.",
+					"$defs": {
+						"StreamChannel": {
+							"description": "Stream channels.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/ChannelSpacing"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Substrate_discontinuity": {
+							"description": "Substrate - spacing of discontinuities.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SubstrateDiscontinuitySpacing"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"state": {
+					"@id": "ansis:state",
+					"title": "state",
+					"description": "Erosion status.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ErosionState"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"stickiness": {
+					"@id": "ansis:stickiness",
+					"title": "stickiness",
+					"description": "Adhesiveness or viscosity.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/ConsistenceStickiness"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"strength": {
+					"@id": "ansis:strength",
+					"title": "strength",
+					"description": "Strength of material.",
+					"$defs": {
+						"Consistence": {
+							"description": "Consistence.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/ConsistenceStrength"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Material": {
+							"description": "Material.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/MaterialStrength"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Soil": {
+							"description": "Soil.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./entities.json#/$defs/Consistence"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Segregations": {
+							"description": "Segregations.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SegregationsStrength"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"structure": {
+					"@id": "ansis:structure",
+					"title": "pan structure",
+					"description": "internal arrangement of elements of the material or entity.",
+					"$defs": {
+						"Pans": {
+							"description": "Pans.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/PansStructure"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Substrate": {
+							"description": "Substrate.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SubstrateStructure"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"texture": {
+					"@id": "ansis:texture",
+					"title": "texture",
+					"description": "material (organic or mineral) texture, in terms of particle size distribution and component materials",
+					"$defs": {
+						"Soil": {
+							"description": "Soil.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"anyOf": [
+												{
+													"$ref": "./enum.json#/$defs/FieldTextureMineral"
+												},
+												{
+													"$ref": "./enum.json#/$defs/FieldTextureOrganic"
+												}
+											]
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Substrate": {
+							"description": "Substrate.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/SubstrateTexture"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				},
+				"underlyingMaterial": {
+					"@id": "ansis:tempunderlyingMateriallate",
+					"title": "underlying material",
+					"description": "Lithology of material underlying the landform.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/LithologyRock"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"velocity": {
+					"@id": "ansis:velocity",
+					"title": "velocity",
+					"description": "Velocity of entity.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./qudt.json#/$defs/QuantityValue"
+								}
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"waterRepellence": {
+					"@id": "ansis:waterRepellence",
+					"title": "water repellence",
+					"description": "Water repellence of material.",
+                    "$comment": "usedProcedure 'field-method' required to distinguish these values from laboratory measurements.",
+					"type": "object",
+					"allOf": [
+						{
+							"required": [
+								"result",
+                                "usedProcedure"
+							],
+							"properties": {
+								"result": {
+									"$ref": "./enum.json#/$defs/WaterRepellence"
+								},
+                                "usedProcedure": {
+                                    "type": "string",
+                                    "const": "field-method"
+                                }
+							}
+						},
+						{
+							"$ref": "./base.json#/$defs/ObservableProperty"
+						}
+					]
+				},
+				"width": {
+					"@id": "ansis:width",
+					"title": "width",
+					"description": "Linear extent - smaller dimension.",
+					"$defs": {
+						"Quantity": {
+							"description": "Quantity.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./qudt.json#/$defs/QuantityValue"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						},
+						"Cracks": {
+							"description": "Cracks.",
+							"type": "object",
+							"allOf": [
+								{
+									"required": [
+										"result"
+									],
+									"properties": {
+										"result": {
+											"$ref": "./enum.json#/$defs/CracksWidth"
+										}
+									}
+								},
+								{
+									"$ref": "./base.json#/$defs/ObservableProperty"
+								}
+							]
+						}
+					}
+				}
+			}
+		},
+		"_rel": {
+			"title": "relationship properties",
+			"description": "Properties whose value is a nested object or JSON pointer to an object.",
+			"type": "null",
+			"$defs": {
+				"coarseFragments": {
+					"@id": "ansis:hasCoarseFragments",
+					"title": "coarse fragments",
+					"description": "A description of coarse fragments.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/CoarseFragments"
+				},
+				"cracks": {
+					"@id": "ansis:hasCracks",
+					"title": "cracks",
+					"description": "A description of cracks.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Cracks"
+				},
+				"cutans": {
+					"@id": "ansis:hasCutans",
+					"title": "cutans",
+					"description": "A description of cutans.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Cutans"
+				},
+				"erosion": {
+					"@id": "ansis:hasErosion",
+					"title": "erosion",
+					"description": "A description of erosion",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Erosion"
+				},
+				"inundation": {
+					"@id": "ansis:hasInundation",
+					"title": "inundation",
+					"description": "A description of inundation.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Inundation"
+				},
+				"landSurface": {
+					"@id": "ansis:hasLandSurface",
+					"title": "land surface",
+					"description": "A description of land surface.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/LandSurface"
+				},
+				"landform": {
+					"@id": "ansis:hasLandform",
+					"title": "landform",
+					"description": "A description of landform.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Landform"
+				},
+				"landformElement": {
+					"@id": "ansis:hasLandformElement",
+					"title": "landform element",
+					"description": "A description of landform element.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/LandformElement"
+				},
+				"landformPattern": {
+					"@id": "ansis:hasLandformPattern",
+					"title": "landform pattern",
+					"description": "A description of landform pattern.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/LandformPattern"
+				},
+				"microrelief_biotic": {
+					"@id": "ansis:hasMicrorelief-biotic",
+					"title": "microrelief - biotic",
+					"description": "A description of biotic microrelief at the site.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Microrelief_biotic"
+				},
+				"microrelief_gilgai": {
+					"@id": "ansis:hasMicrorelief-gilgai",
+					"title": "microrelief - gilgai",
+					"description": "A description of gilgai microrelief at the site.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Microrelief_gilgai"
+				},
+				"microrelief_hummocky": {
+					"@id": "ansis:hasMicrorelief-hummocky",
+					"title": "microrelief - hummocky",
+					"description": "A description of hummocky microrelief at the site.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Microrelief_hummocky"
+				},
+				"microrelief_other": {
+					"@id": "ansis:hasMicrorelief-other",
+					"title": "microrelief - other",
+					"description": "A description of other microrelief at the site.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Microrelief_other"
+				},
+				"mottles": {
+					"@id": "ansis:hasMottles",
+					"title": "mottles",
+					"description": "A description of mottles and other colour patterns.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Mottles"
+				},
+				"outcrop": {
+					"@id": "ansis:hasOutcrop",
+					"title": "outcrop",
+					"description": "A description of rock outcrop at this entity.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Outcrop"
+				},
+				"pans": {
+					"@id": "ansis:hasPans",
+					"title": "pans",
+					"description": "A description of pans.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Pans"
+				},
+				"pores": {
+					"@id": "ansis:hasPores",
+					"title": "macropores",
+					"description": "A description of macropores.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Pores"
+				},
+				"roots": {
+					"@id": "ansis:hasRoots",
+					"title": "roots",
+					"description": "A description of roots.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Roots"
+				},
+				"segregations": {
+					"@id": "ansis:hasSegregations",
+					"title": "segregations",
+					"description": "A description of segregations.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Segregations"
+				},
+				"streamChannel": {
+					"@id": "ansis:hasStreamChannel",
+					"title": "stream channel",
+					"description": "A description of a stream channel occurrence.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/StreamChannel"
+				},
+				"consistence": {
+					"@id": "ansis:hasStrength",
+					"title": "consistence",
+					"description": "A description of consistence",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Consistence"
+				},
+				"structures": {
+					"@id": "ansis:hasStructure",
+					"title": "structure",
+					"description": "A description of structure.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/SoilStructures"
+				},
+				"substrate": {
+					"@id": "ansis:hasSubstrate",
+					"title": "substrate",
+					"description": "A description of substrate.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/Substrate"
+				},
+				"plasticity": {
+					"@id": "ansis:plasticity",
+					"title": "plasticity",
+					"description": "Capability of being formed or moulded.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/SoilPlasticity"
+				},
+				"sampling": {
+					"@id": "ansis:relatedActivity",
+					"description": "Sampling.",
+					"$ref": "./sosa.json#/$defs/Sampling"
+				},
+				"siteVisit": {
+					"@id": "ansis:relatedActivity",
+					"description": "Site Visit.",
+					"type": "object",
+					"$ref": "./entities.json#/$defs/SiteVisit"
+				},
+				"soilLayer": {
+					"@id": [
+						"ansis:relatedLayer",
+						"ansis:relatedHorizon"
+					],
+					"title": "related soil layer or horizon",
+					"description": "Related soil layer or horizon within a soil body or profile.",
+					"$ref": "./entities.json#/$defs/SoilLayer"
+				},
+				"soilProfile": {
+					"@id": "ansis:relatedProfile",
+					"title": "Soil Profile",
+					"description": "The soil profile related to this context.",
+					"$ref": "./entities.json#/$defs/SoilProfile"
+				},
+				"soilSurface": {
+					"@id": "ansis:relatedSoilSurface",
+					"title": "related soil surface",
+					"description": "Soil surface of this entity.",
+					"$ref": "./entities.json#/$defs/SoilSurface"
+				},
+				"relatedProject": {
+					"@id": "ansis:relatedProject",
+					"title": "related project",
+					"description": "Link to project that supported this activity, either establishing a Land Survey or Soil Site, or requiring a Site Visit.",
+					"$ref": "./base.json#/$defs/pointer",
+					"_refType": "./proj.json#/$defs/Project"
+				},
+				"relatedSample": {
+					"@id": "ansis:relatedSample",
+					"title": "related sample",
+					"description": "Link to a sample related to this context.",
+					"$ref": "./base.json#/$defs/pointer",
+					"_refType": "./entities.json#/$defs/SoilSample"
+				},
+				"relatedSite": {
+					"@id": "ansis:relatedSite",
+					"title": "related site",
+					"description": "Link to a land survey or soil site related to this context.",
+					"$ref": "./base.json#/$defs/pointer",
+					"_refType": "./entities.json#/$defs/SoilSite"
+				},
+				"relatedVisitor": {
+					"@id": "ansis:visitor",
+					"title": "visitor",
+					"description": "Site visitor, for the purpose of sampling or observation.",
+					"$ref": "./base.json#/$defs/pointer",
+					"_refType": "./prov.json#/$defs/Person"
+				}
+			}
+		}
+	}
+}
