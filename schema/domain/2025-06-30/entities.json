@@ -436,6 +436,9 @@
 						"texture": {
 							"$ref": "./properties.json#/$defs/_obs/$defs/texture/$defs/Soil"
 						},
+						"fabric": {
+							"$ref": "./properties.json#/$defs/_obs/$defs/fabric"
+						},
 						"waterRepellence": {
                             "$comment": "Value may be the using field method from the Yellow Book, or a lab method.",
 							"type": "array",
