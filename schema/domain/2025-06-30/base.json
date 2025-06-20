@@ -155,7 +155,17 @@
 			"type": "object",
 			"properties": {
 				"result": {
-					"$ref": "./sosa.json#/$defs/result/$defs/Simple"
+                    "oneOf": [
+                        {
+					        "$ref": "./sosa.json#/$defs/result/$defs/Simple"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+				},
+				"nullReason": {
+					"$ref": "./enum.json#/$defs/NilValues"
 				},
 				"qualityOfObservation": {
 					"$ref": "./sosa.json#/$defs/qualityOfObservation"
